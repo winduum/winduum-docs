@@ -12,6 +12,15 @@
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
 }
 
+:root.dark {
+  --vp-c-black: rgb(28, 28, 28);
+  --vp-c-black-soft: rgb(24, 24, 24);
+  --vp-c-black-mute: rgb(32, 32, 32);
+  --vp-c-gray-dark-3: rgb(24, 24, 24);
+  --vp-c-bg-alpha-with-backdrop: rgba(24, 24, 24, 0.7);
+  --vp-c-bg-alpha-without-backdrop: rgba(24, 24, 24, 0.95);
+}
+
 /**
  * Component: Button
  * -------------------------------------------------------------------------- */

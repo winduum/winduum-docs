@@ -1,13 +1,13 @@
 import { defineConfig } from 'vitepress'
 
-const ogDescription = 'Lightweight, modern, modular low-level CSS framework build on top of Tailwind'
+const ogDescription = 'Lightweight, modern, modular low-level UIS framework build on top of Tailwind'
 const ogImage = 'https://winduum.dev/og-image.png'
-const ogTitle = 'Winduum UI'
+const ogTitle = 'Winduum'
 const ogUrl = 'https://winduum.dev'
 
 export default defineConfig({
-  title: `Winduum UI`,
-  description: 'Lightweight, modern, modular low-level CSS framework build on top of Tailwind',
+  title: `Winduum`,
+  description: 'Lightweight, modern, modular low-level UI framework build on top of Tailwind',
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
@@ -51,14 +51,13 @@ export default defineConfig({
 
     nav: [
       { text: 'Docs', link: '/docs/', activeMatch: '/docs/' },
-      { text: 'About', link: '/about/', activeMatch: '/about/' },
       {
         text: 'Resources',
         items: [
           {
             items: [
               {
-                text: 'Tailwind',
+                text: 'TailwindCSS',
                 link: 'https://tailwindcss.com'
               },
               {
@@ -119,7 +118,7 @@ export default defineConfig({
             },
             {
               text: 'Keyframes',
-              link: '/docs/keyframes'
+              link: '/docs/layout/keyframes'
             },
             {
               text: 'Container',
@@ -201,23 +200,23 @@ export default defineConfig({
           items: [
             {
               text: 'Form',
-              link: '/docs/components/form'
+              link: '/docs/component/form'
             },
             {
               text: 'Dialog',
-              link: '/docs/components/dialog'
+              link: '/docs/component/dialog'
             },
             {
               text: 'Drawer',
-              link: '/docs/components/drawer'
+              link: '/docs/component/drawer'
             },
             {
               text: 'Dropdown',
-              link: '/docs/components/dropdown'
+              link: '/docs/component/dropdown'
             },
             {
               text: 'Table',
-              link: '/docs/components/table'
+              link: '/docs/component/table'
             }
           ]
         },
@@ -235,10 +234,6 @@ export default defineConfig({
             {
               text: 'Drawer',
               link: '/docs/lib/drawer'
-            },
-            {
-              text: 'Dropdown',
-              link: '/docs/lib/dropdown'
             },
             {
               text: 'Ripple',
