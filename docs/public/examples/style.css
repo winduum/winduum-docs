@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: rgb(28, 28, 28);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border-radius: var(--rounded);
+    min-height: 100%;
+}
