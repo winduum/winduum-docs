@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="font-sans dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1, viewport-fit=cover"/>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../../tailwind.css">
+    <meta name="color-scheme" content="light dark">
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            gap: 0.5rem;
+            padding: 1rem;
+            background-color: rgb(28, 28, 28);
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            border-radius: var(--rounded);
+            min-height: 100%;
+        }
+
+        .ui-btn {
+            --ui-btn-height: 4rem;
+            --ui-btn-py: 1rem;
+            --ui-btn-px: 1rem;
+            --ui-btn-border-radius: 0;
+            --ui-btn-font-size: 1.15rem;
+            --ui-btn-font-weight: 700;
+            --ui-btn-bg: yellow;
+            --ui-btn-color: #333;
+            --ui-btn-hover-opacity: 0.4;
+            --ui-btn-focus-opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+<button class="ui-btn">Button</button>
+</body>
+</html>

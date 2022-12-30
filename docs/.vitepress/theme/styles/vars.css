@@ -164,3 +164,14 @@
     opacity: 0.4;
   }
 }
+
+iframe {
+  border: 0;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 0.75rem;
+}
+
+.vp-doc :not(pre) > code {
+  background-color: var(--vp-c-bg-soft);
+}
