@@ -4,7 +4,7 @@
 ### CSS Properties
 
 ```css
-.ui-btn {
+:where(.ui-btn) {
   --color-current: var(--color-light);
   --ui-btn-width: max-content;
   --ui-btn-height: 2.25rem;

@@ -1,6 +1,6 @@
 # Reset
 
-Winduum uses modern new CSS reset from [elad2412](https://github.com/elad2412/the-new-css-reset) that uses new modern CSS features.
+Winduum uses new modern CSS reset from [elad2412](https://github.com/elad2412/the-new-css-reset) that uses new modern CSS features.
 That means that [Preflight](https://tailwindcss.com/docs/preflight#border-styles-are-reset-globally) from **TailwindCSS** is disabled by default.
 
 ## Defaults

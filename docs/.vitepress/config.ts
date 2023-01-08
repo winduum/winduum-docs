@@ -7,7 +7,7 @@ const ogUrl = 'https://winduum.dev'
 
 export default defineConfig({
   title: `Winduum`,
-  description: 'Lightweight, modern, modular low-level UI framework build on top of Tailwind',
+  description: 'Small, modern, modular low-level UI framework build on top of Tailwind',
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
@@ -29,12 +29,12 @@ export default defineConfig({
     logo: '/logo.svg',
 
     editLink: {
-      pattern: 'https://github.com/vituum/winduum-docs/edit/main/docs/:path',
+      pattern: 'https://github.com/winduum/winduum-docs/edit/main/docs/:path',
       text: 'Suggest changes to this page'
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vituum/winduum' },
+      { icon: 'github', link: 'https://github.com/winduum/winduum' },
       { icon: 'twitter', link: 'https://twitter.com/lubomirblazekcz' }
     ],
 
@@ -107,10 +107,6 @@ export default defineConfig({
             {
               text: 'Reset',
               link: '/docs/layout/reset'
-            },
-            {
-              text: 'Defaults',
-              link: '/docs/layout/defaults'
             },
             {
               text: 'Breakpoints',
@@ -199,24 +195,8 @@ export default defineConfig({
           text: 'Components',
           items: [
             {
-              text: 'Form',
-              link: '/docs/component/form'
-            },
-            {
               text: 'Dialog',
               link: '/docs/component/dialog'
-            },
-            {
-              text: 'Drawer',
-              link: '/docs/component/drawer'
-            },
-            {
-              text: 'Dropdown',
-              link: '/docs/component/dropdown'
-            },
-            {
-              text: 'Table',
-              link: '/docs/component/table'
             }
           ]
         },
@@ -224,16 +204,8 @@ export default defineConfig({
           text: 'Libraries',
           items: [
             {
-              text: 'Form',
-              link: '/docs/lib/form'
-            },
-            {
               text: 'Dialog',
               link: '/docs/lib/dialog'
-            },
-            {
-              text: 'Drawer',
-              link: '/docs/lib/drawer'
             },
             {
               text: 'Ripple',
@@ -242,10 +214,6 @@ export default defineConfig({
             {
               text: 'Hint',
               link: '/docs/lib/hint'
-            },
-            {
-              text: 'Anchor',
-              link: '/docs/lib/anchor'
             }
           ]
         }

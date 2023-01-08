@@ -2,11 +2,11 @@
 layout: home
 
 title: Winduum
-titleTemplate: Lightweight, modern, modular low-level CSS framework build on top of Tailwind
+titleTemplate: Small, modern, modular CSS component framework build on top of TailwindCSS
 
 hero:
   name: Winduum
-  text: Modern, modular, lightweight CSS component framework
+  text: CSS component framework
   tagline: Components in CSS, TailwindCSS only for utility classes. Leverages the use of CSS properties as much possible.
   image:
     src: /logo.svg
@@ -17,7 +17,7 @@ hero:
       link: /docs/
     - theme: alt
       text: View on GitHub
-      link: https://github.com/vituum/winduum
+      link: https://github.com/winduum/winduum
 
 features:
 - icon: 💡️
@@ -27,6 +27,6 @@ features:
   title: Modular
   details: Each component is written in plain CSS, so you can import only what you want to use and customize it with CSS properties
 - icon: ✨️
-  title: Lightweight
-  details: Adds only the basic components that can be built upon to make a complex UI project. Use of Tailwind is optional, it's recommended though
+  title: Small
+  details: Adds only the basic components that can be built upon to make a complex UX/UI project. Use of TailwindCSS is optional, but it's recommended though
 ---
