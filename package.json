@@ -3,9 +3,9 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
-    "winduum:copy-main": "cp node_modules/winduum/dist/main.css docs/public/examples/main.css",
-    "winduum:copy-tailwind": "cp node_modules/winduum/dist/tailwind.css docs/public/examples/tailwind.css",
-    "winduum:copy": "npm run winduum:copy-main && npm run winduum:copy-tailwind"
+    "vituum:dev": "cd examples && npx vite",
+    "vituum:build": "cd examples && npx vituum build",
+    "vituum:preview": "cd examples && npx vite preview"
   },
   "dependencies": {
     "vitepress": "1.0.0-alpha.30",
