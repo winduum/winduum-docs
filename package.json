@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "postinstall": "cd examples && npm i",
     "docs:dev": "npm run vituum:build && vitepress dev docs",
     "docs:build": "npm run vituum:build && vitepress build docs",
     "docs:serve": "vitepress serve docs",
