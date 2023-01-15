@@ -178,10 +178,6 @@ export default defineConfig({
               link: '/docs/ui/switch'
             },
             {
-              text: 'Range',
-              link: '/docs/ui/range'
-            },
-            {
               text: 'Notice',
               link: '/docs/ui/notice'
             },
