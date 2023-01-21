@@ -158,6 +158,14 @@ export default defineConfig({
               link: '/docs/ui/image'
             },
             {
+              text: 'Info',
+              link: '/docs/ui/info'
+            },
+            {
+              text: 'Label',
+              link: '/docs/ui/label'
+            },
+            {
               text: 'Input',
               link: '/docs/ui/input'
             },
