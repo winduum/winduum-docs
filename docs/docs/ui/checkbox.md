@@ -2,7 +2,7 @@
 
 ### CSS Properties
 
-Checkbox shares properties with [Radio](/docs/ui/radio) component.
+Checkbox shares styles and properties with [Radio](/docs/ui/radio) component.
 
 ```css
 :where(.ui-checkbox, .ui-radio) {
@@ -22,6 +22,10 @@ Checkbox shares properties with [Radio](/docs/ui/radio) component.
     --ui-checkbox-box-shadow: none;
 }
 ```
+
+### Variants
+
+* `is-invalid` - Invalid variant
 
 ## Basic
 
@@ -50,8 +54,6 @@ Checkbox shares properties with [Radio](/docs/ui/radio) component.
 ## Indeterminate
 
 ## Validation
-
-Validation messages can be added into `<em>` tag and are visible if `is-validated` is present as parent class.
 
 <iframe src="/examples/ui/checkbox/validation.html"></iframe>
 

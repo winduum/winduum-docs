@@ -2,7 +2,7 @@
 
 ### CSS Properties
 
-Input shares properties with [Select](/docs/ui/select) component.
+Input shares styles and properties with [Select](/docs/ui/select) component.
 
 ```css
 :root {
@@ -46,7 +46,7 @@ Input shares properties with [Select](/docs/ui/select) component.
 ### Variants
 
 * `is-floating` - Outline variant
-* `is-invalid` - Muted variant
+* `is-invalid` - Invalid variant
 
 ## Basic
 

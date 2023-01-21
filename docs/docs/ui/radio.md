@@ -9,6 +9,10 @@ Radio shares properties with [Checkbox](/docs/ui/checkbox) component.
 }
 ```
 
+### Variants
+
+* `is-invalid` - Invalid variant
+
 ## Basic
 
 <iframe src="/examples/ui/radio/basic.html"></iframe>

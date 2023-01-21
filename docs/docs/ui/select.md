@@ -15,7 +15,7 @@ Select shares properties with [Input](/docs/ui/input) component.
 ### Variants
 
 * `is-floating` - Outline variant
-* `is-invalid` - Muted variant
+* `is-invalid` - Invalid variant
 
 ## Basic
 
