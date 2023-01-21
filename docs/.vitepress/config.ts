@@ -158,10 +158,6 @@ export default defineConfig({
               link: '/docs/ui/image'
             },
             {
-              text: 'Info',
-              link: '/docs/ui/info'
-            },
-            {
               text: 'Label',
               link: '/docs/ui/label'
             },
@@ -184,6 +180,10 @@ export default defineConfig({
             {
               text: 'Switch',
               link: '/docs/ui/switch'
+            },
+            {
+              text: 'Info',
+              link: '/docs/ui/info'
             },
             {
               text: 'Notice',
