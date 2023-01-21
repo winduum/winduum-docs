@@ -25,7 +25,7 @@ Each CSS property follows the same naming, for example `--ui-name-font-size`
 
 ## Directory structure
 
-To help navigating your project easily it's recommended to follow the same naming structure for your directory structure, for example like this
+To help navigating your project easily it's recommended to follow the same naming principles for your directory structure, for example like this
 
 * 📁 **components**
     * 📁 **ui**

@@ -43,11 +43,3 @@
 <iframe src="/examples/ui/switch/disabled.html"></iframe>
 
 <<< @/public/examples/ui/switch/disabled.html#body{}
-
-## Validation
-
-Validation messages can be added into `<em>` tag and are visible if `is-validated` is present as parent class.
-
-<iframe src="/examples/ui/switch/validation.html"></iframe>
-
-<<< @/public/examples/ui/switch/validation.html#body{}

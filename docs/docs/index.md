@@ -1,7 +1,7 @@
 # Install
 
 You can install Winduum via **npm** and use it in **Node.js** or **Deno** project. 
-To leverage the full functionality of the framework, use of **TailwindCSS** is recommended.
+
 
 ## npm
 
@@ -10,6 +10,13 @@ npm i winduum
 ```
 
 ## CDN
+
+Tailwind styles contains only basic styles for colors and font variants, to leverage the full functionality of the framework, use of full **TailwindCSS** is recommended (see below).
+
+```html
+<link href="https://cdn.jsdelivr.net/npm/winduum@0.1.4/dist/main.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/winduum@0.1.4/dist/tailwind.css" rel="stylesheet" type="text/css" />
+```
 
 ## TailwindCSS
 
