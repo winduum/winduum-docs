@@ -1,7 +1,7 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
 <form class="is-validated">
-    <div class="ui-select">
+    <div class="ui-select is-floating">
         <select id="select" required>
             <option selected="" value="">- select an option -</option>
             <option value="1">Option 1</option>
@@ -9,7 +9,6 @@
             <option value="3">Option 3</option>
         </select>
         <label for="select">Select</label>
-        <em>This field is required</em>
     </div>
 </form>
 {% endblock %}

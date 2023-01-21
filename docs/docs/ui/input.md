@@ -111,13 +111,3 @@ You can group inputs into groups and combine them with other components like [Bu
 <iframe src="/examples/ui/input/group.html"></iframe>
 
 <<< @/public/examples/ui/input/group.html#body{}
-
-<br>
-
-# Input Mask
-
-You can wrap other components in input mask, which matches the height of the input and allows usage of label for other form components like checkbox, radio and switch.
-
-<iframe src="/examples/ui/input/mask.html"></iframe>
-
-<<< @/public/examples/ui/input/mask.html#body{}

@@ -193,6 +193,10 @@ export default defineConfig({
             {
               text: 'Dialog',
               link: '/docs/component/dialog'
+            },
+            {
+              text: 'Field',
+              link: '/docs/component/field'
             }
           ]
         },
