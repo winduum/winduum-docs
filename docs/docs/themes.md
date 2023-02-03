@@ -1,8 +1,10 @@
 # Themes
 
-Theming in Winduum is really easy, because you just edit few CSS properties. There are two themes by default and to create a new one, you are just extending the default theme
+Theming in Winduum is really easy, all it takes is few CSS properties. There are two themes by default (light and dark) and to create a new one, you can just extend the default theme.
 
 ## Default
+
+[`src/styles/base/theme/default.css`](https://github.com/winduum/winduum/blob/main/src/styles/base/theme/default.css)
 
 ```css
 :root {
@@ -25,6 +27,8 @@ Theming in Winduum is really easy, because you just edit few CSS properties. The
 ```
 
 ## Dark
+
+[`src/styles/base/theme/dark.css`](https://github.com/winduum/winduum/blob/main/src/styles/base/theme/dark.css)
 
 ```css
 :root.dark {

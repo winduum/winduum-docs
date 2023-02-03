@@ -43,6 +43,36 @@ You could also have your `.css` and `.js` files in separate directories like `st
 
 ### Using the components
 
+You can use any of the components easily in html without need to write complex TailwindCSS classes.
+
+Each component is written with low specificity in mind, so any property can be easily enhanced with TailwindCSS utility classes.
+
+::: code-group
+```html
+<button class="ui-btn accent-secondary">This is a Button</button>
+```
+```css
+:where(.ui-btn) {
+    --ui-btn-font-size: 0.875rem;
+    
+    /* CSS styles */
+}
+```
+:::
+
 ### Writing the components
 
-### Customizing the components
+You can write your own components with the same approach
+
+::: code-group
+```html
+<div class="c-hello-world bg-dark rounded-md">Hello world</div>
+```
+```css
+:where(.c-hello-world) {
+    --c-hello-world-font-size: 2rem;
+    
+    /* CSS styles */
+}
+```
+:::
