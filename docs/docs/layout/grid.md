@@ -8,4 +8,4 @@ It's recommended to use following TailwindCSS approaches to shape your layout
 
 This should cover most of use cases, but in some cases the classic pre-grid `col` approach can be usefully too.
 
-See [`src/styles/base/tailwind/gutters.css`](https://github.com/winduum/winduum/tree/main/src/styles/base/tailwind/gutters.css) for more info
+See [`src/base/tailwind/gutters.css`](https://github.com/winduum/winduum/tree/main/src/base/tailwind/gutters.css) for more info

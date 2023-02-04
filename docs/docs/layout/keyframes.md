@@ -1,6 +1,6 @@
 # Keyframes
 
-Following keyframes are provided in [`src/styles/base/keyframes.css`](https://github.com/winduum/winduum/blob/main/src/styles/base/keyframes.css).
+Following keyframes are provided in [`src/base/keyframes.css`](https://github.com/winduum/winduum/blob/main/src/base/keyframes.css).
 
 To use the animation as CSS class, use the animation class, eg. `animation-fade-in`. 
 

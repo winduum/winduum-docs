@@ -158,7 +158,7 @@ These are new media queries values that can be used with TailwindCSS, see more i
 
 # CSS properties
 
-Each property is defined in CSS in following path - [`src/styles/base/config.css`](https://github.com/winduum/winduum/blob/main/src/styles/base/config.css)
+Each property is defined in CSS in following path - [`src/base/config.css`](https://github.com/winduum/winduum/blob/main/src/base/config.css)
 
 ```postcss
 :root {

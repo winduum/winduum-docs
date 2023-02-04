@@ -4,7 +4,7 @@ Theming in Winduum is really easy, all it takes is few CSS properties. There are
 
 ## Default
 
-[`src/styles/base/theme/default.css`](https://github.com/winduum/winduum/blob/main/src/styles/base/theme/default.css)
+[`src/base/theme/default.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/default.css)
 
 ```css
 :root {
@@ -28,7 +28,7 @@ Theming in Winduum is really easy, all it takes is few CSS properties. There are
 
 ## Dark
 
-[`src/styles/base/theme/dark.css`](https://github.com/winduum/winduum/blob/main/src/styles/base/theme/dark.css)
+[`src/base/theme/dark.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/dark.css)
 
 ```css
 :root.dark {
