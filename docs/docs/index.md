@@ -1,6 +1,6 @@
 # Install
 
-You can install Winduum via **npm** and use it in **Node.js** or **Deno** project.
+You can install Winduum via **npm** and use it in your **Node.js** or **Deno** project.
 
 
 ## npm

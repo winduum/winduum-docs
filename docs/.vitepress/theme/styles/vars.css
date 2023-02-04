@@ -12,15 +12,6 @@
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
 }
 
-:root.dark {
-  --vp-c-black: rgb(28, 28, 28);
-  --vp-c-black-soft: rgb(24, 24, 24);
-  --vp-c-black-mute: rgb(32, 32, 32);
-  --vp-c-gray-dark-3: rgb(24, 24, 24);
-  --vp-c-bg-alpha-with-backdrop: rgba(24, 24, 24, 0.7);
-  --vp-c-bg-alpha-without-backdrop: rgba(24, 24, 24, 0.95);
-}
-
 /**
  * Component: Button
  * -------------------------------------------------------------------------- */
@@ -135,12 +126,12 @@
   font-size: 20px;
 }
 
-.VPSidebarGroup .title-text {
+.VPSidebarItem .item .text {
   font-size: 16px;
 }
 
-.VPSidebarGroup .link-text {
-  line-height: 28px;
+.VPSidebarItem .items .text {
+  line-height: 24px;
   font-size: 16px;
 }
 
@@ -174,4 +165,8 @@ iframe {
 
 .vp-doc :not(pre) > code {
   background-color: var(--vp-c-bg-soft);
+}
+
+.VPHome {
+  padding-bottom: 2.5rem;
 }
