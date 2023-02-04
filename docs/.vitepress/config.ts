@@ -218,10 +218,6 @@ export default defineConfig({
             {
               text: 'Ripple',
               link: '/docs/lib/ripple'
-            },
-            {
-              text: 'Hint',
-              link: '/docs/lib/hint'
             }
           ]
         }
