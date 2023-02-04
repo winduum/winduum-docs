@@ -7,11 +7,6 @@
     --ui-label-font-size: 0.875rem;
     --ui-label-font-weight: var(--font-medium);
 }
-
-:where(.ui-label) {
-    font-size: var(--ui-label-font-size);
-    font-weight: var(--ui-label-font-weight);
-}
 ```
 
 ## Basic
