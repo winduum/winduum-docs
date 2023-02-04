@@ -84,7 +84,7 @@ You can easily change accent color of any UI component. Because components in Wi
 
 ## Current
 
-Each text color variant has also `--color-current` defined. This is for similiar usage as `currentColor`, but with this custom property the alpha channel can be also used in `rgb`
+Each text color variant has also `--color-current` defined. This is for similar usage as `currentColor`, but with this custom property the alpha channel can be also used in `rgb`
 
 ::: code-group
 ```html
@@ -93,9 +93,12 @@ Each text color variant has also `--color-current` defined. This is for similiar
 </div>
 ```
 ```postcss
+[class*="text-primary"] {
+    --color-current: var(--color-primary);
+}
+
 .text-primary {
     --tw-text-opacity: 1;
-    --color-current: var(--color-primary);
     color: rgb(var(--color-primary) / var(--tw-text-opacity));
 }
 

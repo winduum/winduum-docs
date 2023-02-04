@@ -19,10 +19,26 @@ You can include compiled Winduum as CSS or JS import into your project.
 import 'winduum/main.css';
 ```
 :::
+This will add the CSS components, but to leverage the full functionality of the framework, use of [TailwindCSS](#tailwindcss) is recommended.
+
+### CSS Pre-processors
+
+You can use any CSS pre-processor you want. Just be sure to add [TailwindCSS](#tailwindcss) to your configuration, either via CLI or PostCSS.
 
 ### PostCSS
 
-The recommended setup is to use PostCSS and load source files directly. Following PostCSS plugins are required. `css-has-pseudo` is recommended because not all browsers supports `:has` yet. See [Trying Winduum online](#trying-winduum-online) section below for example usage.
+The recommended setup is to use PostCSS and load source files directly. Following PostCSS plugins are required. `css-has-pseudo` is recommended because not all browsers support `:has` yet.
+
+::: code-group
+```css
+@import "winduum/src/main.css";
+@import "winduum/src/tailwind.css";
+```
+```js
+import 'winduum/src/main.css';
+import 'winduum/src/tailwind.css';
+```
+:::
 
 ```json
 {
@@ -37,18 +53,26 @@ The recommended setup is to use PostCSS and load source files directly. Followin
 }
 ```
 
+### TailwindCSS
+
+Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation) docs and include Winduum as plugin, see [Config](config) for more info.
+
+### Stylelint
+
+It's also recommended to use [Stylelint](https://stylelint.io/) to help add conventions to your styles.
+
+_
+
+See [Trying Winduum online](#trying-winduum-online) section below to see all possible examples of configuration.
+
 ## CDN
 
-This is meant only for basic usage, only basic styles are included for TailwindCSS, such as colors and font variants. To leverage the full functionality of the framework, use of full **TailwindCSS** is recommended (see below).
+This is meant only for basic usage, only basic styles are included for TailwindCSS, such as colors and font variants. To leverage the full functionality of the framework, use of full [TailwindCSS](#tailwindcss) is recommended.
 
 ```html
 <link href="https://cdn.jsdelivr.net/npm/winduum@0.1.4/dist/main.css" rel="stylesheet" type="text/css" />
 <link href="https://cdn.jsdelivr.net/npm/winduum@0.1.4/dist/tailwind.css" rel="stylesheet" type="text/css" />
 ```
-
-## TailwindCSS
-
-Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation) docs and include Winduum as plugin, see [Config](config) for more info.
 
 ## Trying Winduum online
 

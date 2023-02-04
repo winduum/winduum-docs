@@ -16,6 +16,9 @@ hero:
       text: Get Started
       link: /docs/
     - theme: alt
+      text: About Winduum
+      link: /docs/use
+    - theme: alt
       text: View on GitHub
       link: https://github.com/winduum/winduum
 

@@ -9,25 +9,27 @@ module.exports = {
     './src/**/*.{js,html}'
   ],
   plugins: [
-    require('winduum')()
+    require('winduum')({
+        // config options
+    })
   ],
 }
 ```
+
+You can customize config with options listed bellow.
 
 This plugin disables by default following TailwindCSS corePlugins
 
 * **preflight** - custom modern css reset is used, see [Reset](layout/reset)
 * **container** - custom container css is used, see [Container](layout/container)
-* **accentColor** - tailwind and custom colors with rgb values are used, see [Colors](colors)
-* **textColor** - tailwind and custom colors with rgb values are used, see [Colors](colors)
 
-You can customize config with following options
+Winduum also exports useful helper classes you can use in your `tailwind.config.cjs`, see [`utils/tailwind.js`](https://github.com/winduum/winduum/blob/main/utils/tailwind.js) for more info.
 
 ## colors
 * **Type:** `string[]`
 * **Default:** `['background', 'default', 'light', 'dark', 'primary', 'secondary', warning', 'error', 'info', 'success', 'accent', 'current']`
 
-These are additional colors that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+These are additional colors that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`. See [Colors](colors) for more info.
 
 Example `bg-primary`:
 ```css

@@ -119,6 +119,10 @@ export default defineConfig({
             {
               text: 'Container',
               link: '/docs/layout/container'
+            },
+            {
+              text: 'Grid',
+              link: '/docs/layout/grid'
             }
           ]
         },

@@ -2,8 +2,10 @@
 
 Winduum is a mix of words **Tailwind** _(Popular CSS utility framework)_ and **Tuum** _(Estonian word for "core")_.
 
+Essentially provides ways to leverage use of **CSS properties** as much possible and do more in CSS. Because we ❤️ CSS and this is a small modest CSS framework.
+
 Its approach to **TailwindCSS** is little different. It encourages to write components in CSS or other (pre/post)-processors.
-And to use utility classes to enhance the components. It also leverages the use of **CSS properties** as much possible.
+And to use utility classes to enhance the components.
 
 ## Naming
 
@@ -16,8 +18,6 @@ In your projects it's recommended to follow naming semantics of Winduum with fol
 * **Layout** - `l-name` (wraps everything else)
 * **Utilities** - `u-name` (helper classes for common styles)
 * **Libraries** - `lib-name` (used for js enhanced based styles)
-
-The main approach of Winduum is 
 
 ## CSS Properties
 
