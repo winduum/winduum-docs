@@ -111,10 +111,11 @@ You can also try Winduum online on [StackBlitz](https://stackblitz.com/) with [V
 <div>
 
 ### Other
-* [vanilla]()
 * [deno]()
 * [nuxt]()
 * [next]()
+* [sass]()
+* [less]()
 
 </div>
 </div>
