@@ -93,7 +93,7 @@ Each text color variant has also `--color-current` defined. This is for similar 
 </div>
 ```
 ```postcss
-[class*="text-primary"] {
+.text-primary {
     --color-current: var(--color-primary);
 }
 
