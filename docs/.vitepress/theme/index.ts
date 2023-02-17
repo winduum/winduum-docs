@@ -5,10 +5,12 @@ import 'winduum/tailwind.css'
 import { watch, onMounted } from 'vue'
 
 function updateDarkIframes() {
-  if (!document.documentElement.classList.contains('dark')) {
-    document.querySelectorAll('iframe').forEach(element => {
-      element.src = element.src + '?dark=false'
-    })
+  if (typeof document !== 'undefined') {
+    if (!document.documentElement.classList.contains('dark')) {
+      document.querySelectorAll('iframe').forEach(element => {
+        element.src = element.src + '?dark=false'
+      })
+    }
   }
 }
 
