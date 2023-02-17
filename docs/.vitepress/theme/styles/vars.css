@@ -180,3 +180,7 @@ iframe {
   padding-bottom: 2.5rem !important;
   margin: auto;
 }
+
+.container {
+  padding: 0;
+}
