@@ -75,9 +75,11 @@ There are few types of colors with various areas of use. Colors are defined in [
 
 ## Accent
 
-You can easily change accent color of any UI component. Because components in Winduum use `--color-accent` property as their color, rather than `--color-primary`.
+You can easily change accent color of any UI component. Because components in Winduum use `--color-accent` property as their color, rather than `--color-primary`. 
 
-<iframe src="/examples/accent/btn.html"></iframe>
+So you still use primary color when needed and change accent only for elements you want.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/accent/btn.html"></iframe>
 
 <<< @/public/examples/accent/btn.html#body{}
 

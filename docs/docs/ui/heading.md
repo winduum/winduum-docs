@@ -19,24 +19,24 @@
 
 ## Basic
 
-<iframe src="/examples/ui/heading/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/heading/basic.html"></iframe>
 
 <<< @/public/examples/ui/heading/basic.html#body{}
 
 ## Small
 
-<iframe src="/examples/ui/heading/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/heading/small.html"></iframe>
 
 <<< @/public/examples/ui/heading/small.html#body{}
 
 ## Large
 
-<iframe src="/examples/ui/heading/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/heading/large.html"></iframe>
 
 <<< @/public/examples/ui/heading/large.html#body{}
 
 ## Weight
 
-<iframe src="/examples/ui/heading/weight.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/heading/weight.html"></iframe>
 
 <<< @/public/examples/ui/heading/weight.html#body{}

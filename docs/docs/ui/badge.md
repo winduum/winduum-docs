@@ -36,68 +36,68 @@
 
 ## Basic
 
-<iframe src="/examples/ui/badge/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/basic.html"></iframe>
 
 <<< @/public/examples/ui/badge/basic.html#body{}
 
 ## Flat
 
-<iframe src="/examples/ui/badge/flat.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/flat.html"></iframe>
 
 <<< @/public/examples/ui/badge/flat.html#body{}
 
 ## Outline
 
-<iframe src="/examples/ui/badge/outline.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/outline.html"></iframe>
 
 <<< @/public/examples/ui/badge/outline.html#body{}
 
 ## Muted
 
-<iframe src="/examples/ui/badge/muted.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/muted.html"></iframe>
 
 <<< @/public/examples/ui/badge/muted.html#body{}
 
 ## Small
 
-<iframe src="/examples/ui/badge/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/small.html"></iframe>
 
 <<< @/public/examples/ui/badge/small.html#body{}
 
 ## Large
 
-<iframe src="/examples/ui/badge/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/large.html"></iframe>
 
 <<< @/public/examples/ui/badge/large.html#body{}
 
 ## Square
 
-<iframe src="/examples/ui/badge/square.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/square.html"></iframe>
 
 <<< @/public/examples/ui/badge/square.html#body{}
 
 ## Circle
 
-<iframe src="/examples/ui/badge/circle.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/circle.html"></iframe>
 
 <<< @/public/examples/ui/badge/circle.html#body{}
 
 ## Icon
 
-<iframe src="/examples/ui/badge/icon.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/icon.html"></iframe>
 
 <<< @/public/examples/ui/badge/icon.html#body{}
 
 ## Custom
 
-<iframe src="/examples/ui/badge/custom.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/custom.html"></iframe>
 
 <<< @/public/examples/ui/badge/custom.html#body{}
 <<< @/public/examples/ui/badge/custom.html#style{css}
 
 You can also extend the badge with any TailwindCSS class to customize it
 
-<iframe src="/examples/ui/badge/tailwind.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/tailwind.html"></iframe>
 
 <<< @/public/examples/ui/badge/tailwind.html#body{}
 
@@ -107,6 +107,6 @@ You can also extend the badge with any TailwindCSS class to customize it
 
 You can group badges into groups
 
-<iframe src="/examples/ui/badge/group.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/group.html"></iframe>
 
 <<< @/public/examples/ui/badge/group.html#body{}

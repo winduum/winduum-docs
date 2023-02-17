@@ -7,6 +7,8 @@ Essentially provides ways to leverage use of **CSS properties** as much possible
 Its approach to **TailwindCSS** is little different. It encourages to write components in CSS or other (pre/post)-processors.
 And to use utility classes to enhance the components.
 
+As a CSS framework it provides only basic UI components. You can extend them with your own components or only use [TailwindCSS plugin](/docs/config) with its benefits and make your own complex UX/UI project written mostly in CSS/SASS/LESS.
+
 ## Naming
 
 In your projects it's recommended to follow naming semantics of Winduum with following classes, some of these are already used for various components.

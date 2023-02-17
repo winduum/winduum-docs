@@ -19,36 +19,36 @@ Select shares properties with [Input](/docs/ui/input) component.
 
 ## Basic
 
-<iframe src="/examples/ui/select/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/basic.html"></iframe>
 
 <<< @/public/examples/ui/select/basic.html#body{}
 
 ## Label
 
-<iframe src="/examples/ui/select/label.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/label.html"></iframe>
 
 <<< @/public/examples/ui/select/label.html#body{}
 
 ## Floating Label
 
-<iframe src="/examples/ui/select/floating.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/floating.html"></iframe>
 
 <<< @/public/examples/ui/select/floating.html#body{}
 
 ## Icon
 
-<iframe src="/examples/ui/select/icon.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/icon.html"></iframe>
 
 <<< @/public/examples/ui/select/icon.html#body{}
 
 ## Validation
 
-<iframe src="/examples/ui/select/validation.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/validation.html"></iframe>
 
 <<< @/public/examples/ui/select/validation.html#body{}
 
 ## Disabled
 
-<iframe src="/examples/ui/select/disabled.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/disabled.html"></iframe>
 
 <<< @/public/examples/ui/select/disabled.html#body{}

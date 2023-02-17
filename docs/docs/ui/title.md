@@ -19,36 +19,36 @@
 
 ## Basic
 
-<iframe src="/examples/ui/title/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/basic.html"></iframe>
 
 <<< @/public/examples/ui/title/basic.html#body{}
 
 ## Small
 
-<iframe src="/examples/ui/title/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/small.html"></iframe>
 
 <<< @/public/examples/ui/title/small.html#body{}
 
 ## Large
 
-<iframe src="/examples/ui/title/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/large.html"></iframe>
 
 <<< @/public/examples/ui/title/large.html#body{}
 
 ## Weight
 
-<iframe src="/examples/ui/title/weight.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/weight.html"></iframe>
 
 <<< @/public/examples/ui/title/weight.html#body{}
 
 ## Uppercase
 
-<iframe src="/examples/ui/title/uppercase.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/uppercase.html"></iframe>
 
 <<< @/public/examples/ui/title/uppercase.html#body{}
 
 ## Color
 
-<iframe src="/examples/ui/title/color.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/color.html"></iframe>
 
 <<< @/public/examples/ui/title/color.html#body{}

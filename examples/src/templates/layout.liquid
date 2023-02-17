@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="/src/styles/tailwind.css">
     <link rel="stylesheet" href="/src/styles/style.css">
 
+    <script>
+        if (window.location.search.includes('dark=false')) {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
     {% block head %}{% endblock %}
 </head>
 <body>

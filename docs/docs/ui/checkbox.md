@@ -29,25 +29,25 @@ Checkbox shares styles and properties with [Radio](/docs/ui/radio) component.
 
 ## Basic
 
-<iframe src="/examples/ui/checkbox/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/basic.html"></iframe>
 
 <<< @/public/examples/ui/checkbox/basic.html#body{}
 
 ## Label
 
-<iframe src="/examples/ui/checkbox/label.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/label.html"></iframe>
 
 <<< @/public/examples/ui/checkbox/label.html#body{}
 
 ## Required
 
-<iframe src="/examples/ui/checkbox/required.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/required.html"></iframe>
 
 <<< @/public/examples/ui/checkbox/required.html#body{}
 
 ## Disabled
 
-<iframe src="/examples/ui/checkbox/disabled.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/disabled.html"></iframe>
 
 <<< @/public/examples/ui/checkbox/disabled.html#body{}
 
@@ -55,6 +55,6 @@ Checkbox shares styles and properties with [Radio](/docs/ui/radio) component.
 
 ## Validation
 
-<iframe src="/examples/ui/checkbox/validation.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/validation.html"></iframe>
 
 <<< @/public/examples/ui/checkbox/validation.html#body{}

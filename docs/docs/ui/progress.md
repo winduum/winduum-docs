@@ -18,24 +18,24 @@
 
 ## Colors
 
-<iframe src="/examples/ui/progress/colors.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/progress/colors.html"></iframe>
 
 <<< @/public/examples/ui/progress/colors.html#body{}
 
 ## Small
 
-<iframe src="/examples/ui/progress/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/progress/small.html"></iframe>
 
 <<< @/public/examples/ui/progress/small.html#body{}
 
 ## Large
 
-<iframe src="/examples/ui/progress/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/progress/large.html"></iframe>
 
 <<< @/public/examples/ui/progress/large.html#body{}
 
 ## Indeterminate
 
-<iframe src="/examples/ui/progress/indeterminate.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/progress/indeterminate.html"></iframe>
 
 <<< @/public/examples/ui/progress/indeterminate.html#body{}

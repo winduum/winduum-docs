@@ -20,12 +20,12 @@
 
 ## Basic
 
-<iframe src="/examples/ui/link/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/link/basic.html"></iframe>
 
 <<< @/public/examples/ui/link/basic.html#body{}
 
 ## Underline
 
-<iframe src="/examples/ui/link/underline.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/link/underline.html"></iframe>
 
 <<< @/public/examples/ui/link/underline.html#body{}

@@ -22,24 +22,24 @@
 
 ## Basic
 
-<iframe src="/examples/ui/switch/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/switch/basic.html"></iframe>
 
 <<< @/public/examples/ui/switch/basic.html#body{}
 
 ## Small
 
-<iframe src="/examples/ui/switch/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/switch/small.html"></iframe>
 
 <<< @/public/examples/ui/switch/small.html#body{}
 
 ## Large
 
-<iframe src="/examples/ui/switch/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/switch/large.html"></iframe>
 
 <<< @/public/examples/ui/switch/large.html#body{}
 
 ## Disabled
 
-<iframe src="/examples/ui/switch/disabled.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/switch/disabled.html"></iframe>
 
 <<< @/public/examples/ui/switch/disabled.html#body{}

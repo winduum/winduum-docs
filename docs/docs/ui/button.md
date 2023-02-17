@@ -5,28 +5,28 @@
 
 ```css
 :where(.ui-btn) {
-  --color-current: var(--color-light);
-  --ui-btn-width: max-content;
-  --ui-btn-height: 2.25rem;
-  --ui-btn-py: 0.375rem;
-  --ui-btn-px: 0.75rem;
-  --ui-btn-border-radius: var(--rounded);
-  --ui-btn-font-size: 0.875rem;
-  --ui-btn-font-weight: var(--font-medium);
-  --ui-btn-bg: rgb(var(--color-accent) / var(--ui-btn-bg-opacity));
-  --ui-btn-bg-opacity: var(--tw-bg-opacity, 1);
-  --ui-btn-color: rgb(var(--color-current) / var(--ui-btn-color-opacity));
-  --ui-btn-color-opacity: var(--tw-text-opacity, 1);
-  --ui-btn-hover-filter: invert(1);
-  --ui-btn-hover-opacity: 0.2;
-  --ui-btn-focus-opacity: 0.3;
-  --ui-btn-disabled-opacity: 0.7;
-  --ui-btn-outline-width: 2px;
-  --ui-btn-outline-opacity: 0.5;
-  --ui-btn-icon-font-size: 1.25rem;
-  --ui-btn-gap: 0.375rem;
-  --ui-btn-loading-width: 1rem;
-  --ui-btn-loading-border-width: 2px;
+    --color-current: var(--color-light);
+    --ui-btn-width: max-content;
+    --ui-btn-height: 2.25rem;
+    --ui-btn-py: 0.375rem;
+    --ui-btn-px: 0.75rem;
+    --ui-btn-border-radius: var(--rounded);
+    --ui-btn-font-size: 0.875rem;
+    --ui-btn-font-weight: var(--font-medium);
+    --ui-btn-bg: rgb(var(--color-accent) / var(--ui-btn-bg-opacity));
+    --ui-btn-bg-opacity: var(--tw-bg-opacity, 1);
+    --ui-btn-color: rgb(var(--color-current) / var(--ui-btn-color-opacity));
+    --ui-btn-color-opacity: var(--tw-text-opacity, 1);
+    --ui-btn-hover-filter: invert(1);
+    --ui-btn-hover-opacity: 0.2;
+    --ui-btn-focus-opacity: 0.3;
+    --ui-btn-disabled-opacity: 0.7;
+    --ui-btn-outline-width: 2px;
+    --ui-btn-outline-opacity: 0.5;
+    --ui-btn-icon-font-size: 1.25rem;
+    --ui-btn-gap: 0.375rem;
+    --ui-btn-loading-width: 1rem;
+    --ui-btn-loading-border-width: 2px;
 }
 ```
 
@@ -48,7 +48,7 @@
 
 ## Basic
 
-<iframe src="/examples/ui/btn/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/basic.html"></iframe>
 
 ```html
 <button class="ui-btn">Button</button>
@@ -57,7 +57,7 @@
 
 ## Flat
 
-<iframe src="/examples/ui/btn/flat.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/flat.html"></iframe>
 
 ```html
 <button class="ui-btn accent-primary">Primary</button>
@@ -72,7 +72,7 @@
 
 ## Outline
 
-<iframe src="/examples/ui/btn/outline.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/outline.html"></iframe>
 
 ```html
 <button class="ui-btn is-outline accent-primary">Primary</button>
@@ -85,9 +85,21 @@
 <button class="ui-btn is-outline accent-light text-dark">Light</button>
 ```
 
+`is-outline` uses `outline` property, in some cases you might prefer `border` property. In that case you can use following code to modify the button.
+
+```css
+.ui-btn:where(.is-border) {
+    --ui-btn-focus-opacity: 0.15;
+    
+    border: var(--ui-btn-outline-width) solid rgb(var(--color-accent) / var(--ui-btn-outline-opacity));
+    padding-left: calc(var(--ui-btn-px) - var(--ui-btn-outline-width));
+    padding-right: calc(var(--ui-btn-px) - var(--ui-btn-outline-width));
+}
+```
+
 ## Muted
 
-<iframe src="/examples/ui/btn/muted.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/muted.html"></iframe>
 
 ```html
 <button class="ui-btn is-muted accent-primary">Primary</button>
@@ -102,7 +114,7 @@
 
 ## Raised
 
-<iframe src="/examples/ui/btn/raised.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/raised.html"></iframe>
 
 ```html
 <button class="ui-btn is-raised accent-primary">Primary</button>
@@ -117,7 +129,7 @@
 
 ## Text
 
-<iframe src="/examples/ui/btn/text.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/text.html"></iframe>
 
 ```html
 <button class="ui-btn is-text accent-primary">Primary</button>
@@ -134,7 +146,7 @@
 
 You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/gradient-color-stops) gradient classes
 
-<iframe src="/examples/ui/btn/gradient.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/gradient.html"></iframe>
 
 ```html
 <button class="ui-btn bg-gradient-to-br from-purple-600 to-blue-500">Button</button>
@@ -143,7 +155,7 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 ## Small
 
-<iframe src="/examples/ui/btn/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/small.html"></iframe>
 
 ```html
 <button class="ui-btn is-sm">Button</button>
@@ -151,7 +163,7 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 ## Large
 
-<iframe src="/examples/ui/btn/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/large.html"></iframe>
 
 ```html
 <button class="ui-btn is-lg">Button</button>
@@ -159,7 +171,7 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 ## Wide
 
-<iframe src="/examples/ui/btn/wide.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/wide.html"></iframe>
 
 ```html
 <button class="ui-btn is-wide">Button</button>
@@ -168,7 +180,7 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 ## Square
 
-<iframe src="/examples/ui/btn/square.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/square.html"></iframe>
 
 ```html
 <button class="ui-btn is-square">1</button>
@@ -182,7 +194,7 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 ## Circle
 
-<iframe src="/examples/ui/btn/circle.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/circle.html"></iframe>
 
 ```html
 <button class="ui-btn is-circle">1</button>
@@ -196,7 +208,7 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 ## Icon
 
-<iframe src="/examples/ui/btn/icon.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/icon.html"></iframe>
 
 ```html
 <button class="ui-btn is-muted">
@@ -220,7 +232,7 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 ## Loading
 
-<iframe src="/examples/ui/btn/loading.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/loading.html"></iframe>
 
 ```html
 <button class="ui-btn is-loading">
@@ -236,7 +248,7 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 ## Active
 
-<iframe src="/examples/ui/btn/active.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/active.html"></iframe>
 
 ```html
 <button class="ui-btn is-active">
@@ -252,7 +264,7 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 ## Disabled
 
-<iframe src="/examples/ui/btn/disabled.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/disabled.html"></iframe>
 
 ```html
 <button class="ui-btn" disabled>
@@ -268,7 +280,7 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 ## Custom
 
-<iframe src="/examples/ui/btn/custom.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/custom.html"></iframe>
 
 ```html
 <button class="ui-btn">Button</button>
@@ -290,7 +302,7 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 You can also extend the button with any TailwindCSS class to customize it
 
-<iframe src="/examples/ui/btn/tailwind.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/tailwind.html"></iframe>
 
 ```html
 <button class="ui-btn bg-gray-200 text-dark">Button</button>
@@ -302,7 +314,7 @@ You can also extend the button with any TailwindCSS class to customize it
 
 You can group buttons into groups
 
-<iframe src="/examples/ui/btn/group.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/group.html"></iframe>
 
 ```html
 <div class="ui-btn-group">

@@ -11,6 +11,6 @@
 
 ## Basic
 
-<iframe src="/examples/ui/info/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/info/basic.html"></iframe>
 
 <<< @/public/examples/ui/info/basic.html#body{}

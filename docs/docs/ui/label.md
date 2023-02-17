@@ -11,6 +11,6 @@
 
 ## Basic
 
-<iframe src="/examples/ui/input/label.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/label.html"></iframe>
 
 <<< @/public/examples/ui/input/label.html#body{}

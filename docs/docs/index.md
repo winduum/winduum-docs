@@ -2,6 +2,7 @@
 
 You can install Winduum via **npm** and use it in your **Node.js** or **Deno** project.
 
+See [Trying Winduum online](#trying-winduum-online) section below to see all possible examples of configuration.
 
 ## npm
 
@@ -27,7 +28,7 @@ You can use any CSS pre-processor you want. Just be sure to add [TailwindCSS](#t
 
 ### PostCSS
 
-The recommended setup is to use PostCSS and load source files directly. Following PostCSS plugins are required. `css-has-pseudo` is recommended because not all browsers support `:has` yet.
+The recommended setup is to use PostCSS and load source files directly.
 
 ::: code-group
 ```css
@@ -39,19 +40,13 @@ import 'winduum/src/main.css';
 import 'winduum/src/tailwind.css';
 ```
 :::
-
-```json
-{
-  "autoprefixer": "*",
-  "css-has-pseudo": "*",
-  "postcss-custom-media": "*",
-  "postcss-custom-properties": "*",
-  "postcss-custom-selectors": "*",
-  "postcss-import": "*",
-  "postcss-nesting": "*",
-  "tailwindcss": "*"
-}
-```
+Following PostCSS plugins are required. `css-has-pseudo` is recommended because not all browsers support `:has` yet.
+* [`autoprefixer`](https://www.npmjs.com/package/autoprefixer)
+* [`tailwindcss`](https://www.npmjs.com/package/tailwindcss)
+* [`postcss-nesting`](https://www.npmjs.com/package/postcss-nesting)
+* [`postcss-import`](https://www.npmjs.com/package/postcss-import)
+* [`postcss-custom-media`](https://www.npmjs.com/package/postcss-custom-media)
+* [`css-has-pseudo`](https://www.npmjs.com/package/css-has-pseudo)
 
 ### TailwindCSS
 
@@ -59,19 +54,15 @@ Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/inst
 
 ### Stylelint
 
-It's also recommended to use [Stylelint](https://stylelint.io/) to help add conventions to your styles.
-
-_
-
-See [Trying Winduum online](#trying-winduum-online) section below to see all possible examples of configuration.
+It's also recommended to use [Stylelint](https://stylelint.io/) to help add conventions to your styles. You can check and use basic `.stylelintrc` for Winduum [here](https://github.com/winduum/winduum/blob/main/.stylelintrc).
 
 ## CDN
 
 This is meant only for basic usage, only basic styles are included for TailwindCSS, such as colors and font variants. To leverage the full functionality of the framework, use of full [TailwindCSS](#tailwindcss) is recommended.
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/winduum@0.1.4/dist/main.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.jsdelivr.net/npm/winduum@0.1.4/dist/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/winduum/dist/main.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/winduum/dist/tailwind.css" rel="stylesheet" type="text/css" />
 ```
 
 ## Trying Winduum online
