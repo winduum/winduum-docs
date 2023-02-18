@@ -83,30 +83,30 @@ You can also try Winduum online on [StackBlitz](https://stackblitz.com/) with [V
 
 ### Vite
 * [vite](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite)
-* [vite + vue]()
-* [vite + react]()
-* [vite + svelte]()
-* [vite + qwik]()
+* [vite + vue](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-vue)
+* [vite + react](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-react)
+* [vite + svelte](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-svelte)
+* [vite + qwik](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-qwik)
 
 </div>
 <div>
 
 ### Vituum
-* [vituum]()
-* [vituum + twig]()
-* [vituum + liquid]()
-* [vituum + liquid]()
-* [vituum + pug]()
+* [vituum](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vituum)
+* [vituum + liquid](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vituum-liquid)
+* [vituum + twig](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vituum-twig)
+* [vituum + nunjucks](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vituum-nunjucks)
+* [vituum + pug](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vituum-pug)
 
 </div>
 <div>
 
 ### Other
-* [deno]()
-* [nuxt]()
-* [next]()
-* [sass]()
-* [less]()
+* [deno](https://stackblitz.com/github/winduum/winduum/tree/main/examples/deno)
+* [nuxt](https://stackblitz.com/github/winduum/winduum/tree/main/examples/nuxt)
+* [next](https://stackblitz.com/github/winduum/winduum/tree/main/examples/next)
+* [sass](https://stackblitz.com/github/winduum/winduum/tree/main/examples/sass)
+* [less](https://stackblitz.com/github/winduum/winduum/tree/main/examples/less)
 
 </div>
 </div>
