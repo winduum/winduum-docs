@@ -67,7 +67,7 @@ This is meant only for basic usage, only basic styles are included for TailwindC
 
 ## Trying Winduum online
 
-You can also try Winduum online on [StackBlitz](https://stackblitz.com/) with [Vite](https://vitejs.dev/) or [Vituum](https://vituum.dev/).
+You can also try Winduum online on [StackBlitz](https://stackblitz.com/) with [Vite](https://vitejs.dev/) or [Vituum](https://vituum.dev/). Here are few basic examples how to use it in different frameworks.
 
 <style>
     @media all and (max-width: 720px) {
@@ -103,6 +103,7 @@ You can also try Winduum online on [StackBlitz](https://stackblitz.com/) with [V
 
 ### Other
 * [deno](https://stackblitz.com/github/winduum/winduum/tree/main/examples/deno)
+* [astro](https://stackblitz.com/github/winduum/winduum/tree/main/examples/astro)
 * [nuxt](https://stackblitz.com/github/winduum/winduum/tree/main/examples/nuxt)
 * [next](https://stackblitz.com/github/winduum/winduum/tree/main/examples/next)
 * [sass](https://stackblitz.com/github/winduum/winduum/tree/main/examples/sass)
