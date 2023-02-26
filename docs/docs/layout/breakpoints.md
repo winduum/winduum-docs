@@ -15,6 +15,8 @@ You can use the same principles as defined in [Responsive design](https://tailwi
 * **xxl** - 2016px
 * **2xxl** - 2528px
 
+Breakpoints are defined in [`src/base/breakpoints.css`](https://github.com/winduum/winduum/blob/main/src/base/breakpoints.css) and in [config#screens](/docs/config#screens)
+
 You can also use the breakpoints inside CSS like this.
 
 ```postcss
