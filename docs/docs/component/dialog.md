@@ -9,7 +9,6 @@ Basic styles for a dialog element, can be used together with [LibDialog](/docs/l
     --c-dialog-py: 1.5rem;
     --c-dialog-px: 1.5rem;
     --c-dialog-width: 35rem;
-    --c-dialog-offset-y: 2rem;
     --c-dialog-animation-duration: var(--transition-duration);
 }
 ```
