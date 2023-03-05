@@ -67,21 +67,20 @@ This is meant only for basic usage, only basic styles are included for TailwindC
 
 ## Trying Winduum online
 
-You can also try Winduum online on [StackBlitz](https://stackblitz.com/) with [Vite](https://vitejs.dev/) or [Vituum](https://vituum.dev/). Here are few basic examples how to use it in different frameworks.
+You can also try Winduum online on [StackBlitz](https://stackblitz.com/) with basic examples how to use it in [Vite](https://vitejs.dev/) and other frameworks.
 
 <style>
     @media all and (max-width: 720px) {
-        #winduum-examples {
+        #trying-winduum-online {
             display: block !important;
             gap: 3rem !important;
         }
     }
 </style>
 
-<div id="winduum-examples" style="display: flex; gap: 6rem; font-size: 1.125rem;">
+<div id="trying-winduum-online" style="display: flex; gap: 6rem; font-size: 1.125rem;">
 <div>
 
-### Vite
 * [vite](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite)
 * [vite + vue](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-vue)
 * [vite + react](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-react)
@@ -89,25 +88,21 @@ You can also try Winduum online on [StackBlitz](https://stackblitz.com/) with [V
 * [vite + qwik](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-qwik)
 
 </div>
+
 <div>
 
-### Vituum
-* [vituum](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vituum)
-* [vituum + liquid](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vituum-liquid)
-* [vituum + twig](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vituum-twig)
-* [vituum + nunjucks](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vituum-nunjucks)
-* [vituum + pug](https://stackblitz.com/github/winduum/winduum/tree/main/examples/vituum-pug)
-
-</div>
-<div>
-
-### Other
-* [deno](https://stackblitz.com/github/winduum/winduum/tree/main/examples/deno)
 * [astro](https://stackblitz.com/github/winduum/winduum/tree/main/examples/astro)
 * [nuxt](https://stackblitz.com/github/winduum/winduum/tree/main/examples/nuxt)
 * [next](https://stackblitz.com/github/winduum/winduum/tree/main/examples/next)
 * [sass](https://stackblitz.com/github/winduum/winduum/tree/main/examples/sass)
 * [less](https://stackblitz.com/github/winduum/winduum/tree/main/examples/less)
+
+</div>
+
+<div>
+
+* [deno + vite](https://github.com/winduum/winduum/tree/main/examples/deno-vite)
+* [deno + lume](https://github.com/winduum/winduum/tree/main/examples/deno-lume)
 
 </div>
 </div>

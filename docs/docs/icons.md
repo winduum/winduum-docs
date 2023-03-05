@@ -1,6 +1,6 @@
 # Icons
 
-It's recommended to use icons as svg's from [Heroicons](https://heroicons.com/)
+It's recommended to use icons as svg, such as [Heroicons](https://heroicons.com/)
 
 Winduum uses some of them internally via CSS like this
 
