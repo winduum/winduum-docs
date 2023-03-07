@@ -1,13 +1,13 @@
 import { defineConfig } from 'vitepress'
 
-const ogDescription = 'Lightweight, modern, modular low-level UIS framework build on top of Tailwind'
+const ogDescription = 'Modern, modular, small CSS component framework build on top of TailwindCSS'
 const ogImage = 'https://winduum.dev/og-image.png'
 const ogTitle = 'Winduum'
 const ogUrl = 'https://winduum.dev'
 
 export default defineConfig({
-  title: `Winduum`,
-  description: 'Small, modern, modular low-level UI framework build on top of Tailwind',
+  title: ogTitle,
+  description: ogDescription,
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
@@ -17,7 +17,7 @@ export default defineConfig({
     ['meta', { property: 'og:url', content: ogUrl }],
     ['meta', { property: 'og:description', content: ogDescription }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:site', content: '@lubomirblazekcz' }],
+    ['meta', { name: 'twitter:site', content: '@winduum' }],
     ['meta', { name: 'theme-color', content: '#2d55ff' }]
   ],
 
@@ -35,13 +35,13 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/winduum/winduum' },
-      { icon: 'twitter', link: 'https://twitter.com/lubomirblazekcz' }
+      { icon: 'twitter', link: 'https://twitter.com/winduum' }
     ],
 
     algolia: {
       appId: 'VB79JXJIAA',
       apiKey: 'a7c609cdca4e22d1249ab92a68d1d5ed',
-      indexName: 'vituum'
+      indexName: 'winduum'
     },
 
     footer: {

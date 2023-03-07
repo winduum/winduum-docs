@@ -184,3 +184,7 @@ iframe {
 .container {
   padding: 0;
 }
+
+em {
+  font-style: italic;
+}

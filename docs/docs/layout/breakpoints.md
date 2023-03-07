@@ -1,6 +1,6 @@
 # Breakpoints
 
-Breakpoints in Winduum are very close to TailwindCSS, yet slightly different values, defined in `em` and extended to cover all possible resolutions. 
+Breakpoints in Winduum are very close to TailwindCSS, yet slightly different values and defined in `em` and extended to cover all possible resolutions. 
 
 You can use the same principles as defined in [Responsive design](https://tailwindcss.com/docs/responsive-design)
 
@@ -28,4 +28,4 @@ You can also use the breakpoints inside CSS like this.
     /* < 768 */
 }
 ```
-[Custom Media Specification](https://www.w3.org/TR/mediaqueries-5/#at-ruledef-custom-media) is used, so PostCSS is required, see [Install](/) for more info.
+[Custom Media Specification](https://www.w3.org/TR/mediaqueries-5/#at-ruledef-custom-media) is used, so PostCSS is required, see [Install](/docs/) for more info.

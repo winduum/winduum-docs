@@ -19,7 +19,7 @@ In your projects it's recommended to follow naming semantics of Winduum with fol
 * **Module** - `m-name` (wraps sections)
 * **Layout** - `l-name` (wraps everything else)
 * **Utilities** - `u-name` (helper classes for common styles)
-* **Libraries** - `lib-name` (used for js enhanced based styles)
+* **Libraries** - `lib-name` (used for functionality enhanced styles)
 
 ## CSS Properties
 
@@ -39,7 +39,7 @@ To help navigating your project easily it's recommended to follow the same namin
         * 📄 form.js
 
 
-You could also have your `.css` and `.js` files in separate directories like `styles` or `scripts`, but that's up to you and your JS framework that you use, you might use SFC too.
+You could also have your `.css` and `.js` files in separate directories like `styles` or `scripts`, but that's up to you and your framework that you use, you might use SFC too.
 
 ## Examples
 

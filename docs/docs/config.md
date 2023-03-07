@@ -23,13 +23,13 @@ This plugin disables by default following TailwindCSS corePlugins
 * **preflight** - custom modern css reset is used, see [Reset](layout/reset)
 * **container** - custom container css is used, see [Container](layout/container)
 
-Winduum also exports useful helper classes you can use in your `tailwind.config.cjs`, see [`utils/tailwind.js`](https://github.com/winduum/winduum/blob/main/utils/tailwind.js) for more info.
+Winduum also exports useful helper functions you can use in your `tailwind.config.cjs`, see [`utils/tailwind.js`](https://github.com/winduum/winduum/blob/main/utils/tailwind.js) for more info.
 
 ## colors
 * **Type:** `string[]`
 * **Default:** `['background', 'default', 'light', 'dark', 'primary', 'secondary', warning', 'error', 'info', 'success', 'accent', 'current']`
 
-These are additional colors that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`. See [Colors](colors) for more info.
+These are additional color tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`. See [Colors](colors) for more info.
 
 Example `bg-primary`:
 ```css
@@ -52,7 +52,7 @@ Example `text-primary`:
 * **Type:** `string[]`
 * **Default:** `['primary', 'secondary']`
 
-These are additional font families that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+These are additional font-family tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
 
 Example `font-primary`:
 ```css
@@ -65,7 +65,7 @@ Example `font-primary`:
 * **Type:** `string[]`
 * **Default:** `['light', 'normal', 'medium', 'semibold', 'bold', 'extrabold']`
 
-These are additional font weights that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+These are additional font-weight tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
 
 Example `font-boldy`:
 ```css
@@ -78,7 +78,7 @@ Example `font-boldy`:
 * **Type:** `number[]`
 * **Default:** `[10, 20, 30, 40, 50, 60]`
 
-These are additional z-index values that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+These are additional z-index tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
 
 Example `z-10`:
 ```css
@@ -91,7 +91,7 @@ Example `z-10`:
 * **Type:** `string[]`
 * **Default:** `['xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', 'section']`
 
-These are additional spacing values that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+These are additional spacing tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
 
 Example `gap-md`:
 ```css
@@ -112,7 +112,7 @@ Example `px-md`:
 * **Type:** `string[]`
 * **Default:** `['xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', 'section']`
 
-These are additional border radius values that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+These are additional border-radius tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
 
 Example `rounded-md`:
 ```css
@@ -125,7 +125,7 @@ Example `rounded-md`:
 * **Type:** `string[]`
 * **Default:** `['fade-in', 'fade-out']`
 
-These are additional animation name values that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+These are additional animation tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
 
 Example `animation-fade-in`:
 ```css
@@ -152,7 +152,7 @@ Example `animation-fade-in`:
 }
 ```
 
-These are new media queries values that can be used with TailwindCSS, see more in [Breakpoints](layout/breakpoints)
+These are new media queries tokens that can be used with TailwindCSS, see more in [Breakpoints](layout/breakpoints)
 
 <br>
 

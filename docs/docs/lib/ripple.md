@@ -5,6 +5,8 @@ Provides CSS and JS to add a material ripple effect that is visible on clicking.
 * [`winduum/src/libraries/Ripple.css`](https://github.com/winduum/winduum/blob/main/src/libraries/Ripple.css)
 * [`winduum/src/libraries/Ripple.js`](https://github.com/winduum/winduum/blob/main/src/libraries/Ripple.js)
 
+You can use this together with [Button](/docs/ui/button) component or any other.
+
 ### CSS Properties
 
 ```css
