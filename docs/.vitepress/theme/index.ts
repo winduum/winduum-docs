@@ -1,5 +1,5 @@
 import Theme from 'vitepress/theme'
-import { showDialog } from 'winduum/src/libraries/Dialog.js'
+import { showDialog } from 'winduum/src/libraries/dialog.js'
 import './styles/vars.css'
 import 'winduum/main.css'
 import 'winduum/tailwind.css'
