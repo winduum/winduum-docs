@@ -51,8 +51,6 @@ Checkbox shares styles and properties with [Radio](/docs/ui/radio) component.
 
 <<< @/public/examples/ui/checkbox/disabled.html#body{}
 
-## Indeterminate
-
 ## Validation
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/validation.html"></iframe>
