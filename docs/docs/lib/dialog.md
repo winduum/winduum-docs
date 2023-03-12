@@ -2,8 +2,8 @@
 
 Provides CSS and JS to add HTML5 dialog functionality. 
 
-* [`winduum/src/libraries/Dialog.css`](https://github.com/winduum/winduum/blob/main/src/libraries/Dialog.css)
-* [`winduum/src/libraries/Dialog.js`](https://github.com/winduum/winduum/blob/main/src/libraries/Dialog.js)
+* [`winduum/src/libraries/dialog.css`](https://github.com/winduum/winduum/blob/main/src/libraries/dialog.css)
+* [`winduum/src/libraries/dialog.js`](https://github.com/winduum/winduum/blob/main/src/libraries/dialog.js)
 
 You can use this together with [Dialog](/docs/component/dialog) component or style your own dialog.
 
@@ -26,7 +26,7 @@ You can use this together with [Dialog](/docs/component/dialog) component or sty
 Shows a dialog, either existing one via `selector` option or inserts a new dialog dynamically via `content` option.
 
 ```js
-import { showDialog } from 'winduum/src/libraries/Dialog.js'
+import { showDialog } from 'winduum/src/libraries/dialog.js'
 
 document.querySelector('#showDialog').addEventListener('click', async () => {
     await showDialog({
@@ -110,7 +110,7 @@ Whenever to remove `<dialog>` element after closing it
 Fetches dialog HTML from the server and shows the dialog dynamically
 
 ```js
-import { fetchDialog } from 'winduum/src/libraries/Dialog.js'
+import { fetchDialog } from 'winduum/src/libraries/dialog.js'
 
 document.querySelector('#fetchDialog').addEventListener('click', async () => {
     await fetchDialog({

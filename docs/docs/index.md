@@ -36,6 +36,22 @@ import 'winduum/src/main.css';
 import 'winduum/src/tailwind.css';
 ```
 :::
+
+Or you can include components separately
+
+::: code-group
+```css
+@import "winduum/src/base/index.css";
+@import "winduum/src/tailwind.css";
+@import "winduum/src/ui/btn.css";
+```
+```js
+import 'winduum/src/base/index.css';
+import 'winduum/src/tailwind.css';
+import 'winduum/src/ui/btn.css';
+```
+:::
+
 Following PostCSS plugins are required. `css-has-pseudo` is recommended because not all browsers support `:has` yet.
 * [`autoprefixer`](https://www.npmjs.com/package/autoprefixer)
 * [`tailwindcss`](https://www.npmjs.com/package/tailwindcss)
@@ -99,10 +115,10 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 <div>
 
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite" target="_blank" rel="noreferrer">vite <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://github.com/winduum/winduum/tree/main/examples/vite-vue" target="_blank" rel="noreferrer">vite + vue <svg><use href="#icon-gh" /></svg></a>
-* <a href="https://github.com/winduum/winduum/tree/main/examples/vite-react" target="_blank" rel="noreferrer">vite + react <svg><use href="#icon-gh" /></svg></a>
-* <a href="https://github.com/winduum/winduum/tree/main/examples/vite-svelte" target="_blank" rel="noreferrer">vite + svelte <svg><use href="#icon-gh" /></svg></a>
-* <a href="https://github.com/winduum/winduum/tree/main/examples/vite-qwik" target="_blank" rel="noreferrer">vite + qwik <svg><use href="#icon-gh" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-vue" target="_blank" rel="noreferrer">vite + vue <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-react" target="_blank" rel="noreferrer">vite + react <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-svelte" target="_blank" rel="noreferrer">vite + svelte <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-qwik" target="_blank" rel="noreferrer">vite + qwik <svg><use href="#icon-sb" /></svg></a>
 
 </div>
 
