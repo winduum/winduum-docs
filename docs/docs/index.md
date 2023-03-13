@@ -4,6 +4,10 @@ You can install Winduum via **npm** and use it in your **Node.js** or **Deno** p
 
 See [Trying Winduum Online](#trying-winduum-online) section below to see all possible examples of use.
 
+::: warning
+Winduum is in early preview. Can be used for production, but some features may change over time.
+:::
+
 ## npm
 
 ```shell
