@@ -124,7 +124,6 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 
 <div>
 
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-tokencss" target="_blank" rel="noreferrer">vite + tokencss <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-sass" target="_blank" rel="noreferrer">vite + sass <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-less" target="_blank" rel="noreferrer">vite + less <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://github.com/winduum/winduum/tree/main/examples/deno-vite" target="_blank" rel="noreferrer">deno + vite <svg><use href="#icon-gh" /></svg></a>
