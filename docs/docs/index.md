@@ -1,6 +1,6 @@
 # Install
 
-You can install Winduum via **npm** and use it in your **Node.js** or **Deno** project.
+You can install Winduum via **npm** and use it in your **Node.js** project.
 
 See [Trying Winduum Online](#trying-winduum-online) section below to see all possible examples of use.
 
@@ -128,18 +128,11 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 
 <div>
 
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-sass" target="_blank" rel="noreferrer">vite + sass <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-less" target="_blank" rel="noreferrer">vite + less <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://github.com/winduum/winduum/tree/main/examples/deno-vite" target="_blank" rel="noreferrer">deno + vite <svg><use href="#icon-gh" /></svg></a>
-* <a href="https://github.com/winduum/winduum/tree/main/examples/deno-lume" target="_blank" rel="noreferrer">deno + lume <svg><use href="#icon-gh" /></svg></a>
-
-</div>
-
-<div>
-
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/astro" target="_blank" rel="noreferrer">astro <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/nuxt" target="_blank" rel="noreferrer">nuxt <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/next" target="_blank" rel="noreferrer">next <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-sass" target="_blank" rel="noreferrer">vite + sass <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-less" target="_blank" rel="noreferrer">vite + less <svg><use href="#icon-sb" /></svg></a>
 
 </div>
 </div>
