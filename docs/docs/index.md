@@ -32,7 +32,7 @@ The recommended setup is to use PostCSS and load source files directly.
 
 ::: code-group
 ```css
-@import "winduum/src/main.css";
+@import "winduum/src/main.css" layer(utilities);
 @import "winduum/src/tailwind.css";
 ```
 ```js
@@ -47,7 +47,7 @@ Or you can include components separately
 ```css
 @import "winduum/src/base/index.css";
 @import "winduum/src/tailwind.css";
-@import "winduum/src/ui/btn.css";
+@import "winduum/src/ui/btn.css" layer(utilities);
 ```
 ```js
 import 'winduum/src/base/index.css';
@@ -55,6 +55,8 @@ import 'winduum/src/tailwind.css';
 import 'winduum/src/ui/btn.css';
 ```
 :::
+
+With `layer(utilities)` you can use TailwindCSS also on components, for example `class="ui-btn lg:is-square"` to make button square only from `lg` breakpoint.
 
 Following PostCSS plugins are required. `css-has-pseudo` is recommended because not all browsers support `:has` yet.
 * [`autoprefixer`](https://www.npmjs.com/package/autoprefixer)
