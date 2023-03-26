@@ -28,9 +28,9 @@ This will add the CSS components, but to leverage the full functionality of the 
 
 ### PostCSS
 
-The components are written in plain CSS, so sources can be also loaded in browsers or used in any other build tool such as **PostCSS** or **LightningCSS**. 
+The components are written in plain CSS, so sources can be also loaded in browsers without a build step or used in any other build tool such as **PostCSS** or **LightningCSS**. 
 
-For now, the recommended setup is to use PostCSS and load all source files directly.
+For now, the recommended setup is to use PostCSS and load all source files directly for best support.
 
 ::: code-group
 ```css
