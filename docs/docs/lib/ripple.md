@@ -23,6 +23,8 @@ You can use this together with [Button](/docs/ui/button) component or any other.
 
 Shows an animated ripple effect
 
+### Example
+
 ```js
 import { showRipple } from 'winduum/src/libraries/ripple.js'
 
