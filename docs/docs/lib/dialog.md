@@ -20,94 +20,121 @@ You can use this together with [Dialog](/docs/component/dialog) component or sty
 
 ## showDialog
 
-* **Type:** `(options) => Promise<void>`
+* **Type:** `(selector: HTMLElement, options?: ShowOptions) => Promise<void>`
 * **Kind:** `async`
 
-Shows a dialog, either existing one via `selector` option or inserts a new dialog dynamically via `content` option.
+Shows an existing `<dialog>`. It takes a `selector` argument, which is a CSS selector that identifies the dialog DOM element to be displayed. It also takes an options argument, which is an object that specifies how the dialog should be displayed.
+
+**Example**
 
 ```js
 import { showDialog } from 'winduum/src/libraries/dialog.js'
 
 document.querySelector('#showDialog').addEventListener('click', async () => {
-    await showDialog({
-        selector: document.querySelector('#dialogElement')
-    })
+    await showDialog(document.querySelector('#dialogElement'))
 })
 ```
 
-### content
-
-* **Type:** `string`
-* **Default:** `undefined`
-
-HTML of dialog element to append dynamically into `<dialog>` element
-
-### selector
-
-* **Type:** `string | HTMLElement`
-* **Default:** `.lib-dialog.is-inserted`
-
-Selector of `<dialog>` element to use, be default the selector is inserted dynamically via `content` option
-
-### remove
-
-* **Type:** `boolean`
-* **Default:** `false`
-
-Whenever to remove `<dialog>` element after closing it
-
-### append
-
-* **Type:** `boolean`
-* **Default:** `false`
-
-Whenever to replace dynamically opened dialog with a new one, or append a new one
+**ShowOptions**
 
 ### closable
 
 * **Type:** `boolean`
 * **Default:** `true`
 
-Controls if dialog is closable via `esc` or clicking outside
-
-### class
-
-* **Type:** `string`
-* **Default:** `lib-dialog`
-
-Class to use on `<dialog>` element
+A boolean that indicates whenever is dialog closable by clicking outside or with `esc` key.
 
 ## closeDialog
 
-* **Type:** `(options) => Promise<void>`
+* **Type:** `(selector: HTMLElement, options?: CloseOptions) => Promise<void>`
 * **Kind:** `async`
 
-Closes a dialog, either existing one via `selector` option or inserted one dynamically via `content` option.
+Closes an existing `<dialog>`. It takes a `selector` argument, which is a CSS selector that identifies the dialog DOM element to be displayed. It also takes an options argument, which is an object that specifies how the dialog should be closed.
+
+**Example**
 
 ```js
 import { closeDialog } from 'winduum/src/libraries/Dialog.js'
 
 document.querySelector('#closeDialog').addEventListener('click', async () => {
-    await closeDialog({
-        selector: document.querySelector('#dialogElement')
-    })
+    await closeDialog(document.querySelector('#dialogElement'))
 })
 ```
 
-### selector
-
-Selector of `<dialog>` element to use, closes existing opened dialog if not provided 
+**CloseOptions**
 
 ### remove
 
-Whenever to remove `<dialog>` element after closing it
+A boolean that indicates whether the dialog should be removed from the DOM when it is closed.
+
+## insertDialog
+
+* **Type:** `(content: String, options?: InsertOptions) => Promise<void>`
+* **Kind:** `async`
+
+Inserts a dialog into the DOM by either appending it to an existing dialog element found by the selector `.lib-dialog.is-inserted` or creating a new one. After that it is shown with the `showDialog` function.
+
+**Example**
+
+```js
+import { insertDialog } from 'winduum/src/libraries/Dialog.js'
+
+document.querySelector('#closeDialog').addEventListener('click', async () => {
+    await insertDialog(`
+        <dialog class="lib-dialog">
+            <div class="c-dialog">
+                This is inserted dialog
+            </div>
+        </dialog>
+    `)
+})
+```
+
+**InsertOptions**
+
+### class
+
+* **Type:** `string`
+* **Default:** `lib-dialog is-inserted`
+
+A string representing a CSS selector for finding inserted dialog in the DOM.
+
+### selector
+
+* **Type:** `string`
+* **Default:** `.lib-dialog.is-inserted`
+
+Selector of `<dialog>` element to target, be default the selector is inserted dynamically via `content` option### selector
+
+### append
+
+* **Type:** `boolean`
+* **Default:** `false`
+
+A boolean that indicates whether the new dialog should be appended after an existing one found by the selector or replaced.
+
+### remove
+
+* **Type:** `boolean`
+* **Default:** `false`
+
+A boolean that indicates whether the dialog should be removed from the DOM when it is closed.
+
+### closable
+
+* **Type:** `boolean`
+* **Default:** `true`
+
+A boolean that indicates whenever is dialog closable by clicking outside or with `esc` key.
 
 ## fetchDialog
 
-* **Type:** `(options) => Promise<void>`
+* **Type:** `(options: FetchOptions) => Promise<void>`
 * **Kind:** `async`
 
-Fetches dialog HTML from the server and shows the dialog dynamically
+A function that fetches dialog content from a URL and inserts it into the DOM with the `insertDialog` function.
+
+**Example**
 
 ```js
 import { fetchDialog } from 'winduum/src/libraries/dialog.js'
@@ -119,10 +146,12 @@ document.querySelector('#fetchDialog').addEventListener('click', async () => {
 })
 ```
 
+**FetchOptions**
+
 ### url
 
-Url from to fetch, must return JSON with `content` key
+A string representing the URL to fetch the dialog content from. Must return JSON with `content` key.
 
-### showOptions
+### insertOptions
 
-Additional show options, same as in `showDialog`
+Additional insert options, same as in `insertDialog`
