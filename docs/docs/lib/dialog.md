@@ -20,7 +20,7 @@ You can use this together with [Dialog](/docs/component/dialog) component or sty
 
 ## showDialog
 
-* **Type:** `(selector: HTMLElement, options?: ShowOptions) => Promise<void>`
+* **Type:** `(selector:  HTMLDialogElement, options?: ShowOptions) => Promise<void>`
 * **Kind:** `async`
 
 Shows an existing `<dialog>`. It takes a `selector` argument, which is a CSS selector that identifies the dialog DOM element to be displayed. It also takes an options argument, which is an object that specifies how the dialog should be displayed.
@@ -47,7 +47,7 @@ A boolean that indicates whenever is dialog closable by clicking outside or with
 
 ## closeDialog
 
-* **Type:** `(selector: HTMLElement, options?: CloseOptions) => Promise<void>`
+* **Type:** `(selector:  HTMLDialogElement, options?: CloseOptions) => Promise<void>`
 * **Kind:** `async`
 
 Closes an existing `<dialog>`. It takes a `selector` argument, which is a CSS selector that identifies the dialog DOM element to be displayed. It also takes an options argument, which is an object that specifies how the dialog should be closed.
