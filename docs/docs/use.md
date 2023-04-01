@@ -2,20 +2,19 @@
 
 Winduum is a mix of words **Tailwind** _(Popular CSS utility framework)_ and **Tuum** _(Estonian word for "core")_.
 
-Essentially provides ways to leverage use of **CSS properties** as much possible and do more in CSS. Because we ❤️ CSS and this is a small modest CSS framework.
+It essentially provides ways to leverage use of **CSS properties** as much possible and do more in CSS. Because we ❤️ CSS and this is a small modest CSS framework.
 
-Its approach to **TailwindCSS** is little different. It encourages to write components in CSS or other (pre/post)-processors.
-And to use utility classes to enhance the components.
+Its approach to **TailwindCSS** is little different. It encourages to write components in CSS or other (pre/post)-processors and to use utility classes to enhance the components.
 
 As a CSS framework it provides only basic UI components. You can extend them with your own components or only use [TailwindCSS plugin](/docs/config) with its benefits and make your own complex UX/UI project written mostly in CSS/SASS/LESS.
 
 ## Naming
 
-In your projects it's recommended to follow naming semantics of Winduum with following classes, some of these are already used for various components.
+In your projects it's recommended to follow naming semantics of Winduum with the following classes. Some of these are already used for various components.
 
 * **UI** - `ui-name` (smallest components)
 * **Component** - `c-name` (regular components)
-* **Section** - `s-name` (wraps previous two)
+* **Section** - `s-name` (wraps the previous two)
 * **Module** - `m-name` (wraps sections)
 * **Layout** - `l-name` (wraps everything else)
 * **Utilities** - `u-name` (helper classes for common styles)
@@ -27,7 +26,7 @@ Each CSS property follows the same naming, for example `--ui-name-font-size`
 
 ## Directory structure
 
-To help navigating your project easily it's recommended to follow the same naming principles for your directory structure, for example like this
+To help navigating your project easily, it's recommended to follow the same naming principles for your directory structure, for example like this:
 
 * 📁 **components**
     * 📁 **ui**
@@ -39,13 +38,13 @@ To help navigating your project easily it's recommended to follow the same namin
         * 📄 form.js
 
 
-You could also have your `.css` and `.js` files in separate directories like `styles` or `scripts`, but that's up to you and your framework that you use, you might use SFC too.
+You could also have your `.css` and `.js` files in separate directories like `styles` or `scripts`, but that's up to you and your framework that you use. You might use SFC too.
 
 ## Examples
 
 ### Using the components
 
-You can use any of the components easily in html without need to write complex TailwindCSS classes.
+You can use any of the components easily in html without the need to write complex TailwindCSS classes.
 
 Each component is written with low specificity in mind, so any property can be easily enhanced with TailwindCSS utility classes.
 
@@ -64,7 +63,7 @@ Each component is written with low specificity in mind, so any property can be e
 
 ### Writing the components
 
-You can write your own components with the same approach
+You can write your own components using the same approach
 
 ::: code-group
 ```html

@@ -1,6 +1,6 @@
 # Themes
 
-Theming in Winduum is really easy, all it takes is few CSS properties. There are two themes by default (light and dark) and to create a new one, you can just extend the default theme.
+Theming in Winduum is really easy. All it takes is a few CSS properties. There are two themes by default (light and dark) and to create a new one, you can just extend the default theme.
 
 ## Default
 
