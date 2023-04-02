@@ -4,7 +4,7 @@ Winduum is a mix of words **Tailwind** _(Popular CSS utility framework)_ and **T
 
 It essentially provides ways to leverage use of **CSS properties** as much possible and do more in CSS. Because we ❤️ CSS and this is a small modest CSS framework.
 
-Its approach to **TailwindCSS** is little different. It encourages to write components in CSS or other (pre/post)-processors and to use utility classes to enhance the components.
+Its approach to **TailwindCSS** is a little different. It encourages to write components in CSS or other (pre/post)-processors and to use utility classes to enhance the components.
 
 As a CSS framework it provides only basic UI components. You can extend them with your own components or only use [TailwindCSS plugin](/docs/config) with its benefits and make your own complex UX/UI project written mostly in CSS/SASS/LESS.
 
