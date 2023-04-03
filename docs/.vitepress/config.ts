@@ -18,7 +18,8 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: ogDescription }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@winduum' }],
-    ['meta', { name: 'theme-color', content: '#2d55ff' }]
+    ['meta', { name: 'theme-color', content: '#2d55ff' }],
+    ['script', { defer: '', 'data-domain': 'winduum.dev', src: 'https://plausible.io/js/script.js'}]
   ],
 
   vue: {
