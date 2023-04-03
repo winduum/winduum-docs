@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 
-const ogDescription = 'Modern, modular, small CSS component framework build on top of TailwindCSS'
+const ogDescription = 'Modern, modular, small modest CSS component framework built on top of TailwindCSS'
 const ogImage = 'https://winduum.dev/og-image.png'
 const ogTitle = 'Winduum'
 const ogUrl = 'https://winduum.dev'

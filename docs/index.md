@@ -2,7 +2,7 @@
 layout: home
 
 title: Winduum
-titleTemplate: Small, modern, modular CSS component framework build on top of TailwindCSS
+titleTemplate: Modern, modular, small modest CSS component framework built on top of TailwindCSS
 
 hero:
   name: Winduum
