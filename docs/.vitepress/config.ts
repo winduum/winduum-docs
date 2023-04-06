@@ -38,12 +38,12 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/winduum/winduum' },
       { icon: 'twitter', link: 'https://twitter.com/winduum' }
     ],
-/*
+
     algolia: {
-      appId: 'VB79JXJIAA',
-      apiKey: 'a7c609cdca4e22d1249ab92a68d1d5ed',
+      appId: '3DLECEENW2',
+      apiKey: '31331a8def9abe0356f5338d568ca974',
       indexName: 'winduum'
-    },*/
+    },
 
     footer: {
       message: `Released under the MIT License.`,
