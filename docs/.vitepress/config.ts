@@ -63,7 +63,7 @@ export default defineConfig({
               },
               {
                 text: 'Changelog',
-                link: 'https://github.com/vituum/winduum/blob/main/CHANGELOG.md'
+                link: 'https://github.com/winduum/winduum/blob/main/CHANGELOG.md'
               }
             ]
           }
