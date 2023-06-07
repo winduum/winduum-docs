@@ -2,7 +2,7 @@
   "type": "module",
   "dependencies": {
     "@vituum/liquid": "^0.1.1",
-    "winduum": "^0.1.11",
-    "vituum": "^0.0.39"
+    "winduum": "^0.2.0",
+    "vituum": "^0.0.42"
   }
 }

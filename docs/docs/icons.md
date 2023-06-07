@@ -31,7 +31,7 @@ Define a global `<svg hidden>` with various icons as `<symbol>`
 </svg>
 
 <!-- elsewhere in component use following !-->
-<svg class="w-6 h-6">
+<svg class="sq-6">
     <use href="#icon-academic-cap"></use>
 </svg>
 ```

@@ -1,19 +1,14 @@
-# Radio
-
-Radio shares properties with [Checkbox](/docs/ui/checkbox) component.
-
-```css
-:where(.ui-radio) {
-    --ui-checkbox-icon: var(--icon-radio);
-    --ui-checkbox-radius: 50%;
-}
-```
+# Checkbox
 
 ### Variants
 
-* `is-invalid` - Invalid variant
+* `invalid`
 
 ## Basic
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/basic.html"></iframe>
+
+<<< @/public/examples/ui/checkbox/basic.html#body{}
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/radio/basic.html"></iframe>
 
@@ -21,11 +16,19 @@ Radio shares properties with [Checkbox](/docs/ui/checkbox) component.
 
 ## Label
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/label.html"></iframe>
+
+<<< @/public/examples/ui/checkbox/label.html#body{}
+
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/radio/label.html"></iframe>
 
 <<< @/public/examples/ui/radio/label.html#body{}
 
 ## Required
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/required.html"></iframe>
+
+<<< @/public/examples/ui/checkbox/required.html#body{}
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/radio/required.html"></iframe>
 
@@ -33,13 +36,19 @@ Radio shares properties with [Checkbox](/docs/ui/checkbox) component.
 
 ## Disabled
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/disabled.html"></iframe>
+
+<<< @/public/examples/ui/checkbox/disabled.html#body{}
+
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/radio/disabled.html"></iframe>
 
 <<< @/public/examples/ui/radio/disabled.html#body{}
 
 ## Validation
 
-Validation messages can be added into `<em>` tag and are visible if `is-validated` is present as parent class.
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/validation.html"></iframe>
+
+<<< @/public/examples/ui/checkbox/validation.html#body{}
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/radio/validation.html"></iframe>
 

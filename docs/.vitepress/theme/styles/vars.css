@@ -188,3 +188,15 @@ iframe {
 em {
   font-style: italic;
 }
+
+.winduum-gh-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.winduum-gh-link svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  fill: #fff;
+}

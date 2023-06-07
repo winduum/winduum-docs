@@ -163,20 +163,12 @@ export default defineConfig({
               link: '/docs/ui/label'
             },
             {
-              text: 'Input',
-              link: '/docs/ui/input'
+              text: 'Control',
+              link: '/docs/ui/control'
             },
             {
-              text: 'Select',
-              link: '/docs/ui/select'
-            },
-            {
-              text: 'Checkbox',
-              link: '/docs/ui/checkbox'
-            },
-            {
-              text: 'Radio',
-              link: '/docs/ui/radio'
+              text: 'Check',
+              link: '/docs/ui/check'
             },
             {
               text: 'Switch',
