@@ -17,7 +17,7 @@ export default defineConfig({
     ['meta', { property: 'og:url', content: ogUrl }],
     ['meta', { property: 'og:description', content: ogDescription }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:site', content: '@winduum' }],
+    ['meta', { name: 'twitter:site', content: '@winduum_dev' }],
     ['meta', { name: 'theme-color', content: '#2d55ff' }],
     ['script', { defer: '', 'data-domain': 'winduum.dev', src: 'https://plausible.io/js/script.js'}]
   ],
@@ -40,8 +40,8 @@ export default defineConfig({
     ],
 
     algolia: {
-      appId: 'VB79JXJIAA',
-      apiKey: 'a7c609cdca4e22d1249ab92a68d1d5ed',
+      appId: '3DLECEENW2',
+      apiKey: '31331a8def9abe0356f5338d568ca974',
       indexName: 'winduum'
     },
 
@@ -63,7 +63,7 @@ export default defineConfig({
               },
               {
                 text: 'Changelog',
-                link: 'https://github.com/vituum/winduum/blob/main/CHANGELOG.md'
+                link: 'https://github.com/winduum/winduum/blob/main/CHANGELOG.md'
               }
             ]
           }
