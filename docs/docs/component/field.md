@@ -2,12 +2,12 @@
 
 Component used to group a form ui components such as input, select, checkbox etc.
 
-### CSS Properties
+<a href="https://github.com/winduum/winduum/blob/main/src/components/field.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+
+### Single Import
 
 ```css
-:where(.c-field) {
-    --c-field-gap: 0.5rem;
-}
+@import "winduum/ui/components/field.css" layer(components);
 ```
 
 ## Basic

@@ -1,12 +1,11 @@
 # Info
 
-### CSS Properties
+<a href="https://github.com/winduum/winduum/blob/main/src/ui/info.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+
+### Single Import
 
 ```css
-:where(.ui-info) {
-    --ui-info-font-size: 0.75rem;
-    --ui-info-font-weight: var(--font-normal);
-}
+@import "winduum/ui/info.css" layer(components);
 ```
 
 ## Basic

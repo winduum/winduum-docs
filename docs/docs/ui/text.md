@@ -1,19 +1,16 @@
 # Text
 
-### CSS Properties
+<a href="https://github.com/winduum/winduum/blob/main/src/ui/text.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+
+### Single Import
 
 ```css
-:where(.ui-text) {
-    --ui-text-size: 0.875rem;
-    --ui-text-size-line: 0.75rem;
-    --ui-text-weight: var(--font-normal);
-    --ui-text-weight-bold: var(--font-semibold);
-}
+@import "winduum/ui/text.css" layer(components);
 ```
 
 ### Variants
 
-* `is-lg` - Large
+* `lg`
 
 ## Text
 

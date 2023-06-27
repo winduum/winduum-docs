@@ -2,6 +2,12 @@
 
 <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
 
+### Single Import
+
+```css
+@import "winduum/ui/btn/index.css" layer(components);
+```
+
 ### Variants
 
   * `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>

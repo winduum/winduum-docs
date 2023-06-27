@@ -22,10 +22,6 @@ export default defineConfig({
     ['script', { defer: '', 'data-domain': 'winduum.dev', src: 'https://plausible.io/js/script.js'}]
   ],
 
-  vue: {
-    reactivityTransform: true
-  },
-
   themeConfig: {
     logo: '/logo.svg',
 

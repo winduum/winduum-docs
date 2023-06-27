@@ -7,15 +7,6 @@ Provides CSS and JS to add a material ripple effect that is visible on clicking.
 
 You can use this together with [Button](/docs/ui/button) component or any other.
 
-### CSS Properties
-
-```css
-:where(.lib-ripple) {
-    --lib-ripple-animation-duration: 1s;
-    --lib-ripple-bg: rgb(var(--color-background) / var(--tw-bg-opacity, 0.4));
-}
-```
-
 ## showRipple
 
 * **Type:** `(event) => <void>`

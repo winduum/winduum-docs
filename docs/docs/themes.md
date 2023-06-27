@@ -38,7 +38,7 @@ Theming in Winduum is really easy. All it takes is a few CSS properties. There a
 ## Compatibility
 
 Values are defined in raw *RGB* values for better compatibility, and used for `color-mix` variables.
-Since support for `color-mix`is not that great, `rgb` is still used for Tailwind colors. And both types of variables are ready for use in your project `.css` files.
+Since support for `color-mix`is not that great, `rgb` is still used for Tailwind colors. And both types of variables are ready to use in your project `.css` files.
 
 * [`src/base/theme/default.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/default.css)
 * [`src/base/theme/dark.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/dark.css)

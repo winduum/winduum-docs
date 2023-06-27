@@ -6,18 +6,14 @@ import postcss from '@vituum/vite-plugin-postcss'
 
 const htmlPlugin = () => {
     return {
-        plugin: () => {
-            return {
-                name: 'html-transform',
-                transformIndexHtml: {
-                    enforce: 'post',
-                    async transform(html, { path }) {
-                        return html.replaceAll(
-                            'rel="stylesheet" href="/assets/',
-                            `rel="stylesheet" href="${relative(path, '/pages/').slice(0, -2)}assets/`
-                        )
-                    }
-                }
+        name: 'html-transform',
+        transformIndexHtml: {
+            order: 'post',
+            async transform(html, { path }) {
+                return html.replaceAll(
+                    'rel="stylesheet" href="/assets/',
+                    `rel="stylesheet" href="${relative(path, '/src/pages/').slice(0, -2)}assets/`
+                )
             }
         }
     }

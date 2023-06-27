@@ -1,12 +1,11 @@
 # Image
 
-### CSS Properties
+<a href="https://github.com/winduum/winduum/blob/main/src/ui/image.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+
+### Single Import
 
 ```css
-:where(.ui-image) {
-    --ui-image-bg: rgb(var(--color-background-200));
-    --ui-image-border-radius: 0;
-}
+@import "winduum/ui/image.css" layer(components);
 ```
 
 ## Ratio

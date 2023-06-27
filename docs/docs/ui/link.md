@@ -1,22 +1,16 @@
 # Link
 
-### CSS Properties
+<a href="https://github.com/winduum/winduum/blob/main/src/ui/link/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+
+### Single Import
 
 ```css
-:where(.ui-link) {
-    --ui-link-font-size: 0.875rem;
-    --ui-link-font-weight: var(--font-semibold);
-    --ui-link-hover-color: rgb(var(--color-accent));
-    --ui-link-hover-opacity: 0.7;
-    --ui-link-underline-width: 1px;
-    --ui-link-underline-opacity: 0;
-    --ui-link-underline-transform: translateY(-0.125rem);
-}
+@import "winduum/ui/link/index.css" layer(components);
 ```
 
 ### Variants
 
-* `is-underline` - Underline on hover
+* `underlined` <a href="https://github.com/winduum/winduum/blob/main/src/ui/link/underlined.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ## Basic
 
@@ -24,7 +18,7 @@
 
 <<< @/public/examples/ui/link/basic.html#body{}
 
-## Underline
+## Underlined
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/link/underline.html"></iframe>
 

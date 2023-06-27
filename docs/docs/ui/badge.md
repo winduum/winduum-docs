@@ -1,38 +1,21 @@
-# Badge
+# Button
 
-### CSS Properties
+<a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+
+### Single Import
 
 ```css
-:where(.ui-badge) {
-    --color-current: var(--color-light);
-    --ui-badge-width: max-content;
-    --ui-badge-height: 1.5rem;
-    --ui-badge-py: 0;
-    --ui-badge-px: 0.5rem;
-    --ui-badge-border-radius: var(--rounded-xs);
-    --ui-badge-font-size: 0.75rem;
-    --ui-badge-font-weight: var(--font-normal);
-    --ui-badge-bg: rgb(var(--color-accent) / var(--ui-badge-bg-opacity));
-    --ui-badge-bg-opacity: var(--tw-bg-opacity, 1);
-    --ui-badge-color: rgb(var(--color-current) / var(--ui-badge-color-opacity));
-    --ui-badge-color-opacity: var(--tw-text-opacity, 1);
-    --ui-badge-outline-width: 1px;
-    --ui-badge-outline-opacity: 0.75;
-    --ui-badge-icon-font-size: 0.875rem;
-    --ui-badge-gap: 0.25rem;
-    --ui-badge-focus-opacity: 0.3;
-    --ui-badge-hover-opacity: 0.8;
-}
+@import "winduum/ui/badge/index.css" layer(components);
 ```
 
 ### Variants
 
-* `is-outline` - Outline variant
-* `is-muted` - Muted variant
-* `is-sm` - Small size
-* `is-lg` - Large size
-* `is-square` - Square variant
-* `is-circle` - Circle variant
+* `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `muted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `square` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `circle` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ## Basic
 
@@ -46,7 +29,7 @@
 
 <<< @/public/examples/ui/badge/flat.html#body{}
 
-## Outline
+## Bordered
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/outline.html"></iframe>
 

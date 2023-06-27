@@ -161,4 +161,4 @@ These are new media queries tokens that can be used with TailwindCSS, see more i
 
 Each property is defined in CSS in following path - [`src/base/config.css`](https://github.com/winduum/winduum/blob/main/src/base/config.css)
 
-<<< node_modules/winduum/src/base/config.css
+<<< @/../node_modules/winduum/src/base/config.css

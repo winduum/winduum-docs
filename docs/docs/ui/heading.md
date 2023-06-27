@@ -1,21 +1,17 @@
 # Heading
 
-### CSS Properties
+<a href="https://github.com/winduum/winduum/blob/main/src/ui/heading/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+
+### Single Import
 
 ```css
-:where(.ui-heading) {
-    --ui-heading-font-family: var(--font-primary);
-    --ui-heading-font-weight: var(--font-semibold);
-    --ui-heading-font-size: 1.25rem;
-    --ui-heading-line-height: calc(var(--ui-heading-font-size) + var(--ui-heading-line-height-ratio));
-    --ui-heading-line-height-ratio: 0.375rem;
-}
+@import "winduum/ui/heading/index.css" layer(components);
 ```
 
 ### Variants
 
-* `is-sm` - Small
-* `is-lg` - Large
+* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/heading/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/heading/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ## Basic
 

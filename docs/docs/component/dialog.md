@@ -2,15 +2,12 @@
 
 Basic styles for a dialog element, can be used together with [LibDialog](/docs/lib/dialog)
 
-### CSS Properties
+<a href="https://github.com/winduum/winduum/blob/main/src/components/dialog.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+
+### Single Import
 
 ```css
-:where(.c-dialog) {
-    --c-dialog-py: 1.5rem;
-    --c-dialog-px: 1.5rem;
-    --c-dialog-width: 35rem;
-    --c-dialog-animation-duration: var(--transition-duration);
-}
+@import "winduum/ui/components/dialog.css" layer(components);
 ```
 
 # Basic

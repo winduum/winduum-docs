@@ -7,4 +7,4 @@ That means that [Preflight](https://tailwindcss.com/docs/preflight#border-styles
 
 Other CSS default resets are following
 
-<<< node_modules/winduum/src/base/default.css
+<<< @/../node_modules/winduum/src/base/default.css

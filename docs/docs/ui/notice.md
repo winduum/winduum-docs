@@ -1,18 +1,11 @@
 # Notice
 
-### CSS Properties
+<a href="https://github.com/winduum/winduum/blob/main/src/ui/notice.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+
+### Single Import
 
 ```css
-:where(.ui-notice) {
-    --color-current: var(--color-accent);
-    --ui-notice-bg: rgb(var(--color-accent));
-    --ui-notice-py: 1.25rem;
-    --ui-notice-px: 1.5rem;
-    --ui-notice-font-size: 0.875rem;
-    --ui-notice-border-radius: var(--rounded);
-    --ui-notice-outline-opacity: 0.1;
-    --ui-notice-gap: 1rem;
-}
+@import "winduum/ui/notice.css" layer(components);
 ```
 
 ## Success

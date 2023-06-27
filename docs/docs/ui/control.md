@@ -2,6 +2,12 @@
 
 <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
 
+### Single Import
+
+```css
+@import "winduum/ui/control/index.css" layer(components);
+```
+
 ### Variants
 
 * `floating` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/floating.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
