@@ -13,7 +13,7 @@
   * `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `muted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `raised` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `ghosted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/ghosted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+  * `ghosted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `gradient` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/gradient.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `gradient-bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/gradient-bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
@@ -29,85 +29,37 @@
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/basic.html"></iframe>
 
-```html
-<button class="ui-btn">Button</button>
-<button class="ui-btn rounded-full">Button</button>
-```
+<<< @/public/examples/ui/btn/basic.html#body{}
 
 ## Flat
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/flat.html"></iframe>
 
-```html
-<button class="ui-btn accent-primary">Primary</button>
-<button class="ui-btn accent-secondary">Secondary</button>
-<button class="ui-btn accent-success">Success</button>
-<button class="ui-btn accent-error">Error</button>
-<button class="ui-btn accent-warning">Warning</button>
-<button class="ui-btn accent-info">Info</button>
-<button class="ui-btn accent-dark">Dark</button>
-<button class="ui-btn accent-light text-dark">Light</button>
-```
+<<< @/public/examples/ui/btn/flat.html#body{}
 
 ## Bordered
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/outline.html"></iframe>
 
-```html
-<button class="ui-btn bordered accent-primary">Primary</button>
-<button class="ui-btn bordered accent-secondary">Secondary</button>
-<button class="ui-btn bordered accent-success">Success</button>
-<button class="ui-btn bordered accent-error">Error</button>
-<button class="ui-btn bordered accent-warning">Warning</button>
-<button class="ui-btn bordered accent-info">Info</button>
-<button class="ui-btn bordered accent-dark">Dark</button>
-<button class="ui-btn bordered accent-light text-dark">Light</button>
-```
+<<< @/public/examples/ui/btn/outline.html#body{}
 
 ## Muted
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/muted.html"></iframe>
 
-```html
-<button class="ui-btn muted accent-primary">Primary</button>
-<button class="ui-btn muted accent-secondary">Secondary</button>
-<button class="ui-btn muted accent-success">Success</button>
-<button class="ui-btn muted accent-error">Error</button>
-<button class="ui-btn muted accent-warning">Warning</button>
-<button class="ui-btn muted accent-info">Info</button>
-<button class="ui-btn muted accent-dark">Dark</button>
-<button class="ui-btn muted accent-light text-dark">Light</button>
-```
+<<< @/public/examples/ui/btn/muted.html#body{}
 
 ## Raised
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/raised.html"></iframe>
 
-```html
-<button class="ui-btn raised accent-primary">Primary</button>
-<button class="ui-btn raised accent-secondary">Secondary</button>
-<button class="ui-btn raised accent-success">Success</button>
-<button class="ui-btn raised accent-error">Error</button>
-<button class="ui-btn raised accent-warning">Warning</button>
-<button class="ui-btn raised accent-info">Info</button>
-<button class="ui-btn raised accent-dark">Dark</button>
-<button class="ui-btn raised accent-light text-dark">Light</button>
-```
+<<< @/public/examples/ui/btn/raised.html#body{}
 
 ## Ghosted
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/text.html"></iframe>
 
-```html
-<button class="ui-btn ghosted accent-primary">Primary</button>
-<button class="ui-btn ghosted accent-secondary">Secondary</button>
-<button class="ui-btn ghosted accent-success">Success</button>
-<button class="ui-btn ghosted accent-error">Error</button>
-<button class="ui-btn ghosted accent-warning">Warning</button>
-<button class="ui-btn ghosted accent-info">Info</button>
-<button class="ui-btn ghosted accent-dark">Dark</button>
-<button class="ui-btn ghosted accent-light">Light</button>
-```
+<<< @/public/examples/ui/btn/text.html#body{}
 
 ## Gradient
 
@@ -115,135 +67,61 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/gradient.html"></iframe>
 
-```html
-<button class="ui-btn bg-gradient-to-br from-purple-600 to-blue-500">Button</button>
-<button class="ui-btn outline-gradient hover-fill bg-gradient-to-br from-purple-600 to-blue-500">Button</button>
-```
+<<< @/public/examples/ui/btn/gradient.html#body{}
 
 ## Small
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/small.html"></iframe>
 
-```html
-<button class="ui-btn sm">Button</button>
-```
+<<< @/public/examples/ui/btn/small.html#body{}
 
 ## Large
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/large.html"></iframe>
 
-```html
-<button class="ui-btn lg">Button</button>
-```
+<<< @/public/examples/ui/btn/large.html#body{}
 
 ## Wide
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/wide.html"></iframe>
 
-```html
-<button class="ui-btn wide">Button</button>
-<button class="ui-btn wide lg w-full">Button</button>
-```
+<<< @/public/examples/ui/btn/wide.html#body{}
 
 ## Square
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/square.html"></iframe>
 
-```html
-<button class="ui-btn square">1</button>
-<button class="ui-btn square outline">2</button>
-<button class="ui-btn square muted">
-    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5" />
-    </svg>
-</button>
-```
+<<< @/public/examples/ui/btn/square.html#body{}
 
 ## Circle
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/circle.html"></iframe>
 
-```html
-<button class="ui-btn circle">1</button>
-<button class="ui-btn circle outline">2</button>
-<button class="ui-btn circle muted">
-    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5" />
-    </svg>
-</button>
-```
+<<< @/public/examples/ui/btn/circle.html#body{}
 
 ## Icon
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/icon.html"></iframe>
 
-```html
-<button class="ui-btn muted">
-    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5" />
-    </svg>
-    Button
-</button>
-<button class="ui-btn outline">
-    Button
-    <svg>
-        <use href="#icon-adjustments-vertical"></use>
-    </svg>
-</button>
-<button class="ui-btn square">
-    <svg>
-        <use href="#icon-adjustments-vertical"></use>
-    </svg>
-</button>
-```
+<<< @/public/examples/ui/btn/icon.html#body{}
 
 ## Loading
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/loading.html"></iframe>
 
-```html
-<button class="ui-btn loading">
-    Button
-</button>
-<button class="ui-btn muted loading">
-    Button
-</button>
-<button class="ui-btn outline loading">
-    Button
-</button>
-```
+<<< @/public/examples/ui/btn/loading.html#body{}
 
 ## Active
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/active.html"></iframe>
 
-```html
-<button class="ui-btn active">
-    Button
-</button>
-<button class="ui-btn muted active">
-    Button
-</button>
-<button class="ui-btn outline active">
-    Button
-</button>
-```
+<<< @/public/examples/ui/btn/active.html#body{}
 
 ## Disabled
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/disabled.html"></iframe>
 
-```html
-<button class="ui-btn" disabled>
-    Button
-</button>
-<button class="ui-btn muted" disabled>
-    Button
-</button>
-<button class="ui-btn outline" disabled>
-    Button
-</button>
-```
+<<< @/public/examples/ui/btn/disabled.html#body{}
 
 ## Custom
 
@@ -271,9 +149,7 @@ You can also extend the button with any TailwindCSS class to customize it
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/tailwind.html"></iframe>
 
-```html
-<button class="ui-btn bg-gray-200 text-dark">Button</button>
-```
+<<< @/public/examples/ui/btn/tailwind.html#body{}
 
 <br>
 
@@ -283,20 +159,4 @@ You can group buttons into groups
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/group.html"></iframe>
 
-```html
-<div class="ui-btn-group">
-    <button class="ui-btn">Button</button>
-    <button class="ui-btn">Button</button>
-    <button class="ui-btn">Button</button>
-</div>
-<div class="ui-btn-group">
-    <button class="ui-btn outline">Button</button>
-    <button class="ui-btn outline">Button</button>
-    <button class="ui-btn outline">Button</button>
-</div>
-<div class="ui-btn-group">
-    <button class="ui-btn muted">Button</button>
-    <button class="ui-btn muted">Button</button>
-    <button class="ui-btn muted">Button</button>
-</div>
-```
+<<< @/public/examples/ui/btn/group.html#body{}

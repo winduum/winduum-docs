@@ -34,7 +34,7 @@ For now, the recommended setup is to use PostCSS and load all source files direc
 
 ::: code-group
 ```css
-@import "winduum/src/main.css" layer(utilities);
+@import "winduum/src/main.css" layer(components);
 @import "winduum/src/tailwind.css";
 ```
 ```js

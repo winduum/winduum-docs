@@ -29,6 +29,12 @@
 
 <<< @/public/examples/ui/input/textarea.html#body{}
 
+## Select
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/basic.html"></iframe>
+
+<<< @/public/examples/ui/select/basic.html#body{}
+
 ## Placeholder
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/placeholder.html"></iframe>
@@ -41,17 +47,29 @@
 
 <<< @/public/examples/ui/input/label.html#body{}
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/label.html"></iframe>
+
+<<< @/public/examples/ui/select/label.html#body{}
+
 ## Floating Label
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/floating.html"></iframe>
 
 <<< @/public/examples/ui/input/floating.html#body{}
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/floating.html"></iframe>
+
+<<< @/public/examples/ui/select/floating.html#body{}
+
 ## Icon
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/icon.html"></iframe>
 
 <<< @/public/examples/ui/input/icon.html#body{}
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/icon.html"></iframe>
+
+<<< @/public/examples/ui/select/icon.html#body{}
 
 ## Required
 
@@ -65,45 +83,15 @@
 
 <<< @/public/examples/ui/input/validation.html#body{}
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/validation.html"></iframe>
+
+<<< @/public/examples/ui/select/validation.html#body{}
+
 ## Disabled
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/disabled.html"></iframe>
 
 <<< @/public/examples/ui/input/disabled.html#body{}
-
-<br>
-
-## Select Basic
-
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/basic.html"></iframe>
-
-<<< @/public/examples/ui/select/basic.html#body{}
-
-## Select Label
-
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/label.html"></iframe>
-
-<<< @/public/examples/ui/select/label.html#body{}
-
-## Select Floating Label
-
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/floating.html"></iframe>
-
-<<< @/public/examples/ui/select/floating.html#body{}
-
-## Select Icon
-
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/icon.html"></iframe>
-
-<<< @/public/examples/ui/select/icon.html#body{}
-
-## Select Validation
-
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/validation.html"></iframe>
-
-<<< @/public/examples/ui/select/validation.html#body{}
-
-## Select Disabled
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/disabled.html"></iframe>
 
@@ -111,7 +99,7 @@
 
 # Control Group
 
-You can group inputs into groups and combine them with other components like [Button](/docs/ui/button)
+You can group controls into groups and combine them with other components like [Button](/docs/ui/button)
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/group.html"></iframe>
 

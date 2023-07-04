@@ -9,7 +9,6 @@ Theming in Winduum is really easy. All it takes is a few CSS properties. There a
 ```css
 :root {
   --color-primary-rgb: 3 138 255;
-  --color-secondary-rgb: 69 71 72;
   --color-base-rgb: 17 19 21;
   --color-body-rgb: 255 255 255;
   --color-success-rgb: 33 154 67;
@@ -29,7 +28,6 @@ Theming in Winduum is really easy. All it takes is a few CSS properties. There a
 
 ```css
 :root.dark {
-  --color-secondary-rgb: 39 41 46;
   --color-base-rgb: 201 209 217;
   --color-body-rgb: 25 26 27;
 }
@@ -38,9 +36,12 @@ Theming in Winduum is really easy. All it takes is a few CSS properties. There a
 ## Compatibility
 
 Values are defined in raw *RGB* values for better compatibility, and used for `color-mix` variables.
-Since support for `color-mix`is not that great, `rgb` is still used for Tailwind colors. And both types of variables are ready to use in your project `.css` files.
+Since support for `color-mix`is not that great yet, `rgb` is still used for Tailwind colors. And both types of variables are ready to use in your project `.css` files.
 
 * [`src/base/theme/default.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/default.css)
 * [`src/base/theme/dark.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/dark.css)
 
+If you want you can also drop rgb colors completely. 
+
+But if you want compatibility then some of the components include `-rgb.css` fallback. So it's recommended to also include [`winduum/main-rgb.css`](https://github.com/winduum/winduum/blob/main/src/main-rgb.css) in your project for old browsers. 
 

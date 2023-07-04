@@ -9,8 +9,8 @@
     "vituum:preview": "cd examples && npx vite preview"
   },
   "dependencies": {
-    "vitepress": "^1.0.0-beta.3",
+    "vitepress": "^1.0.0-beta.5",
     "vue": "^3.3.4",
-    "winduum": "^0.2.0-beta.2"
+    "winduum": "^0.2.0-beta.9"
   }
 }
