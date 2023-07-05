@@ -27,7 +27,7 @@ Winduum also exports useful helper functions you can use in your `tailwind.confi
 
 ## colors
 * **Type:** `string[]`
-* **Default:** `['background', 'default', 'light', 'dark', 'primary', 'secondary', warning', 'error', 'info', 'success', 'accent', 'current']`
+* **Default:** `['light', 'dark', 'primary', 'secondary', 'warning', 'error', 'info', 'success', 'accent', 'current', 'base', 'body', 'body-primary', 'body-secondary', 'body-tertiary']`
 
 These are additional color tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`. See [Colors](colors) for more info.
 
@@ -35,7 +35,7 @@ Example `bg-primary`:
 ```css
 .bg-primary {
     --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-primary) / var(--tw-bg-opacity));
+    background-color: rgb(var(--color-primary-rgb) / var(--tw-bg-opacity));
 }
 ```
 
@@ -44,7 +44,8 @@ Example `text-primary`:
 .text-primary {
     --tw-text-opacity: 1;
     --color-current: var(--color-primary);
-    color: rgb(var(--color-primary) / var(--tw-text-opacity));
+    --color-current-rgb: var(--color-primary-rgb);
+    color: rgb(var(--color-primary-rgb) / var(--tw-text-opacity));
 }
 ```
 
@@ -67,7 +68,7 @@ Example `font-primary`:
 
 These are additional font-weight tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
 
-Example `font-boldy`:
+Example `font-bold`:
 ```css
 .font-bold {
     font-weight: var(--font-bold);
@@ -123,7 +124,7 @@ Example `rounded-md`:
 
 ## animations
 * **Type:** `string[]`
-* **Default:** `['fade-in', 'fade-out']`
+* **Default:** `['fade-in', 'fade-out', 'fade-in-down', 'fade-out-up', 'ripple', 'spin', 'move-indeterminate']`
 
 These are additional animation tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
 
@@ -160,4 +161,4 @@ These are new media queries tokens that can be used with TailwindCSS, see more i
 
 Each property is defined in CSS in following path - [`src/base/config.css`](https://github.com/winduum/winduum/blob/main/src/base/config.css)
 
-<<< node_modules/winduum/src/base/config.css
+<<< @/../node_modules/winduum/src/base/config.css

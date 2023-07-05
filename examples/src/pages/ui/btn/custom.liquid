@@ -1,0 +1,21 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<button class="ui-btn">Button</button>
+{% endblock %}
+
+{% block head %}
+<style>
+    body .ui-btn {
+        --ui-btn-height: 4rem;
+        --ui-btn-py: 1rem;
+        --ui-btn-px: 1rem;
+        --ui-btn-border-radius: 0;
+        --ui-btn-font-size: 1.15rem;
+        --ui-btn-font-weight: 700;
+        --color-accent: yellow;
+        --ui-btn-color: #333 !important;
+        --ui-btn-hover-opacity: 40%;
+        --ui-btn-focus-opacity: 80%;
+    }
+</style>
+{% endblock %}

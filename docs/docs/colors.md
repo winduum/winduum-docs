@@ -1,25 +1,19 @@
 # Colors
 
-Colors are defined in raw *RGB* values, this allows to use them in CSS properties and combine them with alpha channel like this `rgb(var(--color-primary) / 0.5)`
+Colors are defined in raw *RGB* values for better compatibility. 
+This allows to use them in CSS properties and combine them with alpha channel like this `rgb(var(--color-primary-rgb) / 0.5)`.
+Every color is then used in `color-mix` function to make more variants.
 
 Each color can be used together with any TailwindCSS rule that uses colors.
 
 There are few types of colors with various areas of use. Colors are defined in [Themes](themes).
 
-## Basic
+## Common
 
 <div style="display:flex; gap: 1rem; flex-direction: column">
     <div style="display: flex; align-items: center; gap: 1.75rem;">
-        <div style="width: 3rem;height: 3rem;border-radius: 50%;" class="bg-default"></div>
-        <code>--color-default</code>
-    </div>
-    <div style="display: flex; align-items: center; gap: 1.75rem;">
         <div style="width: 3rem;height: 3rem;border-radius: 50%;" class="bg-primary"></div>
         <code>--color-primary</code>
-    </div>
-    <div style="display: flex; align-items: center; gap: 1.75rem;">
-        <div style="width: 3rem;height: 3rem;border-radius: 50%;" class="bg-secondary"></div>
-        <code>--color-secondary</code>
     </div>
     <div style="display: flex; align-items: center; gap: 1.75rem;">
         <div style="width: 3rem;height: 3rem;border-radius: 50%;border: 1px solid rgb(0 0 0 / 0.1)" class="bg-light"></div>
@@ -28,6 +22,48 @@ There are few types of colors with various areas of use. Colors are defined in [
     <div style="display: flex; align-items: center; gap: 1.75rem;">
         <div style="width: 3rem;height: 3rem;border-radius: 50%;border: 1px solid rgb(255 255 255 / 0.1)" class="bg-dark"></div>
         <code>--color-dark</code>
+    </div>
+</div>
+
+## Base
+
+<div style="display:flex; gap: 1rem; flex-direction: column">
+    <div style="display: flex; align-items: center; gap: 1.75rem;">
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;" class="bg-base"></div>
+        <code>--color-base</code>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1.75rem;">
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;background-color: var(--color-base-primary)" class="bg-base-primary"></div>
+        <code>--color-base-primary</code>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1.75rem;">
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;background-color: var(--color-base-secondary)" class="bg-base-secondary"></div>
+        <code>--color-base-secondary</code>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1.75rem;">
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;background-color: var(--color-base-tertiary)" class="bg-base-tertiary"></div>
+        <code>--color-base-tertiary</code>
+    </div>
+</div>
+
+## Body
+
+<div style="display:flex; gap: 1rem; flex-direction: column">
+    <div style="display: flex; align-items: center; gap: 1.75rem;">
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;border: 1px solid rgb(255 255 255 / 0.1)" class="bg-body"></div>
+        <code>--color-body</code>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1.75rem;">
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;border: 1px solid rgb(255 255 255 / 0.1);background-color: var(--color-body-primary)" class="bg-body-primary"></div>
+        <code>--color-body-primary</code>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1.75rem;">
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;border: 1px solid rgb(255 255 255 / 0.1);background-color: var(--color-body-secondary)" class="bg-body-secondary"></div>
+        <code>--color-body-secondary</code>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1.75rem;">
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;border: 1px solid rgb(255 255 255 / 0.1);background-color: var(--color-body-tertiary)" class="bg-body-tertiary"></div>
+        <code>--color-body-tertiary</code>
     </div>
 </div>
 
@@ -52,32 +88,16 @@ There are few types of colors with various areas of use. Colors are defined in [
     </div>
 </div>
 
-## Background
-
-<div style="display:flex; gap: 1rem; flex-direction: column">
-    <div style="display: flex; align-items: center; gap: 1.75rem;">
-        <div style="width: 3rem;height: 3rem;border-radius: 50%;border: 1px solid rgb(255 255 255 / 0.1)" class="bg-background"></div>
-        <code>--color-background</code>
-    </div>
-    <div style="display: flex; align-items: center; gap: 1.75rem;">
-        <div style="width: 3rem;height: 3rem;border-radius: 50%;border: 1px solid rgb(255 255 255 / 0.1)" class="bg-background-100"></div>
-        <code>--color-background-100</code>
-    </div>
-    <div style="display: flex; align-items: center; gap: 1.75rem;">
-        <div style="width: 3rem;height: 3rem;border-radius: 50%;border: 1px solid rgb(255 255 255 / 0.1)" class="bg-background-200"></div>
-        <code>--color-background-200</code>
-    </div>
-    <div style="display: flex; align-items: center; gap: 1.75rem;">
-        <div style="width: 3rem;height: 3rem;border-radius: 50%;border: 1px solid rgb(255 255 255 / 0.1)" class="bg-background-300"></div>
-        <code>--color-background-300</code>
-    </div>
-</div>
-
 ## Accent
 
 You can easily change accent color of any UI component. Because components in Winduum use `--color-accent` property as their color, rather than `--color-primary`. 
 
 So you still use primary color when needed and change accent only for elements you want.
+
+Accent color consist of two css properties:
+
+* <code>--color-accent</code> - color of the accent
+* <code>--color-accent-current</code> - current foreground color of the accent
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/accent/btn.html"></iframe>
 
@@ -86,7 +106,7 @@ So you still use primary color when needed and change accent only for elements y
 
 ## Current
 
-Each text color variant has also `--color-current` defined. This is for similar usage as `currentColor`, but with this custom property the alpha channel can be also used in `rgb`
+Each text color variant has also `--color-current` defined. This is for similar usage as `currentColor`, but with this custom property the alpha channel can be also used in `rgb` or `color-mix`
 
 ::: code-group
 ```html
@@ -105,7 +125,8 @@ Each text color variant has also `--color-current` defined. This is for similar 
 }
 
 .a {
-    color: rgb(var(--color-current) / 0.2)
+    color: rgb(var(--color-current) / 0.2);
+    background-color: color-mix(in sRGB, var(--color-current) 40%, transparent);
 }
 ```
 :::

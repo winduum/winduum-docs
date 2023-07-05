@@ -53,7 +53,7 @@ Each component is written with low specificity in mind, so any property can be e
 <button class="ui-btn accent-secondary">This is a Button</button>
 ```
 ```css
-:where(.ui-btn) {
+.ui-btn:where(.bordered) {
     --ui-btn-font-size: 0.875rem;
     
     /* CSS styles */
@@ -70,10 +70,14 @@ You can write your own components using the same approach
 <div class="c-hello-world bg-dark rounded-md">Hello world</div>
 ```
 ```css
-:where(.c-hello-world) {
+.c-hello-world {
     --c-hello-world-font-size: 2rem;
     
     /* CSS styles */
 }
 ```
 :::
+
+If you want to style some elements inside the component you don't need to use complex conventions like BEM, just use helper classes such `.c_item`, `.c_head`, `.c_body`, `.c_foot` etc. This way you can tell that it's a element related to the parent component. 
+
+In rare case you want to prevent possible class conflicts you can add name of the component inside the class like this `.c_hello_world_item`.

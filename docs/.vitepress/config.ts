@@ -22,10 +22,6 @@ export default defineConfig({
     ['script', { defer: '', 'data-domain': 'winduum.dev', src: 'https://plausible.io/js/script.js'}]
   ],
 
-  vue: {
-    reactivityTransform: true
-  },
-
   themeConfig: {
     logo: '/logo.svg',
 
@@ -163,20 +159,12 @@ export default defineConfig({
               link: '/docs/ui/label'
             },
             {
-              text: 'Input',
-              link: '/docs/ui/input'
+              text: 'Control',
+              link: '/docs/ui/control'
             },
             {
-              text: 'Select',
-              link: '/docs/ui/select'
-            },
-            {
-              text: 'Checkbox',
-              link: '/docs/ui/checkbox'
-            },
-            {
-              text: 'Radio',
-              link: '/docs/ui/radio'
+              text: 'Check',
+              link: '/docs/ui/check'
             },
             {
               text: 'Switch',
@@ -193,6 +181,10 @@ export default defineConfig({
             {
               text: 'Progress',
               link: '/docs/ui/progress'
+            },
+            {
+              text: 'Group',
+              link: '/docs/ui/group'
             }
           ]
         },

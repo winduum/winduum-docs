@@ -1,24 +1,17 @@
 # Switch
 
-### CSS Properties
+<a href="https://github.com/winduum/winduum/blob/main/src/ui/switch.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+
+### Single Import
 
 ```css
-:where(.ui-switch) {
-    --ui-switch-width: 3rem;
-    --ui-switch-height: 1.5rem;
-    --ui-switch-padding: 0.375rem;
-    --ui-switch-bg-raw: var(--color-dark);
-    --ui-switch-radius: 999px;
-    --ui-switch-validity-font-size: 0.875rem;
-    --ui-switch-validity-offset: 0.375rem;
-    --ui-switch-box-shadow: none;
-}
+@import "winduum/ui/switch.css" layer(components);
 ```
 
 ### Variants
 
-* `is-sm` - Small size
-* `is-lg` - Large size
+* `sm`
+* `lg`
 
 ## Basic
 

@@ -1,8 +1,10 @@
 {
   "type": "module",
   "dependencies": {
-    "@vituum/liquid": "^0.1.1",
-    "winduum": "^0.1.11",
-    "vituum": "^0.0.39"
+    "@vituum/vite-plugin-liquid": "^1.0.0",
+    "@vituum/vite-plugin-postcss": "^1.0.0",
+    "winduum": "^0.2.0-beta.11",
+    "vituum": "^1.0.0",
+    "css-has-pseudo": "^6.0.0"
   }
 }

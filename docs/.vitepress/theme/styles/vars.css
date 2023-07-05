@@ -10,6 +10,7 @@
   --vp-c-brand-dark: #038aff;
   --vp-c-brand-darker: #038aff;
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+  --container-padding: 0 !important;
 }
 
 /**
@@ -162,6 +163,7 @@ iframe {
   background-color: transparent;
   border-radius: 0.75rem;
   visibility: hidden;
+  min-height: 20rem;
 }
 
 .vp-doc :not(pre) > code {
@@ -187,4 +189,16 @@ iframe {
 
 em {
   font-style: italic;
+}
+
+.winduum-gh-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.winduum-gh-link svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  fill: #fff;
 }

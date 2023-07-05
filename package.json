@@ -5,12 +5,12 @@
     "docs:build": "npm run vituum:build && vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "vituum:dev": "cd examples && npx vite",
-    "vituum:build": "cd examples && npx vituum build",
+    "vituum:build": "cd examples && npx vite build",
     "vituum:preview": "cd examples && npx vite preview"
   },
   "dependencies": {
-    "vitepress": "1.0.0-alpha.51",
-    "vue": "^3.2.47",
-    "winduum": "^0.1.11"
+    "vitepress": "^1.0.0-beta.5",
+    "vue": "^3.3.4",
+    "winduum": "^0.2.0-beta.11"
   }
 }

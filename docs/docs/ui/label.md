@@ -1,12 +1,11 @@
 # Label
 
-### CSS Properties
+<a href="https://github.com/winduum/winduum/blob/main/src/ui/label.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+
+### Single Import
 
 ```css
-:root {
-    --ui-label-font-size: 0.875rem;
-    --ui-label-font-weight: var(--font-medium);
-}
+@import "winduum/ui/label.css" layer(components);
 ```
 
 ## Basic

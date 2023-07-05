@@ -7,17 +7,6 @@ Provides CSS and JS to add HTML5 dialog functionality.
 
 You can use this together with [Dialog](/docs/component/dialog) component or style your own dialog.
 
-### CSS Properties
-
-```css
-:where(.lib-dialog) {
-    --lib-ripple-bg: rgb(var(--color-dark) / var(--tw-bg-opacity, 0.8));
-    --lib-dialog-py: 2rem;
-    --lib-dialog-px: 1.5rem;
-    --lib-dialog-animation-duration: var(--transition-duration);
-}
-```
-
 ## showDialog
 
 * **Type:** `(selector:  HTMLDialogElement, options?: ShowOptions) => Promise<void>`

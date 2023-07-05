@@ -25,7 +25,7 @@ hero:
 features:
 - icon: 💡️
   title: Modern
-  details: Leverages the use of modern CSS syntax, such as CSS properties, modern pseudo selectors, nesting, low specificity and much more
+  details: Leverages the use of modern CSS syntax, such as CSS properties, modern pseudo selectors, nesting, low specificity, color-mix and more
 - icon: 📦️
   title: Modular
   details: Each component is written in plain CSS, so you can import only what you want to use and customize it with CSS properties
