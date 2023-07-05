@@ -10,7 +10,7 @@ Basic styles for a dialog element, can be used together with [LibDialog](/docs/l
 @import "winduum/ui/components/dialog.css" layer(components);
 ```
 
-# Basic
+## Basic
 
 <button class="ui-btn bg-primary" id="showDialog" style="padding: var(--ui-btn-py) var(--ui-btn-px)">Show dialog</button>
 

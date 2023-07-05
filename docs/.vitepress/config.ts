@@ -181,6 +181,10 @@ export default defineConfig({
             {
               text: 'Progress',
               link: '/docs/ui/progress'
+            },
+            {
+              text: 'Group',
+              link: '/docs/ui/group'
             }
           ]
         },

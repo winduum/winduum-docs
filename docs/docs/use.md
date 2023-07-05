@@ -77,3 +77,7 @@ You can write your own components using the same approach
 }
 ```
 :::
+
+If you want to style some elements inside the component you don't need to use complex conventions like BEM, just use helper classes such `.c_item`, `.c_head`, `.c_body`, `.c_foot` etc. This way you can tell that it's a element related to the parent component. 
+
+In rare case you want to prevent possible class conflicts you can add name of the component inside the class like this `.c_hello_world_item`.

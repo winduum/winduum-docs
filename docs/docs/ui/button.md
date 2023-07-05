@@ -155,7 +155,7 @@ You can also extend the button with any TailwindCSS class to customize it
 
 # Button Group
 
-You can group buttons into groups
+You can group buttons into groups via `ui-group` component.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/group.html"></iframe>
 

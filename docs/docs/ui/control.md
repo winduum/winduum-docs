@@ -14,7 +14,6 @@
 * `floating-focus` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/floating-focus.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `select` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/select.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `icon` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/icon.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `group` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/group.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `invalid`
 
 ## Basic
@@ -99,7 +98,7 @@
 
 # Control Group
 
-You can group controls into groups and combine them with other components like [Button](/docs/ui/button)
+You can group controls into groups via `ui-group` component and combine them with other components like [Button](/docs/ui/button)
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/group.html"></iframe>
 

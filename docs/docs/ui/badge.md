@@ -88,7 +88,7 @@ You can also extend the badge with any TailwindCSS class to customize it
 
 # Badge Group
 
-You can group badges into groups
+You can group badges into groups via `ui-group` component.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/group.html"></iframe>
 
