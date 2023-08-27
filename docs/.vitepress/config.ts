@@ -70,7 +70,7 @@ export default defineConfig({
     sidebar: {
       '/docs/': [
         {
-          text: 'Get started',
+          text: '🚀&nbsp;&nbsp; Get started',
           items: [
             {
               text: 'Install',
@@ -99,7 +99,7 @@ export default defineConfig({
           ]
         },
         {
-          text: 'Layout',
+          text: '📏&nbsp;&nbsp; Layout',
           items: [
             {
               text: 'Reset',
@@ -124,7 +124,7 @@ export default defineConfig({
           ]
         },
         {
-          text: 'UI',
+          text: '🎨&nbsp;&nbsp; UI',
           items: [
             {
               text: 'Button',
@@ -189,7 +189,7 @@ export default defineConfig({
           ]
         },
         {
-          text: 'Components',
+          text: '📦&nbsp;&nbsp; ️Components',
           items: [
             {
               text: 'Dialog',
@@ -202,7 +202,7 @@ export default defineConfig({
           ]
         },
         {
-          text: 'Libraries',
+          text: '💡️&nbsp;&nbsp; Libraries',
           items: [
             {
               text: 'Dialog',

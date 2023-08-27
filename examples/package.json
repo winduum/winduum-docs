@@ -3,7 +3,7 @@
   "dependencies": {
     "@vituum/vite-plugin-liquid": "^1.0.0",
     "@vituum/vite-plugin-postcss": "^1.0.0",
-    "winduum": "^0.2.1",
+    "winduum": "^0.3.2",
     "vituum": "^1.0.0",
     "css-has-pseudo": "^6.0.0"
   }
