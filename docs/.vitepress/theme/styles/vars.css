@@ -223,3 +223,20 @@ em {
 .VPSidebar .VPSidebarItem .items {
   padding-left: 24px;
 }
+
+a[href*="?soon"] {
+  pointer-events: none;
+}
+
+a[href*="?soon"] .text {
+  flex-grow: 0;
+}
+
+a[href*="?soon"]::after {
+  content: "(soon)";
+  font-size: 0.75rem;
+  opacity: 0.5;
+  flex-grow: 1;
+  margin-left: 0.625rem;
+  color: var(--vp-c-text-2);
+}

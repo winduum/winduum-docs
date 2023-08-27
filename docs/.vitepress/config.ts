@@ -127,6 +127,10 @@ export default defineConfig({
           text: '🎨&nbsp;&nbsp; UI',
           items: [
             {
+              text: 'Avatar',
+              link: '/docs/ui/avatar?soon'
+            },
+            {
               text: 'Button',
               link: '/docs/ui/button'
             },
@@ -179,12 +183,28 @@ export default defineConfig({
               link: '/docs/ui/notice'
             },
             {
+              text: 'Range',
+              link: '/docs/ui/range?soon'
+            },
+            {
               text: 'Progress',
               link: '/docs/ui/progress'
             },
             {
+              text: 'Radial progress',
+              link: '/docs/ui/radial-progress?soon'
+            },
+            {
               text: 'Group',
               link: '/docs/ui/group'
+            },
+            {
+              text: 'Dot',
+              link: '/docs/ui/dot?soon'
+            },
+            {
+              text: 'Divider',
+              link: '/docs/ui/divider?soon'
             }
           ]
         },
@@ -198,6 +218,38 @@ export default defineConfig({
             {
               text: 'Field',
               link: '/docs/component/field'
+            },
+            {
+              text: 'Card',
+              link: '/docs/component/card?soon'
+            },
+            {
+              text: 'Table',
+              link: '/docs/component/table?soon'
+            },
+            {
+              text: 'Breadcrumb',
+              link: '/docs/component/breadcrumb?soon'
+            },
+            {
+              text: 'Pagination',
+              link: '/docs/component/pagination?soon'
+            },
+            {
+              text: 'Datepicker',
+              link: '/docs/component/datepicker?soon'
+            },
+            {
+              text: 'Tabs',
+              link: '/docs/component/tabs?soon'
+            },
+            {
+              text: 'Dropdown',
+              link: '/docs/component/dropdown?soon'
+            },
+            {
+              text: 'Rating',
+              link: '/docs/component/rating?soon'
             }
           ]
         },
@@ -205,12 +257,52 @@ export default defineConfig({
           text: '💡️&nbsp;&nbsp; Libraries',
           items: [
             {
+              text: 'Form',
+              link: '/docs/lib/form?soon'
+            },
+            {
               text: 'Dialog',
               link: '/docs/lib/dialog'
             },
             {
               text: 'Ripple',
               link: '/docs/lib/ripple'
+            },
+            {
+              text: 'Details',
+              link: '/docs/lib/details?soon'
+            },
+            {
+              text: 'Drawer',
+              link: '/docs/lib/details?soon'
+            },
+            {
+              text: 'Carousel',
+              link: '/docs/lib/carousel?soon'
+            },
+            {
+              text: 'Tooltip',
+              link: '/docs/lib/tooltip?soon'
+            },
+            {
+              text: 'Popover',
+              link: '/docs/lib/popover?soon'
+            },
+            {
+              text: 'Notification',
+              link: '/docs/lib/notification?soon'
+            },
+            {
+              text: 'Floating',
+              link: '/docs/lib/floating?soon'
+            },
+            {
+              text: 'Datepicker',
+              link: '/docs/lib/datepicker?soon'
+            },
+            {
+              text: 'Select',
+              link: '/docs/lib/select?soon'
             }
           ]
         }
