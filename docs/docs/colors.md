@@ -29,20 +29,20 @@ There are few types of colors with various areas of use. Colors are defined in [
 
 <div style="display:flex; gap: 1rem; flex-direction: column">
     <div style="display: flex; align-items: center; gap: 1.75rem;">
-        <div style="width: 3rem;height: 3rem;border-radius: 50%;" class="bg-base"></div>
-        <code>--color-base</code>
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;" class="bg-main"></div>
+        <code>--color-main</code>
     </div>
     <div style="display: flex; align-items: center; gap: 1.75rem;">
-        <div style="width: 3rem;height: 3rem;border-radius: 50%;background-color: var(--color-base-primary)" class="bg-base-primary"></div>
-        <code>--color-base-primary</code>
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;background-color: var(--color-main-primary)" class="bg-main-primary"></div>
+        <code>--color-main-primary</code>
     </div>
     <div style="display: flex; align-items: center; gap: 1.75rem;">
-        <div style="width: 3rem;height: 3rem;border-radius: 50%;background-color: var(--color-base-secondary)" class="bg-base-secondary"></div>
-        <code>--color-base-secondary</code>
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;background-color: var(--color-main-secondary)" class="bg-main-secondary"></div>
+        <code>--color-main-secondary</code>
     </div>
     <div style="display: flex; align-items: center; gap: 1.75rem;">
-        <div style="width: 3rem;height: 3rem;border-radius: 50%;background-color: var(--color-base-tertiary)" class="bg-base-tertiary"></div>
-        <code>--color-base-tertiary</code>
+        <div style="width: 3rem;height: 3rem;border-radius: 50%;background-color: var(--color-main-tertiary)" class="bg-main-tertiary"></div>
+        <code>--color-main-tertiary</code>
     </div>
 </div>
 
@@ -97,7 +97,7 @@ So you still use primary color when needed and change accent only for elements y
 Accent color consist of two css properties:
 
 * <code>--color-accent</code> - color of the accent
-* <code>--color-accent-current</code> - current foreground color of the accent
+* <code>--color-accent-fg</code> - foreground color of the accent
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/accent/btn.html"></iframe>
 
@@ -116,17 +116,13 @@ Each text color variant has also `--color-current` defined. This is for similar 
 ```
 ```postcss
 .text-primary {
-    --color-current: var(--color-primary);
+  --color-current: color-mix(in sRGB, var(--color-primary) calc(var(--tw-text-opacity, 1) * 100%), transparent);
+  color: var(--color-primary);
 }
-
-.text-primary {
-    --tw-text-opacity: 1;
-    color: rgb(var(--color-primary) / var(--tw-text-opacity));
 }
 
 .a {
-    color: rgb(var(--color-current) / 0.2);
-    background-color: color-mix(in sRGB, var(--color-current) 40%, transparent);
+    color: color-mix(in sRGB, var(--color-current) 40%, transparent);
 }
 ```
 :::

@@ -3,7 +3,7 @@ html {
     background-color: rgb(246, 246, 247);
 
     &.dark {
-        background-color: rgb(28, 28, 28);
+        background-color: #111114;
     }
 }
 
@@ -17,4 +17,5 @@ html {
     flex-wrap: wrap;
     border-radius: var(--rounded);
     min-height: 100%;
+    background: transparent;
 }

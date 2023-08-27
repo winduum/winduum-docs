@@ -12,6 +12,7 @@
 
 * `floating` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/floating.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `floating-focus` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/floating-focus.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `file` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/file.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `select` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/select.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `icon` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/icon.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `invalid`
@@ -59,6 +60,36 @@
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/floating.html"></iframe>
 
 <<< @/public/examples/ui/select/floating.html#body{}
+
+## Time
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/time.html"></iframe>
+
+<<< @/public/examples/ui/input/time.html#body{}
+
+## Date
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/date.html"></iframe>
+
+<<< @/public/examples/ui/input/date.html#body{}
+
+## Datetime
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/datetime.html"></iframe>
+
+<<< @/public/examples/ui/input/datetime.html#body{}
+
+## Number
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/number.html"></iframe>
+
+<<< @/public/examples/ui/input/number.html#body{}
+
+## File
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/file.html"></iframe>
+
+<<< @/public/examples/ui/input/file.html#body{}
 
 ## Icon
 
