@@ -1,0 +1,7 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<div class="ui-control">
+    <input type="color" id="color" onchange="this.nextElementSibling.textContent = this.value">
+    <label for="color">#ffffff</label>
+</div>
+{% endblock %}

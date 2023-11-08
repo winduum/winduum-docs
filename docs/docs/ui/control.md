@@ -2,6 +2,13 @@
 
 <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
 
+Control supports **input**, **select** (not multiple) and **textarea** including **all** [input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+* `text`, `color`, `date`, `datetime-local`, `email`, `file`, `hidden`, `month`, `number`, `password`, `search`, `tel`, `time`, `url`, `week`
+
+Other input types are supported in other components
+* `checkbox`, `radio` - included in [Check](/docs/ui/check) or [Switch](/docs/ui/switch)
+* `range` - included in **Range** _(not available yet)_
+
 ### Single Import
 
 ```css
@@ -13,6 +20,7 @@
 * `floating` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/floating.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `floating-focus` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/floating-focus.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `file` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/file.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `color` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/color.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `select` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/select.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `icon` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/icon.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `invalid`
@@ -84,6 +92,12 @@
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/number.html"></iframe>
 
 <<< @/public/examples/ui/input/number.html#body{}
+
+## Color
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/color.html"></iframe>
+
+<<< @/public/examples/ui/input/color.html#body{}
 
 ## File
 
