@@ -25,6 +25,18 @@ This plugin disables by default following TailwindCSS corePlugins
 
 Winduum also exports useful helper functions you can use in your `tailwind.config.cjs`, see [`utils/tailwind.js`](https://github.com/winduum/winduum/blob/main/utils/tailwind.js) for more info.
 
+## settings.rgb
+Include `-rgb` color variants. Learn more about this in [Compatibility](/docs/themes.html#compatibility) section.
+
+* **Type:** `boolean`
+* **Default:** `true`
+
+## settings.colorMix
+Use `color-mix` in color variants instead of rgb. Learn more about this in [Compatibility](/docs/themes.html#compatibility) section.
+
+* **Type:** `boolean`
+* **Default:** `true`
+
 ## colors
 * **Type:** `string[]`
 * **Default:** `['light', 'dark', 'primary', 'secondary', 'warning', 'error', 'info', 'success', 'accent', 'current', 'base', 'body', 'body-primary', 'body-secondary', 'body-tertiary']`

@@ -1,5 +1,5 @@
 # Check
-_(Checkbox & Radio)_
+Check supports `checkbox` and `radio` **input** types
 
 <a href="https://github.com/winduum/winduum/blob/main/src/ui/check.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
 

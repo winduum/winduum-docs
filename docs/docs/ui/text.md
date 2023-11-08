@@ -8,10 +8,6 @@
 @import "winduum/ui/text.css" layer(components);
 ```
 
-### Variants
-
-* `lg`
-
 ## Text
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/text.html"></iframe>

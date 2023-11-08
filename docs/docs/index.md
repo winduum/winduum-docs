@@ -58,7 +58,7 @@ import 'winduum/src/ui/btn/index.css';
 ```
 :::
 
-With `layer(components)` you can use TailwindCSS also on components, for example `class="ui-btn lg:is-square"` to make button square only from `lg` breakpoint.
+With `layer(components)` you can use TailwindCSS also on components, for example `class="ui-btn lg:square"` to make button square only from `lg` breakpoint.
 
 Following PostCSS plugins are required. `css-has-pseudo` is recommended because not all browsers support `:has` yet.
 * [`autoprefixer`](https://www.npmjs.com/package/autoprefixer)

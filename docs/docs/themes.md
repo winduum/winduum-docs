@@ -41,7 +41,7 @@ Since support for `color-mix`is not that great yet, `rgb` is still used for Tail
 * [`src/base/theme/default.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/default.css)
 * [`src/base/theme/dark.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/dark.css)
 
-If you want you can also drop rgb colors completely. 
+If you want, you can also drop rgb colors completely. 
 
-But if you want compatibility then some of the components include `-rgb.css` fallback. So it's recommended to also include [`winduum/main-rgb.css`](https://github.com/winduum/winduum/blob/main/src/main-rgb.css) in your project for old browsers. 
+But if you prefer compatibility then some of the components include `-rgb.css` fallback (where `color-mix` is not used). So it's recommended to also include [`winduum/main-rgb.css`](https://github.com/winduum/winduum/blob/main/src/main-rgb.css) in your project for old browsers. 
 

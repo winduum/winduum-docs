@@ -8,11 +8,6 @@
 @import "winduum/ui/switch.css" layer(components);
 ```
 
-### Variants
-
-* `sm`
-* `lg`
-
 ## Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/switch/basic.html"></iframe>

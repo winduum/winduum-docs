@@ -19,6 +19,7 @@ In your projects it's recommended to follow naming semantics of Winduum with the
 * **Layout** - `l-name` (wraps everything else)
 * **Utilities** - `u-name` (helper classes for common styles)
 * **Libraries** - `lib-name` (used for functionality enhanced styles)
+* **Naked** - `name` (the most low-level naming)
 
 ## CSS Properties
 
