@@ -114,10 +114,6 @@ export default defineConfig({
               link: '/docs/layout/keyframes'
             },
             {
-              text: 'Container',
-              link: '/docs/layout/container'
-            },
-            {
               text: 'Grid',
               link: '/docs/layout/grid'
             }
@@ -145,6 +141,10 @@ export default defineConfig({
             {
               text: 'Flex',
               link: '/docs/utilities/flex?soon'
+            },
+            {
+              text: 'Divide Gap',
+              link: '/docs/utilities/divide-gap?soon'
             }
           ]
         },
