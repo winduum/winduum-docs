@@ -17,9 +17,8 @@ In your projects it's recommended to follow naming semantics of Winduum with the
 * **Section** - `s-name` (wraps the previous two)
 * **Module** - `m-name` (wraps sections)
 * **Layout** - `l-name` (wraps everything else)
-* **Utilities** - `u-name` (helper classes for common styles)
 * **Libraries** - `lib-name` (used for functionality enhanced styles)
-* **Naked** - `name` (the most low-level naming)
+* **Utilities** - `name` (without prefix, utility classes for common styles)
 
 ## CSS Properties
 
@@ -79,6 +78,6 @@ You can write your own components using the same approach
 ```
 :::
 
-If you want to style some elements inside the component you don't need to use complex conventions like BEM, just use helper classes such `.c_item`, `.c_head`, `.c_body`, `.c_foot` etc. This way you can tell that it's a element related to the parent component. 
+It's recommended to use TailwindCSS utility  classes. But if you want to style some elements in CSS inside the component you don't need to use complex conventions like BEM, just use helper classes such as `.c_item`, `.c_head`, `.c_body`, `.c_foot` etc. This way you can tell that it's a element related to the parent component. 
 
 In rare case you want to prevent possible class conflicts you can add name of the component inside the class like this `.c_hello_world_item`.

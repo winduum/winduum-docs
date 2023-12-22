@@ -124,6 +124,31 @@ export default defineConfig({
           ]
         },
         {
+          text: '✨&nbsp;&nbsp; Utilities',
+          items: [
+            {
+              text: 'Container',
+              link: '/docs/utilities/container?soon'
+            },
+            {
+              text: 'Animation',
+              link: '/docs/utilities/animation?soon'
+            },
+            {
+              text: 'Underline',
+              link: '/docs/utilities/underline?soon'
+            },
+            {
+              text: 'Skeleton',
+              link: '/docs/utilities/skeleton?soon'
+            },
+            {
+              text: 'Flex',
+              link: '/docs/utilities/flex?soon'
+            }
+          ]
+        },
+        {
           text: '🎨&nbsp;&nbsp; UI',
           items: [
             {
@@ -187,6 +212,10 @@ export default defineConfig({
               link: '/docs/ui/range?soon'
             },
             {
+              text: 'Rating',
+              link: '/docs/component/rating?soon'
+            },
+            {
               text: 'Progress',
               link: '/docs/ui/progress'
             },
@@ -246,10 +275,6 @@ export default defineConfig({
             {
               text: 'Dropdown',
               link: '/docs/component/dropdown?soon'
-            },
-            {
-              text: 'Rating',
-              link: '/docs/component/rating?soon'
             }
           ]
         },
