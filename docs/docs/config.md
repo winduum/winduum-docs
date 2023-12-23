@@ -88,6 +88,19 @@ Example `font-bold`:
 }
 ```
 
+## ease
+* **Type:** `string[]`
+* **Default:** `['linear', 'in', 'out', 'in-out']`
+
+These are additional transition easing tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+
+Example `ease-linear`:
+```css
+.ease-linear {
+  transition-timing-function: var(--ease-linear);
+}
+```
+
 ## zIndex
 * **Type:** `number[]`
 * **Default:** `[10, 20, 30, 40, 50, 60]`
@@ -98,6 +111,20 @@ Example `z-10`:
 ```css
 .z-10 {
     z-index: var(--z-10);
+}
+```
+
+## fontSize
+* **Type:** `string[]`
+* **Default:** `['xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '3xl', '4xl', '5xl', '6xl', '7xl', '7xl', '8xl', '9xl']`
+
+These are additional `font-size` tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+
+Example `text-md`:
+```css
+.text-md {
+    font-size: var(--text-md);
+    line-height: calc(var(--text-md) + 0.5rem);
 }
 ```
 
@@ -145,6 +172,19 @@ Example `animation-fade-in`:
 ```css
 .animation-fade-in {
     animation-name: fade-in;
+}
+```
+
+## mask
+* **Type:** `string[]`
+* **Default:** `['check', 'radio', 'angle-up', 'angle-down']`
+
+These are additional mask tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+
+Example `animation-fade-in`:
+```css
+.mask-check {
+    mask: var(--mask-check)
 }
 ```
 

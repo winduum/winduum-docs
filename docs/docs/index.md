@@ -67,7 +67,7 @@ Following PostCSS plugins are required.
 * [`postcss-import`](https://www.npmjs.com/package/postcss-import)
 * [`postcss-custom-media`](https://www.npmjs.com/package/postcss-custom-media)
 
-`css-has-pseudo` is recommended because not all browsers support `:has` yet.
+And `css-has-pseudo` is recommended for better `:has` compatibility in older browsers.
 * [`css-has-pseudo`](https://www.npmjs.com/package/css-has-pseudo)
 
 ### TailwindCSS
