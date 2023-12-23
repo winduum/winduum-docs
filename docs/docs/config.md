@@ -1,15 +1,17 @@
 # Tailwind CSS
 
-To add `winduum` to TailwindCSS, add folowing plugin to `tailwind.config.cjs` configuration file.
+To add `winduum` to TailwindCSS, add folowing plugin to `tailwind.config.js` configuration file.
 
 ```js
-module.exports = {
+import winduum from 'winduum'
+
+export default {
   darkMode: 'class',
   content: [
     './src/**/*.{js,html}'
   ],
   plugins: [
-    require('winduum')({
+    winduum({
         // config options
     })
   ],
@@ -21,15 +23,14 @@ You can customize config with options listed bellow.
 This plugin disables by default following TailwindCSS corePlugins
 
 * **preflight** - custom modern css reset is used, see [Reset](layout/reset)
-* **container** - custom container css is used, see [Container](layout/container)
 
-Winduum also exports useful helper functions you can use in your `tailwind.config.cjs`, see [`utils/tailwind.js`](https://github.com/winduum/winduum/blob/main/utils/tailwind.js) for more info.
+Winduum also exports useful helper functions you can use in your `tailwind.config.js`, see [`utils/tailwind.js`](https://github.com/winduum/winduum/blob/main/utils/tailwind.js) for more info.
 
 ## settings.rgb
 Include `-rgb` color variants. Learn more about this in [Compatibility](/docs/themes.html#compatibility) section.
 
 * **Type:** `boolean`
-* **Default:** `true`
+* **Default:** `false`
 
 ## settings.colorMix
 Use `color-mix` in color variants instead of rgb. Learn more about this in [Compatibility](/docs/themes.html#compatibility) section.
@@ -39,25 +40,25 @@ Use `color-mix` in color variants instead of rgb. Learn more about this in [Comp
 
 ## colors
 * **Type:** `string[]`
-* **Default:** `['light', 'dark', 'primary', 'secondary', 'warning', 'error', 'info', 'success', 'accent', 'current', 'base', 'body', 'body-primary', 'body-secondary', 'body-tertiary']`
+* **Default:** `['primary', 'accent', 'current',
+  'warning', 'error', 'info', 'success', 'light', 'dark',
+  'main', 'main-primary', 'main-secondary', 'main-tertiary',
+  'body', 'body-primary', 'body-secondary', 'body-tertiary']`
 
 These are additional color tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`. See [Colors](colors) for more info.
 
 Example `bg-primary`:
 ```css
 .bg-primary {
-    --tw-bg-opacity: 1;
-    background-color: rgb(var(--color-primary-rgb) / var(--tw-bg-opacity));
+    background-color: color-mix(in sRGB, var(--color-primary) calc(var(--tw-bg-opacity, 1) * 100%), transparent);
 }
 ```
 
 Example `text-primary`:
 ```css
 .text-primary {
-    --tw-text-opacity: 1;
-    --color-current: var(--color-primary);
-    --color-current-rgb: var(--color-primary-rgb);
-    color: rgb(var(--color-primary-rgb) / var(--tw-text-opacity));
+  --color-current: color-mix(in sRGB, var(--color-primary) calc(var(--tw-text-opacity, 1) * 100%), transparent);
+  color: color-mix(in sRGB, var(--color-primary) calc(var(--tw-text-opacity, 1) * 100%), transparent);
 }
 ```
 
@@ -87,6 +88,19 @@ Example `font-bold`:
 }
 ```
 
+## ease
+* **Type:** `string[]`
+* **Default:** `['linear', 'in', 'out', 'in-out']`
+
+These are additional transition easing tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+
+Example `ease-linear`:
+```css
+.ease-linear {
+  transition-timing-function: var(--ease-linear);
+}
+```
+
 ## zIndex
 * **Type:** `number[]`
 * **Default:** `[10, 20, 30, 40, 50, 60]`
@@ -100,9 +114,23 @@ Example `z-10`:
 }
 ```
 
+## fontSize
+* **Type:** `string[]`
+* **Default:** `['xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '3xl', '4xl', '5xl', '6xl', '7xl', '7xl', '8xl', '9xl']`
+
+These are additional `font-size` tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+
+Example `text-md`:
+```css
+.text-md {
+    font-size: var(--text-md);
+    line-height: calc(var(--text-md) + 0.5rem);
+}
+```
+
 ## spacing
 * **Type:** `string[]`
-* **Default:** `['xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', 'section']`
+* **Default:** `['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl']`
 
 These are additional spacing tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
 
@@ -123,7 +151,7 @@ Example `px-md`:
 
 ## borderRadius
 * **Type:** `string[]`
-* **Default:** `['xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', 'section']`
+* **Default:** `['xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', 'full']`
 
 These are additional border-radius tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
 
@@ -144,6 +172,19 @@ Example `animation-fade-in`:
 ```css
 .animation-fade-in {
     animation-name: fade-in;
+}
+```
+
+## mask
+* **Type:** `string[]`
+* **Default:** `['check', 'radio', 'angle-up', 'angle-down']`
+
+These are additional mask tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+
+Example `animation-fade-in`:
+```css
+.mask-check {
+    mask: var(--mask-check)
 }
 ```
 

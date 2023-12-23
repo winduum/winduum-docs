@@ -114,10 +114,6 @@ export default defineConfig({
               link: '/docs/layout/keyframes'
             },
             {
-              text: 'Container',
-              link: '/docs/layout/container'
-            },
-            {
               text: 'Grid',
               link: '/docs/layout/grid'
             }
@@ -128,23 +124,31 @@ export default defineConfig({
           items: [
             {
               text: 'Container',
-              link: '/docs/utilities/container?soon'
+              link: '/docs/utilities/container'
             },
             {
               text: 'Animation',
-              link: '/docs/utilities/animation?soon'
+              link: '/docs/utilities/animation'
             },
             {
               text: 'Underline',
-              link: '/docs/utilities/underline?soon'
+              link: '/docs/utilities/underline'
             },
             {
               text: 'Skeleton',
-              link: '/docs/utilities/skeleton?soon'
+              link: '/docs/utilities/skeleton'
+            },
+            {
+              text: 'Mask',
+              link: '/docs/utilities/mask'
             },
             {
               text: 'Flex',
-              link: '/docs/utilities/flex?soon'
+              link: '/docs/utilities/flex'
+            },
+            {
+              text: 'Divide Gap',
+              link: '/docs/utilities/divide-gap'
             }
           ]
         },
@@ -162,10 +166,6 @@ export default defineConfig({
             {
               text: 'Badge',
               link: '/docs/ui/badge'
-            },
-            {
-              text: 'Link',
-              link: '/docs/ui/link'
             },
             {
               text: 'Heading',
@@ -263,6 +263,10 @@ export default defineConfig({
             {
               text: 'Pagination',
               link: '/docs/component/pagination?soon'
+            },
+            {
+              text: 'Compare',
+              link: '/docs/component/compare?soon'
             },
             {
               text: 'Datepicker',

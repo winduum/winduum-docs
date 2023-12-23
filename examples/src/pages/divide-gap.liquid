@@ -1,0 +1,22 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+    <div class="flex divide-x divide-bg-primary divide-gap-x-4">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+{% endblock %}
+
+{% block head %}
+<style>
+      .divide-bg-primary > :not([hidden]) ~ :not([hidden]) {
+        --tw-divide-opacity: 1;
+        border-color: var(--color-primary);
+      }
+
+      .divide-gap-x-4 > :where(*:not(:first-child)) {
+        padding-left: 1rem;
+        margin-left: 1rem;
+      }
+</style>
+{% endblock %}

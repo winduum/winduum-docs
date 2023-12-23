@@ -6,6 +6,8 @@ It's recommended to use the following TailwindCSS approaches to shape your layou
 * [Flex](https://tailwindcss.com/docs/flex)
 * [Gap](https://tailwindcss.com/docs/gap)
 
-This should cover most use cases, but in some cases the classic pre-grid flex `col` approach can be useful too.
+Winduum also provides additional utilities to make things even easier.
 
-See [`src/base/tailwind/gutters.css`](https://github.com/winduum/winduum/tree/main/src/base/tailwind/gutters.css) for more info
+* [Flex](/docs/utilities/flex)
+* [Container](/docs/utilities/container)
+* [Divide Gap](/docs/utilities/divide-gap)

@@ -1,0 +1,17 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+    <div class="mask-check size-6 bg-primary"></div>
+{% endblock %}
+
+{% block head %}
+<style>
+    .mask-check {
+        mask: var(--mask-check)
+    }
+
+    .size-6 {
+      width: 2rem;
+      height: 2rem;
+    }
+</style>
+{% endblock %}
