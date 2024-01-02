@@ -3,26 +3,23 @@
 Adds a few default values to [`underline`](https://tailwindcss.com/docs/text-decoration) utility class for easy link animations.
 
 ```css
-  .underline {
-    text-underline-position: under;
-    text-decoration-thickness: max(1px, 0.0625em);
-    text-underline-offset: -0.125rem;
+.underline {
+  text-underline-offset: var(--tw-underline-offset, 0.125em);
+}
+
+.decoration-transparent {
+  &:where([href], button, .interactive) {
     transition: all var(--duration) var(--ease-in-out);
 
-    &:where([href], button, .interactive) {
-      &:hover {
-        @media (hover: hover) and (pointer: fine) {
-          text-decoration-color: var(--color-current);
-          text-underline-offset: 0;
-        }
-      }
+    &:not(:hover, :focus) {
+      text-underline-offset: var(--tw-underline-offset-transparent, -0.25em);
+    }
 
-      &:focus {
-        text-decoration-color: var(--color-current);
-        text-underline-offset: 0;
-      }
+    &:is(:hover, :focus) {
+      text-decoration-color: var(--color-current);
     }
   }
+}
 ```
 
 ## Examples
