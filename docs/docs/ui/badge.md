@@ -1,4 +1,4 @@
-# Button
+# Badge
 
 <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
 
