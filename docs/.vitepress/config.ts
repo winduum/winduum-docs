@@ -107,7 +107,7 @@ export default defineConfig({
             },
             {
               text: 'Defaults',
-              link: '/docs/layout/defaults?soon'
+              link: '/docs/layout/defaults'
             },
             {
               text: 'Breakpoints',

@@ -240,3 +240,15 @@ a[href*="?soon"]::after {
   margin-left: 0.625rem;
   color: var(--vp-c-text-2);
 }
+
+.vp-doc [class*='language-'] code {
+  background-color: transparent;
+}
+
+body .border-primary {
+  border-color: var(--color-primary);
+}
+
+body .border-t-2 {
+  border-top-width: 2px;
+}

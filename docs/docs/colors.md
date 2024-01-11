@@ -112,7 +112,7 @@ So you still use primary color when needed and change accent only for elements y
 Accent color consist of two css properties:
 
 * <code>--color-accent</code> - color of the accent
-* <code>--color-accent-fg</code> - foreground color of the accent
+* <code>--color-accent-foreground</code> - foreground color of the accent
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/accent/btn.html"></iframe>
 

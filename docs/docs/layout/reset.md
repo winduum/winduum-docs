@@ -1,10 +1,7 @@
 # Reset
+Winduum uses new modern CSS reset, that means [Preflight](https://tailwindcss.com/docs/preflight#border-styles-are-reset-globally) from **TailwindCSS** is disabled by default.
+You can always enable it again via `tailwind.config.js` if you prefer it more.
 
-Winduum uses [The New CSS Reset](https://github.com/elad2412/the-new-css-reset) that uses new modern CSS features.<br>
-This means that [Preflight](https://tailwindcss.com/docs/preflight#border-styles-are-reset-globally) from **TailwindCSS** is disabled by default.
+* [`src/base/reset.css`](https://github.com/winduum/winduum/blob/main/src/base/reset.css)
 
-## Defaults
-
-Other CSS default resets are following - [`src/base/default.css`](https://github.com/winduum/winduum/blob/main/src/base/default.css)
-
-<<< @/../node_modules/winduum/src/base/default.css
+<<< @/../node_modules/winduum/src/base/reset.css
