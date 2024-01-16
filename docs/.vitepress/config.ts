@@ -25,6 +25,10 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
 
+
+
+    outline: 'deep',
+
     editLink: {
       pattern: 'https://github.com/winduum/winduum-docs/edit/main/docs/:path',
       text: 'Suggest changes to this page'
@@ -144,7 +148,7 @@ export default defineConfig({
             },
             {
               text: 'Dot',
-              link: '/docs/utilities/dot?soon'
+              link: '/docs/utilities/dot'
             },
             {
               text: 'Flex',
@@ -188,6 +192,10 @@ export default defineConfig({
               link: '/docs/ui/control'
             },
             {
+              text: 'Group',
+              link: '/docs/ui/group'
+            },
+            {
               text: 'Heading',
               link: '/docs/ui/heading'
             },
@@ -205,7 +213,7 @@ export default defineConfig({
             },
             {
               text: 'Link',
-              link: '/docs/ui/link?soon'
+              link: '/docs/ui/link'
             },
             {
               text: 'Notice',
@@ -213,7 +221,7 @@ export default defineConfig({
             },
             {
               text: 'Range',
-              link: '/docs/ui/range?soon'
+              link: '/docs/ui/range'
             },
             {
               text: 'Progress',
@@ -225,7 +233,7 @@ export default defineConfig({
             },
             {
               text: 'Rating',
-              link: '/docs/component/rating?soon'
+              link: '/docs/component/rating'
             },
             {
               text: 'Swap',
@@ -254,7 +262,7 @@ export default defineConfig({
             },
             {
               text: 'Card',
-              link: '/docs/component/card?soon'
+              link: '/docs/component/card'
             },
             {
               text: 'Carousel',
@@ -262,11 +270,11 @@ export default defineConfig({
             },
             {
               text: 'Compare',
-              link: '/docs/component/compare?soon'
+              link: '/docs/component/compare'
             },
             {
               text: 'Details',
-              link: '/docs/lib/details?soon'
+              link: '/docs/component/details'
             },
             {
               text: 'Dialog',
@@ -287,10 +295,6 @@ export default defineConfig({
             {
               text: 'Form',
               link: '/docs/lib/form?soon'
-            },
-            {
-              text: 'Group',
-              link: '/docs/ui/group'
             },
             {
               text: 'Pagination',

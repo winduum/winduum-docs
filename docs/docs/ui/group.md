@@ -25,3 +25,13 @@
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/group.html"></iframe>
 
 <<< @/public/examples/ui/input/group.html#body{}
+
+## Vertical Group
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/group/vertical.html"></iframe>
+
+<<< @/public/examples/ui/group/vertical.html#body{}
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/group/vertical-control.html"></iframe>
+
+<<< @/public/examples/ui/group/vertical-control.html#body{}

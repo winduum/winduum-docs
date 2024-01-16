@@ -7,7 +7,7 @@ Control supports **input**, **select** (not multiple) and **textarea** including
 
 Other input types are supported in other components
 * `checkbox`, `radio` - included in [Check](/docs/ui/check) or [Switch](/docs/ui/switch)
-* `range` - included in **Range** _(not available yet)_
+* `range` - included in [Range](/docs/ui/range)
 
 ### Single Import
 

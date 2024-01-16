@@ -261,3 +261,15 @@ body .border-t-2 {
 .VPSidebar {
   left: calc(var(--c-dialog-scrollbar-width, 0) / 2 * -1) !important;
 }
+
+/*
+.VPDocAside {
+  ul ul ul {
+    display: none;
+  }
+}
+*/
+
+.vp-doc h3 {
+  margin-bottom: 1rem;
+}
