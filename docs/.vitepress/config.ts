@@ -313,19 +313,6 @@ export default defineConfig({
               link: '/docs/lib/tooltip?soon'
             }
           ]
-        },
-        {
-          text: '💡️&nbsp;&nbsp; Libraries',
-          items: [
-            {
-              text: 'Dialog',
-              link: '/docs/lib/dialog'
-            },
-            {
-              text: 'Ripple',
-              link: '/docs/lib/ripple'
-            }
-          ]
         }
       ]
     }
