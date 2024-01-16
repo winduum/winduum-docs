@@ -4,9 +4,19 @@ Theming in Winduum is really easy. All it takes is a few CSS properties. There a
 
 ## Default
 
+Each `color-mix` function also contains `--space` property, which you can change from sRGB to mix colors in different color spaces. You can use colors in any format you want.
+
 [`src/base/theme/default.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/default.css)
 
 <<< @/../node_modules/winduum/src/base/theme/default.css
+
+## Default P3
+
+[`src/base/theme/default-p3.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/default-p3.css)
+
+Better high range colors for P3 capable displays.
+
+<<< @/../node_modules/winduum/src/base/theme/default-p3.css
 
 ## Dark
 

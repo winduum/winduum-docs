@@ -77,7 +77,7 @@ export default defineConfig({
               link: '/docs/'
             },
             {
-              text: 'Use',
+              text: 'About',
               link: '/docs/use'
             },
             {

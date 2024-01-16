@@ -1,5 +1,5 @@
 # Defaults
-Default styles or rules applied to certain HTML elements or pseudo-elements.
+Default styles or rules applied to certain HTML elements or pseudo-elements. These are very much optional.
 
 * [`src/base/default.css`](https://github.com/winduum/winduum/blob/main/src/base/default.css)
 
@@ -8,6 +8,10 @@ Default styles or rules applied to certain HTML elements or pseudo-elements.
 ## Tailwind
 
 Applies `--tw-content` to all pseudo-elements and zero border to all elements or pseudo-elements.
+
+##  Pointer
+
+Default `cursor: pointer` for buttons, checkboxes, radios and `.interactive` class which are not disabled.
 
 ## Svg
 Set the default size of an SVG as a small square if neither width nor height is specified.

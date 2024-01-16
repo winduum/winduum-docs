@@ -143,3 +143,5 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 
 </div>
 </div>
+
+Winduum doesn't have full component integration in any of the frameworks, but if there is interest projects like `winduum-vue` or `winduum-react` might arise.
