@@ -159,6 +159,10 @@ export default defineConfig({
               link: '/docs/utilities/skeleton'
             },
             {
+              text: 'Ripple',
+              link: '/docs/utilities/ripple'
+            },
+            {
               text: 'Underline',
               link: '/docs/utilities/underline'
             }

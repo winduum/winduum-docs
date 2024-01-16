@@ -7,14 +7,17 @@ Modal component that uses native HTML5 dialog functionality.
 ### Single Import
 
 ```css
-@import "winduum/ui/components/dialog/content.css" layer(components);
+@import "winduum/components/dialog.css" layer(components);
 ```
 
 ## Example
 
-<button class="ui-btn bg-primary" id="showDialog" style="padding: var(--ui-btn-py) var(--ui-btn-px)">Show dialog</button>
+<button class="ui-btn" id="showDialog">Show dialog</button>
 
+::: code-group
 ```html
+<button class="ui-btn" id="showDialog">Show dialog</button>
+
 <dialog class="c-dialog">
     <form class="c-dialog-content" method="dialog">
         <div class="ui-heading">Example dialog</div>
@@ -27,7 +30,14 @@ Modal component that uses native HTML5 dialog functionality.
     </form>
 </dialog>
 ```
+```js
+import { showDialog } from 'winduum/src/components/dialog.js'
 
+document.querySelector('#showDialog').addEventListener('click', () => {
+    showDialog(document.querySelector('dialog'))
+})
+```
+:::
 
 ## showDialog
 
@@ -63,6 +73,20 @@ A boolean that indicates whenever is dialog closable by clicking outside or with
 
 A boolean that indicates whether the dialog should be removed from the DOM when it is closed.
 
+#### openClass
+
+* **Type:** `string`
+* **Default:** `visible`
+
+A string representing a CSS class that will be aded when dialog is visible.
+
+#### scrollbarWidthProperty
+
+* **Type:** `string`
+* **Default:** `--c-dialog-scrollbar-width`
+
+A CSS property representing a scrollbar width, when dialog is showed the document scrollbar is hidden, this adds necessary padding.
+
 ## closeDialog
 
 * **Type:** `(selector:  HTMLDialogElement, options?: CloseOptions) => Promise<void>`
@@ -89,6 +113,20 @@ document.querySelector('#closeDialog').addEventListener('click', async () => {
 * **Default:** `true`
 
 A boolean that indicates whether the dialog should be removed from the DOM when it is closed.
+
+#### openClass
+
+* **Type:** `string`
+* **Default:** `visible`
+
+A string representing a CSS class that will be aded when dialog is visible.
+
+#### scrollbarWidthProperty
+
+* **Type:** `string`
+* **Default:** `--c-dialog-scrollbar-width`
+
+A CSS property representing a scrollbar width, when dialog is showed the document scrollbar is hidden, this adds necessary padding.
 
 ## insertDialog
 
@@ -119,16 +157,16 @@ document.querySelector('#insertDialog').addEventListener('click', async () => {
 #### class
 
 * **Type:** `string`
-* **Default:** `lib-dialog is-inserted`
+* **Default:** `inserted`
 
 A string representing a CSS selector for finding inserted dialog in the DOM.
 
 #### selector
 
 * **Type:** `string`
-* **Default:** `.lib-dialog.is-inserted`
+* **Default:** `dialog.inserted`
 
-Selector of `<dialog>` element to target, be default the selector is inserted dynamically via `content` option### selector
+Selector of `<dialog>` element to target, be default the selector is inserted dynamically via `content` option
 
 #### append
 

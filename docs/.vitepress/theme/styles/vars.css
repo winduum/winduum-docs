@@ -252,3 +252,12 @@ body .border-primary {
 body .border-t-2 {
   border-top-width: 2px;
 }
+
+
+.VPNav {
+  padding-inline-end: var(--c-dialog-scrollbar-width, 0);
+}
+
+.VPSidebar {
+  left: calc(var(--c-dialog-scrollbar-width, 0) / 2 * -1) !important;
+}
