@@ -8,13 +8,18 @@
 @import "winduum/ui/components/card.css" layer(components);
 ```
 
-## Default
+### Props
+* <LinkGh name="default-props" path="components/card" />
+
+## Examples
+
+### Default
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/component/card/default.html"></iframe>
 
 <<< @/public/examples/component/card/default.html#body{}
 
-## Image
+### Image
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/component/card/image.html" style="height: 500px;"></iframe>
 

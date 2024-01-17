@@ -5,6 +5,8 @@ import './styles/vars.css'
 import 'winduum/main.css'
 import 'winduum/tailwind.css'
 import { watch, onMounted } from 'vue'
+import LinkGh from './components/LinkGh.vue'
+import ViewSourceGh from './components/ViewSourceGh.vue'
 
 function updateDarkIframes() {
   if (typeof document !== 'undefined') {
@@ -43,7 +45,10 @@ function dialogEvent() {
 
 export default {
   ...Theme,
-  enhanceApp({ router }) {
+  enhanceApp({ router, app }) {
+    app.component('LinkGh', LinkGh)
+    app.component('ViewSourceGh', ViewSourceGh)
+
     watch(router.route, () => {
       setTimeout(() => {
         updateDarkIframes()

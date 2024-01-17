@@ -14,7 +14,9 @@ npm i slide-element
 ```
 
 
-## Preview
+## Examples
+
+### Default
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/component/details/default.html"></iframe>
 

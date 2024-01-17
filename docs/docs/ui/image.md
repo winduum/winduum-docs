@@ -8,25 +8,27 @@
 @import "winduum/ui/image.css" layer(components);
 ```
 
-## Ratio
+## Examples
+
+### Ratio
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/image/ratio.html"></iframe>
 
 <<< @/public/examples/ui/image/ratio.html#body{}
 
-## Rounded
+### Rounded
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/image/rounded.html"></iframe>
 
 <<< @/public/examples/ui/image/rounded.html#body{}
 
-## Transparent
+### Skeleton
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/image/transparent.html"></iframe>
 
 <<< @/public/examples/ui/image/transparent.html#body{}
 
-## Iframe
+### Iframe
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/image/iframe.html" style="height: 25rem"></iframe>
 

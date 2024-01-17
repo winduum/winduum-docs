@@ -12,13 +12,15 @@
 
 * `interactive` <a href="https://github.com/winduum/winduum/blob/main/src/ui/link/interactive.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-## Basic
+## Examples
+
+### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/link/basic.html"></iframe>
 
 <<< @/public/examples/ui/link/basic.html#body{}
 
-## Underline
+### Underline
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/link/underline.html"></iframe>
 

@@ -1,16 +1,60 @@
 # Dialog
 Modal component that uses native HTML5 dialog functionality.
 
-* [`winduum/src/components/dialog.css`](https://github.com/winduum/winduum/blob/main/src/components/dialog.css)
-* [`winduum/src/components/dialog.js`](https://github.com/winduum/winduum/blob/main/src/components/dialog.js)
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/dialog.js" />
 
-### Single Import
+## Usage
 
+::: code-group
 ```css
 @import "winduum/components/dialog.css" layer(components);
 ```
+```js
+import { showDialog } from 'winduum/src/components/dialog.js'
 
-## Preview
+document.querySelector('#showDialog').addEventListener('click', () => {
+    showDialog(document.querySelector('dialog'))
+})
+```
+```vue
+<script setup>
+    import { ref } from 'vue'
+    import { Dialog, DialogContent } from '@/components/dialog'
+    import { UiHeading } from '@/components/ui/heading'
+    import { UiBtn } from '@/components/ui/btn'
+
+    const dialogMain = ref()
+</script>
+
+<template>
+    <UiBtn @click="dialogMain.show()">Open Dialog</UiBtn>
+    <Dialog ref="dialogMain">
+        <DialogContent>
+            <UiHeading>Hello there!</UiHeading>
+            <UiBtn variant="muted" class="accent-main" @click="dialogMain.close()">
+                Close me!
+            </UiBtn>
+        </DialogContent>
+    </Dialog>
+</template>
+```
+:::
+
+### Variants
+* <LinkGh name="default" path="components/dialog" />
+* <LinkGh name="content" path="components/dialog" />
+
+### Props
+* <LinkGh name="default-props" path="components/dialog" />
+
+
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/dialog.js" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/dialog.vue" />
+
+## Example
 
 <button class="ui-btn" id="showDialog">Show dialog</button>
 
@@ -40,39 +84,31 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 ```vue
 <script setup>
     import { ref } from 'vue'
-    import { showDialog, closeDialog } from 'winduum/src/components/dialog.js'
+    import { Dialog, DialogContent } from '@/components/dialog'
+    import { UiHeading } from '@/components/ui/heading'
+    import { UiBtn } from '@/components/ui/btn'
 
-    const root = ref()
-    const open = ref(false)
-
-    const show = async options => {
-        open.value = true
-        requestAnimationFrame(() => showDialog(root.value, options))
-    }
-
-    const close = async () => {
-        await closeDialog(root.value)
-        open.value = false
-    }
-
-    defineExpose({
-        show,
-        close
-    })
+    const dialogMain = ref()
 </script>
 
 <template>
-    <dialog v-if="open" ref="root" class="c-dialog" @c-dialog:dismiss="open = false">
-        <slot :close="close"></slot>
-    </dialog>
+    <UiBtn @click="dialogMain.show()">Open Dialog</UiBtn>
+    <Dialog ref="dialogMain">
+        <DialogContent>
+            <UiHeading>Hello there!</UiHeading>
+            <UiBtn variant="muted" class="accent-main" @click="dialogMain.close()">
+                Close me!
+            </UiBtn>
+        </DialogContent>
+    </Dialog>
 </template>
 
 ```
 :::
 
-## Methods
+## JavaScript API
 
-### showDialog
+### `showDialog`
 
 * **Type:** `(selector:  HTMLDialogElement, options?: ShowOptions) => Promise<void>`
 * **Kind:** `async`
@@ -90,7 +126,7 @@ document.querySelector('#showDialog').addEventListener('click', async () => {
 ```
 <br>
 
-#### ShowOptions
+#### `ShowOptions`
 
 ---
 
@@ -130,7 +166,9 @@ A CSS property representing a scrollbar width, when dialog is showed the documen
 
 ---
 
-### closeDialog
+<br>
+
+### `closeDialog`
 
 * **Type:** `(selector:  HTMLDialogElement, options?: CloseOptions) => Promise<void>`
 * **Kind:** `async`
@@ -149,7 +187,7 @@ document.querySelector('#closeDialog').addEventListener('click', async () => {
 
 <br>
 
-#### CloseOptions
+#### `CloseOptions`
 
 ---
 
@@ -180,7 +218,9 @@ A CSS property representing a scrollbar width, when dialog is showed the documen
 
 ---
 
-### insertDialog
+<br>
+
+### `insertDialog`
 
 * **Type:** `(content: String, options?: InsertOptions) => Promise<void>`
 * **Kind:** `async`
@@ -205,7 +245,7 @@ document.querySelector('#insertDialog').addEventListener('click', async () => {
 
 <br>
 
-#### InsertOptions
+#### `InsertOptions`
 
 ---
 
@@ -243,7 +283,11 @@ A boolean that indicates whether the new dialog should be appended after an exis
 
 Additional show options, same as in `ShowOptions`
 
-### fetchDialog
+---
+
+<br>
+
+### `fetchDialog`
 
 * **Type:** `(options: FetchOptions) => Promise<void>`
 * **Kind:** `async`
@@ -264,7 +308,7 @@ document.querySelector('#fetchDialog').addEventListener('click', async () => {
 
 <br>
 
-#### FetchOptions
+#### `FetchOptions`
 
 ---
 

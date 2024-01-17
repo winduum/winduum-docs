@@ -1,5 +1,5 @@
 # Flex
-Introduces a few shorthand utility classes for `flex`.
+Introduces a few TailwindCSS shorthand utility classes for `flex`.
 
 ```css
   .flex-col {
@@ -19,7 +19,7 @@ Introduces a few shorthand utility classes for `flex`.
   }
 ```
 
-## Examples
+## Example
 Without shorthand classes
 ```html
 <div class="flex flex-col"></div>

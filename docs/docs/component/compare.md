@@ -10,7 +10,9 @@ Side-by-side accordion comparison slider component.
 @import "winduum/ui/components/compare.css" layer(components);
 ```
 
-## Default
+## Examples
+
+### Default
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/component/compare/default.html" style="height: 420px"></iframe>
 
@@ -19,7 +21,7 @@ Side-by-side accordion comparison slider component.
 <<< @/../examples/src/pages/component/compare/default.liquid#js{} [js]
 :::
 
-## Text
+### Text
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/component/compare/text.html"></iframe>
 
@@ -27,3 +29,40 @@ Side-by-side accordion comparison slider component.
 <<< @/public/examples/component/compare/text.html#body{} [html]
 <<< @/../examples/src/pages/component/compare/text.liquid#js{} [js]
 :::
+
+## Methods
+
+### setPosition
+
+* **Type:** `(Event<HTMLInputElement>, options: PositionOptions) => void`
+* **Kind:** `sync`
+
+#### PositionOptions
+
+---
+
+##### selector
+
+* **Type:** `string`
+* **Default:** `.c-compare`
+
+---
+
+##### positionProperty
+
+* **Type:** `string`
+* **Default:** `--c-compare-position`
+
+---
+
+### setKeyboardStep
+
+* **Type:** `(KeyboardEvent<HTMLInputElement>, step: number) => void`
+* **Kind:** `sync`
+
+
+### setMouseStep
+
+* **Type:** `(MouseEvent<HTMLInputElement>, step: number) => void`
+* **Kind:** `sync`
+

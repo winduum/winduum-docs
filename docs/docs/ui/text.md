@@ -8,43 +8,48 @@
 @import "winduum/ui/text.css" layer(components);
 ```
 
-## Text
+### Props
+* <LinkGh name="default-props" path="ui/text" />
+
+## Examples
+
+### Text
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/text.html"></iframe>
 
 <<< @/public/examples/ui/text/text.html#body{}
 
-## Headings
+### Headings
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/headings.html"></iframe>
 
 <<< @/public/examples/ui/text/headings.html#body{}
 
-## Lists
+### Lists
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/lists.html"></iframe>
 
 <<< @/public/examples/ui/text/lists.html#body{}
 
-## Blockquote
+### Blockquote
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/blockquote.html"></iframe>
 
 <<< @/public/examples/ui/text/blockquote.html#body{}
 
-## Table
+### Table
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/table.html"></iframe>
 
 <<< @/public/examples/ui/text/table.html#body{}
 
-## Figure
+### Figure
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/figure.html"></iframe>
 
 <<< @/public/examples/ui/text/figure.html#body{}
 
-## Iframe
+### Iframe
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/iframe.html"></iframe>
 
