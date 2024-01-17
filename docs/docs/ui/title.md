@@ -13,37 +13,39 @@
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/title/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/title/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-## Basic
+## Examples
+
+### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/basic.html"></iframe>
 
 <<< @/public/examples/ui/title/basic.html#body{}
 
-## Small
+### Small
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/small.html"></iframe>
 
 <<< @/public/examples/ui/title/small.html#body{}
 
-## Large
+### Large
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/large.html"></iframe>
 
 <<< @/public/examples/ui/title/large.html#body{}
 
-## Weight
+### Weight
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/weight.html"></iframe>
 
 <<< @/public/examples/ui/title/weight.html#body{}
 
-## Uppercase
+### Uppercase
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/uppercase.html"></iframe>
 
 <<< @/public/examples/ui/title/uppercase.html#body{}
 
-## Color
+### Color
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/color.html"></iframe>
 

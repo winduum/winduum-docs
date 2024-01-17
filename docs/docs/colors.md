@@ -103,6 +103,10 @@ There are few types of colors with various areas of use. Colors are defined in [
     </div>
 </div>
 
+## Foreground
+
+Each color has also it's foreground variant with `-foreground` postfix. So you can use foreground colors when needed, eg. `--color-primary-foreground`.
+
 ## Accent
 
 You can easily change accent color of any UI component. Because components in Winduum use `--color-accent` property as their color, rather than `--color-primary`. 
@@ -112,7 +116,7 @@ So you still use primary color when needed and change accent only for elements y
 Accent color consist of two css properties:
 
 * <code>--color-accent</code> - color of the accent
-* <code>--color-accent-fg</code> - foreground color of the accent
+* <code>--color-accent-foreground</code> - foreground color of the accent
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/accent/btn.html"></iframe>
 

@@ -43,7 +43,11 @@ Use `color-mix` in color variants instead of rgb. Learn more about this in [Comp
 * **Default:** `['primary', 'accent', 'current',
   'warning', 'error', 'info', 'success', 'light', 'dark',
   'main', 'main-primary', 'main-secondary', 'main-tertiary',
-  'body', 'body-primary', 'body-secondary', 'body-tertiary']`
+  'body', 'body-primary', 'body-secondary', 'body-tertiary',
+  'primary-foreground', 'accent-foreground', 'current-foreground',
+  'warning-foreground', 'error-foreground', 'info-foreground', 'success-foreground', 'light-foreground', 'dark-foreground',
+  'main-foreground', 'main-primary-foreground', 'main-secondary-foreground', 'main-tertiary-foreground',
+  'body-foreground', 'body-primary-foreground', 'body-secondary-foreground', 'body-tertiary-foreground']`
 
 These are additional color tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`. See [Colors](colors) for more info.
 

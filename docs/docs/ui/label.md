@@ -8,7 +8,9 @@
 @import "winduum/ui/label.css" layer(components);
 ```
 
-## Basic
+## Examples
+
+### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/label.html"></iframe>
 

@@ -1,9 +1,12 @@
 import Theme from 'vitepress/theme'
-import { insertDialog } from 'winduum/src/libraries/dialog.js'
+import { insertDialog } from 'winduum/src/components/dialog.js'
+import { showRipple } from 'winduum/src/utilities/ripple.js'
 import './styles/vars.css'
 import 'winduum/main.css'
 import 'winduum/tailwind.css'
 import { watch, onMounted } from 'vue'
+import LinkGh from './components/LinkGh.vue'
+import ViewSourceGh from './components/ViewSourceGh.vue'
 
 function updateDarkIframes() {
   if (typeof document !== 'undefined') {
@@ -20,23 +23,32 @@ function dialogEvent() {
     // @ts-ignore
     document.querySelector('#showDialog')?.addEventListener('click', async () => {
       await insertDialog(`
-        <form class="c-dialog" method="dialog">
-            <div class="ui-heading">Example dialog</div>
-            <br>
-            <div class="ui-text">
-                <p>You can close this dialog with Esc, clicking outside, or by form submit</p>
-            </div>
-            <br>
-            <button class="ui-btn bg-primary" style="padding: var(--ui-btn-py) var(--ui-btn-px)">Close dialog</button>
-        </form>
+        <dialog class="c-dialog">
+          <form class="c-dialog-content" method="dialog">
+              <div class="ui-heading">Example dialog</div>
+              <br>
+              <div class="ui-text">
+                  <p>You can close this dialog with Esc, clicking outside, or by form submit</p>
+              </div>
+              <br>
+              <button class="ui-btn bg-primary" style="padding: var(--ui-btn-py) var(--ui-btn-px)">Close dialog</button>
+          </form>
+        </dialog>
       `)
+    })
+
+    document.querySelector('#showRipple')?.addEventListener('click', (event) => {
+      showRipple(event)
     })
   }
 }
 
 export default {
   ...Theme,
-  enhanceApp({ router }) {
+  enhanceApp({ router, app }) {
+    app.component('LinkGh', LinkGh)
+    app.component('ViewSourceGh', ViewSourceGh)
+
     watch(router.route, () => {
       setTimeout(() => {
         updateDarkIframes()

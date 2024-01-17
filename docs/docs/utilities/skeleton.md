@@ -1,6 +1,10 @@
 # Skeleton
 Introduces a utility class for loading state of page or component.
 
+### Source
+
+* [`winduum/src/utilities/skeleton.css`](https://github.com/winduum/winduum/blob/main/src/utilities/skeleton.css)
+
 ```css
 .skeleton {
   background:
@@ -18,7 +22,7 @@ Introduces a utility class for loading state of page or component.
 }
 ```
 
-## Examples
+## Example
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/skeleton.html"></iframe>
 

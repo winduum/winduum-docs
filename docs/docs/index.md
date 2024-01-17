@@ -129,6 +129,7 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-react" target="_blank" rel="noreferrer">vite + react <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-svelte" target="_blank" rel="noreferrer">vite + svelte <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-qwik" target="_blank" rel="noreferrer">vite + qwik <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-lit" target="_blank" rel="noreferrer">vite + lit <svg><use href="#icon-sb" /></svg></a>
 
 </div>
 
@@ -142,3 +143,5 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 
 </div>
 </div>
+
+Winduum doesn't have full component integration in any of the frameworks, but if there is interest projects like `winduum-vue` or `winduum-react` might arise.

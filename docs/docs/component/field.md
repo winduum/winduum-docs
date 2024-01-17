@@ -10,7 +10,9 @@ Component used to group a form ui components such as [Control](/docs/ui/control)
 @import "winduum/ui/components/field.css" layer(components);
 ```
 
-## Basic
+## Examples
+
+### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/component/field/basic.html"></iframe>
 

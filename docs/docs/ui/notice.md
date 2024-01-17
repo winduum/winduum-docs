@@ -8,37 +8,39 @@
 @import "winduum/ui/notice.css" layer(components);
 ```
 
-## Success
+## Examples
+
+### Success
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/notice/success.html"></iframe>
 
 <<< @/public/examples/ui/notice/success.html#body{}
 
-## Error
+### Error
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/notice/error.html"></iframe>
 
 <<< @/public/examples/ui/notice/error.html#body{}
 
-## Warning
+### Warning
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/notice/warning.html"></iframe>
 
 <<< @/public/examples/ui/notice/warning.html#body{}
 
-## Info
+### Info
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/notice/info.html"></iframe>
 
 <<< @/public/examples/ui/notice/info.html#body{}
 
-## Text
+### Text
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/notice/text.html" style="height: 25rem"></iframe>
 
 <<< @/public/examples/ui/notice/text.html#body{}
 
-## Background
+### Background
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/notice/background.html"></iframe>
 

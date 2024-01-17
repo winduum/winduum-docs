@@ -8,7 +8,9 @@
 @import "winduum/ui/info.css" layer(components);
 ```
 
-## Basic
+## Examples
+
+### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/info/basic.html"></iframe>
 

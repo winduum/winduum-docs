@@ -10,6 +10,7 @@
 
 ### Variants
 
+* <LinkGh name="default" path="ui/badge" />
 * `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `muted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
@@ -17,61 +18,66 @@
 * `square` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `circle` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-## Basic
+### Props
+* <LinkGh name="default-props" path="ui/badge" />
+
+## Examples
+
+### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/basic.html"></iframe>
 
 <<< @/public/examples/ui/badge/basic.html#body{}
 
-## Flat
+### Flat
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/flat.html"></iframe>
 
 <<< @/public/examples/ui/badge/flat.html#body{}
 
-## Bordered
+### Bordered
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/outline.html"></iframe>
 
 <<< @/public/examples/ui/badge/outline.html#body{}
 
-## Muted
+### Muted
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/muted.html"></iframe>
 
 <<< @/public/examples/ui/badge/muted.html#body{}
 
-## Small
+### Small
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/small.html"></iframe>
 
 <<< @/public/examples/ui/badge/small.html#body{}
 
-## Large
+### Large
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/large.html"></iframe>
 
 <<< @/public/examples/ui/badge/large.html#body{}
 
-## Square
+### Square
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/square.html"></iframe>
 
 <<< @/public/examples/ui/badge/square.html#body{}
 
-## Circle
+### Circle
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/circle.html"></iframe>
 
 <<< @/public/examples/ui/badge/circle.html#body{}
 
-## Icon
+### Icon
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/icon.html"></iframe>
 
 <<< @/public/examples/ui/badge/icon.html#body{}
 
-## Custom
+### Custom
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/custom.html"></iframe>
 
@@ -86,7 +92,7 @@ You can also extend the badge with any TailwindCSS class to customize it
 
 <br>
 
-# Badge Group
+### Group
 
 You can group badges into groups via `ui-group` component.
 

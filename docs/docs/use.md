@@ -17,7 +17,7 @@ In your projects it's recommended to follow naming semantics of Winduum with the
 * **Section** - `s-name` (wraps the previous two)
 * **Module** - `m-name` (wraps sections)
 * **Layout** - `l-name` (wraps everything else)
-* **Libraries** - `lib-name` (used for functionality enhanced styles)
+* **Libraries** - `lib-name` ~~(used for functionality enhanced styles)~~ _(will be deprecated in favour of Components)_
 * **Utilities** - `name` (without prefix, utility classes for common styles)
 
 ## CSS Properties

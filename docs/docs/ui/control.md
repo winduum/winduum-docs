@@ -7,7 +7,7 @@ Control supports **input**, **select** (not multiple) and **textarea** including
 
 Other input types are supported in other components
 * `checkbox`, `radio` - included in [Check](/docs/ui/check) or [Switch](/docs/ui/switch)
-* `range` - included in **Range** _(not available yet)_
+* `range` - included in [Range](/docs/ui/range)
 
 ### Single Import
 
@@ -16,40 +16,50 @@ Other input types are supported in other components
 ```
 
 ### Variants
-
-* `floating` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/floating.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `floating-focus` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/floating-focus.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `file` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/file.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `color` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/color.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `select` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/select.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `icon` <a href="https://github.com/winduum/winduum/blob/main/src/ui/control/icon.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* <LinkGh name="default" path="ui/control" />
+* <LinkGh name="floating-interactive" path="ui/control" />
+* <LinkGh name="file" path="ui/control" />
+* <LinkGh name="color" path="ui/control" />
+* <LinkGh name="select" path="ui/control" />
+* <LinkGh name="icon" path="ui/control" />
 * `invalid`
 
-## Basic
+### Props
+* <LinkGh name="default-props" path="ui/control" />
+* <LinkGh name="floating-props" path="ui/control" />
+* <LinkGh name="color-props" path="ui/control" />
+* <LinkGh name="select-props" path="ui/control" />
+* <LinkGh name="icon-props" path="ui/control" />
+
+
+
+##  Examples
+
+### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/basic.html"></iframe>
 
 <<< @/public/examples/ui/input/basic.html#body{}
 
-## Textarea
+### Textarea
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/textarea.html" style="height: 15rem"></iframe>
 
 <<< @/public/examples/ui/input/textarea.html#body{}
 
-## Select
+### Select
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/basic.html"></iframe>
 
 <<< @/public/examples/ui/select/basic.html#body{}
 
-## Placeholder
+### Placeholder
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/placeholder.html"></iframe>
 
 <<< @/public/examples/ui/input/placeholder.html#body{}
 
-## Label
+### Label
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/label.html"></iframe>
 
@@ -59,7 +69,7 @@ Other input types are supported in other components
 
 <<< @/public/examples/ui/select/label.html#body{}
 
-## Floating Label
+### Floating Label
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/floating.html"></iframe>
 
@@ -69,43 +79,43 @@ Other input types are supported in other components
 
 <<< @/public/examples/ui/select/floating.html#body{}
 
-## Time
+### Time
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/time.html"></iframe>
 
 <<< @/public/examples/ui/input/time.html#body{}
 
-## Date
+### Date
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/date.html"></iframe>
 
 <<< @/public/examples/ui/input/date.html#body{}
 
-## Datetime
+### Datetime
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/datetime.html"></iframe>
 
 <<< @/public/examples/ui/input/datetime.html#body{}
 
-## Number
+### Number
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/number.html"></iframe>
 
 <<< @/public/examples/ui/input/number.html#body{}
 
-## Color
+### Color
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/color.html"></iframe>
 
 <<< @/public/examples/ui/input/color.html#body{}
 
-## File
+### File
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/file.html"></iframe>
 
 <<< @/public/examples/ui/input/file.html#body{}
 
-## Icon
+### Icon
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/icon.html"></iframe>
 
@@ -115,13 +125,13 @@ Other input types are supported in other components
 
 <<< @/public/examples/ui/select/icon.html#body{}
 
-## Required
+### Required
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/required.html"></iframe>
 
 <<< @/public/examples/ui/input/required.html#body{}
 
-## Validation
+### Validation
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/validation.html"></iframe>
 
@@ -131,7 +141,7 @@ Other input types are supported in other components
 
 <<< @/public/examples/ui/select/validation.html#body{}
 
-## Disabled
+### Disabled
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/disabled.html"></iframe>
 
@@ -141,7 +151,7 @@ Other input types are supported in other components
 
 <<< @/public/examples/ui/select/disabled.html#body{}
 
-# Control Group
+### Group
 
 You can group controls into groups via `ui-group` component and combine them with other components like [Button](/docs/ui/button)
 

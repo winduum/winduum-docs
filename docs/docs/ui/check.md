@@ -13,7 +13,12 @@ Check supports `checkbox` and `radio` **input** types
 
 * `invalid`
 
-## Basic
+### Props
+* <LinkGh name="default-props" path="ui/check" />
+
+## Examples
+
+### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/basic.html"></iframe>
 
@@ -23,7 +28,7 @@ Check supports `checkbox` and `radio` **input** types
 
 <<< @/public/examples/ui/radio/basic.html#body{}
 
-## Label
+### Label
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/label.html"></iframe>
 
@@ -33,7 +38,7 @@ Check supports `checkbox` and `radio` **input** types
 
 <<< @/public/examples/ui/radio/label.html#body{}
 
-## Required
+### Required
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/required.html"></iframe>
 
@@ -43,7 +48,7 @@ Check supports `checkbox` and `radio` **input** types
 
 <<< @/public/examples/ui/radio/required.html#body{}
 
-## Disabled
+### Disabled
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/disabled.html"></iframe>
 
@@ -53,7 +58,7 @@ Check supports `checkbox` and `radio` **input** types
 
 <<< @/public/examples/ui/radio/disabled.html#body{}
 
-## Validation
+### Validation
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/validation.html"></iframe>
 

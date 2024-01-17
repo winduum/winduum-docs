@@ -10,6 +10,7 @@
 
 ### Variants
 
+  * <LinkGh name="default" path="ui/btn" />
   * `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `muted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `raised` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
@@ -21,47 +22,52 @@
   * `wide` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/wide.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `square` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `circle` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+  * `interactive` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/interactive.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `loading` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/loading.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `active` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `hover-fill` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/hover-fill.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-## Basic
+### Props
+* <LinkGh name="default-props" path="ui/button" />
+
+## Examples
+
+### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/basic.html"></iframe>
 
 <<< @/public/examples/ui/btn/basic.html#body{}
 
-## Flat
+### Flat
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/flat.html"></iframe>
 
 <<< @/public/examples/ui/btn/flat.html#body{}
 
-## Bordered
+### Bordered
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/outline.html"></iframe>
 
 <<< @/public/examples/ui/btn/outline.html#body{}
 
-## Muted
+### Muted
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/muted.html"></iframe>
 
 <<< @/public/examples/ui/btn/muted.html#body{}
 
-## Raised
+### Raised
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/raised.html"></iframe>
 
 <<< @/public/examples/ui/btn/raised.html#body{}
 
-## Ghosted
+### Ghosted
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/text.html"></iframe>
 
 <<< @/public/examples/ui/btn/text.html#body{}
 
-## Gradient
+### Gradient
 
 You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/gradient-color-stops) gradient classes
 
@@ -69,61 +75,61 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 
 <<< @/public/examples/ui/btn/gradient.html#body{}
 
-## Small
+### Small
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/small.html"></iframe>
 
 <<< @/public/examples/ui/btn/small.html#body{}
 
-## Large
+### Large
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/large.html"></iframe>
 
 <<< @/public/examples/ui/btn/large.html#body{}
 
-## Wide
+### Wide
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/wide.html"></iframe>
 
 <<< @/public/examples/ui/btn/wide.html#body{}
 
-## Square
+### Square
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/square.html"></iframe>
 
 <<< @/public/examples/ui/btn/square.html#body{}
 
-## Circle
+### Circle
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/circle.html"></iframe>
 
 <<< @/public/examples/ui/btn/circle.html#body{}
 
-## Icon
+### Icon
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/icon.html"></iframe>
 
 <<< @/public/examples/ui/btn/icon.html#body{}
 
-## Loading
+### Loading
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/loading.html"></iframe>
 
 <<< @/public/examples/ui/btn/loading.html#body{}
 
-## Active
+### Active
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/active.html"></iframe>
 
 <<< @/public/examples/ui/btn/active.html#body{}
 
-## Disabled
+### Disabled
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/disabled.html"></iframe>
 
 <<< @/public/examples/ui/btn/disabled.html#body{}
 
-## Custom
+### Custom
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/custom.html"></iframe>
 
@@ -153,7 +159,7 @@ You can also extend the button with any TailwindCSS class to customize it
 
 <br>
 
-# Button Group
+### Group
 
 You can group buttons into groups via `ui-group` component.
 
