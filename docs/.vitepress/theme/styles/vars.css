@@ -173,13 +173,22 @@
   }
 }
 
-iframe {
+iframe, .iframe {
   border: 1px solid var(--color-body-tertiary);
   width: 100%;
   background-color: transparent;
   border-radius: 0.75rem;
-  visibility: hidden;
   min-height: 20rem;
+}
+
+.iframe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  visibility: hidden;
 }
 
 .vp-doc :not(pre) > code {

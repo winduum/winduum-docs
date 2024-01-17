@@ -17,7 +17,9 @@ Use with [Button](/docs/ui/button) or any other component.
 
 ## Example
 
-<button class="ui-btn" id="showRipple">Show ripple</button>
+<div class="iframe">
+    <button class="ui-btn" id="showRipple">Show ripple</button>
+</div>
 
 ::: code-group
 ```html

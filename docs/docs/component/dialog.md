@@ -56,7 +56,9 @@ Follow instructions for individual framework usage below
 
 ## Example
 
-<button class="ui-btn" id="showDialog">Show dialog</button>
+<div class="iframe">
+    <button class="ui-btn" id="showDialog">Show dialog</button>
+</div>
 
 ::: code-group
 ```html
