@@ -52,7 +52,7 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/dialog.js" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/dialog.vue" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/dialog.vue" /> <small>(soon)</small>
 
 ## Example
 
@@ -73,13 +73,14 @@ Follow instructions for individual framework usage below
         <button class="ui-btn">Close dialog</button>
     </form>
 </dialog>
-```
-```js
-import { showDialog } from 'winduum/src/components/dialog.js'
 
-document.querySelector('#showDialog').addEventListener('click', () => {
-    showDialog(document.querySelector('dialog'))
-})
+<script type="module">
+    import { showDialog } from 'winduum/src/components/dialog.js'
+
+    document.querySelector('#showDialog').addEventListener('click', () => {
+        showDialog(document.querySelector('dialog'))
+    })
+</script>
 ```
 ```vue
 <script setup>
@@ -114,6 +115,8 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 * **Kind:** `async`
 
 Shows an existing `<dialog>`. It takes a `selector` argument, which is a CSS selector that identifies the dialog DOM element to be displayed. It also takes an options argument, which is an object that specifies how the dialog should be displayed.
+
+The `closeDialog` event is sent upon closing with the `esc` key or clicking outside the dialog content window.
 
 #### Example
 
@@ -174,6 +177,8 @@ A CSS property representing a scrollbar width, when dialog is showed the documen
 * **Kind:** `async`
 
 Closes an existing `<dialog>`. It takes a `selector` argument, which is a CSS selector that identifies the dialog DOM element to be displayed. It also takes an options argument, which is an object that specifies how the dialog should be closed.
+
+When dialog closes it sends native `close` event you can listen to, additionally `c-dialog:dismiss` event is sent when dialog animation finishes. 
 
 #### Example
 

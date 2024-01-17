@@ -51,7 +51,7 @@ Accessible range slider that allows easy selection of a value by sliding a handl
 <<< @/../examples/src/pages/ui/range/vertical.liquid#js{} [js]
 :::
 
-## Methods
+## Javascript API
 
 ### setTrackProperty
 

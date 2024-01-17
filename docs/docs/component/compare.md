@@ -30,7 +30,7 @@ Side-by-side accordion comparison slider component.
 <<< @/../examples/src/pages/component/compare/text.liquid#js{} [js]
 :::
 
-## Methods
+## Javascript API
 
 ### setPosition
 

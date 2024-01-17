@@ -233,7 +233,7 @@ export default defineConfig({
             },
             {
               text: 'Rating',
-              link: '/docs/component/rating'
+              link: '/docs/ui/rating'
             },
             {
               text: 'Swap',

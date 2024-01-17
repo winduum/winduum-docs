@@ -44,7 +44,7 @@ npm i slide-element
 :::
 
 
-## Methods
+## Javascript API
 
 ### toggleDetails
 

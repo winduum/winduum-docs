@@ -32,7 +32,7 @@ document.querySelector('#showRipple').addEventListener('click', event => {
 ```
 :::
 
-## Methods
+## Javascript API
 
 ### showRipple
 
