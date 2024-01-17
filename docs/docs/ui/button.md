@@ -10,7 +10,7 @@
 
 ### Variants
 
-  * <LinkGh name="default" path="ui/button" />
+  * <LinkGh name="default" path="ui/btn" />
   * `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `muted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
   * `raised` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
