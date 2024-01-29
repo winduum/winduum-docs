@@ -67,7 +67,7 @@ function dialogEvent() {
       })
     })
 
-    document.querySelector('#showToast').classList.add('has-events')
+    document.querySelector('#showToast')?.classList.add('has-events')
   }
 }
 

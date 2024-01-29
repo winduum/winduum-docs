@@ -30,7 +30,7 @@ Tooltip can be used for a little info hint on hover or focus.
 ### Variants
 * <LinkGh name="default" path="components/tooltip" />
 
-### Style tokens
+### Tokens
 * `top`
 * `bottom`
 * `left`

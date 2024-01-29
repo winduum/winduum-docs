@@ -35,7 +35,7 @@ Popover can be used for dropdowns and other popovers when element is clicked and
 * <LinkGh name="default" path="components/popover" />
 * <LinkGh name="content" path="components/popover" />
   
-### Style tokens
+### Tokens
 Applicable to `c-popover-content`
 * `end`
 * `block-end`
