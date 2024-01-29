@@ -1,12 +1,15 @@
 import Theme from 'vitepress/theme'
-import { insertDialog } from 'winduum/src/components/dialog.js'
-import { showRipple } from 'winduum/src/utilities/ripple.js'
+import { insertDialog } from 'winduum/src/components/dialog/index.js'
+import { showRipple } from 'winduum/src/utilities/ripple/index.js'
+import { insertToaster, insertToast, closeToast, closeToaster } from 'winduum/src/components/toaster/index.js'
 import './styles/vars.css'
 import 'winduum/main.css'
 import 'winduum/tailwind.css'
-import { watch, onMounted } from 'vue'
+import { watch, onMounted, h } from 'vue'
 import LinkGh from './components/LinkGh.vue'
 import ViewSourceGh from './components/ViewSourceGh.vue'
+import HomeSponsors from './components/HomeSponsors.vue'
+import UsageInfo from './components/UsageInfo.vue'
 
 function updateDarkIframes() {
   if (typeof document !== 'undefined') {
@@ -40,14 +43,45 @@ function dialogEvent() {
     document.querySelector('#showRipple')?.addEventListener('click', (event) => {
       showRipple(event)
     })
+
+    document.querySelector('#closeToaster')?.addEventListener(`click`, async () => {
+      await closeToaster(document.querySelector('.c-toaster'))
+    })
+
+    document.querySelector('#showToast:not(.has-events)')?.addEventListener('click', () => {
+
+      insertToaster(document.body, {
+        classes: 'items-end'
+      })
+
+      insertToast(document.querySelector('.c-toaster'), {
+        title: 'Hello toast',
+        text: 'Amazing toast',
+        end: `<button class="ui-btn muted ml-auto" data-action="closeToast">Close</button>`
+      })
+
+      const closeToastButton = document.querySelectorAll('[data-action="closeToast"]')[document.querySelectorAll('[data-action="closeToast"]').length - 1]
+
+      closeToastButton.addEventListener('click', ({ currentTarget }) => {
+        closeToast(currentTarget.closest('.c-toast'))
+      })
+    })
+
+    document.querySelector('#showToast').classList.add('has-events')
   }
 }
 
 export default {
   ...Theme,
+  Layout() {
+    return h(Theme.Layout, null, {
+      'home-features-after': () => h(HomeSponsors)
+    })
+  },
   enhanceApp({ router, app }) {
     app.component('LinkGh', LinkGh)
     app.component('ViewSourceGh', ViewSourceGh)
+    app.component('UsageInfo', UsageInfo)
 
     watch(router.route, () => {
       setTimeout(() => {

@@ -1,9 +1,7 @@
 # Container
 Provides a new approach to classic [Container](https://tailwindcss.com/docs/container) with a new utility class<br> `grid-cols-container` which utilizes `grid` and is inspired by [Kevin Powell](https://youtu.be/c13gpBrnGEw?si=FGoMS9FnWEOYohPi).
 
-### Source
-
-* [`winduum/src/utilities/container.css`](https://github.com/winduum/winduum/blob/main/src/utilities/container.css)
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/container.css" />
 
 <<< @/../node_modules/winduum/src/utilities/container.css
 

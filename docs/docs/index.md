@@ -1,6 +1,7 @@
 # Install
 
-You can install Winduum via **npm** and use it in your **Node.js** project.
+You can install Winduum via **npm** and use it in your **Node.js** project.<br>
+Or copy and paste the components and use Winduum only as a TailwindCSS plugin.
 
 See [Trying Winduum Online](#trying-winduum-online) section below to see all possible examples of use.
 
@@ -26,20 +27,18 @@ import 'winduum/main.css';
 :::
 This will add the CSS components, but to leverage the full functionality of the framework, use of [TailwindCSS](#tailwindcss) is recommended.
 
-### PostCSS
+### PostCSS or LightingCSS
 
-The components are written in plain CSS, so sources can be also loaded in browsers without a build step or used in any other build tool such as **PostCSS** or **LightningCSS**. 
-
-For now, the recommended setup is to use PostCSS and load all source files directly for best support.
+The components are written in plain CSS, so sources can be also loaded in browsers without a build step or used in any other build tool such as **PostCSS** or **LightningCSS**.
 
 ::: code-group
 ```css
 @import "winduum/src/main.css" layer(components);
-@import "winduum/src/tailwind.css";
+@import 'winduum/src/utilities/index.css';
 ```
 ```js
 import 'winduum/src/main.css';
-import 'winduum/src/tailwind.css';
+import 'winduum/src/utilities/index.css';
 ```
 :::
 
@@ -48,17 +47,17 @@ Or you can include components separately
 ::: code-group
 ```css
 @import "winduum/src/base/index.css";
-@import "winduum/src/tailwind.css";
-@import "winduum/src/ui/btn/index.css" layer(components);
+@import "winduum/src/utilities/index.css";
+@import "winduum/src/ui/btn.css" layer(components);
 ```
 ```js
 import 'winduum/src/base/index.css';
-import 'winduum/src/tailwind.css';
-import 'winduum/src/ui/btn/index.css';
+import 'winduum/src/utilities/index.css';
+import 'winduum/src/ui/btn.css';
 ```
 :::
 
-With `layer(components)` you can use TailwindCSS also on components, for example `class="ui-btn lg:square"` to make button square only from `lg` breakpoint.
+With `layer(components)` you can use TailwindCSS classes, for example `class="ui-btn lg:square"` to make button square only from `lg` breakpoint.
 
 Following PostCSS plugins are required. 
 * [`autoprefixer`](https://www.npmjs.com/package/autoprefixer)
@@ -72,7 +71,7 @@ And `css-has-pseudo` is recommended for better `:has` compatibility in older bro
 
 ### TailwindCSS
 
-Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation) docs and include Winduum as plugin, see [Config](config) for more info.
+Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation) docs and include Winduum as a plugin, see [Config](config) for more info.
 
 ### Stylelint
 
@@ -86,7 +85,7 @@ You can use any CSS pre-processor you want. Just be sure to add [TailwindCSS](#t
 
 This is meant only for basic usage, only basic styles are included for TailwindCSS, such as colors and font variants. 
 
-To leverage the full functionality of the framework, [TailwindCSS](#tailwindcss) is recommended.
+To leverage the full functionality of the framework, [TailwindCSS](#tailwindcss) and build step is recommended.
 
 ```html
 <link href="https://cdn.jsdelivr.net/npm/winduum/dist/main.css" rel="stylesheet" type="text/css" />
@@ -144,4 +143,6 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 </div>
 </div>
 
-Winduum doesn't have full component integration in any of the frameworks, but if there is interest projects like `winduum-vue` or `winduum-react` might arise.
+Winduum doesn't offer pre-built components for most frameworks yet. <br>The sole exception is [`winduum-vue`](https://www.github.com/winduum/winduum-vue), which is still being developed. 
+
+However, if there is sufficient interest, additional frameworks may follow.

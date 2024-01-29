@@ -144,7 +144,7 @@ export default defineConfig({
             },
             {
               text: 'Divider',
-              link: '/docs/ui/divider?soon'
+              link: '/docs/utilities/divider'
             },
             {
               text: 'Dot',
@@ -161,6 +161,10 @@ export default defineConfig({
             {
               text: 'Skeleton',
               link: '/docs/utilities/skeleton'
+            },
+            {
+              text: 'Swap',
+              link: '/docs/utilities/swap'
             },
             {
               text: 'Ripple',
@@ -228,16 +232,8 @@ export default defineConfig({
               link: '/docs/ui/progress'
             },
             {
-              text: 'Radial progress',
-              link: '/docs/ui/radial-progress?soon'
-            },
-            {
               text: 'Rating',
               link: '/docs/ui/rating'
-            },
-            {
-              text: 'Swap',
-              link: '/docs/ui/swap?soon'
             },
             {
               text: 'Switch',
@@ -258,67 +254,63 @@ export default defineConfig({
           items: [
             {
               text: 'Breadcrumb',
-              link: '/docs/component/breadcrumb?soon'
+              link: '/docs/components/breadcrumb?soon'
             },
             {
               text: 'Card',
-              link: '/docs/component/card'
+              link: '/docs/components/card'
             },
             {
               text: 'Carousel',
-              link: '/docs/lib/carousel?soon'
+              link: '/docs/components/carousel?soon'
             },
             {
               text: 'Compare',
-              link: '/docs/component/compare'
+              link: '/docs/components/compare'
             },
             {
               text: 'Details',
-              link: '/docs/component/details'
+              link: '/docs/components/details'
             },
             {
               text: 'Dialog',
-              link: '/docs/component/dialog'
+              link: '/docs/components/dialog'
             },
             {
               text: 'Drawer',
-              link: '/docs/lib/details?soon'
-            },
-            {
-              text: 'Drop',
-              link: '/docs/component/drop?soon'
+              link: '/docs/components/details?soon'
             },
             {
               text: 'Field',
-              link: '/docs/component/field'
+              link: '/docs/components/field'
             },
             {
               text: 'Form',
-              link: '/docs/lib/form?soon'
+              link: '/docs/components/form?soon'
             },
             {
               text: 'Pagination',
-              link: '/docs/component/pagination?soon'
+              link: '/docs/components/pagination?soon'
             },
             {
               text: 'Popover',
-              link: '/docs/lib/popover?soon'
+              link: '/docs/components/popover'
             },
             {
               text: 'Table',
-              link: '/docs/component/table?soon'
+              link: '/docs/components/table?soon'
             },
             {
               text: 'Tabs',
-              link: '/docs/component/tabs?soon'
+              link: '/docs/components/tabs?soon'
             },
             {
-              text: 'Toast',
-              link: '/docs/lib/toast?soon'
+              text: 'Toaster',
+              link: '/docs/components/toaster'
             },
             {
               text: 'Tooltip',
-              link: '/docs/lib/tooltip?soon'
+              link: '/docs/components/tooltip'
             }
           ]
         }

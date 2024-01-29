@@ -1,0 +1,21 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+    <button class="ui-btn muted swap" data-action="swap">
+        <span aria-hidden="false">
+           Open
+        </span>
+        <span aria-hidden="true">
+           Close
+        </span>
+    </button>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { toggleSwap } from 'winduum/src/utilities/swap/index.js'
+
+    document.querySelector('[data-action="swap"]').addEventListener('click', ({ currentTarget }) => toggleSwap(currentTarget))
+</script>
+<!-- #endregion js -->
+{% endblock %}

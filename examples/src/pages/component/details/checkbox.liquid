@@ -31,7 +31,7 @@
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    import { toggleDetails } from 'winduum/src/components/details.js'
+    import { toggleDetails } from 'winduum/src/components/details/index.js'
 
     document.querySelectorAll('[data-action="toggleDetails"]').forEach(summary => {
         summary.addEventListener('click', event => {

@@ -18,7 +18,7 @@
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    import { setPosition, setKeyboardStep, setMouseStep } from 'winduum/src/components/compare.js'
+    import { setPosition, setKeyboardStep, setMouseStep } from 'winduum/src/components/compare/index.js'
 
     document.querySelectorAll('[data-action="compareInput"]').forEach(compareInput => {
         compareInput.addEventListener('input', setPosition)
