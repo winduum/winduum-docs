@@ -192,6 +192,10 @@ export default defineConfig({
               link: '/docs/ui/check'
             },
             {
+              text: 'Color',
+              link: '/docs/ui/color'
+            },
+            {
               text: 'Control',
               link: '/docs/ui/control'
             },

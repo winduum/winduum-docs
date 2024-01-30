@@ -6,7 +6,7 @@ Control supports **input**, **select** (not multiple) and **textarea** including
 * `text`, `color`, `date`, `datetime-local`, `email`, `file`, `hidden`, `month`, `number`, `password`, `search`, `tel`, `time`, `url`, `week`
 
 Other input types are supported in other components
-* `checkbox`, `radio` - included in [Check](/docs/ui/check) or [Switch](/docs/ui/switch)
+* `checkbox`, `radio` - included in [Check](/docs/ui/check), [Switch](/docs/ui/switch), [Color](/docs/ui/color) or [Rating](/docs/ui/rating)
 * `range` - included in [Range](/docs/ui/range)
 
 ### Single Import

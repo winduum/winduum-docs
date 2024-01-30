@@ -1,16 +1,19 @@
 # Badge
+<br>
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/badge" />
 
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/badge/index.css" layer(components);
+@import "winduum/src/ui/badge/index.css" layer(components);
 ```
 
 ### Variants
 
 * <LinkGh name="default" path="ui/badge" />
+
+### Tokens
 * `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `muted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>

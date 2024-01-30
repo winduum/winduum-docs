@@ -1,16 +1,17 @@
 # Button
+<br>
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/button" />
 
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/btn/index.css" layer(components);
+@import "winduum/src/ui/btn/index.css" layer(components);
 ```
 
 ### Variants
 * <LinkGh name="default" path="ui/btn" />
-* `interactive` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/interactive.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* <LinkGh name="interactive" path="ui/btn" />
 
 ### Tokens
 * `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
@@ -29,6 +30,8 @@
 
 ### Props
 * <LinkGh name="default-props" path="ui/button" />
+* <LinkGh name="interactive-props" path="ui/button" />
+* <LinkGh name="loading-props" path="ui/button" />
 
 ## Examples
 

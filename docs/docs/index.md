@@ -15,18 +15,6 @@ Winduum is in early preview. Can be used for production, but some features may c
 npm i winduum
 ```
 
-You can include compiled Winduum as CSS or JS import into your project.
-
-::: code-group
-```css
-@import "winduum/main.css";
-```
-```js
-import 'winduum/main.css';
-```
-:::
-This will add the CSS components, but to leverage the full functionality of the framework, use of [TailwindCSS](#tailwindcss) is recommended.
-
 ### PostCSS or LightingCSS
 
 The components are written in plain CSS, so sources can be also loaded in browsers without a build step or used in any other build tool such as **PostCSS** or **LightningCSS**.
@@ -42,7 +30,7 @@ import 'winduum/src/utilities/index.css';
 ```
 :::
 
-Or you can include components separately
+Or you can include components separately, follow usage steps with each component.
 
 ::: code-group
 ```css
@@ -71,7 +59,7 @@ And `css-has-pseudo` is recommended for better `:has` compatibility in older bro
 
 ### TailwindCSS
 
-Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation) docs and include Winduum as a plugin, see [Config](config) for more info.
+It's optional, but to leverage the full functionality of the framework, use of TailwindCSS is recommended. Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation) docs and include Winduum as a plugin, see [Config](config) for more info.
 
 ### Stylelint
 
@@ -143,6 +131,6 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 </div>
 </div>
 
-Winduum doesn't offer pre-built components for most frameworks yet. <br>The sole exception is [`winduum-vue`](https://www.github.com/winduum/winduum-vue), which is still being developed. 
+Winduum is framework-agnostic, so you are able to create your own components using your preferred framework. Javascript primitives can be also adapted in any framework.
 
-However, if there is sufficient interest, additional frameworks may follow.
+If there is interest, pre-built components may be developed for popular frameworks. Currently, onlyy [`winduum-vue`](https://www.github.com/winduum/winduum-vue) is in the process of development.
