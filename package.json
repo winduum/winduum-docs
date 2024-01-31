@@ -12,6 +12,6 @@
   "dependencies": {
     "vitepress": "^1.0.0-rc.40",
     "vue": "^3.4.15",
-    "winduum": "^0.7.0-next.7"
+    "winduum": "^0.7.0"
   }
 }
