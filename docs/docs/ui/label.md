@@ -1,12 +1,18 @@
 # Label
+<br>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/label" />
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/label.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
-
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/label.css" layer(components);
+@import "winduum/src/ui/label/index.css" layer(components);
 ```
+
+### Variants
+* <LinkGh name="default" path="ui/label" />
+
+### Props
+* <LinkGh name="default-props" path="ui/label" />
 
 ## Examples
 

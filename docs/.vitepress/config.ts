@@ -228,12 +228,12 @@ export default defineConfig({
               link: '/docs/ui/notice'
             },
             {
-              text: 'Range',
-              link: '/docs/ui/range'
-            },
-            {
               text: 'Progress',
               link: '/docs/ui/progress'
+            },
+            {
+              text: 'Range',
+              link: '/docs/ui/range'
             },
             {
               text: 'Rating',

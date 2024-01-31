@@ -1,14 +1,14 @@
 # Toaster
 Make your toasts fly from the toaster!
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/dialog" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/toaster" />
 
 ## Usage
 
 ::: code-group
 ```css
-@import "winduum/src/components/toaster.css" layer(components);
-@import "winduum/src/components/toast.css" layer(components);
+@import "winduum/src/components/toaster/index.css" layer(components);
+@import "winduum/src/components/toast/index.css" layer(components);
 ```
 ```js
 import { insertToaster, insertToast, closeToast } from 'winduum/src/components/toaster'

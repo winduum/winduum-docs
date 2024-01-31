@@ -50,6 +50,7 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 
 ### Props
 * <LinkGh name="default-props" path="components/dialog" />
+* <LinkGh name="content-props" path="components/dialog" />
 
 
 ### Installation

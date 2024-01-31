@@ -47,6 +47,10 @@ import 'winduum/src/ui/btn.css';
 
 With `layer(components)` you can use TailwindCSS classes, for example `class="ui-btn lg:square"` to make button square only from `lg` breakpoint.
 
+::: info
+<UsageInfo />
+:::
+
 Following PostCSS plugins are required. 
 * [`autoprefixer`](https://www.npmjs.com/package/autoprefixer)
 * [`tailwindcss`](https://www.npmjs.com/package/tailwindcss)
@@ -131,6 +135,4 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 </div>
 </div>
 
-Winduum is framework-agnostic, so you are able to create your own components using your preferred framework. Javascript primitives can be also adapted in any framework.
-
-If there is interest, pre-built components may be developed for popular frameworks. Currently, onlyy [`winduum-vue`](https://www.github.com/winduum/winduum-vue) is in the process of development.
+Winduum is **framework-agnostic**, learn more on the [About](/docs/use#framework-agnostic) page.

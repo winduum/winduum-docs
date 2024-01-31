@@ -1,13 +1,13 @@
 # Field
 
-Component used to group a form ui components such as [Control](/docs/ui/control), [Check](/docs/ui/check) and [Switch](/docs/ui/switch), including [Label](/docs/ui/label) and [Info](/docs/ui/info).
+Component used to group a form components.
 
-<a href="https://github.com/winduum/winduum/blob/main/src/components/field.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/field" />
 
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/components/field.css" layer(components);
+@import "winduum/src/components/field/index.css" layer(components);
 ```
 
 ## Examples

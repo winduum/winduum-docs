@@ -1,4 +1,4 @@
-# Use
+# About
 
 Winduum is a mix of words **Tailwind** _(Popular CSS utility framework)_ and **Tuum** _(Estonian word for "core")_.
 
@@ -10,9 +10,14 @@ As a CSS framework it provides beautifully styled accessible components. Which y
 
 Or you could only use [TailwindCSS plugin](/docs/config) with its benefits and make your own complex UX/UI project written mostly in CSS/SASS/LESS.
 
+## Framework-agnostic
+Winduum is **framework-agnostic**, so you are able to create your own components using your preferred framework. Javascript primitives can be also adapted in any framework.
+
+If there is interest, pre-built components may be developed for popular frameworks. Currently, only [`winduum-vue`](https://www.github.com/winduum/winduum-vue) is in the process of development and some components have usage and installation examples in the docs.
+
 ## Naming
 
-In your projects it's recommended to follow naming semantics of Winduum with the following classes. Some of these are already used for various components.
+In your projects it's recommended to prefix component classes for better clarity. Some of these are already used for various components.
 
 * **UI** - `ui-name` (ui components)
 * **Component** - `c-name` (regular components)

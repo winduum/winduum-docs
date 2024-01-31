@@ -1,15 +1,23 @@
 # Switch
+<br>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/switch" />
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/switch/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
-
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/switch.css" layer(components);
+@import "winduum/src/ui/switch/index.css" layer(components);
 ```
+
+### Variants
+* <LinkGh name="default" path="ui/switch" />
+* <LinkGh name="interactive" path="ui/switch" />
 
 ### Props
 * <LinkGh name="default-props" path="ui/switch" />
+* <LinkGh name="interactive-props" path="ui/switch" />
+
+### Tokens
+* <LinkGh name="invalid" path="ui/switch" />
 
 ## Examples
 

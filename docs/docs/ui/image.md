@@ -1,11 +1,12 @@
 # Image
+Default constrains for media elements such as `img`, `video`, `iframe`, `object` or `svg`
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/image.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/image" />
 
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/image.css" layer(components);
+@import "winduum/src/ui/image/index.css" layer(components);
 ```
 
 ## Examples

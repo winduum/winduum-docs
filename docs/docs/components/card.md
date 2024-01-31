@@ -1,12 +1,15 @@
 # Card
+<br>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/card" />
 
-<a href="https://github.com/winduum/winduum/blob/main/src/components/card.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
-
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/components/card.css" layer(components);
+@import "winduum/src/components/card/index.css" layer(components);
 ```
+
+### Variants
+* <LinkGh name="default" path="components/card" />
 
 ### Props
 * <LinkGh name="default-props" path="components/card" />

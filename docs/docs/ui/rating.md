@@ -1,15 +1,21 @@
 # Rating
+<br>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/rating" />
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/rating/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
-
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/rating/index.css" layer(components);
+@import "winduum/src/ui/rating/index.css" layer(components);
 ```
+
+### Variants
+* <LinkGh name="default" path="ui/rating" />
 
 ### Props
 * <LinkGh name="default-props" path="ui/rating" />
+
+### Tokens
+* <LinkGh name="invalid" path="ui/rating" />
 
 ## Examples
 

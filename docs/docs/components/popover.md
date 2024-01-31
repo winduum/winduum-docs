@@ -7,8 +7,9 @@ Popover can be used for dropdowns and other popovers when element is clicked and
 
 ::: code-group
 ```css
-@import "winduum/src/components/popover.css" layer(components);
+@import "winduum/src/components/popover/index.css" layer(components);
 ```
+<<< @/public/examples/component/popover/basic.html#body{} [html]
 ```vue
 <script setup>
     import { ref } from 'vue'
