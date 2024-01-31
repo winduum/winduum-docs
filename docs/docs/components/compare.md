@@ -1,14 +1,15 @@
 # Compare
+Side-by-side comparison slider component.
 
-Side-by-side accordion comparison slider component.
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/compare" />
 
-<a href="https://github.com/winduum/winduum/blob/main/src/components/field.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
-
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/components/compare.css" layer(components);
+@import "winduum/src/components/compare/index.css" layer(components);
 ```
+### Variants
+* <LinkGh name="default" path="components/compare" />
 
 ## Examples
 

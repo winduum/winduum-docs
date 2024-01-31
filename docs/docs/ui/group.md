@@ -1,12 +1,20 @@
 # Group
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/group.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+Group common ui components such as [Button](/docs/ui/button), [Badge](/docs/ui/badge) or [Control](/docs/ui/control) together.
 
-### Single Import
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/group" />
+
+### Usage
 
 ```css
-@import "winduum/ui/group.css" layer(components);
+@import "winduum/src/ui/group/index.css" layer(components);
 ```
+
+### Variants
+* <LinkGh name="default" path="ui/group" />
+  
+### Tokens
+* <LinkGh name="vertical" path="ui/group" />
 
 ## Examples
 

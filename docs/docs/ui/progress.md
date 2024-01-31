@@ -1,15 +1,22 @@
 # Progress
+Displays progress with native HTML5 tags `progress` or `meter`
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/progress/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/progress" />
 
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/progress/index.css" layer(components);
+@import "winduum/src/ui/progress/index.css" layer(components);
 ```
 
 ### Variants
+* <LinkGh name="default" path="ui/progress" />
+* <LinkGh name="meter" path="ui/progress" />
 
+### Props
+* <LinkGh name="default-props" path="ui/progress" />
+
+### Tokens
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/progress/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/progress/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 

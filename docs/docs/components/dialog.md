@@ -1,13 +1,13 @@
 # Dialog
 Modal component that uses native HTML5 dialog functionality.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/dialog.js" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/dialog" />
 
 ## Usage
 
 ::: code-group
 ```css
-@import "winduum/components/dialog.css" layer(components);
+@import "winduum/src/components/dialog.css" layer(components);
 ```
 ```js
 import { showDialog } from 'winduum/src/components/dialog.js'
@@ -19,9 +19,9 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 ```vue
 <script setup>
     import { ref } from 'vue'
-    import { Dialog, DialogContent } from '@/components/dialog'
-    import { UiHeading } from '@/components/ui/heading'
-    import { UiBtn } from '@/components/ui/btn'
+    import { Dialog, DialogContent } from 'winduum-vue/components/dialog'
+    import { UiHeading } from 'winduum-vue/components/ui/heading'
+    import { UiBtn } from 'winduum-vue/components/ui/btn'
 
     const dialogMain = ref()
 </script>
@@ -40,12 +40,17 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 ```
 :::
 
+::: info
+<UsageInfo />
+:::
+
 ### Variants
 * <LinkGh name="default" path="components/dialog" />
 * <LinkGh name="content" path="components/dialog" />
 
 ### Props
 * <LinkGh name="default-props" path="components/dialog" />
+* <LinkGh name="content-props" path="components/dialog" />
 
 
 ### Installation

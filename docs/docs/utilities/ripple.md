@@ -3,17 +3,38 @@
 A material ripple effect that is visible on clicking, you can use it with or without JS by adding `animation-ripple` class.
 Use with [Button](/docs/ui/button) or any other component.
 
-### Source
-
-* [`winduum/src/utilities/ripple.css`](https://github.com/winduum/winduum/blob/main/src/utilities/ripple.css)
-* [`winduum/src/utilities/ripple.js`](https://github.com/winduum/winduum/blob/main/src/utilities/ripple.js)
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/ripple" />
 
 
-### Single Import
+## Usage
 
+::: code-group
 ```css
 @import "winduum/utilities/ripple.css" layer(components);
 ```
+```js
+import { showRipple } from 'winduum/src/utilities/ripple'
+
+document.querySelector('#showRipple').addEventListener('click', (e) => {
+    showRipple(e)
+})
+```
+```vue
+<script setup>
+    import { ref } from 'vue'
+    import { showRipple } from 'winduum/src/utilities/ripple'
+    import { UiBtn } from 'winduum-vue/components/ui/btn'
+</script>
+
+<template>
+    <UiBtn @click="showRipple">Show ripple</UiBtn>
+</template>
+```
+:::
+
+::: info
+<UsageInfo />
+:::
 
 ## Example
 

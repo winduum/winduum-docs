@@ -282,3 +282,11 @@ body .border-t-2 {
 .vp-doc h3 {
   margin-bottom: 1rem;
 }
+
+.VPHomeSponsors .message {
+  max-width: 550px;
+}
+
+.VPHomeSponsors {
+  margin: 0 !important;
+}

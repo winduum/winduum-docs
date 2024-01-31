@@ -1,6 +1,6 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<a href="#" class="underline" title="">
+<a href="#" class="underline transition hover:text-primary" title="">
     Link Default
 </a>
 <a href="#" class="text-primary underline decoration-transparent" title="">
@@ -12,6 +12,12 @@
 <style>
     body {
         gap: 2rem
+    }
+
+    .transition {
+      transition-property: var(--transition);
+      transition-timing-function: var(--ease-in-out);
+      transition-duration: var(--duration);
     }
 </style>
 {% endblock %}

@@ -1,12 +1,16 @@
 # Text
+Typographic defaults for common wysiwyg content. It's an alternative to [prose](https://tailwindcss.com/docs/typography-plugin).
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/text.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/text" />
 
-### Single Import
+### Usage
 
 ```css
 @import "winduum/ui/text.css" layer(components);
 ```
+
+### Variants
+* <LinkGh name="default" path="ui/text" />
 
 ### Props
 * <LinkGh name="default-props" path="ui/text" />

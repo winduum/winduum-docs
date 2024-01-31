@@ -1,6 +1,8 @@
 # Flex
 Introduces a few TailwindCSS shorthand utility classes for `flex`.
 
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/flex.css" />
+
 ```css
   .flex-col {
     display: flex;

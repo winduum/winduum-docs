@@ -1,12 +1,18 @@
 # Notice
+<br>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/notice" />
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/notice.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
-
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/notice.css" layer(components);
+@import "winduum/src/ui/notice/index.css" layer(components);
 ```
+
+### Variants
+* <LinkGh name="default" path="ui/notice" />
+
+### Props
+* <LinkGh name="default-props" path="ui/notice" />
 
 ## Examples
 

@@ -1,20 +1,24 @@
 # Check
 Check supports `checkbox` and `radio` **input** types
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/check.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/check" />
 
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/check.css" layer(components);
+@import "winduum/src/ui/check/index.css" layer(components);
 ```
 
 ### Variants
+* <LinkGh name="default" path="ui/check" />
+* <LinkGh name="interactive" path="ui/check" />
 
-* `invalid`
+### Tokens
+* <LinkGh name="invalid" path="ui/check" />
 
 ### Props
 * <LinkGh name="default-props" path="ui/check" />
+* <LinkGh name="interactive-props" path="ui/check" />
 
 ## Examples
 

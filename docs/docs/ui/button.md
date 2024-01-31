@@ -1,33 +1,37 @@
 # Button
+<br>
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/button" />
 
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/btn/index.css" layer(components);
+@import "winduum/src/ui/btn/index.css" layer(components);
 ```
 
 ### Variants
+* <LinkGh name="default" path="ui/btn" />
+* <LinkGh name="interactive" path="ui/btn" />
 
-  * <LinkGh name="default" path="ui/btn" />
-  * `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `muted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `raised` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `ghosted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `gradient` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/gradient.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `gradient-bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/gradient-bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `wide` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/wide.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `square` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `circle` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `interactive` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/interactive.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `loading` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/loading.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-  * `hover-fill` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/hover-fill.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+### Tokens
+* `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `muted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `raised` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `ghosted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `gradient` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/gradient.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `gradient-bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/gradient-bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `wide` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/wide.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `square` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `circle` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `loading` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/loading.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `hover-fill` <a href="https://github.com/winduum/winduum/blob/main/src/ui/btn/hover-fill.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Props
 * <LinkGh name="default-props" path="ui/button" />
+* <LinkGh name="interactive-props" path="ui/button" />
+* <LinkGh name="loading-props" path="ui/button" />
 
 ## Examples
 

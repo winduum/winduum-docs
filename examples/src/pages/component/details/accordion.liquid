@@ -57,7 +57,7 @@
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    import { toggleDetails, closeDetails } from 'winduum/src/components/details.js'
+    import { toggleDetails, closeDetails } from 'winduum/src/components/details/index.js'
 
     document.querySelectorAll('[data-action="accordionDetails"]').forEach(summary => {
         summary.addEventListener('click', event => {

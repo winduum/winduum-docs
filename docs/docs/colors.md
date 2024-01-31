@@ -121,26 +121,3 @@ Accent color consist of two css properties:
 <iframe onload="this.style.visibility = 'visible';" src="/examples/accent/btn.html"></iframe>
 
 <<< @/public/examples/accent/btn.html#body{}
-
-
-## Current
-
-Each text color variant has also `--color-current` defined. This is for similar usage as `currentColor`, but with this custom property the alpha channel can be also used in `rgb` or `color-mix`
-
-::: code-group
-```html
-<div class="text-primary">
-    <div class="a"></div>
-</div>
-```
-```postcss
-.text-primary {
-  --color-current: color-mix(in sRGB, var(--color-primary) calc(var(--tw-text-opacity, 1) * 100%), transparent);
-  color: var(--color-primary);
-}
-
-.a {
-    color: color-mix(in sRGB, var(--color-current) 40%, transparent);
-}
-```
-:::

@@ -1,6 +1,7 @@
 # Title
+For common title styles that you can manage from one component across project.
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/title/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/title" />
 
 ### Single Import
 
@@ -9,7 +10,12 @@
 ```
 
 ### Variants
+* <LinkGh name="default" path="ui/title" />
 
+### Props
+* <LinkGh name="default-props" path="ui/title" />
+
+### Tokens
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/title/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/title/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 

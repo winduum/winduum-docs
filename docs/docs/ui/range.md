@@ -1,25 +1,33 @@
 # Range
 Accessible range slider that allows easy selection of a value by sliding a handle.
 
-### Source
-
-* [`winduum/src/ui/range.css`](https://github.com/winduum/winduum/blob/main/src/ui/range.css)
-* [`winduum/src/ui/range.js`](https://github.com/winduum/winduum/blob/main/src/ui/range.js)
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/range" />
 
 ### Usage
 
+::: code-group
 ```css
-@import "winduum/ui/check.css" layer(components);
+@import "winduum/src/ui/range/index.css" layer(components);
 ```
+```js
+import { setValue } from 'winduum/src/ui/range/index.js'
+
+const rangeSlider = document.querySelector('#rangeSlider')
+
+setValue(rangeSlider)
+rangeSlider.addEventListener('input', ({ currentTarget }) => setValue(currentTarget))
+```
+:::
 
 ### Variants
-
 * `default` <a href="https://github.com/winduum/winduum/blob/main/src/ui/range/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `multi` <a href="https://github.com/winduum/winduum/blob/main/src/ui/range/multi.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `vertical` <a href="https://github.com/winduum/winduum/blob/main/src/ui/range/vertical.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Props
 * <LinkGh name="default-props" path="ui/range" />
+
+### Tokens
+* `vertical` <a href="https://github.com/winduum/winduum/blob/main/src/ui/range/vertical.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ## Examples
 

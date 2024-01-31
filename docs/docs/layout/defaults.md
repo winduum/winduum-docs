@@ -9,9 +9,9 @@ Default styles or rules applied to certain HTML elements or pseudo-elements. The
 
 Applies `--tw-content` to all pseudo-elements and zero border to all elements or pseudo-elements.
 
-##  Pointer
+##  Cursor
 
-Default `cursor: pointer` for clickable elements, you can change this via `--cursor` CSS property.
+Default `cursor: pointer` for clickable elements, you can change this globally via CSS property `--cursor` if you prefer more application like behaviour.
 
 ## Svg
 Set the default size of an SVG as a small square if neither width nor height is specified.

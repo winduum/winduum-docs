@@ -1,12 +1,19 @@
 # Info
+Small informative component.
 
-<a href="https://github.com/winduum/winduum/blob/main/src/ui/info.css" target="_blank" rel="noreferrer" class="winduum-gh-link">View Source <svg><use href="#icon-gh" /></svg></a>
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/info" />
 
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/info.css" layer(components);
+@import "winduum/src/ui/info/index.css" layer(components);
 ```
+
+### Variants
+* <LinkGh name="default" path="ui/info" />
+
+### Props
+* <LinkGh name="default-props" path="ui/info" />
 
 ## Examples
 
