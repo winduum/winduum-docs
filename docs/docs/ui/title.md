@@ -3,10 +3,10 @@ For common title styles that you can manage from one component across project.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/title" />
 
-### Single Import
+### Usage
 
 ```css
-@import "winduum/ui/title/index.css" layer(components);
+@import "winduum/src/ui/title/index.css" layer(components);
 ```
 
 ### Variants

@@ -124,6 +124,10 @@ export default defineConfig({
             {
               text: 'Grid',
               link: '/docs/layout/grid'
+            },
+            {
+              text: 'Layers',
+              link: '/docs/layout/layers?soon'
             }
           ]
         },
