@@ -21,12 +21,18 @@ The components are written in plain CSS, so sources can be also loaded in browse
 
 ::: code-group
 ```css
-@import "winduum/src/main.css" layer(components);
-@import 'winduum/src/utilities/index.css';
+@import "winduum/src/base/index.css";
+@import "winduum/src/ui/index.css" layer(components);
+@import "winduum/src/components/index.css" layer(components);
+@import "winduum/src/utilities/index.css" layer(components);
+@import "winduum/src/base/tailwind.css";
 ```
 ```js
-import 'winduum/src/main.css';
-import 'winduum/src/utilities/index.css';
+import "winduum/src/base/index.css"
+import "winduum/src/ui/index.css"
+import "winduum/src/components/index.css"
+import "winduum/src/utilities/index.css"
+import "winduum/src/base/tailwind.css"
 ```
 :::
 
@@ -35,13 +41,15 @@ Or you can include components separately, follow usage steps with each component
 ::: code-group
 ```css
 @import "winduum/src/base/index.css";
-@import "winduum/src/utilities/index.css";
-@import "winduum/src/ui/btn.css" layer(components);
+@import "winduum/src/ui/btn/index.css" layer(components);
+@import "winduum/src/utilities/index.css" layer(components);
+@import "winduum/src/base/tailwind.css";
 ```
 ```js
-import 'winduum/src/base/index.css';
-import 'winduum/src/utilities/index.css';
-import 'winduum/src/ui/btn.css';
+import "winduum/src/base/index.css"
+import "winduum/src/ui/btn/index.css"
+import "winduum/src/utilities/index.css"
+import "winduum/src/base/tailwind.css"
 ```
 :::
 
@@ -82,6 +90,10 @@ To leverage the full functionality of the framework, [TailwindCSS](#tailwindcss)
 ```html
 <link href="https://cdn.jsdelivr.net/npm/winduum/dist/main.css" rel="stylesheet" type="text/css" />
 <link href="https://cdn.jsdelivr.net/npm/winduum/dist/tailwind.css" rel="stylesheet" type="text/css" />
+<!--or-->
+<link href="https://cdn.jsdelivr.net/npm/winduum/src/base/index.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/winduum/src/ui/btn/index.css" rel="stylesheet" type="text/css" />
+
 ```
 
 ## Trying Winduum Online
