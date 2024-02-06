@@ -294,7 +294,7 @@ export default defineConfig({
             },
             {
               text: 'Form',
-              link: '/docs/components/form?soon'
+              link: '/docs/components/form'
             },
             {
               text: 'Pagination',

@@ -7,10 +7,10 @@ Modal component that uses native HTML5 dialog functionality.
 
 ::: code-group
 ```css
-@import "winduum/src/components/dialog.css" layer(components);
+@import "winduum/src/components/dialog/index.css" layer(components);
 ```
 ```js
-import { showDialog } from 'winduum/src/components/dialog.js'
+import { showDialog } from 'winduum/src/components/dialog'
 
 document.querySelector('#showDialog').addEventListener('click', () => {
     showDialog(document.querySelector('dialog'))
@@ -82,7 +82,7 @@ Follow instructions for individual framework usage below
 </dialog>
 
 <script type="module">
-    import { showDialog } from 'winduum/src/components/dialog.js'
+    import { showDialog } from 'winduum/src/components/dialog'
 
     document.querySelector('#showDialog').addEventListener('click', () => {
         showDialog(document.querySelector('dialog'))
@@ -128,7 +128,7 @@ The `closeDialog` event is sent upon closing with the `esc` key or clicking outs
 #### Example
 
 ```js
-import { showDialog } from 'winduum/src/libraries/dialog.js'
+import { showDialog } from 'winduum/src/libraries/dialog'
 
 document.querySelector('#showDialog').addEventListener('click', async () => {
     await showDialog(document.querySelector('#dialogElement'))
@@ -190,7 +190,7 @@ When dialog closes it sends native `close` event you can listen to, additionally
 #### Example
 
 ```js
-import { closeDialog } from 'winduum/src/libraries/Dialog.js'
+import { closeDialog } from 'winduum/src/components/dialog'
 
 document.querySelector('#closeDialog').addEventListener('click', async () => {
     await closeDialog(document.querySelector('#dialogElement'))
@@ -242,7 +242,7 @@ Inserts a dialog into the DOM by either appending it to an existing dialog eleme
 #### Example
 
 ```js
-import { insertDialog } from 'winduum/src/libraries/Dialog.js'
+import { insertDialog } from 'winduum/src/components/dialog'
 
 document.querySelector('#insertDialog').addEventListener('click', async () => {
     await insertDialog(`
@@ -309,7 +309,7 @@ A function that fetches dialog content from a URL and inserts it into the DOM wi
 #### Example
 
 ```js
-import { fetchDialog } from 'winduum/src/libraries/dialog.js'
+import { fetchDialog } from 'winduum/src/components/dialog'
 
 document.querySelector('#fetchDialog').addEventListener('click', async () => {
     await fetchDialog({

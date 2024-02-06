@@ -47,7 +47,7 @@ document.querySelector('#showRipple').addEventListener('click', (e) => {
 <button class="ui-btn" id="showRipple">Show ripple</button>
 ```
 ```js
-import { showRipple } from 'winduum/src/libraries/ripple.js'
+import { showRipple } from 'winduum/src/utilities/ripple'
 
 document.querySelector('#showRipple').addEventListener('click', event => {
     showRipple(event)

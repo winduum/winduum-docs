@@ -10,7 +10,7 @@ Accessible range slider that allows easy selection of a value by sliding a handl
 @import "winduum/src/ui/range/index.css" layer(components);
 ```
 ```js
-import { setValue } from 'winduum/src/ui/range/index.js'
+import { setValue } from 'winduum/src/ui/range'
 
 const rangeSlider = document.querySelector('#rangeSlider')
 

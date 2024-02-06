@@ -1,6 +1,6 @@
 import Theme from 'vitepress/theme'
-import { insertDialog } from 'winduum/src/components/dialog/index.js'
-import { showRipple } from 'winduum/src/utilities/ripple/index.js'
+import { insertDialog } from 'winduum/src/components/dialog'
+import { showRipple } from 'winduum/src/utilities/ripple'
 import { insertToaster, insertToast, closeToast, closeToaster } from 'winduum/src/components/toaster/index.js'
 import './styles/vars.css'
 import 'winduum/dist/main.css'

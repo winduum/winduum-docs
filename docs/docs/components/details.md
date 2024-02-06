@@ -30,7 +30,7 @@ npm i slide-element
 </details>
 ```
 ```js
-import { toggleDetails } from 'winduum/src/components/details/index.js'
+import { toggleDetails } from 'winduum/src/components/details'
 
 document.querySelectorAll('[data-action="toggleDetails"]').forEach(summary => {
     summary.addEventListener('click', event => {

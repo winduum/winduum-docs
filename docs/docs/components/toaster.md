@@ -94,7 +94,7 @@ Applies an enter animation to existing toast.
 #### Example
 
 ```js
-import { showToast } from 'winduum/src/components/toaster/index.js'
+import { showToast } from 'winduum/src/components/toaster'
 
 document.querySelector('#showToast').addEventListener('click', async () => {
     await showToast(document.querySelector('#toastElement'))
@@ -146,7 +146,7 @@ Applies an exit animation to existing toast and removes it from DOM.
 #### Example
 
 ```js
-import { showToast } from 'winduum/src/components/toaster/index.js'
+import { showToast } from 'winduum/src/components/toaster'
 
 document.querySelector('#closeToast').addEventListener('click', async () => {
     await closeToast(document.querySelector('#toastElement'))
@@ -185,7 +185,7 @@ Inserts a toaster into the DOM. Apply before inserting any toasts.
 #### Example
 
 ```js
-import { insertToaster } from 'winduum/src/components/toaster/index.js'
+import { insertToaster } from 'winduum/src/components/toaster'
 
 insertToaster(document.querySelector('dialog[open]') || document.body)
 ```
@@ -217,7 +217,7 @@ Inserts toast into a toaster.
 #### Example
 
 ```js
-import { insertToast } from 'winduum/src/components/toaster/index.js'
+import { insertToast } from 'winduum/src/components/toaster'
 
 insertToast(document.querySelector('.c-toaster'), {
     title: 'Hello toast!',
@@ -306,7 +306,7 @@ All toasts are closed and toaster is removed from DOM.
 #### Example
 
 ```js
-import { showToast } from 'winduum/src/components/toaster/index.js'
+import { showToast } from 'winduum/src/components/toaster'
 
 document.querySelector('#closeToaster').addEventListener('click', async () => {
     await closeToaster(document.querySelector('.c-toaster'))
