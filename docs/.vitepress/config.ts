@@ -270,7 +270,7 @@ export default defineConfig({
             },
             {
               text: 'Carousel',
-              link: '/docs/components/carousel?soon'
+              link: '/docs/components/carousel'
             },
             {
               text: 'Compare',
