@@ -33,10 +33,6 @@ document.querySelector('#insertToast').addEventListener('click', () => {
 ```
 :::
 
-::: info
-<UsageInfo />
-:::
-
 ### Variants
 * <LinkGh name="toaster-default" url="https://github.com/winduum/winduum/blob/main/src/components/toaster/default.css" />
 * <LinkGh name="toast-default" url="https://github.com/winduum/winduum/blob/main/src/components/toast/default.css" />

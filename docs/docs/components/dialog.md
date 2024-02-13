@@ -40,10 +40,6 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 ```
 :::
 
-::: info
-<UsageInfo />
-:::
-
 ### Variants
 * <LinkGh name="default" path="components/dialog" />
 * <LinkGh name="content" path="components/dialog" />

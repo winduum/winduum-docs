@@ -13,6 +13,14 @@ Can be dismissed with touch gestures on touch devices.
 <<< @/../examples/src/pages/component/drawer/left.liquid#js{} [js]
 :::
 
+### Variants
+* <LinkGh name="default" path="components/drawer" />
+* <LinkGh name="content" path="components/drawer" />
+
+### Props
+* <LinkGh name="default-props" path="components/drawer" />
+* <LinkGh name="content-props" path="components/drawer" />
+
 ## Examples
 
 ### Left

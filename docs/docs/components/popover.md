@@ -28,10 +28,6 @@ Popover can be used for dropdowns and other popovers when element is clicked and
 ```
 :::
 
-::: info
-<UsageInfo />
-:::
-
 ### Variants
 * <LinkGh name="default" path="components/popover" />
 * <LinkGh name="content" path="components/popover" />

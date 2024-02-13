@@ -32,10 +32,6 @@ document.querySelector('#showRipple').addEventListener('click', (e) => {
 ```
 :::
 
-::: info
-<UsageInfo />
-:::
-
 ## Example
 
 <div class="iframe">
