@@ -24,10 +24,6 @@ Tooltip can be used for a little info hint on hover or focus.
 ```
 :::
 
-::: info
-<UsageInfo />
-:::
-
 ### Variants
 * <LinkGh name="default" path="components/tooltip" />
 

@@ -1,0 +1,44 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<form class="c-form grid grid-cols-12 gap-4" novalidate>
+    <div class="c-field col-span-4">
+        <label class="ui-label" for="given-name">First name</label>
+        <div class="ui-control">
+            <input id="given-name" name="given-name" autocomplete="given-name" required>
+        </div>
+    </div>
+    <div class="c-field col-span-4">
+        <label class="ui-label" for="family-name">Last name</label>
+        <div class="ui-control">
+            <input id="family-name" name="family-name" autocomplete="family-name" required>
+        </div>
+    </div>
+    <div class="c-field col-span-4">
+        <label class="ui-label" for="email">Email</label>
+        <div class="ui-control">
+            <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+    </div>
+    <div class="c-field col-span-4 items-start">
+        <button class="ui-btn" type="submit">Submit</button>
+    </div>
+</form>
+
+<svg class="hidden">
+    <symbol id="icon-exclamation-circle" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+    </symbol>
+</svg>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { validateForm } from 'winduum/src/components/form'
+
+    document.querySelector('form').addEventListener('submit', event => {
+        validateForm(event)
+    })
+</script>
+<!-- #endregion js -->
+{% endblock %}

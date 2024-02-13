@@ -1,7 +1,8 @@
 import Theme from 'vitepress/theme'
-import { insertDialog } from 'winduum/src/components/dialog/index.js'
-import { showRipple } from 'winduum/src/utilities/ripple/index.js'
-import { insertToaster, insertToast, closeToast, closeToaster } from 'winduum/src/components/toaster/index.js'
+import { insertDialog } from 'winduum/src/components/dialog'
+import { showRipple } from 'winduum/src/utilities/ripple'
+import { insertToaster, insertToast, closeToast, closeToaster } from 'winduum/src/components/toaster'
+import { showDrawer, closeDrawer, scrollDrawer } from "winduum/src/components/drawer"
 import './styles/vars.css'
 import 'winduum/dist/main.css'
 import 'winduum/dist/tailwind.css'
@@ -68,6 +69,81 @@ function dialogEvent() {
     })
 
     document.querySelector('#showToast')?.classList.add('has-events')
+
+    if (!document.querySelector('.vp-doc').classList.contains('has-events')) {
+      document.querySelector('.vp-doc').classList.add('has-events')
+
+      window.drawerLeftElement?.scroll({ left: window.drawerLeftElement?.scrollWidth , behavior: 'instant' });
+      window.drawerLeftElement?.classList.remove('invisible')
+
+      window.drawerLeftElement.addEventListener('scroll', ({ target }) => scrollDrawer(target))
+      window.showDrawerLeftElement.addEventListener('click', () => showDrawer(window.drawerLeftElement))
+      window.closeDrawerLeftElement.addEventListener('click', () => closeDrawer(window.drawerLeftElement))
+
+
+
+      window.drawerRightElement?.scroll({ left: 0, behavior: 'instant' });
+      window.drawerRightElement?.classList.remove('invisible')
+
+      window.drawerRightElement.addEventListener('scroll', ({ target }) => scrollDrawer(target, {
+        opacityRatio: 0,
+        scrollOpen: target.scrollWidth - target.clientWidth,
+        scrollClose: 0
+      }))
+      window.showDrawerRightElement.addEventListener('click', () => showDrawer(window.drawerRightElement, drawerRightElement.scrollWidth))
+      window.closeDrawerRightElement.addEventListener('click', () => closeDrawer(window.drawerRightElement, 0))
+
+
+
+
+      window.drawerBottomElement?.scroll({ top: 0, behavior: 'instant' });
+      window.drawerBottomElement?.classList.remove('invisible')
+
+      window.drawerBottomElement.addEventListener('scroll', ({ target }) => scrollDrawer(target, {
+        opacityRatio: 0,
+        scrollOpen: target.scrollHeight - target.clientHeight,
+        scrollClose: 0,
+        scrollDirection: target.scrollTop,
+        snapClass: 'snap-y snap-mandatory',
+        scrollSize: target.scrollHeight - target.clientHeight
+      }))
+      window.showDrawerBottomElement.addEventListener('click', () => showDrawer(window.drawerBottomElement, drawerBottomElement.scrollHeight, 'top'))
+      window.closeDrawerBottomElement.addEventListener('click', () => closeDrawer(window.drawerBottomElement, 0, 'top'))
+
+
+
+      window.drawerTopElement?.scroll({ top: drawerTopElement.scrollHeight, behavior: 'instant' });
+      window.drawerTopElement?.classList.remove('invisible')
+
+      window.drawerTopElement.addEventListener('scroll', ({ target }) => scrollDrawer(target, {
+        snapClass: 'snap-y snap-mandatory',
+        scrollSize: target.scrollHeight - target.clientHeight,
+        scrollDirection: target.scrollTop,
+        scrollOpen: 0,
+        scrollClose: target.scrollHeight - target.clientHeight
+      }))
+      window.showDrawerTopElement.addEventListener('click', () => showDrawer(window.drawerTopElement, 0, 'top'))
+      window.closeDrawerTopElement.addEventListener('click', () => closeDrawer(window.drawerTopElement, drawerTopElement.scrollHeight, 'top'))
+
+
+
+      window.drawerDialogElement?.scroll({ left: 0, behavior: 'instant' });
+      window.drawerDialogElement?.classList.remove('invisible')
+
+      window.drawerDialogElement.addEventListener('scroll', ({ target }) => scrollDrawer(target, {
+        scrollOpen: target.scrollWidth - target.clientWidth,
+        scrollClose: 0,
+        opacityRatio: 0
+      }))
+      window.showDrawerDialogElement.addEventListener('click', () => {
+        window.drawerDialogElement.showModal()
+        showDrawer(window.drawerDialogElement, window.drawerDialogElement.scrollWidth)
+      })
+      window.closeDrawerDialogElement.addEventListener('click', () => closeDrawer(window.drawerDialogElement, 0))
+
+      window.drawerDialogElement?.addEventListener('c-drawer:close', () => window.drawerDialogElement.close())
+      window.drawerDialogElement?.addEventListener('close', () => closeDrawer(window.drawerDialogElement, 0))
+    }
   }
 }
 

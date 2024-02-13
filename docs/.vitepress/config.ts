@@ -270,7 +270,7 @@ export default defineConfig({
             },
             {
               text: 'Carousel',
-              link: '/docs/components/carousel?soon'
+              link: '/docs/components/carousel'
             },
             {
               text: 'Compare',
@@ -286,7 +286,7 @@ export default defineConfig({
             },
             {
               text: 'Drawer',
-              link: '/docs/components/details?soon'
+              link: '/docs/components/drawer'
             },
             {
               text: 'Field',
@@ -294,7 +294,7 @@ export default defineConfig({
             },
             {
               text: 'Form',
-              link: '/docs/components/form?soon'
+              link: '/docs/components/form'
             },
             {
               text: 'Pagination',
