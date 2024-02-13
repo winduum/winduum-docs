@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "vitepress": "^1.0.0-rc.42",
-    "vue": "^3.4.18",
-    "winduum": "^0.8.0-next.8"
+    "vue": "^3.4.19",
+    "winduum": "^0.8.0-next.13"
   }
 }

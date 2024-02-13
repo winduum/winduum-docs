@@ -286,7 +286,7 @@ export default defineConfig({
             },
             {
               text: 'Drawer',
-              link: '/docs/components/details?soon'
+              link: '/docs/components/drawer'
             },
             {
               text: 'Field',

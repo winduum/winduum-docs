@@ -5,6 +5,9 @@ Provides a scroll carousel that uses native CSS `scroll-snap` property.<br>
 
 ### Usage
 ::: code-group
+```css
+@import "winduum/src/components/carousel/index.css" layer(components);
+```
 <<< @/public/examples/component/carousel/basic.html#body{} [html]
 <<< @/../examples/src/pages/component/carousel/basic.liquid#js{} [js]
 :::
