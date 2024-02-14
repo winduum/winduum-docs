@@ -25,9 +25,7 @@
     const setSingleValue = ({ currentTarget }) => {
         setValue(currentTarget)
 
-        setOutputValue(currentTarget, {
-            element: document.querySelector('#single')
-        })
+        setOutputValue(currentTarget, document.querySelector('#single'))
     }
 
     setSingleValue({ currentTarget: rangeSingle })

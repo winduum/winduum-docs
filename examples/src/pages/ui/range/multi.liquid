@@ -30,9 +30,7 @@
     const setFromValue = ({ currentTarget }) => {
         setValue(currentTarget)
 
-        setOutputValue(currentTarget, {
-            element: document.querySelector('#from')
-        })
+        setOutputValue(currentTarget, document.querySelector('#from'))
     }
 
     const setToValue = ({ currentTarget }) => {
@@ -40,9 +38,7 @@
             track: 'end'
         })
 
-        setOutputValue(currentTarget, {
-            element: document.querySelector('#to')
-        })
+        setOutputValue(currentTarget, document.querySelector('#to'))
     }
 
 
