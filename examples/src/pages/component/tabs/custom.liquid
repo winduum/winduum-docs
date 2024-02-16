@@ -1,0 +1,61 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<div class="c-tabs gap-0 p-0 bg-transparent" role="tablist">
+    <button class="p-2 border-b-2 border-b-main border-opacity-25 transition aria-selected:border-opacity-100" role="tab" aria-controls="tab-all" aria-selected="true">
+        All
+    </button>
+    <button class="p-2 border-b-2 border-b-main border-opacity-25 transition aria-selected:border-opacity-100" role="tab" aria-controls="tab-photos">
+        Photos
+    </button>
+    <button class="p-2 border-b-2 border-b-main border-opacity-25 transition aria-selected:border-opacity-100" role="tab" aria-controls="tab-music">
+        Music
+    </button>
+    <button class="p-2 border-b-2 border-b-main border-opacity-25 transition aria-selected:border-opacity-100" role="tab" aria-controls="tab-documents">
+        Documents
+    </button>
+</div>
+<div class="aria-hidden:hidden" role="tabpanel" aria-hidden="false" id="tab-all" aria-labelledby="all">
+    All
+</div>
+<div class="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-photos" aria-labelledby="photos">
+    Photos
+</div>
+<div class="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-music" aria-labelledby="music">
+    Music
+</div>
+<div class="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-documents" aria-labelledby="documents">
+    Documents
+</div>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { toggleTab } from "winduum/src/components/tabs"
+
+    const tabElements = document.querySelectorAll('[role="tab"]')
+    const tabPanelElements = document.querySelectorAll('[role="tabpanel"]')
+
+    tabElements.forEach(element => element.addEventListener('click', () => {
+        toggleTab(element, {
+            tabElements,
+            tabPanelElements
+        })
+    }))
+</script>
+<!-- #endregion js -->
+{% endblock %}
+
+{% block head %}
+<style>
+  body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .transition {
+    transition-property: var(--transition);
+    transition-duration: var(--duration);
+  }
+</style>
+{% endblock %}

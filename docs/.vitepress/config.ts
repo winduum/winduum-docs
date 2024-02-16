@@ -127,7 +127,7 @@ export default defineConfig({
             },
             {
               text: 'Layers',
-              link: '/docs/layout/layers?soon'
+              link: '/docs/layout/layers'
             }
           ]
         },
@@ -262,7 +262,7 @@ export default defineConfig({
           items: [
             {
               text: 'Breadcrumb',
-              link: '/docs/components/breadcrumb?soon'
+              link: '/docs/components/breadcrumb'
             },
             {
               text: 'Card',
@@ -298,7 +298,7 @@ export default defineConfig({
             },
             {
               text: 'Pagination',
-              link: '/docs/components/pagination?soon'
+              link: '/docs/components/pagination'
             },
             {
               text: 'Popover',
@@ -306,11 +306,11 @@ export default defineConfig({
             },
             {
               text: 'Table',
-              link: '/docs/components/table?soon'
+              link: '/docs/components/table'
             },
             {
               text: 'Tabs',
-              link: '/docs/components/tabs?soon'
+              link: '/docs/components/tabs'
             },
             {
               text: 'Toaster',
