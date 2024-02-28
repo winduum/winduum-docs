@@ -19,13 +19,44 @@
 ### Tokens
 * <LinkGh name="invalid" path="ui/switch" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/switch" />
+
 ## Examples
 
 ### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/switch/basic.html"></iframe>
 
-<<< @/public/examples/ui/switch/basic.html#body{}
+::: code-group
+<<< @/public/examples/ui/switch/basic.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiSwitch } from '@/components/ui/switch'
+</script>
+
+<template>
+    <UiSwitch class="ui-switch">
+        <input type="checkbox">
+        Switch
+    </UiSwitch>
+</template>
+```
+```jsx
+import { UiSwitch } from '@/components/ui/switch'
+
+export function Example() {
+    return (
+        <UiSwitch class="ui-switch">
+            <input type="checkbox" />
+            Switch
+        </UiSwitch>
+    )
+}
+```
+:::
 
 ### Small
 

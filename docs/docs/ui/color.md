@@ -17,13 +17,56 @@ Color supports `checkbox` and `radio` **input** types for displaying selected co
 * <LinkGh name="default-props" path="ui/color" />
 * <LinkGh name="interactive-props" path="ui/color" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/color" />
+
 ## Examples
 
 ### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/color/basic.html"></iframe>
 
-<<< @/public/examples/ui/color/basic.html#body{}
+::: code-group
+<<< @/public/examples/ui/color/basic.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiColor } from '@/components/ui/color'
+</script>
+
+<template>
+    <UiColor style="color: red">
+        <input type="checkbox" aria-label="Red">
+    </UiColor>
+    <UiColor style="color: blue">
+        <input type="checkbox" aria-label="Blue">
+    </UiColor>
+    <UiColor style="color: red; --ui-color-secondary: blue;">
+        <input type="checkbox" aria-label="Red & Blue">
+    </UiColor>
+</template>
+```
+```jsx
+import { UiColor } from "@/components/ui/color"
+
+export function Example() {
+    return (
+        <>
+            <UiColor style="color: red">
+                <input type="checkbox" aria-label="Red" />
+            </UiColor>
+            <UiColor style="color: blue">
+                <input type="checkbox" aria-label="Blue" />
+            </UiColor>
+            <UiColor style="color: red; --ui-color-secondary: blue;">
+                <input type="checkbox" aria-label="Red & Blue" />
+            </UiColor>
+        </>
+    )
+}
+```
+:::
 
 ### Disabled
 

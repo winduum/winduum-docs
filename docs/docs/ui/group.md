@@ -16,13 +16,50 @@ Group common ui components such as [Button](/docs/ui/button), [Badge](/docs/ui/b
 ### Tokens
 * <LinkGh name="vertical" path="ui/group" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/group" />
+
 ## Examples
 
 ### Button Group
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/group.html"></iframe>
 
-<<< @/public/examples/ui/btn/group.html#body{}
+::: code-group
+<<< @/public/examples/ui/btn/group.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiGroup } from '@/components/ui/group'
+    import { UiBtn } from '@/components/ui/btn'
+</script>
+
+<template>
+    <UiGroup>
+        <UiBtn>Button</UiBtn>
+        <UiBtn>Button</UiBtn>
+        <UiBtn>Button</UiBtn>
+    </UiGroup>
+</template>
+```
+```jsx
+import { UiGroup } from '@/components/ui/group'
+import { UiBtn } from '@/components/ui/btn'
+
+export function Example() {
+    return (
+        <>
+            <UiGroup>
+                <UiBtn>Button</UiBtn>
+                <UiBtn>Button</UiBtn>
+                <UiBtn>Button</UiBtn>
+            </UiGroup>
+        </>
+    )
+}
+```
+:::
 
 ### Badge Group
 

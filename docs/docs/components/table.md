@@ -16,6 +16,11 @@ Display your data in non-interactive, interactive or responsive tables.
 * <LinkGh name="default-props" path="components/table" />
 * <LinkGh name="interactive-props" path="components/table" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/table" />
+
 ## Examples
 
 ### Default

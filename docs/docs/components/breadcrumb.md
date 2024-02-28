@@ -14,6 +14,11 @@
 ### Props
 * <LinkGh name="default-props" path="components/breadcrumb" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/breadcrumb" />
+
 ## Example
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/component/breadcrumb.html"></iframe>

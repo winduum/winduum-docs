@@ -14,13 +14,42 @@
 ### Props
 * <LinkGh name="default-props" path="ui/notice" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/notice" />
+
 ## Examples
 
 ### Success
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/notice/success.html"></iframe>
 
-<<< @/public/examples/ui/notice/success.html#body{}
+::: code-group
+<<< @/public/examples/ui/notice/success.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiNotice } from '@/components/ui/notice'
+</script>
+
+<template>
+    <UiNotice class="accent-success">
+        Success notice
+    </UiNotice>
+</template>
+```
+```jsx
+import { UiNotice } from '@/components/ui/notice'
+
+export function Example() {
+    return (
+        <UiNotice className="accent-success">
+            Success notice
+        </UiNotice>
+    )
+}
+```
+:::
 
 ### Error
 

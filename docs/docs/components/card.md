@@ -14,6 +14,11 @@
 ### Props
 * <LinkGh name="default-props" path="components/card" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/card" />
+
 ## Examples
 
 ### Default

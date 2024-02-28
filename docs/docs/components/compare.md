@@ -11,6 +11,11 @@ Side-by-side comparison slider component.
 ### Variants
 * <LinkGh name="default" path="components/compare" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/compare" />
+
 ## Examples
 
 ### Default

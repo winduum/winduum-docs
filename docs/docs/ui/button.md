@@ -33,13 +33,44 @@
 * <LinkGh name="interactive-props" path="ui/button" />
 * <LinkGh name="loading-props" path="ui/button" />
 
+
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/btn" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/btn" />
+
 ## Examples
 
 ### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/basic.html"></iframe>
 
-<<< @/public/examples/ui/btn/basic.html#body{}
+::: code-group
+<<< @/public/examples/ui/btn/basic.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiBtn } from '@/components/ui/btn'
+</script>
+
+<template>
+  <UiBtn>Button</UiBtn>
+  <UiBtn class="rounded-full">Button</UiBtn>
+</template>
+```
+```jsx
+import { UiBtn } from "@/components/ui/btn"
+
+export function Example() {
+    return (
+        <>
+            <UiBtn>Button</UiBtn>
+            <UiBtn className="rounded-full">Button</UiBtn>
+        </>
+    )
+}
+```
+:::
 
 ### Flat
 

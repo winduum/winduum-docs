@@ -11,6 +11,11 @@ Other input types are supported in other components
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/control" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/control" />
+
 ### Usage
 
 ```css
@@ -45,7 +50,33 @@ Other input types are supported in other components
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/basic.html"></iframe>
 
-<<< @/public/examples/ui/input/basic.html#body{}
+::: code-group
+<<< @/public/examples/ui/input/basic.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiControl } from '@/components/ui/control'
+</script>
+
+<template>
+    <UiControl>
+        <input type="text">
+    </UiControl>
+</template>
+```
+```jsx
+import { UiControl } from "@/components/ui/control"
+
+export function Example() {
+    return (
+        <>
+            <UiControl>
+                <input type="text" />
+            </UiControl>
+        </>
+    )
+}
+```
+:::
 
 ### Icon
 You can position any content to `start` and `end` of the control.<br>Padding is automatically handled by CSS up to 2 icons or you can do it manually.

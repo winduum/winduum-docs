@@ -44,6 +44,11 @@ document.querySelectorAll('[data-action="toggleDetails"]').forEach(summary => {
 ```
 :::
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/details" />
+
 ## Examples
 
 ### Default

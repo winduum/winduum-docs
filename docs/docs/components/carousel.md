@@ -12,6 +12,15 @@ Provides a scroll carousel that uses native CSS `scroll-snap` property.<br>
 <<< @/../examples/src/pages/component/carousel/basic.liquid#js{} [js]
 :::
 
+### Variants
+* <LinkGh name="default" path="components/carousel" />
+* <LinkGh name="content" path="components/carousel" />
+
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
+
 ## Examples
 
 ### Basic

@@ -20,17 +20,91 @@ Check supports `checkbox` and `radio` **input** types
 * <LinkGh name="default-props" path="ui/check" />
 * <LinkGh name="interactive-props" path="ui/check" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/check" />
+
 ## Examples
 
 ### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/basic.html"></iframe>
 
-<<< @/public/examples/ui/checkbox/basic.html#body{}
+::: code-group
+<<< @/public/examples/ui/checkbox/basic.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiCheck } from '@/components/ui/check'
+</script>
+
+<template>
+    <UiCheck>
+        <input type="checkbox">
+        Checkbox
+    </UiCheck>
+    <UiCheck>
+        <input type="checkbox">
+    </UiCheck>
+</template>
+```
+```jsx
+import { UiCheck } from "@/components/ui/check"
+
+export function Example() {
+    return (
+        <>
+            <UiCheck>
+                <input type="checkbox" />
+                Checkbox
+            </UiCheck>
+            <UiCheck>
+                <input type="checkbox" />
+            </UiCheck>
+        </>
+    )
+}
+```
+:::
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/radio/basic.html"></iframe>
 
-<<< @/public/examples/ui/radio/basic.html#body{}
+::: code-group
+<<< @/public/examples/ui/radio/basic.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiCheck } from '@/components/ui/check'
+</script>
+
+<template>
+    <UiCheck>
+        <input type="radio">
+        Radio
+    </UiCheck>
+    <UiCheck>
+        <input type="radio">
+    </UiCheck>
+</template>
+```
+```jsx
+import { UiCheck } from "@/components/ui/check"
+
+export function Example() {
+    return (
+        <>
+            <UiCheck>
+                <input type="radio" />
+                Radio
+            </UiCheck>
+            <UiCheck>
+                <input type="radio" />
+            </UiCheck>
+        </>
+    )
+}
+```
+:::
+
 
 ### Label
 

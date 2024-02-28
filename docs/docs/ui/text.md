@@ -15,13 +15,60 @@ Typographic defaults for common wysiwyg content. It's an alternative to [prose](
 ### Props
 * <LinkGh name="default-props" path="ui/text" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/text" />
+
 ## Examples
 
 ### Text
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/text.html"></iframe>
 
-<<< @/public/examples/ui/text/text.html#body{}
+::: code-group
+<<< @/public/examples/ui/text/text.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiText } from '@/components/ui/text'
+</script>
+
+<template>
+    <UiText class="ui-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur
+            metus. In bibendum nisi et dui <a href="#">sagittis efficitur</a>. Proin porttitor diam at quam
+            finibus, quis porttitor turpis ullamcorper. Quisque iaculis imperdiet nunc in
+            hendrerit. Nulla facilisi. Sed at sodales ex. Vivamus ornare auctor ligula et
+            lobortis. Nunc metus augue, tristique vitae sagittis ac, interdum eu nisl.
+            Curabitur aliquet, lectus ut interdum commodo, ipsum elit gravida libero, in
+            laoreet lectus nisl a erat. Sed consequat justo pulvinar turpis pharetra mattis.
+            Phasellus non pretium libero.</p>
+        <p></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </UiText>
+</template>
+```
+```jsx
+import { UiText } from '@/components/ui/text'
+
+export function Example() {
+    return (
+        <UiText class="ui-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur
+                metus. In bibendum nisi et dui <a href="#">sagittis efficitur</a>. Proin porttitor diam at quam
+                finibus, quis porttitor turpis ullamcorper. Quisque iaculis imperdiet nunc in
+                hendrerit. Nulla facilisi. Sed at sodales ex. Vivamus ornare auctor ligula et
+                lobortis. Nunc metus augue, tristique vitae sagittis ac, interdum eu nisl.
+                Curabitur aliquet, lectus ut interdum commodo, ipsum elit gravida libero, in
+                laoreet lectus nisl a erat. Sed consequat justo pulvinar turpis pharetra mattis.
+                Phasellus non pretium libero.</p>
+            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </UiText>
+    )
+}
+```
+:::
 
 ### Headings
 

@@ -11,6 +11,11 @@
 ### Variants
 * <LinkGh name="default" path="components/tabs" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
+
 ## Examples
 
 ### Default

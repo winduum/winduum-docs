@@ -21,6 +21,11 @@ Can be dismissed with touch gestures on touch devices.
 * <LinkGh name="default-props" path="components/drawer" />
 * <LinkGh name="content-props" path="components/drawer" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
+
 ## Examples
 
 ### Left

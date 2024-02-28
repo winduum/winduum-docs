@@ -10,6 +10,11 @@ For advance form of validation use [VeeValidate](https://vee-validate.logaretm.c
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/form" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/form" />
+
 ### Usage
 ::: code-group
 <<< @/public/examples/form.html#body{} [html]

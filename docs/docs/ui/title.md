@@ -19,13 +19,38 @@ For common title styles that you can manage from one component across project.
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/title/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/title/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/title" />
+
 ## Examples
 
 ### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/basic.html"></iframe>
 
-<<< @/public/examples/ui/title/basic.html#body{}
+::: code-group
+<<< @/public/examples/ui/title/basic.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiTitle } from '@/components/ui/title'
+</script>
+
+<template>
+    <UiTitle>Title</UiTitle>
+</template>
+```
+```jsx
+import { UiTitle } from '@/components/ui/title'
+
+export function Example() {
+    return (
+        <UiTitle>Title</UiTitle>
+    )
+}
+```
+:::
 
 ### Small
 

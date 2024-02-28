@@ -29,6 +29,11 @@ rangeSlider.addEventListener('input', ({ currentTarget }) => setValue(currentTar
 ### Tokens
 * `vertical` <a href="https://github.com/winduum/winduum/blob/main/src/ui/range/vertical.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/range" />
+
 ## Examples
 
 ### Default
@@ -38,6 +43,28 @@ rangeSlider.addEventListener('input', ({ currentTarget }) => setValue(currentTar
 ::: code-group
 <<< @/public/examples/ui/range/default.html#body{} [html]
 <<< @/../examples/src/pages/ui/range/default.liquid#js{} [js]
+```vue
+<script setup lang="ts">
+    import { UiRange } from '@/components/ui/progress'
+</script>
+
+<template>
+    <UiRange>
+        <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single">
+    </UiRange>
+</template>
+```
+```jsx
+import { UiProgress } from '@/components/ui/progress'
+
+export function Example() {
+    return (
+        <UiRange>
+            <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single">
+        </UiRange>
+    )
+}
+```
 :::
 
 ### Multi

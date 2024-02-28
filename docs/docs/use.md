@@ -13,7 +13,7 @@ Or you could only use [TailwindCSS plugin](/docs/config) with its benefits and m
 ## Framework-agnostic
 Winduum is **framework-agnostic**, so you are able to create your own components using your preferred framework. Javascript primitives can be also adapted in any framework.
 
-If there is interest, pre-built components may be developed for popular frameworks. Currently, only [`winduum-vue`](https://www.github.com/winduum/winduum-vue) is in the process of development and some components have usage and installation examples in the docs.
+If there is interest, pre-built components may be developed for popular frameworks. Currently, only [`winduum-vue`](https://www.github.com/winduum/winduum-vue) and [`winduum-react`](https://www.github.com/winduum/winduum-react) are in the process of development and some components have usage and installation examples in the docs.
 
 ## Naming
 

@@ -52,8 +52,8 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/dialog.js" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/dialog.vue" /> <small>(soon)</small>
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/dialog" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/dialog" />
 
 ## Example
 

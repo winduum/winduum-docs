@@ -4,6 +4,14 @@ Component used to group a form components.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/field" />
 
+### Variants
+* <LinkGh name="default" path="components/field" />
+
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/field" />
+
 ### Usage
 
 ```css

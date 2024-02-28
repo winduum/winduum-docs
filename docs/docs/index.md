@@ -5,10 +5,6 @@ Or copy and paste the components and use Winduum only as a TailwindCSS plugin.
 
 See [Trying Winduum Online](#trying-winduum-online) section below to see all possible examples of use.
 
-::: warning
-Winduum is in early preview. Can be used for production, but some features may change over time.
-:::
-
 ## npm
 
 ```shell
@@ -142,6 +138,7 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/astro" target="_blank" rel="noreferrer">astro <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/nuxt" target="_blank" rel="noreferrer">nuxt <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/next" target="_blank" rel="noreferrer">next <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/htmx" target="_blank" rel="noreferrer">htmx <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-sass" target="_blank" rel="noreferrer">vite + sass <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-less" target="_blank" rel="noreferrer">vite + less <svg><use href="#icon-sb" /></svg></a>
 
@@ -150,7 +147,9 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 
 Winduum is **framework-agnostic**, learn more on the [About](/docs/use#framework-agnostic) page.
 
-Do you need ready to use components? Here are few example components ready to copy & paste.
+Do you need ready to use components? Here are components ready to copy & paste. For now there are only a few, it's still in development.
 
 * <LinkGh url="https://github.com/winduum/winduum-vue" name="winduum/winduum-vue"></LinkGh>
 * <LinkGh url="https://github.com/winduum/winduum-react" name="winduum/winduum-react"></LinkGh>
+
+Each component in docs includes example usage in `html` and also in `vue` and `jsx`.

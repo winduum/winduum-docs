@@ -24,13 +24,42 @@
 ### Props
 * <LinkGh name="default-props" path="ui/badge" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/badge" />
+
 ## Examples
 
 ### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/basic.html"></iframe>
 
-<<< @/public/examples/ui/badge/basic.html#body{}
+::: code-group
+<<< @/public/examples/ui/badge/basic.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiBadge } from '@/components/ui/badge'
+</script>
+
+<template>
+  <UiBadge>Badge</UiBadge>
+  <UiBadge class="rounded-full">Badge</UiBadge>
+</template>
+```
+```jsx
+import { UiBadge } from "@/components/ui/badge"
+
+export function Example() {
+    return (
+        <>
+            <UiBadge>Badge</UiBadge>
+            <UiBadge className="rounded-full">Badge</UiBadge>
+        </>
+    )
+}
+```
+:::
 
 ### Flat
 

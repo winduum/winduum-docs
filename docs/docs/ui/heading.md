@@ -14,13 +14,38 @@ For common heading styles that you can manage from one component across project.
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/heading/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/heading/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/heading" />
+
 ## Examples
 
 ### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/heading/basic.html"></iframe>
 
-<<< @/public/examples/ui/heading/basic.html#body{}
+::: code-group
+<<< @/public/examples/ui/heading/basic.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiHeading } from '@/components/ui/heading'
+</script>
+
+<template>
+    <UiHeading>Heading</UiHeading>
+</template>
+```
+```jsx
+import { UiHeading } from '@/components/ui/heading'
+
+export function Example() {
+    return (
+        <UiHeading>Heading</UiHeading>
+    )
+}
+```
+:::
 
 ### Small
 

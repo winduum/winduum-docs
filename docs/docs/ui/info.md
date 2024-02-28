@@ -15,10 +15,35 @@ Small informative component.
 ### Props
 * <LinkGh name="default-props" path="ui/info" />
 
+### Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/info" />
+
 ## Examples
 
 ### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/info/basic.html"></iframe>
 
-<<< @/public/examples/ui/info/basic.html#body{}
+::: code-group
+<<< @/public/examples/ui/info/basic.html#body{} [html]
+```vue
+<script setup lang="ts">
+    import { UiInfo } from '@/components/ui/info'
+</script>
+
+<template>
+    <UiInfo>Info text</UiInfo>
+</template>
+```
+```jsx
+import { UiInfo } from '@/components/ui/info'
+
+export function Example() {
+    return (
+        <UiInfo>Info text</UiInfo>
+    )
+}
+```
+:::
