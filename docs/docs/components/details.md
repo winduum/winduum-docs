@@ -3,6 +3,8 @@
 An accessible accordion or toggle component for `details` and `summary` elements.<br>
 Uses small external library `slide-element` for smooth toggle animations.
 
+It is unstyled by default so you can apply your own styles.
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/details" />
 
 ### Dependencies

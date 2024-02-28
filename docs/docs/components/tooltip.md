@@ -12,8 +12,8 @@ Tooltip can be used for a little info hint on hover or focus.
 <<< @/public/examples/component/tooltip/basic.html#body{} [html]
 ```vue
 <script setup>
-    import { Tooltip } from 'winduum-vue/components/tooltip'
-    import { UiBtn } from 'winduum-vue/components/ui/btn'
+    import { Tooltip } from '@/components/tooltip'
+    import { UiBtn } from '@/components/ui/btn'
 </script>
 
 <template>

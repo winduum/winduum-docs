@@ -19,9 +19,9 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 ```vue
 <script setup>
     import { ref } from 'vue'
-    import { Dialog, DialogContent } from 'winduum-vue/components/dialog'
-    import { UiHeading } from 'winduum-vue/components/ui/heading'
-    import { UiBtn } from 'winduum-vue/components/ui/btn'
+    import { Dialog, DialogContent } from '@/components/dialog'
+    import { UiHeading } from '@/components/ui/heading'
+    import { UiBtn } from '@/components/ui/btn'
 
     const dialogMain = ref()
 </script>

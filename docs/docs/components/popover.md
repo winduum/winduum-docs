@@ -13,8 +13,8 @@ Popover can be used for dropdowns and other popovers when element is clicked and
 ```vue
 <script setup>
     import { ref } from 'vue'
-    import { Popover, PopoverContent } from 'winduum-vue/components/popover'
-    import { UiBtn } from 'winduum-vue/components/ui/btn'
+    import { Popover, PopoverContent } from '@/components/popover'
+    import { UiBtn } from '@/components/ui/btn'
 </script>
 
 <template>

@@ -43,4 +43,4 @@ features:
   details: Doesn't reinvent the wheel, components like the dialog are using existing optimized standards so the final javascript code is minimal.
 ---
 
-<div style="text-align: center;margin-block:-2.5rem;font-weight: bold">Winduum ❤️ CSS</div>
+<div style="text-align: center;margin-top: 4rem;margin-bottom:-8.5rem;font-weight: bold">Winduum ❤️ CSS</div>
