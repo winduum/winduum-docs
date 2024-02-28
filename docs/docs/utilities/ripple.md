@@ -23,7 +23,7 @@ document.querySelector('#showRipple').addEventListener('click', (e) => {
 <script setup>
     import { ref } from 'vue'
     import { showRipple } from 'winduum/src/utilities/ripple'
-    import { UiBtn } from 'winduum-vue/components/ui/btn'
+    import { UiBtn } from '@/components/ui/btn'
 </script>
 
 <template>

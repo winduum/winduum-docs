@@ -131,6 +131,7 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-vue" target="_blank" rel="noreferrer">vite + vue <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-react" target="_blank" rel="noreferrer">vite + react <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-svelte" target="_blank" rel="noreferrer">vite + svelte <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-solid" target="_blank" rel="noreferrer">vite + solid <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-qwik" target="_blank" rel="noreferrer">vite + qwik <svg><use href="#icon-sb" /></svg></a>
 * <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-lit" target="_blank" rel="noreferrer">vite + lit <svg><use href="#icon-sb" /></svg></a>
 
@@ -148,3 +149,8 @@ On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum
 </div>
 
 Winduum is **framework-agnostic**, learn more on the [About](/docs/use#framework-agnostic) page.
+
+Do you need ready to use components? Here are few example components ready to copy & paste.
+
+* <LinkGh url="https://github.com/winduum/winduum-vue" name="winduum/winduum-vue"></LinkGh>
+* <LinkGh url="https://github.com/winduum/winduum-react" name="winduum/winduum-react"></LinkGh>

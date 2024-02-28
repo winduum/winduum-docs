@@ -15,9 +15,9 @@ Easy layout with `grid`
 </body>
 ```
 
-In same cases classic approach is still handy, you can achieve that easily with `max-w`
+In same cases classic approach is still handy, you can achieve that easily with `w`
 ```html
-<div class="max-w-[--container] mx-auto">
+<div class="w-[--container] mx-auto">
     Content
 </div>
 ```
