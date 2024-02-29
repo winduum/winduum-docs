@@ -36,7 +36,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/winduum/winduum' },
-      { icon: 'twitter', link: 'https://twitter.com/winduum' }
+      { icon: 'twitter', link: 'https://twitter.com/winduum_dev' }
     ],
 
     algolia: {
