@@ -22,6 +22,8 @@ Winduum is **framework-agnostic**, so you are able to create your own components
 
 If there is interest, pre-built components may be developed for popular frameworks. Currently, only [`winduum-vue`](https://www.github.com/winduum/winduum-vue) and [`winduum-react`](https://www.github.com/winduum/winduum-react) are in the process of development and most of the components have usage and installation examples in the docs.
 
+Want to help? We're open for pull requests!
+
 ## Modern CSS Features
 Staying ahead of the curve, Winduum leverages modern CSS features, allowing you to harness the power of the latest specifications and improve overall styling capabilities. All of these are supported in current browsers.
 
