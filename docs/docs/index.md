@@ -84,11 +84,11 @@ This is meant only for basic usage, only basic styles are included for TailwindC
 To leverage the full functionality of the framework, [TailwindCSS](#tailwindcss) and build step is recommended.
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/winduum/dist/main.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.jsdelivr.net/npm/winduum/dist/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/winduum/dist/main.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/winduum/dist/tailwind.css" rel="stylesheet">
 <!--or-->
-<link href="https://cdn.jsdelivr.net/npm/winduum/src/base/index.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.jsdelivr.net/npm/winduum/src/ui/btn/index.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/winduum/src/base/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/winduum/src/ui/btn/index.css" rel="stylesheet">
 
 ```
 
