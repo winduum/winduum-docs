@@ -94,7 +94,7 @@ To leverage the full functionality of the framework, [TailwindCSS](#tailwindcss)
 
 ## Trying Winduum Online
 
-On [StackBlitz](https://stackblitz.com/) or [GithHub](https://github.com/winduum/winduum/tree/main/examples) with basic examples how to use it in [Vite](https://vitejs.dev/) and other frameworks.
+On [StackBlitz](https://stackblitz.com/) or [GitHub](https://github.com/winduum/winduum/tree/main/examples) with basic examples how to use it in [Vite](https://vitejs.dev/) and other frameworks.
 
 <style>
     #trying-winduum-online a {
