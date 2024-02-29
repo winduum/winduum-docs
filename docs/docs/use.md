@@ -1,5 +1,4 @@
 # About
-
 Winduum is a mix of words **Tailwind** _(Popular CSS utility framework)_ and **Tuum** _(Estonian word for "core")_.
 
 It essentially provides ways to leverage use of **CSS properties** as much possible and do more in CSS. Because we ❤️ CSS and this is a small modest CSS component framework.
@@ -10,13 +9,33 @@ As a CSS framework it provides beautifully styled accessible components. Which y
 
 Or you could only use [TailwindCSS plugin](/docs/config) with its benefits and make your own complex UX/UI project written mostly in CSS/SASS/LESS.
 
+## Why?
+The question inevitably arises: Why introduce yet another UI component library into the mix? Simply because Winduum is different in a few areas than the others.
+
+1. It focuses on web standards, accessibility and minimum javascript
+2. It's progressive, uses modern features and standards
+3. It's framework-agnostic, so it can be used in any scenario
+4. It's source code is plain CSS and JS, so it can be also used without a build step
+
 ## Framework-agnostic
 Winduum is **framework-agnostic**, so you are able to create your own components using your preferred framework. Javascript primitives can be also adapted in any framework.
 
-If there is interest, pre-built components may be developed for popular frameworks. Currently, only [`winduum-vue`](https://www.github.com/winduum/winduum-vue) and [`winduum-react`](https://www.github.com/winduum/winduum-react) are in the process of development and some components have usage and installation examples in the docs.
+If there is interest, pre-built components may be developed for popular frameworks. Currently, only [`winduum-vue`](https://www.github.com/winduum/winduum-vue) and [`winduum-react`](https://www.github.com/winduum/winduum-react) are in the process of development and most of the components have usage and installation examples in the docs.
+
+## Modern CSS Features
+Staying ahead of the curve, Winduum leverages modern CSS features, allowing you to harness the power of the latest specifications and improve overall styling capabilities. All of these are supported in current browsers.
+
+- **CSS Properties**
+- **CSS Logical Properties**
+- **CSS Nesting**
+- **Modern pseudo selectors** such as `:where`, `:is` and `:has`
+- **Modern CSS reset**
+- **Low specifity or layers**
+- **CSS color-mix**
+
+**Winduum** is all about accessibility and web standards that can be used in any framework.
 
 ## Naming
-
 In your projects it's recommended to prefix component classes for better clarity. Some of these are already used for various components.
 
 * **UI** - `ui-name` (ui components)

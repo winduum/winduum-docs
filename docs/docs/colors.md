@@ -109,15 +109,12 @@ Each color has also it's foreground variant with `-foreground` postfix. So you c
 
 ## Accent
 
-You can easily change accent color of any UI component. Because components in Winduum use `--color-accent` property as their color, rather than `--color-primary`. 
+The idea is that you should be able to set accent color via `accent-color` CSS property. It is [discussed](https://github.com/w3c/csswg-drafts/issues/5900) that there should be access to the color value of this property, e.g. via `AccentColor` or `AccentColorText`.
 
-So you still use primary color when needed and change accent only for elements you want.
-
-Accent color consist of two css properties:
-
-* <code>--color-accent</code> - color of the accent
-* <code>--color-accent-foreground</code> - foreground color of the accent
+Most of the components are using this idea via `--color-accent` and `--color-accent-foreground` as an alternative for their accent color.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/accent/btn.html"></iframe>
 
 <<< @/public/examples/accent/btn.html#body{}
+
+For example, this way you don't have to change background-color property for each component color variant, you just change the accent color.

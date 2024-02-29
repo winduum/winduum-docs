@@ -4,7 +4,7 @@ Theming in Winduum is really easy. All it takes is a few CSS properties. There a
 
 ## Default
 
-Each `color-mix` function also contains `--space` property, which you can change from sRGB to mix colors in different color spaces. You can use colors in any format you want.
+Each `color-mix` function also contains `--space` property, which you can change from `sRGB` to mix colors in different color spaces. You can use colors in any format you want.
 
 [`src/base/theme/default.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/default.css)
 
@@ -27,15 +27,9 @@ Better high range colors for P3 capable displays.
 ## Compatibility
 
 Since support for `color-mix`is not that great yet, you can still use `rgb` if you enable it in the [Config](/docs/config.html#settings-rgb). 
-In that case you have to use rgb variants for theming.
+In that case you have to use rgb variants for theming in your own components.
 
-* [`src/base/theme/default-rgb.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/default.css)
-* [`src/base/theme/dark-rgb.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/dark.css)
+* [`src/base/theme/default-rgb.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/default-rgb.css)
+* [`src/base/theme/dark-rgb.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/dark-rgb.css)
 
-If you prefer compatibility then some of the components include `-rgb.css` fallback (where `color-mix` is not used). So it's recommended to also include [`winduum/main-rgb.css`](https://github.com/winduum/winduum/blob/main/src/main-rgb.css) in your project for old browsers.
-You can add it like this, so it's only used for browsers that does not support `color-mix`:
-
-```css
-@import "winduum/src/main-rgb.css" supports(not (color: color-mix(in srgb, red 0%, red)));
-```
-
+For even better compatibility we plan to create a `postcss-color-mix-rgb` polyfill in the future which would rewrite the `color-mix` to `rgb` variants.

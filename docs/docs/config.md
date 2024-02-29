@@ -1,3 +1,9 @@
+# CSS properties
+
+Each property is defined in CSS in following path - [`src/base/config.css`](https://github.com/winduum/winduum/blob/main/src/base/config.css)
+
+<<< @/../node_modules/winduum/src/base/config.css
+
 # Tailwind CSS
 
 To add `winduum` to TailwindCSS, add folowing plugin to `tailwind.config.js` configuration file.
@@ -8,6 +14,7 @@ import winduum from 'winduum'
 export default {
   darkMode: 'class',
   content: [
+    './node_modules/winduum/src/**/*.js',
     './src/**/*.{js,html}'
   ],
   plugins: [
@@ -211,11 +218,3 @@ Example `animation-fade-in`:
 ```
 
 These are new media queries tokens that can be used with TailwindCSS, see more in [Breakpoints](layout/breakpoints)
-
-<br>
-
-# CSS properties
-
-Each property is defined in CSS in following path - [`src/base/config.css`](https://github.com/winduum/winduum/blob/main/src/base/config.css)
-
-<<< @/../node_modules/winduum/src/base/config.css
