@@ -82,3 +82,9 @@ export function Example() {
 <iframe onload="this.style.visibility = 'visible';" src="/examples/ui/progress/indeterminate.html"></iframe>
 
 <<< @/public/examples/ui/progress/indeterminate.html#body{}
+
+### Meter
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/progress/meter.html"></iframe>
+
+<<< @/public/examples/ui/progress/meter.html#body{}
