@@ -12,6 +12,10 @@
 * <LinkGh name="default" path="ui/link" />
 * <LinkGh name="interactive" path="ui/link" />
 
+### Props
+* <LinkGh name="default-props" path="ui/link" />
+* <LinkGh name="interactive-props" path="ui/link" />
+
 ### Installation
 Follow instructions for individual framework usage below
 

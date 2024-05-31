@@ -1,1 +1,3 @@
-@import url("../../node_modules/winduum/dist/main.css");
+@import "winduum/src/base/index.css";
+@import "winduum/src/ui/index.css";
+@import "winduum/src/components/index.css";
