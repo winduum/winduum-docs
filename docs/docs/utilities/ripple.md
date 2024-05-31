@@ -5,7 +5,6 @@ Use with [Button](/docs/ui/button) or any other component.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/ripple" />
 
-
 ## Usage
 
 ::: code-group

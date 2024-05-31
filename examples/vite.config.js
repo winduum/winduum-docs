@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import vituum from 'vituum'
 import liquid from '@vituum/vite-plugin-liquid'
 import postcss from '@vituum/vite-plugin-postcss'
-import postcssHasPseudo from 'css-has-pseudo'
 
 const htmlPlugin = () => {
     return {
@@ -28,10 +27,5 @@ export default defineConfig({
         manifest: false,
         modulePreload: false,
         outDir: resolve(process.cwd(), '../docs/public/examples')
-    },
-    css: {
-        postcss: {
-            plugins: [postcssHasPseudo()]
-        }
     }
 })
