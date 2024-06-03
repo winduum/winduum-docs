@@ -24,7 +24,7 @@ There are few types of colors with various areas of use. Colors are defined in [
     </div>
 </div>
 
-## Base
+## Main
 
 <div style="display:flex; gap: 1rem; flex-direction: column">
     <div style="display: flex; align-items: center; gap: 1.75rem;flex-wrap: wrap;">
