@@ -11,10 +11,10 @@ to run the animation or use your own animation styles.
 * [winduum](http://localhost:5174/docs/config.html#tailwind-css) (TailwindCSS v3 plugin)
 
 ## TailwindCSS v3
-You can add more via the `tailwind.config.js`, see [Config](/docs/config#animations) for more info.
+You can add more via the `tailwind.config.js`, see [Config](/docs/base/config#tailwind-css-v3) for more info.
 
 ## TailwindCSS v4
-You can add more via the `@theme` at-rule, see [Config](/docs/config#tailwind4) for more info.
+You can add more via the `@theme` at-rule, see [Config](/docs/base/config#tailwind-css-v4) for more info.
 
 ## Example
 ```html

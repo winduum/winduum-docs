@@ -1,17 +1,20 @@
 # Defaults
 Default styles or rules applied to certain HTML elements or pseudo-elements. These are very much optional.
 
-* [`src/base/default.css`](https://github.com/winduum/winduum/blob/main/src/base/default.css)
+* [`src/base/defaults.css`](https://github.com/winduum/winduum/blob/main/src/base/defaults.css)
 
 <<< @/../node_modules/winduum/src/base/defaults.css
 
-## Tailwind
+For TailwindCSS `v3` there are few rules such as resetting borders
+and applying `--tw-content` to all pseudo-elements and zero border to all elements or pseudo-elements.
 
-Applies `--tw-content` to all pseudo-elements and zero border to all elements or pseudo-elements.
+* [`src/base/defaults-tw.css`](https://github.com/winduum/winduum/blob/main/src/base/defaults-tw.css)
+  
+
 
 ##  Cursor
 
-Default `cursor: pointer` for clickable elements, you can change this globally via CSS property `--cursor` if you prefer more application like behaviour.
+Default `cursor: pointer` for clickable elements, you can change this globally via CSS property `--default-cursor` if you prefer more application like behavior.
 
 ## Svg
 Set the default size of an SVG as a small square if neither width nor height is specified.
@@ -37,13 +40,13 @@ Just a horizontal rule.
 
 ## Code
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/code.html"></iframe>
+<iframe src="/examples/code.html" class="visible"></iframe>
 
 <<< @/public/examples/code.html#body{}
 
 ## Kbd
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/kbd.html"></iframe>
+<iframe class="visible" src="/examples/kbd.html"></iframe>
 
 <<< @/public/examples/kbd.html#body{}
 

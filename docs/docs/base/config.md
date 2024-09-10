@@ -1,12 +1,26 @@
-# CSS properties
+# CSS config
 
-Each property is defined in CSS in following path - [`src/base/config.css`](https://github.com/winduum/winduum/blob/main/src/base/config.css)
+Each CSS property is defined in CSS in following path - [`src/base/config.css`](https://github.com/winduum/winduum/blob/main/src/base/config.css). 
+
+We are using naming conventions from TailwindCSS `v4`, 
+so you can use these properties in both current and future versions of TailwindCSS or without TailwindCSS.
 
 <<< @/../node_modules/winduum/src/base/config.css
 
-# Tailwind CSS
+## Tailwind CSS v4
+In the future version of TailwindCSS the configuration is done via CSS, so no plugin is necessary.
+Most of the config CSS properties are also part of the new version.
 
-To add `winduum` to TailwindCSS, add folowing plugin to `tailwind.config.js` configuration file.
+```css
+@import "tailwindcss/theme.css" layer(theme);
+@import "winduum/src/base/config/mask.css" layer(theme);
+@import "winduum/src/base/config/transition.css" layer(theme);
+@import "winduum/src/base/config/tw.css" layer(theme);
+```
+
+## Tailwind CSS v3
+
+To add `winduum` to TailwindCSS v3, add folowing plugin to `tailwind.config.js` configuration file.
 
 ```js
 import winduum from 'winduum'
@@ -33,19 +47,19 @@ This plugin disables by default following TailwindCSS corePlugins
 
 Winduum also exports useful helper functions you can use in your `tailwind.config.js`, see [`utils/tailwind.js`](https://github.com/winduum/winduum/blob/main/utils/tailwind.js) for more info.
 
-## settings.rgb
+### settings.rgb
 Include `-rgb` color variants. Learn more about this in [Compatibility](/docs/themes.html#compatibility) section.
 
 * **Type:** `boolean`
 * **Default:** `false`
 
-## settings.colorMix
+### settings.colorMix
 Use `color-mix` in color variants instead of rgb. Learn more about this in [Compatibility](/docs/themes.html#compatibility) section.
 
 * **Type:** `boolean`
 * **Default:** `true`
 
-## colors
+### colors
 * **Type:** `string[]`
 * **Default:** `['primary', 'accent', 'current',
   'warning', 'error', 'info', 'success', 'light', 'dark',
@@ -73,7 +87,7 @@ Example `text-primary`:
 }
 ```
 
-## fontFamily
+### fontFamily
 * **Type:** `string[]`
 * **Default:** `['primary', 'secondary']`
 
@@ -86,7 +100,7 @@ Example `font-primary`:
 }
 ```
 
-## fontWeight
+### fontWeight
 * **Type:** `string[]`
 * **Default:** `['light', 'normal', 'medium', 'semibold', 'bold', 'extrabold']`
 
@@ -99,7 +113,7 @@ Example `font-bold`:
 }
 ```
 
-## ease
+### ease
 * **Type:** `string[]`
 * **Default:** `['linear', 'in', 'out', 'in-out']`
 
@@ -112,7 +126,7 @@ Example `ease-linear`:
 }
 ```
 
-## zIndex
+### zIndex
 * **Type:** `number[]`
 * **Default:** `[10, 20, 30, 40, 50, 60]`
 
@@ -125,7 +139,7 @@ Example `z-10`:
 }
 ```
 
-## fontSize
+### fontSize
 * **Type:** `string[]`
 * **Default:** `['xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '3xl', '4xl', '5xl', '6xl', '7xl', '7xl', '8xl', '9xl']`
 
@@ -139,7 +153,7 @@ Example `text-md`:
 }
 ```
 
-## spacing
+### spacing
 * **Type:** `string[]`
 * **Default:** `['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl']`
 
@@ -160,7 +174,7 @@ Example `px-md`:
 }
 ```
 
-## borderRadius
+### borderRadius
 * **Type:** `string[]`
 * **Default:** `['xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', 'full']`
 
@@ -173,7 +187,7 @@ Example `rounded-md`:
 }
 ```
 
-## animations
+### animations
 * **Type:** `string[]`
 * **Default:** `['fade-in', 'fade-out', 'fade-in-down', 'fade-out-up', 'ripple', 'spin', 'move-indeterminate']`
 
@@ -186,7 +200,7 @@ Example `animation-fade-in`:
 }
 ```
 
-## mask
+### mask
 * **Type:** `string[]`
 * **Default:** `['check', 'radio', 'angle-up', 'angle-down']`
 
@@ -199,7 +213,7 @@ Example `animation-fade-in`:
 }
 ```
 
-## screens
+### screens
 * **Type:** `object`
 * **Default:** 
 ```js

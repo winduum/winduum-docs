@@ -82,7 +82,7 @@ export default defineConfig({
             },
             {
               text: 'About',
-              link: '/docs/use'
+              link: '/docs/about'
             },
             {
               text: 'Colors',
@@ -94,11 +94,11 @@ export default defineConfig({
             },
             {
               text: 'Grid',
-              link: '/docs/layout/grid'
+              link: '/docs/grid'
             },
             {
               text: 'Layers',
-              link: '/docs/layout/layers'
+              link: '/docs/layers'
             }
           ]
         },
@@ -107,31 +107,31 @@ export default defineConfig({
           items: [
             {
               text: 'Config',
-              link: '/docs/config'
+              link: '/docs/base/config'
             },
             {
               text: 'Theme',
-              link: '/docs/themes'
+              link: '/docs/base/theme'
             },
             {
               text: 'Reset',
-              link: '/docs/layout/reset'
+              link: '/docs/base/reset'
             },
             {
               text: 'Defaults',
-              link: '/docs/layout/defaults'
+              link: '/docs/base/defaults'
             },
             {
               text: 'Breakpoints',
-              link: '/docs/layout/breakpoints'
+              link: '/docs/base/breakpoints'
             },
             {
               text: 'Keyframes',
-              link: '/docs/layout/keyframes'
+              link: '/docs/base/keyframes'
             },
             {
               text: 'Transitions',
-              link: '/docs/layout/transitions'
+              link: '/docs/base/transitions'
             }
           ]
         },
