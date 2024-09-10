@@ -1,24 +1,24 @@
 # Image
 Default constrains for media elements such as `img`, `video`, `iframe`, `object` or `svg`
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/image" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/image" />
 
 ### Usage
 
 ```css
-@import "winduum/src/ui/image/index.css" layer(components);
+@import "winduum/src/components/image/index.css" layer(components);
 ```
 
 ### Variants
-* <LinkGh name="default" path="ui/image" />
-* <LinkGh name="avatar" path="ui/image" />
+* <LinkGh name="default" path="components/image" />
+* <LinkGh name="avatar" path="components/image" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/image" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/image" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/image" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/image" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/image" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/image" />
 
 ## Examples
 
@@ -30,7 +30,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/image/ratio.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiImage } from '@/components/ui/image'
+    import { UiImage } from '@/components/image'
 </script>
 
 <template>
@@ -40,7 +40,7 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiImage } from '@/components/ui/image'
+import { UiImage } from '@/components/image'
 
 export function Example() {
     return (

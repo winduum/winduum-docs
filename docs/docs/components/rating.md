@@ -1,28 +1,28 @@
 # Rating
 <br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/rating" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/rating" />
 
 ### Usage
 
 ```css
-@import "winduum/src/ui/rating/index.css" layer(components);
+@import "winduum/src/components/rating/index.css" layer(components);
 ```
 
 ### Variants
-* <LinkGh name="default" path="ui/rating" />
+* <LinkGh name="default" path="components/rating" />
 
 ### Props
-* <LinkGh name="default-props" path="ui/rating" />
+* <LinkGh name="default-props" path="components/rating" />
 
 ### Tokens
-* <LinkGh name="invalid" path="ui/rating" />
+* <LinkGh name="invalid" path="components/rating" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/rating" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/rating" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/rating" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/rating" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/rating" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/rating" />
 
 ## Examples
 
@@ -34,7 +34,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/rating.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiRating } from '@/components/ui/rating'
+    import { UiRating } from '@/components/rating'
 </script>
 
 <template>
@@ -48,7 +48,7 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiRating } from '@/components/ui/rating'
+import { UiRating } from '@/components/rating'
 
 export function Example() {
     return (

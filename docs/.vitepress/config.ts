@@ -74,7 +74,7 @@ export default defineConfig({
     sidebar: {
       '/docs/': [
         {
-          text: '🚀&nbsp;&nbsp; Get started',
+          text: 'Get started',
           items: [
             {
               text: 'Install',
@@ -85,26 +85,34 @@ export default defineConfig({
               link: '/docs/use'
             },
             {
-              text: 'Config',
-              link: '/docs/config'
-            },
-            {
               text: 'Colors',
               link: '/docs/colors'
             },
             {
-              text: 'Themes',
-              link: '/docs/themes'
-            },
-            {
               text: 'Icons',
               link: '/docs/icons'
+            },
+            {
+              text: 'Grid',
+              link: '/docs/layout/grid'
+            },
+            {
+              text: 'Layers',
+              link: '/docs/layout/layers'
             }
           ]
         },
         {
-          text: '📏&nbsp;&nbsp; Layout',
+          text: 'Base',
           items: [
+            {
+              text: 'Config',
+              link: '/docs/config'
+            },
+            {
+              text: 'Theme',
+              link: '/docs/themes'
+            },
             {
               text: 'Reset',
               link: '/docs/layout/reset'
@@ -122,147 +130,25 @@ export default defineConfig({
               link: '/docs/layout/keyframes'
             },
             {
-              text: 'Grid',
-              link: '/docs/layout/grid'
-            },
-            {
-              text: 'Layers',
-              link: '/docs/layout/layers'
+              text: 'Transitions',
+              link: '/docs/layout/transitions'
             }
           ]
         },
         {
-          text: '✨&nbsp;&nbsp; Utilities',
-          items: [
-            {
-              text: 'Animation',
-              link: '/docs/utilities/animation'
-            },
-            {
-              text: 'Container',
-              link: '/docs/utilities/container'
-            },
-            {
-              text: 'Divide Gap',
-              link: '/docs/utilities/divide-gap'
-            },
-            {
-              text: 'Divider',
-              link: '/docs/utilities/divider'
-            },
-            {
-              text: 'Dot',
-              link: '/docs/utilities/dot'
-            },
-            {
-              text: 'Flex',
-              link: '/docs/utilities/flex'
-            },
-            {
-              text: 'Mask',
-              link: '/docs/utilities/mask'
-            },
-            {
-              text: 'Skeleton',
-              link: '/docs/utilities/skeleton'
-            },
-            {
-              text: 'Swap',
-              link: '/docs/utilities/swap'
-            },
-            {
-              text: 'Ripple',
-              link: '/docs/utilities/ripple'
-            },
-            {
-              text: 'Underline',
-              link: '/docs/utilities/underline'
-            }
-          ]
-        },
-        {
-          text: '🎨&nbsp;&nbsp; UI',
+          text: 'Components',
           items: [
             {
               text: 'Badge',
-              link: '/docs/ui/badge'
+              link: '/docs/components/badge'
             },
-            {
-              text: 'Button',
-              link: '/docs/ui/button'
-            },
-            {
-              text: 'Check',
-              link: '/docs/ui/check'
-            },
-            {
-              text: 'Color',
-              link: '/docs/ui/color'
-            },
-            {
-              text: 'Control',
-              link: '/docs/ui/control'
-            },
-            {
-              text: 'Group',
-              link: '/docs/ui/group'
-            },
-            {
-              text: 'Heading',
-              link: '/docs/ui/heading'
-            },
-            {
-              text: 'Image',
-              link: '/docs/ui/image'
-            },
-            {
-              text: 'Info',
-              link: '/docs/ui/info'
-            },
-            {
-              text: 'Label',
-              link: '/docs/ui/label'
-            },
-            {
-              text: 'Link',
-              link: '/docs/ui/link'
-            },
-            {
-              text: 'Notice',
-              link: '/docs/ui/notice'
-            },
-            {
-              text: 'Progress',
-              link: '/docs/ui/progress'
-            },
-            {
-              text: 'Range',
-              link: '/docs/ui/range'
-            },
-            {
-              text: 'Rating',
-              link: '/docs/ui/rating'
-            },
-            {
-              text: 'Switch',
-              link: '/docs/ui/switch'
-            },
-            {
-              text: 'Text',
-              link: '/docs/ui/text'
-            },
-            {
-              text: 'Title',
-              link: '/docs/ui/title'
-            }
-          ]
-        },
-        {
-          text: '📦&nbsp;&nbsp; ️Components',
-          items: [
             {
               text: 'Breadcrumb',
               link: '/docs/components/breadcrumb'
+            },
+            {
+              text: 'Button',
+              link: '/docs/components/button'
             },
             {
               text: 'Card',
@@ -273,8 +159,20 @@ export default defineConfig({
               link: '/docs/components/carousel'
             },
             {
+              text: 'Check',
+              link: '/docs/components/check'
+            },
+            {
+              text: 'Color',
+              link: '/docs/components/color'
+            },
+            {
               text: 'Compare',
               link: '/docs/components/compare'
+            },
+            {
+              text: 'Control',
+              link: '/docs/components/control'
             },
             {
               text: 'Details',
@@ -297,12 +195,56 @@ export default defineConfig({
               link: '/docs/components/form'
             },
             {
+              text: 'Group',
+              link: '/docs/components/group'
+            },
+            {
+              text: 'Heading',
+              link: '/docs/components/heading'
+            },
+            {
+              text: 'Image',
+              link: '/docs/components/image'
+            },
+            {
+              text: 'Info',
+              link: '/docs/components/info'
+            },
+            {
+              text: 'Label',
+              link: '/docs/components/label'
+            },
+            {
+              text: 'Link',
+              link: '/docs/components/link'
+            },
+            {
+              text: 'Notice',
+              link: '/docs/components/notice'
+            },
+            {
               text: 'Pagination',
               link: '/docs/components/pagination'
             },
             {
               text: 'Popover',
               link: '/docs/components/popover'
+            },
+            {
+              text: 'Progress',
+              link: '/docs/components/progress'
+            },
+            {
+              text: 'Range',
+              link: '/docs/components/range'
+            },
+            {
+              text: 'Rating',
+              link: '/docs/components/rating'
+            },
+            {
+              text: 'Switch',
+              link: '/docs/components/switch'
             },
             {
               text: 'Table',
@@ -313,12 +255,66 @@ export default defineConfig({
               link: '/docs/components/tabs'
             },
             {
+              text: 'Text',
+              link: '/docs/components/text'
+            },
+            {
+              text: 'Title',
+              link: '/docs/components/title'
+            },
+            {
               text: 'Toaster',
               link: '/docs/components/toaster'
             },
             {
               text: 'Tooltip',
               link: '/docs/components/tooltip'
+            }
+          ]
+        },
+
+        {
+          text: 'Utilities',
+          items: [
+            {
+              text: 'Animation',
+              link: '/docs/utilities/animation'
+            },
+            {
+              text: 'Container',
+              link: '/docs/utilities/container'
+            },
+            {
+              text: 'Divide Gap',
+              link: '/docs/utilities/divide-gap'
+            },
+            {
+              text: 'Divider',
+              link: '/docs/utilities/divider'
+            },
+            {
+              text: 'Dot',
+              link: '/docs/utilities/dot'
+            },
+            {
+              text: 'Mask',
+              link: '/docs/utilities/mask'
+            },
+            {
+              text: 'Skeleton',
+              link: '/docs/utilities/skeleton'
+            },
+            {
+              text: 'Swap',
+              link: '/docs/utilities/swap'
+            },
+            {
+              text: 'Ripple',
+              link: '/docs/utilities/ripple'
+            },
+            {
+              text: 'Underline',
+              link: '/docs/utilities/underline'
             }
           ]
         }

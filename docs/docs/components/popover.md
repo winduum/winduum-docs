@@ -14,7 +14,7 @@ Popover can be used for dropdowns and other popovers when element is clicked and
 <script setup>
     import { ref } from 'vue'
     import { Popover, PopoverContent } from '@/components/popover'
-    import { UiBtn } from '@/components/ui/btn'
+    import { UiBtn } from '@/components/btn'
 </script>
 
 <template>

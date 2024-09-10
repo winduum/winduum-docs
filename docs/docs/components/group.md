@@ -2,26 +2,26 @@
 
 Group common ui components such as [Button](/docs/ui/button), [Badge](/docs/ui/badge) or [Control](/docs/ui/control) together.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/group" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/group" />
 
 ### Usage
 
 ```css
-@import "winduum/src/ui/group/index.css" layer(components);
+@import "winduum/src/components/group/index.css" layer(components);
 ```
 
 ### Variants
-* <LinkGh name="default" path="ui/group" />
+* <LinkGh name="default" path="components/group" />
   
 ### Tokens
-* <LinkGh name="vertical" path="ui/group" />
+* <LinkGh name="vertical" path="components/group" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/group" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/group" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/group" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/group" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/group" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/group" />
 
 ## Examples
 
@@ -33,8 +33,8 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/btn/group.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiGroup } from '@/components/ui/group'
-    import { UiBtn } from '@/components/ui/btn'
+    import { UiGroup } from '@/components/group'
+    import { UiBtn } from '@/components/btn'
 </script>
 
 <template>
@@ -46,8 +46,8 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiGroup } from '@/components/ui/group'
-import { UiBtn } from '@/components/ui/btn'
+import { UiGroup } from '@/components/group'
+import { UiBtn } from '@/components/btn'
 
 export function Example() {
     return (

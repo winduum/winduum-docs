@@ -140,7 +140,7 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ##### infoContent
 * **Type:** `string`
-* **Default:** `<div class="ui-info text-error validity"></div>`
+* **Default:** `<div class="x-info text-error validity"></div>`
 
 ---
 

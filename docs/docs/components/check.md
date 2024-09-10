@@ -1,31 +1,31 @@
 # Check
 Check supports `checkbox` and `radio` **input** types
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/check" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/check" />
 
 ### Usage
 
 ```css
-@import "winduum/src/ui/check/index.css" layer(components);
+@import "winduum/src/components/check/index.css" layer(components);
 ```
 
 ### Variants
-* <LinkGh name="default" path="ui/check" />
-* <LinkGh name="interactive" path="ui/check" />
+* <LinkGh name="default" path="components/check" />
+* <LinkGh name="interactive" path="components/check" />
 
 ### Tokens
-* <LinkGh name="invalid" path="ui/check" />
+* <LinkGh name="invalid" path="components/check" />
 
 ### Props
-* <LinkGh name="default-props" path="ui/check" />
-* <LinkGh name="interactive-props" path="ui/check" />
+* <LinkGh name="default-props" path="components/check" />
+* <LinkGh name="interactive-props" path="components/check" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/check" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/check" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/check" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/check" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/check" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/check" />
 
 ## Examples
 
@@ -37,7 +37,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/checkbox/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiCheck } from '@/components/ui/check'
+    import { UiCheck } from '@/components/check'
 </script>
 
 <template>
@@ -51,7 +51,7 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiCheck } from "@/components/ui/check"
+import { UiCheck } from "@/components/check"
 
 export function Example() {
     return (
@@ -75,7 +75,7 @@ export function Example() {
 <<< @/public/examples/ui/radio/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiCheck } from '@/components/ui/check'
+    import { UiCheck } from '@/components/check'
 </script>
 
 <template>
@@ -89,7 +89,7 @@ export function Example() {
 </template>
 ```
 ```jsx
-import { UiCheck } from "@/components/ui/check"
+import { UiCheck } from "@/components/check"
 
 export function Example() {
     return (

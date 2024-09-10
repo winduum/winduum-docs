@@ -9,42 +9,42 @@ Other input types are supported in other components
 * `range` - included in [Range](/docs/ui/range)
 * `button`, `reset`, `submit` - included in [Button](/docs/ui/button)
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/control" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/control" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/control" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/control" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/control" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/control" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/control" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/control" />
 
 ### Usage
 
 ```css
-@import "winduum/src/ui/control/index.css" layer(components);
+@import "winduum/src/components/control/index.css" layer(components);
 ```
 
 ### Variants
-* <LinkGh name="default" path="ui/control" />
-* <LinkGh name="interactive" path="ui/control" />
-* <LinkGh name="floating" path="ui/control" />
-* <LinkGh name="floating-interactive" path="ui/control" />
-* <LinkGh name="file" path="ui/control" />
-* <LinkGh name="color" path="ui/control" />
-* <LinkGh name="select" path="ui/control" />
-* <LinkGh name="select-multiple" path="ui/control" />
-* <LinkGh name="icon" path="ui/control" />
+* <LinkGh name="default" path="components/control" />
+* <LinkGh name="interactive" path="components/control" />
+* <LinkGh name="floating" path="components/control" />
+* <LinkGh name="floating-interactive" path="components/control" />
+* <LinkGh name="file" path="components/control" />
+* <LinkGh name="color" path="components/control" />
+* <LinkGh name="select" path="components/control" />
+* <LinkGh name="select-multiple" path="components/control" />
+* <LinkGh name="icon" path="components/control" />
 
 ### Props
-* <LinkGh name="default-props" path="ui/control" />
-* <LinkGh name="interactive-props" path="ui/control" />
-* <LinkGh name="floating-props" path="ui/control" />
-* <LinkGh name="color-props" path="ui/control" />
-* <LinkGh name="select-props" path="ui/control" />
-* <LinkGh name="icon-props" path="ui/control" />
+* <LinkGh name="default-props" path="components/control" />
+* <LinkGh name="interactive-props" path="components/control" />
+* <LinkGh name="floating-props" path="components/control" />
+* <LinkGh name="color-props" path="components/control" />
+* <LinkGh name="select-props" path="components/control" />
+* <LinkGh name="icon-props" path="components/control" />
 
 ### Tokens
-* <LinkGh name="invalid" path="ui/control" />
+* <LinkGh name="invalid" path="components/control" />
 
 ##  Examples
 
@@ -56,7 +56,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/input/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiControl } from '@/components/ui/control'
+    import { UiControl } from '@/components/control'
 </script>
 
 <template>
@@ -66,7 +66,7 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiControl } from "@/components/ui/control"
+import { UiControl } from "@/components/control"
 
 export function Example() {
     return (

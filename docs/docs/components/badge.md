@@ -1,35 +1,35 @@
 # Badge
 <br>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/badge" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/badge" />
 
 ### Usage
 
 ```css
-@import "winduum/src/ui/badge/index.css" layer(components);
+@import "winduum/src/components/badge/index.css" layer(components);
 ```
 
 ### Variants
 
-* <LinkGh name="default" path="ui/badge" />
+* <LinkGh name="default" path="components/badge" />
 
 ### Tokens
-* `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `muted` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `square` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `circle` <a href="https://github.com/winduum/winduum/blob/main/src/ui/badge/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `muted` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `square` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `circle` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Props
-* <LinkGh name="default-props" path="ui/badge" />
+* <LinkGh name="default" path="components/badge/props" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/badge" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/badge" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/badge" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/badge" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/badge" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/badge" />
 
 ## Examples
 
@@ -41,7 +41,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/badge/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiBadge } from '@/components/ui/badge'
+    import { UiBadge } from '@/components/badge'
 </script>
 
 <template>
@@ -50,7 +50,7 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiBadge } from "@/components/ui/badge"
+import { UiBadge } from "@/components/badge"
 
 export function Example() {
     return (

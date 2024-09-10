@@ -1,30 +1,30 @@
 # Title
 For common title styles that you can manage from one component across project.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/title" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/title" />
 
 ### Usage
 
 ```css
-@import "winduum/src/ui/title/index.css" layer(components);
+@import "winduum/src/components/title/index.css" layer(components);
 ```
 
 ### Variants
-* <LinkGh name="default" path="ui/title" />
+* <LinkGh name="default" path="components/title" />
 
 ### Props
-* <LinkGh name="default-props" path="ui/title" />
+* <LinkGh name="default-props" path="components/title" />
 
 ### Tokens
-* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/title/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/title/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/title/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/title/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/title" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/title" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/title" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/title" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/title" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/title" />
 
 ## Examples
 
@@ -36,7 +36,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/title/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiTitle } from '@/components/ui/title'
+    import { UiTitle } from '@/components/title'
 </script>
 
 <template>
@@ -44,7 +44,7 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiTitle } from '@/components/ui/title'
+import { UiTitle } from '@/components/title'
 
 export function Example() {
     return (

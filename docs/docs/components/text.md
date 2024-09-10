@@ -1,7 +1,7 @@
 # Text
 Typographic defaults for common wysiwyg content. It's an alternative to [prose](https://tailwindcss.com/docs/typography-plugin).
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/text" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/text" />
 
 ### Usage
 
@@ -10,17 +10,17 @@ Typographic defaults for common wysiwyg content. It's an alternative to [prose](
 ```
 
 ### Variants
-* <LinkGh name="default" path="ui/text" />
+* <LinkGh name="default" path="components/text" />
 
 ### Props
-* <LinkGh name="default-props" path="ui/text" />
+* <LinkGh name="default-props" path="components/text" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/text" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/text" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/text" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/text" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/text" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/text" />
 
 ## Examples
 
@@ -32,11 +32,11 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/text/text.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiText } from '@/components/ui/text'
+    import { UiText } from '@/components/text'
 </script>
 
 <template>
-    <UiText class="ui-text">
+    <UiText class="x-text">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur
             metus. In bibendum nisi et dui <a href="#">sagittis efficitur</a>. Proin porttitor diam at quam
             finibus, quis porttitor turpis ullamcorper. Quisque iaculis imperdiet nunc in
@@ -51,11 +51,11 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiText } from '@/components/ui/text'
+import { UiText } from '@/components/text'
 
 export function Example() {
     return (
-        <UiText class="ui-text">
+        <UiText class="x-text">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur
                 metus. In bibendum nisi et dui <a href="#">sagittis efficitur</a>. Proin porttitor diam at quam
                 finibus, quis porttitor turpis ullamcorper. Quisque iaculis imperdiet nunc in

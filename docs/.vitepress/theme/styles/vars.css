@@ -195,10 +195,6 @@ iframe {
   background-color: var(--vp-c-bg-soft);
 }
 
-#VPSidebarNav .text {
-  font-size: 15px;
-}
-
 #VPContent {
   display: flex;
 }
@@ -229,9 +225,6 @@ em {
 }
 
 
-.VPSidebar .VPSidebarItem .items {
-  padding-left: 24px;
-}
 
 a[href*="?soon"] {
   pointer-events: none;

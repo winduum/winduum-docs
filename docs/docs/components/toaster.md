@@ -21,7 +21,7 @@ document.querySelector('#insertToast').addEventListener('click', () => {
     insertToast(document.querySelector('.c-toaster'), {
         title: 'Hello toast!',
         text: 'Amazing toast!',
-        end: `<button class="ui-btn muted ml-auto" data-action="closeToast">Close</button>`
+        end: `<button class="x-btn muted ml-auto" data-action="closeToast">Close</button>`
     })
 
     const closeToastButton = document.querySelectorAll('[data-action="closeToast"]')[document.querySelectorAll('[data-action="closeToast"]').length - 1]
@@ -46,12 +46,12 @@ Follow instructions for individual framework usage below
 ## Example
 
 <div class="iframe">
-    <button class="ui-btn" id="showToast">Show toast</button>
+    <button class="x-btn" id="showToast">Show toast</button>
 </div>
 
 ::: code-group
 ```html
-<button class="ui-btn" id="insertToast">Show toast</button>
+<button class="x-btn" id="insertToast">Show toast</button>
 
 <script type="module">
     import { insertToaster, insertToast, closeToast } from 'winduum/src/components/toaster'
@@ -64,7 +64,7 @@ Follow instructions for individual framework usage below
         insertToast(document.querySelector('.c-toaster'), {
             title: 'Hello toast!',
             text: 'Amazing toast!',
-            end: `<button class="ui-btn muted ml-auto" data-action="closeToast">Close</button>`
+            end: `<button class="x-btn muted ml-auto" data-action="closeToast">Close</button>`
         })
 
         const closeToastButton = document.querySelectorAll('[data-action="closeToast"]')[document.querySelectorAll('[data-action="closeToast"]').length - 1]

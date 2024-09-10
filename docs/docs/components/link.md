@@ -1,27 +1,27 @@
 # Link
 <br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/link" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/link" />
 
 ### Usage
 
 ```css
-@import "winduum/src/ui/link/index.css" layer(components);
+@import "winduum/src/components/link/index.css" layer(components);
 ```
 
 ### Variants
-* <LinkGh name="default" path="ui/link" />
-* <LinkGh name="interactive" path="ui/link" />
+* <LinkGh name="default" path="components/link" />
+* <LinkGh name="interactive" path="components/link" />
 
 ### Props
-* <LinkGh name="default-props" path="ui/link" />
-* <LinkGh name="interactive-props" path="ui/link" />
+* <LinkGh name="default-props" path="components/link" />
+* <LinkGh name="interactive-props" path="components/link" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/link" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/link" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/link" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/link" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/link" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/link" />
 
 ## Examples
 
@@ -33,7 +33,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/link/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiLink } from '@/components/ui/link'
+    import { UiLink } from '@/components/link'
 </script>
 
 <template>
@@ -46,7 +46,7 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiLink } from '@/components/ui/link'
+import { UiLink } from '@/components/link'
 
 export function Example() {
     return (

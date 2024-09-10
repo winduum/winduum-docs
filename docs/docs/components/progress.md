@@ -1,31 +1,31 @@
 # Progress
 Displays progress with native HTML5 tags `progress` or `meter`
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/progress" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/progress" />
 
 ### Usage
 
 ```css
-@import "winduum/src/ui/progress/index.css" layer(components);
+@import "winduum/src/components/progress/index.css" layer(components);
 ```
 
 ### Variants
-* <LinkGh name="default" path="ui/progress" />
-* <LinkGh name="meter" path="ui/progress" />
+* <LinkGh name="default" path="components/progress" />
+* <LinkGh name="meter" path="components/progress" />
 
 ### Props
-* <LinkGh name="default-props" path="ui/progress" />
+* <LinkGh name="default-props" path="components/progress" />
 
 ### Tokens
-* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/ui/progress/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/ui/progress/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/progress/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/progress/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/progress" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/progress" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/progress" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/progress" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/progress" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/progress" />
 
 ## Examples
 
@@ -37,7 +37,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/progress/colors.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiProgress } from '@/components/ui/progress'
+    import { UiProgress } from '@/components/progress'
 </script>
 
 <template>
@@ -49,7 +49,7 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiProgress } from '@/components/ui/progress'
+import { UiProgress } from '@/components/progress'
 
 export function Example() {
     return (

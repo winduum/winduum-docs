@@ -11,7 +11,7 @@ If you want to write CSS [per-component](https://tailwindcss.com/docs/adding-cus
 @layer winduum-base, winduum-components, winduum-utilities, winduum-variants;
 
 @import "winduum/src/base/index.css" layer(base);
-@import "winduum/src/ui/index.css" layer(components);
+@import "winduum/src/components/index.css" layer(components);
 @import "winduum/src/components/index.css" layer(components);
 @import "winduum/src/utilities/index.css" layer(utilities);
 

@@ -1,16 +1,16 @@
 # Range
 Accessible range slider that allows easy selection of a value by sliding a handle.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/range" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/range" />
 
 ### Usage
 
 ::: code-group
 ```css
-@import "winduum/src/ui/range/index.css" layer(components);
+@import "winduum/src/components/range/index.css" layer(components);
 ```
 ```js
-import { setValue } from 'winduum/src/ui/range'
+import { setValue } from 'winduum/src/components/range'
 
 const rangeSlider = document.querySelector('#rangeSlider')
 
@@ -20,21 +20,21 @@ rangeSlider.addEventListener('input', ({ currentTarget }) => setValue(currentTar
 :::
 
 ### Variants
-* `default` <a href="https://github.com/winduum/winduum/blob/main/src/ui/range/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `multi` <a href="https://github.com/winduum/winduum/blob/main/src/ui/range/multi.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `default` <a href="https://github.com/winduum/winduum/blob/main/src/components/range/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `multi` <a href="https://github.com/winduum/winduum/blob/main/src/components/range/multi.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Props
-* <LinkGh name="default-props" path="ui/range" />
+* <LinkGh name="default-props" path="components/range" />
 
 ### Tokens
-* `vertical` <a href="https://github.com/winduum/winduum/blob/main/src/ui/range/vertical.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `vertical` <a href="https://github.com/winduum/winduum/blob/main/src/components/range/vertical.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/range" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/range" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/range" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/range" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/range" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/range" />
 
 ## Examples
 
@@ -47,7 +47,7 @@ Follow instructions for individual framework usage below
 <<< @/../examples/src/pages/ui/range/default.liquid#js{} [js]
 ```vue
 <script setup lang="ts">
-    import { UiRange } from '@/components/ui/progress'
+    import { UiRange } from '@/components/progress'
 </script>
 
 <template>
@@ -57,7 +57,7 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiProgress } from '@/components/ui/progress'
+import { UiProgress } from '@/components/progress'
 
 export function Example() {
     return (

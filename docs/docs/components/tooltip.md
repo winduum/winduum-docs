@@ -13,7 +13,7 @@ Tooltip can be used for a little info hint on hover or focus.
 ```vue
 <script setup>
     import { Tooltip } from '@/components/tooltip'
-    import { UiBtn } from '@/components/ui/btn'
+    import { UiBtn } from '@/components/btn'
 </script>
 
 <template>

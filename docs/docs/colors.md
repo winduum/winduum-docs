@@ -115,6 +115,6 @@ Most of the components are using this idea via `--color-accent` and `--color-acc
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/accent/btn.html"></iframe>
 
-<<< @/public/examples/accent/btn.html#body{}
+[//]: # (<<< @/public/examples/accent/btn.html#body{})
 
 For example, this way you don't have to change background-color property for each component color variant, you just change the accent color.

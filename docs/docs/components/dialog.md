@@ -20,8 +20,8 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 <script setup>
     import { ref } from 'vue'
     import { Dialog, DialogContent } from '@/components/dialog'
-    import { UiHeading } from '@/components/ui/heading'
-    import { UiBtn } from '@/components/ui/btn'
+    import { UiHeading } from '@/components/heading'
+    import { UiBtn } from '@/components/btn'
 
     const dialogMain = ref()
 </script>
@@ -59,22 +59,22 @@ Follow instructions for individual framework usage below
 ## Example
 
 <div class="iframe">
-    <button class="ui-btn" id="showDialog">Show dialog</button>
+    <button class="x-btn" id="showDialog">Show dialog</button>
 </div>
 
 ::: code-group
 ```html
-<button class="ui-btn" id="showDialog">Show dialog</button>
+<button class="x-btn" id="showDialog">Show dialog</button>
 
 <dialog class="c-dialog">
     <form class="c-dialog-content" method="dialog">
-        <div class="ui-heading">Example dialog</div>
+        <div class="x-heading">Example dialog</div>
         <br>
-        <div class="ui-text">
+        <div class="x-text">
             <p>You can close this dialog with Esc, clicking outside, or by form submit</p>
         </div>
         <br>
-        <button class="ui-btn">Close dialog</button>
+        <button class="x-btn">Close dialog</button>
     </form>
 </dialog>
 
@@ -90,8 +90,8 @@ Follow instructions for individual framework usage below
 <script setup>
     import { ref } from 'vue'
     import { Dialog, DialogContent } from '@/components/dialog'
-    import { UiHeading } from '@/components/ui/heading'
-    import { UiBtn } from '@/components/ui/btn'
+    import { UiHeading } from '@/components/heading'
+    import { UiBtn } from '@/components/btn'
 
     const dialogMain = ref()
 </script>

@@ -31,13 +31,13 @@ Follow instructions for individual framework usage below
 ### Left
 
 <div class="iframe">
-    <button class="ui-btn" id="showDrawerLeftElement">Show left drawer</button>
+    <button class="x-btn" id="showDrawerLeftElement">Show left drawer</button>
 </div>
 
 <div class="c-drawer invisible" id="drawerLeftElement" inert>
     <div class="c-drawer-content p-6" style="max-width: 24rem; border-right: 1px solid var(--color-body-secondary);">
         <div>Drawer content</div>
-        <button class="ui-btn muted mt-4" id="closeDrawerLeftElement">Close drawer</button>
+        <button class="x-btn muted mt-4" id="closeDrawerLeftElement">Close drawer</button>
     </div>
 </div>
 
@@ -49,13 +49,13 @@ Follow instructions for individual framework usage below
 ### Right
 
 <div class="iframe">
-    <button class="ui-btn" id="showDrawerRightElement">Show right drawer</button>
+    <button class="x-btn" id="showDrawerRightElement">Show right drawer</button>
 </div>
 
 <div class="c-drawer invisible after:-order-last" id="drawerRightElement" inert>
     <div class="c-drawer-content p-6" style="max-width: 24rem; border-left: 1px solid var(--color-body-secondary);">
         <div>Drawer content</div>
-        <button class="ui-btn muted mt-4" id="closeDrawerRightElement">Close drawer</button>
+        <button class="x-btn muted mt-4" id="closeDrawerRightElement">Close drawer</button>
     </div>
 </div>
 
@@ -68,13 +68,13 @@ Follow instructions for individual framework usage below
 ### Bottom
 
 <div class="iframe">
-    <button class="ui-btn" id="showDrawerBottomElement">Show bottom drawer</button>
+    <button class="x-btn" id="showDrawerBottomElement">Show bottom drawer</button>
 </div>
 
 <div class="c-drawer invisible flex-col after:-order-last" id="drawerBottomElement" inert>
     <div class="c-drawer-content p-6" style="max-height: 24rem; border-top: 1px solid var(--color-body-secondary);">
         <div>Drawer content</div>
-        <button class="ui-btn muted mt-4" id="closeDrawerBottomElement">Close drawer</button>
+        <button class="x-btn muted mt-4" id="closeDrawerBottomElement">Close drawer</button>
     </div>
 </div>
 
@@ -86,13 +86,13 @@ Follow instructions for individual framework usage below
 ### Top
 
 <div class="iframe">
-    <button class="ui-btn" id="showDrawerTopElement">Show top drawer</button>
+    <button class="x-btn" id="showDrawerTopElement">Show top drawer</button>
 </div>
 
 <div class="c-drawer invisible flex-col" id="drawerTopElement" inert>
     <div class="c-drawer-content p-6" style="max-height: 24rem; border-bottom: 1px solid var(--color-body-secondary);">
         <div>Drawer content</div>
-        <button class="ui-btn muted mt-4" id="closeDrawerTopElement">Close drawer</button>
+        <button class="x-btn muted mt-4" id="closeDrawerTopElement">Close drawer</button>
     </div>
 </div>
 
@@ -107,13 +107,13 @@ Follow instructions for individual framework usage below
 Moves the drawer to top layer, traps focus in and can be closed with `esc`.
 
 <div class="iframe">
-    <button class="ui-btn" id="showDrawerDialogElement">Show dialog drawer</button>
+    <button class="x-btn" id="showDrawerDialogElement">Show dialog drawer</button>
 </div>
 
 <dialog class="c-drawer invisible after:-order-last" id="drawerDialogElement" inert>
     <div class="c-drawer-content p-6" style="max-width: 24rem; border-left: 1px solid var(--color-body-secondary);">
         <div>Drawer content</div>
-        <button class="ui-btn muted mt-4" id="closeDrawerDialogElement">Close drawer</button>
+        <button class="x-btn muted mt-4" id="closeDrawerDialogElement">Close drawer</button>
     </div>
 </dialog>
 

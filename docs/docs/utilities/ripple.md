@@ -22,7 +22,7 @@ document.querySelector('#showRipple').addEventListener('click', (e) => {
 <script setup>
     import { ref } from 'vue'
     import { showRipple } from 'winduum/src/utilities/ripple'
-    import { UiBtn } from '@/components/ui/btn'
+    import { UiBtn } from '@/components/btn'
 </script>
 
 <template>
@@ -34,12 +34,12 @@ document.querySelector('#showRipple').addEventListener('click', (e) => {
 ## Example
 
 <div class="iframe">
-    <button class="ui-btn" id="showRipple">Show ripple</button>
+    <button class="x-btn" id="showRipple">Show ripple</button>
 </div>
 
 ::: code-group
 ```html
-<button class="ui-btn" id="showRipple">Show ripple</button>
+<button class="x-btn" id="showRipple">Show ripple</button>
 ```
 ```js
 import { showRipple } from 'winduum/src/utilities/ripple'

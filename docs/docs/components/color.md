@@ -1,28 +1,28 @@
 # Color
 Color supports `checkbox` and `radio` **input** types for displaying selected color.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/color" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/color" />
 
 ### Usage
 
 ```css
-@import "winduum/src/ui/color/index.css" layer(components);
+@import "winduum/src/components/color/index.css" layer(components);
 ```
 
 ### Variants
-* <LinkGh name="default" path="ui/color" />
-* <LinkGh name="interactive" path="ui/color" />
+* <LinkGh name="default" path="components/color" />
+* <LinkGh name="interactive" path="components/color" />
 
 ### Props
-* <LinkGh name="default-props" path="ui/color" />
-* <LinkGh name="interactive-props" path="ui/color" />
+* <LinkGh name="default-props" path="components/color" />
+* <LinkGh name="interactive-props" path="components/color" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/color" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/color" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/color" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/color" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/color" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/color" />
 
 ## Examples
 
@@ -34,7 +34,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/color/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiColor } from '@/components/ui/color'
+    import { UiColor } from '@/components/color'
 </script>
 
 <template>
@@ -50,7 +50,7 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiColor } from "@/components/ui/color"
+import { UiColor } from "@/components/color"
 
 export function Example() {
     return (

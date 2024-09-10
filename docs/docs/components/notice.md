@@ -1,25 +1,25 @@
 # Notice
 <br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/ui/notice" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/notice" />
 
 ### Usage
 
 ```css
-@import "winduum/src/ui/notice/index.css" layer(components);
+@import "winduum/src/components/notice/index.css" layer(components);
 ```
 
 ### Variants
-* <LinkGh name="default" path="ui/notice" />
+* <LinkGh name="default" path="components/notice" />
 
 ### Props
-* <LinkGh name="default-props" path="ui/notice" />
+* <LinkGh name="default-props" path="components/notice" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/ui/notice" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/ui/notice" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/ui/notice" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/notice" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/notice" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/notice" />
 
 ## Examples
 
@@ -31,7 +31,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/ui/notice/success.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiNotice } from '@/components/ui/notice'
+    import { UiNotice } from '@/components/notice'
 </script>
 
 <template>
@@ -41,7 +41,7 @@ Follow instructions for individual framework usage below
 </template>
 ```
 ```jsx
-import { UiNotice } from '@/components/ui/notice'
+import { UiNotice } from '@/components/notice'
 
 export function Example() {
     return (

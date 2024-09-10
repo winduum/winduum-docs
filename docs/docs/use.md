@@ -76,7 +76,7 @@ Each component is written with low specificity in mind, so any property can be e
 
 ::: code-group
 ```html
-<button class="ui-btn accent-secondary">This is a Button</button>
+<button class="x-btn accent-secondary">This is a Button</button>
 ```
 ```css
 .ui-btn:where(.bordered) {
