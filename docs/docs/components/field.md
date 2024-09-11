@@ -24,6 +24,6 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/field/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/field/basic.html"></iframe>
 
-<<< @/public/examples/component/field/basic.html#body{}
+<<< @/public/examples/components/field/basic.html#body{}

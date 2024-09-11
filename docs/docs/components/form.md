@@ -59,7 +59,7 @@ Validates a form with [checkValidity](https://developer.mozilla.org/en-US/docs/W
 ##### validateSelectors
 
 * **Type:** `string`
-* **Default:** `.ui-control, .ui-check, .ui-switch, .ui-rating, .ui-color`
+* **Default:** `.x-control, .x-check, .x-switch, .x-rating, .x-color`
 
 Selectors which will be validated.
 
@@ -88,7 +88,7 @@ Loading class that will be added to submitter element, eg. a button.
 * **Type:** `(selector:  HTMLElement, options?: ValidateFieldOptions) => void`
 * **Kind:** `sync`
 
-Validates a field. This can be element such as `.ui-control`, `ui-check` and others that can be validated. It adds validation info message inside `c-field` and validation icon inside `ui-control`.
+Validates a field. This can be element such as `.x-control`, `x-check` and others that can be validated. It adds validation info message inside `c-field` and validation icon inside `x-control`.
 It also adds a `valid`, `invalid` or `active` class to the element.
 
 
@@ -134,7 +134,7 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ##### infoSelector
 * **Type:** `string`
-* **Default:** `.ui-info`
+* **Default:** `.x-info`
 
 ---
 
@@ -146,7 +146,7 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ##### endParentSelector
 * **Type:** `string`
-* **Default:** `.ui-control`
+* **Default:** `.x-control`
 
 ---
 

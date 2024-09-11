@@ -27,10 +27,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/link/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/link/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/link/basic.html#body{} [html]
+<<< @/public/examples/components/link/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiLink } from '@/components/link'
@@ -65,6 +65,6 @@ export function Example() {
 
 ### Underline
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/link/underline.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/link/underline.html"></iframe>
 
-<<< @/public/examples/ui/link/underline.html#body{}
+<<< @/public/examples/components/link/underline.html#body{}

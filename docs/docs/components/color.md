@@ -28,10 +28,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/color/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/color/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/color/basic.html#body{} [html]
+<<< @/public/examples/components/color/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiColor } from '@/components/color'
@@ -44,7 +44,7 @@ Follow instructions for individual framework usage below
     <UiColor style="color: blue">
         <input type="checkbox" aria-label="Blue">
     </UiColor>
-    <UiColor style="color: red; --ui-color-secondary: blue;">
+    <UiColor style="color: red; --x-color-secondary: blue;">
         <input type="checkbox" aria-label="Red & Blue">
     </UiColor>
 </template>
@@ -61,7 +61,7 @@ export function Example() {
             <UiColor style="color: blue">
                 <input type="checkbox" aria-label="Blue" />
             </UiColor>
-            <UiColor style="color: red; --ui-color-secondary: blue;">
+            <UiColor style="color: red; --x-color-secondary: blue;">
                 <input type="checkbox" aria-label="Red & Blue" />
             </UiColor>
         </>
@@ -72,7 +72,7 @@ export function Example() {
 
 ### Disabled
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/color/disabled.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/color/disabled.html"></iframe>
 
-<<< @/public/examples/ui/color/disabled.html#body{}
+<<< @/public/examples/components/color/disabled.html#body{}
 

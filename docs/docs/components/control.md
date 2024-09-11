@@ -50,10 +50,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/input/basic.html#body{} [html]
+<<< @/public/examples/components/input/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiControl } from '@/components/control'
@@ -82,123 +82,123 @@ export function Example() {
 
 ### Icon
 You can position any content to `start` and `end` of the control.<br>Padding is automatically handled by CSS up to 2 icons or you can do it manually.
-* `--ui-control-icon-count-s` - number of icons at the start of the control
-* `--ui-control-icon-count-e`- number of icons at the end of the control
-* `--ui-control-s` - manually change start padding in px according to content
-* `--ui-control-e` - manually change end padding in px according to content
+* `--x-control-icon-count-s` - number of icons at the start of the control
+* `--x-control-icon-count-e`- number of icons at the end of the control
+* `--x-control-s` - manually change start padding in px according to content
+* `--x-control-e` - manually change end padding in px according to content
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/icon.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/icon.html"></iframe>
 
-<<< @/public/examples/ui/input/icon.html#body{}
+<<< @/public/examples/components/input/icon.html#body{}
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/icon.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/select/icon.html"></iframe>
 
-<<< @/public/examples/ui/select/icon.html#body{}
+<<< @/public/examples/components/select/icon.html#body{}
 
 ### Textarea
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/textarea.html" style="height: 15rem"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/textarea.html" style="height: 15rem"></iframe>
 
-<<< @/public/examples/ui/input/textarea.html#body{}
+<<< @/public/examples/components/input/textarea.html#body{}
 
 ### Select
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/select/basic.html"></iframe>
 
-<<< @/public/examples/ui/select/basic.html#body{}
+<<< @/public/examples/components/select/basic.html#body{}
 
 ### Placeholder
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/placeholder.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/placeholder.html"></iframe>
 
-<<< @/public/examples/ui/input/placeholder.html#body{}
+<<< @/public/examples/components/input/placeholder.html#body{}
 
 ### Label
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/label.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/label.html"></iframe>
 
-<<< @/public/examples/ui/input/label.html#body{}
+<<< @/public/examples/components/input/label.html#body{}
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/label.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/select/label.html"></iframe>
 
-<<< @/public/examples/ui/select/label.html#body{}
+<<< @/public/examples/components/select/label.html#body{}
 
 ### Floating Label
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/floating.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/floating.html"></iframe>
 
-<<< @/public/examples/ui/input/floating.html#body{}
+<<< @/public/examples/components/input/floating.html#body{}
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/floating.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/select/floating.html"></iframe>
 
-<<< @/public/examples/ui/select/floating.html#body{}
+<<< @/public/examples/components/select/floating.html#body{}
 
 ### Time
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/time.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/time.html"></iframe>
 
-<<< @/public/examples/ui/input/time.html#body{}
+<<< @/public/examples/components/input/time.html#body{}
 
 ### Date
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/date.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/date.html"></iframe>
 
-<<< @/public/examples/ui/input/date.html#body{}
+<<< @/public/examples/components/input/date.html#body{}
 
 ### Datetime
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/datetime.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/datetime.html"></iframe>
 
-<<< @/public/examples/ui/input/datetime.html#body{}
+<<< @/public/examples/components/input/datetime.html#body{}
 
 ### Number
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/number.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/number.html"></iframe>
 
-<<< @/public/examples/ui/input/number.html#body{}
+<<< @/public/examples/components/input/number.html#body{}
 
 ### Color
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/color.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/color.html"></iframe>
 
-<<< @/public/examples/ui/input/color.html#body{}
+<<< @/public/examples/components/input/color.html#body{}
 
 ### File
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/file.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/file.html"></iframe>
 
-<<< @/public/examples/ui/input/file.html#body{}
+<<< @/public/examples/components/input/file.html#body{}
 
 ### Required
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/required.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/required.html"></iframe>
 
-<<< @/public/examples/ui/input/required.html#body{}
+<<< @/public/examples/components/input/required.html#body{}
 
 ### Validation
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/validation.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/validation.html"></iframe>
 
-<<< @/public/examples/ui/input/validation.html#body{}
+<<< @/public/examples/components/input/validation.html#body{}
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/validation.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/select/validation.html"></iframe>
 
-<<< @/public/examples/ui/select/validation.html#body{}
+<<< @/public/examples/components/select/validation.html#body{}
 
 ### Disabled
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/disabled.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/disabled.html"></iframe>
 
-<<< @/public/examples/ui/input/disabled.html#body{}
+<<< @/public/examples/components/input/disabled.html#body{}
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/select/disabled.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/select/disabled.html"></iframe>
 
-<<< @/public/examples/ui/select/disabled.html#body{}
+<<< @/public/examples/components/select/disabled.html#body{}
 
 ### Group
 
-You can group controls into groups via `ui-group` component and combine them with other components like [Button](/docs/ui/button)
+You can group controls into groups via `x-group` component and combine them with other components like [Button](/docs/ui/button)
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/group.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/group.html"></iframe>
 
-<<< @/public/examples/ui/input/group.html#body{}
+<<< @/public/examples/components/input/group.html#body{}

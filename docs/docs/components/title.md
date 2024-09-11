@@ -30,10 +30,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/title/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/title/basic.html#body{} [html]
+<<< @/public/examples/components/title/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiTitle } from '@/components/title'
@@ -56,30 +56,30 @@ export function Example() {
 
 ### Small
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/title/small.html"></iframe>
 
-<<< @/public/examples/ui/title/small.html#body{}
+<<< @/public/examples/components/title/small.html#body{}
 
 ### Large
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/title/large.html"></iframe>
 
-<<< @/public/examples/ui/title/large.html#body{}
+<<< @/public/examples/components/title/large.html#body{}
 
 ### Weight
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/weight.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/title/weight.html"></iframe>
 
-<<< @/public/examples/ui/title/weight.html#body{}
+<<< @/public/examples/components/title/weight.html#body{}
 
 ### Uppercase
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/uppercase.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/title/uppercase.html"></iframe>
 
-<<< @/public/examples/ui/title/uppercase.html#body{}
+<<< @/public/examples/components/title/uppercase.html#body{}
 
 ### Color
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/title/color.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/title/color.html"></iframe>
 
-<<< @/public/examples/ui/title/color.html#body{}
+<<< @/public/examples/components/title/color.html#body{}

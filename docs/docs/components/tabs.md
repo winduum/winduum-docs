@@ -20,19 +20,19 @@ Follow instructions for individual framework usage below
 
 ### Default
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/tabs/default.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/tabs/default.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/tabs/default.html#body{} [html]
+<<< @/public/examples/components/tabs/default.html#body{} [html]
 <<< @/../examples/src/pages/component/tabs/default.liquid#js{} [js]
 :::
 
 ### Custom
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/tabs/custom.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/tabs/custom.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/tabs/custom.html#body{} [html]
+<<< @/public/examples/components/tabs/custom.html#body{} [html]
 <<< @/../examples/src/pages/component/tabs/custom.liquid#js{} [js]
 :::
 

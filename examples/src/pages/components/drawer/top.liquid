@@ -1,0 +1,31 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<button class="x-button" id="showDrawerTopElement">Show drawer</button>
+<div class="x-drawer invisible flex-col" id="drawerTopElement" inert>
+    <nav class="x-drawer-content" style="--x-drawer-content-width: 100%;--x-drawer-content-height: calc(100vh - 4rem);">
+        Drawer content
+        <button class="x-button muted" id="closeDrawerTopElement">Close drawer</button>
+    </nav>
+</div>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { showDrawer, closeDrawer, scrollDrawer } from "winduum/src/components/drawer"
+
+    drawerTopElement?.scroll({ top: drawerTopElement.scrollHeight, behavior: 'instant' });
+    drawerTopElement?.classList.remove('invisible')
+
+    drawerTopElement.addEventListener('scroll', ({ target }) => scrollDrawer(target, {
+        snapClass: 'snap-y snap-mandatory',
+        scrollSize: target.scrollHeight - target.clientHeight,
+        scrollDirection: target.scrollTop,
+        scrollOpen: 0,
+        scrollClose: target.scrollHeight - target.clientHeight
+    }))
+    showDrawerTopElement.addEventListener('click', () => showDrawer(drawerTopElement, 0, 'top'))
+    closeDrawerTopElement.addEventListener('click', () => closeDrawer(drawerTopElement, drawerTopElement.scrollHeight, 'top'))
+</script>
+<!-- #endregion js -->
+{% endblock %}

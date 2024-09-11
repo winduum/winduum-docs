@@ -20,19 +20,19 @@ Follow instructions for individual framework usage below
 
 ### Default
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/compare/default.html" style="height: 420px"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/compare/default.html" style="height: 420px"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/compare/default.html#body{} [html]
+<<< @/public/examples/components/compare/default.html#body{} [html]
 <<< @/../examples/src/pages/component/compare/default.liquid#js{} [js]
 :::
 
 ### Text
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/compare/text.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/compare/text.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/compare/text.html#body{} [html]
+<<< @/public/examples/components/compare/text.html#body{} [html]
 <<< @/../examples/src/pages/component/compare/text.liquid#js{} [js]
 :::
 

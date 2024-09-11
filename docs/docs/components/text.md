@@ -26,10 +26,10 @@ Follow instructions for individual framework usage below
 
 ### Text
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/text.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/text.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/text/text.html#body{} [html]
+<<< @/public/examples/components/text/text.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiText } from '@/components/text'
@@ -74,39 +74,39 @@ export function Example() {
 
 ### Headings
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/headings.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/headings.html"></iframe>
 
-<<< @/public/examples/ui/text/headings.html#body{}
+<<< @/public/examples/components/text/headings.html#body{}
 
 ### Lists
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/lists.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/lists.html"></iframe>
 
-<<< @/public/examples/ui/text/lists.html#body{}
+<<< @/public/examples/components/text/lists.html#body{}
 
 ### Blockquote
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/blockquote.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/blockquote.html"></iframe>
 
-<<< @/public/examples/ui/text/blockquote.html#body{}
+<<< @/public/examples/components/text/blockquote.html#body{}
 
 ### Table
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/table.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/table.html"></iframe>
 
-<<< @/public/examples/ui/text/table.html#body{}
+<<< @/public/examples/components/text/table.html#body{}
 
 ### Figure
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/figure.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/figure.html"></iframe>
 
-<<< @/public/examples/ui/text/figure.html#body{}
+<<< @/public/examples/components/text/figure.html#body{}
 
 ### Iframe
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/text/iframe.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/iframe.html"></iframe>
 
-<<< @/public/examples/ui/text/iframe.html#body{}
+<<< @/public/examples/components/text/iframe.html#body{}
 
 <style>
     iframe {

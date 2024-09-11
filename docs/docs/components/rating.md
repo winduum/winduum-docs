@@ -28,10 +28,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/rating.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/rating.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/rating.html#body{} [html]
+<<< @/public/examples/components/rating.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiRating } from '@/components/rating'

@@ -25,10 +25,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/label.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/label.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/input/label.html#body{} [html]
+<<< @/public/examples/components/input/label.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiLabel } from '@/components/label'

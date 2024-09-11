@@ -8,7 +8,7 @@ Provides a scroll carousel that uses native CSS `scroll-snap` property.<br>
 ```css
 @import "winduum/src/components/carousel/index.css" layer(components);
 ```
-<<< @/public/examples/component/carousel/basic.html#body{} [html]
+<<< @/public/examples/components/carousel/basic.html#body{} [html]
 <<< @/../examples/src/pages/component/carousel/basic.liquid#js{} [js]
 :::
 
@@ -25,19 +25,19 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/carousel/basic.html" style="height: 620px"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/basic.html" style="height: 620px"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/carousel/basic.html#body{} [html]
+<<< @/public/examples/components/carousel/basic.html#body{} [html]
 <<< @/../examples/src/pages/component/carousel/basic.liquid#js{} [js]
 :::
 
 ### Full
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/carousel/full.html" style="height: 620px"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/full.html" style="height: 620px"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/carousel/full.html#body{} [html]
+<<< @/public/examples/components/carousel/full.html#body{} [html]
 <<< @/../examples/src/pages/component/carousel/full.liquid#js{} [js]
 :::
 

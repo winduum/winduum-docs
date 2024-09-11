@@ -9,7 +9,7 @@ Can be dismissed with touch gestures on touch devices.
 ```css
 @import "winduum/src/components/drawer/index.css" layer(components);
 ```
-<<< @/public/examples/component/drawer/left.html#body{} [html]
+<<< @/public/examples/components/drawer/left.html#body{} [html]
 <<< @/../examples/src/pages/component/drawer/left.liquid#js{} [js]
 :::
 
@@ -42,7 +42,7 @@ Follow instructions for individual framework usage below
 </div>
 
 ::: code-group
-<<< @/public/examples/component/drawer/left.html#body{} [html]
+<<< @/public/examples/components/drawer/left.html#body{} [html]
 <<< @/../examples/src/pages/component/drawer/left.liquid#js{} [js]
 :::
 
@@ -60,7 +60,7 @@ Follow instructions for individual framework usage below
 </div>
 
 ::: code-group
-<<< @/public/examples/component/drawer/right.html#body{} [html]
+<<< @/public/examples/components/drawer/right.html#body{} [html]
 <<< @/../examples/src/pages/component/drawer/right.liquid#js{} [js]
 :::
 
@@ -79,7 +79,7 @@ Follow instructions for individual framework usage below
 </div>
 
 ::: code-group
-<<< @/public/examples/component/drawer/bottom.html#body{} [html]
+<<< @/public/examples/components/drawer/bottom.html#body{} [html]
 <<< @/../examples/src/pages/component/drawer/bottom.liquid#js{} [js]
 :::
 
@@ -97,7 +97,7 @@ Follow instructions for individual framework usage below
 </div>
 
 ::: code-group
-<<< @/public/examples/component/drawer/top.html#body{} [html]
+<<< @/public/examples/components/drawer/top.html#body{} [html]
 <<< @/../examples/src/pages/component/drawer/top.liquid#js{} [js]
 :::
 
@@ -118,7 +118,7 @@ Moves the drawer to top layer, traps focus in and can be closed with `esc`.
 </dialog>
 
 ::: code-group
-<<< @/public/examples/component/drawer/dialog.html#body{} [html]
+<<< @/public/examples/components/drawer/dialog.html#body{} [html]
 <<< @/../examples/src/pages/component/drawer/dialog.liquid#js{} [js]
 :::
 

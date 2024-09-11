@@ -20,6 +20,6 @@ Follow instructions for individual framework usage below
 
 ## Example
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/pagination.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/pagination.html"></iframe>
 
-<<< @/public/examples/component/pagination.html#body{}
+<<< @/public/examples/components/pagination.html#body{}

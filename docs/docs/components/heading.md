@@ -25,10 +25,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/heading/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/heading/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/heading/basic.html#body{} [html]
+<<< @/public/examples/components/heading/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiHeading } from '@/components/heading'
@@ -51,18 +51,18 @@ export function Example() {
 
 ### Small
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/heading/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/heading/small.html"></iframe>
 
-<<< @/public/examples/ui/heading/small.html#body{}
+<<< @/public/examples/components/heading/small.html#body{}
 
 ### Large
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/heading/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/heading/large.html"></iframe>
 
-<<< @/public/examples/ui/heading/large.html#body{}
+<<< @/public/examples/components/heading/large.html#body{}
 
 ### Weight
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/heading/weight.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/heading/weight.html"></iframe>
 
-<<< @/public/examples/ui/heading/weight.html#body{}
+<<< @/public/examples/components/heading/weight.html#body{}

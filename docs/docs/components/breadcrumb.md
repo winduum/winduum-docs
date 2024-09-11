@@ -23,6 +23,6 @@ Follow instructions for individual framework usage below
 
 ## Example
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/breadcrumb.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/breadcrumb.html"></iframe>
 
-<<< @/public/examples/component/breadcrumb.html#body{}
+<<< @/public/examples/components/breadcrumb.html#body{}

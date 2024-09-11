@@ -40,11 +40,11 @@ Follow instructions for individual framework usage below
 
 ### Default
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/range/default.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/default.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/range/default.html#body{} [html]
-<<< @/../examples/src/pages/ui/range/default.liquid#js{} [js]
+<<< @/public/examples/components/range/default.html#body{} [html]
+<<< @/../examples/src/pages/components/range/default.liquid#js{} [js]
 ```vue
 <script setup lang="ts">
     import { UiRange } from '@/components/progress'
@@ -71,21 +71,21 @@ export function Example() {
 
 ### Multi
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/range/multi.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/multi.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/range/multi.html#body{} [html]
-<<< @/../examples/src/pages/ui/range/multi.liquid#js{} [js]
+<<< @/public/examples/components/range/multi.html#body{} [html]
+<<< @/../examples/src/pages/components/range/multi.liquid#js{} [js]
 :::
 
 
 ### Vertical
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/range/vertical.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/vertical.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/range/vertical.html#body{} [html]
-<<< @/../examples/src/pages/ui/range/vertical.liquid#js{} [js]
+<<< @/public/examples/components/range/vertical.html#body{} [html]
+<<< @/../examples/src/pages/components/range/vertical.liquid#js{} [js]
 :::
 
 ## Javascript API
@@ -134,7 +134,7 @@ export function Example() {
 ##### selector
 
 * **Type:** `string`
-* **Default:** `.ui-range`
+* **Default:** `.x-range`
 
 ---
 

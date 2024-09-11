@@ -1,0 +1,52 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+    <div class="x-popover w-full flex-col items-center">
+        <button class="x-button" popovertargetaction="toggle" popovertarget="popover">Popover</button>
+        <div class="x-popover-content shadow dark:bg-body-secondary p-2" id="popover" popover="manual">
+            <input type="text" autofocus>
+        </div>
+    </div>
+{% endblock %}
+
+{% block head %}
+<style>
+  .dark\:bg-body-secondary {
+    background-color: var(--color-body-secondary) !important;
+  }
+</style>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { togglePopover, hidePopover } from 'winduum/src/components/popover'
+
+    const popoverActionElement = document?.querySelector('[popovertargetaction="toggle"]')
+
+    console.log(popoverActionElement)
+
+    popoverActionElement?.addEventListener('click', async (e) => {
+        e.preventDefault()
+
+        console.log('asd')
+
+        const currentTarget = e.currentTarget
+        await togglePopover(currentTarget)
+    })
+
+    // close on esc
+    window.addEventListener('keydown', ({ key }) => {
+        if (key === 'Escape') {
+            hidePopover(popoverActionElement)
+        }
+    })
+
+    // outside dismiss
+    window.addEventListener('click', ({ target }) => {
+        if (!window.popover?.contains(target) && !popoverActionElement?.isEqualNode(target) && popoverActionElement?.ariaExpanded === 'true') {
+            hidePopover(popoverActionElement)
+        }
+    })
+</script>
+<!-- #endregion js -->
+{% endblock %}

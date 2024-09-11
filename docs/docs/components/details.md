@@ -53,28 +53,28 @@ Follow instructions for individual framework usage below
 
 ### Default
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/details/default.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/details/default.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/details/default.html#body{} [html]
+<<< @/public/examples/components/details/default.html#body{} [html]
 <<< @/../examples/src/pages/component/details/default.liquid#js{} [js]
 :::
 
 ### Checkbox
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/details/checkbox.html" style="height: 500px;"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/details/checkbox.html" style="height: 500px;"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/details/checkbox.html#body{} [html]
+<<< @/public/examples/components/details/checkbox.html#body{} [html]
 <<< @/../examples/src/pages/component/details/checkbox.liquid#js{} [js]
 :::
 
 ### Accordion
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/details/accordion.html" style="height: 500px;"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/details/accordion.html" style="height: 500px;"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/details/accordion.html#body{} [html]
+<<< @/public/examples/components/details/accordion.html#body{} [html]
 <<< @/../examples/src/pages/component/details/accordion.liquid#js{} [js]
 :::
 

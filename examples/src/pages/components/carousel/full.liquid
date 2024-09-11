@@ -1,0 +1,92 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<div class="x-carousel flex-col gap-4">
+    <div class="flex justify-center">
+        <div data-x-carousel-target="counterMin"></div>/
+        <div data-x-carousel-target="counterMax"></div>
+    </div>
+    <div class="flex gap-4 items-center">
+        <button class="x-button circle muted" data-action="click->x-carousel#prev" aria-label="Prev">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+            </svg>
+        </button>
+        <div class="x-carousel-content gap-4 w-full" data-x-carousel-target="content">
+            <div class="x-image rounded-md">
+                <img src="https://via.placeholder.com/160x240" alt="" loading="lazy" width="160" height="240">
+            </div>
+            <div class="x-image rounded-md">
+                <img src="https://via.placeholder.com/160x240" alt="" loading="lazy" width="160" height="240">
+            </div>
+            <div class="x-image rounded-md">
+                <img src="https://via.placeholder.com/160x240" alt="" loading="lazy" width="160" height="240">
+            </div>
+            <div class="x-image rounded-md">
+                <img src="https://via.placeholder.com/160x240" alt="" loading="lazy" width="160" height="240">
+            </div>
+            <div class="x-image rounded-md">
+                <img src="https://via.placeholder.com/160x240" alt="" loading="lazy" width="160" height="240">
+            </div>
+            <div class="x-image rounded-md">
+                <img src="https://via.placeholder.com/160x240" alt="" loading="lazy" width="160" height="240">
+            </div>
+        </div>
+        <button class="x-button circle muted" data-action="click->x-carousel#next" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+        </button>
+    </div>
+    <div class="justify-center flex gap-1.5 h-4 py-4" data-x-carousel-target="pagination"></div>
+    <progress class="x-progress sm" value="50" max="100" data-x-carousel-target="progress"></progress>
+</div>
+{% endblock %}
+
+{% block head %}
+<style>
+  .x-carousel {
+    max-width: 60rem
+  }
+</style>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { scrollPrev, scrollNext, observeCarousel, dragCarousel, paginationCarousel, scrollCarousel } from "winduum/src/components/carousel";
+
+    const contentElement = document.querySelector('[data-x-carousel-target="content"]')
+    const paginationElement = document.querySelector('[data-x-carousel-target="pagination"]')
+    const progressElement = document.querySelector('[data-x-carousel-target="progress"]')
+    const counterMinElement = document.querySelector('[data-x-carousel-target="counterMin"]')
+    const counterMaxElement = document.querySelector('[data-x-carousel-target="counterMax"]')
+    const prevElement = document.querySelector('[data-action="click->x-carousel#prev"]')
+    const nextElement = document.querySelector('[data-action="click->x-carousel#next"]')
+
+    const pagination = {
+        element: paginationElement,
+        activeClass: 'bg-error',
+        itemContent: '<div class="dot"></div>'
+    }
+
+    const scrollOptions = {
+        counterMinElement,
+        counterMaxElement,
+        progressElement,
+        pagination
+    }
+
+    dragCarousel(contentElement)
+
+    observeCarousel(contentElement)
+
+    paginationCarousel(contentElement, pagination)
+
+    scrollCarousel(contentElement, scrollOptions)
+
+    contentElement.addEventListener('scroll', () => scrollCarousel(contentElement, scrollOptions), { passive: true })
+    prevElement.addEventListener('click', () => scrollPrev(contentElement))
+    nextElement.addEventListener('click', () => scrollNext(contentElement))
+</script>
+<!-- #endregion js -->
+{% endblock %}

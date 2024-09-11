@@ -45,10 +45,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/btn/basic.html#body{} [html]
+<<< @/public/examples/components/btn/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiBtn } from '@/components/btn'
@@ -75,130 +75,130 @@ export function Example() {
 
 ### Flat
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/flat.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/flat.html"></iframe>
 
-<<< @/public/examples/ui/btn/flat.html#body{}
+<<< @/public/examples/components/btn/flat.html#body{}
 
 ### Bordered
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/outline.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/outline.html"></iframe>
 
-<<< @/public/examples/ui/btn/outline.html#body{}
+<<< @/public/examples/components/btn/outline.html#body{}
 
 ### Muted
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/muted.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/muted.html"></iframe>
 
-<<< @/public/examples/ui/btn/muted.html#body{}
+<<< @/public/examples/components/btn/muted.html#body{}
 
 ### Raised
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/raised.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/raised.html"></iframe>
 
-<<< @/public/examples/ui/btn/raised.html#body{}
+<<< @/public/examples/components/btn/raised.html#body{}
 
 ### Ghosted
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/text.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/text.html"></iframe>
 
-<<< @/public/examples/ui/btn/text.html#body{}
+<<< @/public/examples/components/btn/text.html#body{}
 
 ### Gradient
 
 You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/gradient-color-stops) gradient classes
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/gradient.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/gradient.html"></iframe>
 
-<<< @/public/examples/ui/btn/gradient.html#body{}
+<<< @/public/examples/components/btn/gradient.html#body{}
 
 ### Small
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/small.html"></iframe>
 
-<<< @/public/examples/ui/btn/small.html#body{}
+<<< @/public/examples/components/btn/small.html#body{}
 
 ### Large
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/large.html"></iframe>
 
-<<< @/public/examples/ui/btn/large.html#body{}
+<<< @/public/examples/components/btn/large.html#body{}
 
 ### Wide
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/wide.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/wide.html"></iframe>
 
-<<< @/public/examples/ui/btn/wide.html#body{}
+<<< @/public/examples/components/btn/wide.html#body{}
 
 ### Square
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/square.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/square.html"></iframe>
 
-<<< @/public/examples/ui/btn/square.html#body{}
+<<< @/public/examples/components/btn/square.html#body{}
 
 ### Circle
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/circle.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/circle.html"></iframe>
 
-<<< @/public/examples/ui/btn/circle.html#body{}
+<<< @/public/examples/components/btn/circle.html#body{}
 
 ### Icon
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/icon.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/icon.html"></iframe>
 
-<<< @/public/examples/ui/btn/icon.html#body{}
+<<< @/public/examples/components/btn/icon.html#body{}
 
 ### Loading
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/loading.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/loading.html"></iframe>
 
-<<< @/public/examples/ui/btn/loading.html#body{}
+<<< @/public/examples/components/btn/loading.html#body{}
 
 ### Active
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/active.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/active.html"></iframe>
 
-<<< @/public/examples/ui/btn/active.html#body{}
+<<< @/public/examples/components/btn/active.html#body{}
 
 ### Disabled
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/disabled.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/disabled.html"></iframe>
 
-<<< @/public/examples/ui/btn/disabled.html#body{}
+<<< @/public/examples/components/btn/disabled.html#body{}
 
 ### Custom
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/custom.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/custom.html"></iframe>
 
 ```html
 <button class="x-btn">Button</button>
 ```
 ```css
-.ui-btn {
-    --ui-btn-height: 4rem;
-    --ui-btn-py: 1rem;
-    --ui-btn-px: 1rem;
-    --ui-btn-border-radius: 0;
-    --ui-btn-font-size: 1.15rem;
-    --ui-btn-font-weight: 700;
-    --ui-btn-bg: yellow;
-    --ui-btn-color: #333;
-    --ui-btn-hover-opacity: 0.4;
-    --ui-btn-focus-opacity: 0.8;
+.x-btn {
+    --x-btn-height: 4rem;
+    --x-btn-py: 1rem;
+    --x-btn-px: 1rem;
+    --x-btn-border-radius: 0;
+    --x-btn-font-size: 1.15rem;
+    --x-btn-font-weight: 700;
+    --x-btn-bg: yellow;
+    --x-btn-color: #333;
+    --x-btn-hover-opacity: 0.4;
+    --x-btn-focus-opacity: 0.8;
 }
 ```
 
 You can also extend the button with any TailwindCSS class to customize it
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/tailwind.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/tailwind.html"></iframe>
 
-<<< @/public/examples/ui/btn/tailwind.html#body{}
+<<< @/public/examples/components/btn/tailwind.html#body{}
 
 <br>
 
 ### Group
 
-You can group buttons into groups via `ui-group` component.
+You can group buttons into groups via `x-group` component.
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/group.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/group.html"></iframe>
 
-<<< @/public/examples/ui/btn/group.html#body{}
+<<< @/public/examples/components/btn/group.html#body{}

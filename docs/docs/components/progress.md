@@ -31,10 +31,10 @@ Follow instructions for individual framework usage below
 
 ### Colors
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/progress/colors.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/progress/colors.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/progress/colors.html#body{} [html]
+<<< @/public/examples/components/progress/colors.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiProgress } from '@/components/progress'
@@ -67,24 +67,24 @@ export function Example() {
 
 ### Small
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/progress/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/progress/small.html"></iframe>
 
-<<< @/public/examples/ui/progress/small.html#body{}
+<<< @/public/examples/components/progress/small.html#body{}
 
 ### Large
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/progress/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/progress/large.html"></iframe>
 
-<<< @/public/examples/ui/progress/large.html#body{}
+<<< @/public/examples/components/progress/large.html#body{}
 
 ### Indeterminate
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/progress/indeterminate.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/progress/indeterminate.html"></iframe>
 
-<<< @/public/examples/ui/progress/indeterminate.html#body{}
+<<< @/public/examples/components/progress/indeterminate.html#body{}
 
 ### Meter
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/progress/meter.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/progress/meter.html"></iframe>
 
-<<< @/public/examples/ui/progress/meter.html#body{}
+<<< @/public/examples/components/progress/meter.html#body{}

@@ -24,10 +24,10 @@ Follow instructions for individual framework usage below
 
 ### Ratio
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/image/ratio.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/image/ratio.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/image/ratio.html#body{} [html]
+<<< @/public/examples/components/image/ratio.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiImage } from '@/components/image'
@@ -54,27 +54,27 @@ export function Example() {
 
 ### Rounded
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/image/rounded.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/image/rounded.html"></iframe>
 
-<<< @/public/examples/ui/image/rounded.html#body{}
+<<< @/public/examples/components/image/rounded.html#body{}
 
 ### Avatar
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/image/avatar.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/image/avatar.html"></iframe>
 
-<<< @/public/examples/ui/image/avatar.html#body{}
+<<< @/public/examples/components/image/avatar.html#body{}
 
 ### Skeleton
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/image/transparent.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/image/transparent.html"></iframe>
 
-<<< @/public/examples/ui/image/transparent.html#body{}
+<<< @/public/examples/components/image/transparent.html#body{}
 
 ### Iframe
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/image/iframe.html" style="height: 25rem"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/image/iframe.html" style="height: 25rem"></iframe>
 
-<<< @/public/examples/ui/image/iframe.html#body{}
+<<< @/public/examples/components/image/iframe.html#body{}
 
 <style>
     iframe {

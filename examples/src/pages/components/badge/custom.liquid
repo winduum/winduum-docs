@@ -1,0 +1,22 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<button class="x-badge">Badge</button>
+{% endblock %}
+
+{% block foot %}
+<style>
+    /* #region style */
+    .x-badge {
+        --x-badge-block-size: 1rem;
+        --x-badge-padding-block: 0;
+        --x-badge-padding-inline: 1rem;
+        --x-badge-border-radius: 0;
+        --x-badge-font-size: 0.75rem;
+        --x-badge-font-weight: 700;
+        --x-badge-background-color: yellow;
+        --x-badge-color: #333;
+    }
+    /* #endregion style */
+</style>
+{% endblock %}
+

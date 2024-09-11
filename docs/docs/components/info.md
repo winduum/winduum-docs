@@ -26,10 +26,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/info/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/info/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/info/basic.html#body{} [html]
+<<< @/public/examples/components/info/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiInfo } from '@/components/info'

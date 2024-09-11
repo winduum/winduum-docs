@@ -1,0 +1,25 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<button class="x-button" id="showDrawerLeftElement">Show drawer</button>
+<div class="x-drawer invisible" id="drawerLeftElement" inert>
+    <nav class="x-drawer-content">
+        Drawer content
+        <button class="x-button muted" id="closeDrawerLeftElement">Close drawer</button>
+    </nav>
+</div>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { showDrawer, closeDrawer, scrollDrawer } from "winduum/src/components/drawer"
+
+    drawerLeftElement?.scroll({ left: drawerLeftElement?.scrollWidth , behavior: 'instant' })
+    drawerLeftElement?.classList.remove('invisible')
+
+    drawerLeftElement.addEventListener('scroll', ({ target }) => scrollDrawer(target))
+    showDrawerLeftElement.addEventListener('click', () => showDrawer(drawerLeftElement))
+    closeDrawerLeftElement.addEventListener('click', () => closeDrawer(drawerLeftElement))
+</script>
+<!-- #endregion js -->
+{% endblock %}

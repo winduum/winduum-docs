@@ -27,10 +27,10 @@ Follow instructions for individual framework usage below
 
 ### Button Group
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/btn/group.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/group.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/btn/group.html#body{} [html]
+<<< @/public/examples/components/btn/group.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiGroup } from '@/components/group'
@@ -65,22 +65,22 @@ export function Example() {
 
 ### Badge Group
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/group.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/group.html"></iframe>
 
-<<< @/public/examples/ui/badge/group.html#body{}
+<<< @/public/examples/components/badge/group.html#body{}
 
 ### Control Group
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/input/group.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/group.html"></iframe>
 
-<<< @/public/examples/ui/input/group.html#body{}
+<<< @/public/examples/components/input/group.html#body{}
 
 ### Vertical Group
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/group/vertical.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/group/vertical.html"></iframe>
 
-<<< @/public/examples/ui/group/vertical.html#body{}
+<<< @/public/examples/components/group/vertical.html#body{}
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/group/vertical-control.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/group/vertical-control.html"></iframe>
 
-<<< @/public/examples/ui/group/vertical-control.html#body{}
+<<< @/public/examples/components/group/vertical-control.html#body{}

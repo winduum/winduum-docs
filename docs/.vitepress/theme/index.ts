@@ -1,7 +1,6 @@
 import Theme from 'vitepress/theme'
-import { insertDialog } from 'winduum/src/components/dialog'
 import { showRipple } from 'winduum/src/utilities/ripple'
-import { insertToaster, insertToast, closeToast, closeToaster } from 'winduum/src/components/toaster'
+import { closeToast, closeToaster } from 'winduum/src/components/toaster'
 import { showDrawer, closeDrawer, scrollDrawer } from "winduum/src/components/drawer"
 import './styles/vars.css'
 import 'winduum/dist/main.css'
@@ -26,19 +25,20 @@ function dialogEvent() {
   if (typeof document !== 'undefined') {
     // @ts-ignore
     document.querySelector('#showDialog')?.addEventListener('click', async () => {
-      await insertDialog(`
-        <dialog class="c-dialog">
-          <form class="c-dialog-content" method="dialog">
-              <div class="ui-heading">Example dialog</div>
-              <br>
-              <div class="ui-text">
-                  <p>You can close this dialog with Esc, clicking outside, or by form submit</p>
-              </div>
-              <br>
-              <button class="ui-btn bg-primary" style="padding: var(--ui-btn-py) var(--ui-btn-px)">Close dialog</button>
-          </form>
-        </dialog>
-      `)
+      // TODO
+      // await insertDialog(`
+      //   <dialog class="c-dialog">
+      //     <form class="c-dialog-content" method="dialog">
+      //         <div class="ui-heading">Example dialog</div>
+      //         <br>
+      //         <div class="ui-text">
+      //             <p>You can close this dialog with Esc, clicking outside, or by form submit</p>
+      //         </div>
+      //         <br>
+      //         <button class="ui-btn bg-primary" style="padding: var(--ui-btn-py) var(--ui-btn-px)">Close dialog</button>
+      //     </form>
+      //   </dialog>
+      // `)
     })
 
     document.querySelector('#showRipple')?.addEventListener('click', (event) => {
@@ -51,15 +51,16 @@ function dialogEvent() {
 
     document.querySelector('#showToast:not(.has-events)')?.addEventListener('click', () => {
 
-      insertToaster(document.body, {
-        classes: 'items-end'
-      })
-
-      insertToast(document.querySelector('.c-toaster'), {
-        title: 'Hello toast',
-        text: 'Amazing toast',
-        end: `<button class="ui-btn muted ml-auto" data-action="closeToast">Close</button>`
-      })
+      // TODO
+      // insertToaster(document.body, {
+      //   classes: 'items-end'
+      // })
+      //
+      // insertToast(document.querySelector('.c-toaster'), {
+      //   title: 'Hello toast',
+      //   text: 'Amazing toast',
+      //   end: `<button class="ui-btn muted ml-auto" data-action="closeToast">Close</button>`
+      // })
 
       const closeToastButton = document.querySelectorAll('[data-action="closeToast"]')[document.querySelectorAll('[data-action="closeToast"]').length - 1]
 

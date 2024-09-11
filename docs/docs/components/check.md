@@ -31,10 +31,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/checkbox/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/checkbox/basic.html#body{} [html]
+<<< @/public/examples/components/checkbox/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiCheck } from '@/components/check'
@@ -69,10 +69,10 @@ export function Example() {
 ```
 :::
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/radio/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/radio/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/radio/basic.html#body{} [html]
+<<< @/public/examples/components/radio/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiCheck } from '@/components/check'
@@ -110,40 +110,40 @@ export function Example() {
 
 ### Label
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/label.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/checkbox/label.html"></iframe>
 
-<<< @/public/examples/ui/checkbox/label.html#body{}
+<<< @/public/examples/components/checkbox/label.html#body{}
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/radio/label.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/radio/label.html"></iframe>
 
-<<< @/public/examples/ui/radio/label.html#body{}
+<<< @/public/examples/components/radio/label.html#body{}
 
 ### Required
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/required.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/checkbox/required.html"></iframe>
 
-<<< @/public/examples/ui/checkbox/required.html#body{}
+<<< @/public/examples/components/checkbox/required.html#body{}
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/radio/required.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/radio/required.html"></iframe>
 
-<<< @/public/examples/ui/radio/required.html#body{}
+<<< @/public/examples/components/radio/required.html#body{}
 
 ### Disabled
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/disabled.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/checkbox/disabled.html"></iframe>
 
-<<< @/public/examples/ui/checkbox/disabled.html#body{}
+<<< @/public/examples/components/checkbox/disabled.html#body{}
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/radio/disabled.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/radio/disabled.html"></iframe>
 
-<<< @/public/examples/ui/radio/disabled.html#body{}
+<<< @/public/examples/components/radio/disabled.html#body{}
 
 ### Validation
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/checkbox/validation.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/checkbox/validation.html"></iframe>
 
-<<< @/public/examples/ui/checkbox/validation.html#body{}
+<<< @/public/examples/components/checkbox/validation.html#body{}
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/radio/validation.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/radio/validation.html"></iframe>
 
-<<< @/public/examples/ui/radio/validation.html#body{}
+<<< @/public/examples/components/radio/validation.html#body{}

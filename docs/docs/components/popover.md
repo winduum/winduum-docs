@@ -9,7 +9,7 @@ Popover can be used for dropdowns and other popovers when element is clicked and
 ```css
 @import "winduum/src/components/popover/index.css" layer(components);
 ```
-<<< @/public/examples/component/popover/basic.html#body{} [html]
+<<< @/public/examples/components/popover/basic.html#body{} [html]
 ```vue
 <script setup>
     import { ref } from 'vue'
@@ -62,15 +62,15 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/popover/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/basic.html"></iframe>
 
-<<< @/public/examples/component/popover/basic.html#body{}
+<<< @/public/examples/components/popover/basic.html#body{}
 
 ### Hover
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/popover/hover.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/hover.html"></iframe>
 
-<<< @/public/examples/component/popover/hover.html#body{}
+<<< @/public/examples/components/popover/hover.html#body{}
 
 
 ### Popover API
@@ -80,9 +80,9 @@ It's also backwards compatible as it's leveraging only the `showPopover` and `hi
 
 Popover is placed dynamically upon available space, and auto updates itself when needed.
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/popover/api.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/api.html"></iframe>
 
-<<< @/public/examples/component/popover/api.html#body{}
+<<< @/public/examples/components/popover/api.html#body{}
 
 
 ## JavaScript API

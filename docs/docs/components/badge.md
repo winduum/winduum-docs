@@ -35,10 +35,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/badge/basic.html#body{} [html]
+<<< @/public/examples/components/badge/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiBadge } from '@/components/badge'
@@ -65,71 +65,71 @@ export function Example() {
 
 ### Flat
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/flat.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/flat.html"></iframe>
 
-<<< @/public/examples/ui/badge/flat.html#body{}
+<<< @/public/examples/components/badge/flat.html#body{}
 
 ### Bordered
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/outline.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/outline.html"></iframe>
 
-<<< @/public/examples/ui/badge/outline.html#body{}
+<<< @/public/examples/components/badge/outline.html#body{}
 
 ### Muted
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/muted.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/muted.html"></iframe>
 
-<<< @/public/examples/ui/badge/muted.html#body{}
+<<< @/public/examples/components/badge/muted.html#body{}
 
 ### Small
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/small.html"></iframe>
 
-<<< @/public/examples/ui/badge/small.html#body{}
+<<< @/public/examples/components/badge/small.html#body{}
 
 ### Large
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/large.html"></iframe>
 
-<<< @/public/examples/ui/badge/large.html#body{}
+<<< @/public/examples/components/badge/large.html#body{}
 
 ### Square
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/square.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/square.html"></iframe>
 
-<<< @/public/examples/ui/badge/square.html#body{}
+<<< @/public/examples/components/badge/square.html#body{}
 
 ### Circle
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/circle.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/circle.html"></iframe>
 
-<<< @/public/examples/ui/badge/circle.html#body{}
+<<< @/public/examples/components/badge/circle.html#body{}
 
 ### Icon
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/icon.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/icon.html"></iframe>
 
-<<< @/public/examples/ui/badge/icon.html#body{}
+<<< @/public/examples/components/badge/icon.html#body{}
 
 ### Custom
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/custom.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/custom.html"></iframe>
 
-<<< @/public/examples/ui/badge/custom.html#body{}
-<<< @/public/examples/ui/badge/custom.html#style{css}
+<<< @/public/examples/components/badge/custom.html#body{}
+<<< @/public/examples/components/badge/custom.html#style{css}
 
 You can also extend the badge with any TailwindCSS class to customize it
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/tailwind.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/tailwind.html"></iframe>
 
-<<< @/public/examples/ui/badge/tailwind.html#body{}
+<<< @/public/examples/components/badge/tailwind.html#body{}
 
 <br>
 
 ### Group
 
-You can group badges into groups via `ui-group` component.
+You can group badges into groups via `x-group` component.
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/badge/group.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/group.html"></iframe>
 
-<<< @/public/examples/ui/badge/group.html#body{}
+<<< @/public/examples/components/badge/group.html#body{}

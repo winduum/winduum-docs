@@ -30,10 +30,10 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/switch/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/ui/switch/basic.html#body{} [html]
+<<< @/public/examples/components/switch/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
     import { UiSwitch } from '@/components/switch'
@@ -62,18 +62,18 @@ export function Example() {
 
 ### Small
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/switch/small.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/small.html"></iframe>
 
-<<< @/public/examples/ui/switch/small.html#body{}
+<<< @/public/examples/components/switch/small.html#body{}
 
 ### Large
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/switch/large.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/large.html"></iframe>
 
-<<< @/public/examples/ui/switch/large.html#body{}
+<<< @/public/examples/components/switch/large.html#body{}
 
 ### Disabled
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/ui/switch/disabled.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/disabled.html"></iframe>
 
-<<< @/public/examples/ui/switch/disabled.html#body{}
+<<< @/public/examples/components/switch/disabled.html#body{}
