@@ -44,7 +44,7 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/range/default.html#body{} [html]
-<<< @/../examples/src/pages/componentss/range/default.liquid#js{} [js]
+<<< @/../examples/src/pages/components/range/default.liquid#js{} [js]
 ```vue
 <script setup lang="ts">
     import { UiRange } from '@/components/progress'
@@ -75,7 +75,7 @@ export function Example() {
 
 ::: code-group
 <<< @/public/examples/components/range/multi.html#body{} [html]
-<<< @/../examples/src/pages/componentss/range/multi.liquid#js{} [js]
+<<< @/../examples/src/pages/components/range/multi.liquid#js{} [js]
 :::
 
 
@@ -85,7 +85,7 @@ export function Example() {
 
 ::: code-group
 <<< @/public/examples/components/range/vertical.html#body{} [html]
-<<< @/../examples/src/pages/componentss/range/vertical.liquid#js{} [js]
+<<< @/../examples/src/pages/components/range/vertical.liquid#js{} [js]
 :::
 
 ## Javascript API
