@@ -1,45 +1,40 @@
 # Button
 <br>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/button" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/button" />
 
 ### Usage
 
 ```css
-@import "winduum/src/components/btn/index.css" layer(components);
+@import "winduum/src/components/button/index.css" layer(components);
 ```
 
 ### Variants
 * <LinkGh name="default" path="components/btn" />
 * <LinkGh name="interactive" path="components/btn" />
 
-### Tokens
-* `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `muted` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `raised` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `ghosted` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `gradient` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/gradient.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `gradient-bordered` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/gradient-bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `wide` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/wide.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `square` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `circle` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `loading` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/loading.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `hover-fill` <a href="https://github.com/winduum/winduum/blob/main/src/components/btn/hover-fill.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-
 ### Props
-* <LinkGh name="default-props" path="components/button" />
-* <LinkGh name="interactive-props" path="components/button" />
-* <LinkGh name="loading-props" path="components/button" />
+* <LinkGh name="default" path="components/button/props" />
+* <LinkGh name="interactive" path="components/button/props" />
+
+### Tokens
+* `bordered` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `muted` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `raised` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `ghosted` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `square` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `circle` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `fill` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/hover-fill.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/btn" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/btn" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/btn" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/button" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/button" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/button" />
 
 ## Examples
 
@@ -51,22 +46,22 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/btn/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiBtn } from '@/components/btn'
+    import { Button } from '@/components/button'
 </script>
 
 <template>
-  <UiBtn>Button</UiBtn>
-  <UiBtn class="rounded-full">Button</UiBtn>
+  <Button>Button</Button>
+  <Button class="rounded-full">Button</Button>
 </template>
 ```
 ```jsx
-import { UiBtn } from "@/components/btn"
+import { Button } from "@/components/button"
 
 export function Example() {
     return (
         <>
-            <UiBtn>Button</UiBtn>
-            <UiBtn className="rounded-full">Button</UiBtn>
+            <Button>Button</Button>
+            <Button className="rounded-full">Button</Button>
         </>
     )
 }
@@ -103,14 +98,6 @@ export function Example() {
 
 <<< @/public/examples/components/btn/text.html#body{}
 
-### Gradient
-
-You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/gradient-color-stops) gradient classes
-
-<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/gradient.html"></iframe>
-
-<<< @/public/examples/components/btn/gradient.html#body{}
-
 ### Small
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/small.html"></iframe>
@@ -122,12 +109,6 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/large.html"></iframe>
 
 <<< @/public/examples/components/btn/large.html#body{}
-
-### Wide
-
-<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/wide.html"></iframe>
-
-<<< @/public/examples/components/btn/wide.html#body{}
 
 ### Square
 
@@ -170,20 +151,20 @@ You can create gradient buttons with [TailwindCSS](https://tailwindcss.com/docs/
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/custom.html"></iframe>
 
 ```html
-<button class="x-btn">Button</button>
+<button class="x-custom">Button</button>
 ```
 ```css
-.x-btn {
-    --x-btn-height: 4rem;
-    --x-btn-py: 1rem;
-    --x-btn-px: 1rem;
-    --x-btn-border-radius: 0;
-    --x-btn-font-size: 1.15rem;
-    --x-btn-font-weight: 700;
-    --x-btn-bg: yellow;
-    --x-btn-color: #333;
-    --x-btn-hover-opacity: 0.4;
-    --x-btn-focus-opacity: 0.8;
+.x-custom {
+  --color-accent: yellow;
+  --color-accent-foreground: #333;
+  --x-button-block-size: 4rem;
+  --x-button-padding-block: 1rem;
+  --x-button-padding-inline: 1rem;
+  --x-button-border-radius: 0;
+  --x-button-font-size: 1.15rem;
+  --x-button-font-weight: 700;
+  --x-button-hover-opacity: 40%;
+  --x-button-focus-opacity: 80%;
 }
 ```
 

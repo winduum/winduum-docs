@@ -1,2 +1,7 @@
 @import "winduum/src/base/index.css";
-@import "winduum/src/components/index.css";
+@import "winduum/src/components/index.css" layer(components);
+@import "winduum/src/utilities/index.css" layer(components);
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+@import "tailwindcss/variants.css";

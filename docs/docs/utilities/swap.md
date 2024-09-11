@@ -1,7 +1,7 @@
 # Swap
 Provides a new utility class `divider` to toggle between elements.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/swap" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/swap" />
 
 ## Examples
 

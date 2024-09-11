@@ -1,6 +1,6 @@
 # Notice
 <br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/notice" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/notice" />
 
 ### Usage
 
@@ -12,12 +12,12 @@
 * <LinkGh name="default" path="components/notice" />
 
 ### Props
-* <LinkGh name="default-props" path="components/notice" />
+* <LinkGh name="default" path="components/notice/props" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/notice" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/notice" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/notice" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/notice" />
 
@@ -31,23 +31,23 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/notice/success.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiNotice } from '@/components/notice'
+    import { Notice } from '@/components/notice'
 </script>
 
 <template>
-    <UiNotice class="accent-success">
+    <Notice class="accent-success">
         Success notice
-    </UiNotice>
+    </Notice>
 </template>
 ```
 ```jsx
-import { UiNotice } from '@/components/notice'
+import { Notice } from '@/components/notice'
 
 export function Example() {
     return (
-        <UiNotice className="accent-success">
+        <Notice className="accent-success">
             Success notice
-        </UiNotice>
+        </Notice>
     )
 }
 ```

@@ -3,7 +3,7 @@
 A material ripple effect that is visible on clicking, you can use it with or without JS by adding `animation-ripple` class.
 Use with [Button](/docs/components/button) or any other component.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/ripple" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/ripple" />
 
 ## Usage
 
@@ -34,12 +34,12 @@ document.querySelector('#showRipple').addEventListener('click', (e) => {
 ## Example
 
 <div class="iframe">
-    <button class="x-btn" id="showRipple">Show ripple</button>
+    <button class="x-button" id="showRipple">Show ripple</button>
 </div>
 
 ::: code-group
 ```html
-<button class="x-btn" id="showRipple">Show ripple</button>
+<button class="x-button" id="showRipple">Show ripple</button>
 ```
 ```js
 import { showRipple } from 'winduum/src/utilities/ripple'

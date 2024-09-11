@@ -9,14 +9,15 @@ Other input types are supported in other components
 * `range` - included in [Range](/docs/components/range)
 * `button`, `reset`, `submit` - included in [Button](/docs/components/button)
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/control" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/control" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/control" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/control" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/control" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/control" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/control" />
 
 ### Usage
 
@@ -27,6 +28,7 @@ Follow instructions for individual framework usage below
 ### Variants
 * <LinkGh name="default" path="components/control" />
 * <LinkGh name="interactive" path="components/control" />
+* <LinkGh name="invalid" path="components/control" />
 * <LinkGh name="floating" path="components/control" />
 * <LinkGh name="floating-interactive" path="components/control" />
 * <LinkGh name="file" path="components/control" />
@@ -36,15 +38,11 @@ Follow instructions for individual framework usage below
 * <LinkGh name="icon" path="components/control" />
 
 ### Props
-* <LinkGh name="default-props" path="components/control" />
-* <LinkGh name="interactive-props" path="components/control" />
-* <LinkGh name="floating-props" path="components/control" />
-* <LinkGh name="color-props" path="components/control" />
-* <LinkGh name="select-props" path="components/control" />
-* <LinkGh name="icon-props" path="components/control" />
-
-### Tokens
-* <LinkGh name="invalid" path="components/control" />
+* <LinkGh name="default" path="components/control/props" />
+* <LinkGh name="floating" path="components/control/props" />
+* <LinkGh name="color" path="components/control/props" />
+* <LinkGh name="select" path="components/control/props" />
+* <LinkGh name="icon" path="components/control/props" />
 
 ##  Examples
 
@@ -56,24 +54,24 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/input/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiControl } from '@/components/control'
+    import { Control } from '@/components/control'
 </script>
 
 <template>
-    <UiControl>
+    <Control>
         <input type="text">
-    </UiControl>
+    </Control>
 </template>
 ```
 ```jsx
-import { UiControl } from "@/components/control"
+import { Control } from "@/components/control"
 
 export function Example() {
     return (
         <>
-            <UiControl>
+            <Control>
                 <input type="text" />
-            </UiControl>
+            </Control>
         </>
     )
 }
@@ -81,11 +79,11 @@ export function Example() {
 :::
 
 ### Icon
-You can position any content to `start` and `end` of the control.<br>Padding is automatically handled by CSS up to 2 icons or you can do it manually.
-* `--x-control-icon-count-s` - number of icons at the start of the control
-* `--x-control-icon-count-e`- number of icons at the end of the control
-* `--x-control-s` - manually change start padding in px according to content
-* `--x-control-e` - manually change end padding in px according to content
+You can position any content to `start` and `end` of the control.<br>Padding is automatically handled by CSS up to two icons, or you can do it manually.
+* `--x-control-icon-count-start` - number of icons at the start of the control
+* `--x-control-icon-count-end`- number of icons at the end of the control
+* `--x-control-start` - manually change start padding in px according to content
+* `--x-control-end` - manually change end padding in px according to content
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/icon.html"></iframe>
 

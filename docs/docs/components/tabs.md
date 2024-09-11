@@ -1,6 +1,6 @@
 # Tabs
 <br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/tabs" />
 
 ### Usage
 
@@ -14,7 +14,8 @@
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/tabs" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/tabs" />
 
 ## Examples
 

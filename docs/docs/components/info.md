@@ -1,7 +1,7 @@
 # Info
 Small informative component.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/info" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/info" />
 
 ### Usage
 
@@ -13,12 +13,12 @@ Small informative component.
 * <LinkGh name="default" path="components/info" />
 
 ### Props
-* <LinkGh name="default-props" path="components/info" />
+* <LinkGh name="default" path="components/info/props" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/info" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/info" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/info" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/info" />
 
@@ -32,19 +32,19 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/info/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiInfo } from '@/components/info'
+    import { Info } from '@/components/info'
 </script>
 
 <template>
-    <UiInfo>Info text</UiInfo>
+    <Info>Info text</Info>
 </template>
 ```
 ```jsx
-import { UiInfo } from '@/components/info'
+import { Info } from '@/components/info'
 
 export function Example() {
     return (
-        <UiInfo>Info text</UiInfo>
+        <Info>Info text</Info>
     )
 }
 ```

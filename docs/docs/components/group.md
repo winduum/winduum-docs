@@ -2,7 +2,7 @@
 
 Group common ui components such as [Button](/docs/components/button), [Badge](/docs/components/badge) or [Control](/docs/components/control) together.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/group" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/group" />
 
 ### Usage
 
@@ -19,7 +19,7 @@ Group common ui components such as [Button](/docs/components/button), [Badge](/d
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/group" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/group" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/group" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/group" />
 
@@ -33,30 +33,30 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/btn/group.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiGroup } from '@/components/group'
-    import { UiBtn } from '@/components/btn'
+    import { Group } from '@/components/group'
+    import { Button } from '@/components/button'
 </script>
 
 <template>
-    <UiGroup>
-        <UiBtn>Button</UiBtn>
-        <UiBtn>Button</UiBtn>
-        <UiBtn>Button</UiBtn>
-    </UiGroup>
+    <Group>
+        <Button>Button</Button>
+        <Button>Button</Button>
+        <Button>Button</Button>
+    </Group>
 </template>
 ```
 ```jsx
-import { UiGroup } from '@/components/group'
-import { UiBtn } from '@/components/btn'
+import { Group } from '@/components/group'
+import { Button } from '@/components/button'
 
 export function Example() {
     return (
         <>
-            <UiGroup>
-                <UiBtn>Button</UiBtn>
-                <UiBtn>Button</UiBtn>
-                <UiBtn>Button</UiBtn>
-            </UiGroup>
+            <Group>
+                <Button>Button</Button>
+                <Button>Button</Button>
+                <Button>Button</Button>
+            </Group>
         </>
     )
 }

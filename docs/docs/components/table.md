@@ -1,6 +1,6 @@
 # Table
 Display your data in non-interactive, interactive or responsive tables.
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/table" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/table" />
 
 ### Usage
 
@@ -13,13 +13,12 @@ Display your data in non-interactive, interactive or responsive tables.
 * <LinkGh name="interactive" path="components/table" />
 
 ### Props
-* <LinkGh name="default-props" path="components/table" />
-* <LinkGh name="interactive-props" path="components/table" />
+* <LinkGh name="default" path="components/table/props" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/table" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/table" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/table" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/table" />
 

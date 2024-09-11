@@ -1,7 +1,7 @@
 # Image
 Default constrains for media elements such as `img`, `video`, `iframe`, `object` or `svg`
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/image" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/image" />
 
 ### Usage
 
@@ -11,12 +11,14 @@ Default constrains for media elements such as `img`, `video`, `iframe`, `object`
 
 ### Variants
 * <LinkGh name="default" path="components/image" />
+
+### Tokens
 * <LinkGh name="avatar" path="components/image" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/image" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/image" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/image" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/image" />
 

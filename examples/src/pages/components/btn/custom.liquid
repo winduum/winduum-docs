@@ -3,17 +3,17 @@
 <button class="x-button">Button</button>
 {% endblock %}
 
-{% block head %}
+{% block foot %}
 <style>
-    body .x-button {
-        --x-button-height: 4rem;
-        --x-button-py: 1rem;
-        --x-button-px: 1rem;
+    .x-button {
+        --color-accent: yellow;
+        --color-accent-foreground: #333;
+        --x-button-block-size: 4rem;
+        --x-button-padding-block: 1rem;
+        --x-button-padding-inline: 1rem;
         --x-button-border-radius: 0;
         --x-button-font-size: 1.15rem;
         --x-button-font-weight: 700;
-        --color-accent: yellow;
-        --x-button-color: #333 !important;
         --x-button-hover-opacity: 40%;
         --x-button-focus-opacity: 80%;
     }

@@ -1,6 +1,6 @@
 # Link
 <br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/link" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/link" />
 
 ### Usage
 
@@ -13,13 +13,12 @@
 * <LinkGh name="interactive" path="components/link" />
 
 ### Props
-* <LinkGh name="default-props" path="components/link" />
-* <LinkGh name="interactive-props" path="components/link" />
+* <LinkGh name="default" path="components/link/props" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/link" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/link" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/link" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/link" />
 
@@ -33,30 +32,30 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/link/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiLink } from '@/components/link'
+    import { Link } from '@/components/link'
 </script>
 
 <template>
-    <UiLink href="#" title="">
+    <Link href="#" title="">
         Link Default
-    </UiLink>
-    <UiLink href="#" class="accent-primary" title="">
+    </Link>
+    <Link href="#" class="accent-primary" title="">
         Link Primary
-    </UiLink>
+    </Link>
 </template>
 ```
 ```jsx
-import { UiLink } from '@/components/link'
+import { Link } from '@/components/link'
 
 export function Example() {
     return (
         <>
-            <UiLink href="#" title="">
+            <Link href="#" title="">
                 Link Default
-            </UiLink>
-            <UiLink href="#" className="accent-primary" title="">
+            </Link>
+            <Link href="#" className="accent-primary" title="">
                 Link Primary
-            </UiLink>
+            </Link>
         </>
     )
 }

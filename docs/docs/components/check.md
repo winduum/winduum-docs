@@ -1,7 +1,7 @@
 # Check
 Check supports `checkbox` and `radio` **input** types
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/check" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/check" />
 
 ### Usage
 
@@ -12,18 +12,16 @@ Check supports `checkbox` and `radio` **input** types
 ### Variants
 * <LinkGh name="default" path="components/check" />
 * <LinkGh name="interactive" path="components/check" />
-
-### Tokens
 * <LinkGh name="invalid" path="components/check" />
 
 ### Props
-* <LinkGh name="default-props" path="components/check" />
-* <LinkGh name="interactive-props" path="components/check" />
+* <LinkGh name="default" path="components/check/props" />
+* <LinkGh name="interactive" path="components/check/props" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/check" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/check" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/check" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/check" />
 
@@ -37,32 +35,32 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/checkbox/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiCheck } from '@/components/check'
+    import { Check } from '@/components/check'
 </script>
 
 <template>
-    <UiCheck>
+    <Check>
         <input type="checkbox">
         Checkbox
-    </UiCheck>
-    <UiCheck>
+    </Check>
+    <Check>
         <input type="checkbox">
-    </UiCheck>
+    </Check>
 </template>
 ```
 ```jsx
-import { UiCheck } from "@/components/check"
+import { Check } from "@/components/check"
 
 export function Example() {
     return (
         <>
-            <UiCheck>
+            <Check>
                 <input type="checkbox" />
                 Checkbox
-            </UiCheck>
-            <UiCheck>
+            </Check>
+            <Check>
                 <input type="checkbox" />
-            </UiCheck>
+            </Check>
         </>
     )
 }

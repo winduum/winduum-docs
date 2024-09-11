@@ -129,7 +129,7 @@ It's also recommended
 to use [Stylelint](https://stylelint.io/) with [stylelint-stylistic](https://github.com/stylelint-stylistic/stylelint-stylistic)
 to help add conventions to your styles.
 You can check
-and use basic `.stylelintrc` for Winduum [here](https://github.com/winduum/winduum/blob/main/.stylelintrc).
+and use basic `.stylelintrc` for Winduum [here](https://github.com/winduum/winduum/blob/next/.stylelintrc).
 
 ```shell
 npm i stylelint stylelint-config-standard @stylistic/stylelint-config --save-dev

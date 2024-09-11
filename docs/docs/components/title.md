@@ -1,7 +1,7 @@
 # Title
 For common title styles that you can manage from one component across project.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/title" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/title" />
 
 ### Usage
 
@@ -13,16 +13,16 @@ For common title styles that you can manage from one component across project.
 * <LinkGh name="default" path="components/title" />
 
 ### Props
-* <LinkGh name="default-props" path="components/title" />
+* <LinkGh name="default" path="components/title/props" />
 
 ### Tokens
-* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/title/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/title/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/next/src/components/title/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/next/src/components/title/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/title" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/title" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/title" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/title" />
 
@@ -36,19 +36,19 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/title/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiTitle } from '@/components/title'
+    import { Title } from '@/components/title'
 </script>
 
 <template>
-    <UiTitle>Title</UiTitle>
+    <Title>Title</Title>
 </template>
 ```
 ```jsx
-import { UiTitle } from '@/components/title'
+import { Title } from '@/components/title'
 
 export function Example() {
     return (
-        <UiTitle>Title</UiTitle>
+        <Title>Title</Title>
     )
 }
 ```

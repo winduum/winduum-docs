@@ -263,6 +263,10 @@ export default defineConfig({
               link: '/docs/components/title'
             },
             {
+              text: 'Toast',
+              link: '/docs/components/toast'
+            },
+            {
               text: 'Toaster',
               link: '/docs/components/toaster'
             },

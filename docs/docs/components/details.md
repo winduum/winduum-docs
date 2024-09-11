@@ -5,7 +5,7 @@ Uses small external library `slide-element` for smooth toggle animations.
 
 It is unstyled by default so you can apply your own styles.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/details" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/details" />
 
 ### Dependencies
 
@@ -17,7 +17,7 @@ It is unstyled by default so you can apply your own styles.
 npm i slide-element
 ```
 ```html
-<details class="c-details group bg-body-secondary rounded">
+<details class="x-details group bg-body-secondary rounded">
     <summary class="flex-center text-primary p-4" data-action="toggleDetails">
         <span class="x-title">Show more</span>
         <svg class="size-4 group-open:-scale-y-100 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
@@ -47,7 +47,8 @@ document.querySelectorAll('[data-action="toggleDetails"]').forEach(summary => {
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/details" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/details" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/details" />
 
 ## Examples
 

@@ -1,7 +1,7 @@
 # Divide Gap
 Provides a new TailwindCSS utility class `dot` for.. well dots!
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/dot.css" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/dot.css" />
 
 ## Example
 

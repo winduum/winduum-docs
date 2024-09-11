@@ -1,6 +1,6 @@
 # Switch
 <br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/switch" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/switch" />
 
 ### Usage
 
@@ -11,18 +11,16 @@
 ### Variants
 * <LinkGh name="default" path="components/switch" />
 * <LinkGh name="interactive" path="components/switch" />
+* <LinkGh name="invalid" path="components/switch" />
 
 ### Props
-* <LinkGh name="default-props" path="components/switch" />
-* <LinkGh name="interactive-props" path="components/switch" />
-
-### Tokens
-* <LinkGh name="invalid" path="components/switch" />
+* <LinkGh name="default" path="components/switch/props" />
+* <LinkGh name="interactive" path="components/switch/props" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/switch" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/switch" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/switch" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/switch" />
 
@@ -36,25 +34,25 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/switch/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiSwitch } from '@/components/switch'
+    import { Switch } from '@/components/switch'
 </script>
 
 <template>
-    <UiSwitch class="x-switch">
+    <Switch class="x-switch">
         <input type="checkbox">
         Switch
-    </UiSwitch>
+    </Switch>
 </template>
 ```
 ```jsx
-import { UiSwitch } from '@/components/switch'
+import { Switch } from '@/components/switch'
 
 export function Example() {
     return (
-        <UiSwitch class="x-switch">
+        <Switch class="x-switch">
             <input type="checkbox" />
             Switch
-        </UiSwitch>
+        </Switch>
     )
 }
 ```

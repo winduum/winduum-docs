@@ -1,9 +1,9 @@
 # Transitions
 
 This activates the [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) with cross-document animations.<br>
-CSS properties can be changed via [Config](https://github.com/winduum/winduum/blob/main/src/base/config.css).
+CSS properties can be changed via [Config](https://github.com/winduum/winduum/blob/next/src/base/config.css).
 
-[`src/base/transitions.css`](https://github.com/winduum/winduum/blob/main/src/base/transitions.css)
+[`src/base/transitions.css`](https://github.com/winduum/winduum/blob/next/src/base/transitions.css)
 
 ```css
 @view-transition {
@@ -22,7 +22,7 @@ CSS properties can be changed via [Config](https://github.com/winduum/winduum/bl
 
 Add `view-transition-main` class to any element you want to animate page navigation.
 
-[`src/utilities/view-transition.css`](https://github.com/winduum/winduum/blob/main/src/utilities/view-transition.css)
+[`src/utilities/view-transition.css`](https://github.com/winduum/winduum/blob/next/src/utilities/view-transition.css)
 
 ```css
 .view-transition-main {

@@ -1,7 +1,7 @@
 # Badge
 <br>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/badge" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/badge" />
 
 ### Usage
 
@@ -13,21 +13,21 @@
 
 * <LinkGh name="default" path="components/badge" />
 
-### Tokens
-* `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `muted` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `square` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `circle` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-
 ### Props
 * <LinkGh name="default" path="components/badge/props" />
+
+### Tokens
+* `bordered` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `muted` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `square` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `circle` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/badge" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/badge" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/badge" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/badge" />
 
@@ -41,22 +41,22 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/badge/basic.html#body{} [html]
 ```vue
 <script setup lang="ts">
-    import { UiBadge } from '@/components/badge'
+    import { Badge } from '@/components/badge'
 </script>
 
 <template>
-  <UiBadge>Badge</UiBadge>
-  <UiBadge class="rounded-full">Badge</UiBadge>
+  <Badge>Badge</Badge>
+  <Badge class="rounded-full">Badge</Badge>
 </template>
 ```
 ```jsx
-import { UiBadge } from "@/components/badge"
+import { Badge } from "@/components/badge"
 
 export function Example() {
     return (
         <>
-            <UiBadge>Badge</UiBadge>
-            <UiBadge className="rounded-full">Badge</UiBadge>
+            <Badge>Badge</Badge>
+            <Badge className="rounded-full">Badge</Badge>
         </>
     )
 }
