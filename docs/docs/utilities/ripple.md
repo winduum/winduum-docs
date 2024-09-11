@@ -1,7 +1,7 @@
 # Ripple
 
 A material ripple effect that is visible on clicking, you can use it with or without JS by adding `animation-ripple` class.
-Use with [Button](/docs/ui/button) or any other component.
+Use with [Button](/docs/components/button) or any other component.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/ripple" />
 

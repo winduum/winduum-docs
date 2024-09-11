@@ -66,7 +66,7 @@ To use TailwindCSS v3, make sure to add TailwindCSS imports at the end of your `
 
 Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation) docs
 and include Winduum as a plugin,
-see [Config](config) for more info.
+see [Config](/docs/base/config) for more info.
 
 #### v4
 
@@ -209,7 +209,7 @@ On [StackBlitz](https://stackblitz.com/) or [GitHub](https://github.com/winduum/
 </div>
 </div>
 
-Winduum is **framework-agnostic**, learn more on the [About](/docs/use#framework-agnostic) page.
+Winduum is **framework-agnostic**, learn more on the [About](/docs/about#framework-agnostic) page.
 
 Do you need ready to use components? Here are components ready to copy & paste. For now there are only a few, more might come in the future!
 

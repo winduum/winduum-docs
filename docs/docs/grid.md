@@ -8,6 +8,5 @@ It's recommended to use the following TailwindCSS approaches to shape your layou
 
 Winduum also provides additional utilities to make things even easier.
 
-* [Flex](/docs/utilities/flex)
 * [Container](/docs/utilities/container)
 * [Divide Gap](/docs/utilities/divide-gap)

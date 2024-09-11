@@ -1,6 +1,6 @@
 # Group
 
-Group common ui components such as [Button](/docs/ui/button), [Badge](/docs/ui/badge) or [Control](/docs/ui/control) together.
+Group common ui components such as [Button](/docs/components/button), [Badge](/docs/components/badge) or [Control](/docs/components/control) together.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/group" />
 

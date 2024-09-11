@@ -43,18 +43,18 @@ You can customize config with options listed bellow.
 
 This plugin disables by default following TailwindCSS corePlugins
 
-* **preflight** - custom modern css reset is used, see [Reset](layout/reset)
+* **preflight** - custom modern css reset is used, see [Reset](/docs/base/reset)
 
 Winduum also exports useful helper functions you can use in your `tailwind.config.js`, see [`utils/tailwind.js`](https://github.com/winduum/winduum/blob/main/utils/tailwind.js) for more info.
 
 ### settings.rgb
-Include `-rgb` color variants. Learn more about this in [Compatibility](/docs/themes.html#compatibility) section.
+Include `-rgb` color variants. Learn more about this in [Compatibility](/docs/base/theme.html#compatibility) section.
 
 * **Type:** `boolean`
 * **Default:** `false`
 
 ### settings.colorMix
-Use `color-mix` in color variants instead of rgb. Learn more about this in [Compatibility](/docs/themes.html#compatibility) section.
+Use `color-mix` in color variants instead of rgb. Learn more about this in [Compatibility](/docs/base/theme.html#compatibility) section.
 
 * **Type:** `boolean`
 * **Default:** `true`
@@ -70,7 +70,7 @@ Use `color-mix` in color variants instead of rgb. Learn more about this in [Comp
   'main-foreground', 'main-primary-foreground', 'main-secondary-foreground', 'main-tertiary-foreground',
   'body-foreground', 'body-primary-foreground', 'body-secondary-foreground', 'body-tertiary-foreground']`
 
-These are additional color tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`. See [Colors](colors) for more info.
+These are additional color tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`. See [Colors](/docs/colors) for more info.
 
 Example `bg-primary`:
 ```css
@@ -231,4 +231,4 @@ Example `animation-fade-in`:
 }
 ```
 
-These are new media queries tokens that can be used with TailwindCSS, see more in [Breakpoints](layout/breakpoints)
+These are new media queries tokens that can be used with TailwindCSS, see more in [Breakpoints](/docs/base/breakpoints)

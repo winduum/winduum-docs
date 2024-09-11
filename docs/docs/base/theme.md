@@ -36,7 +36,7 @@ Better high range colors for P3 capable displays.
 
 Support for `color-mix` is almost `90%` global usage.
 But if you want better compatibility you can still use `rgb`
-which can be enabled it in the [Config](/docs/config.html#settings-rgb) (only for TailwindCSS v3). 
+which can be enabled it in the [Config](/docs/base/config.html#settings-rgb) (only for TailwindCSS v3). 
 In that case, you have to use rgb variants for theming in your own components.
 
 * [`src/base/theme/default-rgb.css`](https://github.com/winduum/winduum/blob/main/src/base/theme/default-rgb.css)

@@ -5,9 +5,9 @@ This component supports **input**, **select** and **textarea** including **all**
 * `text`, `color`, `date`, `datetime-local`, `email`, `file`, `hidden`, `month`, `number`, `password`, `search`, `tel`, `time`, `url`, `week`
 
 Other input types are supported in other components
-* `checkbox`, `radio` - included in [Check](/docs/ui/check), [Switch](/docs/ui/switch), [Color](/docs/ui/color) or [Rating](/docs/ui/rating)
-* `range` - included in [Range](/docs/ui/range)
-* `button`, `reset`, `submit` - included in [Button](/docs/ui/button)
+* `checkbox`, `radio` - included in [Check](/docs/components/check), [Switch](/docs/components/switch), [Color](/docs/components/color) or [Rating](/docs/components/rating)
+* `range` - included in [Range](/docs/components/range)
+* `button`, `reset`, `submit` - included in [Button](/docs/components/button)
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/control" />
 
@@ -197,7 +197,7 @@ You can position any content to `start` and `end` of the control.<br>Padding is 
 
 ### Group
 
-You can group controls into groups via `x-group` component and combine them with other components like [Button](/docs/ui/button)
+You can group controls into groups via `x-group` component and combine them with other components like [Button](/docs/components/button)
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/group.html"></iframe>
 
