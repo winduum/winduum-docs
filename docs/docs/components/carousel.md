@@ -9,7 +9,7 @@ Provides a scroll carousel that uses native CSS `scroll-snap` property.<br>
 @import "winduum/src/components/carousel/index.css" layer(components);
 ```
 <<< @/public/examples/components/carousel/basic.html#body{} [html]
-<<< @/../examples/src/pages/component/carousel/basic.liquid#js{} [js]
+<<< @/../examples/src/pages/components/carousel/basic.liquid#js{} [js]
 :::
 
 ### Variants
@@ -29,7 +29,7 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/carousel/basic.html#body{} [html]
-<<< @/../examples/src/pages/component/carousel/basic.liquid#js{} [js]
+<<< @/../examples/src/pages/components/carousel/basic.liquid#js{} [js]
 :::
 
 ### Full
@@ -38,7 +38,7 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/carousel/full.html#body{} [html]
-<<< @/../examples/src/pages/component/carousel/full.liquid#js{} [js]
+<<< @/../examples/src/pages/components/carousel/full.liquid#js{} [js]
 :::
 
 

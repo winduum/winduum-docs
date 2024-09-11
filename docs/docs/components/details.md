@@ -57,7 +57,7 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/details/default.html#body{} [html]
-<<< @/../examples/src/pages/component/details/default.liquid#js{} [js]
+<<< @/../examples/src/pages/components/details/default.liquid#js{} [js]
 :::
 
 ### Checkbox
@@ -66,7 +66,7 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/details/checkbox.html#body{} [html]
-<<< @/../examples/src/pages/component/details/checkbox.liquid#js{} [js]
+<<< @/../examples/src/pages/components/details/checkbox.liquid#js{} [js]
 :::
 
 ### Accordion
@@ -75,7 +75,7 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/details/accordion.html#body{} [html]
-<<< @/../examples/src/pages/component/details/accordion.liquid#js{} [js]
+<<< @/../examples/src/pages/components/details/accordion.liquid#js{} [js]
 :::
 
 

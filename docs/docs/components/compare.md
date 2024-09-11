@@ -24,7 +24,7 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/compare/default.html#body{} [html]
-<<< @/../examples/src/pages/component/compare/default.liquid#js{} [js]
+<<< @/../examples/src/pages/components/compare/default.liquid#js{} [js]
 :::
 
 ### Text
@@ -33,7 +33,7 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/compare/text.html#body{} [html]
-<<< @/../examples/src/pages/component/compare/text.liquid#js{} [js]
+<<< @/../examples/src/pages/components/compare/text.liquid#js{} [js]
 :::
 
 ## Javascript API

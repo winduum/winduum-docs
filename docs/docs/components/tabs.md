@@ -24,7 +24,7 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/tabs/default.html#body{} [html]
-<<< @/../examples/src/pages/component/tabs/default.liquid#js{} [js]
+<<< @/../examples/src/pages/components/tabs/default.liquid#js{} [js]
 :::
 
 ### Custom
@@ -33,7 +33,7 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/tabs/custom.html#body{} [html]
-<<< @/../examples/src/pages/component/tabs/custom.liquid#js{} [js]
+<<< @/../examples/src/pages/components/tabs/custom.liquid#js{} [js]
 :::
 
 ## Javascript API
