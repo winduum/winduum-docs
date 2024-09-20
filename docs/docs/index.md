@@ -26,6 +26,7 @@ npm i winduum
 The components are written in plain CSS, so sources can be also loaded in browsers without a build step or used in any other build tool such as **PostCSS** or **LightningCSS**.
 
 ```css
+@import "winduum/src/base/reset.css";
 @import "winduum/src/base/index.css";
 @import "winduum/src/components/index.css" layer(components);
 @import "winduum/src/utilities/index.css" layer(components);
@@ -34,6 +35,7 @@ The components are written in plain CSS, so sources can be also loaded in browse
 Or you can include components separately, follow usage steps with each component.
 
 ```css
+@import "winduum/src/base/reset.css";
 @import "winduum/src/base/index.css";
 @import "winduum/src/components/button/index.css" layer(components);
 @import "winduum/src/utilities/index.css" layer(components);
@@ -42,10 +44,13 @@ Or you can include components separately, follow usage steps with each component
 Or paste the source code to your project and make it your own!
 
 ```css
+@import "@/styles/base/reset.css";
 @import "@/styles/base/index.css";
 @import "@/styles/components/button/index.css" layer(components);
 @import "@/styles/utilities/index.css" layer(components);
 ```
+
+
 
 With `layer(components)` you can use TailwindCSS variant classes, for example `class="x-button lg:square"` to make button square only from `lg` breakpoint.
 
@@ -55,9 +60,10 @@ It's optional but recommended to leverage the full functionality of the library!
 
 #### v3
 
-To use TailwindCSS v3, make sure to add TailwindCSS imports at the end of your `css` file.
+To use TailwindCSS `v3`, make sure to add TailwindCSS imports at the end of your `css` file.
 
 ```css
+@import "winduum/tailwindcss/base/defaults.css";
 @import "tailwindcss/base.css";
 @import "tailwindcss/components.css";
 @import "tailwindcss/utilities.css";
@@ -78,11 +84,15 @@ TailwindCSS v4 is still in alpha! The estimated release is end of 2024 or furthe
 :::
 
 ```css
+@layer theme, base, components, utilities;
+
 @import "tailwindcss/theme.css" layer(theme);
-@import "winduum/src/base/theme/default-tw.css" layer(theme);
+@import "winduum/tailwindcss/base/theme/default.css" layer(theme);
+@import "winduum/tailwindcss/base/config/transition.css" layer(theme);
+@import "winduum/tailwindcss/base/config.css" layer(theme);
+@import "winduum/tailwindcss/base/breakpoints.css" layer(theme);
 @import "winduum/src/base/config/mask.css" layer(theme);
 @import "winduum/src/base/config/transition.css" layer(theme);
-@import "winduum/src/base/config/tw.css" layer(theme);
 @import "winduum/src/base/reset.css" layer(base);
 @import "winduum/src/base/defaults.css" layer(base);
 

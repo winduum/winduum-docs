@@ -264,6 +264,11 @@ body .border-t-2 {
   left: calc(var(--c-dialog-scrollbar-width, 0) / 2 * -1) !important;
 }
 
+.vp-doc table {
+  width: 100%;
+  display: table;
+}
+
 /*
 .VPDocAside {
   ul ul ul {

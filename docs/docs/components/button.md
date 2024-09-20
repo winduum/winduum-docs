@@ -183,3 +183,78 @@ You can group buttons into groups via `x-group` component.
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/group.html"></iframe>
 
 <<< @/public/examples/components/btn/group.html#body{}
+
+
+## Custom Props
+
+### default
+
+| CSS property                          | Default value                    |
+|---------------------------------------|----------------------------------|
+| `--x-button-inline-size`              | `initial`                        |
+| `--x-button-block-size`               | `2.25rem`                        |
+| `--x-button-padding-block`            | `0.375rem`                       |
+| `--x-button-padding-inline`           | `0.75rem`                        |
+| `--x-button-border-radius`            | `var(--radius, 0.75rem)`         |
+| `--x-button-font-family`              | `initial`                        |
+| `--x-button-font-size`                | `var(--font-size-sm, 0.875rem)`  |
+| `--x-button-font-weight`              | `var(--font-weight-medium, 500)` |
+| `--x-button-letter-spacing`           | `initial`                        |
+| `--x-button-background-color-space`   | `srgb`                           |
+| `--x-button-background-color`         | `var(--color-accent)`            |
+| `--x-button-background-color-opacity` | `100%`                           |
+| `--x-button-background-color-mix`     | `transparent`                    |
+| `--x-button-color-space`              | `srgb`                           |
+| `--x-button-color`                    | `var(--color-accent-foreground)` |
+| `--x-button-color-opacity`            | `100%`                           |
+| `--x-button-color-mix`                | `transparent`                    |
+| `--x-button-border-width`             | `0px`                            |
+| `--x-button-border-color-space`       | `srgb`                           |
+| `--x-button-border-color`             | `var(--color-accent)`            |
+| `--x-button-border-color-opacity`     | `100%`                           |
+| `--x-button-border-color-mix`         | `transparent`                    |
+| `--x-button-outline-width`            | `2px`                            |
+| `--x-button-outline-color-space`      | `srgb`                           |
+| `--x-button-outline-color`            | `transparent`                    |
+| `--x-button-outline-color-opacity`    | `100%`                           |
+| `--x-button-outline-color-mix`        | `transparent`                    |
+| `--x-button-outline-offset`           | `initial`                        |
+| `--x-button-gap`                      | `var(--spacing-2, 0.5rem)`       |
+
+### interactive
+
+| CSS property                                   | Default value                              |
+|------------------------------------------------|--------------------------------------------|
+| `--x-button-transition-property`               | `var(--default-transition-property)`       |
+| `--x-button-timing-function`                   | `var(--transition-timing-function-in-out)` |
+| `--x-button-transition-duration`               | `var(--default-transition-duration)`       |
+| `--x-button-hover-background-color`            | `var(--color-accent)`                      |
+| `--x-button-hover-background-color-mix`        | `var(--color-dark)`                        |
+| `--x-button-hover-background-color-opacity`    | `80%`                                      |
+| `--x-button-hover-border-color`                | `var(--color-accent)`                      |
+| `--x-button-hover-border-color-mix`            | `transparent`                              |
+| `--x-button-hover-border-color-opacity`        | `100%`                                     |
+| `--x-button-hover-color`                       | `var(--color-accent-foreground)`           |
+| `--x-button-hover-color-mix`                   | `transparent`                              |
+| `--x-button-hover-color-opacity`               | `100%`                                     |
+| `--x-button-focus-outline-offset`              | `2px`                                      |
+| `--x-button-focus-outline-color`               | `var(--color-accent)`                      |
+| `--x-button-focus-outline-color-opacity`       | `50%`                                      |
+| `--x-button-active-background-color`           | `var(--color-accent)`                      |
+| `--x-button-active-background-color-mix`       | `var(--color-dark)`                        |
+| `--x-button-active-background-color-opacity`   | `90%`                                      |
+| `--x-button-active-border-color`               | `var(--color-accent)`                      |
+| `--x-button-active-border-color-mix`           | `transparent`                              |
+| `--x-button-active-border-color-opacity`       | `100%`                                     |
+| `--x-button-active-color`                      | `var(--color-accent-foreground)`           |
+| `--x-button-active-color-mix`                  | `transparent`                              |
+| `--x-button-active-color-opacity`              | `100%`                                     |
+| `--x-button-disabled-background-color`         | `var(--color-accent)`                      |
+| `--x-button-disabled-background-color-mix`     | `transparent`                              |
+| `--x-button-disabled-background-color-opacity` | `50%`                                      |
+| `--x-button-disabled-border-color`             | `var(--color-accent)`                      |
+| `--x-button-disabled-border-color-mix`         | `transparent`                              |
+| `--x-button-disabled-border-color-opacity`     | `50%`                                      |
+| `--x-button-disabled-color`                    | `var(--color-accent-foreground)`           |
+| `--x-button-disabled-color-mix`                | `transparent`                              |
+| `--x-button-disabled-color-opacity`            | `50%`                                      |
