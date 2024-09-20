@@ -1,6 +1,6 @@
 # Underline
 
-Extends [`underline`](https://tailwindcss.com/docs/text-decoration) utility class for easy link animations.
+Extends [`underline`](https://tailwindcss.com/docs/text-decoration) utility class for easy underline animations.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/underline.css" />
 

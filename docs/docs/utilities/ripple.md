@@ -15,18 +15,22 @@ Use with [Button](/docs/components/button) or any other component.
 import { showRipple } from 'winduum/src/utilities/ripple'
 
 document.querySelector('#showRipple').addEventListener('click', (e) => {
-    showRipple(e)
+    showRipple({
+        element: e.currentTarget,
+        x: e.offsetX,
+        y: e.offsetY
+    })
 })
 ```
 ```vue
 <script setup>
     import { ref } from 'vue'
     import { showRipple } from 'winduum/src/utilities/ripple'
-    import { UiBtn } from '@/components/btn'
+    import { Button } from '@/components/button'
 </script>
 
 <template>
-    <UiBtn @click="showRipple">Show ripple</UiBtn>
+    <Button @click="(e) => showRipple({ element: e.currentTarget, x: e.offsetX, y: e.offsetY })">Show ripple</Button>
 </template>
 ```
 :::
@@ -44,8 +48,12 @@ document.querySelector('#showRipple').addEventListener('click', (e) => {
 ```js
 import { showRipple } from 'winduum/src/utilities/ripple'
 
-document.querySelector('#showRipple').addEventListener('click', event => {
-    showRipple(event)
+document.querySelector('#showRipple').addEventListener('click', (e) => {
+    showRipple({
+        element: e.currentTarget,
+        x: e.offsetX,
+        y: e.offsetY
+    })
 })
 ```
 :::
@@ -54,7 +62,7 @@ document.querySelector('#showRipple').addEventListener('click', event => {
 
 ### showRipple
 
-* **Type:** `(event) => <void>`
+* **Type:** `(ShowRippleOptions) => <void>`
 * **Kind:** `sync`
 
 Shows an animated ripple effect on a element

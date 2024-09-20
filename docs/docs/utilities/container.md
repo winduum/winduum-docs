@@ -8,10 +8,10 @@ Provides a new approach to classic [Container](https://tailwindcss.com/docs/cont
 ## Example
 Easy layout with `grid`
 ```html
-<body class="grid-cols-container gap-4">
-  <header class="col-[container-full] grid-cols-container bg-slate-300">Header Full Width</header>
-  <main>Content</main>
-  <footer class="col-[container-lg]">Footer Breakout</footer>
+<body class="grid grid-cols-container gap-4">
+  <header class="col-[container-full] grid grid-cols-container bg-slate-300">Header Full Width</header>
+  <main>Content in container</main>
+  <footer class="col-[container-breakout]">Footer Breakout</footer>
 </body>
 ```
 

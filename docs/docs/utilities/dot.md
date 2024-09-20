@@ -1,5 +1,5 @@
 # Divide Gap
-Provides a new TailwindCSS utility class `dot` for.. well dots!
+Provides a new utility class `dot` for.. well dots!
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/dot.css" />
 

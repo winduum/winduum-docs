@@ -1,5 +1,5 @@
 # Swap
-Provides a new utility class `divider` to toggle between elements.
+Provides a new utility class `swap` to toggle between elements.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/swap" />
 
