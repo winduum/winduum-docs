@@ -40,17 +40,17 @@ Follow instructions for individual framework usage below
 
 ### setPosition
 
-* **Type:** `(Event<HTMLInputElement>, options: PositionOptions) => void`
+* **Type:** `(element: HTMLInputElement, options?: SetPositionOptions) => void`
 * **Kind:** `sync`
 
-#### PositionOptions
+#### SetPositionOptions
 
 ---
 
 ##### selector
 
 * **Type:** `string`
-* **Default:** `.c-compare`
+* **Default:** `.x-compare`
 
 ---
 
@@ -63,12 +63,12 @@ Follow instructions for individual framework usage below
 
 ### setKeyboardStep
 
-* **Type:** `(KeyboardEvent<HTMLInputElement>, step: number) => void`
+* **Type:** `(element: HTMLInputElement, key: string, step?: number) => void`
 * **Kind:** `sync`
 
 
 ### setMouseStep
 
-* **Type:** `(MouseEvent<HTMLInputElement>, step: number) => void`
+* **Type:** `(element: HTMLInputElement, step?: number) => void`
 * **Kind:** `sync`
 

@@ -1,5 +1,5 @@
 # Toast
-Your toast ready from toaster!
+Let it bake and fly from your [Toaster](/docs/components/toaster)!
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/toast" />
 
@@ -10,18 +10,24 @@ Your toast ready from toaster!
 @import "winduum/src/components/toast/index.css" layer(components);
 ```
 ```js
-import { insertToaster, insertToast, closeToast } from 'winduum/src/components/toaster'
+import { showToast, closeToast } from 'winduum/src/components/toaster'
 
-document.querySelector('#insertToast').addEventListener('click', () => {
-    insertToaster(document.querySelector('dialog[open]') || document.body, {
-        classes: 'items-end'
-    })
-    
-    insertToast(document.querySelector('.c-toaster'), {
-        title: 'Hello toast!',
-        text: 'Amazing toast!',
-        end: `<button class="x-button muted ml-auto" data-action="closeToast">Close</button>`
-    })
+document.querySelector('#insertToast').addEventListener('click', async () => {
+    const toaster = document.querySelector('.x-toaster')
+
+    toaster.insertAdjacentHTML('beforeend', `
+        <li class="x-toast" role="status" aria-live="assertive" aria-atomic="true" popover="manual">
+            <div class="x-toast-content">
+                <div class="flex-col">
+                    <div class="x-title">Hello toast</div>
+                    <div class="x-text">Amazing toast</div>
+                </div>
+                <button class="x-button muted ml-auto" data-action="closeToast">Close</button>
+            </div>
+        </li>
+    `)
+
+    await showToast(toaster.children[toaster.children.length - 1])
 
     const closeToastButton = document.querySelectorAll('[data-action="closeToast"]')[document.querySelectorAll('[data-action="closeToast"]').length - 1]
 
@@ -29,6 +35,12 @@ document.querySelector('#insertToast').addEventListener('click', () => {
         closeToast(currentTarget.closest('.c-toast'))
     })
 })
+```
+```html
+<body>
+    <!-- your html !-->
+    <ol class="x-toaster items-end"></ol>
+</body>
 ```
 :::
 
@@ -52,19 +64,27 @@ Follow instructions for individual framework usage below
 ```html
 <button class="x-button" id="insertToast">Show toast</button>
 
+<ol class="x-toaster items-end"></ol>
+
 <script type="module">
-    import { insertToaster, insertToast, closeToast } from 'winduum/src/components/toaster'
+    import { showToast, closeToast } from 'winduum/src/components/toaster'
 
-    document.querySelector('#insertToast').addEventListener('click', () => {
-        insertToaster(document.querySelector('dialog[open]') || document.body, {
-            classes: 'items-end'
-        })
+    document.querySelector('#insertToast').addEventListener('click', async () => {
+        const toaster = document.querySelector('.x-toaster')
 
-        insertToast(document.querySelector('.c-toaster'), {
-            title: 'Hello toast!',
-            text: 'Amazing toast!',
-            end: `<button class="x-button muted ml-auto" data-action="closeToast">Close</button>`
-        })
+        toaster.insertAdjacentHTML('beforeend', `
+            <li class="x-toast" role="status" aria-live="assertive" aria-atomic="true" popover="manual">
+                <div class="x-toast-content">
+                    <div class="flex-col">
+                        <div class="x-title">Hello toast</div>
+                        <div class="x-text">Amazing toast</div>
+                    </div>
+                    <button class="x-button muted ml-auto" data-action="closeToast">Close</button>
+                </div>
+            </li>
+        `)
+
+        await showToast(toaster.children[toaster.children.length - 1])
 
         const closeToastButton = document.querySelectorAll('[data-action="closeToast"]')[document.querySelectorAll('[data-action="closeToast"]').length - 1]
 
@@ -100,10 +120,10 @@ document.querySelector('#showToast').addEventListener('click', async () => {
 
 ---
 
-##### visibleClass
+##### openAttribute
 
 * **Type:** `string`
-* **Default:** `in`
+* **Default:** `data-open`
 
 ---
 
@@ -153,9 +173,9 @@ document.querySelector('#closeToast').addEventListener('click', async () => {
 
 ---
 
-##### hiddenClass
+##### closedAttribute
 
-* **Type:** `string`
+* **Type:** `data-closed`
 * **Default:** `out`
 
 ---

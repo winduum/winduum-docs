@@ -133,12 +133,21 @@ window.addEventListener('click', ({ target }) => {
 
 ---
 
-##### visibleClass
+##### anchorSelector
 
 * **Type:** `string`
-* **Default:** `in`
+* **Default:** `undefined`
 
-A string representing a CSS class that will be added when popover is visible.
+By default, the anchor selector is the trigger button, you can change this to other selector.
+
+---
+
+##### openAttribute
+
+* **Type:** `string`
+* **Default:** `data-open`
+
+A string representing an attribute that will be added when popover is visible.
 
 ---
 

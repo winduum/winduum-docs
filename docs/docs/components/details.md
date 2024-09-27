@@ -3,7 +3,7 @@
 An accessible accordion or toggle component for `details` and `summary` elements.<br>
 Uses small external library `slide-element` for smooth toggle animations.
 
-It is unstyled by default so you can apply your own styles.
+It is unstyled by default, so you can apply your own styles.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/details" />
 
@@ -82,23 +82,32 @@ Follow instructions for individual framework usage below
 
 ## Javascript API
 
+```typescript
+interface DefaultOptions {
+    selector?: string
+    summarySelector?: string
+}
+```
+
 ### toggleDetails
 
-* **Type:** `(selector:  HTMLInputElement | HTMLElement) => Promise<void>`
+* **Type:** `(selector:  HTMLInputElement | HTMLElement, options?: DefaultOptions) => Promise<void>`
 * **Kind:** `async`
 
 Toggles a details element, should be added on summary or anywhere inside the details element.
 
 ### showDetails
 
-* **Type:** `(selector:  HTMLInputElement | HTMLElement) => Promise<void>`
+* **Type:** `(selector:  HTMLInputElement | HTMLElement, options?: DefaultOptions) => Promise<void>`
 * **Kind:** `async`
 
 Shows a details element, should be added on `summary` or anywhere inside the `details` element.
 
 ### closeDetails
 
-* **Type:** `(selector:  HTMLInputElement | HTMLElement) => Promise<void>`
+* **Type:** `(selector:  HTMLInputElement | HTMLElement, options?: DefaultOptions) => Promise<void>`
 * **Kind:** `async`
 
 Closes a details element, should be added on `summary` or anywhere inside the `details` element.
+
+

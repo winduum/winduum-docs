@@ -74,7 +74,7 @@ Follow instructions for individual framework usage below
 
 <dialog class="x-drawer flex flex-col after:-order-last" id="drawerBottomElement" inert>
     <div class="x-drawer-content p-6" style="max-height: 24rem; border-top: 1px solid var(--color-body-secondary);">
-        <div>Drawer content</div>
+        <div>Drawer content</div> 
         <button class="x-button muted mt-4" id="closeDrawerBottomElement">Close drawer</button>
     </div>
 </dialog>
@@ -117,6 +117,13 @@ Scroll the drawer to open state.
 * **Kind:** `sync`
 
 Scroll the drawer to closed state.
+
+### `scrollInitDrawer`
+
+* **Type:** `(element: HTMLElement | Element, distance?: number, direction?: 'left' | 'top') => void`
+* **Kind:** `sync`
+
+Initializes the scroll position. Call this before `showDrawer` method.
 
 ### `scrollDrawer`
 

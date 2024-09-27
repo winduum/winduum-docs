@@ -114,6 +114,13 @@ export function Example() {
 
 ---
 
+##### min
+
+* **Type:** `number`
+* **Default:** `undefined`
+
+---
+
 ##### max
 
 * **Type:** `number`
@@ -125,7 +132,7 @@ export function Example() {
 
 ### setValue
 
-* **Type:** `(target: HTMLInputElement, options: DefaultOptions) => void`
+* **Type:** `(element: HTMLInputElement, options: SetValueOptions) => void`
 * **Kind:** `sync`
 
 #### DefaultOptions
@@ -150,17 +157,10 @@ export function Example() {
 
 ### setOutputValue
 
-* **Type:** `(target: HTMLInputElement, options: OutputOptions) => void`
+* **Type:** `(element: HTMLInputElement, options: SetOutputOptions) => void`
 * **Kind:** `sync`
 
-#### OutputOptions
-
----
-
-##### element
-
-* **Type:** `HTMLOutputElement`
-* **Default:** `null`
+#### SetOutputOptions
 
 ---
 

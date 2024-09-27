@@ -150,15 +150,6 @@ document.querySelector('#showDialog').addEventListener('click', async () => {
 
 ---
 
-##### closable
-
-* **Type:** `boolean`
-* **Default:** `true`
-
-A boolean that indicates whenever is dialog closable by clicking outside or with `esc` key.
-
----
-
 ##### remove
 
 * **Type:** `boolean`
@@ -168,12 +159,39 @@ A boolean that indicates whether the dialog should be removed from the DOM when 
 
 ---
 
+##### closable
+
+* **Type:** `boolean`
+* **Default:** `true`
+
+A boolean that indicates whenever is dialog closable by clicking outside or with `esc` key.
+
+---
+
+##### modal
+
+* **Type:** `boolean`
+* **Default:** `true`
+
+Determines if the dialog is shown as modal on top-layer.
+
+---
+
 ##### openAttribute
 
 * **Type:** `string`
 * **Default:** `data-open`
 
-A string representing a CSS attribute that will be added when the dialog is visible.
+A string representing a data attribute that will be added when the dialog is fully visible.
+
+---
+
+##### closedAttribute
+
+* **Type:** `string`
+* **Default:** `data-closed`
+
+A string representing a data attribute that will be added once the dialog starts closing.
 
 ---
 
@@ -189,9 +207,9 @@ A string representing a CSS selector representing the dialog content
 ##### scrollbarWidthProperty
 
 * **Type:** `string`
-* **Default:** `--x-dialog-scrollbar-width`
+* **Default:** `--default-scrollbar-width`
 
-A CSS property representing a scrollbar width, when dialog is showed the document scrollbar is hidden, this adds necessary padding.
+A CSS property representing a scrollbar width, when dialog is shown the document scrollbar is hidden, this adds necessary padding.
 
 ---
 
@@ -202,9 +220,12 @@ A CSS property representing a scrollbar width, when dialog is showed the documen
 * **Type:** `(selector:  HTMLDialogElement, options?: DefaultOptions) => Promise<void>`
 * **Kind:** `async`
 
-Closes an existing `<dialog>`. It takes a `selector` argument, which is a CSS selector that identifies the dialog DOM element to be displayed. It also takes an options argument, which is an object that specifies how the dialog should be closed.
+Closes an existing `<dialog>`.
+It takes a `selector` argument, which is a CSS selector that identifies the dialog DOM element.
+It also takes an `options` argument, which is an object that specifies how the dialog should be closed.
 
-When dialog closes it sends native `close` event you can listen to, additionally `c-dialog:dismiss` event is sent when dialog animation finishes. 
+When dialog closes it sends native `close` event you can listen to,
+additionally `x-dialog:close` event is sent when dialog animation starts. 
 
 #### Example
 

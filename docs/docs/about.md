@@ -37,10 +37,11 @@ Staying ahead of the curve, Winduum leverages modern CSS features, allowing you 
 - **CSS Properties**
 - **CSS Logical Properties**
 - **CSS Nesting**
+- **CSS color-mix**
 - **Modern pseudo selectors** such as `:where`, `:is` and `:has`
 - **Modern CSS reset**
+- **View Transition API, Dialog API, Popover API** and more!
 - **Low specifity or layers**
-- **CSS color-mix**
 
 **Winduum** is all about accessibility and web standards that can be used in any framework.
 
@@ -61,16 +62,8 @@ it's recommended to follow the same naming principles for your directory structu
 
 * 📁 **base**
 * 📁 **components**
-    * 📄 button.vue
-    * 📄 button.css
-    * 📄 control.vue
-    * 📄 control.css
-    * 📄 form.html
-    * 📄 form.css
-    * 📄 form.js
-* 📁 **utils**
-
-You could also have your `.css` and `.js` files in separate directories like `styles` or `scripts`, but that's up to you and your framework that you use. You might use SFC too.
+* 📁 **theme**
+* 📁 **utilities** or **utils**
 
 ## Examples
 

@@ -1,5 +1,5 @@
 # Toaster
-Make your toasts fly from the toaster!
+Bake your [Toast](/docs/components/toast) and let it fly! You should insert in into your `<body>`
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/toaster" />
 
@@ -20,10 +20,6 @@ Follow instructions for individual framework usage below
 
 ## Example
 
-<div class="iframe">
-    <button class="x-button" id="showToast">Show toast</button>
-</div>
-
 ```html
 <ol class="x-toaster items-end"></ol>
 ```
@@ -33,7 +29,7 @@ Follow instructions for individual framework usage below
 * **Type:** `(selector:  HTMLElement, options?: CloseToastOptions) => Promise<void>`
 * **Kind:** `async`
 
-All toasts are closed and toaster is removed from DOM.
+All toasts are closed at once.
 
 #### Example
 

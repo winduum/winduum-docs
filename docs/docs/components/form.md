@@ -75,12 +75,21 @@ Additional options for `validateField`
 
 ---
 
-##### submitterLoadingClass
+##### submitterLoadingAttribute
 
 * **Type:** `string`
-* **Default:** `loading`
+* **Default:** `data-loading`
 
-Loading class that will be added to submitter element, eg. a button.
+Loading class that will be added to a submitter element, e.g., A button.
+
+---
+
+##### scrollOptions
+
+* **Type:** `ScrollIntoViewOptions`
+* **Default:** `{ behavior: 'smooth', block: 'center' }`
+
+Scroll options when scrolling to an invalid element.
 
 <br>
 
@@ -129,7 +138,7 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ##### infoParentSelector
 * **Type:** `string`
-* **Default:** `.c-field`
+* **Default:** `.x-field`
 
 ---
 
@@ -163,9 +172,9 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ---
 
-##### validClass
+##### validAttribute
 * **Type:** `string`
-* **Default:** `valid`
+* **Default:** `data-valid`
 
 ---
 
@@ -175,9 +184,9 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ---
 
-##### invalidClass
+##### invalidAttribute
 * **Type:** `string`
-* **Default:** `invalid`
+* **Default:** `data-invalid`
 
 ---
 
@@ -187,7 +196,7 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ---
 
-##### activeClass
+##### activeAttribute
 * **Type:** `string`
-* **Default:** `active`
+* **Default:** `data-active`
 

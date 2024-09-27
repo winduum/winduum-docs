@@ -56,7 +56,7 @@ Scroll to a snap item by its index.
 * **Type:** `(element: HTMLElement | Element) => void`
 * **Kind:** `sync`
 
-Scroll to a next snap item.
+Scroll to the next snap item.
 
 ### `scrollPrev`
 
@@ -70,7 +70,7 @@ Scroll to a previous snap item.
 * **Type:** `(element: HTMLElement | Element, scrollWidth: number, mathFloor: boolean) => number`
 * **Kind:** `sync`
 
-Get number of possible scrolls inside the carousel.
+Get the number of possible scrolls inside the carousel.
 
 
 ### `observeCarousel`
@@ -84,10 +84,10 @@ Adds an observer for the carousel. Adds properties `_observer` and `_activeIndex
 
 ---
 
-##### visibleClass
+##### visibleAttribute
 
 * **Type:** `string`
-* **Default:** `visible`
+* **Default:** `data-visible`
 
 A class that is added to the carousel items once they are visible.
 
@@ -113,10 +113,10 @@ Adds a mouse dragging capability to the carousel.
 
 ---
 
-##### activeClass
+##### activeAttribute
 
 * **Type:** `string`
-* **Default:** `grabbing`
+* **Default:** `data-grabbing`
 
 ---
 
@@ -145,10 +145,10 @@ Inserts pagination indicators for the carousel to the desired element.
 
 ---
 
-##### activeClass
+##### activeAttribute
 
 * **Type:** `string`
-* **Default:** `active`
+* **Default:** `data-active`
 
 ---
 

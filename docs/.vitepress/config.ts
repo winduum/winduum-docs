@@ -309,6 +309,10 @@ export default defineConfig({
               link: '/docs/utilities/skeleton'
             },
             {
+              text: 'Spinner',
+              link: '/docs/utilities/spinner'
+            },
+            {
               text: 'Swap',
               link: '/docs/utilities/swap'
             },

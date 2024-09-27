@@ -62,7 +62,15 @@ document.querySelector('#showRipple').addEventListener('click', (e) => {
 
 ### showRipple
 
-* **Type:** `(ShowRippleOptions) => <void>`
+* **Type:** `(event: MouseEvent | ShowRippleEvent, rippleElement?: HTMLElement) => <void>`
 * **Kind:** `sync`
 
-Shows an animated ripple effect on a element
+```typescript
+interface ShowRippleEvent {
+    currentTarget?: EventTarget | HTMLElement;
+    offsetX: number;
+    offsetY: number;
+}
+```
+
+Shows an animated ripple effect on an element
