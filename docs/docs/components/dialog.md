@@ -63,6 +63,18 @@ Follow instructions for individual framework usage below
     <button class="x-button" id="showDialog">Show dialog</button>
 </div>
 
+<dialog class="x-dialog" id="dialogExample">
+    <form class="x-dialog-content" method="dialog">
+      <div class="x-heading">Example dialog</div>
+      <br>
+      <div class="x-text">
+          <p>You can close this dialog with Esc, clicking outside, or by form submit</p>
+      </div>
+      <br>
+      <button class="x-button">Close dialog</button>
+    </form>
+</dialog>
+
 ::: code-group
 ```html
 <button class="x-button" id="showDialog">Show dialog</button>

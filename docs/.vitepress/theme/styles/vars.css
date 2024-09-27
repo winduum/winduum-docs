@@ -256,12 +256,12 @@ body .border-t-2 {
 }
 
 
-.VPNav {
-  padding-inline-end: var(--c-dialog-scrollbar-width, 0);
+html:has(dialog[open]) .VPNav {
+  padding-inline-end: var(--default-scrollbar-width, 0);
 }
 
-.VPSidebar {
-  left: calc(var(--c-dialog-scrollbar-width, 0) / 2 * -1) !important;
+html:has(dialog[open]) .VPSidebar {
+  left: calc(var(--default-scrollbar-width, 0px) / 2 * -1) !important;
 }
 
 .vp-doc table {

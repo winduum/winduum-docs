@@ -26,6 +26,7 @@ npm i winduum
 The components are written in plain CSS, so sources can be also loaded in browsers without a build step or used in any other build tool such as **PostCSS** or **LightningCSS**.
 
 ```css
+@import "winduum/src/theme/index.css";
 @import "winduum/src/base/index.css";
 @import "winduum/src/components/index.css" layer(components);
 @import "winduum/src/utilities/index.css" layer(components);
@@ -34,6 +35,7 @@ The components are written in plain CSS, so sources can be also loaded in browse
 Or you can include components separately, follow usage steps with each component.
 
 ```css
+@import "winduum/src/theme/index.css";
 @import "winduum/src/base/index.css";
 @import "winduum/src/components/button/index.css" layer(components);
 @import "winduum/src/utilities/index.css" layer(components);
@@ -42,6 +44,7 @@ Or you can include components separately, follow usage steps with each component
 Or paste the source code to your project and make it your own!
 
 ```css
+@import "@/styles/theme/index.css";
 @import "@/styles/base/index.css";
 @import "@/styles/components/button/index.css" layer(components);
 @import "@/styles/utilities/index.css" layer(components);
