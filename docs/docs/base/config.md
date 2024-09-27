@@ -1,11 +1,11 @@
 # CSS config
 
-Each CSS property is defined in CSS in following path - [`src/base/config.css`](https://github.com/winduum/winduum/blob/next/src/base/config.css). 
+Each CSS property is defined in CSS in following path - [`src/theme/config/index.css`](https://github.com/winduum/winduum/blob/next/src/theme/config/index.css). 
 
 We are using naming conventions from TailwindCSS `v4`, 
 so you can use these properties in both current and future versions of TailwindCSS or without TailwindCSS.
 
-<<< @/../node_modules/winduum/src/base/config.css
+<<< @/../node_modules/winduum/src/theme/config/index.css
 
 ## Tailwind CSS v4
 In the future version of TailwindCSS the configuration is done via CSS, so no plugin is necessary.
@@ -13,9 +13,7 @@ Most of the config CSS properties are also part of the new version.
 
 ```css
 @import "tailwindcss/theme.css" layer(theme);
-@import "winduum/src/base/config/mask.css" layer(theme);
-@import "winduum/src/base/config/transition.css" layer(theme);
-@import "winduum/src/base/config/tw.css" layer(theme);
+@import "winduum/tailwindcss/theme/config/index.css" layer(theme);
 ```
 
 ## Tailwind CSS v3
@@ -48,13 +46,13 @@ This plugin disables by default following TailwindCSS corePlugins
 Winduum also exports useful helper functions you can use in your `tailwind.config.js`, see [`utils/tailwind.js`](https://github.com/winduum/winduum/blob/next/utils/tailwind.js) for more info.
 
 ### settings.rgb
-Include `-rgb` color variants. Learn more about this in [Compatibility](/docs/base/theme.html#compatibility) section.
+Include `-rgb` color variants. Learn more about this in [Compatibility](/docs/theme.html#compatibility) section.
 
 * **Type:** `boolean`
 * **Default:** `false`
 
 ### settings.colorMix
-Use `color-mix` in color variants instead of rgb. Learn more about this in [Compatibility](/docs/base/theme.html#compatibility) section.
+Use `color-mix` in color variants instead of rgb. Learn more about this in [Compatibility](/docs/theme.html#compatibility) section.
 
 * **Type:** `boolean`
 * **Default:** `true`

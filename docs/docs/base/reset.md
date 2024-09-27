@@ -4,6 +4,6 @@ You can always enable it again via `tailwind.config.js` if you prefer it more.
 
 Everything except [Defaults](https://github.com/winduum/winduum/blob/next/src/base/defaults.css) is unstyled, so you are free to style your components or use pre-built components.
 
-* [`src/base/reset.css`](https://github.com/winduum/winduum/blob/next/src/base/reset.css)
+[`src/base/reset.css`](https://github.com/winduum/winduum/blob/next/src/base/reset.css)
 
 <<< @/../node_modules/winduum/src/base/reset.css

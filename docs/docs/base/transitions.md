@@ -1,7 +1,7 @@
 # Transitions
 
 This activates the [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) with cross-document animations.<br>
-CSS properties can be changed via [Config](https://github.com/winduum/winduum/blob/next/src/base/config.css).
+CSS properties can be changed via [Config](https://github.com/winduum/winduum/blob/next/src/theme/config.css).
 
 [`src/base/transitions.css`](https://github.com/winduum/winduum/blob/next/src/base/transitions.css)
 
