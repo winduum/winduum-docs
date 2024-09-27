@@ -1,5 +1,5 @@
 # Colors
-There are few types of colors with various areas of use. Colors are defined in [Theme](/docs/theme).
+There are few types of colors with various areas of use. Colors are defined in [Theme](/docs/base/theme).
 
 ## Common
 
