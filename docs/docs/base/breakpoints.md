@@ -17,7 +17,7 @@ You can use the same principles as defined in [Responsive design](https://tailwi
 
 Breakpoints are defined in [`src/base/breakpoints.css`](https://github.com/winduum/winduum/blob/next/src/base/breakpoints.css) and in [config#screens](/docs/base/config#screens)
 (TailwindCSS `v3`)
-or [`src/base/breakpoints-tw.css`](https://github.com/winduum/winduum/blob/next/src/base/breakpoints-tw.css)
+or [`tailwindcss/theme/config/breakpoint.css`](https://github.com/winduum/winduum/blob/next/tailwindcss/theme/config/breakpoint.css)
 (TailwindCSS `v4`)
 
 You can also use the breakpoints inside CSS like this.
