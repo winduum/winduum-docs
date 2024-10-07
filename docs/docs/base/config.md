@@ -146,29 +146,29 @@ These are additional `font-size` tokens that can be used with TailwindCSS as CSS
 Example `text-md`:
 ```css
 .text-md {
-    font-size: var(--text-md);
-    line-height: calc(var(--text-md) + 0.5rem);
+    font-size: var(--font-size-md);
+    line-height: calc(var(--font-size-md) + 0.5rem);
 }
 ```
 
 ### spacing
 * **Type:** `string[]`
-* **Default:** `['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl']`
+* **Default:** `['0', '0_5', '1', '1.5', '2', '2.5', '3', '3.5', '4', '5', '6', '7', '8', '9', '10', '11', '12', '14', '16', '20', '24', '28', '32', '36', '40', '44', '48', '52', '56', '60', '64', '72', '80', '96']`
 
 These are additional spacing tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
 
 Example `gap-md`:
 ```css
-.gap-md {
-    gap: var(--spacing-md);
+.gap-4 {
+    gap: var(--spacing-4);
 }
 ```
 
 Example `px-md`:
 ```css
-.px-md {
-    padding-left: var(--spacing-md);
-    padding-right: var(--spacing-md);
+.px-4 {
+    padding-left: var(--spacing-4);
+    padding-right: var(--spacing-4);
 }
 ```
 
@@ -181,7 +181,7 @@ These are additional border-radius tokens that can be used with TailwindCSS as C
 Example `rounded-md`:
 ```css
 .rounded-md {
-    border-radius: var(--rounded-md);
+    border-radius: var(--radius-md);
 }
 ```
 
