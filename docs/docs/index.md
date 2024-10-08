@@ -72,7 +72,7 @@ To use TailwindCSS `v3`, make sure to add TailwindCSS imports at the end of your
 
 Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation) docs
 and include Winduum as a plugin,
-see [Config](/docs/base/config) for more info.
+see [Config](/docs/base/config#tailwind-css-v3) for more info.
 
 #### v4
 

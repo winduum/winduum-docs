@@ -14,6 +14,7 @@ Most of the config CSS properties are also part of the new version.
 ```css
 @import "tailwindcss/theme.css" layer(theme);
 @import "winduum/tailwindcss/theme/config/index.css" layer(theme);
+@import "winduum/tailwindcss/theme/default.css" layer(theme);
 ```
 
 ## Tailwind CSS v3
@@ -58,17 +59,11 @@ Use `color-mix` in color variants instead of rgb. Learn more about this in [Comp
 * **Default:** `true`
 
 ### colors
-* **Type:** `string[]`
-* **Default:** `['primary', 'accent', 'current',
-  'warning', 'error', 'info', 'success', 'light', 'dark',
-  'main', 'main-primary', 'main-secondary', 'main-tertiary',
-  'body', 'body-primary', 'body-secondary', 'body-tertiary',
-  'primary-foreground', 'accent-foreground', 'current-foreground',
-  'warning-foreground', 'error-foreground', 'info-foreground', 'success-foreground', 'light-foreground', 'dark-foreground',
-  'main-foreground', 'main-primary-foreground', 'main-secondary-foreground', 'main-tertiary-foreground',
-  'body-foreground', 'body-primary-foreground', 'body-secondary-foreground', 'body-tertiary-foreground']`
+* **Type:** `string[] | string`
+* **Default:** `undefined`
 
-These are additional color tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`. See [Colors](/docs/colors) for more info.
+These are additional color tokens that can be used with TailwindCSS as CSS custom properties, which can be then defined in `.css`. See [Colors](/docs/colors) for more info.
+Or you can add a path to `.css` file containing the CSS custom properties, and it will be parsed automatically.
 
 Example `bg-primary`:
 ```css
@@ -77,19 +72,12 @@ Example `bg-primary`:
 }
 ```
 
-Example `text-primary`:
-```css
-.text-primary {
-  --color-current: color-mix(in sRGB, var(--color-primary) calc(var(--tw-text-opacity, 1) * 100%), transparent);
-  color: color-mix(in sRGB, var(--color-primary) calc(var(--tw-text-opacity, 1) * 100%), transparent);
-}
-```
-
 ### fontFamily
-* **Type:** `string[]`
-* **Default:** `['primary', 'secondary']`
+* **Type:** `string[] | string`
+* **Default:** `undefined`
 
 These are additional font-family tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+Or you can add a path to `.css` file containing the CSS custom properties, and it will be parsed automatically.
 
 Example `font-primary`:
 ```css
@@ -99,10 +87,11 @@ Example `font-primary`:
 ```
 
 ### fontWeight
-* **Type:** `string[]`
-* **Default:** `['light', 'normal', 'medium', 'semibold', 'bold', 'extrabold']`
+* **Type:** `string[] | string`
+* **Default:** `undefined`
 
 These are additional font-weight tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+Or you can add a path to `.css` file containing the CSS custom properties, and it will be parsed automatically.
 
 Example `font-bold`:
 ```css
@@ -112,10 +101,11 @@ Example `font-bold`:
 ```
 
 ### ease
-* **Type:** `string[]`
-* **Default:** `['linear', 'in', 'out', 'in-out']`
+* **Type:** `string[] | string`
+* **Default:** `undefined`
 
 These are additional transition easing tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+Or you can add a path to `.css` file containing the CSS custom properties, and it will be parsed automatically.
 
 Example `ease-linear`:
 ```css
@@ -125,10 +115,11 @@ Example `ease-linear`:
 ```
 
 ### zIndex
-* **Type:** `number[]`
-* **Default:** `[10, 20, 30, 40, 50, 60]`
+* **Type:** `string[] | string`
+* **Default:** `undefined`
 
 These are additional z-index tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+Or you can add a path to `.css` file containing the CSS custom properties, and it will be parsed automatically.
 
 Example `z-10`:
 ```css
@@ -138,10 +129,11 @@ Example `z-10`:
 ```
 
 ### fontSize
-* **Type:** `string[]`
-* **Default:** `['xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '3xl', '4xl', '5xl', '6xl', '7xl', '7xl', '8xl', '9xl']`
+* **Type:** `string[] | string`
+* **Default:** `undefined`
 
 These are additional `font-size` tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+Or you can add a path to `.css` file containing the CSS custom properties, and it will be parsed automatically.
 
 Example `text-md`:
 ```css
@@ -152,19 +144,20 @@ Example `text-md`:
 ```
 
 ### spacing
-* **Type:** `string[]`
-* **Default:** `['0', '0_5', '1', '1.5', '2', '2.5', '3', '3.5', '4', '5', '6', '7', '8', '9', '10', '11', '12', '14', '16', '20', '24', '28', '32', '36', '40', '44', '48', '52', '56', '60', '64', '72', '80', '96']`
+* **Type:** `string[] | string`
+* **Default:** `undefined`
 
 These are additional spacing tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+Or you can add a path to `.css` file containing the CSS custom properties, and it will be parsed automatically.
 
-Example `gap-md`:
+Example `gap-4`:
 ```css
 .gap-4 {
     gap: var(--spacing-4);
 }
 ```
 
-Example `px-md`:
+Example `px-4`:
 ```css
 .px-4 {
     padding-left: var(--spacing-4);
@@ -173,10 +166,11 @@ Example `px-md`:
 ```
 
 ### borderRadius
-* **Type:** `string[]`
-* **Default:** `['xs', 'sm', 'base', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', 'full']`
+* **Type:** `string[] | string`
+* **Default:** `undefined`
 
 These are additional border-radius tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+Or you can add a path to `.css` file containing the CSS custom properties, and it will be parsed automatically.
 
 Example `rounded-md`:
 ```css
@@ -187,9 +181,10 @@ Example `rounded-md`:
 
 ### animations
 * **Type:** `string[]`
-* **Default:** `['fade-in', 'fade-out', 'fade-in-down', 'fade-out-up', 'ripple', 'spin', 'move-indeterminate']`
+* **Default:** `['fade-in', 'fade-out', 'ripple', 'spin', 'move-indeterminate']`
 
 These are additional animation tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+Or you can add a path to `.css` file containing the CSS custom properties, and it will be parsed automatically.
 
 Example `animation-fade-in`:
 ```css
@@ -199,10 +194,11 @@ Example `animation-fade-in`:
 ```
 
 ### mask
-* **Type:** `string[]`
-* **Default:** `['check', 'radio', 'angle-up', 'angle-down']`
+* **Type:** `string[] | string`
+* **Default:** `undefined`
 
 These are additional mask tokens that can be used with TailwindCSS as CSS properties, which can be then defined in `.css`.
+Or you can add a path to `.css` file containing the CSS custom properties, and it will be parsed automatically.
 
 Example `animation-fade-in`:
 ```css
