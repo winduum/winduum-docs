@@ -1,0 +1,20 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<label class="x-color" style="color: red">
+    <input type="checkbox" disabled>
+</label>
+<label class="x-color" style="color: blue">
+    <input type="checkbox" disabled>
+</label>
+<label class="x-color" style="color: red; --x-color-secondary: blue;">
+    <input type="checkbox" disabled>
+</label>
+{% endblock %}
+
+{% block head %}
+<style>
+    body {
+        gap: 2rem
+    }
+</style>
+{% endblock %}

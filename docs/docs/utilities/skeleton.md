@@ -1,5 +1,5 @@
 # Skeleton
-Introduces a utility class `skeleton` for loading state of page or component.
+Introduces a utility class `skeleton` for loading state of a page or a component.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/skeleton" />
 

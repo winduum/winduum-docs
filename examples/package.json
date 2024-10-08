@@ -2,10 +2,10 @@
   "type": "module",
   "dependencies": {
     "@vituum/vite-plugin-liquid": "^1.1.0",
-    "@vituum/vite-plugin-postcss": "^1.1.0",
-    "winduum": "^1.2.0-next.8",
-    "vituum": "^1.1.0",
+    "@vituum/vite-plugin-tailwindcss": "^1.2.0",
+    "winduum": "^2.0.0-next.30",
+    "vituum": "^1.1.1",
     "slide-element": "^2.3.1",
-    "@floating-ui/dom": "^1.6.5"
+    "@floating-ui/dom": "^1.6.10"
   }
 }

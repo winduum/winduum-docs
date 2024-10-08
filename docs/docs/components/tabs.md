@@ -15,25 +15,26 @@
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/tabs" />
 
 ## Examples
 
 ### Default
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/tabs/default.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/tabs/default.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/tabs/default.html#body{} [html]
-<<< @/../examples/src/pages/component/tabs/default.liquid#js{} [js]
+<<< @/public/examples/components/tabs/default.html#body{} [html]
+<<< @/../examples/src/pages/components/tabs/default.liquid#js{} [js]
 :::
 
 ### Custom
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/tabs/custom.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/tabs/custom.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/tabs/custom.html#body{} [html]
-<<< @/../examples/src/pages/component/tabs/custom.liquid#js{} [js]
+<<< @/public/examples/components/tabs/custom.html#body{} [html]
+<<< @/../examples/src/pages/components/tabs/custom.liquid#js{} [js]
 :::
 
 ## Javascript API

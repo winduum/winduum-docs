@@ -1,21 +1,37 @@
 # Animation
-Provides a new TailwindCSS utility class `animation-` for `animation-name` property. 
+Provides a new utility class `animation` and TailwindCSS utility class `animation-*` for `animation-name` property. 
 
-You should use this together with [Keyframes](/docs/layout/keyframes) and `animate` utility class to run the animation or use your own animation styles.
+You should use this together with [Keyframes](/docs/base/keyframes) or use your own animation keyframes.
 
-You can add more in the `tailwind.config.js`, see [Config](/docs/config#animations) for more info.
+<ViewSourceGh path="src/utilities/animation.css" />
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/animation.css" />
+### Dependencies
+* [tailwindcss](https://tailwindcss.com/)
+* [winduum](/docs/base/config.html#tailwind-css-v3) (TailwindCSS v3 plugin)
+
+## TailwindCSS v3
+You can add more via the `tailwind.config.js`, see [Config](/docs/base/config#tailwind-css-v3) for more info.
+
+## TailwindCSS v4
+You can add more via the `@theme` at-rule, see [Config](/docs/base/config#tailwind-css-v4) for more info.
+
+::: danger
+Not yet supported.
+:::
 
 ## Example
 ```html
-<div class="animate animation-fade-in">
+<div class="animation animation-fade-in">
     Content
 </div>
 ```
 ```css
-.animate {
-    animation-duration: var(--duration);
+.animation {
+    animation-duration: var(--default-animation-duration, var(--default-transition-duration));
     animation-fill-mode: both;
+}
+
+.animation-fade-in {
+  animation-name: fade-in;
 }
 ```

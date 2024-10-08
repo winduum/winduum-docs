@@ -1,15 +1,15 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<div class="flex-col gap-4">
-    <div class="flex-center">
-        <button class="ui-btn accent-main flex-grow">Register</button>
-        <button class="ui-btn flex-grow">Login</button>
+<div class="flex flex-col gap-4">
+    <div class="flex items-center gap-2">
+        <button class="x-button accent-main flex-grow">Register</button>
+        <button class="x-button flex-grow">Login</button>
     </div>
-    <div class="divider before:hidden after:border-dashed border-opacity-100 accent-primary">OR</div>
-    <div class="flex-center">
-        <button class="ui-btn muted flex-grow">Facebook</button>
-        <button class="ui-btn muted flex-grow">Google</button>
-        <button class="ui-btn muted flex-grow">Apple</button>
+    <div class="divider before:hidden after:border-dashed after:border-accent accent-primary">OR</div>
+    <div class="flex items-center gap-2">
+        <button class="x-button muted flex-grow">Facebook</button>
+        <button class="x-button muted flex-grow">Google</button>
+        <button class="x-button muted flex-grow">Apple</button>
     </div>
 </div>
 {% endblock %}

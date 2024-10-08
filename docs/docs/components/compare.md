@@ -15,60 +15,61 @@ Side-by-side comparison slider component.
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/compare" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/compare" />
 
 ## Examples
 
 ### Default
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/compare/default.html" style="height: 420px"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/compare/default.html" style="height: 420px"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/compare/default.html#body{} [html]
-<<< @/../examples/src/pages/component/compare/default.liquid#js{} [js]
+<<< @/public/examples/components/compare/default.html#body{} [html]
+<<< @/../examples/src/pages/components/compare/default.liquid#js{} [js]
 :::
 
 ### Text
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/compare/text.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/compare/text.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/compare/text.html#body{} [html]
-<<< @/../examples/src/pages/component/compare/text.liquid#js{} [js]
+<<< @/public/examples/components/compare/text.html#body{} [html]
+<<< @/../examples/src/pages/components/compare/text.liquid#js{} [js]
 :::
 
 ## Javascript API
 
 ### setPosition
 
-* **Type:** `(Event<HTMLInputElement>, options: PositionOptions) => void`
+* **Type:** `(element: HTMLInputElement, options?: SetPositionOptions) => void`
 * **Kind:** `sync`
 
-#### PositionOptions
+#### SetPositionOptions
 
 ---
 
 ##### selector
 
 * **Type:** `string`
-* **Default:** `.c-compare`
+* **Default:** `.x-compare`
 
 ---
 
 ##### positionProperty
 
 * **Type:** `string`
-* **Default:** `--c-compare-position`
+* **Default:** `--x-compare-position`
 
 ---
 
 ### setKeyboardStep
 
-* **Type:** `(KeyboardEvent<HTMLInputElement>, step: number) => void`
+* **Type:** `(element: HTMLInputElement, key: string, step?: number) => void`
 * **Kind:** `sync`
 
 
 ### setMouseStep
 
-* **Type:** `(MouseEvent<HTMLInputElement>, step: number) => void`
+* **Type:** `(element: HTMLInputElement, step?: number) => void`
 * **Kind:** `sync`
 

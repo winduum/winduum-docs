@@ -1,8 +1,8 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<div class="c-field">
-    <label class="ui-label" for="given-name">First name</label>
-    <div class="ui-control">
+<div class="x-field">
+    <label class="x-label" for="given-name">First name</label>
+    <div class="x-control">
         <input id="given-name" name="given-name" autocomplete="given-name" required>
     </div>
 </div>
@@ -19,7 +19,7 @@
 <script type="module">
     import { validateField } from 'winduum/src/components/form'
 
-    document.querySelector('.ui-control').addEventListener('input', ({ currentTarget }) => {
+    document.querySelector('.x-control').addEventListener('input', ({ currentTarget }) => {
         validateField(currentTarget)
     })
 </script>

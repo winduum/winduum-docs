@@ -8,8 +8,8 @@ Provides a scroll carousel that uses native CSS `scroll-snap` property.<br>
 ```css
 @import "winduum/src/components/carousel/index.css" layer(components);
 ```
-<<< @/public/examples/component/carousel/basic.html#body{} [html]
-<<< @/../examples/src/pages/component/carousel/basic.liquid#js{} [js]
+<<< @/public/examples/components/carousel/basic.html#body{} [html]
+<<< @/../examples/src/pages/components/carousel/basic.liquid#js{} [js]
 :::
 
 ### Variants
@@ -25,20 +25,20 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/carousel/basic.html" style="height: 620px"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/basic.html" style="height: 620px"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/carousel/basic.html#body{} [html]
-<<< @/../examples/src/pages/component/carousel/basic.liquid#js{} [js]
+<<< @/public/examples/components/carousel/basic.html#body{} [html]
+<<< @/../examples/src/pages/components/carousel/basic.liquid#js{} [js]
 :::
 
 ### Full
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/carousel/full.html" style="height: 620px"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/full.html" style="height: 620px"></iframe>
 
 ::: code-group
-<<< @/public/examples/component/carousel/full.html#body{} [html]
-<<< @/../examples/src/pages/component/carousel/full.liquid#js{} [js]
+<<< @/public/examples/components/carousel/full.html#body{} [html]
+<<< @/../examples/src/pages/components/carousel/full.liquid#js{} [js]
 :::
 
 
@@ -56,7 +56,7 @@ Scroll to a snap item by its index.
 * **Type:** `(element: HTMLElement | Element) => void`
 * **Kind:** `sync`
 
-Scroll to a next snap item.
+Scroll to the next snap item.
 
 ### `scrollPrev`
 
@@ -70,7 +70,7 @@ Scroll to a previous snap item.
 * **Type:** `(element: HTMLElement | Element, scrollWidth: number, mathFloor: boolean) => number`
 * **Kind:** `sync`
 
-Get number of possible scrolls inside the carousel.
+Get the number of possible scrolls inside the carousel.
 
 
 ### `observeCarousel`
@@ -84,10 +84,10 @@ Adds an observer for the carousel. Adds properties `_observer` and `_activeIndex
 
 ---
 
-##### visibleClass
+##### visibleAttribute
 
 * **Type:** `string`
-* **Default:** `visible`
+* **Default:** `data-visible`
 
 A class that is added to the carousel items once they are visible.
 
@@ -113,10 +113,10 @@ Adds a mouse dragging capability to the carousel.
 
 ---
 
-##### activeClass
+##### activeAttribute
 
 * **Type:** `string`
-* **Default:** `grabbing`
+* **Default:** `data-grabbing`
 
 ---
 
@@ -145,10 +145,10 @@ Inserts pagination indicators for the carousel to the desired element.
 
 ---
 
-##### activeClass
+##### activeAttribute
 
 * **Type:** `string`
-* **Default:** `active`
+* **Default:** `data-active`
 
 ---
 

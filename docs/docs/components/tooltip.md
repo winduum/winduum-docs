@@ -7,18 +7,18 @@ Tooltip can be used for a little info hint on hover or focus.
 
 ::: code-group
 ```css
-@import "winduum/src/components/tooltip.css" layer(components);
+@import "winduum/src/components/tooltip/index.css" layer(components);
 ```
-<<< @/public/examples/component/tooltip/basic.html#body{} [html]
+<<< @/public/examples/components/tooltip/basic.html#body{} [html]
 ```vue
 <script setup>
     import { Tooltip } from '@/components/tooltip'
-    import { UiBtn } from '@/components/ui/btn'
+    import { Button } from '@/components/button'
 </script>
 
 <template>
     <Tooltip aria-label="I am a tooltip!">
-        <UiBtn>Tooltip</UiBtn>
+        <Button>Tooltip</Button>
     </Tooltip>
 </template>
 ```
@@ -44,7 +44,7 @@ Follow instructions for individual framework usage below
 
 ### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/tooltip/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/tooltip/basic.html"></iframe>
 
-<<< @/public/examples/component/tooltip/basic.html#body{}
+<<< @/public/examples/components/tooltip/basic.html#body{}
 

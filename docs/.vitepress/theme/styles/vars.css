@@ -195,10 +195,6 @@ iframe {
   background-color: var(--vp-c-bg-soft);
 }
 
-#VPSidebarNav .text {
-  font-size: 15px;
-}
-
 #VPContent {
   display: flex;
 }
@@ -229,9 +225,6 @@ em {
 }
 
 
-.VPSidebar .VPSidebarItem .items {
-  padding-left: 24px;
-}
 
 a[href*="?soon"] {
   pointer-events: none;
@@ -263,12 +256,17 @@ body .border-t-2 {
 }
 
 
-.VPNav {
-  padding-inline-end: var(--c-dialog-scrollbar-width, 0);
+html:has(dialog[open]) .VPNav {
+  padding-inline-end: var(--default-scrollbar-width, 0);
 }
 
-.VPSidebar {
-  left: calc(var(--c-dialog-scrollbar-width, 0) / 2 * -1) !important;
+html:has(dialog[open]) .VPSidebar {
+  left: calc(var(--default-scrollbar-width, 0px) / 2 * -1) !important;
+}
+
+.vp-doc table {
+  width: 100%;
+  display: table;
 }
 
 /*

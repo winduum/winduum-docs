@@ -1,7 +1,15 @@
 # Popover
-Popover can be used for dropdowns and other popovers when element is clicked and focused.
+Popover can be used for dropdowns and other popovers when an element is clicked and focused.
+You have following types of trigger as an option:
+* trigger on focus with CSS `trigger-focus` class
+* trigger on hover with CSS `trigger-hover` class
+* trigger on click with JS and the `[popover]` attribute
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/popover" />
+
+### Dependencies
+
+* [floating-ui](https://floating-ui.com/) - for `[popover]` trigger
 
 ## Usage
 
@@ -9,17 +17,17 @@ Popover can be used for dropdowns and other popovers when element is clicked and
 ```css
 @import "winduum/src/components/popover/index.css" layer(components);
 ```
-<<< @/public/examples/component/popover/basic.html#body{} [html]
+<<< @/public/examples/components/popover/basic.html#body{} [html]
 ```vue
 <script setup>
     import { ref } from 'vue'
     import { Popover, PopoverContent } from '@/components/popover'
-    import { UiBtn } from '@/components/ui/btn'
+    import { Button } from '@/components/button'
 </script>
 
 <template>
     <Popover>
-        <UiBtn>Open Popover</UiBtn>
+        <Button>Open Popover</Button>
         <PopoverContent>
             Popover content
         </PopoverContent>
@@ -33,23 +41,19 @@ Popover can be used for dropdowns and other popovers when element is clicked and
 * <LinkGh name="content" path="components/popover" />
   
 ### Tokens
-Applicable to `c-popover-content`
-* `bottom`
-* `bottom-start`
-* `bottom-end`
-* `right`
-* `right-start`
-* `right-end`
-* `left`
-* `left-start`
-* `left-end`
-* `top`
-* `top-start`
-* `top-end`
-* `end`
-* `block-end`
-* `center`
-* `block-center`
+Applicable to `x-popover-content`
+* `bottom bottom-start`
+* `bottom bottom-end`
+* `top top-start`
+* `top top-end`
+* `right right-start`
+* `right right-end`
+* `left left-start`
+* `left left-end`
+* `bottom inline-center`
+* `top inline-center`
+* `right block-center`
+* `left block-center`
 
 ### Installation
 Follow instructions for individual framework usage below
@@ -57,32 +61,33 @@ Follow instructions for individual framework usage below
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/popover" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/popover" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/popover" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/popover" />
 
 ## Examples
 
-### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/popover/basic.html"></iframe>
+### focus-trigger
 
-<<< @/public/examples/component/popover/basic.html#body{}
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/basic.html"></iframe>
 
-### Hover
+<<< @/public/examples/components/popover/basic.html#body{}
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/popover/hover.html"></iframe>
+### hover-trigger
 
-<<< @/public/examples/component/popover/hover.html#body{}
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/hover.html"></iframe>
 
+<<< @/public/examples/components/popover/hover.html#body{}
 
-### Popover API
+### [popover]
 
 This is using advantages of [Popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API) with [floating-ui](https://floating-ui.com/). 
-It's also backwards compatible as it's leveraging only the `showPopover` and `hidePopover` for a [top-layer](https://developer.mozilla.org/en-US/docs/Glossary/Top_layer) support.
+It's also backwards compatible as it's leveraging only the `showPopover` and `hidePopover` for the [top-layer](https://developer.mozilla.org/en-US/docs/Glossary/Top_layer) support.
 
 Popover is placed dynamically upon available space, and auto updates itself when needed.
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/popover/api.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/api.html"></iframe>
 
-<<< @/public/examples/component/popover/api.html#body{}
+<<< @/public/examples/components/popover/api.html#body{}
 
 
 ## JavaScript API
@@ -128,12 +133,21 @@ window.addEventListener('click', ({ target }) => {
 
 ---
 
-##### visibleClass
+##### anchorSelector
 
 * **Type:** `string`
-* **Default:** `in`
+* **Default:** `undefined`
 
-A string representing a CSS class that will be added when popover is visible.
+By default, the anchor selector is the trigger button, you can change this to other selector.
+
+---
+
+##### openAttribute
+
+* **Type:** `string`
+* **Default:** `data-open`
+
+A string representing an attribute that will be added when popover is visible.
 
 ---
 

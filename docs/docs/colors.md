@@ -1,5 +1,5 @@
 # Colors
-There are few types of colors with various areas of use. Colors are defined in [Themes](themes).
+There are few types of colors with various areas of use. Colors are defined in [Theme](/docs/base/theme).
 
 ## Common
 
@@ -109,12 +109,20 @@ Each color has also it's foreground variant with `-foreground` postfix. So you c
 
 ## Accent
 
-The idea is that you should be able to set accent color via `accent-color` CSS property. It is [discussed](https://github.com/w3c/csswg-drafts/issues/5900) that there should be access to the color value of this property, e.g. via `AccentColor` or `AccentColorText`.
+The idea is that you should be able to set accent color via `accent-color` CSS property.
+It is [discussed](https://github.com/w3c/csswg-drafts/issues/5900)
+that you should have access to the color value of this property,
+e.g. via `AccentColor` or `AccentColorText`.
 
 Most of the components are using this idea via `--color-accent` and `--color-accent-foreground` as an alternative for their accent color.
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/accent/btn.html"></iframe>
+<iframe src="/examples/accent/btn.html" class="visible"></iframe>
 
-<<< @/public/examples/accent/btn.html#body{}
+```html
+<div class="accent-error">
+    <button class="x-button">Button</button>
+    <button class="x-button rounded-full">Button</button>
+</div>
+```
 
 For example, this way you don't have to change background-color property for each component color variant, you just change the accent color.

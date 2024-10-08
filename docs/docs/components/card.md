@@ -12,7 +12,7 @@
 * <LinkGh name="default" path="components/card" />
 
 ### Props
-* <LinkGh name="default-props" path="components/card" />
+* <LinkGh name="default" path="components/card/props" />
 
 ### Installation
 Follow instructions for individual framework usage below
@@ -25,12 +25,12 @@ Follow instructions for individual framework usage below
 
 ### Default
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/card/default.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/card/default.html"></iframe>
 
-<<< @/public/examples/component/card/default.html#body{}
+<<< @/public/examples/components/card/default.html#body{}
 
 ### Image
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/component/card/image.html" style="height: 500px;"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/card/image.html" style="height: 500px;"></iframe>
 
-<<< @/public/examples/component/card/image.html#body{}
+<<< @/public/examples/components/card/image.html#body{}

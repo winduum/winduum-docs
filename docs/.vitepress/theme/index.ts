@@ -1,8 +1,7 @@
 import Theme from 'vitepress/theme'
-import { insertDialog } from 'winduum/src/components/dialog'
 import { showRipple } from 'winduum/src/utilities/ripple'
-import { insertToaster, insertToast, closeToast, closeToaster } from 'winduum/src/components/toaster'
-import { showDrawer, closeDrawer, scrollDrawer } from "winduum/src/components/drawer"
+import { showToast, closeToast, closeToaster } from 'winduum/src/components/toaster'
+import { showDrawer, closeDrawer, scrollDrawer, scrollInitDrawer } from "winduum/src/components/drawer"
 import './styles/vars.css'
 import 'winduum/dist/main.css'
 import 'winduum/dist/tailwind.css'
@@ -11,6 +10,7 @@ import LinkGh from './components/LinkGh.vue'
 import ViewSourceGh from './components/ViewSourceGh.vue'
 import HomeSponsors from './components/HomeSponsors.vue'
 import UsageInfo from './components/UsageInfo.vue'
+import { showDialog, closeDialog } from "winduum/src/components/dialog";
 
 function updateDarkIframes() {
   if (typeof document !== 'undefined') {
@@ -26,19 +26,12 @@ function dialogEvent() {
   if (typeof document !== 'undefined') {
     // @ts-ignore
     document.querySelector('#showDialog')?.addEventListener('click', async () => {
-      await insertDialog(`
-        <dialog class="c-dialog">
-          <form class="c-dialog-content" method="dialog">
-              <div class="ui-heading">Example dialog</div>
-              <br>
-              <div class="ui-text">
-                  <p>You can close this dialog with Esc, clicking outside, or by form submit</p>
-              </div>
-              <br>
-              <button class="ui-btn bg-primary" style="padding: var(--ui-btn-py) var(--ui-btn-px)">Close dialog</button>
-          </form>
-        </dialog>
-      `)
+      showDialog(window.dialogExample)
+    })
+
+    window.dialogExample?.querySelector('form')?.addEventListener('submit', (e) => {
+      e.preventDefault()
+      closeDialog(window.dialogExample)
     })
 
     document.querySelector('#showRipple')?.addEventListener('click', (event) => {
@@ -51,20 +44,28 @@ function dialogEvent() {
 
     document.querySelector('#showToast:not(.has-events)')?.addEventListener('click', () => {
 
-      insertToaster(document.body, {
-        classes: 'items-end'
-      })
+      if (!document.querySelector('.x-toaster')) {
+        document.body.insertAdjacentHTML('beforeend', `<ol class="x-toaster items-end"></ol>`)
+      }
 
-      insertToast(document.querySelector('.c-toaster'), {
-        title: 'Hello toast',
-        text: 'Amazing toast',
-        end: `<button class="ui-btn muted ml-auto" data-action="closeToast">Close</button>`
-      })
+      document.querySelector('.x-toaster')?.insertAdjacentHTML('beforeend', `
+        <li class="x-toast" role="status" aria-live="assertive" aria-atomic="true">
+            <div class="x-toast-content">
+                <div class="flex-col">
+                    <div class="x-title">Hello toast</div>           
+                    <div class="x-text">Amazing toast</div>
+                </div>
+                <button class="x-button muted ml-auto" data-action="closeToast">Close</button>
+            </div>
+        </li>
+    `)
+
+      showToast(document.querySelector('.x-toaster').children[document.querySelector('.x-toaster').children.length - 1])
 
       const closeToastButton = document.querySelectorAll('[data-action="closeToast"]')[document.querySelectorAll('[data-action="closeToast"]').length - 1]
 
       closeToastButton.addEventListener('click', ({ currentTarget }) => {
-        closeToast(currentTarget.closest('.c-toast'))
+        closeToast(currentTarget.closest('.x-toast'))
       })
     })
 
@@ -73,31 +74,40 @@ function dialogEvent() {
     if (!document.querySelector('.vp-doc').classList.contains('has-events')) {
       document.querySelector('.vp-doc').classList.add('has-events')
 
-      window.drawerLeftElement?.scroll({ left: window.drawerLeftElement?.scrollWidth , behavior: 'instant' });
-      window.drawerLeftElement?.classList.remove('invisible')
 
       window.drawerLeftElement?.addEventListener('scroll', ({ target }) => scrollDrawer(target))
-      window.showDrawerLeftElement?.addEventListener('click', () => showDrawer(window.drawerLeftElement))
-      window.closeDrawerLeftElement?.addEventListener('click', () => closeDrawer(window.drawerLeftElement))
+
+      window.showDrawerLeftElement?.addEventListener('click', async () => {
+        window.drawerLeftElement.showModal()
+
+        await scrollInitDrawer(window.drawerLeftElement)
+
+        showDrawer(window.drawerLeftElement)
+      })
+
+      window.closeDrawerLeftElement?.addEventListener('click', () => closeDrawer(window.drawerLeftElement, window.drawerLeftElement.scrollWidth))
 
 
 
-      window.drawerRightElement?.scroll({ left: 0, behavior: 'instant' });
-      window.drawerRightElement?.classList.remove('invisible')
 
       window.drawerRightElement?.addEventListener('scroll', ({ target }) => scrollDrawer(target, {
         opacityRatio: 0,
         scrollOpen: target.scrollWidth - target.clientWidth,
         scrollClose: 0
       }))
-      window.showDrawerRightElement?.addEventListener('click', () => showDrawer(window.drawerRightElement, drawerRightElement.scrollWidth))
+
+      window.showDrawerRightElement?.addEventListener('click', async () => {
+        window.drawerRightElement.showModal()
+
+        await scrollInitDrawer(window.drawerRightElement, 0)
+
+        showDrawer(window.drawerRightElement, drawerRightElement.scrollWidth)
+      })
+
       window.closeDrawerRightElement?.addEventListener('click', () => closeDrawer(window.drawerRightElement, 0))
 
 
 
-
-      window.drawerBottomElement?.scroll({ top: 0, behavior: 'instant' });
-      window.drawerBottomElement?.classList.remove('invisible')
 
       window.drawerBottomElement?.addEventListener('scroll', ({ target }) => scrollDrawer(target, {
         opacityRatio: 0,
@@ -107,7 +117,15 @@ function dialogEvent() {
         snapClass: 'snap-y snap-mandatory',
         scrollSize: target.scrollHeight - target.clientHeight
       }))
-      window.showDrawerBottomElement?.addEventListener('click', () => showDrawer(window.drawerBottomElement, drawerBottomElement.scrollHeight, 'top'))
+
+      window.showDrawerBottomElement?.addEventListener('click', async () => {
+        window.drawerBottomElement.showModal()
+
+        await scrollInitDrawer(window.drawerBottomElement, 0, 'top')
+
+        showDrawer(window.drawerBottomElement, drawerBottomElement.scrollHeight, 'top')
+      })
+
       window.closeDrawerBottomElement?.addEventListener('click', () => closeDrawer(window.drawerBottomElement, 0, 'top'))
 
 
@@ -122,27 +140,15 @@ function dialogEvent() {
         scrollOpen: 0,
         scrollClose: target.scrollHeight - target.clientHeight
       }))
-      window.showDrawerTopElement?.addEventListener('click', () => showDrawer(window.drawerTopElement, 0, 'top'))
-      window.closeDrawerTopElement?.addEventListener('click', () => closeDrawer(window.drawerTopElement, drawerTopElement.scrollHeight, 'top'))
+      window.showDrawerTopElement?.addEventListener('click', async () => {
+        window.drawerTopElement.showModal()
 
+        await scrollInitDrawer(window.drawerTopElement,  window.drawerTopElement?.scrollHeight, 'top')
 
-
-      window.drawerDialogElement?.scroll({ left: 0, behavior: 'instant' });
-      window.drawerDialogElement?.classList.remove('invisible')
-
-      window.drawerDialogElement?.addEventListener('scroll', ({ target }) => scrollDrawer(target, {
-        scrollOpen: target.scrollWidth - target.clientWidth,
-        scrollClose: 0,
-        opacityRatio: 0
-      }))
-      window.showDrawerDialogElement?.addEventListener('click', () => {
-        window.drawerDialogElement?.showModal()
-        showDrawer(window.drawerDialogElement, window.drawerDialogElement.scrollWidth)
+        showDrawer(window.drawerTopElement, 0, 'top')
       })
-      window.closeDrawerDialogElement?.addEventListener('click', () => closeDrawer(window.drawerDialogElement, 0))
 
-      window.drawerDialogElement?.addEventListener('c-drawer:close', () => window.drawerDialogElement.close())
-      window.drawerDialogElement?.addEventListener('close', () => closeDrawer(window.drawerDialogElement, 0))
+      window.closeDrawerTopElement?.addEventListener('click', () => closeDrawer(window.drawerTopElement, drawerTopElement.scrollHeight, 'top'))
     }
   }
 }

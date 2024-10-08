@@ -1,0 +1,21 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<button class="x-button">Button</button>
+{% endblock %}
+
+{% block foot %}
+<style>
+    .x-button {
+        --color-accent: yellow;
+        --color-accent-foreground: #333;
+        --x-button-block-size: 4rem;
+        --x-button-padding-block: 1rem;
+        --x-button-padding-inline: 1rem;
+        --x-button-border-radius: 0;
+        --x-button-font-size: 1.15rem;
+        --x-button-font-weight: 700;
+        --x-button-hover-opacity: 40%;
+        --x-button-focus-opacity: 80%;
+    }
+</style>
+{% endblock %}

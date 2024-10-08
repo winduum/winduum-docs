@@ -1,7 +1,7 @@
 # Form
 Provides a basic way to validate your form and show feedback to your users with native HTML5 form validation. Use attributes such as [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern) to add other validation rules.
 
-`novalidate` must be present on `form` to handle validation with javascript.
+`novalidate` must be present on `form` to handle validation with JavaScript.
 
 ::: info
 Compatible with any reactive framework, but updates will not propagate to the virtual DOM.<br>
@@ -14,6 +14,7 @@ For advance form of validation use [VeeValidate](https://vee-validate.logaretm.c
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/form" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/form" />
 
 ### Usage
 ::: code-group
@@ -59,7 +60,7 @@ Validates a form with [checkValidity](https://developer.mozilla.org/en-US/docs/W
 ##### validateSelectors
 
 * **Type:** `string`
-* **Default:** `.ui-control, .ui-check, .ui-switch, .ui-rating, .ui-color`
+* **Default:** `.x-control, .x-check, .x-switch, .x-rating, .x-color`
 
 Selectors which will be validated.
 
@@ -74,12 +75,21 @@ Additional options for `validateField`
 
 ---
 
-##### submitterLoadingClass
+##### submitterLoadingAttribute
 
 * **Type:** `string`
-* **Default:** `loading`
+* **Default:** `data-loading`
 
-Loading class that will be added to submitter element, eg. a button.
+Loading class that will be added to a submitter element, e.g., A button.
+
+---
+
+##### scrollOptions
+
+* **Type:** `ScrollIntoViewOptions`
+* **Default:** `{ behavior: 'smooth', block: 'center' }`
+
+Scroll options when scrolling to an invalid element.
 
 <br>
 
@@ -88,7 +98,7 @@ Loading class that will be added to submitter element, eg. a button.
 * **Type:** `(selector:  HTMLElement, options?: ValidateFieldOptions) => void`
 * **Kind:** `sync`
 
-Validates a field. This can be element such as `.ui-control`, `ui-check` and others that can be validated. It adds validation info message inside `c-field` and validation icon inside `ui-control`.
+Validates a field. This can be element such as `.x-control`, `x-check` and others that can be validated. It adds validation info message inside `c-field` and validation icon inside `x-control`.
 It also adds a `valid`, `invalid` or `active` class to the element.
 
 
@@ -128,25 +138,25 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ##### infoParentSelector
 * **Type:** `string`
-* **Default:** `.c-field`
+* **Default:** `.x-field`
 
 ---
 
 ##### infoSelector
 * **Type:** `string`
-* **Default:** `.ui-info`
+* **Default:** `.x-info`
 
 ---
 
 ##### infoContent
 * **Type:** `string`
-* **Default:** `<div class="ui-info text-error validity"></div>`
+* **Default:** `<div class="x-info text-error validity"></div>`
 
 ---
 
 ##### endParentSelector
 * **Type:** `string`
-* **Default:** `.ui-control`
+* **Default:** `.x-control`
 
 ---
 
@@ -162,9 +172,9 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ---
 
-##### validClass
+##### validAttribute
 * **Type:** `string`
-* **Default:** `valid`
+* **Default:** `data-valid`
 
 ---
 
@@ -174,9 +184,9 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ---
 
-##### invalidClass
+##### invalidAttribute
 * **Type:** `string`
-* **Default:** `invalid`
+* **Default:** `data-invalid`
 
 ---
 
@@ -186,7 +196,7 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ---
 
-##### activeClass
+##### activeAttribute
 * **Type:** `string`
-* **Default:** `active`
+* **Default:** `data-active`
 

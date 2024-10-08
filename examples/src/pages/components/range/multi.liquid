@@ -1,0 +1,53 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<div class="x-range accent-warning">
+    <input type="range" value="0" step="100" max="10000" min="0" id="range-from" aria-labelledby="from">
+    <input type="range" value="10000" step="100" max="10000" min="0" id="range-to" aria-labelledby="to">
+</div>
+
+<div class="flex-between items-center">
+    <output class="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price from" id="from">0</output>
+    <output class="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price to" id="to">10 000</output>
+</div>
+{% endblock %}
+
+{% block head %}
+<style>
+  body {
+    flex-direction: column;
+  }
+</style>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { setValue, setOutputValue } from 'winduum/src/components/range/index.js'
+
+    const rangeFrom = document.querySelector('#range-from')
+    const rangeTo = document.querySelector('#range-to')
+
+    const setFromValue = ({ currentTarget }) => {
+        setValue(currentTarget)
+
+        setOutputValue(currentTarget, document.querySelector('#from'))
+    }
+
+    const setToValue = ({ currentTarget }) => {
+        setValue(currentTarget, {
+            track: 'end'
+        })
+
+        setOutputValue(currentTarget, document.querySelector('#to'))
+    }
+
+
+
+    setFromValue({ currentTarget: rangeFrom })
+    rangeFrom.addEventListener('input', setFromValue)
+
+    setToValue({ currentTarget: rangeTo })
+    rangeTo.addEventListener('input', setToValue)
+</script>
+<!-- #endregion js -->
+{% endblock %}
