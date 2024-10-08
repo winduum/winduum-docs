@@ -64,6 +64,10 @@ export default defineConfig({
               {
                 text: 'Changelog',
                 link: 'https://github.com/winduum/winduum/blob/main/CHANGELOG.md'
+              },
+              {
+                text: 'v1',
+                link: 'https://v1--winduum.netlify.app/'
               }
             ]
           }
