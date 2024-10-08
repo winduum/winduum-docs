@@ -1,7 +1,7 @@
 # Color
 Color supports `checkbox` and `radio` **input** types for displaying selected color.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/color" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/color" />
 
 ### Usage
 
@@ -20,7 +20,7 @@ Color supports `checkbox` and `radio` **input** types for displaying selected co
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/color" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/color" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/color" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/color" />
 

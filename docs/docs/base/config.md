@@ -1,6 +1,6 @@
 # CSS config
 
-Each CSS property is defined in CSS in following path - [`src/theme/config/index.css`](https://github.com/winduum/winduum/blob/next/src/theme/config/index.css). 
+Each CSS property is defined in CSS in following path - [`src/theme/config/index.css`](https://github.com/winduum/winduum/blob/main/src/theme/config/index.css). 
 
 We are using naming conventions from TailwindCSS `v4`, 
 so you can use these properties in both current and future versions of TailwindCSS or without TailwindCSS.
@@ -44,7 +44,7 @@ This plugin disables by default following TailwindCSS corePlugins
 
 * **preflight** - custom modern css reset is used, see [Reset](/docs/base/reset)
 
-Winduum also exports useful helper functions you can use in your `tailwind.config.js`, see [`utils/tailwind.js`](https://github.com/winduum/winduum/blob/next/utils/tailwind.js) for more info.
+Winduum also exports useful helper functions you can use in your `tailwind.config.js`, see [`utils/tailwind.js`](https://github.com/winduum/winduum/blob/main/utils/tailwind.js) for more info.
 
 ### settings.rgb
 Include `-rgb` color variants. Learn more about this in [Compatibility](/docs/base/theme.html#compatibility) section.

@@ -1,7 +1,7 @@
 # Heading
 For common heading styles that you can manage from one component across project.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/heading" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/heading" />
 
 ### Usage
 
@@ -11,13 +11,13 @@ For common heading styles that you can manage from one component across project.
 
 ### Tokens
 
-* `sm` <a href="https://github.com/winduum/winduum/blob/next/src/components/heading/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/next/src/components/heading/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/heading/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/heading/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/heading" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/heading" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/heading" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/heading" />
 

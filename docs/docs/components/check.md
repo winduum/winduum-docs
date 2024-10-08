@@ -1,7 +1,7 @@
 # Check
 Check supports `checkbox` and `radio` **input** types
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/check" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/check" />
 
 ### Usage
 
@@ -21,7 +21,7 @@ Check supports `checkbox` and `radio` **input** types
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/check" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/check" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/check" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/check" />
 

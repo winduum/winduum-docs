@@ -10,17 +10,17 @@ Each `color-mix` function also contains `--default-color-space` property, which 
 
 Instead of `:root, :host` the `v4` `@theme` at-rule is used.
 
-[`tailwindcss/theme/default.css`](https://github.com/winduum/winduum/blob/next/tailwindcss/theme/default.css)
+[`tailwindcss/theme/default.css`](https://github.com/winduum/winduum/blob/main/tailwindcss/theme/default.css)
 
 ### TailwindCSS v3
 
-[`src/theme/default.css`](https://github.com/winduum/winduum/blob/next/src/theme/default.css)
+[`src/theme/default.css`](https://github.com/winduum/winduum/blob/main/src/theme/default.css)
 
 <<< @/../node_modules/winduum/src/theme/default.css
 
 ## Default P3
 
-[`src/theme/default-p3.css`](https://github.com/winduum/winduum/blob/next/src/theme/default-p3.css)
+[`src/theme/default-p3.css`](https://github.com/winduum/winduum/blob/main/src/theme/default-p3.css)
 
 Better high range colors for P3 capable displays.
 
@@ -28,7 +28,7 @@ Better high range colors for P3 capable displays.
 
 ## Dark
 
-[`src/theme/dark.css`](https://github.com/winduum/winduum/blob/next/src/theme/dark.css)
+[`src/theme/dark.css`](https://github.com/winduum/winduum/blob/main/src/theme/dark.css)
 
 <<< @/../node_modules/winduum/src/theme/dark.css
 
@@ -41,5 +41,5 @@ But if you want better compatibility you can still use `rgb`
 which can be enabled it in the [Config](/docs/base/config.html#settings-rgb) (only for TailwindCSS v3). 
 In that case, you have to use rgb variants for theming in your own components.
 
-* [`src/theme/default-rgb.css`](https://github.com/winduum/winduum/blob/next/src/theme/default-rgb.css)
-* [`src/theme/dark-rgb.css`](https://github.com/winduum/winduum/blob/next/src/theme/dark-rgb.css)
+* [`src/theme/default-rgb.css`](https://github.com/winduum/winduum/blob/main/src/theme/default-rgb.css)
+* [`src/theme/dark-rgb.css`](https://github.com/winduum/winduum/blob/main/src/theme/dark-rgb.css)

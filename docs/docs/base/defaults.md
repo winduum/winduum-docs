@@ -1,14 +1,14 @@
 # Defaults
 Default styles or rules applied to certain HTML elements or pseudo-elements. These are very much optional.
 
-[`src/base/defaults.css`](https://github.com/winduum/winduum/blob/next/src/base/defaults.css)
+[`src/base/defaults.css`](https://github.com/winduum/winduum/blob/main/src/base/defaults.css)
 
 <<< @/../node_modules/winduum/src/base/defaults.css
 
 For TailwindCSS `v3` there are few rules such as resetting borders
 and applying `--tw-content` to all pseudo-elements and zero border to all elements or pseudo-elements.
 
-[`tailwindcss/base/defaults.css`](https://github.com/winduum/winduum/blob/next/tailwindcss/base/defaults.css)
+[`tailwindcss/base/defaults.css`](https://github.com/winduum/winduum/blob/main/tailwindcss/base/defaults.css)
   
 
 

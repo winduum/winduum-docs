@@ -1,7 +1,7 @@
 # Dialog
 Modal component that uses native HTML5 `dialog` functionality.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/dialog" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/dialog" />
 
 ## Usage
 
@@ -52,7 +52,7 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/dialog" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/dialog" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/dialog" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/dialog" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/dialog" />

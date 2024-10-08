@@ -8,12 +8,12 @@ Compatible with any reactive framework, but updates will not propagate to the vi
 For advance form of validation use [VeeValidate](https://vee-validate.logaretm.com/v4/), [React Hook Form](https://react-hook-form.com/) or others.
 :::
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/form" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/form" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/form" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/form" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/form" />
 
 ### Usage

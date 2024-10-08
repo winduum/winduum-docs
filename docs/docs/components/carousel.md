@@ -1,7 +1,7 @@
 # Carousel
 Provides a scroll carousel that uses native CSS `scroll-snap` property.<br>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/carousel" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
 
 ### Usage
 ::: code-group
@@ -19,7 +19,7 @@ Provides a scroll carousel that uses native CSS `scroll-snap` property.<br>
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/carousel" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
 
 ## Examples
 

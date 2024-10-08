@@ -1,7 +1,7 @@
 # Toast
 Let it bake and fly from your [Toaster](/docs/components/toaster)!
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/toast" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/toast" />
 
 ## Usage
 
@@ -45,13 +45,13 @@ document.querySelector('#insertToast').addEventListener('click', async () => {
 :::
 
 ### Variants
-* <LinkGh name="default" url="https://github.com/winduum/winduum/blob/next/src/components/toast/default.css" />
-* <LinkGh name="content" url="https://github.com/winduum/winduum/blob/next/src/components/toast/content.css" />
+* <LinkGh name="default" url="https://github.com/winduum/winduum/blob/main/src/components/toast/default.css" />
+* <LinkGh name="content" url="https://github.com/winduum/winduum/blob/main/src/components/toast/content.css" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/toast" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/toast" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/toast" />
 
 ## Example

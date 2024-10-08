@@ -2,7 +2,7 @@
 
 Group common ui components such as [Button](/docs/components/button), [Badge](/docs/components/badge) or [Control](/docs/components/control) together.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/group" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/group" />
 
 ### Usage
 
@@ -19,7 +19,7 @@ Group common ui components such as [Button](/docs/components/button), [Badge](/d
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/group" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/group" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/group" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/group" />
 

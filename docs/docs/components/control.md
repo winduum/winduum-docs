@@ -9,12 +9,12 @@ Other input types are supported in other components
 * `range` - included in [Range](/docs/components/range)
 * `button`, `reset`, `submit` - included in [Button](/docs/components/button)
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/control" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/control" />
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/control" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/control" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/control" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/control" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/control" />

@@ -1,6 +1,6 @@
 # Link
 <br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/link" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/link" />
 
 ### Usage
 
@@ -18,7 +18,7 @@
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/link" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/link" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/link" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/link" />
 

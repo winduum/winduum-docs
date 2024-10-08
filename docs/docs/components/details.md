@@ -5,7 +5,7 @@ Uses small external library `slide-element` for smooth toggle animations.
 
 It is unstyled by default, so you can apply your own styles.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/details" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/details" />
 
 ### Dependencies
 
@@ -47,7 +47,7 @@ document.querySelectorAll('[data-action="toggleDetails"]').forEach(summary => {
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/details" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/details" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/details" />
 
 ## Examples

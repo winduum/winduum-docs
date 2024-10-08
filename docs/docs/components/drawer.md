@@ -2,7 +2,7 @@
 Provides a scroll drawer that uses native HTML5 `dialog` and CSS `scroll-snap` property.<br>
 Can be dismissed with touch gestures on touch devices.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/drawer" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
 
 ### Usage
 ::: code-group
@@ -24,7 +24,7 @@ Can be dismissed with touch gestures on touch devices.
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/drawer" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/drawer" />
 
 ## Examples

@@ -1,7 +1,7 @@
 # Text
 Typographic defaults for common wysiwyg content. It's an alternative to [prose](https://tailwindcss.com/docs/typography-plugin).
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/text" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/text" />
 
 ### Usage
 
@@ -18,7 +18,7 @@ Typographic defaults for common wysiwyg content. It's an alternative to [prose](
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/text" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/text" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/text" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/text" />
 

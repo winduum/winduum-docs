@@ -1,7 +1,7 @@
 # Skeleton
 Introduces a utility class `skeleton` for loading state of a page or a component.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/skeleton" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/skeleton" />
 
 <<< @/../node_modules/winduum/src/utilities/skeleton/default.css
 

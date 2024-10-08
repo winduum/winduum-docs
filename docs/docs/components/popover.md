@@ -5,7 +5,7 @@ You have following types of trigger as an option:
 * trigger on hover with CSS `trigger-hover` class
 * trigger on click with JS and the `[popover]` attribute
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/popover" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/popover" />
 
 ### Dependencies
 
@@ -58,7 +58,7 @@ Applicable to `x-popover-content`
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/popover" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/popover" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/popover" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/popover" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/popover" />

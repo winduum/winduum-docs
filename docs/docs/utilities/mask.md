@@ -1,6 +1,6 @@
 # Mask
 Introduces a new TailwindCSS utility class for `mask` property.<br>
-Depends on CSS properties defined in [`src/theme/config/mask.css`](https://github.com/winduum/winduum/blob/next/src/theme/config/mask.css)
+Depends on CSS properties defined in [`src/theme/config/mask.css`](https://github.com/winduum/winduum/blob/main/src/theme/config/mask.css)
 
 ## TailwindCSS v3
 You can add more in the `tailwind.config.js`, see [Config](/docs/base/config#mask) for more info.
@@ -11,7 +11,7 @@ You can add more in the `tailwind.config.js`, see [Config](/docs/base/config#mas
 Not yet supported.
 :::
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/mask.css" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/mask.css" />
 
 ## Example
 

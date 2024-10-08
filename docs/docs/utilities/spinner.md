@@ -1,7 +1,7 @@
 # Swap
 Provides a new utility class `spinner` for circular animated spinners.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/spinner" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/spinner" />
 
 ## Examples
 

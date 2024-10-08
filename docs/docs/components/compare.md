@@ -1,7 +1,7 @@
 # Compare
 Side-by-side comparison slider component.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/compare" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/compare" />
 
 ### Usage
 
@@ -14,7 +14,7 @@ Side-by-side comparison slider component.
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/compare" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/compare" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/compare" />
 
 ## Examples

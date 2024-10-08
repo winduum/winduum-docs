@@ -1,7 +1,7 @@
 # Button
 <br>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/button" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/button" />
 
 ### Usage
 
@@ -18,21 +18,21 @@
 * <LinkGh name="interactive" path="components/button/props" />
 
 ### Tokens
-* `bordered` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `muted` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `raised` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `ghosted` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `sm` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `square` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `circle` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `fill` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/hover-fill.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `muted` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `raised` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `ghosted` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `square` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `circle` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `fill` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/hover-fill.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/button" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/button" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/button" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/button" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/button" />

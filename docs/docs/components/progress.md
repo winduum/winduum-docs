@@ -1,7 +1,7 @@
 # Progress
 Displays progress with native HTML5 tags `progress` or `meter`
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/progress" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/progress" />
 
 ### Usage
 
@@ -17,13 +17,13 @@ Displays progress with native HTML5 tags `progress` or `meter`
 * <LinkGh name="default" path="components/progress/props" />
 
 ### Tokens
-* `sm` <a href="https://github.com/winduum/winduum/blob/next/src/components/progress/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/next/src/components/progress/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/progress/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/progress/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/progress" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/progress" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/progress" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/progress" />
 
