@@ -1,6 +1,7 @@
 import Theme from 'vitepress/theme'
 import { showRipple } from 'winduum/src/utilities/ripple'
-import { showToast, closeToast, closeToaster } from 'winduum/src/components/toaster'
+import { showToast, closeToast } from 'winduum/src/components/toast'
+import { closeToaster } from 'winduum/src/components/toaster'
 import { showDrawer, closeDrawer, scrollDrawer, scrollInitDrawer } from "winduum/src/components/drawer"
 import './styles/vars.css'
 import 'winduum/dist/main.css'

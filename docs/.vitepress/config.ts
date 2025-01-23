@@ -285,6 +285,10 @@ export default defineConfig({
           text: 'Utilities',
           items: [
             {
+              text: 'Accent',
+              link: '/docs/utilities/accent'
+            },
+            {
               text: 'Animation',
               link: '/docs/utilities/animation'
             },

@@ -26,8 +26,8 @@ npm i winduum
 The components are written in plain CSS, so sources can be also loaded in browsers without a build step or used in any other build tool such as **PostCSS** or **LightningCSS**.
 
 ```css
-@import "winduum/src/theme/index.css";
-@import "winduum/src/base/index.css";
+@import "winduum/src/theme/index.css" layer(theme);
+@import "winduum/src/base/index.css" layer(base);
 @import "winduum/src/components/index.css" layer(components);
 @import "winduum/src/utilities/index.css" layer(components);
 ```
@@ -35,8 +35,8 @@ The components are written in plain CSS, so sources can be also loaded in browse
 Or you can include components separately, follow usage steps with each component.
 
 ```css
-@import "winduum/src/theme/index.css";
-@import "winduum/src/base/index.css";
+@import "winduum/src/theme/index.css" layer(theme);
+@import "winduum/src/base/index.css" layer(base);
 @import "winduum/src/components/button/index.css" layer(components);
 @import "winduum/src/utilities/index.css" layer(components);
 ```
@@ -44,8 +44,8 @@ Or you can include components separately, follow usage steps with each component
 Or paste the source code to your project and make it your own!
 
 ```css
-@import "@/styles/theme/index.css";
-@import "@/styles/base/index.css";
+@import "@/styles/theme/index.css" layer(theme);
+@import "@/styles/base/index.css" layer(base);
 @import "@/styles/components/button/index.css" layer(components);
 @import "@/styles/utilities/index.css" layer(components);
 ```
@@ -58,37 +58,15 @@ With `layer(components)` you can use TailwindCSS variant classes, for example `c
 
 It's optional but recommended to leverage the full functionality of the library!
 
-#### v3
-
-To use TailwindCSS `v3`, make sure to add TailwindCSS imports at the end of your `css` file.
-
-```css
-@import "winduum/tailwindcss/base/defaults.css";
-@import "tailwindcss/base.css";
-@import "tailwindcss/components.css";
-@import "tailwindcss/utilities.css";
-@import "tailwindcss/variants.css";
-```
-
-Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation) docs
-and include Winduum as a plugin,
-see [Config](/docs/base/config#tailwind-css-v3) for more info.
-
 #### v4
 
 To use TailwindCSS `v4`, you will have to import TailwindCSS and Winduum imports individually.
-Check out the example project on [GitHub](https://github.com/lubomirblazekcz/tailwind-v4-winduum) or learn more via official [blog post](https://tailwindcss.com/blog/tailwindcss-v4-alpha).
-
-::: warning
-TailwindCSS v4 is still in alpha! The estimated release is end of 2024 or further.
-:::
 
 ```css
-@layer theme, base, components, utilities;
-
 @import "tailwindcss/theme.css" layer(theme);
 @import "winduum/tailwindcss/theme/config/index.css" layer(theme);
 @import "winduum/tailwindcss/theme/default.css" layer(theme);
+@import "winduum/src/theme/dark.css" layer(theme);
 @import "winduum/src/base/reset.css" layer(base);
 @import "winduum/src/base/defaults.css" layer(base);
 
@@ -96,7 +74,9 @@ TailwindCSS v4 is still in alpha! The estimated release is end of 2024 or furthe
 @import "winduum/src/components/index.css" layer(components);
 @import "winduum/src/utilities/index.css" layer(utilities);
 
+@import "winduum/tailwindcss/utilities/index.css";
 @import "tailwindcss/utilities" layer(utilities);
+@import "winduum/tailwindcss/variants/index.css";
 @import "winduum/src/base/breakpoints.css";
 @import "winduum/src/base/keyframes.css";
 @import "winduum/src/base/transitions.css";
@@ -115,7 +95,25 @@ export default defineConfig({
 })
 ```
 
-Most of the APIs are not documented yet, so you can follow [Adam Wathan](https://x.com/adamwathan) to learn more.
+#### v3
+
+To use TailwindCSS `v3`, you will have to import TailwindCSS and Winduum imports individually.
+
+```css
+@import "winduum/src/theme/index.css";
+@import "winduum/src/base/index.css";
+@import "winduum/src/components/index.css" layer(components);
+@import "winduum/src/utilities/index.css" layer(components);
+@import "winduum/tailwindcss/base/defaults.css";
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+@import "tailwindcss/variants.css";
+```
+
+Follow the installation steps in [TailwindCSS](https://v3.tailwindcss.com/docs/installation) docs
+and include Winduum as a plugin,
+see [Config](/docs/base/config#tailwind-css-v3) for more info.
 
 ## PostCSS or LightingCSS
 For TailwindCSS `v3` following PostCSS plugins are required.

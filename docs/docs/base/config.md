@@ -8,7 +8,7 @@ so you can use these properties in both current and future versions of TailwindC
 <<< @/../node_modules/winduum/src/theme/config/index.css
 
 ## Tailwind CSS v4
-In the future version of TailwindCSS the configuration is done via CSS, so no plugin is necessary.
+In the new version of TailwindCSS the configuration is done via CSS, so no plugin is necessary.
 Most of the config CSS properties are also part of the new version.
 
 ```css
