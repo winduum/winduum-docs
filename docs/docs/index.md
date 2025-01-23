@@ -3,10 +3,8 @@
 You can use Winduum with or without [TailwindCSS](https://tailwindcss.com/).
 Check out the [About](/docs/about) page to learn more about Winduum and its philosophy.
 
-Winduum `2.x` is using compatible naming for CSS custom properties that work with both current and future versions of TailwindCSS,
-specifically `v3` and `v4`.
-
-However, the `v4` is still in development, so things can still change!
+Winduum `2.x` is using compatible naming for CSS custom properties that work with both current and old versions of TailwindCSS,
+specifically `v4` and `v3`.
 
 ## Get started
 
@@ -52,7 +50,7 @@ Or paste the source code to your project and make it your own!
 
 
 
-With `layer(components)` you can use TailwindCSS variant classes, for example `class="x-button lg:square"` to make button square only from `lg` breakpoint.
+With `layer(components)` you can use TailwindCSS variant classes, for example `class="x-button lg:square"` to make button square only from `lg` breakpoint. (Not wokring with TailwindCSS v4 currently)
 
 ### TailwindCSS
 
