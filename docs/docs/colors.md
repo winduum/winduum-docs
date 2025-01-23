@@ -116,13 +116,8 @@ e.g. via `AccentColor` or `AccentColorText`.
 
 Most of the components are using this idea via `--color-accent` and `--color-accent-foreground` as an alternative for their accent color.
 
-<iframe src="/examples/accent/btn.html" class="visible"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/accent/btn.html"></iframe>
 
-```html
-<div class="accent-error">
-    <button class="x-button">Button</button>
-    <button class="x-button rounded-full">Button</button>
-</div>
-```
+<<< @/public/examples/accent/btn.html#body{}
 
 For example, this way you don't have to change background-color property for each component color variant, you just change the accent color.

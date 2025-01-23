@@ -2,7 +2,7 @@ import { resolve, relative } from 'path'
 import { defineConfig } from 'vite'
 import vituum from 'vituum'
 import liquid from '@vituum/vite-plugin-liquid'
-import tailwindcss from '@vituum/vite-plugin-tailwindcss'
+import tailwindcss from '@tailwindcss/vite'
 
 const htmlPlugin = () => {
     return {

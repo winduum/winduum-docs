@@ -15,7 +15,7 @@
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    border-radius: var(--rounded);
+    border-radius: var(--radius);
     min-height: 100%;
     background: transparent;
 }
