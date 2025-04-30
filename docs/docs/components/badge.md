@@ -6,7 +6,7 @@
 ### Usage
 
 ```css
-@import "winduum/src/components/badge/index.css" layer(components);
+@import "winduum/src/components/badge/index.css" layer(utilities);
 ```
 
 ### Variants

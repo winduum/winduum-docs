@@ -15,7 +15,7 @@ You have following types of trigger as an option:
 
 ::: code-group
 ```css
-@import "winduum/src/components/popover/index.css" layer(components);
+@import "winduum/src/components/popover/index.css" layer(utilities);
 ```
 <<< @/public/examples/components/popover/basic.html#body{} [html]
 ```vue

@@ -6,7 +6,7 @@ Bake your [Toast](/docs/components/toast) and let it fly! You should insert in i
 ## Usage
 
 ```css
-@import "winduum/src/components/toaster/index.css" layer(components);
+@import "winduum/src/components/toaster/index.css" layer(utilities);
 ```
 
 ### Variants

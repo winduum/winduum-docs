@@ -4,7 +4,7 @@
     "@vituum/vite-plugin-liquid": "^1.1.0",
     "@tailwindcss/vite": "^4.0.0",
     "tailwindcss": "^4.0.0",
-    "winduum": "^2.1.0-next.2",
+    "winduum": "^2.2.0-next.5",
     "vituum": "^1.1.1",
     "vite": "^6.0.11",
     "slide-element": "^2.3.1",

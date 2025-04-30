@@ -6,7 +6,7 @@ Typographic defaults for common wysiwyg content. It's an alternative to [prose](
 ### Usage
 
 ```css
-@import "winduum/src/components/text/index.css" layer(components);
+@import "winduum/src/components/text/index.css" layer(utilities);
 ```
 
 ### Variants

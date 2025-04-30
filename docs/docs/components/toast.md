@@ -7,7 +7,7 @@ Let it bake and fly from your [Toaster](/docs/components/toaster)!
 
 ::: code-group
 ```css
-@import "winduum/src/components/toast/index.css" layer(components);
+@import "winduum/src/components/toast/index.css" layer(utilities);
 ```
 ```js
 import { showToast, closeToast } from 'winduum/src/components/toaster'

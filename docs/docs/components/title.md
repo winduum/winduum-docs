@@ -6,7 +6,7 @@ For common title styles that you can manage from one component across project.
 ### Usage
 
 ```css
-@import "winduum/src/components/title/index.css" layer(components);
+@import "winduum/src/components/title/index.css" layer(utilities);
 ```
 
 ### Variants

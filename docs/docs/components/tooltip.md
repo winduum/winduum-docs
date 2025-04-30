@@ -7,7 +7,7 @@ Tooltip can be used for a little info hint on hover or focus.
 
 ::: code-group
 ```css
-@import "winduum/src/components/tooltip/index.css" layer(components);
+@import "winduum/src/components/tooltip/index.css" layer(utilities);
 ```
 <<< @/public/examples/components/tooltip/basic.html#body{} [html]
 ```vue

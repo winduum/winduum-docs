@@ -6,7 +6,7 @@ Small informative component.
 ### Usage
 
 ```css
-@import "winduum/src/components/info/index.css" layer(components);
+@import "winduum/src/components/info/index.css" layer(utilities);
 ```
 
 ### Variants

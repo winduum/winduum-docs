@@ -26,8 +26,8 @@ The components are written in plain CSS, so sources can be also loaded in browse
 ```css
 @import "winduum/src/theme/index.css" layer(theme);
 @import "winduum/src/base/index.css" layer(base);
-@import "winduum/src/components/index.css" layer(components);
-@import "winduum/src/utilities/index.css" layer(components);
+@import "winduum/src/components/index.css" layer(utilities);
+@import "winduum/src/utilities/index.css" layer(utilities);
 ```
 
 Or you can include components separately, follow usage steps with each component.
@@ -35,8 +35,8 @@ Or you can include components separately, follow usage steps with each component
 ```css
 @import "winduum/src/theme/index.css" layer(theme);
 @import "winduum/src/base/index.css" layer(base);
-@import "winduum/src/components/button/index.css" layer(components);
-@import "winduum/src/utilities/index.css" layer(components);
+@import "winduum/src/components/button/index.css" layer(utilities);
+@import "winduum/src/utilities/index.css" layer(utilities);
 ```
 
 Or paste the source code to your project and make it your own!
@@ -44,13 +44,13 @@ Or paste the source code to your project and make it your own!
 ```css
 @import "@/styles/theme/index.css" layer(theme);
 @import "@/styles/base/index.css" layer(base);
-@import "@/styles/components/button/index.css" layer(components);
-@import "@/styles/utilities/index.css" layer(components);
+@import "@/styles/components/button/index.css" layer(utilities);
+@import "@/styles/utilities/index.css" layer(utilities);
 ```
 
 
 
-With `layer(components)` you can use TailwindCSS variant classes, for example `class="x-button lg:square"` to make button square only from `lg` breakpoint. (Not wokring with TailwindCSS v4 currently)
+With `layer(utilities)` you can use TailwindCSS variant classes, for example `class="x-button lg:square"` to make button square only from `lg` breakpoint. (Not wokring with TailwindCSS v4 currently)
 
 ### TailwindCSS
 
@@ -68,9 +68,12 @@ To use TailwindCSS `v4`, you will have to import TailwindCSS and Winduum imports
 @import "winduum/src/base/reset.css" layer(base);
 @import "winduum/src/base/defaults.css" layer(base);
 
-/* single imports for your components and utilities, or you can include them separately */
-@import "winduum/src/components/index.css" layer(components);
-@import "winduum/src/utilities/index.css" layer(utilities);
+/* single imports for your components and utilities, or you can include them separately in your project (recommended) */
+@import "winduum/src/components/index.css" layer(utilities);
+@import "winduum/src/utilities/container/props/default.css" layer(theme);
+@import "winduum/src/utilities/ripple/keyframes/default.css";
+@import "winduum/src/utilities/skeleton/props/default.css" layer(theme);
+@import "winduum/src/utilities/spinner/keyframes/ring.css";
 
 @import "winduum/tailwindcss/utilities/index.css";
 @import "tailwindcss/utilities" layer(utilities);
@@ -100,8 +103,8 @@ To use TailwindCSS `v3`, you will have to import TailwindCSS and Winduum imports
 ```css
 @import "winduum/src/theme/index.css";
 @import "winduum/src/base/index.css";
-@import "winduum/src/components/index.css" layer(components);
-@import "winduum/src/utilities/index.css" layer(components);
+@import "winduum/src/components/index.css" layer(utilities);
+@import "winduum/src/utilities/index.css" layer(utilities);
 @import "winduum/tailwindcss/base/defaults.css";
 @import "tailwindcss/base.css";
 @import "tailwindcss/components.css";

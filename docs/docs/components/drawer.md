@@ -7,7 +7,7 @@ Can be dismissed with touch gestures on touch devices.
 ### Usage
 ::: code-group
 ```css
-@import "winduum/src/components/drawer/index.css" layer(components);
+@import "winduum/src/components/drawer/index.css" layer(utilities);
 ```
 <<< @/public/examples/components/drawer/left.html#body{} [html]
 <<< @/../examples/src/pages/components/drawer/left.liquid#js{} [js]

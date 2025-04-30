@@ -191,6 +191,10 @@ iframe {
   visibility: hidden;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .vp-doc :not(pre) > code {
   background-color: var(--vp-c-bg-soft);
 }
@@ -287,4 +291,8 @@ html:has(dialog[open]) .VPSidebar {
 
 .VPHomeSponsors {
   margin: 0 !important;
+}
+
+.animation-\[ripple\] {
+  animation-name: ripple;
 }

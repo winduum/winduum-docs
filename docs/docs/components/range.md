@@ -7,7 +7,7 @@ Accessible range slider that allows easy selection of a value by sliding a handl
 
 ::: code-group
 ```css
-@import "winduum/src/components/range/index.css" layer(components);
+@import "winduum/src/components/range/index.css" layer(utilities);
 ```
 ```js
 import { setValue } from 'winduum/src/components/range'

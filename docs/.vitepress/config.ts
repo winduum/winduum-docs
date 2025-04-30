@@ -103,6 +103,10 @@ export default defineConfig({
             {
               text: 'Layers',
               link: '/docs/layers'
+            },
+            {
+              text: 'Tokens',
+              link: '/docs/tokens'
             }
           ]
         },
@@ -307,10 +311,6 @@ export default defineConfig({
             {
               text: 'Dot',
               link: '/docs/utilities/dot'
-            },
-            {
-              text: 'Mask',
-              link: '/docs/utilities/mask'
             },
             {
               text: 'Skeleton',

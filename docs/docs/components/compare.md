@@ -6,7 +6,7 @@ Side-by-side comparison slider component.
 ### Usage
 
 ```css
-@import "winduum/src/components/compare/index.css" layer(components);
+@import "winduum/src/components/compare/index.css" layer(utilities);
 ```
 ### Variants
 * <LinkGh name="default" path="components/compare" />

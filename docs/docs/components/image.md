@@ -6,7 +6,7 @@ Default constrains for media elements such as `img`, `video`, `iframe`, `object`
 ### Usage
 
 ```css
-@import "winduum/src/components/image/index.css" layer(components);
+@import "winduum/src/components/image/index.css" layer(utilities);
 ```
 
 ### Variants

@@ -6,7 +6,7 @@ Color supports `checkbox` and `radio` **input** types for displaying selected co
 ### Usage
 
 ```css
-@import "winduum/src/components/color/index.css" layer(components);
+@import "winduum/src/components/color/index.css" layer(utilities);
 ```
 
 ### Variants

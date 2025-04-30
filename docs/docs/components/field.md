@@ -17,7 +17,7 @@ Follow instructions for individual framework usage below
 ### Usage
 
 ```css
-@import "winduum/src/components/field/index.css" layer(components);
+@import "winduum/src/components/field/index.css" layer(utilities);
 ```
 
 ## Examples

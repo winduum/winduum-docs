@@ -6,7 +6,7 @@ Check supports `checkbox` and `radio` **input** types
 ### Usage
 
 ```css
-@import "winduum/src/components/check/index.css" layer(components);
+@import "winduum/src/components/check/index.css" layer(utilities);
 ```
 
 ### Variants

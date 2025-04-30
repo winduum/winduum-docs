@@ -6,7 +6,7 @@ For common heading styles that you can manage from one component across project.
 ### Usage
 
 ```css
-@import "winduum/src/components/heading/index.css" layer(components);
+@import "winduum/src/components/heading/index.css" layer(utilities);
 ```
 
 ### Tokens

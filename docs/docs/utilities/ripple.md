@@ -9,7 +9,7 @@ Use with [Button](/docs/components/button) or any other component.
 
 ::: code-group
 ```css
-@import "winduum/utilities/ripple.css" layer(components);
+@import "winduum/utilities/ripple.css" layer(utilities);
 ```
 ```js
 import { showRipple } from 'winduum/src/utilities/ripple'

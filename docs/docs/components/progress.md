@@ -6,7 +6,7 @@ Displays progress with native HTML5 tags `progress` or `meter`
 ### Usage
 
 ```css
-@import "winduum/src/components/progress/index.css" layer(components);
+@import "winduum/src/components/progress/index.css" layer(utilities);
 ```
 
 ### Variants

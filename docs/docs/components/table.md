@@ -5,7 +5,7 @@ Display your data in non-interactive, interactive or responsive tables.
 ### Usage
 
 ```css
-@import "winduum/src/components/table/index.css" layer(components);
+@import "winduum/src/components/table/index.css" layer(utilities);
 ```
 
 ### Variants

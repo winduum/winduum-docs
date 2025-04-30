@@ -4,11 +4,17 @@
 @import "winduum/src/theme/dark.css" layer(theme);
 @import "winduum/src/base/reset.css" layer(base);
 @import "winduum/src/base/defaults.css" layer(base);
-@import "winduum/src/components/index.css" layer(components);
-@import "winduum/src/utilities/index.css" layer(utilities);
+
+/* single imports for your components and utilities, or you can include them separately in your project (recommended) */
+@import "winduum/src/components/index.css" layer(utilities);
+@import "winduum/src/utilities/container/props/default.css" layer(theme);
+@import "winduum/src/utilities/ripple/keyframes/default.css";
+@import "winduum/src/utilities/skeleton/props/default.css" layer(theme);
+@import "winduum/src/utilities/spinner/keyframes/ring.css";
+
 @import "winduum/tailwindcss/utilities/index.css";
 @import "tailwindcss/utilities" layer(utilities);
-@import "winduum/tailwindcss/variants/dark.css";
+@import "winduum/tailwindcss/variants/index.css";
 @import "winduum/src/base/breakpoints.css";
 @import "winduum/src/base/keyframes.css";
 @import "winduum/src/base/transitions.css";

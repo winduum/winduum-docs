@@ -7,7 +7,7 @@ Group common ui components such as [Button](/docs/components/button), [Badge](/d
 ### Usage
 
 ```css
-@import "winduum/src/components/group/index.css" layer(components);
+@import "winduum/src/components/group/index.css" layer(utilities);
 ```
 
 ### Variants

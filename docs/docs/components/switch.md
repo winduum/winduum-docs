@@ -5,7 +5,7 @@
 ### Usage
 
 ```css
-@import "winduum/src/components/switch/index.css" layer(components);
+@import "winduum/src/components/switch/index.css" layer(utilities);
 ```
 
 ### Variants

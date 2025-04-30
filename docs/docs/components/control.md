@@ -22,7 +22,7 @@ Follow instructions for individual framework usage below
 ### Usage
 
 ```css
-@import "winduum/src/components/control/index.css" layer(components);
+@import "winduum/src/components/control/index.css" layer(utilities);
 ```
 
 ### Variants

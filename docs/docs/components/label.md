@@ -5,7 +5,7 @@
 ### Usage
 
 ```css
-@import "winduum/src/components/label/index.css" layer(components);
+@import "winduum/src/components/label/index.css" layer(utilities);
 ```
 
 ### Variants

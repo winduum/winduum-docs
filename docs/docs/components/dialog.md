@@ -7,7 +7,7 @@ Modal component that uses native HTML5 `dialog` functionality.
 
 ::: code-group
 ```css
-@import "winduum/src/components/dialog/index.css" layer(components);
+@import "winduum/src/components/dialog/index.css" layer(utilities);
 ```
 ```js
 import { showDialog } from 'winduum/src/components/dialog'
