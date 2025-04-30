@@ -2,18 +2,18 @@
 
 It's recommended to use icons as svg, such as [Heroicons](https://heroicons.com/)
 
-Winduum uses some of them internally via CSS like this, or with the [Mask](/docs/utilities/mask) utility class.
+Winduum uses some of them internally via CSS custom properties.
 
 ```css
 :root {
-  --mask-check: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>') no-repeat 50% 50% / contain;
-  --mask-radio: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 160c-53.019 0-96 42.981-96 96v0c0 53.019 42.981 96 96 96v0c53.019 0 96-42.981 96-96v0c0-53.019-42.981-96-96-96z"></path></svg>') no-repeat 50% 50% / contain;
+    --x-check-icon-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>');
+    --x-check-radio-icon-mask: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 160c-53.019 0-96 42.981-96 96v0c0 53.019 42.981 96 96 96v0c53.019 0 96-42.981 96-96v0c0-53.019-42.981-96-96-96z"></path></svg>');
 }
 
 /* Example */
-.icon {
+.icon-check {
     background-color: currentColor;
-    mask: var(--mask-check);
+    mask: var(--x-check-icon-mask);
     width: 1rem;
     height: 1rem;
 }
