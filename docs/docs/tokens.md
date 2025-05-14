@@ -24,9 +24,11 @@ To replicate the same functionality, you have to use the new `@utility` at-rule 
 @import "winduum/src/components/heading/props/default.css" layer(theme);
 @import "winduum/src/components/heading/default.css" layer(utilities);
 
-@theme {
-    --x-heading-font-weight: var(--font-bold);
-    /* any custom properties */
+@layer theme {
+    :root, :host {
+        --x-heading-font-weight: var(--font-bold);
+        /* any custom properties */   
+    }
 }
 
 @layer utilities {
