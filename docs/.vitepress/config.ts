@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import llmstxt from "vitepress-plugin-llms";
 
 const ogDescription = 'Modern, modular, small modest CSS component framework built on top of TailwindCSS'
 const ogImage = 'https://winduum.dev/og-image.png'
@@ -6,6 +7,9 @@ const ogTitle = 'Winduum'
 const ogUrl = 'https://winduum.dev'
 
 export default defineConfig({
+  vite: {
+    plugins: [llmstxt()],
+  },
   title: ogTitle,
   description: ogDescription,
 
