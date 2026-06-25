@@ -3,9 +3,6 @@
 You can use Winduum with or without [TailwindCSS](https://tailwindcss.com/).
 Check out the [About](/docs/about) page to learn more about Winduum and its philosophy.
 
-Winduum `2.x` is using compatible naming for CSS custom properties that work with both current and old versions of TailwindCSS,
-specifically `v4` and `v3`.
-
 ## Get started
 
 You can install Winduum via **npm** and use it in your **Node.js** project.<br>
@@ -21,44 +18,9 @@ See [Trying Winduum Online](#trying-winduum-online) section below to see all pos
 npm i winduum
 ```
 
-The components are written in plain CSS, so sources can be also loaded in browsers without a build step or used in any other build tool such as **PostCSS** or **LightningCSS**.
-
-```css
-@import "winduum/src/theme/index.css" layer(theme);
-@import "winduum/src/base/index.css" layer(base);
-@import "winduum/src/components/index.css" layer(utilities);
-@import "winduum/src/utilities/index.css" layer(utilities);
-```
-
-Or you can include components separately, follow usage steps with each component.
-
-```css
-@import "winduum/src/theme/index.css" layer(theme);
-@import "winduum/src/base/index.css" layer(base);
-@import "winduum/src/components/button/index.css" layer(utilities);
-@import "winduum/src/utilities/index.css" layer(utilities);
-```
-
-Or paste the source code to your project and make it your own!
-
-```css
-@import "@/styles/theme/index.css" layer(theme);
-@import "@/styles/base/index.css" layer(base);
-@import "@/styles/components/button/index.css" layer(utilities);
-@import "@/styles/utilities/index.css" layer(utilities);
-```
-
-
-
-With `layer(utilities)` you can use TailwindCSS variant classes, for example `class="x-button lg:square"` to make button square only from `lg` breakpoint. (Not wokring with TailwindCSS v4 currently)
-
 ### TailwindCSS
 
 It's optional but recommended to leverage the full functionality of the library!
-
-#### v4
-
-To use TailwindCSS `v4`, you will have to import TailwindCSS and Winduum imports individually.
 
 ```css
 @import "tailwindcss/theme.css" layer(theme);
@@ -83,50 +45,40 @@ To use TailwindCSS `v4`, you will have to import TailwindCSS and Winduum imports
 @import "winduum/src/base/transitions.css";
 ```
 
-TailwindCSS `v4` can be used in any project with Vite and works out of the box.
-No `tailwind.config.js` needed!
-All configuration is done in CSS!
+Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation/using-vite) docs.
 
-```javascript
-import tailwindcss from '@tailwindcss/vite'
-import { defineConfig } from 'vite'
+### Without TailwindCSS
 
-export default defineConfig({
-  plugins: [tailwindcss()],
-})
-```
-
-#### v3
-
-To use TailwindCSS `v3`, you will have to import TailwindCSS and Winduum imports individually.
+The components are written in plain CSS, so sources can be also loaded in browsers without a build step or used in any other build tool such as **PostCSS** or **LightningCSS**.
 
 ```css
-@import "winduum/src/theme/index.css";
-@import "winduum/src/base/index.css";
+@import "winduum/src/theme/index.css" layer(theme);
+@import "winduum/src/base/index.css" layer(base);
+
+/* all components in one import */
 @import "winduum/src/components/index.css" layer(utilities);
 @import "winduum/src/utilities/index.css" layer(utilities);
-@import "winduum/tailwindcss/base/defaults.css";
-@import "tailwindcss/base.css";
-@import "tailwindcss/components.css";
-@import "tailwindcss/utilities.css";
-@import "tailwindcss/variants.css";
 ```
 
-Follow the installation steps in [TailwindCSS](https://v3.tailwindcss.com/docs/installation) docs
-and include Winduum as a plugin,
-see [Config](/docs/base/config#tailwind-css-v3) for more info.
+Or you can include components separately, follow usage steps with each component.
 
-## PostCSS or LightingCSS
-For TailwindCSS `v3` following PostCSS plugins are required.
-If you are using `v4` the [LightingCSS](https://lightningcss.dev/) is used out of the box.
+```css
+@import "winduum/src/theme/index.css" layer(theme);
+@import "winduum/src/base/index.css" layer(base);
 
-* [`autoprefixer`](https://www.npmjs.com/package/autoprefixer)
-* [`tailwindcss`](https://www.npmjs.com/package/tailwindcss)
-* [`postcss-nesting`](https://www.npmjs.com/package/postcss-nesting)
-* [`postcss-import`](https://www.npmjs.com/package/postcss-import)
-* [`postcss-custom-media`](https://www.npmjs.com/package/postcss-custom-media)
-  
-If you are not using TailwindCSS, you can use whatever you want, even no build step!
+/* one component at a time */
+@import "winduum/src/components/button/index.css" layer(utilities);
+@import "winduum/src/utilities/index.css" layer(utilities);
+```
+
+Or paste the source code to your project and make it your own!
+
+```css
+@import "@/styles/theme/index.css" layer(theme);
+@import "@/styles/base/index.css" layer(base);
+@import "@/styles/components/button/index.css" layer(utilities);
+@import "@/styles/utilities/index.css" layer(utilities);
+```
 
 ## Stylelint
 

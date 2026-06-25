@@ -105,10 +105,6 @@ export default defineConfig({
               link: '/docs/grid'
             },
             {
-              text: 'Layers',
-              link: '/docs/layers'
-            },
-            {
               text: 'Tokens',
               link: '/docs/tokens'
             }
