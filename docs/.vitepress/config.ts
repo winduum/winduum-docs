@@ -107,6 +107,10 @@ export default defineConfig({
             {
               text: 'Tokens',
               link: '/docs/tokens'
+            },
+            {
+              text: 'Polyfills',
+              link: '/docs/polyfills'
             }
           ]
         },
@@ -140,7 +144,7 @@ export default defineConfig({
             {
               text: 'Transitions',
               link: '/docs/base/transitions'
-            }
+            },
           ]
         },
         {
@@ -222,9 +226,13 @@ export default defineConfig({
               text: 'Label',
               link: '/docs/components/label'
             },
+            // {
+            //   text: 'Link',
+            //   link: '/docs/components/link'
+            // },
             {
-              text: 'Link',
-              link: '/docs/components/link'
+              text: 'Marquee',
+              link: '/docs/components/marquee'
             },
             {
               text: 'Notice',
@@ -284,7 +292,6 @@ export default defineConfig({
             }
           ]
         },
-
         {
           text: 'Utilities',
           items: [
@@ -296,10 +303,10 @@ export default defineConfig({
               text: 'Animation',
               link: '/docs/utilities/animation'
             },
-            {
-              text: 'Container',
-              link: '/docs/utilities/container'
-            },
+            // {
+            //   text: 'Container',
+            //   link: '/docs/utilities/container'
+            // },
             {
               text: 'Divide Gap',
               link: '/docs/utilities/divide-gap'
@@ -311,6 +318,22 @@ export default defineConfig({
             {
               text: 'Dot',
               link: '/docs/utilities/dot'
+            },
+            {
+              text: 'Grid',
+              link: '/docs/utilities/grid'
+            },
+            {
+              text: 'Link',
+              link: '/docs/utilities/link'
+            },
+            {
+              text: 'Position',
+              link: '/docs/utilities/position'
+            },
+            {
+              text: 'Ripple',
+              link: '/docs/utilities/ripple'
             },
             {
               text: 'Skeleton',
@@ -325,13 +348,34 @@ export default defineConfig({
               link: '/docs/utilities/swap'
             },
             {
-              text: 'Ripple',
-              link: '/docs/utilities/ripple'
-            },
-            {
               text: 'Underline',
               link: '/docs/utilities/underline'
+            },
+            {
+              text: 'View Transition',
+              link: '/docs/utilities/view-transition'
             }
+          ]
+        },
+        {
+          text: "Variants",
+          items: [
+            {
+              text: 'Dark',
+              link: '/docs/variants/dark'
+            },
+            {
+              text: 'Hocus',
+              link: '/docs/variants/hocus'
+            },
+            {
+              text: 'Interest',
+              link: '/docs/variants/interest'
+            },
+            {
+              text: 'Scroll State',
+              link: '/docs/variants/scrolll-state'
+            },
           ]
         }
       ]
