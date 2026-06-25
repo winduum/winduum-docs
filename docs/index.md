@@ -37,7 +37,7 @@ features:
   details: Everything is written in plain CSS and JS, so you can use it with any framework you want. You can also use pre-build components for Vue etc. TailwindCSS is optional, but it's recommended.
 - icon: 🎨
   title: Extends TailwindCSS
-  details: Adds a plugin for TailwindCSS which adds new handy utilities and CSS properties. You don't even need to use TailwindCSS, but is recommend for full experience.
+  details: Adds new handy utilities, variants and CSS properties. You don't even need to use TailwindCSS, but is recommend for full experience.
 - icon: 🚀
   title: Small and fast
   details: Doesn't reinvent the wheel, many components are using existing optimized standards. So the focus is that the final javascript code is minimal!
