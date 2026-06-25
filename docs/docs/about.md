@@ -26,7 +26,7 @@ Winduum is **framework-agnostic**, so you are able to create your own components
 
 If there is interest, pre-built components may be developed for popular frameworks.
 Currently,
-only [`winduum-vue`](https://www.github.com/winduum/winduum-vue) and [`winduum-react`](https://www.github.com/winduum/winduum-react) are available
+only [`winduum-elements`](https://www.github.com/winduum/winduum-elements), [`winduum-stimulus`](https://www.github.com/winduum/winduum-stimulus), [`winduum-vue`](https://www.github.com/winduum/winduum-vue) and [`winduum-react`](https://www.github.com/winduum/winduum-react) are available
 and most of the components have usage and installation examples in the docs.
 
 Want to help? We're open for pull requests!

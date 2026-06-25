@@ -70,8 +70,24 @@ export default defineConfig({
                 link: 'https://github.com/winduum/winduum/blob/main/CHANGELOG.md'
               },
               {
+                text: 'v2',
+                link: 'https://v2--winduum.netlify.app/'
+              },
+              {
                 text: 'v1',
                 link: 'https://v1--winduum.netlify.app/'
+              }
+            ]
+          },
+          {
+            items: [
+              {
+                text: 'Webuum',
+                link: 'https://webuum.dev'
+              },
+              {
+                text: 'Vituum',
+                link: 'https://vituum.dev'
               }
             ]
           }

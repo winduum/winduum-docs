@@ -48,7 +48,6 @@ document.querySelectorAll('[data-action="toggleDetails"]').forEach(summary => {
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/details" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/details" />
 
 ## Examples
 

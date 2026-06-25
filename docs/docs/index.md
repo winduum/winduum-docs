@@ -170,6 +170,8 @@ Winduum is **framework-agnostic**, learn more on the [About](/docs/about#framewo
 
 Do you need ready to use components? Here are components ready to copy & paste. For now there are only a few, more might come in the future!
 
+* <LinkGh url="https://github.com/winduum/winduum-elements" name="winduum/winduum-elements"></LinkGh>
+* <LinkGh url="https://github.com/winduum/winduum-stimulus" name="winduum/winduum-stimulus"></LinkGh>
 * <LinkGh url="https://github.com/winduum/winduum-vue" name="winduum/winduum-vue"></LinkGh>
 * <LinkGh url="https://github.com/winduum/winduum-react" name="winduum/winduum-react"></LinkGh>
 
