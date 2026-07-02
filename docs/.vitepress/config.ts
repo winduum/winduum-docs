@@ -390,7 +390,7 @@ export default defineConfig({
             },
             {
               text: 'Scroll State',
-              link: '/docs/variants/scrolll-state'
+              link: '/docs/variants/scroll-state'
             },
           ]
         }

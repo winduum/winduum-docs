@@ -1,6 +1,8 @@
 # Tooltip
 Tooltip can be used for a little info hint on hover or focus.
 
+It's a pure CSS solution — the tooltip text comes from the `aria-label` attribute and is rendered via the `::before` pseudo-element, so it stays accessible and needs no JavaScript. Placement is controlled with the `tooltip-*` tokens and appearance can be customized via the `--x-tooltip-*` props.
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/tooltip" />
 
 ## Usage
@@ -27,11 +29,14 @@ Tooltip can be used for a little info hint on hover or focus.
 ### Variants
 * <LinkGh name="default" path="components/tooltip" />
 
+### Props
+* <LinkGh name="default" path="components/tooltip/props" />
+
 ### Tokens
-* `top`
-* `bottom`
-* `left`
-* `right`
+* `tooltip-top`
+* `tooltip-bottom`
+* `tooltip-left`
+* `tooltip-right`
 
 ### Installation
 Follow instructions for individual framework usage below
