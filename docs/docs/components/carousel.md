@@ -1,11 +1,12 @@
 # Carousel
 Provides a scroll carousel that uses native CSS `scroll-snap` property.
 
-The carousel is CSS-first — scrolling, snapping and even scroll markers can be handled by CSS alone
-(see [CSS scroll markers](https://developer.mozilla.org/en-US/docs/Web/CSS/::scroll-marker)).
-A small JavaScript layer adds prev/next buttons, marker state and scroll state — ready to use via
-[winduum-elements](https://github.com/winduum/winduum-elements/tree/main/components/carousel) or
-[winduum-stimulus](https://github.com/winduum/winduum-stimulus/tree/main/components/carousel).
+The carousel is CSS-first — scrolling, snapping and layout are handled by CSS alone.
+
+A small JavaScript layer adds a 1:1 compatible API to
+[CSS Native Carousels](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels) —
+with these APIs you can build a 1:1 implementation of carousels like [chrome.dev/carousel](https://chrome.dev/carousel/)
+without using `::scroll-button()`, `::scroll-marker-group` and `::scroll-marker`, with support in all browsers.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
 
@@ -21,6 +22,8 @@ Follow instructions for individual framework usage below
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/carousel" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/carousel" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/components/carousel" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/main/components/carousel" />
 
 ## Examples
 
@@ -29,8 +32,12 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/basic.html" style="height: 620px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/carousel/basic.html#body{} [winduum]
-<<< @/../examples/src/pages/components/carousel/basic.liquid#js{} [js]
+<<< @/public/examples/components/carousel/basic.html#body{} [winduum-elements]
+<<< @/public/examples/components/carousel/basic.html#body{} [winduum-stimulus]
+```vue [winduum-vue]
+```
+```vue [winduum-react]
+```
 :::
 
 ### Full
@@ -38,8 +45,12 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/full.html" style="height: 620px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/carousel/full.html#body{} [winduum]
-<<< @/../examples/src/pages/components/carousel/full.liquid#js{} [js]
+<<< @/public/examples/components/carousel/full.html#body{} [winduum-elements]
+<<< @/public/examples/components/carousel/full.html#body{} [winduum-stimulus]
+```vue [winduum-vue]
+```
+```jsx [winduum-react]
+```
 :::
 
 

@@ -14,6 +14,8 @@ Follow instructions for individual framework usage below
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/compare" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/compare" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/compare" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/components/compare" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/main/components/compare" />
 
 ## Examples
 
@@ -23,7 +25,12 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/compare/default.html#body{} [winduum]
-<<< @/../examples/src/pages/components/compare/default.liquid#js{} [js]
+```vue [winduum-stimulus]
+```
+```vue [winduum-vue]
+```
+```jsx [winduum-react]
+```
 :::
 
 ### Text

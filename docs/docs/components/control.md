@@ -51,6 +51,16 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/input/basic.html#body{} [winduum]
+```html [winduum-elements]
+<x-control class="x-control">
+    <input type="text">
+</x-control>
+```
+```html [winduum-stimulus]
+<div class="x-control" data-controller="x-control">
+    <input type="text">
+</div>
+```
 ```vue [winduum-vue]
 <script setup lang="ts">
     import { Control } from '@/components/control'

@@ -14,6 +14,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
     border-radius: var(--radius);
     min-height: 100%;
