@@ -1,5 +1,6 @@
 # Badge
-<br>
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/basic.html" style="margin: 1.5rem 0"></iframe>
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/badge" />
 

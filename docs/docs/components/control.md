@@ -9,6 +9,8 @@ Other input types are supported in other components
 * `range` - included in [Range](/docs/components/range)
 * `button`, `reset`, `submit` - included in [Button](/docs/components/button)
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/basic.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/control" />
 
 ## Styles

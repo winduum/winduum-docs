@@ -11,6 +11,8 @@ Popovers are build entirely on the web platform — the `[popover]` attribute,
 
 No JavaScript is required in browsers with anchor positioning support.
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/basic.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/popover" />
 
 ## Installation

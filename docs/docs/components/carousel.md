@@ -8,6 +8,8 @@ A small JavaScript layer adds a 1:1 compatible API to
 with these APIs you can build a 1:1 implementation of carousels like [chrome.dev/carousel](https://chrome.dev/carousel/)
 without using `::scroll-button()`, `::scroll-marker-group` and `::scroll-marker`, with support in all browsers.
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/full.html" style="height: 420px; margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
 
 ## Styles
