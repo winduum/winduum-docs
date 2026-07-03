@@ -6,18 +6,18 @@ Theming in Winduum is really easy. All it takes is a few CSS properties. There a
 
 Each `color-mix` function also contains `--default-color-space` property, which you can change from `sRGB` to mix colors in different color spaces. You can use colors in any format you want.
 
-### Without TailwindCSS
-
-[`src/theme/default.css`](https://github.com/winduum/winduum/blob/main/src/theme/default.css)
-
 ### TailwindCSS
 
-Instead of `:root, :host` the `v4` `@theme` at-rule is used.
+Instead of `:root, :host` the `@theme` at-rule is used.
 
 [`tailwindcss/theme/default.css`](https://github.com/winduum/winduum/blob/main/tailwindcss/theme/default.css)
 
 <<< @/../node_modules/winduum/tailwindcss/theme/default.css
 
+
+### Without TailwindCSS
+
+[`src/theme/default.css`](https://github.com/winduum/winduum/blob/main/src/theme/default.css)
 
 ## Default P3
 

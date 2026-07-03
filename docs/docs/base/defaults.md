@@ -13,15 +13,10 @@ There is also an extended set of opinionated defaults — block `svg`/`img`, ico
 @import "winduum/src/base/defaults-extended.css" layer(base);
 ```
 
-For TailwindCSS there are few rules such as applying `--tw-content` to all pseudo-elements and zero border to all elements or pseudo-elements.
-
-[`tailwindcss/base/defaults.css`](https://github.com/winduum/winduum/blob/main/tailwindcss/base/defaults.css)
-  
-
 
 ##  Cursor
 
-Default `cursor: pointer` for clickable elements, you can change this globally via CSS property `--default-cursor` if you prefer more application like behavior.
+Default `cursor: pointer` for clickable elements, you can change this globally via CSS property `--cursor-pointer` if you prefer more application like behavior.
 
 ## Svg
 Set the default size of an SVG as a small square if neither width nor height is specified.
