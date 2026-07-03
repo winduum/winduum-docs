@@ -2,11 +2,7 @@
 <br>
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/breadcrumb" />
 
-### Usage
-
-```css
-@import "winduum/src/components/breadcrumb/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/breadcrumb" />
@@ -14,7 +10,7 @@
 ### Props
 * <LinkGh name="default" path="components/breadcrumb/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/breadcrumb" />

@@ -4,11 +4,7 @@ Group common ui components such as [Button](/docs/components/button), [Badge](/d
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/group" />
 
-### Usage
-
-```css
-@import "winduum/src/components/group/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/group" />
@@ -16,7 +12,7 @@ Group common ui components such as [Button](/docs/components/button), [Badge](/d
 ### Tokens
 * <LinkGh name="vertical" path="components/group" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/group" />
@@ -30,8 +26,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/group.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/btn/group.html#body{} [html]
-```vue
+<<< @/public/examples/components/btn/group.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Group } from '@/components/group'
     import { Button } from '@/components/button'
@@ -45,7 +41,7 @@ Follow instructions for individual framework usage below
     </Group>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Group } from '@/components/group'
 import { Button } from '@/components/button'
 

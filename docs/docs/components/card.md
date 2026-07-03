@@ -2,11 +2,7 @@
 <br>
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/card" />
 
-### Usage
-
-```css
-@import "winduum/src/components/card/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/card" />
@@ -14,7 +10,7 @@
 ### Props
 * <LinkGh name="default" path="components/card/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/card" />

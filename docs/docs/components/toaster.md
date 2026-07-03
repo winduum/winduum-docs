@@ -7,25 +7,7 @@ even above open dialogs. Use `toasterObserver` to show/hide the toaster popover 
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/toaster" />
 
-## Usage
-
-::: code-group
-```css
-@import "winduum/src/components/toaster/index.css" layer(utilities);
-```
-```html
-<ol class="x-toaster items-end" popover="manual"></ol>
-```
-```js
-import { toasterObserver } from 'winduum/src/components/toaster'
-
-const observer = toasterObserver()
-
-observer.observe(document.querySelector('.x-toaster'), {
-    childList: true,
-})
-```
-:::
+## Styles
 
 ### Variants
 * <LinkGh name="default" url="https://github.com/winduum/winduum/blob/main/src/components/toaster/default.css" />
@@ -33,12 +15,23 @@ observer.observe(document.querySelector('.x-toaster'), {
 ### Props
 * <LinkGh name="default" path="components/toaster/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/toaster" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/toaster" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/toaster" />
+
+## Example
+
+::: code-group
+```html [winduum]
+<body>
+    <!-- your html !-->
+    <ol class="x-toaster items-end" popover="manual"></ol>
+</body>
+```
+:::
 
 ## JavaScript API
 

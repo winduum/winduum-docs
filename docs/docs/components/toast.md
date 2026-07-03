@@ -3,46 +3,7 @@ Let it bake and fly from your [Toaster](/docs/components/toaster)!
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/toast" />
 
-## Usage
-
-::: code-group
-```css
-@import "winduum/src/components/toast/index.css" layer(utilities);
-```
-```js
-import { showToast, closeToast } from 'winduum/src/components/toast'
-
-document.querySelector('#insertToast').addEventListener('click', async () => {
-    const toaster = document.querySelector('.x-toaster')
-
-    toaster.insertAdjacentHTML('beforeend', `
-        <li class="x-toast" role="status" aria-live="assertive" aria-atomic="true">
-            <div class="x-toast-content">
-                <div class="flex-col">
-                    <div class="x-title">Hello toast</div>
-                    <div class="x-text">Amazing toast</div>
-                </div>
-                <button class="x-button muted ml-auto" data-action="closeToast">Close</button>
-            </div>
-        </li>
-    `)
-
-    await showToast(toaster.children[toaster.children.length - 1])
-
-    const closeToastButton = document.querySelectorAll('[data-action="closeToast"]')[document.querySelectorAll('[data-action="closeToast"]').length - 1]
-
-    closeToastButton.addEventListener('click', ({ currentTarget }) => {
-        closeToast(currentTarget.closest('.x-toast'))
-    })
-})
-```
-```html
-<body>
-    <!-- your html !-->
-    <ol class="x-toaster items-end" popover="manual"></ol>
-</body>
-```
-:::
+## Styles
 
 ### Variants
 * <LinkGh name="default" url="https://github.com/winduum/winduum/blob/main/src/components/toast/default.css" />
@@ -52,7 +13,7 @@ document.querySelector('#insertToast').addEventListener('click', async () => {
 * <LinkGh name="default" path="components/toast/props" />
 * <LinkGh name="content" path="components/toast/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/toast" />
@@ -66,7 +27,7 @@ Follow instructions for individual framework usage below
 </div>
 
 ::: code-group
-```html
+```html [winduum]
 <button class="x-button" id="insertToast">Show toast</button>
 
 <ol class="x-toaster items-end" popover="manual"></ol>

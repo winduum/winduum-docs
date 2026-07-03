@@ -2,11 +2,7 @@
 <br>
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/rating" />
 
-### Usage
-
-```css
-@import "winduum/src/components/rating/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/rating" />
@@ -15,7 +11,7 @@
 ### Props
 * <LinkGh name="default" path="components/rating/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/rating" />
@@ -29,8 +25,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/rating.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/rating.html#body{} [html]
-```vue
+<<< @/public/examples/components/rating.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Rating } from '@/components/rating'
 </script>
@@ -45,7 +41,7 @@ Follow instructions for individual framework usage below
     </Rating>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Rating } from '@/components/rating'
 
 export function Example() {

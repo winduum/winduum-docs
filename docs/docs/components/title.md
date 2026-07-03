@@ -3,11 +3,7 @@ For common title styles that you can manage from one component across project.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/title" />
 
-### Usage
-
-```css
-@import "winduum/src/components/title/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/title" />
@@ -19,7 +15,7 @@ For common title styles that you can manage from one component across project.
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/title/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/title/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/title" />
@@ -33,8 +29,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/title/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/title/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/title/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Title } from '@/components/title'
 </script>
@@ -43,7 +39,7 @@ Follow instructions for individual framework usage below
     <Title>Title</Title>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Title } from '@/components/title'
 
 export function Example() {

@@ -2,11 +2,7 @@
 <br>
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/label" />
 
-### Usage
-
-```css
-@import "winduum/src/components/label/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/label" />
@@ -14,7 +10,7 @@
 ### Props
 * <LinkGh name="default" path="components/label/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/label" />
@@ -28,8 +24,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/label.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/input/label.html#body{} [html]
-```vue
+<<< @/public/examples/components/input/label.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Label } from '@/components/label'
 </script>
@@ -38,7 +34,7 @@ Follow instructions for individual framework usage below
     <Label for="input">Label</Label>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Label } from '@/components/label'
 
 export function Example() {

@@ -2,11 +2,7 @@
 Display your data in non-interactive, interactive or responsive tables.
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/table" />
 
-### Usage
-
-```css
-@import "winduum/src/components/table/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/table" />
@@ -15,7 +11,7 @@ Display your data in non-interactive, interactive or responsive tables.
 ### Props
 * <LinkGh name="default" path="components/table/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/table" />

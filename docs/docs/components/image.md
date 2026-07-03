@@ -3,11 +3,7 @@ Default constrains for media elements such as `img`, `video`, `iframe`, `object`
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/image" />
 
-### Usage
-
-```css
-@import "winduum/src/components/image/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/image" />
@@ -15,7 +11,7 @@ Default constrains for media elements such as `img`, `video`, `iframe`, `object`
 ### Tokens
 * <LinkGh name="avatar" path="components/image" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/image" />
@@ -31,8 +27,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/image/ratio.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/image/ratio.html#body{} [html]
-```vue
+<<< @/public/examples/components/image/ratio.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { UiImage } from '@/components/image'
 </script>
@@ -43,7 +39,7 @@ Follow instructions for individual framework usage below
     </UiImage>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { UiImage } from '@/components/image'
 
 export function Example() {

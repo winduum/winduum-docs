@@ -2,11 +2,7 @@
 <br>
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/notice" />
 
-### Usage
-
-```css
-@import "winduum/src/components/notice/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/notice" />
@@ -14,7 +10,7 @@
 ### Props
 * <LinkGh name="default" path="components/notice/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/notice" />
@@ -28,8 +24,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/notice/success.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/notice/success.html#body{} [html]
-```vue
+<<< @/public/examples/components/notice/success.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Notice } from '@/components/notice'
 </script>
@@ -40,7 +36,7 @@ Follow instructions for individual framework usage below
     </Notice>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Notice } from '@/components/notice'
 
 export function Example() {

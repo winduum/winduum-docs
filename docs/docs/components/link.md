@@ -2,11 +2,7 @@
 <br>
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/link" />
 
-### Usage
-
-```css
-@import "winduum/src/components/link/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/link" />
@@ -15,7 +11,7 @@
 ### Props
 * <LinkGh name="default" path="components/link/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/link" />
@@ -29,8 +25,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/link/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/link/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/link/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Link } from '@/components/link'
 </script>
@@ -44,7 +40,7 @@ Follow instructions for individual framework usage below
     </Link>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Link } from '@/components/link'
 
 export function Example() {

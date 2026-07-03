@@ -3,11 +3,7 @@ Check supports `checkbox` and `radio` **input** types
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/check" />
 
-### Usage
-
-```css
-@import "winduum/src/components/check/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/check" />
@@ -18,7 +14,7 @@ Check supports `checkbox` and `radio` **input** types
 * <LinkGh name="default" path="components/check/props" />
 * <LinkGh name="interactive" path="components/check/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/check" />
@@ -34,8 +30,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/checkbox/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/checkbox/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/checkbox/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Check } from '@/components/check'
 </script>
@@ -50,7 +46,7 @@ Follow instructions for individual framework usage below
     </Check>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Check } from "@/components/check"
 
 export function Example() {
@@ -72,8 +68,8 @@ export function Example() {
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/radio/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/radio/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/radio/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { UiCheck } from '@/components/check'
 </script>
@@ -88,7 +84,7 @@ export function Example() {
     </UiCheck>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { UiCheck } from "@/components/check"
 
 export function Example() {

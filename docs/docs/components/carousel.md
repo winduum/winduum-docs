@@ -1,7 +1,7 @@
 # Carousel
 Provides a scroll carousel that uses native CSS `scroll-snap` property.
 
-Since v3, the carousel is CSS-first — scrolling, snapping and even scroll markers can be handled by CSS alone
+The carousel is CSS-first — scrolling, snapping and even scroll markers can be handled by CSS alone
 (see [CSS scroll markers](https://developer.mozilla.org/en-US/docs/Web/CSS/::scroll-marker)).
 A small JavaScript layer adds prev/next buttons, marker state and scroll state — ready to use via
 [winduum-elements](https://github.com/winduum/winduum-elements/tree/main/components/carousel) or
@@ -9,20 +9,13 @@ A small JavaScript layer adds prev/next buttons, marker state and scroll state �
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
 
-### Usage
-::: code-group
-```css
-@import "winduum/src/components/carousel/index.css" layer(utilities);
-```
-<<< @/public/examples/components/carousel/basic.html#body{} [html]
-<<< @/../examples/src/pages/components/carousel/basic.liquid#js{} [js]
-:::
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/carousel" />
 * <LinkGh name="content" path="components/carousel" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
@@ -36,7 +29,7 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/basic.html" style="height: 620px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/carousel/basic.html#body{} [html]
+<<< @/public/examples/components/carousel/basic.html#body{} [winduum]
 <<< @/../examples/src/pages/components/carousel/basic.liquid#js{} [js]
 :::
 
@@ -45,7 +38,7 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/full.html" style="height: 620px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/carousel/full.html#body{} [html]
+<<< @/public/examples/components/carousel/full.html#body{} [winduum]
 <<< @/../examples/src/pages/components/carousel/full.liquid#js{} [js]
 :::
 

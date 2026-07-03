@@ -11,20 +11,7 @@ Other input types are supported in other components
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/control" />
 
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/control" />
-* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/control" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/control" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/control" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/control" />
-
-### Usage
-
-```css
-@import "winduum/src/components/control/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/control" />
@@ -47,15 +34,24 @@ Follow instructions for individual framework usage below
 * <LinkGh name="select-picker" path="components/control/props" />
 * <LinkGh name="icon" path="components/control/props" />
 
-##  Examples
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/control" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/control" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/control" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/control" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/control" />
+
+## Examples
 
 ### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/input/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/input/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Control } from '@/components/control'
 </script>
@@ -66,7 +62,7 @@ Follow instructions for individual framework usage below
     </Control>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Control } from "@/components/control"
 
 export function Example() {

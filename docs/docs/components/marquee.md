@@ -4,13 +4,9 @@ Marquee creates an infinite horizontal loop for logos, partners or other repeate
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/marquee" />
 
-### Usage
+## Styles
 
-```css
-@import "winduum/src/components/marquee/index.css" layer(utilities);
-```
-
-Or import the pieces separately if you want to customize the props or keyframes.
+You can import the pieces separately if you want to customize the props or keyframes.
 
 ```css
 @import "winduum/src/components/marquee/keyframes/default.css" layer(utilities);
@@ -29,7 +25,7 @@ Or import the pieces separately if you want to customize the props or keyframes.
 * `--x-marquee-animation-timing-function` - animation timing function, defaults to `linear`
 * `--x-marquee-sibling-index` - item index, required as a fallback for browsers without `sibling-index()`
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below.
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/marquee" />
@@ -49,7 +45,7 @@ Use TailwindCSS arbitrary child variant `*:[animation-direction:reverse]` to mov
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/marquee/reverse.html" style="height: 8rem"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/marquee/reverse.html#body{} [html]
+<<< @/public/examples/components/marquee/reverse.html#body{} [winduum]
 :::
 
 ## Accessibility

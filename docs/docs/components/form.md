@@ -10,18 +10,12 @@ For advance form of validation use [VeeValidate](https://vee-validate.logaretm.c
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/form" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/form" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/form" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/form" />
-
-### Usage
-::: code-group
-<<< @/public/examples/form.html#body{} [html]
-<<< @/../examples/src/pages/form.liquid#js{} [js]
-:::
 
 ## Examples
 
@@ -30,7 +24,7 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/form.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/form.html#body{} [html]
+<<< @/public/examples/form.html#body{} [winduum]
 <<< @/../examples/src/pages/form.liquid#js{} [js]
 :::
 
@@ -40,7 +34,7 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/form-field.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/form-field.html#body{} [html]
+<<< @/public/examples/form-field.html#body{} [winduum]
 <<< @/../examples/src/pages/form-field.liquid#js{} [js]
 :::
 

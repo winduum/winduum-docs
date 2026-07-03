@@ -2,16 +2,12 @@
 <br>
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
 
-### Usage
-
-```css
-@import "winduum/src/components/tabs/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="list" path="components/tabs" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
@@ -25,7 +21,7 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/tabs/default.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/tabs/default.html#body{} [html]
+<<< @/public/examples/components/tabs/default.html#body{} [winduum]
 <<< @/../examples/src/pages/components/tabs/default.liquid#js{} [js]
 :::
 
@@ -34,7 +30,7 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/tabs/custom.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/tabs/custom.html#body{} [html]
+<<< @/public/examples/components/tabs/custom.html#body{} [winduum]
 <<< @/../examples/src/pages/components/tabs/custom.liquid#js{} [js]
 :::
 

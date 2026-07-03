@@ -3,11 +3,7 @@ Displays progress with native HTML5 tags `progress` or `meter`
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/progress" />
 
-### Usage
-
-```css
-@import "winduum/src/components/progress/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/progress" />
@@ -20,7 +16,7 @@ Displays progress with native HTML5 tags `progress` or `meter`
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/progress/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/progress/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/progress" />
@@ -34,8 +30,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/progress/colors.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/progress/colors.html#body{} [html]
-```vue
+<<< @/public/examples/components/progress/colors.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { UiProgress } from '@/components/progress'
 </script>
@@ -48,7 +44,7 @@ Follow instructions for individual framework usage below
     <UiProgress class="accent-warning" value="85" max="100"></UiProgress>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { UiProgress } from '@/components/progress'
 
 export function Example() {

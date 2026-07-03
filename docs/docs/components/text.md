@@ -3,11 +3,7 @@ Typographic defaults for common wysiwyg content. It's an alternative to [prose](
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/text" />
 
-### Usage
-
-```css
-@import "winduum/src/components/text/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/text" />
@@ -15,7 +11,7 @@ Typographic defaults for common wysiwyg content. It's an alternative to [prose](
 ### Props
 * <LinkGh name="default" path="components/text/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/text" />
@@ -29,8 +25,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/text.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/text/text.html#body{} [html]
-```vue
+<<< @/public/examples/components/text/text.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { UiText } from '@/components/text'
 </script>
@@ -50,7 +46,7 @@ Follow instructions for individual framework usage below
     </UiText>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { UiText } from '@/components/text'
 
 export function Example() {

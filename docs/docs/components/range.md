@@ -3,21 +3,7 @@ Accessible range slider that allows easy selection of a value by sliding a handl
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/range" />
 
-### Usage
-
-::: code-group
-```css
-@import "winduum/src/components/range/index.css" layer(utilities);
-```
-```js
-import { setValue } from 'winduum/src/components/range'
-
-const rangeSlider = document.querySelector('#rangeSlider')
-
-setValue(rangeSlider)
-rangeSlider.addEventListener('input', ({ currentTarget }) => setValue(currentTarget))
-```
-:::
+## Styles
 
 ### Variants
 * `default` <a href="https://github.com/winduum/winduum/blob/main/src/components/range/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
@@ -29,7 +15,7 @@ rangeSlider.addEventListener('input', ({ currentTarget }) => setValue(currentTar
 ### Tokens
 * `vertical` <a href="https://github.com/winduum/winduum/blob/main/src/components/range/vertical.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/range" />
@@ -45,9 +31,9 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/default.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/range/default.html#body{} [html]
+<<< @/public/examples/components/range/default.html#body{} [winduum]
 <<< @/../examples/src/pages/components/range/default.liquid#js{} [js]
-```vue
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Range } from '@/components/range'
 </script>
@@ -58,7 +44,7 @@ Follow instructions for individual framework usage below
     </Range>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Range } from '@/components/range'
 
 export function Example() {
@@ -76,7 +62,7 @@ export function Example() {
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/multi.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/range/multi.html#body{} [html]
+<<< @/public/examples/components/range/multi.html#body{} [winduum]
 <<< @/../examples/src/pages/components/range/multi.liquid#js{} [js]
 :::
 
@@ -86,7 +72,7 @@ export function Example() {
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/vertical.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/range/vertical.html#body{} [html]
+<<< @/public/examples/components/range/vertical.html#body{} [winduum]
 <<< @/../examples/src/pages/components/range/vertical.liquid#js{} [js]
 :::
 

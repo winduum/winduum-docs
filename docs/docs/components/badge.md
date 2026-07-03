@@ -3,11 +3,7 @@
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/badge" />
 
-### Usage
-
-```css
-@import "winduum/src/components/badge/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 
@@ -24,7 +20,7 @@
 * `square` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `circle` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/badge" />
@@ -38,8 +34,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/badge/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/badge/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Badge } from '@/components/badge'
 </script>
@@ -49,7 +45,7 @@ Follow instructions for individual framework usage below
   <Badge class="rounded-full">Badge</Badge>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Badge } from "@/components/badge"
 
 export function Example() {

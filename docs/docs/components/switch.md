@@ -2,11 +2,7 @@
 <br>
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/switch" />
 
-### Usage
-
-```css
-@import "winduum/src/components/switch/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/switch" />
@@ -17,7 +13,7 @@
 * <LinkGh name="default" path="components/switch/props" />
 * <LinkGh name="interactive" path="components/switch/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/switch" />
@@ -31,8 +27,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/switch/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/switch/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Switch } from '@/components/switch'
 </script>
@@ -44,7 +40,7 @@ Follow instructions for individual framework usage below
     </Switch>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Switch } from '@/components/switch'
 
 export function Example() {

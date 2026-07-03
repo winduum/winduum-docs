@@ -5,26 +5,7 @@ It's a pure CSS solution — the tooltip text comes from the `aria-label` attrib
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/tooltip" />
 
-## Usage
-
-::: code-group
-```css
-@import "winduum/src/components/tooltip/index.css" layer(utilities);
-```
-<<< @/public/examples/components/tooltip/basic.html#body{} [html]
-```vue
-<script setup>
-    import { Tooltip } from '@/components/tooltip'
-    import { Button } from '@/components/button'
-</script>
-
-<template>
-    <Tooltip aria-label="I am a tooltip!">
-        <Button>Tooltip</Button>
-    </Tooltip>
-</template>
-```
-:::
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/tooltip" />
@@ -38,7 +19,7 @@ It's a pure CSS solution — the tooltip text comes from the `aria-label` attrib
 * `tooltip-left`
 * `tooltip-right`
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/tooltip" />
@@ -51,5 +32,19 @@ Follow instructions for individual framework usage below
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/tooltip/basic.html"></iframe>
 
-<<< @/public/examples/components/tooltip/basic.html#body{}
+::: code-group
+<<< @/public/examples/components/tooltip/basic.html#body{} [winduum]
+```vue [winduum-vue]
+<script setup>
+    import { Tooltip } from '@/components/tooltip'
+    import { Button } from '@/components/button'
+</script>
+
+<template>
+    <Tooltip aria-label="I am a tooltip!">
+        <Button>Tooltip</Button>
+    </Tooltip>
+</template>
+```
+:::
 

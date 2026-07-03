@@ -3,15 +3,12 @@ Side-by-side comparison slider component.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/compare" />
 
-### Usage
+## Styles
 
-```css
-@import "winduum/src/components/compare/index.css" layer(utilities);
-```
 ### Variants
 * <LinkGh name="default" path="components/compare" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/compare" />
@@ -25,7 +22,7 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/compare/default.html" style="height: 420px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/compare/default.html#body{} [html]
+<<< @/public/examples/components/compare/default.html#body{} [winduum]
 <<< @/../examples/src/pages/components/compare/default.liquid#js{} [js]
 :::
 
@@ -34,7 +31,7 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/compare/text.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/compare/text.html#body{} [html]
+<<< @/public/examples/components/compare/text.html#body{} [winduum]
 <<< @/../examples/src/pages/components/compare/text.liquid#js{} [js]
 :::
 

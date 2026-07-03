@@ -3,11 +3,7 @@ For common heading styles that you can manage from one component across project.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/heading" />
 
-### Usage
-
-```css
-@import "winduum/src/components/heading/index.css" layer(utilities);
-```
+## Styles
 
 ### Props
 * <LinkGh name="default" path="components/heading/props" />
@@ -17,7 +13,7 @@ For common heading styles that you can manage from one component across project.
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/heading/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/heading/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/heading" />
@@ -31,8 +27,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/heading/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/heading/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/heading/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Heading } from '@/components/heading'
 </script>
@@ -41,7 +37,7 @@ Follow instructions for individual framework usage below
     <Heading>Heading</Heading>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Heading } from '@/components/heading'
 
 export function Example() {

@@ -3,11 +3,7 @@ Color supports `checkbox` and `radio` **input** types for displaying selected co
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/color" />
 
-### Usage
-
-```css
-@import "winduum/src/components/color/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/color" />
@@ -17,7 +13,7 @@ Color supports `checkbox` and `radio` **input** types for displaying selected co
 * <LinkGh name="default" path="components/color/props" />
 * <LinkGh name="interactive" path="components/color/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/color" />
@@ -31,8 +27,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/color/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/color/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/color/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Color } from '@/components/color'
 </script>
@@ -49,7 +45,7 @@ Follow instructions for individual framework usage below
     </Color>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Color } from "@/components/color"
 
 export function Example() {

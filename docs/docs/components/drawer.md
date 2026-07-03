@@ -2,7 +2,7 @@
 Provides a scroll drawer that uses native HTML5 `dialog` and CSS `scroll-snap` property.<br>
 Can be dismissed with touch gestures on touch devices.
 
-Since v3 the drawer is opened with native [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API)
+The drawer is opened with native [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API)
 (`command="show-modal"` / `command="request-close"`) and the scroll behavior is driven by the `Drawer` custom element from
 [winduum-elements](https://github.com/winduum/winduum-elements/tree/main/components/drawer)
 (or the [winduum-stimulus](https://github.com/winduum/winduum-stimulus/tree/main/components/drawer) controller).
@@ -10,14 +10,7 @@ Thanks to the `noscript` variant, the drawer degrades gracefully even without Ja
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
 
-### Usage
-::: code-group
-```css
-@import "winduum/src/components/drawer/index.css" layer(utilities);
-```
-<<< @/public/examples/components/drawer/left.html#body{} [html]
-<<< @/../examples/src/pages/components/drawer/left.liquid#js{} [js]
-:::
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/drawer" />
@@ -30,7 +23,7 @@ Thanks to the `noscript` variant, the drawer degrades gracefully even without Ja
 * <LinkGh name="default" path="components/drawer/props" />
 * <LinkGh name="content" path="components/drawer/props" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
@@ -53,7 +46,7 @@ Follow instructions for individual framework usage below
 </dialog>
 
 ::: code-group
-<<< @/public/examples/components/drawer/left.html#body{} [html]
+<<< @/public/examples/components/drawer/left.html#body{} [winduum]
 <<< @/../examples/src/pages/components/drawer/left.liquid#js{} [js]
 :::
 
@@ -71,7 +64,7 @@ Follow instructions for individual framework usage below
 </dialog>
 
 ::: code-group
-<<< @/public/examples/components/drawer/right.html#body{} [html]
+<<< @/public/examples/components/drawer/right.html#body{} [winduum]
 <<< @/../examples/src/pages/components/drawer/right.liquid#js{} [js]
 :::
 
@@ -90,7 +83,7 @@ Follow instructions for individual framework usage below
 </dialog>
 
 ::: code-group
-<<< @/public/examples/components/drawer/bottom.html#body{} [html]
+<<< @/public/examples/components/drawer/bottom.html#body{} [winduum]
 <<< @/../examples/src/pages/components/drawer/bottom.liquid#js{} [js]
 :::
 
@@ -108,7 +101,7 @@ Follow instructions for individual framework usage below
 </dialog>
 
 ::: code-group
-<<< @/public/examples/components/drawer/top.html#body{} [html]
+<<< @/public/examples/components/drawer/top.html#body{} [winduum]
 <<< @/../examples/src/pages/components/drawer/top.liquid#js{} [js]
 :::
 

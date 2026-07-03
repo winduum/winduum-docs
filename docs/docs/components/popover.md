@@ -1,41 +1,28 @@
 # Popover
 Popover can be used for dropdowns and other popovers when an element is clicked, focused or hovered.
-You have following types of trigger as an option:
+You have the following types of trigger as an option:
 * trigger on click with `command="toggle-popover"` and `commandfor`
 * trigger on hover/focus with the [`interestfor`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/interestfor) attribute (see the [Interest](/docs/variants/interest) variant)
 
-Since v3, popovers build entirely on the web platform — the `[popover]` attribute,
+Popovers are build entirely on the web platform — the `[popover]` attribute,
 [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API)
 (`command="toggle-popover"` / `show-popover` / `hide-popover`) and
 [CSS Anchor Positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning).
+
 No JavaScript is required in browsers with anchor positioning support.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/popover" />
 
-## Usage
+## Installation
+Follow instructions for individual framework usage below
 
-::: code-group
-```css
-@import "winduum/src/components/popover/index.css" layer(utilities);
-```
-<<< @/public/examples/components/popover/basic.html#body{} [html]
-```vue
-<script setup>
-    import { ref } from 'vue'
-    import { Popover, PopoverContent } from '@/components/popover'
-    import { Button } from '@/components/button'
-</script>
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/popover" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/popover" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/popover" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/popover" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/popover" />
 
-<template>
-    <Popover>
-        <Button>Open Popover</Button>
-        <PopoverContent>
-            Popover content
-        </PopoverContent>
-    </Popover>
-</template>
-```
-:::
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/popover" />
@@ -52,19 +39,9 @@ Positioning of `x-popover` is provided by the [Position](/docs/utilities/positio
 * `left` `left-start` `left-end`
 * `right` `right-start` `right-end`
 
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/popover" />
-* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/popover" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/popover" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/popover" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/popover" />
-
 ## Examples
 
-
-### Command
+### Basic Popover
 
 Native [Popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API) with
 [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API) —
@@ -73,28 +50,51 @@ the popover lives in the [top-layer](https://developer.mozilla.org/en-US/docs/Gl
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/basic.html"></iframe>
 
-<<< @/public/examples/components/popover/basic.html#body{}
+::: code-group
+<<< @/public/examples/components/popover/basic.html#body{} [winduum]
+```vue [winduum-vue]
 
-### Interest (hover)
+```
+```vue [winduum-react]
+
+```
+:::
+
+### Interest Popover
 
 Shows the popover when the user *shows interest* in the trigger — hover or keyboard focus — via the `interestfor` attribute.
 Use the [interestfor](https://www.npmjs.com/package/interestfor) polyfill for browsers without native support.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/hover.html"></iframe>
 
-<<< @/public/examples/components/popover/hover.html#body{}
+::: code-group
+<<< @/public/examples/components/popover/hover.html#body{} [winduum]
+```vue [winduum-vue]
+
+```
+```vue [winduum-react]
+
+```
+:::
 
 ### Positioning fallback
 
-Same as the command example, but wrapped in the `x-popover` custom element from
-[winduum-elements](https://github.com/winduum/winduum-elements/tree/main/components/popover), which applies
+Same as the above examples, but wrapped as component, which applies
 the floating-ui positioning fallback in browsers without CSS Anchor Positioning.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/api.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/popover/api.html#body{} [html]
-<<< @/../examples/src/pages/components/popover/api.liquid#js{} [js]
+<<< @/public/examples/components/popover/api.html#body{} [winduum-elements]
+```vue [winduum-stimulus]
+
+```
+```vue [winduum-vue]
+
+```
+```vue [winduum-react]
+
+```
 :::
 
 
