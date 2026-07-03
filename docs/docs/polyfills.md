@@ -42,6 +42,13 @@ The `interestfor` API lets controls declaratively show interest in another eleme
 
 The `timeline-trigger` feature is used by Winduum animation trigger utilities. Winduum includes an experimental `timelineTrigger` polyfill that observes elements with `timeline-trigger-*` classes and toggles `data-enter` based on the configured entry and exit thresholds.
 
+### Other support checks
+
+`winduum/supports` also exposes checks without a bundled polyfill — useful for your own fallbacks:
+
+* `supportsAnimationTimeline` — CSS [`animation-timeline`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline) scroll-driven animations
+* `supportsScrollInitialTarget` — CSS [`scroll-initial-target`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-initial-target), used internally by the [Drawer](/docs/components/drawer) helpers
+
 ## Winduum Elements
 
 `winduum-elements` builds on top of Webuum, so projects using it need to include Webuum polyfills too when targeting browsers without support for those APIs.

@@ -1,10 +1,12 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-    <div class="x-popover w-full flex flex-col items-center">
-        <button class="x-button" popovertargetaction="toggle" popovertarget="popover">Popover</button>
-        <div class="x-popover-content shadow dark:bg-body-secondary p-2" id="popover" popover="manual">
-            <input type="text" autofocus>
-        </div>
+    <div class="w-full flex flex-col items-center">
+        <button class="x-button" command="toggle-popover" commandfor="popoverApi" aria-controls="popoverApi">Popover</button>
+        <x-popover class="x-popover bottom my-2" popover id="popoverApi" data-placement="bottom">
+            <div class="x-popover-content shadow dark:bg-body-secondary p-2">
+                <input type="text">
+            </div>
+        </x-popover>
     </div>
 {% endblock %}
 
@@ -19,34 +21,14 @@
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    import { togglePopover, hidePopover } from 'winduum/src/components/popover'
+    import { Popover } from 'winduum-elements/components/popover/index.js'
 
-    const popoverActionElement = document?.querySelector('[popovertargetaction="toggle"]')
+    customElements.define('x-popover', Popover)
 
-    console.log(popoverActionElement)
-
-    popoverActionElement?.addEventListener('click', async (e) => {
-        e.preventDefault()
-
-        console.log('asd')
-
-        const currentTarget = e.currentTarget
-        await togglePopover(currentTarget)
-    })
-
-    // close on esc
-    window.addEventListener('keydown', ({ key }) => {
-        if (key === 'Escape') {
-            hidePopover(popoverActionElement)
-        }
-    })
-
-    // outside dismiss
-    window.addEventListener('click', ({ target }) => {
-        if (!window.popover?.contains(target) && !popoverActionElement?.isEqualNode(target) && popoverActionElement?.ariaExpanded === 'true') {
-            hidePopover(popoverActionElement)
-        }
-    })
+    if (!('command' in HTMLButtonElement.prototype)) {
+        const { apply } = await import('invokers-polyfill/fn')
+        apply()
+    }
 </script>
 <!-- #endregion js -->
 {% endblock %}

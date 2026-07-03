@@ -5,8 +5,15 @@ Default styles or rules applied to certain HTML elements or pseudo-elements. The
 
 <<< @/../node_modules/winduum/src/base/defaults.css
 
-For TailwindCSS `v3` there are few rules such as resetting borders
-and applying `--tw-content` to all pseudo-elements and zero border to all elements or pseudo-elements.
+There is also an extended set of opinionated defaults — block `svg`/`img`, icon styling based on `href` suffixes (`-outline`, `-solid`, ...), unstyled lists and native appearance resets for `number` and `search` inputs.
+
+[`src/base/defaults-extended.css`](https://github.com/winduum/winduum/blob/main/src/base/defaults-extended.css)
+
+```css
+@import "winduum/src/base/defaults-extended.css" layer(base);
+```
+
+For TailwindCSS there are few rules such as applying `--tw-content` to all pseudo-elements and zero border to all elements or pseudo-elements.
 
 [`tailwindcss/base/defaults.css`](https://github.com/winduum/winduum/blob/main/tailwindcss/base/defaults.css)
   

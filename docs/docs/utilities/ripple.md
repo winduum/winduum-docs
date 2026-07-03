@@ -1,6 +1,6 @@
 # Ripple
 
-A material ripple effect that is visible on clicking, you can use it with or without JS by adding `animation-ripple` class.
+A material ripple effect that is visible on clicking.
 Use with [Button](/docs/components/button) or any other component.
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/ripple" />
@@ -9,17 +9,13 @@ Use with [Button](/docs/components/button) or any other component.
 
 ::: code-group
 ```css
-@import "winduum/utilities/ripple.css" layer(utilities);
+@import "winduum/src/utilities/ripple/index.css" layer(utilities);
 ```
 ```js
 import { showRipple } from 'winduum/src/utilities/ripple'
 
-document.querySelector('#showRipple').addEventListener('click', (e) => {
-    showRipple({
-        element: e.currentTarget,
-        x: e.offsetX,
-        y: e.offsetY
-    })
+document.querySelector('#showRipple').addEventListener('click', (event) => {
+    showRipple(event)
 })
 ```
 ```vue
@@ -48,12 +44,8 @@ document.querySelector('#showRipple').addEventListener('click', (e) => {
 ```js
 import { showRipple } from 'winduum/src/utilities/ripple'
 
-document.querySelector('#showRipple').addEventListener('click', (e) => {
-    showRipple({
-        element: e.currentTarget,
-        x: e.offsetX,
-        y: e.offsetY
-    })
+document.querySelector('#showRipple').addEventListener('click', (event) => {
+    showRipple(event)
 })
 ```
 :::

@@ -1,5 +1,11 @@
 # Carousel
-Provides a scroll carousel that uses native CSS `scroll-snap` property.<br>
+Provides a scroll carousel that uses native CSS `scroll-snap` property.
+
+Since v3, the carousel is CSS-first — scrolling, snapping and even scroll markers can be handled by CSS alone
+(see [CSS scroll markers](https://developer.mozilla.org/en-US/docs/Web/CSS/::scroll-marker)).
+A small JavaScript layer adds prev/next buttons, marker state and scroll state — ready to use via
+[winduum-elements](https://github.com/winduum/winduum-elements/tree/main/components/carousel) or
+[winduum-stimulus](https://github.com/winduum/winduum-stimulus/tree/main/components/carousel).
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
 
@@ -46,183 +52,71 @@ Follow instructions for individual framework usage below
 
 ## Javascript API
 
-### `scrollTo`
+Low-level helpers used by `winduum-elements` and `winduum-stimulus` — you can use them to build your own integration.
 
-* **Type:** `(element: HTMLElement | Element, index: number) => void`
+### `scrollBy`
+
+* **Type:** `(element: HTMLElement, options: { direction?: number, vertical?: boolean, ratio?: number }) => void`
 * **Kind:** `sync`
 
-Scroll to a snap item by its index.
+Scrolls the carousel content by a portion of its visible size.
+`direction` is `1` (next) or `-1` (prev), `ratio` determines how much of the visible size is scrolled (default `0.85`).
 
-### `scrollNext`
+```js
+import { scrollBy } from 'winduum/src/components/carousel'
 
-* **Type:** `(element: HTMLElement | Element) => void`
+nextElement.addEventListener('click', () => scrollBy(contentElement, { direction: 1 }))
+prevElement.addEventListener('click', () => scrollBy(contentElement, { direction: -1 }))
+```
+
+### `toggleScrollState`
+
+* **Type:** `(element: HTMLElement, options: { prevElement?: HTMLButtonElement, nextElement?: HTMLButtonElement, vertical?: boolean }) => void`
 * **Kind:** `sync`
 
-Scroll to the next snap item.
+Updates the carousel scroll state — toggles `data-scroll-start`, `data-scroll-end` and `data-scroll-none`
+attributes on the content element and disables the prev/next buttons at the edges. Call it on `scroll`.
 
-### `scrollPrev`
+```js
+contentElement.addEventListener('scroll', () => {
+    toggleScrollState(contentElement, { prevElement, nextElement })
+})
+```
 
-* **Type:** `(element: HTMLElement | Element) => void`
+### `setCurrentAttribute`
+
+* **Type:** `(element: HTMLElement, index: number, attributeName?: string) => void`
 * **Kind:** `sync`
 
-Scroll to a previous snap item.
+Marks the child at `index` with the given attribute (default `aria-current`) and removes it from the previous one.
 
-### `getItemCount`
+### `setSnappedAttribute`
 
-* **Type:** `(element: HTMLElement | Element, scrollWidth: number, mathFloor: boolean) => number`
+* **Type:** `(element: HTMLElement, target: HTMLElement, markerGroupElement?: HTMLElement) => void`
 * **Kind:** `sync`
 
-Get the number of possible scrolls inside the carousel.
+Sets `data-snapped` on the currently snapped item and syncs `aria-current` in the marker group.
+Designed for the [`scrollsnapchanging`](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollsnapchanging_event) event.
 
+```js
+contentElement.addEventListener('scrollsnapchanging', (event) => {
+    setSnappedAttribute(contentElement, event.snapTargetInline ?? event.snapTargetBlock, markerGroupElement)
+})
+```
 
-### `observeCarousel`
+### `scrollToMarker`
 
-* **Type:** `(element: HTMLElement | Element, options?: ObserveCarouselOptions) => void`
+* **Type:** `(element: HTMLElement, target: HTMLElement, markerGroupElement: HTMLElement, scrollIntoViewOptions?: ScrollIntoViewOptions) => void`
 * **Kind:** `sync`
 
-Adds an observer for the carousel. Adds properties `_observer` and `_activeIndex` to the DOM of the carousel `element`.
-
-#### ObserveCarouselOptions
-
----
-
-##### visibleAttribute
-
-* **Type:** `string`
-* **Default:** `data-visible`
-
-A class that is added to the carousel items once they are visible.
-
----
-
-##### observerOptions
-
-* **Type:** `IntersectionObserverInit`
-* **Default:** `{ threshold: 0.5 }`
-
-Additional [options](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#options) confugration for the observer.
-
----
-
-### `dragCarousel`
-
-* **Type:** `(element: HTMLElement | Element, options?: DragCarouselOptions) => void`
-* **Kind:** `sync`
-
-Adds a mouse dragging capability to the carousel.
-
-#### DragCarouselOptions
-
----
-
-##### activeAttribute
-
-* **Type:** `string`
-* **Default:** `data-grabbing`
-
----
-
-### `paginationCarousel`
-
-* **Type:** `(element: HTMLElement | Element, options?: PaginationCarouselOptions) => void`
-* **Kind:** `sync`
-
-Inserts pagination indicators for the carousel to the desired element.
-
-#### PaginationCarouselOptions
-
----
-
-##### element
-
-* **Type:** `HTMLElement | Element`
-* **Default:** `undefined`
-
----
-
-##### itemContent
-
-* **Type:** `string`
-* **Default:** `<div aria-hidden="true"></div>`
-
----
-
-##### activeAttribute
-
-* **Type:** `string`
-* **Default:** `data-active`
-
----
-
-### `autoplayCarousel`
-
-* **Type:** `(element: HTMLElement | Element, options?: AutoplayCarouselOptions) => void`
-* **Kind:** `sync`
-
-Adds an autoplay for the carousel.
-
-#### AutoplayCarouselOptions
-
----
-
-##### delay
-
-* **Type:** `number`
-* **Default:** `4000`
-
-Delay in ms.
-
----
-
-##### pauseElements
-
-* **Type:** `HTMLElement[] | Element[]`
-* **Default:** `[]`
-
-Which elements should pause the autoplay upon hover.
-
----
-
-### `scrollCarousel`
-
-* **Type:** `(element: HTMLElement | Element, options?: ScrollCarouselOptions) => void`
-* **Kind:** `sync`
-
-A helper function that updates various carousel states upon scroll.
-
-#### ScrollCarouselOptions
-
----
-
-##### observe
-
-* **Type:** `ObserveCarouselOptions`
-* **Default:** `undefined`
-
----
-
-##### pagination
-
-* **Type:** `PaginationCarouselOptions`
-* **Default:** `{ activeClass: 'active' }`
-
----
-
-##### progressElement
-
-* **Type:** `HTMLProgressElement | Element`
-* **Default:** `undefined`
-
----
-
-##### counterMinElement
-
-* **Type:** `HTMLElement | Element`
-* **Default:** `undefined`
-
----
-
-##### counterMaxElement
-
-* **Type:** `HTMLElement | Element`
-* **Default:** `undefined`
+Scrolls the carousel to the item referenced by a marker (an anchor with `href="#slide-id"`) and updates the marker state.
+
+```js
+markerElements.forEach((marker) => {
+    marker.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        scrollToMarker(contentElement, event.target, markerGroupElement)
+    })
+})
+```

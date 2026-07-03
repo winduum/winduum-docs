@@ -9,6 +9,9 @@ For common heading styles that you can manage from one component across project.
 @import "winduum/src/components/heading/index.css" layer(utilities);
 ```
 
+### Props
+* <LinkGh name="default" path="components/heading/props" />
+
 ### Tokens
 
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/heading/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>

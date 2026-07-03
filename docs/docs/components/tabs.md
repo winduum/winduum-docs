@@ -9,7 +9,7 @@
 ```
 
 ### Variants
-* <LinkGh name="default" path="components/tabs" />
+* <LinkGh name="list" path="components/tabs" />
 
 ### Installation
 Follow instructions for individual framework usage below

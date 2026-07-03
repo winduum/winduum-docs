@@ -24,6 +24,7 @@ export default defineConfig({
         root: './src'
     }), htmlPlugin()],
     build: {
+        target: 'esnext',
         manifest: false,
         modulePreload: false,
         outDir: resolve(process.cwd(), '../docs/public/examples')

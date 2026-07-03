@@ -10,9 +10,12 @@
     "vituum:preview": "cd examples && npx vite preview"
   },
   "dependencies": {
+    "@webreflection/custom-elements-builtin": "^0.4.1",
+    "invokers-polyfill": "^1.0.3",
     "vitepress": "^2.0.0-alpha.16",
     "vitepress-plugin-llms": "^1.11.0",
     "vue": "^3.5.27",
-    "winduum": "^2.2.12"
+    "winduum": "^3.0.0-next.7",
+    "winduum-elements": "^0.0.11"
   }
 }

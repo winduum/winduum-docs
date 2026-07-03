@@ -3,11 +3,11 @@
 <details class="x-details group bg-body-secondary p-4 rounded">
     <summary class="w-fit flex">
         <label class="x-check">
-            <input type="checkbox" data-action="toggleDetails" autocomplete="off">
+            <input type="checkbox" data-action="toggleDetailsCheckbox" autocomplete="off">
             Fill more
         </label>
     </summary>
-    <div style="display: none">
+    <div>
         <div class="x-control max-w-96 mt-4">
             <input>
         </div>
@@ -31,13 +31,9 @@
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    import { toggleDetails } from 'winduum/src/components/details/index.js'
-
-    document.querySelectorAll('[data-action="toggleDetails"]').forEach(summary => {
-        summary.addEventListener('click', event => {
-            if (event.currentTarget.tagName !== 'INPUT') event.preventDefault()
-
-            toggleDetails(summary)
+    document.querySelectorAll('[data-action="toggleDetailsCheckbox"]').forEach(input => {
+        input.addEventListener('change', ({ target }) => {
+            target.closest('details').toggleAttribute('open', target.checked)
         })
     })
 </script>

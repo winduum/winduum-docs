@@ -65,12 +65,14 @@ Follow instructions for individual framework usage below
 
 ### setKeyboardStep
 
-* **Type:** `(element: HTMLInputElement, key: string, step?: number) => void`
+* **Type:** `(element: HTMLInputElement, key: string, step?: string) => void`
 * **Kind:** `sync`
+* **Default step:** `'10'`
 
 
 ### setMouseStep
 
-* **Type:** `(element: HTMLInputElement, step?: number) => void`
+* **Type:** `(element: HTMLInputElement, step?: string) => void`
 * **Kind:** `sync`
+* **Default step:** `'0.1'`
 

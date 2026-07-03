@@ -2,6 +2,12 @@
 Provides a scroll drawer that uses native HTML5 `dialog` and CSS `scroll-snap` property.<br>
 Can be dismissed with touch gestures on touch devices.
 
+Since v3 the drawer is opened with native [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API)
+(`command="show-modal"` / `command="request-close"`) and the scroll behavior is driven by the `Drawer` custom element from
+[winduum-elements](https://github.com/winduum/winduum-elements/tree/main/components/drawer)
+(or the [winduum-stimulus](https://github.com/winduum/winduum-stimulus/tree/main/components/drawer) controller).
+Thanks to the `noscript` variant, the drawer degrades gracefully even without JavaScript.
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
 
 ### Usage
@@ -16,6 +22,9 @@ Can be dismissed with touch gestures on touch devices.
 ### Variants
 * <LinkGh name="default" path="components/drawer" />
 * <LinkGh name="content" path="components/drawer" />
+* <LinkGh name="scroller" path="components/drawer" />
+* <LinkGh name="noscript" path="components/drawer" />
+* <LinkGh name="nosnap" path="components/drawer" />
 
 ### Props
 * <LinkGh name="default" path="components/drawer/props" />
@@ -105,95 +114,72 @@ Follow instructions for individual framework usage below
 
 ## Javascript API
 
+Low-level helpers used by `winduum-elements` and `winduum-stimulus` — you can use them to build your own integration.
+All functions take a `placement` of `'left' | 'right' | 'top' | 'bottom'` and operate on the **scroller** element (`.x-drawer-scroller`).
+
 ### `showDrawer`
 
-* **Type:** `(element: HTMLElement | Element, distance: number, direction: 'left' | 'top') => void`
-* **Kind:** `sync`
+* **Type:** `(element: HTMLElement, placement: 'left' | 'right' | 'top' | 'bottom') => Promise<void>`
+* **Kind:** `async`
 
-Scroll the drawer to open state.
+Scrolls the drawer scroller to its open state. Resets the scroll position first in browsers without
+[`scroll-initial-target`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-initial-target) support.
+Call it after `dialog.showModal()`.
+
+```js
+import { showDrawer } from 'winduum/src/components/drawer'
+
+dialogElement.showModal()
+await showDrawer(dialogElement.firstElementChild, 'left')
+```
 
 ### `closeDrawer`
 
-* **Type:** `(element: HTMLElement | Element, distance: number, direction: 'left' | 'top') => void`
+* **Type:** `(element: HTMLElement, placement: 'left' | 'right' | 'top' | 'bottom') => void`
 * **Kind:** `sync`
 
-Scroll the drawer to closed state.
-
-### `scrollInitDrawer`
-
-* **Type:** `(element: HTMLElement | Element, distance?: number, direction?: 'left' | 'top') => void`
-* **Kind:** `sync`
-
-Initializes the scroll position. Call this before `showDrawer` method.
+Scrolls the drawer scroller to its closed state — the dismiss animation is handled by scroll snapping,
+and the dialog is closed by `drawerObserver` once the content leaves the viewport.
 
 ### `scrollDrawer`
 
-* **Type:** `(element: HTMLElement | Element, options: ScrollDrawerOptions) => void`
+* **Type:** `(element: HTMLElement, placement: 'left' | 'right' | 'top' | 'bottom', reverse?: boolean, behavior?: 'auto' | 'instant') => void`
 * **Kind:** `sync`
 
-Sets correct classes and attributes upon scroll. Events `c-drawer:open` and `c-drawer:close` are dispatched upon opening or closing the drawer.
+Scrolls the drawer scroller to the open (or closed, with `reverse: true`) position.
 
-#### ScrollDrawerOptions
+### `drawerEvents`
 
----
+* **Type:** `(element: HTMLDialogElement, contentElement: HTMLElement, placement: 'left' | 'right' | 'top' | 'bottom', signal?: AbortSignal) => void`
+* **Kind:** `sync`
 
-##### snapClass
+Wires up dialog events — closes the drawer with the scroll animation on `cancel` (Esc) and on click outside the content.
 
-* **Type:** `string`
-* **Default:** `snap-x snap-mandatory`
+### `drawerObserver`
 
-A classes that are added for snapping purposes once the drawer is open.
+* **Type:** `(element: HTMLDialogElement, placement: 'left' | 'right' | 'top' | 'bottom') => IntersectionObserver`
+* **Kind:** `sync`
 
----
+Returns an `IntersectionObserver` that closes the dialog once the drawer content is scrolled/swiped out of view.
+Observe the content element with it.
 
-##### opacityProperty
+```js
+import { drawerObserver } from 'winduum/src/components/drawer'
 
-* **Type:** `string`
-* **Default:** `--tw-bg-opacity`
+const observer = drawerObserver(dialogElement, 'left')
+observer.observe(contentElement)
+```
 
-A CSS property for animating the background opacity upon scroll.
+### `drawerProperties`
 
----
+* **Type:** `(element: HTMLElement, placement: 'left' | 'right' | 'top' | 'bottom') => ['top' | 'left', number, number]`
+* **Kind:** `sync`
 
-##### opacityRatio
+Returns the scroll axis and the open/closed scroll distances for the given placement.
 
-* **Type:** `number`
-* **Default:** `1`
+### `isVerticalDrawer`
 
-You can either set `1` or `0` depending on the direction the drawer is opened. Right and bottom drawer should be set to `0`.
+* **Type:** `(placement: 'left' | 'right' | 'top' | 'bottom') => boolean`
+* **Kind:** `sync`
 
----
-
-##### scrollOpen
-
-* **Type:** `number`
-* **Default:** `0`
-
-Scroll position indicating that the drawer is opened.
-
----
-
-##### scrollClose
-
-* **Type:** `number`
-* **Default:** `element.scrollWidth - element.clientWidth`
-
-Scroll position indicating that the drawer is closed.
-
----
-
-##### scrollSize
-
-* **Type:** `number`
-* **Default:** `element.scrollWidth - element.clientWidth`
-
-Maximum scroll size of the drawer.
-
----
-
-##### scrollDirection
-
-* **Type:** `number`
-* **Default:** `element.scrollLeft`
-
-Current scroll position of the drawer.
+Returns `true` for `top` and `bottom` placements.

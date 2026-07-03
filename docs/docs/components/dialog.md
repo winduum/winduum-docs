@@ -1,6 +1,11 @@
 # Dialog
 Modal component that uses native HTML5 `dialog` functionality.
 
+Since v3, dialogs are fully controlled by the web platform — opening and closing is handled with
+native [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API)
+(`command` / `commandfor`) and the [`closedby`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby)
+attribute, so no JavaScript API is needed.
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/dialog" />
 
 ## Usage
@@ -43,6 +48,7 @@ document.querySelector('#showDialog').addEventListener('click', () => {
 ### Variants
 * <LinkGh name="default" path="components/dialog" />
 * <LinkGh name="content" path="components/dialog" />
+* <LinkGh name="drawer" path="components/dialog" />
 
 ### Props
 * <LinkGh name="default" path="components/dialog/props" />
@@ -59,10 +65,10 @@ Follow instructions for individual framework usage below
 ## Example
 
 <div class="iframe">
-    <button class="x-button" id="showDialog">Show dialog</button>
+    <button class="x-button" command="show-modal" commandfor="dialogExample">Show dialog</button>
 </div>
 
-<dialog class="x-dialog" id="dialogExample">
+<dialog class="x-dialog" id="dialogExample" closedby="any">
     <form class="x-dialog-content" method="dialog">
       <div class="x-heading">Example dialog</div>
       <br>
@@ -108,131 +114,21 @@ Follow instructions for individual framework usage below
     const dialogMain = ref()
 </script>
 
-<template>
-    <UiBtn @click="dialogMain.show()">Open Dialog</UiBtn>
-    <Dialog ref="dialogMain">
-        <DialogContent>
-            <Heading>Hello there!</Heading>
-            <Button variant="muted" class="accent-main" @click="dialogMain.close()">
-                Close me!
-            </Button>
-        </DialogContent>
-    </Dialog>
-</template>
-
+```html
+<button class="x-button" command="close" commandfor="dialogExample">Close dialog</button>
 ```
-:::
 
-## JavaScript API
+## JavaScript
 
-### `showDialog`
-
-* **Type:** `(selector:  HTMLDialogElement, options?: DefaultOptions) => Promise<void>`
-* **Kind:** `async`
-
-Shows an existing `<dialog>`. It takes a `selector` argument, which is a CSS selector that identifies the dialog DOM element to be displayed. It also takes an options argument, which is an object that specifies how the dialog should be displayed.
-
-The `closeDialog` event is sent upon closing with the `esc` key or clicking outside the dialog content window.
-
-#### Example
+There is no JavaScript API — dialogs use the native [`HTMLDialogElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement)
+interface. If you need to control a dialog programmatically, use the native methods directly
 
 ```js
-import { showDialog } from 'winduum/src/libraries/dialog'
-
-document.querySelector('#showDialog').addEventListener('click', async () => {
-    await showDialog(document.querySelector('#dialogElement'))
-})
-```
-<br>
-
-#### `DefaultOptions`
-
----
-
-##### remove
-
-* **Type:** `boolean`
-* **Default:** `true`
-
-A boolean that indicates whether the dialog should be removed from the DOM when it is closed.
-
----
-
-##### closable
-
-* **Type:** `boolean`
-* **Default:** `true`
-
-A boolean that indicates whenever is dialog closable by clicking outside or with `esc` key.
-
----
-
-##### modal
-
-* **Type:** `boolean`
-* **Default:** `true`
-
-Determines if the dialog is shown as modal on top-layer.
-
----
-
-##### openAttribute
-
-* **Type:** `string`
-* **Default:** `data-open`
-
-A string representing a data attribute that will be added when the dialog is fully visible.
-
----
-
-##### closedAttribute
-
-* **Type:** `string`
-* **Default:** `data-closed`
-
-A string representing a data attribute that will be added once the dialog starts closing.
-
----
-
-##### contentSelector
-
-* **Type:** `string`
-* **Default:** `.x-dialog-content`
-
-A string representing a CSS selector representing the dialog content
-
----
-
-##### scrollbarWidthProperty
-
-* **Type:** `string`
-* **Default:** `--default-scrollbar-width`
-
-A CSS property representing a scrollbar width, when dialog is shown the document scrollbar is hidden, this adds necessary padding.
-
----
-
-<br>
-
-### `closeDialog`
-
-* **Type:** `(selector:  HTMLDialogElement, options?: DefaultOptions) => Promise<void>`
-* **Kind:** `async`
-
-Closes an existing `<dialog>`.
-It takes a `selector` argument, which is a CSS selector that identifies the dialog DOM element.
-It also takes an `options` argument, which is an object that specifies how the dialog should be closed.
-
-When dialog closes it sends native `close` event you can listen to,
-additionally `x-dialog:close` event is sent when dialog animation starts. 
-
-#### Example
-
-```js
-import { closeDialog } from 'winduum/src/components/dialog'
-
-document.querySelector('#closeDialog').addEventListener('click', async () => {
-    await closeDialog(document.querySelector('#dialogElement'))
-})
+document.querySelector('#dialogExample').showModal()
+document.querySelector('#dialogExample').close()
 ```
 
+The `winduum/src/components/dialog` side-effect script additionally
+
+* closes an open dialog when clicking its backdrop, based on the `closedby` attribute (fallback for browsers without native `closedby` support)
+* keeps `--default-scrollbar-width` on `<html>` updated via a `ResizeObserver`, which the dialog CSS uses to compensate for the hidden page scrollbar

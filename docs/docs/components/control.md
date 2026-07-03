@@ -36,6 +36,7 @@ Follow instructions for individual framework usage below
 * <LinkGh name="color" path="components/control" />
 * <LinkGh name="select" path="components/control" />
 * <LinkGh name="select-multiple" path="components/control" />
+* <LinkGh name="select-picker" path="components/control" />
 * <LinkGh name="icon" path="components/control" />
 
 ### Props
@@ -43,6 +44,7 @@ Follow instructions for individual framework usage below
 * <LinkGh name="floating" path="components/control/props" />
 * <LinkGh name="color" path="components/control/props" />
 * <LinkGh name="select" path="components/control/props" />
+* <LinkGh name="select-picker" path="components/control/props" />
 * <LinkGh name="icon" path="components/control/props" />
 
 ##  Examples

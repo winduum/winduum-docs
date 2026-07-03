@@ -15,7 +15,7 @@ See [Trying Winduum Online](#trying-winduum-online) section below to see all pos
 ### npm
 
 ```shell
-npm i winduum
+npm i winduum@next
 ```
 
 ### TailwindCSS

@@ -1,4 +1,4 @@
-# Divide Gap
+# Dot
 Provides a new utility class `dot` for.. well dots!
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/dot.css" />

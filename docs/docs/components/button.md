@@ -10,8 +10,8 @@
 ```
 
 ### Variants
-* <LinkGh name="default" path="components/btn" />
-* <LinkGh name="interactive" path="components/btn" />
+* <LinkGh name="default" path="components/button" />
+* <LinkGh name="interactive" path="components/button" />
 
 ### Props
 * <LinkGh name="default" path="components/button/props" />
@@ -21,12 +21,13 @@
 * `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `muted` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `raised` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `ghosted` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `ghosted` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/ghosted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `square` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `circle` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `fill` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/hover-fill.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `fill` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/fill.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `spinner` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/spinner.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 
 ### Installation
