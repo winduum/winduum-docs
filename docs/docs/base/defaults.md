@@ -1,13 +1,17 @@
+---
+description: "Default styles or rules applied to certain HTML elements or pseudo-elements. These are very much optional."
+---
+
 # Defaults
 Default styles or rules applied to certain HTML elements or pseudo-elements. These are very much optional.
 
-[`src/base/defaults.css`](https://github.com/winduum/winduum/blob/main/src/base/defaults.css)
+[`src/base/defaults.css`](https://github.com/winduum/winduum/blob/next/src/base/defaults.css)
 
 <<< @/../node_modules/winduum/src/base/defaults.css
 
 There is also an extended set of opinionated defaults — block `svg`/`img`, icon styling based on `href` suffixes (`-outline`, `-solid`, ...), unstyled lists and native appearance resets for `number` and `search` inputs.
 
-[`src/base/defaults-extended.css`](https://github.com/winduum/winduum/blob/main/src/base/defaults-extended.css)
+[`src/base/defaults-extended.css`](https://github.com/winduum/winduum/blob/next/src/base/defaults-extended.css)
 
 ```css
 @import "winduum/src/base/defaults-extended.css" layer(base);

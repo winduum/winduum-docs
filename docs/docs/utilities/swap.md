@@ -1,7 +1,11 @@
+---
+description: "Provides a new utility class swap to toggle between elements."
+---
+
 # Swap
 Provides a new utility class `swap` to toggle between elements.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/swap" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/swap" />
 
 ## Examples
 
@@ -20,7 +24,7 @@ Provides a new utility class `swap` to toggle between elements.
 <<< @/../examples/src/pages/swap-aria.liquid#js{} [js]
 :::
 
-## Javascript API
+## JavaScript API
 
 There is also a `Swap` controller available in [winduum-stimulus](https://github.com/winduum/winduum-stimulus/tree/main/utilities/swap).
 

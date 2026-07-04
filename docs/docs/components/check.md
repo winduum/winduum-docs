@@ -1,14 +1,18 @@
+---
+description: "Check supports checkbox and radio input types"
+---
+
 # Check
 Check supports `checkbox` and `radio` **input** types
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/checkbox/basic.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/check" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/check" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/check" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/check" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/check" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/check" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/check" />

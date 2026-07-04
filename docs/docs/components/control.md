@@ -1,3 +1,7 @@
+---
+description: "Form control as it should be!"
+---
+
 # Control
 Form control as it should be! 
 
@@ -11,12 +15,12 @@ Other input types are supported in other components
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/basic.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/control" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/control" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/control" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/control" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/control" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/control" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/control" />

@@ -57,6 +57,19 @@ export default defineConfig({
     nav: [
       { text: 'Docs', link: '/docs/', activeMatch: '/docs/' },
       {
+        text: 'v3 (next)',
+        items: [
+          {
+            text: 'v2',
+            link: 'https://v2--winduum.netlify.app/'
+          },
+          {
+            text: 'v1',
+            link: 'https://v1--winduum.netlify.app/'
+          }
+        ]
+      },
+      {
         text: 'Resources',
         items: [
           {
@@ -67,15 +80,7 @@ export default defineConfig({
               },
               {
                 text: 'Changelog',
-                link: 'https://github.com/winduum/winduum/blob/main/CHANGELOG.md'
-              },
-              {
-                text: 'v2',
-                link: 'https://v2--winduum.netlify.app/'
-              },
-              {
-                text: 'v1',
-                link: 'https://v1--winduum.netlify.app/'
+                link: 'https://github.com/winduum/winduum/blob/next/CHANGELOG.md'
               }
             ]
           },
@@ -242,10 +247,6 @@ export default defineConfig({
               text: 'Label',
               link: '/docs/components/label'
             },
-            // {
-            //   text: 'Link',
-            //   link: '/docs/components/link'
-            // },
             {
               text: 'Marquee',
               link: '/docs/components/marquee'
@@ -319,10 +320,6 @@ export default defineConfig({
               text: 'Animation',
               link: '/docs/utilities/animation'
             },
-            // {
-            //   text: 'Container',
-            //   link: '/docs/utilities/container'
-            // },
             {
               text: 'Divide Gap',
               link: '/docs/utilities/divide-gap'

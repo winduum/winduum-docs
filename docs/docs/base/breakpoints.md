@@ -1,3 +1,7 @@
+---
+description: "Breakpoints in Winduum are very close to TailwindCSS, yet they have slightly different values and extended to cover all possible resolutions."
+---
+
 # Breakpoints
 
 Breakpoints in Winduum are very close to TailwindCSS, yet they have slightly different values and extended to cover all possible resolutions. 
@@ -15,7 +19,7 @@ You can use the same principles as defined in [Responsive design](https://tailwi
 * **xxl** - 2016px
 * **2xxl** - 2528px
 
-Breakpoints are defined in [`src/base/breakpoints.css`](https://github.com/winduum/winduum/blob/main/src/base/breakpoints.css) and in [`tailwindcss/theme/config/breakpoint.css`](https://github.com/winduum/winduum/blob/main/tailwindcss/theme/config/breakpoint.css)
+Breakpoints are defined in [`src/base/breakpoints.css`](https://github.com/winduum/winduum/blob/next/src/base/breakpoints.css) and in [`tailwindcss/theme/config/breakpoint.css`](https://github.com/winduum/winduum/blob/next/tailwindcss/theme/config/breakpoint.css)
 for TailwindCSS.
 
 You can also use the breakpoints inside CSS like this.

@@ -1,14 +1,18 @@
+---
+description: "Side-by-side comparison slider component."
+---
+
 # Compare
 Side-by-side comparison slider component.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/compare/default.html" style="height: 420px; margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/compare" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/compare" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/compare" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/compare" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/compare" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/compare" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/components/compare" />
@@ -47,7 +51,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/compare/text.html#body{} [winduum]
 :::
 
-## Javascript API
+## JavaScript API
 
 ### setPosition
 

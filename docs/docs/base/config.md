@@ -1,7 +1,12 @@
+---
+description: "Theme configuration via CSS custom properties — works with the TailwindCSS @theme at-rule or as plain CSS properties without TailwindCSS."
+---
+
 # CSS config
+Theme configuration via CSS custom properties — works with the TailwindCSS `@theme` at-rule or as plain CSS properties without TailwindCSS.
 
 ## Tailwind CSS
-The configuration is done via [@theme](https://github.com/winduum/winduum/tree/main/tailwindcss/theme/config) config.
+The configuration is done via [@theme](https://github.com/winduum/winduum/tree/next/tailwindcss/theme/config) config.
 
 ```css
 @import "tailwindcss/theme.css" layer(theme);
@@ -10,7 +15,7 @@ The configuration is done via [@theme](https://github.com/winduum/winduum/tree/m
 ```
 
 ### Without Tailwind CSS
-Each CSS property is defined in CSS in following path - [`src/theme/config/index.css`](https://github.com/winduum/winduum/blob/main/src/theme/config/index.css).
+Each CSS property is defined in CSS in following path - [`src/theme/config/index.css`](https://github.com/winduum/winduum/blob/next/src/theme/config/index.css).
 
 We are using naming conventions as Tailwind CSS, so you can use these properties with or without TailwindCSS.
 

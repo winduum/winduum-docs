@@ -1,15 +1,19 @@
+---
+description: "An accessible accordion or toggle component for details and summary elements."
+---
+
 # Details
 
 An accessible accordion or toggle component for `details` and `summary` elements.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/details/default.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/details" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/details" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/details" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/details" />
 
 ## Styles
 

@@ -1,14 +1,18 @@
+---
+description: "Small informative component."
+---
+
 # Info
 Small informative component.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/info/basic.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/info" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/info" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/info" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/info" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/info" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/info" />
 

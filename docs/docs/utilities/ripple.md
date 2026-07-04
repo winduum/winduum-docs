@@ -1,9 +1,13 @@
+---
+description: "A material ripple effect that is visible on clicking."
+---
+
 # Ripple
 
 A material ripple effect that is visible on clicking.
 Use with [Button](/docs/components/button) or any other component.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/ripple" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/ripple" />
 
 ## Usage
 
@@ -50,7 +54,7 @@ document.querySelector('#showRipple').addEventListener('click', (event) => {
 ```
 :::
 
-## Javascript API
+## JavaScript API
 
 ### showRipple
 

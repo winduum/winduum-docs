@@ -1,3 +1,7 @@
+---
+description: "Provides a scroll drawer that uses native HTML5 dialog and CSS scroll-snap property."
+---
+
 # Drawer
 Provides a scroll drawer that uses native HTML5 `dialog` and CSS `scroll-snap` property.<br>
 Can be dismissed with touch gestures on touch devices.
@@ -10,14 +14,22 @@ Thanks to the `noscript` variant, the drawer degrades gracefully even without Ja
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/left.html" style="height: 420px; margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/drawer" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/drawer" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/drawer" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/drawer" />
+
+::: info Browser support
+For older browsers cover [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API) with
+[invokers-polyfill](https://www.npmjs.com/package/invokers-polyfill) and — when using `winduum-elements` — customized built-in elements with
+[@webreflection/custom-elements-builtin](https://www.npmjs.com/package/@webreflection/custom-elements-builtin).
+Missing [`scroll-initial-target`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-initial-target) support is handled by the
+[`showDrawer`](#showdrawer) helper itself. See [Polyfills](/docs/polyfills).
+:::
 
 ## Styles
 
@@ -72,7 +84,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/drawer/top.html#body{} [winduum]
 :::
 
-## Javascript API
+## JavaScript API
 
 Low-level helpers used by `winduum-elements` and `winduum-stimulus` — you can use them to build your own integration.
 All functions take a `placement` of `'left' | 'right' | 'top' | 'bottom'` and operate on the **scroller** element (`.x-drawer-scroller`).

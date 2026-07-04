@@ -1,3 +1,7 @@
+---
+description: "Provides interest-target: and interest-source: variants for Interest Invokers — the interestfor attribute that lets controls declaratively show interest in…"
+---
+
 # Interest
 Provides `interest-target:` and `interest-source:` variants for [Interest Invokers](https://open-ui.org/components/interest-invokers.explainer/) — the `interestfor` attribute that lets controls declaratively show interest in another element (hover, focus or long-press), typically used for tooltips and hover cards.
 

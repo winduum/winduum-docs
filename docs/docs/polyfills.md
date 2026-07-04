@@ -1,3 +1,7 @@
+---
+description: "Winduum builds on modern web platform features. Some of them are still experimental or not supported in every browser, so polyfills are opt-in and can be…"
+---
+
 # Polyfills
 
 Winduum builds on modern web platform features. Some of them are still experimental or not supported in every browser, so polyfills are opt-in and can be lazy-loaded only when feature detection says they are needed.

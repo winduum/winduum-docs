@@ -1,3 +1,7 @@
+---
+description: "Provides a scroll carousel that uses native CSS scroll-snap property."
+---
+
 # Carousel
 Provides a scroll carousel that uses native CSS `scroll-snap` property.
 
@@ -10,12 +14,12 @@ without using `::scroll-button()`, `::scroll-marker-group` and `::scroll-marker`
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/full.html" style="height: 420px; margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/carousel" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/carousel" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/carousel" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/carousel" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/components/carousel" />
@@ -55,7 +59,7 @@ Follow instructions for individual framework usage below
 ```
 :::
 
-## Javascript API
+## JavaScript API
 
 Low-level helpers used by `winduum-elements` and `winduum-stimulus` — you can use them to build your own integration.
 

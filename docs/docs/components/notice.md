@@ -1,14 +1,18 @@
+---
+description: "Informative message component — use accent colors for success, error, warning or info states."
+---
+
 # Notice
 Informative message component — use accent colors for success, error, warning or info states.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/notice/success.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/notice" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/notice" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/notice" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/notice" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/notice" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/notice" />
 

@@ -1,3 +1,7 @@
+---
+description: "You can use Winduum with or without TailwindCSS."
+---
+
 # Install
 
 You can use Winduum with or without [TailwindCSS](https://tailwindcss.com/).
@@ -86,7 +90,7 @@ It's also recommended
 to use [Stylelint](https://stylelint.io/) with [stylelint-stylistic](https://github.com/stylelint-stylistic/stylelint-stylistic)
 to help add conventions to your styles.
 You can check
-and use basic `.stylelintrc` for Winduum [here](https://github.com/winduum/winduum/blob/main/.stylelintrc).
+and use basic `.stylelintrc` for Winduum [here](https://github.com/winduum/winduum/blob/next/stylelint.config.js).
 
 ```shell
 npm i stylelint stylelint-config-standard @stylistic/stylelint-config --save-dev
@@ -115,7 +119,7 @@ To leverage the full functionality of the framework, [TailwindCSS](#tailwindcss)
 
 ## Trying Winduum Online
 
-On [StackBlitz](https://stackblitz.com/) or [GitHub](https://github.com/winduum/winduum/tree/main/examples) with basic examples how to use it in [Vite](https://vitejs.dev/) and other frameworks.
+On [StackBlitz](https://stackblitz.com/) or [GitHub](https://github.com/winduum/winduum/tree/next/examples) with basic examples how to use it in [Vite](https://vitejs.dev/) and other frameworks.
 
 <style>
     #trying-winduum-online a {
@@ -144,24 +148,24 @@ On [StackBlitz](https://stackblitz.com/) or [GitHub](https://github.com/winduum/
 <div id="trying-winduum-online" style="display: flex; gap: 6rem; font-size: 1.125rem;">
 <div>
 
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite" target="_blank" rel="noreferrer">vite <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-vue" target="_blank" rel="noreferrer">vite + vue <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-react" target="_blank" rel="noreferrer">vite + react <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-svelte" target="_blank" rel="noreferrer">vite + svelte <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-solid" target="_blank" rel="noreferrer">vite + solid <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-qwik" target="_blank" rel="noreferrer">vite + qwik <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-lit" target="_blank" rel="noreferrer">vite + lit <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite" target="_blank" rel="noreferrer">vite <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-vue" target="_blank" rel="noreferrer">vite + vue <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-react" target="_blank" rel="noreferrer">vite + react <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-svelte" target="_blank" rel="noreferrer">vite + svelte <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-solid" target="_blank" rel="noreferrer">vite + solid <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-qwik" target="_blank" rel="noreferrer">vite + qwik <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-lit" target="_blank" rel="noreferrer">vite + lit <svg><use href="#icon-sb" /></svg></a>
 
 </div>
 
 <div>
 
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/astro" target="_blank" rel="noreferrer">astro <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/nuxt" target="_blank" rel="noreferrer">nuxt <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/next" target="_blank" rel="noreferrer">next <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/htmx" target="_blank" rel="noreferrer">htmx <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-sass" target="_blank" rel="noreferrer">vite + sass <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-less" target="_blank" rel="noreferrer">vite + less <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/astro" target="_blank" rel="noreferrer">astro <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/nuxt" target="_blank" rel="noreferrer">nuxt <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/next" target="_blank" rel="noreferrer">next <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/htmx" target="_blank" rel="noreferrer">htmx <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-sass" target="_blank" rel="noreferrer">vite + sass <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-less" target="_blank" rel="noreferrer">vite + less <svg><use href="#icon-sb" /></svg></a>
 
 </div>
 </div>

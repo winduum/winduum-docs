@@ -1,14 +1,18 @@
+---
+description: "Toggle switch built with a checkbox input type."
+---
+
 # Switch
 Toggle switch built with a `checkbox` **input** type.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/basic.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/switch" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/switch" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/switch" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/switch" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/switch" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/switch" />
 
@@ -74,3 +78,11 @@ export function Example() {
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/disabled.html"></iframe>
 
 <<< @/public/examples/components/switch/disabled.html#body{}
+
+### Validation
+
+Invalid state styling via the `invalid` variant — works with native HTML5 form validation, see [Form](/docs/components/form).
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/validation.html"></iframe>
+
+<<< @/public/examples/components/switch/validation.html#body{}

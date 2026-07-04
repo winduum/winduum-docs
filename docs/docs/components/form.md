@@ -1,3 +1,7 @@
+---
+description: "Provides a basic way to validate your form and show feedback to your users with native HTML5 form validation. Use attributes such as pattern to add other…"
+---
+
 # Form
 Provides a basic way to validate your form and show feedback to your users with native HTML5 form validation. Use attributes such as [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern) to add other validation rules.
 
@@ -10,12 +14,12 @@ For advance form of validation use [VeeValidate](https://vee-validate.logaretm.c
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/form.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/form" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/form" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/form" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/form" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/form" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/form" />
 
@@ -43,7 +47,7 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/form-field.html#body{} [winduum]
 :::
 
-## Javascript API
+## JavaScript API
 
 ### `validateForm`
 

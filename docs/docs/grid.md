@@ -1,3 +1,7 @@
+---
+description: "It's recommended to use the following TailwindCSS approaches to shape your layout"
+---
+
 # Grid
 
 It's recommended to use the following TailwindCSS approaches to shape your layout

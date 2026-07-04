@@ -1,3 +1,7 @@
+---
+description: "Popover can be used for dropdowns and other popovers when an element is clicked, focused or hovered."
+---
+
 # Popover
 Popover can be used for dropdowns and other popovers when an element is clicked, focused or hovered.
 You have the following types of trigger as an option:
@@ -13,16 +17,23 @@ No JavaScript is required in browsers with anchor positioning support.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/basic.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/popover" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/popover" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/popover" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/popover" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/popover" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/popover" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/popover" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/popover" />
+
+::: info Browser support
+The [Popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API) is Baseline. For older browsers cover
+[Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API) with [invokers-polyfill](https://www.npmjs.com/package/invokers-polyfill)
+and `interestfor` with the [interestfor polyfill](/docs/polyfills#interest-invokers).
+Where CSS Anchor Positioning isn't supported, use the [floating-ui fallback helpers](#javascript-api). See [Polyfills](/docs/polyfills).
+:::
 
 ## Styles
 

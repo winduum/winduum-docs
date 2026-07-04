@@ -1,14 +1,18 @@
+---
+description: "Accessible tabs to switch between panels of content."
+---
+
 # Tabs
 Accessible tabs to switch between panels of content.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/tabs/default.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/tabs" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/tabs" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/tabs" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/tabs" />
 
@@ -41,7 +45,11 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/tabs/custom.html#body{} [winduum]
 :::
 
-## Javascript API
+## Accessibility
+
+Tabs follow the [ARIA tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) — triggers use `role="tab"` with `aria-controls` and `aria-selected` inside a `role="tablist"` wrapper, panels use `role="tabpanel"` with `aria-labelledby`. The [`toggleTab`](#toggletab) helper keeps `aria-selected` and `aria-hidden` in sync when switching tabs.
+
+## JavaScript API
 
 ### `toggleTab`
 

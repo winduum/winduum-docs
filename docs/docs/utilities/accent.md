@@ -1,3 +1,7 @@
+---
+description: "Provides a new TailwindCSS utility class accent which extends Accent utility classe."
+---
+
 # Accent
 Provides a new TailwindCSS utility class `accent` which extends [Accent](https://tailwindcss.com/docs/accent) utility classe.
 

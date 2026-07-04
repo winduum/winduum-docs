@@ -1,3 +1,7 @@
+---
+description: "Provides a hocus: variant — a shortcut that applies styles on both hover and focus-visible, so you don't have to repeat every interactive style twice."
+---
+
 # Hocus
 Provides a `hocus:` variant — a shortcut that applies styles on both `hover` and `focus-visible`, so you don't have to repeat every interactive style twice.
 

@@ -1,3 +1,7 @@
+---
+description: "Utilities that extend TailwindCSS grid with two additions:"
+---
+
 # Grid
 Utilities that extend TailwindCSS [grid](https://tailwindcss.com/docs/grid-template-columns) with two additions:
 

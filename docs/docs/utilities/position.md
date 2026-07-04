@@ -1,3 +1,7 @@
+---
+description: "Utilities for positioning elements with CSS Anchor Positioning — each utility sets the position-area property together with position-try-fallbacks, so the…"
+---
+
 # Position
 Utilities for positioning elements with [CSS Anchor Positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning) — each utility sets the `position-area` property together with `position-try-fallbacks`, so the element automatically flips to the other side when there is not enough space in the viewport.
 

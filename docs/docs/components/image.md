@@ -1,14 +1,18 @@
+---
+description: "Default constrains for media elements such as img, video, iframe, object or svg"
+---
+
 # Image
 Default constrains for media elements such as `img`, `video`, `iframe`, `object` or `svg`
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/image/ratio.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/image" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/image" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/image" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/image" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/image" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/image" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/image" />

@@ -1,8 +1,16 @@
+---
+description: "Provides a utility class for the View Transition API — view-transition-main sets view-transition-name: main, so the element transitions independently from…"
+---
+
 # View Transition
 Provides a utility class for the [View Transition API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API) — `view-transition-main` sets `view-transition-name: main`, so the element transitions independently from the rest of the page.
 
 ### Dependencies
 * [tailwindcss](https://tailwindcss.com/) (TailwindCSS @utility)
+
+::: info Browser support
+View transitions are progressive enhancement — browsers without support navigate without the animation, nothing breaks.
+:::
 
 ## TailwindCSS
 Include CSS file with the `@utility` at-rule.

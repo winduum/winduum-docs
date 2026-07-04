@@ -1,3 +1,7 @@
+---
+description: "Provides variants for scroll-state container queries — style elements based on the scroll state of their container: whether it can be scrolled, has been…"
+---
+
 # Scroll State
 Provides variants for [scroll-state container queries](https://developer.chrome.com/blog/css-scroll-state-queries) — style elements based on the scroll state of their container: whether it can be scrolled, has been scrolled, an item is snapped, or a sticky element is stuck.
 
@@ -12,6 +16,10 @@ Available variant groups:
 
 ### Dependencies
 * [tailwindcss](https://tailwindcss.com/) (TailwindCSS @variant)
+
+::: info Browser support
+Scroll-state container queries are a recent addition to the platform — browsers without support simply ignore the queried styles, so use these variants as progressive enhancement.
+:::
 
 ## TailwindCSS
 Include CSS file with the `@variant` at-rule.

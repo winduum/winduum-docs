@@ -1,3 +1,7 @@
+---
+description: "Modal component that uses native HTML5 dialog functionality."
+---
+
 # Dialog
 Modal component that uses native HTML5 `dialog` functionality.
 
@@ -8,14 +12,21 @@ attribute, so no JavaScript API is needed.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/dialog/basic.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/dialog" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/dialog" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/dialog" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/dialog" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/dialog" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/dialog" />
+
+::: info Browser support
+The `dialog` element is Baseline. For older browsers cover
+[Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API) with [invokers-polyfill](https://www.npmjs.com/package/invokers-polyfill) —
+the [`closedby`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute is covered by the
+[side-effect script](#javascript) below. See [Polyfills](/docs/polyfills).
+:::
 
 ## Styles
 
@@ -64,6 +75,10 @@ Follow instructions for individual framework usage below
 
 ```
 :::
+
+## Accessibility
+
+The native `dialog` element provides accessibility out of the box — `showModal()` moves focus into the dialog, makes the rest of the page inert, closes on <kbd>Esc</kbd> and returns focus to the trigger on close. Light-dismiss behavior is controlled declaratively with the `closedby` attribute.
 
 ## JavaScript
 

@@ -1,3 +1,7 @@
+---
+description: "Overrides the default TailwindCSS dark mode variant to be class-based instead of media query based. The dark: variant applies to elements with the .dark…"
+---
+
 # Dark
 Overrides the default TailwindCSS [dark mode](https://tailwindcss.com/docs/dark-mode) variant to be class-based instead of media query based. The `dark:` variant applies to elements with the `.dark` class and all their descendants, so dark mode can be toggled manually — typically by adding the class to the `<html>` element.
 

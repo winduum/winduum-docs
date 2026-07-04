@@ -1,3 +1,7 @@
+---
+description: "A set of utilities for working with CSS animations. Instead of predefined animation classes, Winduum lets you compose animations from small building blocks:"
+---
+
 # Animation
 A set of utilities for working with CSS animations. Instead of predefined animation classes, Winduum lets you compose animations from small building blocks:
 
@@ -104,6 +108,10 @@ Available utilities:
 ## Animation Timeline
 Utilities for [scroll-driven animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations) — `animation-timeline`, `animation-range`, `scroll-timeline`, `view-timeline` and `timeline-scope` properties.
 
+::: info Browser support
+Use the `supportsAnimationTimeline` check from `winduum/supports` to provide your own fallback in browsers without scroll-driven animations — see [Polyfills](/docs/polyfills#other-support-checks).
+:::
+
 <ViewSourceGh path="tailwindcss/utilities/animation-timeline.css" />
 
 ```css
@@ -148,6 +156,10 @@ or with a named timeline
 
 ## Animation Trigger
 Utilities for [`animation-trigger`](https://developer.chrome.com/blog/animation-trigger) and `timeline-trigger` properties, allowing you to play animations when an element enters the viewport.
+
+::: info Browser support
+`animation-trigger` is experimental — Winduum ships a [`timelineTrigger` polyfill](/docs/polyfills#timeline-trigger) that covers the `timeline-trigger-*` utilities in browsers without support.
+:::
 
 <ViewSourceGh path="tailwindcss/utilities/animation-trigger.css" />
 

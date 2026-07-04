@@ -1,14 +1,18 @@
+---
+description: "Small labelling component to highlight statuses, counts or categories."
+---
+
 # Badge
 Small labelling component to highlight statuses, counts or categories.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/basic.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/badge" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/badge" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/badge" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/badge" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/badge" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/badge" />
 
@@ -22,12 +26,12 @@ Follow instructions for individual framework usage below
 * <LinkGh name="default" path="components/badge/props" />
 
 ### Tokens
-* `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `muted` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `square` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `circle` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `bordered` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `muted` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `square` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `circle` <a href="https://github.com/winduum/winduum/blob/next/src/components/badge/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ## Examples
 

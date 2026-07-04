@@ -1,3 +1,7 @@
+---
+description: "Provides a link utility class that adds a smooth color transition on hover and focus to interactive elements. It only applies to elements that are actually…"
+---
+
 # Link
 Provides a `link` utility class that adds a smooth color transition on hover and focus to interactive elements. It only applies to elements that are actually interactive — links, enabled buttons and elements with `role="button"` — so it's safe to use on a wrapper class.
 
