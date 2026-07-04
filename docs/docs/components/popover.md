@@ -99,7 +99,6 @@ the floating-ui positioning fallback in browsers without CSS Anchor Positioning.
 ```
 :::
 
-
 ## JavaScript API
 
 The core popover component needs no JavaScript — use the native

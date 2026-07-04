@@ -2,17 +2,19 @@
 
 An accessible accordion or toggle component for `details` and `summary` elements.
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/details/default.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/details" />
-
-## Styles
-
-### Variants
-* <LinkGh name="default" path="components/details" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/details" />
+
+## Styles
+
+### Variants
+* <LinkGh name="default" path="components/details" />
 
 ## Examples
 
@@ -20,7 +22,9 @@ Follow instructions for individual framework usage below
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/details/default.html"></iframe>
 
-<<< @/public/examples/components/details/default.html#body{}
+::: code-group
+<<< @/public/examples/components/details/default.html#body{} [winduum]
+:::
 
 ### Checkbox
 
@@ -30,7 +34,6 @@ You can also control details with a checkbox inside `summary` — only a tiny in
 
 ::: code-group
 <<< @/public/examples/components/details/checkbox.html#body{} [winduum]
-<<< @/../examples/src/pages/components/details/checkbox.liquid#js{} [js]
 :::
 
 ### Accordion

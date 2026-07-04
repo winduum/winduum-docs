@@ -1,7 +1,18 @@
 # Range
 Accessible range slider that allows easy selection of a value by sliding a handle.
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/default.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/range" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/range" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/range" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/range" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/range" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/range" />
 
 ## Styles
 
@@ -15,15 +26,6 @@ Accessible range slider that allows easy selection of a value by sliding a handl
 ### Tokens
 * `vertical` <a href="https://github.com/winduum/winduum/blob/main/src/components/range/vertical.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-## Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/range" />
-* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/range" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/range" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/range" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/range" />
-
 ## Examples
 
 ### Default
@@ -32,7 +34,6 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/range/default.html#body{} [winduum]
-<<< @/../examples/src/pages/components/range/default.liquid#js{} [js]
 ```vue [winduum-vue]
 <script setup lang="ts">
     import { Range } from '@/components/range'
@@ -63,9 +64,7 @@ export function Example() {
 
 ::: code-group
 <<< @/public/examples/components/range/multi.html#body{} [winduum]
-<<< @/../examples/src/pages/components/range/multi.liquid#js{} [js]
 :::
-
 
 ### Vertical
 
@@ -73,7 +72,6 @@ export function Example() {
 
 ::: code-group
 <<< @/public/examples/components/range/vertical.html#body{} [winduum]
-<<< @/../examples/src/pages/components/range/vertical.liquid#js{} [js]
 :::
 
 ## Javascript API

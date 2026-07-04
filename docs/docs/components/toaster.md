@@ -5,7 +5,16 @@ The toaster uses the [Popover API](https://developer.mozilla.org/en-US/docs/Web/
 (`popover="manual"`) so toasts always appear in the [top-layer](https://developer.mozilla.org/en-US/docs/Glossary/Top_layer) —
 even above open dialogs. Use `toasterObserver` to show/hide the toaster popover automatically as toasts are added and removed.
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/toaster/basic.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/toaster" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/toaster" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/toaster" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/toaster" />
 
 ## Styles
 
@@ -15,21 +24,21 @@ even above open dialogs. Use `toasterObserver` to show/hide the toaster popover 
 ### Props
 * <LinkGh name="default" path="components/toaster/props" />
 
-## Installation
-Follow instructions for individual framework usage below
+## Examples
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/toaster" />
-* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/toaster" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/toaster" />
+### Basic
 
-## Example
+The toaster lives at the end of your `<body>` — toasts are inserted into it and the popover shows/hides automatically via `toasterObserver`.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/toaster/basic.html"></iframe>
 
 ::: code-group
-```html [winduum]
-<body>
-    <!-- your html !-->
-    <ol class="x-toaster items-end" popover="manual"></ol>
-</body>
+<<< @/public/examples/components/toaster/basic.html#body{} [winduum]
+```html [winduum-elements]
+
+```
+```html [winduum-stimulus]
+
 ```
 :::
 

@@ -1,8 +1,16 @@
 # Badge
+Small labelling component to highlight statuses, counts or categories.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/basic.html" style="margin: 1.5rem 0"></iframe>
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/badge" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/badge" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/badge" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/badge" />
 
 ## Styles
 
@@ -20,13 +28,6 @@
 * `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `square` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `circle` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-
-## Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/badge" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/badge" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/badge" />
 
 ## Examples
 

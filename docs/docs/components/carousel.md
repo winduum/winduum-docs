@@ -12,12 +12,6 @@ without using `::scroll-button()`, `::scroll-marker-group` and `::scroll-marker`
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
 
-## Styles
-
-### Variants
-* <LinkGh name="default" path="components/carousel" />
-* <LinkGh name="content" path="components/carousel" />
-
 ## Installation
 Follow instructions for individual framework usage below
 
@@ -26,6 +20,12 @@ Follow instructions for individual framework usage below
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/carousel" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/components/carousel" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/main/components/carousel" />
+
+## Styles
+
+### Variants
+* <LinkGh name="default" path="components/carousel" />
+* <LinkGh name="content" path="components/carousel" />
 
 ## Examples
 
@@ -54,7 +54,6 @@ Follow instructions for individual framework usage below
 ```jsx [winduum-react]
 ```
 :::
-
 
 ## Javascript API
 

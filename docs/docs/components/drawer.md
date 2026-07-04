@@ -8,7 +8,16 @@ The drawer is opened with native [Invoker Commands](https://developer.mozilla.or
 (or the [winduum-stimulus](https://github.com/winduum/winduum-stimulus/tree/main/components/drawer) controller).
 Thanks to the `noscript` variant, the drawer degrades gracefully even without JavaScript.
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/left.html" style="height: 420px; margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/drawer" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/drawer" />
 
 ## Styles
 
@@ -23,86 +32,44 @@ Thanks to the `noscript` variant, the drawer degrades gracefully even without Ja
 * <LinkGh name="default" path="components/drawer/props" />
 * <LinkGh name="content" path="components/drawer/props" />
 
-## Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
-* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/drawer" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/drawer" />
-
 ## Examples
 
 ### Left
 
-<div class="iframe">
-    <button class="x-button" id="showDrawerLeftElement">Show left drawer</button>
-</div>
-
-<dialog class="x-drawer" id="drawerLeftElement" inert>
-    <div class="x-drawer-content p-6" style="max-width: 24rem; border-right: 1px solid var(--color-body-secondary);">
-        <div>Drawer content</div>
-        <button class="x-button muted mt-4" id="closeDrawerLeftElement">Close drawer</button>
-    </div>
-</dialog>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/left.html" style="height: 420px"></iframe>
 
 ::: code-group
 <<< @/public/examples/components/drawer/left.html#body{} [winduum]
-<<< @/../examples/src/pages/components/drawer/left.liquid#js{} [js]
+```html [winduum-elements]
+
+```
+```html [winduum-stimulus]
+
+```
 :::
 
 ### Right
 
-<div class="iframe">
-    <button class="x-button" id="showDrawerRightElement">Show right drawer</button>
-</div>
-
-<dialog class="x-drawer after:-order-last" id="drawerRightElement" inert>
-    <div class="x-drawer-content p-6" style="max-width: 24rem; border-left: 1px solid var(--color-body-secondary);">
-        <div>Drawer content</div>
-        <button class="x-button muted mt-4" id="closeDrawerRightElement">Close drawer</button>
-    </div>
-</dialog>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/right.html" style="height: 420px"></iframe>
 
 ::: code-group
 <<< @/public/examples/components/drawer/right.html#body{} [winduum]
-<<< @/../examples/src/pages/components/drawer/right.liquid#js{} [js]
 :::
-
 
 ### Bottom
 
-<div class="iframe">
-    <button class="x-button" id="showDrawerBottomElement">Show bottom drawer</button>
-</div>
-
-<dialog class="x-drawer flex flex-col after:-order-last" id="drawerBottomElement" inert>
-    <div class="x-drawer-content p-6" style="max-height: 24rem; border-top: 1px solid var(--color-body-secondary);">
-        <div>Drawer content</div> 
-        <button class="x-button muted mt-4" id="closeDrawerBottomElement">Close drawer</button>
-    </div>
-</dialog>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/bottom.html" style="height: 420px"></iframe>
 
 ::: code-group
 <<< @/public/examples/components/drawer/bottom.html#body{} [winduum]
-<<< @/../examples/src/pages/components/drawer/bottom.liquid#js{} [js]
 :::
 
 ### Top
 
-<div class="iframe">
-    <button class="x-button" id="showDrawerTopElement">Show top drawer</button>
-</div>
-
-<dialog class="x-drawer flex flex-col" id="drawerTopElement" inert>
-    <div class="x-drawer-content p-6" style="max-height: 24rem; border-bottom: 1px solid var(--color-body-secondary);">
-        <div>Drawer content</div>
-        <button class="x-button muted mt-4" id="closeDrawerTopElement">Close drawer</button>
-    </div>
-</dialog>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/top.html" style="height: 420px"></iframe>
 
 ::: code-group
 <<< @/public/examples/components/drawer/top.html#body{} [winduum]
-<<< @/../examples/src/pages/components/drawer/top.liquid#js{} [js]
 :::
 
 ## Javascript API

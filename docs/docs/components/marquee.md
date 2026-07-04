@@ -2,7 +2,14 @@
 
 Marquee creates an infinite horizontal loop for logos, partners or other repeated items. It is CSS-only and positions each child on the same motion path using sibling count and sibling index variables.
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/marquee/default.html" style="height: 8rem; margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/marquee" />
+
+## Installation
+Follow instructions for individual framework usage below.
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/marquee" />
 
 ## Styles
 
@@ -25,18 +32,15 @@ You can import the pieces separately if you want to customize the props or keyfr
 * `--x-marquee-animation-timing-function` - animation timing function, defaults to `linear`
 * `--x-marquee-sibling-index` - item index, required as a fallback for browsers without `sibling-index()`
 
-## Installation
-Follow instructions for individual framework usage below.
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/marquee" />
-
 ## Examples
 
 ### Default
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/marquee/default.html" style="height: 8rem"></iframe>
 
-<<< @/public/examples/components/marquee/default.html#body{}
+::: code-group
+<<< @/public/examples/components/marquee/default.html#body{} [winduum]
+:::
 
 ### Reverse
 

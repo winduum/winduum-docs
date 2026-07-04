@@ -1,15 +1,9 @@
 # Image
 Default constrains for media elements such as `img`, `video`, `iframe`, `object` or `svg`
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/image/ratio.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/image" />
-
-## Styles
-
-### Variants
-* <LinkGh name="default" path="components/image" />
-
-### Tokens
-* <LinkGh name="avatar" path="components/image" />
 
 ## Installation
 Follow instructions for individual framework usage below
@@ -19,6 +13,14 @@ Follow instructions for individual framework usage below
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/image" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/image" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/image" />
+
+## Styles
+
+### Variants
+* <LinkGh name="default" path="components/image" />
+
+### Tokens
+* <LinkGh name="avatar" path="components/image" />
 
 ## Examples
 

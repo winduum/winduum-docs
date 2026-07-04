@@ -3,7 +3,16 @@ Tooltip can be used for a little info hint on hover or focus.
 
 It's a pure CSS solution — the tooltip text comes from the `aria-label` attribute and is rendered via the `::before` pseudo-element, so it stays accessible and needs no JavaScript. Placement is controlled with the `tooltip-*` tokens and appearance can be customized via the `--x-tooltip-*` props.
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/tooltip/basic.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/tooltip" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/tooltip" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/tooltip" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/tooltip" />
 
 ## Styles
 
@@ -18,13 +27,6 @@ It's a pure CSS solution — the tooltip text comes from the `aria-label` attrib
 * `tooltip-bottom`
 * `tooltip-left`
 * `tooltip-right`
-
-## Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/tooltip" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/tooltip" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/tooltip" />
 
 ## Examples
 
@@ -46,5 +48,7 @@ Follow instructions for individual framework usage below
     </Tooltip>
 </template>
 ```
-:::
+```jsx [winduum-react]
 
+```
+:::

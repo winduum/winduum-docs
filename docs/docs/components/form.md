@@ -8,6 +8,8 @@ Compatible with any reactive framework, but updates will not propagate to the vi
 For advance form of validation use [VeeValidate](https://vee-validate.logaretm.com/v4/), [React Hook Form](https://react-hook-form.com/) or others.
 :::
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/form.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/form" />
 
 ## Installation
@@ -25,9 +27,13 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/form.html#body{} [winduum]
-<<< @/../examples/src/pages/form.liquid#js{} [js]
-:::
+```html [winduum-elements]
 
+```
+```html [winduum-stimulus]
+
+```
+:::
 
 ### Field
 
@@ -35,9 +41,7 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/form-field.html#body{} [winduum]
-<<< @/../examples/src/pages/form-field.liquid#js{} [js]
 :::
-
 
 ## Javascript API
 
@@ -111,7 +115,6 @@ The message text is resolved from `options.validationMessage`, the `data-validat
 on the invalid element, or the native
 [`validationMessage`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/validationMessage).
 
-
 #### ValidateFieldOptions
 
 ---
@@ -179,4 +182,3 @@ Wrapper element for the validation icon, created inside `iconParentSelector` whe
 ##### invalidIcon
 * **Type:** `string`
 * **Default:** `<svg class="text-error" data-validity aria-hidden="true"><use href="#heroicons-outline/exclamation-circle"></use></svg>`
-

@@ -1,7 +1,16 @@
 # Toast
 Let it bake and fly from your [Toaster](/docs/components/toaster)!
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/toast/basic.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/toast" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/toast" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/toast" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/toast" />
 
 ## Styles
 
@@ -13,52 +22,19 @@ Let it bake and fly from your [Toaster](/docs/components/toaster)!
 * <LinkGh name="default" path="components/toast/props" />
 * <LinkGh name="content" path="components/toast/props" />
 
-## Installation
-Follow instructions for individual framework usage below
+## Examples
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/toast" />
-* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/toast" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/toast" />
+### Basic
 
-## Example
-
-<div class="iframe">
-    <button class="x-button" id="showToast">Show toast</button>
-</div>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/toast/basic.html"></iframe>
 
 ::: code-group
-```html [winduum]
-<button class="x-button" id="insertToast">Show toast</button>
+<<< @/public/examples/components/toast/basic.html#body{} [winduum]
+```html [winduum-elements]
 
-<ol class="x-toaster items-end" popover="manual"></ol>
+```
+```html [winduum-stimulus]
 
-<script type="module">
-    import { showToast, closeToast } from 'winduum/src/components/toast'
-
-    document.querySelector('#insertToast').addEventListener('click', async () => {
-        const toaster = document.querySelector('.x-toaster')
-
-        toaster.insertAdjacentHTML('beforeend', `
-            <li class="x-toast" role="status" aria-live="assertive" aria-atomic="true">
-                <div class="x-toast-content">
-                    <div class="flex-col">
-                        <div class="x-title">Hello toast</div>
-                        <div class="x-text">Amazing toast</div>
-                    </div>
-                    <button class="x-button muted ml-auto" data-action="closeToast">Close</button>
-                </div>
-            </li>
-        `)
-
-        await showToast(toaster.children[toaster.children.length - 1])
-
-        const closeToastButton = document.querySelectorAll('[data-action="closeToast"]')[document.querySelectorAll('[data-action="closeToast"]').length - 1]
-
-        closeToastButton.addEventListener('click', ({ currentTarget }) => {
-            closeToast(currentTarget.closest('.x-toast'))
-        })
-    })
-</script>
 ```
 :::
 

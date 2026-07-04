@@ -1,11 +1,9 @@
 # Tabs
-<br>
+Accessible tabs to switch between panels of content.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/tabs/default.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
-
-## Styles
-
-### Variants
-* <LinkGh name="list" path="components/tabs" />
 
 ## Installation
 Follow instructions for individual framework usage below
@@ -13,6 +11,11 @@ Follow instructions for individual framework usage below
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/tabs" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/tabs" />
+
+## Styles
+
+### Variants
+* <LinkGh name="list" path="components/tabs" />
 
 ## Examples
 
@@ -22,7 +25,12 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/tabs/default.html#body{} [winduum]
-<<< @/../examples/src/pages/components/tabs/default.liquid#js{} [js]
+```html [winduum-elements]
+
+```
+```html [winduum-stimulus]
+
+```
 :::
 
 ### Custom
@@ -31,7 +39,6 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/tabs/custom.html#body{} [winduum]
-<<< @/../examples/src/pages/components/tabs/custom.liquid#js{} [js]
 :::
 
 ## Javascript API

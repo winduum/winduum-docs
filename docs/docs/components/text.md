@@ -1,7 +1,16 @@
 # Text
 Typographic defaults for common wysiwyg content. It's an alternative to [prose](https://tailwindcss.com/docs/typography-plugin).
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/text.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/text" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/text" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/text" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/text" />
 
 ## Styles
 
@@ -10,13 +19,6 @@ Typographic defaults for common wysiwyg content. It's an alternative to [prose](
 
 ### Props
 * <LinkGh name="default" path="components/text/props" />
-
-## Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/text" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/text" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/text" />
 
 ## Examples
 

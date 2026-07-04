@@ -1,6 +1,16 @@
 # Rating
-<br>
+Accessible star rating built with `radio` **input** types.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/rating.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/rating" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/rating" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/rating" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/rating" />
 
 ## Styles
 
@@ -10,13 +20,6 @@
 
 ### Props
 * <LinkGh name="default" path="components/rating/props" />
-
-## Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/rating" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/rating" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/rating" />
 
 ## Examples
 

@@ -1,12 +1,9 @@
 # Compare
 Side-by-side comparison slider component.
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/compare/default.html" style="height: 420px; margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/compare" />
-
-## Styles
-
-### Variants
-* <LinkGh name="default" path="components/compare" />
 
 ## Installation
 Follow instructions for individual framework usage below
@@ -17,6 +14,11 @@ Follow instructions for individual framework usage below
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/components/compare" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/main/components/compare" />
 
+## Styles
+
+### Variants
+* <LinkGh name="default" path="components/compare" />
+
 ## Examples
 
 ### Default
@@ -25,7 +27,11 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/compare/default.html#body{} [winduum]
-```vue [winduum-stimulus]
+```html [winduum-elements]
+
+```
+```html [winduum-stimulus]
+
 ```
 ```vue [winduum-vue]
 ```
@@ -39,7 +45,6 @@ Follow instructions for individual framework usage below
 
 ::: code-group
 <<< @/public/examples/components/compare/text.html#body{} [winduum]
-<<< @/../examples/src/pages/components/compare/text.liquid#js{} [js]
 :::
 
 ## Javascript API
@@ -73,10 +78,8 @@ Follow instructions for individual framework usage below
 * **Kind:** `sync`
 * **Default step:** `'10'`
 
-
 ### setMouseStep
 
 * **Type:** `(element: HTMLInputElement, step?: string) => void`
 * **Kind:** `sync`
 * **Default step:** `'0.1'`
-

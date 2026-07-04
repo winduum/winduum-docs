@@ -6,7 +6,16 @@ native [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invok
 (`command` / `commandfor`) and the [`closedby`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby)
 attribute, so no JavaScript API is needed.
 
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/dialog/basic.html" style="margin: 1.5rem 0"></iframe>
+
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/dialog" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/dialog" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/dialog" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/dialog" />
 
 ## Styles
 
@@ -19,47 +28,14 @@ attribute, so no JavaScript API is needed.
 * <LinkGh name="default" path="components/dialog/props" />
 * <LinkGh name="content" path="components/dialog/props" />
 
+## Examples
 
-## Installation
-Follow instructions for individual framework usage below
+### Basic
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/dialog" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/dialog" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/dialog" />
-
-## Example
-
-<div class="iframe">
-    <button class="x-button" command="show-modal" commandfor="dialogExample">Show dialog</button>
-</div>
-
-<dialog class="x-dialog" id="dialogExample" closedby="any">
-    <form class="x-dialog-content" method="dialog">
-      <div class="x-heading">Example dialog</div>
-      <br>
-      <div class="x-text">
-          <p>You can close this dialog with Esc, clicking outside, or by form submit</p>
-      </div>
-      <br>
-      <button class="x-button">Close dialog</button>
-    </form>
-</dialog>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/dialog/basic.html"></iframe>
 
 ::: code-group
-```html [winduum]
-<button class="x-button" command="show-modal" commandfor="dialogMain">
-    Open Dialog
-</button>
-<dialog class="x-dialog" id="dialogMain">
-    <div class="x-dialog-content">
-        <h1 class="x-heading">Hello there!</h1>
-        <button class="x-dialog muted accent-main" command="close" commandfor="dialogMain">
-            Close me!
-        </button>
-    </div>
-</dialog>
-```
-
+<<< @/public/examples/components/dialog/basic.html#body{} [winduum]
 ```vue [winduum-vue]
 <script setup>
   import { useId } from 'vue'
@@ -84,7 +60,8 @@ Follow instructions for individual framework usage below
   </Dialog>
 </template>
 ```
-```vue [winduum-react]
+```jsx [winduum-react]
+
 ```
 :::
 
