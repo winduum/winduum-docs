@@ -72,7 +72,30 @@ the [`closedby`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Ele
 </template>
 ```
 ```jsx [winduum-react]
+import { useId } from "react"
+import { Dialog, DialogContent } from "@/components/dialog"
+import { Heading } from "@/components/heading"
+import { Button } from "@/components/button"
 
+export function Example() {
+    const dialogMain = useId()
+
+    return (
+        <>
+            <Button command="show-modal" commandfor={dialogMain}>
+                Open Dialog
+            </Button>
+            <Dialog id={dialogMain}>
+                <DialogContent>
+                    <Heading>Hello there!</Heading>
+                    <Button className="muted accent-main" command="close" commandfor={dialogMain}>
+                        Close me!
+                    </Button>
+                </DialogContent>
+            </Dialog>
+        </>
+    )
+}
 ```
 :::
 
@@ -81,6 +104,12 @@ the [`closedby`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Ele
 The native `dialog` element provides accessibility out of the box — `showModal()` moves focus into the dialog, makes the rest of the page inert, closes on <kbd>Esc</kbd> and returns focus to the trigger on close. Light-dismiss behavior is controlled declaratively with the `closedby` attribute.
 
 ## JavaScript
+
+Always include the dialog side-effect script in every installation variant:
+
+```js
+import '/src/components/dialog/index.js'
+```
 
 There is no JavaScript API — dialogs use the native [`HTMLDialogElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement)
 interface. If you need to control a dialog programmatically, use the native methods directly

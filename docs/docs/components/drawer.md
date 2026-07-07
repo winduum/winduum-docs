@@ -22,6 +22,8 @@ Follow instructions for individual framework usage below
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/drawer" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/drawer" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/drawer" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/drawer" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/drawer" />
 
 ::: info Browser support
 For older browsers cover [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API) with
@@ -44,6 +46,10 @@ Missing [`scroll-initial-target`](https://developer.mozilla.org/en-US/docs/Web/C
 * <LinkGh name="default" path="components/drawer/props" />
 * <LinkGh name="content" path="components/drawer/props" />
 
+## Scripts
+The Drawer script connects the dialog open flow with drawer snapping, swipe dismissal
+and trigger `aria-expanded` state.
+
 ## Examples
 
 ### Left
@@ -51,12 +57,76 @@ Missing [`scroll-initial-target`](https://developer.mozilla.org/en-US/docs/Web/C
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/left.html" style="height: 420px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/drawer/left.html#body{} [winduum]
-```html [winduum-elements]
-
-```
+<<< @/public/examples/components/drawer/left.html#body{} [winduum-elements]
 ```html [winduum-stimulus]
+<div data-controller="invoke">
+  <button
+    class="x-button"
+    data-action="click->invoke#action"
+    data-invoke-action="x-drawer#show"
+    data-invoke-target="#drawerLeftElement"
+  >
+    Show drawer
+  </button>
+  <dialog class="x-drawer" id="drawerLeftElement" closedby="any" data-controller="x-drawer">
+    <div class="x-drawer-scroller snap-x snap-mandatory">
+      <nav class="x-drawer-content" data-x-drawer-target="content">
+        Drawer content
+        <button class="x-button muted" command="request-close" commandfor="drawerLeftElement">
+          Close drawer
+        </button>
+      </nav>
+    </div>
+  </dialog>
+</div>
+```
+```vue [winduum-vue]
+<script setup>
+  import { useId } from 'vue'
+  import { Drawer, DrawerContent, DrawerScroller } from '@/components/drawer'
+  import { Button } from '@/components/button'
+  
+  const drawerLeft = useId()
+</script>
 
+<template>
+  <Button command="show-modal" :commandfor="drawerLeft">Show drawer</Button>
+  <Drawer :id="drawerLeft" closedby="any">
+    <DrawerScroller class="snap-x snap-mandatory">
+      <DrawerContent as="nav">
+        Drawer content
+        <Button class="muted" command="request-close" :commandfor="drawerLeft">
+          Close drawer
+        </Button>
+      </DrawerContent>
+    </DrawerScroller>
+  </Drawer>
+</template>
+```
+```jsx [winduum-react]
+import { useId } from "react"
+import { Drawer, DrawerContent, DrawerScroller } from "@/components/drawer"
+import { Button } from "@/components/button"
+
+export function Example() {
+    const drawerLeft = useId()
+
+    return (
+        <>
+            <Button command="show-modal" commandfor={drawerLeft}>Show drawer</Button>
+            <Drawer id={drawerLeft} closedby="any">
+                <DrawerScroller className="snap-x snap-mandatory">
+                    <DrawerContent as="nav">
+                        Drawer content
+                        <Button className="muted" command="request-close" commandfor={drawerLeft}>
+                            Close drawer
+                        </Button>
+                    </DrawerContent>
+                </DrawerScroller>
+            </Drawer>
+        </>
+    )
+}
 ```
 :::
 
@@ -64,25 +134,35 @@ Missing [`scroll-initial-target`](https://developer.mozilla.org/en-US/docs/Web/C
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/right.html" style="height: 420px"></iframe>
 
-::: code-group
 <<< @/public/examples/components/drawer/right.html#body{} [winduum]
-:::
 
 ### Bottom
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/bottom.html" style="height: 420px"></iframe>
 
-::: code-group
 <<< @/public/examples/components/drawer/bottom.html#body{} [winduum]
-:::
 
 ### Top
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/top.html" style="height: 420px"></iframe>
 
-::: code-group
 <<< @/public/examples/components/drawer/top.html#body{} [winduum]
-:::
+
+### No Script
+
+Fully animated drawer when JavaScript is disabled.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/noscript.html" style="height: 420px"></iframe>
+
+<<< @/public/examples/components/drawer/noscript.html#body{} [winduum-elements]
+
+### No Snap
+
+CSS only drawer variant that does not need JavaScript and works the same way as No Script.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/nosnap.html" style="height: 420px"></iframe>
+
+<<< @/public/examples/components/drawer/nosnap.html#body{} [winduum-elements]
 
 ## JavaScript API
 

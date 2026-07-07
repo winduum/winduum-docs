@@ -34,10 +34,76 @@ Follow instructions for individual framework usage below
 ::: code-group
 <<< @/public/examples/components/table/default.html#body{} [winduum]
 ```vue [winduum-vue]
+<script setup lang="ts">
+    import { Table } from '@/components/table'
+</script>
 
+<template>
+    <Table class="border border-body-tertiary text-sm">
+        <table>
+            <thead class="whitespace-nowrap text-main-secondary font-bold">
+                <tr>
+                    <th>Full name</th>
+                    <th>Email</th>
+                    <th>Employment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Agata Henderson</td>
+                    <td>a.henderson@example.com</td>
+                    <td>Interpreter</td>
+                </tr>
+                <tr>
+                    <td>Tony Johnston</td>
+                    <td>t.johnston@example.com</td>
+                    <td>Singer</td>
+                </tr>
+                <tr>
+                    <td>Maya Walker</td>
+                    <td>m.walker@example.com</td>
+                    <td>Lawer</td>
+                </tr>
+            </tbody>
+        </table>
+    </Table>
+</template>
 ```
 ```jsx [winduum-react]
+import { Table } from '@/components/table'
 
+export function Example() {
+    return (
+        <Table className="border border-body-tertiary text-sm">
+            <table>
+                <thead className="whitespace-nowrap text-main-secondary font-bold">
+                    <tr>
+                        <th>Full name</th>
+                        <th>Email</th>
+                        <th>Employment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Agata Henderson</td>
+                        <td>a.henderson@example.com</td>
+                        <td>Interpreter</td>
+                    </tr>
+                    <tr>
+                        <td>Tony Johnston</td>
+                        <td>t.johnston@example.com</td>
+                        <td>Singer</td>
+                    </tr>
+                    <tr>
+                        <td>Maya Walker</td>
+                        <td>m.walker@example.com</td>
+                        <td>Lawer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </Table>
+    )
+}
 ```
 :::
 

@@ -26,7 +26,7 @@ Follow instructions for individual framework usage below
 
 ## Examples
 
-### Basic
+### Default
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/label.html"></iframe>
 

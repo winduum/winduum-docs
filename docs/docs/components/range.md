@@ -30,6 +30,10 @@ Follow instructions for individual framework usage below
 ### Tokens
 * `vertical` <a href="https://github.com/winduum/winduum/blob/next/src/components/range/vertical.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
+## Scripts
+The Range script updates track CSS variables and linked output values as the slider
+changes.
+
 ## Examples
 
 ### Default
@@ -37,7 +41,14 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/default.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/range/default.html#body{} [winduum]
+<<< @/public/examples/components/range/default.html#body{} [winduum-elements]
+```html [winduum-stimulus]
+<div class="x-range" data-controller="x-range">
+    <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single" data-x-range-target="start" data-action="input->x-range#setValue">
+</div>
+
+<output class="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price" id="single">10 000</output>
+```
 ```vue [winduum-vue]
 <script setup lang="ts">
     import { Range } from '@/components/range'
@@ -47,16 +58,22 @@ Follow instructions for individual framework usage below
     <Range>
         <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single">
     </Range>
+
+    <output class="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price" id="single">10 000</output>
 </template>
 ```
 ```jsx [winduum-react]
-import { Range } from '@/components/range'
+import { Range } from "@/components/range"
 
 export function Example() {
     return (
-        <Range>
-            <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single" />
-        </Range>
+        <>
+            <Range>
+                <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single" />
+            </Range>
+
+            <output className="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price" id="single">10 000</output>
+        </>
     )
 }
 ```
@@ -66,17 +83,13 @@ export function Example() {
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/multi.html"></iframe>
 
-::: code-group
 <<< @/public/examples/components/range/multi.html#body{} [winduum]
-:::
 
 ### Vertical
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/vertical.html"></iframe>
 
-::: code-group
 <<< @/public/examples/components/range/vertical.html#body{} [winduum]
-:::
 
 ## JavaScript API
 

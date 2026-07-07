@@ -49,6 +49,10 @@ Follow instructions for individual framework usage below
 * <LinkGh name="select-picker" path="components/control/props" />
 * <LinkGh name="icon" path="components/control/props" />
 
+## Scripts
+The Control script keeps `data-active` in sync with the control value and adds helper
+actions for steppers, picker opening and tel country code mirroring.
+
 ## Examples
 
 ### Basic

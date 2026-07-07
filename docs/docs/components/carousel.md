@@ -31,6 +31,10 @@ Follow instructions for individual framework usage below
 * <LinkGh name="default" path="components/carousel" />
 * <LinkGh name="content" path="components/carousel" />
 
+## Scripts
+The Carousel script wires marker and navigation controls and keeps the active snap
+and scroll edge state in sync.
+
 ## Examples
 
 ### Basic

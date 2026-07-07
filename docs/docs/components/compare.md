@@ -23,6 +23,10 @@ Follow instructions for individual framework usage below
 ### Variants
 * <LinkGh name="default" path="components/compare" />
 
+## Scripts
+The Compare script updates the comparison position and adjusts the range step for
+keyboard and pointer interaction.
+
 ## Examples
 
 ### Default

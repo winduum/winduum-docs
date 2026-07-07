@@ -5,7 +5,7 @@ description: "Let it bake and fly from your Toaster!"
 # Toast
 Let it bake and fly from your [Toaster](/docs/components/toaster)!
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/components/toast/basic.html" style="margin: 1.5rem 0"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/toast/default.html" style="margin: 1.5rem 0"></iframe>
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/toast" />
 
@@ -15,6 +15,8 @@ Follow instructions for individual framework usage below
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/toast" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/toast" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/toast" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/toast" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/toast" />
 
 ## Styles
 
@@ -26,19 +28,121 @@ Follow instructions for individual framework usage below
 * <LinkGh name="default" path="components/toast/props" />
 * <LinkGh name="content" path="components/toast/props" />
 
+## Scripts
+The Toast script runs enter/exit animations and handles optional auto-hide.
+
+::: info
+For `winduum-elements` and `winduum-stimulus`, toasts are expected to be appended into the Toaster from the backend, for example via ajax. You can also append the HTML manually, for example with `insertAdjacentHTML`.
+:::
+
 ## Examples
 
-### Basic
+### Default
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/components/toast/basic.html"></iframe>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/toast/default.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/toast/basic.html#body{} [winduum]
 ```html [winduum-elements]
-
+<x-toaster class="x-toaster items-end" popover="manual">
+    <x-toast class="x-toast" role="status" aria-live="assertive" aria-atomic="true">
+        <div class="x-toast-content">
+            <div class="flex-col">
+                <div class="x-title">Hello toast</div>
+                <div class="x-text">Amazing toast</div>
+            </div>
+            <button class="x-button muted ml-auto" command="--close">Close</button>
+        </div>
+    </x-toast>
+</x-toaster>
 ```
 ```html [winduum-stimulus]
+<ol class="x-toaster items-end" popover="manual" data-controller="x-toaster">
+    <li class="x-toast" role="status" aria-live="assertive" aria-atomic="true" data-controller="x-toast" data-action="x-toast:connect->x-toast#show">
+        <div class="x-toast-content">
+            <div class="flex-col">
+                <div class="x-title">Hello toast</div>
+                <div class="x-text">Amazing toast</div>
+            </div>
+            <button class="x-button muted ml-auto" data-action="click->x-toast#close">Close</button>
+        </div>
+    </li>
+</ol>
+```
+```vue [winduum-vue]
+<script setup lang="ts">
+    import { ref } from 'vue'
+    import { Button } from '@/components/button'
+    import { Title } from '@/components/title'
+    import { Text } from '@/components/text'
+    import { Toast, ToastContent } from '@/components/toast'
+    import { Toaster } from '@/components/toaster'
 
+    const toasts = ref<number[]>([])
+
+    const showToast = () => {
+        toasts.value.push(Date.now())
+    }
+
+    const closeToast = (toast: number) => {
+        toasts.value = toasts.value.filter(item => item !== toast)
+    }
+</script>
+
+<template>
+    <Button @click="showToast">Show toast</Button>
+
+    <Toaster class="items-end">
+        <Toast v-for="toast in toasts" :key="toast" @close="closeToast(toast)">
+            <ToastContent>
+                <div class="flex-col">
+                    <Title>Hello toast</Title>
+                    <Text>Amazing toast</Text>
+                </div>
+                <Button class="muted ml-auto" data-action="closeToast">Close</Button>
+            </ToastContent>
+        </Toast>
+    </Toaster>
+</template>
+```
+```jsx [winduum-react]
+import { useState } from "react"
+import { Button } from "@/components/button"
+import { Title } from "@/components/title"
+import { Text } from "@/components/text"
+import { Toast, ToastContent } from "@/components/toast"
+import { Toaster } from "@/components/toaster"
+
+export function Example() {
+    const [toasts, setToasts] = useState<number[]>([])
+
+    const showToast = () => {
+        setToasts(current => [...current, Date.now()])
+    }
+
+    const closeToast = (toast: number) => {
+        setToasts(current => current.filter(item => item !== toast))
+    }
+
+    return (
+        <>
+            <Button onClick={showToast}>Show toast</Button>
+
+            <Toaster className="items-end">
+                {toasts.map((toast) => (
+                    <Toast key={toast} onClose={() => closeToast(toast)}>
+                        <ToastContent>
+                            <div className="flex-col">
+                                <Title>Hello toast</Title>
+                                <Text>Amazing toast</Text>
+                            </div>
+                            <Button className="muted ml-auto" data-action="closeToast">Close</Button>
+                        </ToastContent>
+                    </Toast>
+                ))}
+            </Toaster>
+        </>
+    )
+}
 ```
 :::
 

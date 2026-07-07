@@ -1,11 +1,11 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<button class="x-button" command="show-modal" commandfor="drawerTopElement">Show drawer</button>
-<dialog class="x-drawer" is="x-drawer" id="drawerTopElement" closedby="any" data-placement="top">
-    <div class="x-drawer-scroller flex flex-col snap-y snap-mandatory">
-        <nav class="x-drawer-content" data-x-drawer-part="content" style="--x-drawer-content-inline-size: 100dvw;--x-drawer-content-block-size: calc(100vh - 4rem);">
+<button class="x-button" command="show-modal" commandfor="drawerNoScriptElement">Show drawer</button>
+<dialog class="x-drawer noscript:starting:-translate-x-full noscript:not-open:-translate-x-full noscript:duration-500" is="x-drawer" id="drawerNoScriptElement" closedby="any">
+    <div class="x-drawer-scroller snap-x snap-mandatory noscript:after:content-none">
+        <nav class="x-drawer-content" data-x-drawer-part="content">
             Drawer content
-            <button class="x-button muted" command="request-close" commandfor="drawerTopElement">Close drawer</button>
+            <button class="x-button muted" command="request-close" commandfor="drawerNoScriptElement">Close drawer</button>
         </nav>
     </div>
 </dialog>

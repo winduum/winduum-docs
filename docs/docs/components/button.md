@@ -28,6 +28,10 @@ Follow instructions for individual framework usage below
 * <LinkGh name="default" path="components/button/props" />
 * <LinkGh name="interactive" path="components/button/props" />
 
+## Scripts
+The Button script adds the ripple effect and keeps the loading spinner state in sync
+with `data-loading`.
+
 ### Tokens
 * `bordered` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `muted` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>

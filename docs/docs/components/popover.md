@@ -52,6 +52,10 @@ Positioning of `x-popover` is provided by the [Position](/docs/utilities/positio
 * `left` `left-start` `left-end`
 * `right` `right-start` `right-end`
 
+## Scripts
+The Popover script keeps trigger `aria-expanded` in sync and provides the floating-ui
+positioning fallback when needed.
+
 ## Examples
 
 ### Basic Popover
@@ -66,10 +70,48 @@ the popover lives in the [top-layer](https://developer.mozilla.org/en-US/docs/Gl
 ::: code-group
 <<< @/public/examples/components/popover/basic.html#body{} [winduum]
 ```vue [winduum-vue]
+<script setup>
+    import { useId } from 'vue'
+    import { Button } from '@/components/button'
+    import { Popover, PopoverContent } from '@/components/popover'
 
+    const popoverExample = useId()
+</script>
+
+<template>
+    <Button command="toggle-popover" :commandfor="popoverExample" :aria-controls="popoverExample">
+        Popover
+    </Button>
+    <Popover class="bottom my-2" popover :id="popoverExample">
+        <PopoverContent class="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
+            <Button class="ghosted accent-main justify-start w-full">Item 1</Button>
+            <Button class="ghosted accent-main justify-start w-full">Item 2</Button>
+        </PopoverContent>
+    </Popover>
+</template>
 ```
-```vue [winduum-react]
+```jsx [winduum-react]
+import { useId } from 'react'
+import { Button } from '@/components/button'
+import { Popover, PopoverContent } from '@/components/popover'
 
+export function Example() {
+    const popoverExample = useId()
+
+    return (
+        <>
+            <Button command="toggle-popover" commandfor={popoverExample} aria-controls={popoverExample}>
+                Popover
+            </Button>
+            <Popover className="bottom my-2" popover id={popoverExample}>
+                <PopoverContent className="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
+                    <Button className="ghosted accent-main justify-start w-full">Item 1</Button>
+                    <Button className="ghosted accent-main justify-start w-full">Item 2</Button>
+                </PopoverContent>
+            </Popover>
+        </>
+    )
+}
 ```
 :::
 
@@ -83,10 +125,44 @@ Use the [interestfor](https://www.npmjs.com/package/interestfor) polyfill for br
 ::: code-group
 <<< @/public/examples/components/popover/hover.html#body{} [winduum]
 ```vue [winduum-vue]
+<script setup>
+    import { useId } from 'vue'
+    import { Button } from '@/components/button'
+    import { Popover, PopoverContent } from '@/components/popover'
 
+    const popoverHover = useId()
+</script>
+
+<template>
+    <Button :interestfor="popoverHover">Popover</Button>
+    <Popover class="bottom my-2" popover="hint" :id="popoverHover">
+        <PopoverContent class="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
+            <Button class="ghosted accent-main justify-start w-full">Item 1</Button>
+            <Button class="ghosted accent-main justify-start w-full">Item 2</Button>
+        </PopoverContent>
+    </Popover>
+</template>
 ```
-```vue [winduum-react]
+```jsx [winduum-react]
+import { useId } from 'react'
+import { Button } from '@/components/button'
+import { Popover, PopoverContent } from '@/components/popover'
 
+export function Example() {
+    const popoverHover = useId()
+
+    return (
+        <>
+            <Button interestfor={popoverHover}>Popover</Button>
+            <Popover className="bottom my-2" popover="hint" id={popoverHover}>
+                <PopoverContent className="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
+                    <Button className="ghosted accent-main justify-start w-full">Item 1</Button>
+                    <Button className="ghosted accent-main justify-start w-full">Item 2</Button>
+                </PopoverContent>
+            </Popover>
+        </>
+    )
+}
 ```
 :::
 
@@ -99,14 +175,59 @@ the floating-ui positioning fallback in browsers without CSS Anchor Positioning.
 
 ::: code-group
 <<< @/public/examples/components/popover/api.html#body{} [winduum-elements]
-```vue [winduum-stimulus]
-
+```html [winduum-stimulus]
+<div class="w-full flex flex-col items-center" data-controller="x-popover" data-x-popover-placement-value="bottom">
+    <button class="x-button" popovertarget="popoverApi" aria-controls="popoverApi" data-x-popover-target="action">Popover</button>
+    <div class="x-popover bottom my-2" popover id="popoverApi">
+        <div class="x-popover-content shadow dark:bg-body-secondary p-2">
+            <input type="text">
+        </div>
+    </div>
+</div>
 ```
 ```vue [winduum-vue]
+<script setup>
+    import { useId } from 'vue'
+    import { Button } from '@/components/button'
+    import { Popover, PopoverContent } from '@/components/popover'
 
+    const popoverApi = useId()
+</script>
+
+<template>
+    <div class="w-full flex flex-col items-center">
+        <Button command="toggle-popover" :commandfor="popoverApi" :aria-controls="popoverApi">
+            Popover
+        </Button>
+        <Popover class="bottom my-2" popover :id="popoverApi" placement="bottom">
+            <PopoverContent class="shadow dark:bg-body-secondary p-2">
+                <input type="text">
+            </PopoverContent>
+        </Popover>
+    </div>
+</template>
 ```
-```vue [winduum-react]
+```jsx [winduum-react]
+import { useId } from 'react'
+import { Button } from '@/components/button'
+import { Popover, PopoverContent } from '@/components/popover'
 
+export function Example() {
+    const popoverApi = useId()
+
+    return (
+        <div className="w-full flex flex-col items-center">
+            <Button command="toggle-popover" commandfor={popoverApi} aria-controls={popoverApi}>
+                Popover
+            </Button>
+            <Popover className="bottom my-2" popover id={popoverApi} placement="bottom">
+                <PopoverContent className="shadow dark:bg-body-secondary p-2">
+                    <input type="text" />
+                </PopoverContent>
+            </Popover>
+        </div>
+    )
+}
 ```
 :::
 

@@ -7,11 +7,6 @@ Provides a basic way to validate your form and show feedback to your users with 
 
 `novalidate` must be present on `form` to handle validation with JavaScript.
 
-::: info
-Compatible with any reactive framework, but updates will not propagate to the virtual DOM.<br>
-For advance form of validation use [VeeValidate](https://vee-validate.logaretm.com/v4/), [React Hook Form](https://react-hook-form.com/) or others.
-:::
-
 <iframe onload="this.style.visibility = 'visible';" src="/examples/form.html" style="margin: 1.5rem 0"></iframe>
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/form" />
@@ -22,6 +17,18 @@ Follow instructions for individual framework usage below
 * <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/form" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/form" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/form" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/src/components/form" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/main/src/components/form" />
+
+## Scripts
+The Form script handles custom validation on submit and can set `data-loading` on
+the submitter after a valid submit.
+
+::: info
+Native validation is enough for most forms. Validation libraries are often unnecessary
+abstractions and are only needed for very complex forms. In those cases, we recommend
+[VeeValidate](https://vee-validate.logaretm.com/v4/) or [TanStack Form](https://tanstack.com/form/latest).
+:::
 
 ## Examples
 
@@ -30,21 +37,102 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/form.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/form.html#body{} [winduum]
-```html [winduum-elements]
-
-```
+<<< @/public/examples/form.html#body{} [winduum-elements]
 ```html [winduum-stimulus]
-
+<form class="x-form grid grid-cols-12 gap-4" data-controller="x-form">
+    <div class="x-field col-span-4" data-controller="x-field">
+        <label class="x-label" for="given-name">First name</label>
+        <div class="x-control" data-controller="x-control">
+            <input id="given-name" name="given-name" autocomplete="given-name" required>
+        </div>
+    </div>
+    <div class="x-field col-span-4" data-controller="x-field">
+        <label class="x-label" for="family-name">Last name</label>
+        <div class="x-control" data-controller="x-control">
+            <input id="family-name" name="family-name" autocomplete="family-name" required>
+        </div>
+    </div>
+    <div class="x-field col-span-4" data-controller="x-field">
+        <label class="x-label" for="email">Email</label>
+        <div class="x-control" data-controller="x-control">
+            <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+    </div>
+    <div class="x-field col-span-4 items-start" data-controller="x-field">
+        <button class="x-button" type="submit">Submit</button>
+    </div>
+</form>
 ```
-:::
+```vue [winduum-vue]
+<script setup lang="ts">
+    import { Form } from '@/components/form'
+    import { Field } from '@/components/field'
+    import { Label } from '@/components/label'
+    import { Control } from '@/components/control'
+    import { Button } from '@/components/button'
+</script>
 
-### Field
+<template>
+    <Form class="grid grid-cols-12 gap-4">
+        <Field class="col-span-4">
+            <Label for="given-name">First name</Label>
+            <Control>
+                <input id="given-name" name="given-name" autocomplete="given-name" required>
+            </Control>
+        </Field>
+        <Field class="col-span-4">
+            <Label for="family-name">Last name</Label>
+            <Control>
+                <input id="family-name" name="family-name" autocomplete="family-name" required>
+            </Control>
+        </Field>
+        <Field class="col-span-4">
+            <Label for="email">Email</Label>
+            <Control>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </Control>
+        </Field>
+        <Field class="col-span-4 items-start">
+            <Button type="submit">Submit</Button>
+        </Field>
+    </Form>
+</template>
+```
+```jsx [winduum-react]
+import { Form } from '@/components/form'
+import { Field } from '@/components/field'
+import { Label } from '@/components/label'
+import { Control } from '@/components/control'
+import { Button } from '@/components/button'
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/form-field.html"></iframe>
-
-::: code-group
-<<< @/public/examples/form-field.html#body{} [winduum]
+export function Example() {
+    return (
+        <Form className="grid grid-cols-12 gap-4">
+            <Field className="col-span-4">
+                <Label htmlFor="given-name">First name</Label>
+                <Control>
+                    <input id="given-name" name="given-name" autoComplete="given-name" required />
+                </Control>
+            </Field>
+            <Field className="col-span-4">
+                <Label htmlFor="family-name">Last name</Label>
+                <Control>
+                    <input id="family-name" name="family-name" autoComplete="family-name" required />
+                </Control>
+            </Field>
+            <Field className="col-span-4">
+                <Label htmlFor="email">Email</Label>
+                <Control>
+                    <input type="email" id="email" name="email" autoComplete="email" required />
+                </Control>
+            </Field>
+            <Field className="col-span-4 items-start">
+                <Button type="submit">Submit</Button>
+            </Field>
+        </Form>
+    )
+}
+```
 :::
 
 ## JavaScript API

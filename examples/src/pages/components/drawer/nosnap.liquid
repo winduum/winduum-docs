@@ -1,0 +1,12 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<button class="x-button" command="show-modal" commandfor="drawerNoSnapElement">Show drawer</button>
+<dialog class="x-drawer no-snap starting:-translate-x-full not-open:-translate-x-full duration-500" id="drawerNoSnapElement" closedby="any">
+    <div class="x-drawer-scroller after:content-none">
+        <nav class="x-drawer-content">
+            Drawer content
+            <button class="x-button muted" command="request-close" commandfor="drawerNoSnapElement">Close drawer</button>
+        </nav>
+    </div>
+</dialog>
+{% endblock %}

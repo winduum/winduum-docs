@@ -24,6 +24,10 @@ Follow instructions for individual framework usage below
 ### Variants
 * <LinkGh name="default" path="components/details" />
 
+## Scripts
+The Details script keeps a checkbox inside `summary` in sync with the native
+`details[open]` state.
+
 ## Examples
 
 ### Default

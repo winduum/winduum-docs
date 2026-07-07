@@ -33,10 +33,36 @@ Follow instructions for individual framework usage below
 ::: code-group
 <<< @/public/examples/components/card/default.html#body{} [winduum]
 ```vue [winduum-vue]
+<script setup lang="ts">
+    import { Card } from '@/components/card'
+    import { Heading } from '@/components/heading'
+    import { Text } from '@/components/text'
+</script>
 
+<template>
+    <Card class="border border-body-tertiary shadow-sm max-w-md gap-2">
+        <Heading>Card title</Heading>
+        <Text>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Lorem ipsum dolor sit amet
+        </Text>
+    </Card>
+</template>
 ```
 ```jsx [winduum-react]
+import { Card } from '@/components/card'
+import { Heading } from '@/components/heading'
+import { Text } from '@/components/text'
 
+export function Example() {
+    return (
+        <Card className="border border-body-tertiary shadow-sm max-w-md gap-2">
+            <Heading>Card title</Heading>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Lorem ipsum dolor sit amet
+            </Text>
+        </Card>
+    )
+}
 ```
 :::
 
