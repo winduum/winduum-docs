@@ -1,16 +1,14 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<details class="x-details group bg-body-secondary p-4 rounded">
+<details class="x-details group bg-body-secondary p-4 rounded-md">
     <summary class="w-fit flex">
         <label class="x-check">
             <input type="checkbox" data-action="toggleDetailsCheckbox" autocomplete="off">
             Fill more
         </label>
     </summary>
-    <div>
-        <div class="x-control max-w-96 mt-4">
-            <input>
-        </div>
+    <div class="x-control max-w-96 mt-4">
+        <input>
     </div>
 </details>
 {% endblock %}

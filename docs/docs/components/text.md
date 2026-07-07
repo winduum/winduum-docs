@@ -34,11 +34,11 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/text/text.html#body{} [winduum]
 ```vue [winduum-vue]
 <script setup lang="ts">
-    import { UiText } from '@/components/text'
+    import { Text } from '@/components/text'
 </script>
 
 <template>
-    <UiText class="x-text">
+    <Text class="x-text">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur
             metus. In bibendum nisi et dui <a href="#">sagittis efficitur</a>. Proin porttitor diam at quam
             finibus, quis porttitor turpis ullamcorper. Quisque iaculis imperdiet nunc in
@@ -49,15 +49,15 @@ Follow instructions for individual framework usage below
             Phasellus non pretium libero.</p>
         <p></p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </UiText>
+    </Text>
 </template>
 ```
 ```jsx [winduum-react]
-import { UiText } from '@/components/text'
+import { Text } from '@/components/text'
 
 export function Example() {
     return (
-        <UiText class="x-text">
+        <Text class="x-text">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur
                 metus. In bibendum nisi et dui <a href="#">sagittis efficitur</a>. Proin porttitor diam at quam
                 finibus, quis porttitor turpis ullamcorper. Quisque iaculis imperdiet nunc in
@@ -68,7 +68,7 @@ export function Example() {
                 Phasellus non pretium libero.</p>
             <p></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </UiText>
+        </Text>
     )
 }
 ```

@@ -297,6 +297,10 @@ html:has(dialog[open]) .VPSidebar {
   animation-name: ripple;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   width: 100%;

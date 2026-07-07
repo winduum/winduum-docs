@@ -39,28 +39,28 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/progress/colors.html#body{} [winduum]
 ```vue [winduum-vue]
 <script setup lang="ts">
-    import { UiProgress } from '@/components/progress'
+    import { Progress } from '@/components/progress'
 </script>
 
 <template>
-    <UiProgress class="accent-primary" value="25" max="100"></UiProgress>
-    <UiProgress class="accent-success" value="50" max="100"></UiProgress>
-    <UiProgress class="accent-error" value="75" max="100"></UiProgress>
-    <UiProgress class="accent-info" value="15" max="100"></UiProgress>
-    <UiProgress class="accent-warning" value="85" max="100"></UiProgress>
+    <Progress class="accent-primary" value="25" max="100"></Progress>
+    <Progress class="accent-success" value="50" max="100"></Progress>
+    <Progress class="accent-error" value="75" max="100"></Progress>
+    <Progress class="accent-info" value="15" max="100"></Progress>
+    <Progress class="accent-warning" value="85" max="100"></Progress>
 </template>
 ```
 ```jsx [winduum-react]
-import { UiProgress } from '@/components/progress'
+import { Progress } from '@/components/progress'
 
 export function Example() {
     return (
         <>
-            <UiProgress className="accent-primary" value="25" max="100"></UiProgress>
-            <UiProgress className="accent-success" value="50" max="100"></UiProgress>
-            <UiProgress className="accent-error" value="75" max="100"></UiProgress>
-            <UiProgress className="accent-info" value="15" max="100"></UiProgress>
-            <UiProgress className="accent-warning" value="85" max="100"></UiProgress>
+            <Progress className="accent-primary" value="25" max="100"></Progress>
+            <Progress className="accent-success" value="50" max="100"></Progress>
+            <Progress className="accent-error" value="75" max="100"></Progress>
+            <Progress className="accent-info" value="15" max="100"></Progress>
+            <Progress className="accent-warning" value="85" max="100"></Progress>
         </>
     )
 }

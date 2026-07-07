@@ -36,23 +36,23 @@ Follow instructions for individual framework usage below
 <<< @/public/examples/components/image/ratio.html#body{} [winduum]
 ```vue [winduum-vue]
 <script setup lang="ts">
-    import { UiImage } from '@/components/image'
+    import { Image } from '@/components/image'
 </script>
 
 <template>
-    <UiImage>
+    <Image>
         <img class="aspect-[3/2]" src="https://img.logoipsum.com/250.svg" loading="lazy" alt="">
-    </UiImage>
+    </Image>
 </template>
 ```
 ```jsx [winduum-react]
-import { UiImage } from '@/components/image'
+import { Image } from '@/components/image'
 
 export function Example() {
     return (
-        <UiImage>
+        <Image>
             <img className="aspect-[3/2]" src="https://img.logoipsum.com/250.svg" loading="lazy" alt="" />
-        </UiImage>
+        </Image>
     )
 }
 ```

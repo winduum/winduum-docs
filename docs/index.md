@@ -43,8 +43,4 @@ features:
   details: Adds new handy utilities, variants and CSS properties on top of TailwindCSS v4. You don't even need to use TailwindCSS, but it's recommended for the full experience.
 ---
 
-<div style="max-width: 1152px; margin: 4rem auto 0; padding: 0 24px;">
-    <iframe onload="this.style.visibility = 'visible';" src="/examples/showcase.html"></iframe>
-</div>
-
 <div style="text-align: center;margin-top: 4rem;margin-bottom:-8.5rem;font-weight: bold">Winduum ❤️ CSS</div>

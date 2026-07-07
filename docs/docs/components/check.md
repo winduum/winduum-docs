@@ -77,32 +77,32 @@ export function Example() {
 <<< @/public/examples/components/radio/basic.html#body{} [winduum]
 ```vue [winduum-vue]
 <script setup lang="ts">
-    import { UiCheck } from '@/components/check'
+    import { Check } from '@/components/check'
 </script>
 
 <template>
-    <UiCheck>
+    <Check>
         <input type="radio">
         Radio
-    </UiCheck>
-    <UiCheck>
+    </Check>
+    <Check>
         <input type="radio">
-    </UiCheck>
+    </Check>
 </template>
 ```
 ```jsx [winduum-react]
-import { UiCheck } from "@/components/check"
+import { Check } from "@/components/check"
 
 export function Example() {
     return (
         <>
-            <UiCheck>
+            <Check>
                 <input type="radio" />
                 Radio
-            </UiCheck>
-            <UiCheck>
+            </Check>
+            <Check>
                 <input type="radio" />
-            </UiCheck>
+            </Check>
         </>
     )
 }
