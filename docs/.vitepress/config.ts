@@ -57,19 +57,6 @@ export default defineConfig({
     nav: [
       { text: 'Docs', link: '/docs/', activeMatch: '/docs/' },
       {
-        text: 'v3 (next)',
-        items: [
-          {
-            text: 'v2',
-            link: 'https://v2--winduum.netlify.app/'
-          },
-          {
-            text: 'v1',
-            link: 'https://v1--winduum.netlify.app/'
-          }
-        ]
-      },
-      {
         text: 'Resources',
         items: [
           {
@@ -97,11 +84,41 @@ export default defineConfig({
             ]
           }
         ]
-      }
+      },
+      {
+        text: 'v3 (next)',
+        items: [
+          {
+            text: 'v2',
+            link: 'https://v2--winduum.netlify.app/'
+          },
+          {
+            text: 'v1',
+            link: 'https://v1--winduum.netlify.app/'
+          }
+        ]
+      },
     ],
 
     sidebar: {
       '/docs/': [
+        {
+          text: 'v3 Announcement',
+          link: '/blog/'
+        },
+        {
+          text: 'Migrations',
+          items: [
+            {
+              text: 'winduum v3',
+              link: '/migrations/'
+            },
+            {
+              text: 'winduum-stimulus v3',
+              link: '/migrations/'
+            },
+          ],
+        },
         {
           text: 'Get started',
           items: [
