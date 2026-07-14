@@ -66,72 +66,91 @@ The Tabs script switches active panels and keeps tab ARIA state in sync.
 ```
 ```vue [winduum-vue]
 <script setup lang="ts">
+    import { ref } from 'vue'
     import { Tabs, TabsList } from '@/components/tabs'
+
+    const tabs = ['All', 'Photos', 'Music', 'Documents']
+    const tabElements = ref<HTMLElement[]>([])
+    const tabPanelElements = ref<HTMLElement[]>([])
 </script>
 
 <template>
-    <Tabs>
+    <Tabs v-slot="{ toggleTab }" :refs="{ tabElements, tabPanelElements }">
         <TabsList class="accent-main">
-            <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-all" id="all" aria-selected="true">
-                All
-            </button>
-            <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-photos" id="photos">
-                Photos
-            </button>
-            <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-music" id="music">
-                Music
-            </button>
-            <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-documents" id="documents">
-                Documents
+            <button
+                v-for="(tab, index) in tabs"
+                :key="tab"
+                ref="tabElements"
+                class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]"
+                role="tab"
+                :aria-controls="`tab-${tab.toLowerCase()}`"
+                :id="tab.toLowerCase()"
+                :aria-selected="index === 0 ? 'true' : 'false'"
+                @click="toggleTab"
+            >
+                {{ tab }}
             </button>
         </TabsList>
-        <div class="aria-hidden:hidden" role="tabpanel" aria-hidden="false" id="tab-all" aria-labelledby="all">
-            All
-        </div>
-        <div class="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-photos" aria-labelledby="photos">
-            Photos
-        </div>
-        <div class="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-music" aria-labelledby="music">
-            Music
-        </div>
-        <div class="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-documents" aria-labelledby="documents">
-            Documents
+        <div
+            v-for="(tab, index) in tabs"
+            :key="tab"
+            ref="tabPanelElements"
+            class="aria-hidden:hidden"
+            role="tabpanel"
+            :aria-hidden="index === 0 ? 'false' : 'true'"
+            :id="`tab-${tab.toLowerCase()}`"
+            :aria-labelledby="tab.toLowerCase()"
+        >
+            {{ tab }}
         </div>
     </Tabs>
 </template>
 ```
 ```jsx [winduum-react]
+import { createRef, useRef } from 'react'
 import { Tabs, TabsList } from "@/components/tabs"
 
+const tabs = ['All', 'Photos', 'Music', 'Documents']
+
 export function Example() {
+    const tabElements = useRef(tabs.map(() => createRef<HTMLElement>())).current
+    const tabPanelElements = useRef(tabs.map(() => createRef<HTMLElement>())).current
+
     return (
-        <Tabs>
-            <TabsList className="accent-main">
-                <button className="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-all" id="all" aria-selected="true">
-                    All
-                </button>
-                <button className="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-photos" id="photos">
-                    Photos
-                </button>
-                <button className="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-music" id="music">
-                    Music
-                </button>
-                <button className="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-documents" id="documents">
-                    Documents
-                </button>
-            </TabsList>
-            <div className="aria-hidden:hidden" role="tabpanel" aria-hidden="false" id="tab-all" aria-labelledby="all">
-                All
-            </div>
-            <div className="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-photos" aria-labelledby="photos">
-                Photos
-            </div>
-            <div className="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-music" aria-labelledby="music">
-                Music
-            </div>
-            <div className="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-documents" aria-labelledby="documents">
-                Documents
-            </div>
+        <Tabs refs={{ tabElements, tabPanelElements }}>
+            {({ toggleTab }) => (
+                <>
+                    <TabsList className="accent-main">
+                        {tabs.map((tab, index) => (
+                            <button
+                                key={tab}
+                                ref={tabElements[index]}
+                                className="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]"
+                                role="tab"
+                                aria-controls={`tab-${tab.toLowerCase()}`}
+                                id={tab.toLowerCase()}
+                                aria-selected={index === 0 ? 'true' : 'false'}
+                                onClick={toggleTab}
+                            >
+                                {tab}
+                            </button>
+                        ))}
+                    </TabsList>
+                    {tabs.map((tab, index) => (
+                        <div
+                            key={tab}
+                            ref={tabPanelElements[index]}
+                            className="aria-hidden:hidden"
+                            role="tabpanel"
+                            aria-hidden={index === 0 ? 'false' : 'true'}
+                            id={`tab-${tab.toLowerCase()}`}
+                            aria-labelledby={tab.toLowerCase()}
+                        >
+                            {tab}
+                        </div>
+                    ))}
+                </>
+            )}
         </Tabs>
     )
 }
@@ -163,14 +182,14 @@ Toggles tab and tab panel aria attributes.
 
 ##### tabElements
 
-* **Type:** `NodeListOf<Element>`
+* **Type:** `NodeListOf<Element> | Element[]`
 * **Default:** `undefined`
 
 Elements representing tabs.
 
 ##### tabPanelElements
 
-* **Type:** `NodeListOf<Element>`
+* **Type:** `NodeListOf<Element> | Element[]`
 * **Default:** `undefined`
 
 Elements representing tab panels.

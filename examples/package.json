@@ -6,9 +6,9 @@
     "@webreflection/custom-elements-builtin": "^0.4.1",
     "interestfor": "^1.0.0",
     "invokers-polyfill": "^1.0.3",
-    "tailwindcss": "^4.0.0",
-    "winduum": "^3.0.0-next.7",
-    "winduum-elements": "^0.0.11",
+    "tailwindcss": "^4.3.2",
+    "winduum": "^3.0.0-next.13",
+    "winduum-elements": "^0.0.13",
     "vituum": "^1.1.1",
     "vite": "^6.0.11",
     "@floating-ui/dom": "^1.6.13"

@@ -92,13 +92,13 @@ For `winduum-elements` and `winduum-stimulus`, toasts are expected to be appende
     <Button @click="showToast">Show toast</Button>
 
     <Toaster class="items-end">
-        <Toast v-for="toast in toasts" :key="toast" @close="closeToast(toast)">
+        <Toast v-for="toast in toasts" v-slot="{ close }" :key="toast" @close="closeToast(toast)">
             <ToastContent>
                 <div class="flex-col">
                     <Title>Hello toast</Title>
                     <Text>Amazing toast</Text>
                 </div>
-                <Button class="muted ml-auto" data-action="closeToast">Close</Button>
+                <Button class="muted ml-auto" @click="close">Close</Button>
             </ToastContent>
         </Toast>
     </Toaster>
@@ -130,13 +130,15 @@ export function Example() {
             <Toaster className="items-end">
                 {toasts.map((toast) => (
                     <Toast key={toast} onClose={() => closeToast(toast)}>
-                        <ToastContent>
-                            <div className="flex-col">
-                                <Title>Hello toast</Title>
-                                <Text>Amazing toast</Text>
-                            </div>
-                            <Button className="muted ml-auto" data-action="closeToast">Close</Button>
-                        </ToastContent>
+                        {({ close }) => (
+                            <ToastContent>
+                                <div className="flex-col">
+                                    <Title>Hello toast</Title>
+                                    <Text>Amazing toast</Text>
+                                </div>
+                                <Button className="muted ml-auto" onClick={close}>Close</Button>
+                            </ToastContent>
+                        )}
                     </Toast>
                 ))}
             </Toaster>

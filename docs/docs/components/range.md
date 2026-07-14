@@ -51,25 +51,33 @@ changes.
 ```
 ```vue [winduum-vue]
 <script setup lang="ts">
+    import { ref } from 'vue'
     import { Range } from '@/components/range'
+
+    const startElement = ref<HTMLInputElement>()
 </script>
 
 <template>
-    <Range>
-        <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single">
+    <Range v-slot="{ setValue }" :refs="{ startElement }">
+        <input ref="startElement" type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single" @input="setValue">
     </Range>
 
     <output class="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price" id="single">10 000</output>
 </template>
 ```
 ```jsx [winduum-react]
+import { useRef } from "react"
 import { Range } from "@/components/range"
 
 export function Example() {
+    const startElement = useRef<HTMLInputElement>(null)
+
     return (
         <>
-            <Range>
-                <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single" />
+            <Range refs={{ startElement }}>
+                {({ setValue }) => (
+                    <input ref={startElement} type="range" defaultValue="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single" onInput={setValue} />
+                )}
             </Range>
 
             <output className="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price" id="single">10 000</output>

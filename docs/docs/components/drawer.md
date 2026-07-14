@@ -81,19 +81,20 @@ and trigger `aria-expanded` state.
 </div>
 ```
 ```vue [winduum-vue]
-<script setup>
-  import { useId } from 'vue'
+<script setup lang="ts">
+  import { ref, useId } from 'vue'
   import { Drawer, DrawerContent, DrawerScroller } from '@/components/drawer'
   import { Button } from '@/components/button'
   
   const drawerLeft = useId()
+  const contentElement = ref<HTMLElement>()
 </script>
 
 <template>
   <Button command="show-modal" :commandfor="drawerLeft">Show drawer</Button>
-  <Drawer :id="drawerLeft" closedby="any">
+  <Drawer :id="drawerLeft" closedby="any" :refs="{ contentElement }">
     <DrawerScroller class="snap-x snap-mandatory">
-      <DrawerContent as="nav">
+      <DrawerContent ref="contentElement" as="nav">
         Drawer content
         <Button class="muted" command="request-close" :commandfor="drawerLeft">
           Close drawer
@@ -104,19 +105,20 @@ and trigger `aria-expanded` state.
 </template>
 ```
 ```jsx [winduum-react]
-import { useId } from "react"
+import { useId, useRef } from "react"
 import { Drawer, DrawerContent, DrawerScroller } from "@/components/drawer"
 import { Button } from "@/components/button"
 
 export function Example() {
     const drawerLeft = useId()
+    const contentElement = useRef<HTMLElement>(null)
 
     return (
         <>
             <Button command="show-modal" commandfor={drawerLeft}>Show drawer</Button>
-            <Drawer id={drawerLeft} closedby="any">
+            <Drawer id={drawerLeft} closedby="any" refs={{ contentElement }}>
                 <DrawerScroller className="snap-x snap-mandatory">
-                    <DrawerContent as="nav">
+                    <DrawerContent ref={contentElement} as="nav">
                         Drawer content
                         <Button className="muted" command="request-close" commandfor={drawerLeft}>
                             Close drawer
@@ -147,6 +149,14 @@ export function Example() {
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/top.html" style="height: 420px"></iframe>
 
 <<< @/public/examples/components/drawer/top.html#body{} [winduum]
+
+### Dialog
+
+Responsive variant that behaves as a bottom drawer below the `xl` container breakpoint (576px) and as a dialog in larger containers.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/dialog.html" style="height: 420px"></iframe>
+
+<<< @/public/examples/components/drawer/dialog.html#body{} [winduum-elements]
 
 ### No Script
 
