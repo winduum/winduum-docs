@@ -85,70 +85,10 @@ It's provided by the [`toggleDetails`](#toggledetails) helper and wired up by th
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/details/checkbox.html" style="height: 500px;"></iframe>
 
 ::: code-group
-```html [winduum-elements]
-<details class="x-details group bg-body-secondary p-4 rounded-md" is="x-details">
-    <summary class="w-fit flex">
-        <label class="x-check">
-            <input type="checkbox" autocomplete="off">
-            Fill more
-        </label>
-    </summary>
-    <div class="x-control max-w-96 mt-4">
-        <input>
-    </div>
-</details>
-```
-```html [winduum-stimulus]
-<details class="x-details group bg-body-secondary p-4 rounded-md" data-controller="x-details">
-    <summary class="w-fit flex">
-        <label class="x-check">
-            <input type="checkbox" autocomplete="off" data-action="change->x-details#toggleDetails">
-            Fill more
-        </label>
-    </summary>
-    <div class="x-control max-w-96 mt-4">
-        <input>
-    </div>
-</details>
-```
-```vue [winduum-vue]
-<script setup lang="ts">
-    import { Details } from '@/components/details'
-</script>
-
-<template>
-    <Details class="group bg-body-secondary p-4 rounded-md">
-        <summary class="w-fit flex">
-            <label class="x-check">
-                <input type="checkbox" autocomplete="off">
-                Fill more
-            </label>
-        </summary>
-        <div class="x-control max-w-96 mt-4">
-            <input>
-        </div>
-    </Details>
-</template>
-```
-```jsx [winduum-react]
-import { Details } from '@/components/details'
-
-export function Example() {
-    return (
-        <Details className="group bg-body-secondary p-4 rounded-md">
-            <summary className="w-fit flex">
-                <label className="x-check">
-                    <input type="checkbox" autoComplete="off" />
-                    Fill more
-                </label>
-            </summary>
-            <div className="x-control max-w-96 mt-4">
-                <input />
-            </div>
-        </Details>
-    )
-}
-```
+<<< @/public/examples/components/details/checkbox.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/details/checkbox.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/details/checkbox.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/details/checkbox.tsx [winduum-react]
 :::
 
 ### Accordion

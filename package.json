@@ -1,13 +1,23 @@
 {
   "type": "module",
   "scripts": {
-    "postinstall": "cd examples && npm i",
-    "docs:dev": "npm run vituum:build && vitepress dev docs",
-    "docs:build": "npm run vituum:build && vitepress build docs",
+    "postinstall": "npm --prefix examples install && npm --prefix examples-stimulus install && npm --prefix examples-vue install && npm --prefix examples-react install",
+    "docs:dev": "npm run examples:build && vitepress dev docs",
+    "docs:build": "npm run examples:build && vitepress build docs",
     "docs:serve": "vitepress serve docs",
+    "examples:build": "npm run vituum:build && npm run vituum-stimulus:build && npm run vituum-vue:build && npm run vituum-react:build",
     "vituum:dev": "cd examples && npx vite",
     "vituum:build": "cd examples && npx vite build",
-    "vituum:preview": "cd examples && npx vite preview"
+    "vituum:preview": "cd examples && npx vite preview",
+    "vituum-stimulus:dev": "cd examples-stimulus && npx vite",
+    "vituum-stimulus:build": "cd examples-stimulus && npx vite build",
+    "vituum-stimulus:preview": "cd examples-stimulus && npx vite preview",
+    "vituum-vue:dev": "npm --prefix examples-vue run dev",
+    "vituum-vue:build": "npm --prefix examples-vue run build",
+    "vituum-vue:preview": "npm --prefix examples-vue run preview",
+    "vituum-react:dev": "npm --prefix examples-react run dev",
+    "vituum-react:build": "npm --prefix examples-react run build",
+    "vituum-react:preview": "npm --prefix examples-react run preview"
   },
   "dependencies": {
     "@webreflection/custom-elements-builtin": "^0.4.1",

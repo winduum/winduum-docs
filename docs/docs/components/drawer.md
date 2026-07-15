@@ -58,97 +58,43 @@ and trigger `aria-expanded` state.
 
 ::: code-group
 <<< @/public/examples/components/drawer/left.html#body{} [winduum-elements]
-```html [winduum-stimulus]
-<div data-controller="invoke">
-  <button
-    class="x-button"
-    data-action="click->invoke#action"
-    data-invoke-action="x-drawer#show"
-    data-invoke-target="#drawerLeftElement"
-  >
-    Show drawer
-  </button>
-  <dialog class="x-drawer" id="drawerLeftElement" closedby="any" data-controller="x-drawer">
-    <div class="x-drawer-scroller snap-x snap-mandatory">
-      <nav class="x-drawer-content" data-x-drawer-target="content">
-        Drawer content
-        <button class="x-button muted" command="request-close" commandfor="drawerLeftElement">
-          Close drawer
-        </button>
-      </nav>
-    </div>
-  </dialog>
-</div>
-```
-```vue [winduum-vue]
-<script setup lang="ts">
-  import { ref, useId } from 'vue'
-  import { Drawer, DrawerContent, DrawerScroller } from '@/components/drawer'
-  import { Button } from '@/components/button'
-  
-  const drawerLeft = useId()
-  const contentElement = ref<HTMLElement>()
-</script>
-
-<template>
-  <Button command="show-modal" :commandfor="drawerLeft">Show drawer</Button>
-  <Drawer :id="drawerLeft" closedby="any" :refs="{ contentElement }">
-    <DrawerScroller class="snap-x snap-mandatory">
-      <DrawerContent ref="contentElement" as="nav">
-        Drawer content
-        <Button class="muted" command="request-close" :commandfor="drawerLeft">
-          Close drawer
-        </Button>
-      </DrawerContent>
-    </DrawerScroller>
-  </Drawer>
-</template>
-```
-```jsx [winduum-react]
-import { useId, useRef } from "react"
-import { Drawer, DrawerContent, DrawerScroller } from "@/components/drawer"
-import { Button } from "@/components/button"
-
-export function Example() {
-    const drawerLeft = useId()
-    const contentElement = useRef<HTMLElement>(null)
-
-    return (
-        <>
-            <Button command="show-modal" commandfor={drawerLeft}>Show drawer</Button>
-            <Drawer id={drawerLeft} closedby="any" refs={{ contentElement }}>
-                <DrawerScroller className="snap-x snap-mandatory">
-                    <DrawerContent ref={contentElement} as="nav">
-                        Drawer content
-                        <Button className="muted" command="request-close" commandfor={drawerLeft}>
-                            Close drawer
-                        </Button>
-                    </DrawerContent>
-                </DrawerScroller>
-            </Drawer>
-        </>
-    )
-}
-```
+<<< @/../examples-stimulus/src/pages/components/drawer/left.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/left.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/left.tsx [winduum-react]
 :::
 
 ### Right
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/right.html" style="height: 420px"></iframe>
 
-<<< @/public/examples/components/drawer/right.html#body{} [winduum]
+::: code-group
+<<< @/public/examples/components/drawer/right.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/drawer/right.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/right.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/right.tsx [winduum-react]
+:::
 
 ### Bottom
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/bottom.html" style="height: 420px"></iframe>
 
-<<< @/public/examples/components/drawer/bottom.html#body{} [winduum]
+::: code-group
+<<< @/public/examples/components/drawer/bottom.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/drawer/bottom.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/bottom.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/bottom.tsx [winduum-react]
+:::
 
 ### Top
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/top.html" style="height: 420px"></iframe>
 
-<<< @/public/examples/components/drawer/top.html#body{} [winduum]
+::: code-group
+<<< @/public/examples/components/drawer/top.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/drawer/top.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/top.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/top.tsx [winduum-react]
+:::
 
 ### Dialog
 
@@ -156,7 +102,12 @@ Responsive variant that behaves as a bottom drawer below the `xl` container brea
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/dialog.html" style="height: 420px"></iframe>
 
+::: code-group
 <<< @/public/examples/components/drawer/dialog.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/drawer/dialog.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/dialog.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/dialog.tsx [winduum-react]
+:::
 
 ### No Script
 
@@ -164,7 +115,12 @@ Fully animated drawer when JavaScript is disabled.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/noscript.html" style="height: 420px"></iframe>
 
+::: code-group
 <<< @/public/examples/components/drawer/noscript.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/drawer/noscript.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/noscript.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/noscript.tsx [winduum-react]
+:::
 
 ### No Snap
 
@@ -172,7 +128,7 @@ CSS only drawer variant that does not need JavaScript and works the same way as 
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/nosnap.html" style="height: 420px"></iframe>
 
-<<< @/public/examples/components/drawer/nosnap.html#body{} [winduum-elements]
+<<< @/public/examples/components/drawer/nosnap.html#body{} [winduum]
 
 ## JavaScript API
 

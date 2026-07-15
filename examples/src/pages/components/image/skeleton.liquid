@@ -1,0 +1,24 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<x-image class="x-image before:skeleton">
+    <img class="aspect-[3/2]" src="https://picsum.photos/seed/picsum/300/200" loading="lazy" alt="">
+</x-image>
+{% endblock %}
+
+{% block head %}
+<style>
+    .x-image {
+        width: 20rem
+    }
+</style>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { Image } from 'winduum-elements/components/image/index.js'
+
+    customElements.define('x-image', Image(HTMLElement))
+</script>
+<!-- #endregion js -->
+{% endblock %}

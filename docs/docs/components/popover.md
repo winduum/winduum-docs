@@ -69,50 +69,9 @@ the popover lives in the [top-layer](https://developer.mozilla.org/en-US/docs/Gl
 
 ::: code-group
 <<< @/public/examples/components/popover/basic.html#body{} [winduum]
-```vue [winduum-vue]
-<script setup>
-    import { useId } from 'vue'
-    import { Button } from '@/components/button'
-    import { Popover, PopoverContent } from '@/components/popover'
-
-    const popoverExample = useId()
-</script>
-
-<template>
-    <Button command="toggle-popover" :commandfor="popoverExample" :aria-controls="popoverExample">
-        Popover
-    </Button>
-    <Popover class="bottom my-2" popover :id="popoverExample">
-        <PopoverContent class="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
-            <Button class="ghosted accent-main justify-start w-full">Item 1</Button>
-            <Button class="ghosted accent-main justify-start w-full">Item 2</Button>
-        </PopoverContent>
-    </Popover>
-</template>
-```
-```jsx [winduum-react]
-import { useId } from 'react'
-import { Button } from '@/components/button'
-import { Popover, PopoverContent } from '@/components/popover'
-
-export function Example() {
-    const popoverExample = useId()
-
-    return (
-        <>
-            <Button command="toggle-popover" commandfor={popoverExample} aria-controls={popoverExample}>
-                Popover
-            </Button>
-            <Popover className="bottom my-2" popover id={popoverExample}>
-                <PopoverContent className="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
-                    <Button className="ghosted accent-main justify-start w-full">Item 1</Button>
-                    <Button className="ghosted accent-main justify-start w-full">Item 2</Button>
-                </PopoverContent>
-            </Popover>
-        </>
-    )
-}
-```
+<<< @/../examples-stimulus/src/pages/components/popover/basic.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/popover/basic.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/popover/basic.tsx [winduum-react]
 :::
 
 ### Interest Popover
@@ -124,46 +83,9 @@ Use the [interestfor](https://www.npmjs.com/package/interestfor) polyfill for br
 
 ::: code-group
 <<< @/public/examples/components/popover/hover.html#body{} [winduum]
-```vue [winduum-vue]
-<script setup>
-    import { useId } from 'vue'
-    import { Button } from '@/components/button'
-    import { Popover, PopoverContent } from '@/components/popover'
-
-    const popoverHover = useId()
-</script>
-
-<template>
-    <Button :interestfor="popoverHover">Popover</Button>
-    <Popover class="bottom my-2" popover="hint" :id="popoverHover">
-        <PopoverContent class="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
-            <Button class="ghosted accent-main justify-start w-full">Item 1</Button>
-            <Button class="ghosted accent-main justify-start w-full">Item 2</Button>
-        </PopoverContent>
-    </Popover>
-</template>
-```
-```jsx [winduum-react]
-import { useId } from 'react'
-import { Button } from '@/components/button'
-import { Popover, PopoverContent } from '@/components/popover'
-
-export function Example() {
-    const popoverHover = useId()
-
-    return (
-        <>
-            <Button interestfor={popoverHover}>Popover</Button>
-            <Popover className="bottom my-2" popover="hint" id={popoverHover}>
-                <PopoverContent className="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
-                    <Button className="ghosted accent-main justify-start w-full">Item 1</Button>
-                    <Button className="ghosted accent-main justify-start w-full">Item 2</Button>
-                </PopoverContent>
-            </Popover>
-        </>
-    )
-}
-```
+<<< @/../examples-stimulus/src/pages/components/popover/interest.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/popover/interest.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/popover/interest.tsx [winduum-react]
 :::
 
 ### Positioning fallback
@@ -175,63 +97,9 @@ the floating-ui positioning fallback in browsers without CSS Anchor Positioning.
 
 ::: code-group
 <<< @/public/examples/components/popover/api.html#body{} [winduum-elements]
-```html [winduum-stimulus]
-<div class="w-full flex flex-col items-center" data-controller="x-popover" data-x-popover-placement-value="bottom">
-    <button class="x-button" popovertarget="popoverApi" aria-controls="popoverApi" data-x-popover-target="action">Popover</button>
-    <div class="x-popover bottom my-2" popover id="popoverApi">
-        <div class="x-popover-content shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
-            <button class="x-button ghosted accent-main justify-start w-full">Item 1</button>
-            <button class="x-button ghosted accent-main justify-start w-full">Item 2</button>
-        </div>
-    </div>
-</div>
-```
-```vue [winduum-vue]
-<script setup>
-    import { useId } from 'vue'
-    import { Button } from '@/components/button'
-    import { Popover, PopoverContent } from '@/components/popover'
-
-    const popoverApi = useId()
-</script>
-
-<template>
-    <div class="w-full flex flex-col items-center">
-        <Button command="toggle-popover" :commandfor="popoverApi" :aria-controls="popoverApi">
-            Popover
-        </Button>
-        <Popover class="bottom my-2" popover :id="popoverApi" placement="bottom">
-            <PopoverContent class="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
-                <Button class="ghosted accent-main justify-start w-full">Item 1</Button>
-                <Button class="ghosted accent-main justify-start w-full">Item 2</Button>
-            </PopoverContent>
-        </Popover>
-    </div>
-</template>
-```
-```jsx [winduum-react]
-import { useId } from 'react'
-import { Button } from '@/components/button'
-import { Popover, PopoverContent } from '@/components/popover'
-
-export function Example() {
-    const popoverApi = useId()
-
-    return (
-        <div className="w-full flex flex-col items-center">
-            <Button command="toggle-popover" commandfor={popoverApi} aria-controls={popoverApi}>
-                Popover
-            </Button>
-            <Popover className="bottom my-2" popover id={popoverApi} placement="bottom">
-                <PopoverContent className="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
-                    <Button className="ghosted accent-main justify-start w-full">Item 1</Button>
-                    <Button className="ghosted accent-main justify-start w-full">Item 2</Button>
-                </PopoverContent>
-            </Popover>
-        </div>
-    )
-}
-```
+<<< @/../examples-stimulus/src/pages/components/popover/api.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/popover/api.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/popover/api.tsx [winduum-react]
 :::
 
 ## JavaScript API

@@ -4,4 +4,7 @@ node_modules
 docs/.vitepress/dist
 docs/.vitepress/cache
 docs/public/examples/
+docs/public/examples-stimulus/
+docs/public/examples-vue/
+docs/public/examples-react/
 examples/docs/

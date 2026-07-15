@@ -51,40 +51,11 @@ with `data-loading`.
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/basic.html"></iframe>
 
 ::: code-group
-```html [winduum]
-<button class="x-button">Button</button>
-<a class="x-button rounded-full" href="#">Button</a>
-```
-```html [winduum-elements]
-<button class="x-button" is="x-button">Button</button>
-<a class="x-button rounded-full" href="#" is="x-button-a">Button</a>
-```
-```html [winduum-stimulus]
-<button class="x-button" data-controller="x-button">Button</button>
-<a class="x-button rounded-full" href="#" data-controller="x-button">Button</a>
-```
-```vue [winduum-vue]
-<script setup lang="ts">
-    import { Button } from '@/components/button'
-</script>
-
-<template>
-  <Button>Button</Button>
-  <Button class="rounded-full">Button</Button>
-</template>
-```
-```jsx [winduum-react]
-import { Button } from "@/components/button"
-
-export function Example() {
-    return (
-        <>
-            <Button>Button</Button>
-            <Button className="rounded-full">Button</Button>
-        </>
-    )
-}
-```
+<<< @/public/examples/components/btn/basic.html#body{} [winduum]
+<<< @/public/examples/components/button/basic.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/button/basic.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/button/basic.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/button/basic.tsx [winduum-react]
 :::
 
 ### Flat

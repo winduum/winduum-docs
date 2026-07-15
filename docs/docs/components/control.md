@@ -61,40 +61,10 @@ actions for steppers, picker opening and tel country code mirroring.
 
 ::: code-group
 <<< @/public/examples/components/input/basic.html#body{} [winduum]
-```html [winduum-elements]
-<x-control class="x-control">
-    <input type="text">
-</x-control>
-```
-```html [winduum-stimulus]
-<div class="x-control" data-controller="x-control">
-    <input type="text">
-</div>
-```
-```vue [winduum-vue]
-<script setup lang="ts">
-    import { Control } from '@/components/control'
-</script>
-
-<template>
-    <Control>
-        <input type="text">
-    </Control>
-</template>
-```
-```jsx [winduum-react]
-import { Control } from "@/components/control"
-
-export function Example() {
-    return (
-        <>
-            <Control>
-                <input type="text" />
-            </Control>
-        </>
-    )
-}
-```
+<<< @/public/examples/components/control/basic.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/control/basic.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/control/basic.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/control/basic.tsx [winduum-react]
 :::
 
 ### Icon

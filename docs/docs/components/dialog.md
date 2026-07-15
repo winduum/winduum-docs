@@ -47,56 +47,9 @@ the [`closedby`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Ele
 
 ::: code-group
 <<< @/public/examples/components/dialog/basic.html#body{} [winduum]
-```vue [winduum-vue]
-<script setup>
-  import { useId } from 'vue'
-  import { Dialog, DialogContent } from '@/components/dialog'
-  import { Heading } from '@/components/heading'
-  import { Button } from '@/components/button'
-  
-  const dialogMain = useId()
-</script>
-
-<template>
-  <Button command="show-modal" :commandfor="dialogMain">
-    Open Dialog
-  </Button>
-  <Dialog :id="dialogMain">
-    <DialogContent>
-      <Heading>Hello there!</Heading>
-      <Button variant="muted" class="accent-main" command="close" :commandfor="dialogMain">
-        Close me!
-      </Button>
-    </DialogContent>
-  </Dialog>
-</template>
-```
-```jsx [winduum-react]
-import { useId } from "react"
-import { Dialog, DialogContent } from "@/components/dialog"
-import { Heading } from "@/components/heading"
-import { Button } from "@/components/button"
-
-export function Example() {
-    const dialogMain = useId()
-
-    return (
-        <>
-            <Button command="show-modal" commandfor={dialogMain}>
-                Open Dialog
-            </Button>
-            <Dialog id={dialogMain}>
-                <DialogContent>
-                    <Heading>Hello there!</Heading>
-                    <Button className="muted accent-main" command="close" commandfor={dialogMain}>
-                        Close me!
-                    </Button>
-                </DialogContent>
-            </Dialog>
-        </>
-    )
-}
-```
+<<< @/../examples-stimulus/src/pages/components/dialog/basic.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/dialog/basic.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/dialog/basic.tsx [winduum-react]
 :::
 
 ## Accessibility

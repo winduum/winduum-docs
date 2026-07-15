@@ -1,0 +1,18 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<div data-controller="invoke">
+<button class="x-button" data-action="click->invoke#action" data-invoke-action="x-drawer#show" data-invoke-target="#drawerTopElement" aria-controls="drawerTopElement" aria-expanded="false">Show drawer</button>
+<dialog data-controller="x-drawer" class="x-drawer" id="drawerTopElement" closedby="any" data-x-drawer-placement-value="top">
+    <div class="x-drawer-scroller flex flex-col snap-y snap-mandatory">
+        <nav class="x-drawer-content" data-x-drawer-target="content" style="--x-drawer-content-inline-size: 100dvw;--x-drawer-content-block-size: calc(100vh - 4rem);">
+            Drawer content
+            <button class="x-button muted" data-action="click->x-drawer#close">Close drawer</button>
+        </nav>
+    </div>
+</dialog>
+</div>
+<!-- #endregion body -->
+{% endblock %}
+
+

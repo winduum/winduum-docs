@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@tailwindcss/vite": "^4.0.0",
+    "@vituum/vite-plugin-liquid": "^1.1.0",
+    "@floating-ui/dom": "^1.6.13",
+    "interestfor": "^1.0.0",
+    "invokers-polyfill": "^1.0.3",
+    "tailwindcss": "^4.3.2",
+    "vite": "^6.0.11",
+    "vituum": "^1.1.1",
+    "winduum": "^3.0.0-next.16",
+    "winduum-stimulus": "https://github.com/winduum/winduum-stimulus/archive/c0af696887217b8b40addd2e2ca5f778816f653e.tar.gz"
+  }
+}

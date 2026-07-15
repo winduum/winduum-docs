@@ -1,8 +1,8 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<div class="x-range vertical h-48">
-    <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single">
-</div>
+<x-range class="x-range vertical h-48">
+    <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single" data-x-range-part="start">
+</x-range>
 
 <output class="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price" id="single">10 000</output>
 {% endblock %}
@@ -18,18 +18,9 @@
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    import { setValue, setOutputValue } from 'winduum/src/components/range/index.js'
+    import { Range } from 'winduum-elements/components/range/index.js'
 
-    const rangeSingle = document.querySelector('#range-single')
-
-    const setSingleValue = ({ currentTarget }) => {
-        setValue(currentTarget)
-
-        setOutputValue(currentTarget, document.querySelector('#single'))
-    }
-
-    setSingleValue({ currentTarget: rangeSingle })
-    rangeSingle.addEventListener('input', setSingleValue)
+    customElements.define('x-range', Range)
 </script>
 <!-- #endregion js -->
 {% endblock %}

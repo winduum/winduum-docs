@@ -42,62 +42,32 @@ changes.
 
 ::: code-group
 <<< @/public/examples/components/range/default.html#body{} [winduum-elements]
-```html [winduum-stimulus]
-<div class="x-range" data-controller="x-range">
-    <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single" data-x-range-target="start" data-action="input->x-range#setValue">
-</div>
-
-<output class="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price" id="single">10 000</output>
-```
-```vue [winduum-vue]
-<script setup lang="ts">
-    import { ref } from 'vue'
-    import { Range } from '@/components/range'
-
-    const startElement = ref<HTMLInputElement>()
-</script>
-
-<template>
-    <Range v-slot="{ setValue }" :refs="{ startElement }">
-        <input ref="startElement" type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single" @input="setValue">
-    </Range>
-
-    <output class="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price" id="single">10 000</output>
-</template>
-```
-```jsx [winduum-react]
-import { useRef } from "react"
-import { Range } from "@/components/range"
-
-export function Example() {
-    const startElement = useRef<HTMLInputElement>(null)
-
-    return (
-        <>
-            <Range refs={{ startElement }}>
-                {({ setValue }) => (
-                    <input ref={startElement} type="range" defaultValue="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single" onInput={setValue} />
-                )}
-            </Range>
-
-            <output className="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price" id="single">10 000</output>
-        </>
-    )
-}
-```
+<<< @/../examples-stimulus/src/pages/components/range/default.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/range/default.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/range/default.tsx [winduum-react]
 :::
 
 ### Multi
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/multi.html"></iframe>
 
-<<< @/public/examples/components/range/multi.html#body{} [winduum]
+::: code-group
+<<< @/public/examples/components/range/multi.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/range/multi.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/range/multi.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/range/multi.tsx [winduum-react]
+:::
 
 ### Vertical
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/vertical.html"></iframe>
 
-<<< @/public/examples/components/range/vertical.html#body{} [winduum]
+::: code-group
+<<< @/public/examples/components/range/vertical.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/range/vertical.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/range/vertical.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/range/vertical.tsx [winduum-react]
+:::
 
 ## JavaScript API
 

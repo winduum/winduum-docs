@@ -1,0 +1,18 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<div data-controller="invoke">
+<button class="x-button" data-action="click->invoke#action" data-invoke-action="x-drawer#show" data-invoke-target="#drawerNoScriptElement" aria-controls="drawerNoScriptElement" aria-expanded="false">Show drawer</button>
+<dialog data-controller="x-drawer" class="x-drawer noscript:starting:-translate-x-full noscript:not-open:-translate-x-full noscript:duration-500" id="drawerNoScriptElement" closedby="any">
+    <div class="x-drawer-scroller snap-x snap-mandatory noscript:after:content-none">
+        <nav class="x-drawer-content" data-x-drawer-target="content">
+            Drawer content
+            <button class="x-button muted" data-action="click->x-drawer#close">Close drawer</button>
+        </nav>
+    </div>
+</dialog>
+</div>
+<!-- #endregion body -->
+{% endblock %}
+
+

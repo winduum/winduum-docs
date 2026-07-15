@@ -1,9 +1,9 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<details class="x-details group bg-body-secondary p-4 rounded-md">
+<details class="x-details group bg-body-secondary p-4 rounded-md" is="x-details">
     <summary class="w-fit flex">
         <label class="x-check">
-            <input type="checkbox" data-action="toggleDetailsCheckbox" autocomplete="off">
+            <input type="checkbox" autocomplete="off">
             Fill more
         </label>
     </summary>
@@ -29,11 +29,14 @@
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    document.querySelectorAll('[data-action="toggleDetailsCheckbox"]').forEach(input => {
-        input.addEventListener('change', ({ target }) => {
-            target.closest('details').toggleAttribute('open', target.checked)
-        })
-    })
+    import { supportsIs } from 'webuum/supports'
+    import { Details } from 'winduum-elements/components/details/index.js'
+
+    if (!supportsIs()) {
+        await import('@webreflection/custom-elements-builtin')
+    }
+
+    customElements.define('x-details', Details, { extends: 'details' })
 </script>
 <!-- #endregion js -->
 {% endblock %}

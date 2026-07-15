@@ -1,0 +1,31 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<details class="x-details group bg-body-secondary p-4 rounded-md" data-controller="x-details">
+    <summary class="w-fit flex">
+        <label class="x-check">
+            <input type="checkbox" autocomplete="off" data-action="change->x-details#toggleDetails">
+            Fill more
+        </label>
+    </summary>
+    <div class="x-control max-w-96 mt-4">
+        <input>
+    </div>
+</details>
+<!-- #endregion body -->
+{% endblock %}
+
+{% block head %}
+<style>
+  body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  details {
+    width: 100%;
+  }
+</style>
+{% endblock %}
+
+

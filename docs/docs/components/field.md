@@ -36,49 +36,7 @@ icon when the control is invalid.
 
 ::: code-group
 <<< @/public/examples/components/field/basic.html#body{} [winduum-elements]
-```html [winduum-stimulus]
-<div class="x-field" data-controller="x-field">
-    <label class="x-label">Label</label>
-    <div class="x-control" data-controller="x-control">
-        <input type="text" required>
-    </div>
-    <em class="x-info">Info message</em>
-</div>
-```
-```vue [winduum-vue]
-<script setup lang="ts">
-    import { Field } from '@/components/field'
-    import { Label } from '@/components/label'
-    import { Control } from '@/components/control'
-    import { Info } from '@/components/info'
-</script>
-
-<template>
-    <Field>
-        <Label>Label</Label>
-        <Control>
-            <input type="text" required>
-        </Control>
-        <Info as="em">Info message</Info>
-    </Field>
-</template>
-```
-```jsx [winduum-react]
-import { Field } from "@/components/field"
-import { Label } from "@/components/label"
-import { Control } from "@/components/control"
-import { Info } from "@/components/info"
-
-export function Example() {
-    return (
-        <Field>
-            <Label>Label</Label>
-            <Control>
-                <input type="text" required />
-            </Control>
-            <Info as="em">Info message</Info>
-        </Field>
-    )
-}
-```
+<<< @/../examples-stimulus/src/pages/components/field/basic.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/field/basic.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/field/basic.tsx [winduum-react]
 :::

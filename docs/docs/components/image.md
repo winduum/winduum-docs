@@ -37,33 +37,9 @@ The Image script removes the skeleton placeholder once the wrapped media is read
 
 ::: code-group
 <<< @/public/examples/components/image/ratio.html#body{} [winduum-elements]
-```html [winduum-stimulus]
-<div class="x-image before:skeleton" data-controller="x-image">
-    <img class="aspect-[3/2]" src="https://placehold.co/600x400/webp" loading="lazy" alt="">
-</div>
-```
-```vue [winduum-vue]
-<script setup lang="ts">
-    import { Image } from '@/components/image'
-</script>
-
-<template>
-    <Image class="before:skeleton">
-        <img class="aspect-[3/2]" src="https://placehold.co/600x400/webp" loading="lazy" alt="">
-    </Image>
-</template>
-```
-```jsx [winduum-react]
-import { Image } from '@/components/image'
-
-export function Example() {
-    return (
-        <Image className="before:skeleton">
-            <img className="aspect-[3/2]" src="https://placehold.co/600x400/webp" loading="lazy" alt="" />
-        </Image>
-    )
-}
-```
+<<< @/../examples-stimulus/src/pages/components/image/ratio.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/image/ratio.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/image/ratio.tsx [winduum-react]
 :::
 
 ### Picture
@@ -72,36 +48,9 @@ export function Example() {
 
 ::: code-group
 <<< @/public/examples/components/image/picture.html#body{} [winduum-elements]
-```html [winduum-stimulus]
-<picture class="x-image before:skeleton" data-controller="x-image">
-    <source srcset="https://placehold.co/250x250/333333/webp" media="(min-width: 40rem)">
-    <img class="aspect-[3/2]" src="https://placehold.co/150x150/777777/webp" loading="lazy" alt="">
-</picture>
-```
-```vue [winduum-vue]
-<script setup lang="ts">
-    import { Image } from '@/components/image'
-</script>
-
-<template>
-    <Image class="before:skeleton" as="picture">
-        <source srcset="https://placehold.co/250x250/333333/webp" media="(min-width: 40rem)">
-        <img class="aspect-[3/2]" src="https://placehold.co/150x150/777777/webp" loading="lazy" alt="">
-    </Image>
-</template>
-```
-```jsx [winduum-react]
-import { Image } from '@/components/image'
-
-export function Example() {
-    return (
-        <Image className="before:skeleton" as="picture">
-            <source srcSet="https://placehold.co/250x250/333333/webp" media="(min-width: 40rem)" />
-            <img className="aspect-[3/2]" src="https://placehold.co/150x150/777777/webp" loading="lazy" alt="" />
-        </Image>
-    )
-}
-```
+<<< @/../examples-stimulus/src/pages/components/image/picture.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/image/picture.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/image/picture.tsx [winduum-react]
 :::
 
 ### Rounded
@@ -129,38 +78,10 @@ export function Example() {
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/image/transparent.html"></iframe>
 
 ::: code-group
-```html [winduum-elements]
-<x-image class="x-image before:skeleton">
-    <img class="aspect-[3/2]" src="https://picsum.photos/seed/picsum/300/200" loading="lazy" alt="">
-</x-image>
-```
-```html [winduum-stimulus]
-<div class="x-image before:skeleton" data-controller="x-image">
-    <img class="aspect-[3/2]" src="https://picsum.photos/seed/picsum/300/200" loading="lazy" alt="">
-</div>
-```
-```vue [winduum-vue]
-<script setup lang="ts">
-    import { Image } from '@/components/image'
-</script>
-
-<template>
-    <Image class="before:skeleton">
-        <img class="aspect-[3/2]" src="https://picsum.photos/seed/picsum/300/200" loading="lazy" alt="">
-    </Image>
-</template>
-```
-```jsx [winduum-react]
-import { Image } from '@/components/image'
-
-export function Example() {
-    return (
-        <Image className="before:skeleton">
-            <img className="aspect-[3/2]" src="https://picsum.photos/seed/picsum/300/200" loading="lazy" alt="" />
-        </Image>
-    )
-}
-```
+<<< @/public/examples/components/image/skeleton.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/image/skeleton.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/image/skeleton.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/image/skeleton.tsx [winduum-react]
 :::
 
 ### Iframe
