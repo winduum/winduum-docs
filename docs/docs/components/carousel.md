@@ -87,14 +87,14 @@ The Carousel script keeps counters, progress, pagination and scroll-edge state i
 
 <template>
     <Carousel
-        v-slot="{ scrollPrev, scrollNext }"
+        v-slot="{ scrollPrev, scrollNext, onScroll }"
         :refs="{ contentElement, prevElement, nextElement }"
         class="flex gap-4 items-center w-full"
     >
         <button ref="prevElement" class="x-button circle muted" aria-label="Prev" disabled @click="scrollPrev">
             Prev
         </button>
-        <div ref="contentElement" class="x-carousel-content gap-2 w-full" tabindex="-1">
+        <div ref="contentElement" class="x-carousel-content gap-2 w-full" tabindex="-1" @scroll="onScroll">
             <div class="x-image w-full rounded-md aspect-square">
                 <img src="https://placehold.co/512" alt="" loading="lazy">
             </div>
@@ -122,12 +122,12 @@ export function Example() {
             className="flex gap-4 items-center w-full"
             refs={{ contentElement, prevElement, nextElement }}
         >
-            {({ scrollPrev, scrollNext }) => (
+            {({ scrollPrev, scrollNext, onScroll }) => (
                 <>
                     <button ref={prevElement} className="x-button circle muted" aria-label="Prev" disabled onClick={scrollPrev}>
                         Prev
                     </button>
-                    <div ref={contentElement} className="x-carousel-content gap-2 w-full" tabIndex={-1}>
+                    <div ref={contentElement} className="x-carousel-content gap-2 w-full" tabIndex={-1} onScroll={onScroll}>
                         <div className="x-image w-full rounded-md aspect-square">
                             <img src="https://placehold.co/512" alt="" loading="lazy" />
                         </div>
@@ -186,34 +186,33 @@ export function Example() {
     import { Carousel } from '@/components/carousel'
 
     const contentElement = ref<HTMLElement>()
-    const counterMinElement = ref<HTMLElement>()
-    const counterMaxElement = ref<HTMLElement>()
-    const paginationElement = ref<HTMLElement>()
-    const progressElement = ref<HTMLProgressElement>()
     const prevElement = ref<HTMLButtonElement>()
     const nextElement = ref<HTMLButtonElement>()
+    const paginationElement = ref<HTMLElement>()
 
     const slides = [1, 2, 3, 4, 5, 6]
 </script>
 
 <template>
     <Carousel
-        v-slot="{ scrollPrev, scrollNext }"
-        :refs="{ contentElement, counterMinElement, counterMaxElement, paginationElement, progressElement, prevElement, nextElement }"
+        v-slot="{ scrollPrev, scrollNext, onScroll }"
+        :refs="{ contentElement, prevElement, nextElement, paginationElement }"
         class="flex flex-col gap-4"
         role="region"
         aria-roledescription="carousel"
         aria-label="Carousel gallery"
     >
-        <div class="flex justify-center" aria-live="polite">
-            <span ref="counterMinElement"></span>/<span ref="counterMaxElement"></span>
-        </div>
         <div class="flex gap-4 items-center">
             <button ref="prevElement" class="x-button circle muted" aria-label="Prev" disabled @click="scrollPrev">
                 Prev
             </button>
-            <div ref="contentElement" class="x-carousel-content gap-4 w-full" tabindex="-1">
-                <div v-for="slide in slides" :key="slide" class="x-image rounded-md">
+            <div
+                ref="contentElement"
+                class="x-carousel-content gap-4 w-full"
+                tabindex="-1"
+                @scroll="onScroll($event, { pagination: { element: paginationElement } })"
+            >
+                <div v-for="slide in slides" :key="slide" class="x-image rounded-md w-full">
                     <img src="https://placehold.co/160x240" alt="" loading="lazy" width="160" height="240">
                 </div>
             </div>
@@ -221,8 +220,14 @@ export function Example() {
                 Next
             </button>
         </div>
-        <nav ref="paginationElement" class="justify-center flex gap-1.5 h-4 py-4" aria-label="Carousel navigation"></nav>
-        <progress ref="progressElement" class="x-progress sm" value="0" max="100" aria-label="Carousel progress"></progress>
+        <div ref="paginationElement" class="justify-center flex gap-1.5 h-4 py-4" aria-hidden="true">
+            <div
+                v-for="(slide, index) in slides"
+                :key="slide"
+                class="dot size-2 bg-body-secondary transition data-active:bg-accent"
+                :data-active="index === 0 ? true : undefined"
+            ></div>
+        </div>
     </Carousel>
 </template>
 ```
@@ -234,37 +239,34 @@ const slides = [1, 2, 3, 4, 5, 6]
 
 export function Example() {
     const contentElement = useRef<HTMLDivElement>(null)
-    const counterMinElement = useRef<HTMLSpanElement>(null)
-    const counterMaxElement = useRef<HTMLSpanElement>(null)
-    const paginationElement = useRef<HTMLElement>(null)
-    const progressElement = useRef<HTMLProgressElement>(null)
     const prevElement = useRef<HTMLButtonElement>(null)
     const nextElement = useRef<HTMLButtonElement>(null)
-
-    const refs = {
-        contentElement,
-        counterMinElement,
-        counterMaxElement,
-        paginationElement,
-        progressElement,
-        prevElement,
-        nextElement
-    }
+    const paginationElement = useRef<HTMLDivElement>(null)
 
     return (
-        <Carousel className="flex flex-col gap-4" refs={refs} role="region" aria-roledescription="carousel" aria-label="Carousel gallery">
-            {({ scrollPrev, scrollNext }) => (
+        <Carousel
+            className="flex flex-col gap-4"
+            refs={{ contentElement, prevElement, nextElement, paginationElement }}
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Carousel gallery"
+        >
+            {({ scrollPrev, scrollNext, onScroll }) => (
                 <>
-                    <div className="flex justify-center" aria-live="polite">
-                        <span ref={counterMinElement}></span>/<span ref={counterMaxElement}></span>
-                    </div>
                     <div className="flex gap-4 items-center">
                         <button ref={prevElement} className="x-button circle muted" aria-label="Prev" disabled onClick={scrollPrev}>
                             Prev
                         </button>
-                        <div ref={contentElement} className="x-carousel-content gap-4 w-full" tabIndex={-1}>
+                        <div
+                            ref={contentElement}
+                            className="x-carousel-content gap-4 w-full"
+                            tabIndex={-1}
+                            onScroll={(event) => onScroll(event, {
+                                pagination: { element: paginationElement.current ?? undefined }
+                            })}
+                        >
                             {slides.map((slide) => (
-                                <div key={slide} className="x-image rounded-md">
+                                <div key={slide} className="x-image rounded-md w-full">
                                     <img src="https://placehold.co/160x240" alt="" loading="lazy" width="160" height="240" />
                                 </div>
                             ))}
@@ -273,8 +275,15 @@ export function Example() {
                             Next
                         </button>
                     </div>
-                    <nav ref={paginationElement} className="justify-center flex gap-1.5 h-4 py-4" aria-label="Carousel navigation"></nav>
-                    <progress ref={progressElement} className="x-progress sm" value="0" max="100" aria-label="Carousel progress"></progress>
+                    <div ref={paginationElement} className="justify-center flex gap-1.5 h-4 py-4" aria-hidden="true">
+                        {slides.map((slide, index) => (
+                            <div
+                                key={slide}
+                                className="dot size-2 bg-body-secondary transition data-active:bg-accent"
+                                data-active={index === 0 ? true : undefined}
+                            ></div>
+                        ))}
+                    </div>
                 </>
             )}
         </Carousel>
