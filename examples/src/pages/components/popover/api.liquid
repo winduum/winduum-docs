@@ -3,8 +3,9 @@
     <div class="w-full flex flex-col items-center">
         <button class="x-button" command="toggle-popover" commandfor="popoverApi" aria-controls="popoverApi">Popover</button>
         <x-popover class="x-popover bottom my-2" popover id="popoverApi" data-placement="bottom">
-            <div class="x-popover-content shadow dark:bg-body-secondary p-2">
-                <input type="text">
+            <div class="x-popover-content shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
+                <button class="x-button ghosted accent-main justify-start w-full">Item 1</button>
+                <button class="x-button ghosted accent-main justify-start w-full">Item 2</button>
             </div>
         </x-popover>
     </div>

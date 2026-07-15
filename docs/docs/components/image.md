@@ -167,11 +167,7 @@ export function Example() {
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/image/iframe.html" style="height: 25rem"></iframe>
 
-```html
-<x-image class="x-image">
-    <iframe class="aspect-square" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10243.539317839937!2d14.3677486!3d50.0697185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x66f5877a189baf0d!2sTvorba+webov%C3%BDch+str%C3%A1nek+-+New+Logic+Studio!5e0!3m2!1sen!2scz!4v1547215701439" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-</x-image>
-```
+<<< @/public/examples/components/image/iframe.html#body{}
 
 <style>
     iframe {

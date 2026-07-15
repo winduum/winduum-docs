@@ -179,8 +179,9 @@ the floating-ui positioning fallback in browsers without CSS Anchor Positioning.
 <div class="w-full flex flex-col items-center" data-controller="x-popover" data-x-popover-placement-value="bottom">
     <button class="x-button" popovertarget="popoverApi" aria-controls="popoverApi" data-x-popover-target="action">Popover</button>
     <div class="x-popover bottom my-2" popover id="popoverApi">
-        <div class="x-popover-content shadow dark:bg-body-secondary p-2">
-            <input type="text">
+        <div class="x-popover-content shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
+            <button class="x-button ghosted accent-main justify-start w-full">Item 1</button>
+            <button class="x-button ghosted accent-main justify-start w-full">Item 2</button>
         </div>
     </div>
 </div>
@@ -200,8 +201,9 @@ the floating-ui positioning fallback in browsers without CSS Anchor Positioning.
             Popover
         </Button>
         <Popover class="bottom my-2" popover :id="popoverApi" placement="bottom">
-            <PopoverContent class="shadow dark:bg-body-secondary p-2">
-                <input type="text">
+            <PopoverContent class="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
+                <Button class="ghosted accent-main justify-start w-full">Item 1</Button>
+                <Button class="ghosted accent-main justify-start w-full">Item 2</Button>
             </PopoverContent>
         </Popover>
     </div>
@@ -221,8 +223,9 @@ export function Example() {
                 Popover
             </Button>
             <Popover className="bottom my-2" popover id={popoverApi} placement="bottom">
-                <PopoverContent className="shadow dark:bg-body-secondary p-2">
-                    <input type="text" />
+                <PopoverContent className="shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
+                    <Button className="ghosted accent-main justify-start w-full">Item 1</Button>
+                    <Button className="ghosted accent-main justify-start w-full">Item 2</Button>
                 </PopoverContent>
             </Popover>
         </div>
