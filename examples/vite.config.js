@@ -27,6 +27,7 @@ export default defineConfig({
         target: 'esnext',
         manifest: false,
         modulePreload: false,
+        emptyOutDir: true,
         outDir: resolve(process.cwd(), '../docs/public/examples')
     }
 })
