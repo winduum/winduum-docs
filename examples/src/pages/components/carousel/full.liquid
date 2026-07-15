@@ -1,66 +1,52 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
 <x-carousel class="x-carousel flex flex-col gap-4" id="fullCarousel" role="region" aria-roledescription="carousel" aria-label="Carousel gallery">
+    <div class="flex justify-center" aria-live="polite">
+        <span data-x-carousel-part="counterMin"></span>/<span data-x-carousel-part="counterMax"></span>
+    </div>
     <div class="flex gap-4 items-center">
-        <button class="x-button circle muted" data-x-carousel-part="prev" command="--scrollPrev" commandfor="fullCarousel" aria-controls="fullCarousel" aria-label="Prev" disabled>
+        <button class="x-button circle muted" data-x-carousel-part="prev" command="--scrollPrev" commandfor="fullCarousel" aria-controls="fullCarouselContent" aria-label="Prev" disabled>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
             </svg>
         </button>
-        <div class="x-carousel-content gap-4 w-full" tabindex="-1" data-x-carousel-part="content">
-            <div class="x-image rounded-md" id="slide-1" data-snapped>
-                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+        <div class="x-carousel-content gap-4 w-full" id="fullCarouselContent" tabindex="-1" data-x-carousel-part="content">
+            <div class="x-image rounded-md">
+                <img src="https://placehold.co/160x240" alt="" loading="lazy" width="160" height="240">
             </div>
-            <div class="x-image rounded-md" id="slide-2">
-                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+            <div class="x-image rounded-md">
+                <img src="https://placehold.co/160x240" alt="" loading="lazy" width="160" height="240">
             </div>
-            <div class="x-image rounded-md" id="slide-3">
-                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+            <div class="x-image rounded-md">
+                <img src="https://placehold.co/160x240" alt="" loading="lazy" width="160" height="240">
             </div>
-            <div class="x-image rounded-md" id="slide-4">
-                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+            <div class="x-image rounded-md">
+                <img src="https://placehold.co/160x240" alt="" loading="lazy" width="160" height="240">
             </div>
-            <div class="x-image rounded-md" id="slide-5">
-                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+            <div class="x-image rounded-md">
+                <img src="https://placehold.co/160x240" alt="" loading="lazy" width="160" height="240">
             </div>
-            <div class="x-image rounded-md" id="slide-6">
-                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+            <div class="x-image rounded-md">
+                <img src="https://placehold.co/160x240" alt="" loading="lazy" width="160" height="240">
             </div>
         </div>
-        <button class="x-button circle muted" data-x-carousel-part="next" command="--scrollNext" commandfor="fullCarousel" aria-controls="fullCarousel" aria-label="Next">
+        <button class="x-button circle muted" data-x-carousel-part="next" command="--scrollNext" commandfor="fullCarousel" aria-controls="fullCarouselContent" aria-label="Next">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
         </button>
     </div>
-    <nav class="x-carousel-marker-group justify-center flex gap-1.5 py-4" data-x-carousel-part="markerGroup" aria-label="Carousel navigation">
-        <a href="#slide-1" class="x-carousel-marker" aria-label="Slide 1" data-x-carousel-part="marker" aria-current="true"></a>
-        <a href="#slide-2" class="x-carousel-marker" aria-label="Slide 2" data-x-carousel-part="marker"></a>
-        <a href="#slide-3" class="x-carousel-marker" aria-label="Slide 3" data-x-carousel-part="marker"></a>
-        <a href="#slide-4" class="x-carousel-marker" aria-label="Slide 4" data-x-carousel-part="marker"></a>
-        <a href="#slide-5" class="x-carousel-marker" aria-label="Slide 5" data-x-carousel-part="marker"></a>
-        <a href="#slide-6" class="x-carousel-marker" aria-label="Slide 6" data-x-carousel-part="marker"></a>
-    </nav>
+    <nav class="justify-center flex gap-1.5 h-4 py-4" data-x-carousel-part="pagination" aria-label="Carousel navigation"></nav>
+    <progress class="x-progress sm" value="0" max="100" data-x-carousel-part="progress" aria-label="Carousel progress"></progress>
 </x-carousel>
 {% endblock %}
 
 {% block head %}
 <style>
+  @import "winduum/src/components/carousel/index.css";
+
   .x-carousel {
     max-width: 60rem
-  }
-
-  .x-carousel-marker {
-    width: 0.75rem;
-    height: 0.75rem;
-    border: 2px solid var(--color-primary);
-    border-radius: 50%;
-    display: block;
-    cursor: pointer;
-
-    &:is([aria-current]) {
-      background-color: var(--color-primary);
-    }
   }
 </style>
 {% endblock %}

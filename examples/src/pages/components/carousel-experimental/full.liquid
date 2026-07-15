@@ -1,0 +1,83 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<x-carousel-experimental class="x-carousel-experimental flex flex-col gap-4" id="fullCarouselExperimental" role="region" aria-roledescription="carousel" aria-label="Carousel gallery">
+    <div class="flex gap-4 items-center">
+        <button class="x-button circle muted" data-x-carousel-experimental-part="prev" command="--scrollPrev" commandfor="fullCarouselExperimental" aria-controls="fullCarouselExperimental" aria-label="Prev" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+            </svg>
+        </button>
+        <div class="x-carousel-experimental-content gap-4 w-full" tabindex="-1" data-x-carousel-experimental-part="content">
+            <div class="x-image rounded-md" id="slide-1" data-snapped>
+                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+            </div>
+            <div class="x-image rounded-md" id="slide-2">
+                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+            </div>
+            <div class="x-image rounded-md" id="slide-3">
+                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+            </div>
+            <div class="x-image rounded-md" id="slide-4">
+                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+            </div>
+            <div class="x-image rounded-md" id="slide-5">
+                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+            </div>
+            <div class="x-image rounded-md" id="slide-6">
+                <img src="https://placehold.co/320x240" alt="" loading="lazy" width="320" height="240">
+            </div>
+        </div>
+        <button class="x-button circle muted" data-x-carousel-experimental-part="next" command="--scrollNext" commandfor="fullCarouselExperimental" aria-controls="fullCarouselExperimental" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+        </button>
+    </div>
+    <nav class="x-carousel-experimental-marker-group justify-center flex gap-1.5 py-4" data-x-carousel-experimental-part="markerGroup" aria-label="Carousel navigation">
+        <a href="#slide-1" class="x-carousel-experimental-marker" aria-label="Slide 1" data-x-carousel-experimental-part="marker" aria-current="true"></a>
+        <a href="#slide-2" class="x-carousel-experimental-marker" aria-label="Slide 2" data-x-carousel-experimental-part="marker"></a>
+        <a href="#slide-3" class="x-carousel-experimental-marker" aria-label="Slide 3" data-x-carousel-experimental-part="marker"></a>
+        <a href="#slide-4" class="x-carousel-experimental-marker" aria-label="Slide 4" data-x-carousel-experimental-part="marker"></a>
+        <a href="#slide-5" class="x-carousel-experimental-marker" aria-label="Slide 5" data-x-carousel-experimental-part="marker"></a>
+        <a href="#slide-6" class="x-carousel-experimental-marker" aria-label="Slide 6" data-x-carousel-experimental-part="marker"></a>
+    </nav>
+</x-carousel-experimental>
+{% endblock %}
+
+{% block head %}
+<style>
+  @import "winduum/src/components/carousel-experimental/index.css";
+
+  .x-carousel-experimental {
+    max-width: 60rem
+  }
+
+  .x-carousel-experimental-marker {
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+
+    &:is([aria-current]) {
+      background-color: var(--color-primary);
+    }
+  }
+</style>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { Carousel } from 'winduum-elements/components/carousel-experimental/index.js'
+
+    customElements.define('x-carousel-experimental', Carousel)
+
+    if (!('command' in HTMLButtonElement.prototype)) {
+        const { apply } = await import('invokers-polyfill/fn')
+        apply()
+    }
+</script>
+<!-- #endregion js -->
+{% endblock %}

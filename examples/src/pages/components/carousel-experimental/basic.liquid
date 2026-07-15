@@ -1,12 +1,12 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<x-carousel class="x-carousel flex gap-4 items-center w-full" id="basicCarousel">
-    <button class="x-button circle muted" data-x-carousel-part="prev" command="--scrollPrev" commandfor="basicCarousel" aria-controls="basicCarouselContent" aria-label="Prev" disabled>
+<x-carousel-experimental class="x-carousel-experimental flex gap-4 items-center w-full" id="basicCarouselExperimental">
+    <button class="x-button circle muted" data-x-carousel-experimental-part="prev" command="--scrollPrev" commandfor="basicCarouselExperimental" aria-controls="basicCarouselExperimental" aria-label="Prev" disabled>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
         </svg>
     </button>
-    <div class="x-carousel-content gap-2 w-full" id="basicCarouselContent" tabindex="-1" data-x-carousel-part="content">
+    <div class="x-carousel-experimental-content gap-2 w-full" tabindex="-1" data-x-carousel-experimental-part="content">
         <div class="x-image w-full rounded-md aspect-square">
             <img src="https://placehold.co/512" alt="" loading="lazy">
         </div>
@@ -14,19 +14,19 @@
             <img src="https://placehold.co/512" alt="" loading="lazy">
         </div>
     </div>
-    <button class="x-button circle muted" data-x-carousel-part="next" command="--scrollNext" commandfor="basicCarousel" aria-controls="basicCarouselContent" aria-label="Next">
+    <button class="x-button circle muted" data-x-carousel-experimental-part="next" command="--scrollNext" commandfor="basicCarouselExperimental" aria-controls="basicCarouselExperimental" aria-label="Next">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
         </svg>
     </button>
-</x-carousel>
+</x-carousel-experimental>
 {% endblock %}
 
 {% block head %}
 <style>
-    @import "winduum/src/components/carousel/index.css";
+    @import "winduum/src/components/carousel-experimental/index.css";
 
-    .x-carousel {
+    .x-carousel-experimental {
       max-width: 22rem
     }
 
@@ -36,12 +36,13 @@
 </style>
 {% endblock %}
 
+
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    import { Carousel } from 'winduum-elements/components/carousel/index.js'
+    import { Carousel } from 'winduum-elements/components/carousel-experimental/index.js'
 
-    customElements.define('x-carousel', Carousel)
+    customElements.define('x-carousel-experimental', Carousel)
 
     if (!('command' in HTMLButtonElement.prototype)) {
         const { apply } = await import('invokers-polyfill/fn')
