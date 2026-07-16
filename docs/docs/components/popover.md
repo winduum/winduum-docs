@@ -101,6 +101,19 @@ the floating-ui positioning fallback in browsers without CSS Anchor Positioning.
 <<< @/../examples-react/src/pages/components/popover/api.tsx [winduum-react]
 :::
 
+### Tooltip Popover
+
+Uses the `tooltip` variant with an interest-triggered hint popover. Setting `interest-delay` to `0s` shows it immediately on hover or keyboard focus. The component integrations also apply the floating-ui positioning fallback in browsers without CSS Anchor Positioning.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/tooltip.html"></iframe>
+
+::: code-group
+<<< @/public/examples/components/popover/tooltip.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/popover/tooltip.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/popover/tooltip.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/popover/tooltip.tsx [winduum-react]
+:::
+
 ## JavaScript API
 
 The core popover component needs no JavaScript — use the native
