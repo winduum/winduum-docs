@@ -38,8 +38,8 @@ Include CSS file with the `@utility` at-rule.
 <a href="#" class="link">Link</a>
 ```
 
-or with a custom hover color
+or with a custom accent color
 
 ```html
-<a href="#" class="link [--link-hover-color:var(--color-red-500)]">Link</a>
+<a href="#" class="link accent-red-500">Link</a>
 ```
