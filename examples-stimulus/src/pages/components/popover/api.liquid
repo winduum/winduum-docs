@@ -2,7 +2,7 @@
 {% block %}
 <!-- #region body -->
     <div class="w-full flex flex-col items-center">
-        <button class="x-button" popovertarget="popoverApi" aria-controls="popoverApi">Popover</button>
+        <button class="x-button" command="toggle-popover" commandfor="popoverApi">Popover</button>
         <div class="x-popover bottom my-2" popover id="popoverApi" data-controller="x-popover" data-x-popover-placement-value="bottom">
             <div class="x-popover-content shadow dark:bg-body-secondary p-2 w-32 flex flex-col">
                 <button class="x-button ghosted accent-main justify-start w-full">Item 1</button>
@@ -20,5 +20,4 @@
   }
 </style>
 {% endblock %}
-
 

@@ -8,7 +8,7 @@
 
 <template>
     <div class="w-full flex flex-col items-center">
-        <Button command="toggle-popover" :commandfor="popoverApi" :aria-controls="popoverApi">
+        <Button command="toggle-popover" :commandfor="popoverApi">
             Popover
         </Button>
         <Popover class="bottom my-2" popover :id="popoverApi" placement="bottom">
@@ -19,4 +19,3 @@
         </Popover>
     </div>
 </template>
-

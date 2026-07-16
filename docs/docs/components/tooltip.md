@@ -7,6 +7,8 @@ Tooltip can be used for a little info hint on hover or focus.
 
 It's a pure CSS solution — the tooltip text comes from the `aria-label` attribute and is rendered via the `::before` pseudo-element, so it stays accessible and needs no JavaScript. Placement is controlled with the `tooltip-*` tokens and appearance can be customized via the `--x-tooltip-*` props.
 
+For complete accessibility, prefer the [Popover tooltip variant](/docs/components/popover#interest-popover) using the [`interestfor`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/interestfor) attribute.
+
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/tooltip/basic.html" style="margin: 1.5rem 0"></iframe>
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/tooltip" />

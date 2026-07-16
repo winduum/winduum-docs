@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vituum from 'vituum'
 import tailwindcss from '@tailwindcss/vite'
 import framework from '@vitejs/plugin-react'
+import { examplesIndex } from '../examples-index-plugin.js'
 
 const htmlPlugin = () => ({
     name: 'html-transform',
@@ -30,7 +31,10 @@ export default defineConfig({
             }
         ]
     },
-    plugins: [vituum(), framework(), tailwindcss(), htmlPlugin()],
+    plugins: [vituum(), framework(), tailwindcss(), examplesIndex({
+        pagesDirectory: resolve(process.cwd(), 'src/pages'),
+        extension: '.html'
+    }), htmlPlugin()],
     build: {
         target: 'esnext',
         manifest: false,

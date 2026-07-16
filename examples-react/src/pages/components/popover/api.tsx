@@ -7,7 +7,7 @@ export function Example() {
 
     return (
         <div className="w-full flex flex-col items-center">
-            <Button command="toggle-popover" commandfor={popoverApi} aria-controls={popoverApi}>
+            <Button command="toggle-popover" commandfor={popoverApi}>
                 Popover
             </Button>
             <Popover className="bottom my-2" popover="auto" id={popoverApi} placement="bottom">

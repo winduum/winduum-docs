@@ -1,5 +1,10 @@
 {
   "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@vituum/vite-plugin-liquid": "^1.1.0",
     "@tailwindcss/vite": "^4.0.0",

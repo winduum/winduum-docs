@@ -7,7 +7,7 @@
 </script>
 
 <template>
-    <Button command="toggle-popover" :commandfor="popoverBasic" :aria-controls="popoverBasic">
+    <Button command="toggle-popover" :commandfor="popoverBasic">
         Popover
     </Button>
     <Popover class="bottom my-2" popover :id="popoverBasic">

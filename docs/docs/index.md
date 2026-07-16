@@ -47,7 +47,14 @@ It's optional but recommended to leverage the full functionality of the library!
 @import "winduum/src/base/breakpoints.css";
 @import "winduum/src/base/keyframes.css";
 @import "winduum/src/base/transitions.css";
+
+/* paths are relative to this stylesheet */
+@source "../../node_modules/winduum/src";
+@source "../../node_modules/winduum-elements";
 ```
+
+Tailwind CSS excludes dependencies from automatic source detection. Keep the first `@source` directive and replace
+`winduum-elements` with the integration used by your project: `winduum-stimulus`, `winduum-vue` or `winduum-react`.
 
 Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation/using-vite) docs.
 

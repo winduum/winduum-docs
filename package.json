@@ -2,8 +2,8 @@
   "type": "module",
   "scripts": {
     "postinstall": "npm --prefix examples install && npm --prefix examples-stimulus install && npm --prefix examples-vue install && npm --prefix examples-react install",
-    "docs:dev": "npm run examples:build && vitepress dev docs",
-    "docs:build": "npm run examples:build && vitepress build docs",
+    "docs:dev": "npm run vituum:build && vitepress dev docs",
+    "docs:build": "npm run vituum:build && vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "examples:build": "npm run vituum:build && npm run vituum-stimulus:build && npm run vituum-vue:build && npm run vituum-react:build",
     "vituum:dev": "cd examples && npx vite",

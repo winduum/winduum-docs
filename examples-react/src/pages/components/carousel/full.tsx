@@ -21,7 +21,9 @@ export function Example() {
                 <>
                     <div className="flex gap-4 items-center">
                         <button ref={prevElement} className="x-button circle muted" aria-label="Prev" disabled onClick={scrollPrev}>
-                            Prev
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                            </svg>
                         </button>
                         <div
                             ref={contentElement}
@@ -38,7 +40,9 @@ export function Example() {
                             ))}
                         </div>
                         <button ref={nextElement} className="x-button circle muted" aria-label="Next" onClick={scrollNext}>
-                            Next
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
                         </button>
                     </div>
                     <div ref={paginationElement} className="justify-center flex gap-1.5 h-4 py-4" aria-hidden="true">
@@ -55,4 +59,3 @@ export function Example() {
         </Carousel>
     )
 }
-

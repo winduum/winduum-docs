@@ -40,6 +40,7 @@ Where CSS Anchor Positioning isn't supported, use the [floating-ui fallback help
 ### Variants
 * <LinkGh name="default" path="components/popover" />
 * <LinkGh name="content" path="components/popover" />
+* <LinkGh name="tooltip" path="components/popover" />
 
 ### Props
 * <LinkGh name="default" path="components/popover/props" />
@@ -69,7 +70,6 @@ the popover lives in the [top-layer](https://developer.mozilla.org/en-US/docs/Gl
 
 ::: code-group
 <<< @/public/examples/components/popover/basic.html#body{} [winduum]
-<<< @/../examples-stimulus/src/pages/components/popover/basic.liquid#body{} [winduum-stimulus]
 <<< @/../examples-vue/src/pages/components/popover/basic.vue [winduum-vue]
 <<< @/../examples-react/src/pages/components/popover/basic.tsx [winduum-react]
 :::
@@ -83,7 +83,6 @@ Use the [interestfor](https://www.npmjs.com/package/interestfor) polyfill for br
 
 ::: code-group
 <<< @/public/examples/components/popover/hover.html#body{} [winduum]
-<<< @/../examples-stimulus/src/pages/components/popover/interest.liquid#body{} [winduum-stimulus]
 <<< @/../examples-vue/src/pages/components/popover/interest.vue [winduum-vue]
 <<< @/../examples-react/src/pages/components/popover/interest.tsx [winduum-react]
 :::

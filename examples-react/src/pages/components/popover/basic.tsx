@@ -7,7 +7,7 @@ export function Example() {
 
     return (
         <>
-            <Button command="toggle-popover" commandfor={popoverBasic} aria-controls={popoverBasic}>
+            <Button command="toggle-popover" commandfor={popoverBasic}>
                 Popover
             </Button>
             <Popover className="bottom my-2" popover="auto" id={popoverBasic}>

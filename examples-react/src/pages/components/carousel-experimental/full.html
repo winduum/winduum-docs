@@ -6,6 +6,24 @@
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="/src/styles/main.css">
     <link rel="stylesheet" href="/src/styles/style.css">
+    <style>
+        .x-carousel-experimental {
+            max-width: 60rem;
+        }
+
+        .x-carousel-experimental-marker {
+            width: 0.75rem;
+            height: 0.75rem;
+            border: 2px solid var(--color-primary);
+            border-radius: 50%;
+            display: block;
+            cursor: pointer;
+
+            &:is([aria-current]) {
+                background-color: var(--color-primary);
+            }
+        }
+    </style>
     <script>
         if (window.location.search.includes('dark=false')) {
             document.documentElement.classList.remove('dark')
@@ -17,4 +35,3 @@
 <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
-

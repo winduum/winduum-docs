@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vituum from 'vituum'
 import liquid from '@vituum/vite-plugin-liquid'
 import tailwindcss from '@tailwindcss/vite'
+import { examplesIndex } from '../examples-index-plugin.js'
 
 const htmlPlugin = () => {
     return {
@@ -22,6 +23,9 @@ const htmlPlugin = () => {
 export default defineConfig({
     plugins: [vituum(), tailwindcss(), liquid({
         root: './src'
+    }), examplesIndex({
+        pagesDirectory: resolve(process.cwd(), 'src/pages'),
+        extension: '.liquid'
     }), htmlPlugin()],
     build: {
         target: 'esnext',

@@ -19,3 +19,6 @@
 @import "winduum/src/base/breakpoints.css";
 @import "winduum/src/base/keyframes.css";
 @import "winduum/src/base/transitions.css";
+
+@source "../../node_modules/winduum/src";
+@source "../../node_modules/winduum-stimulus";
