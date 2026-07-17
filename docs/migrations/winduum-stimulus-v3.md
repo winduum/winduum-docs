@@ -14,7 +14,7 @@ This guide compares `winduum-stimulus` `2.0.15` with the v3 prerelease. Complete
 | --- | --- |
 | Dialog | Removed; use native Invoker Commands and `HTMLDialogElement` |
 | Details | Remove for standard details and accordions; keep only for checkbox synchronization |
-| Drawer | Rebuild markup around `.x-drawer-scroller`; update values and actions |
+| Drawer | Rebuild markup around `.x-drawer-scroller`; replace actions with native commands and update values |
 | Popover | Move the controller to the popover element; replace actions and targets with native commands |
 | Form | Keeps submit validation; remove per-field actions |
 | Field | New controller for validation on change |
@@ -143,9 +143,9 @@ Register and attach the v3 Details controller only when a checkbox inside `<summ
 
 The new action is synchronous at the Winduum layer and accepts only the core `toggleDetails` options. See the [Details documentation](/docs/components/details).
 
-## 4. Rebuild Drawer markup and values
+## 4. Rebuild Drawer markup and use native commands
 
-The Drawer controller still exposes `show`, `close` and `toggle`, but it now works with Winduum 3's dialog, scroller and content structure. Add `.x-drawer-scroller` between the dialog and its content, keep `data-x-drawer-target="content"` on the visible panel, and remove the old `inert` state and scroll/dismiss actions.
+The Drawer controller no longer exposes `show`, `close` or `toggle`. Open and close the native dialog with Invoker Commands, as with Popover. Add `.x-drawer-scroller` between the dialog and its content, keep `data-x-drawer-target="content"` on the visible panel, and remove the old `inert` state and scroll/dismiss actions.
 
 ::: code-group
 ```html [Winduum 2]
@@ -174,30 +174,22 @@ The Drawer controller still exposes `show`, `close` and `toggle`, but it now wor
 ```
 
 ```html [Winduum 3]
-<div data-controller="invoke">
-    <button
-        data-action="click->invoke#action"
-        data-invoke-action="x-drawer#show"
-        data-invoke-target="#drawerExample"
-        aria-controls="drawerExample"
-        aria-expanded="false"
-    >
-        Show drawer
-    </button>
+<button command="show-modal" commandfor="drawerExample">
+    Show drawer
+</button>
 
-    <dialog
-        class="x-drawer"
-        id="drawerExample"
-        closedby="any"
-        data-controller="x-drawer"
-    >
-        <div class="x-drawer-scroller snap-x snap-mandatory">
-            <nav class="x-drawer-content" data-x-drawer-target="content">
-                <button data-action="click->x-drawer#close">Close</button>
-            </nav>
-        </div>
-    </dialog>
-</div>
+<dialog
+    class="x-drawer"
+    id="drawerExample"
+    closedby="any"
+    data-controller="x-drawer"
+>
+    <div class="x-drawer-scroller snap-x snap-mandatory">
+        <nav class="x-drawer-content" data-x-drawer-target="content">
+            <button command="request-close" commandfor="drawerExample">Close</button>
+        </nav>
+    </div>
+</dialog>
 ```
 :::
 
@@ -213,10 +205,11 @@ The `dialog` string value is replaced by the boolean `modal` value. The default 
 
 Remove these v2 actions from application markup:
 
+- `x-drawer#show`, `x-drawer#close` and `x-drawer#toggle`: use `show-modal`, `request-close` / `close` and `commandfor`.
 - `x-drawer#scroll`: scroll state is handled by Winduum's scroller and observer.
 - `x-drawer#dismiss`: Escape and outside clicks are connected internally when the content target appears.
 
-`show` now records the invoking button, updates its `aria-expanded` state, opens the native dialog and initializes the scroller. `close` closes the dialog and its native `close` event resets the trigger state. Keep `aria-controls` and `aria-expanded="false"` on external triggers.
+The controller handles the `show-modal` command by recording its source, setting the invoking button's `aria-expanded` state, opening the dialog according to its `modal` value and initializing the scroller. Its enhanced `close()` method resets `aria-expanded`. Use `request-close` when the Drawer should animate closed; use `close` only when the dialog should close immediately. The Invoke controller is no longer needed for Drawer.
 
 Right and bottom drawers reverse the scroller order and animation direction; top and bottom drawers use `snap-y`. Copy the complete markup for each placement from the [Drawer examples](/docs/components/drawer#examples) rather than changing the placement value alone.
 
@@ -295,7 +288,7 @@ See the [Popover documentation](/docs/components/popover) for the native and fal
 
 winduum-stimulus does not turn native commands or `interestfor` into Stimulus actions. Add the browser fallbacks required by the project's support matrix.
 
-For Invoker Commands used by Dialog and Popover:
+For Invoker Commands used by Dialog, Drawer and Popover:
 
 ```shell
 npm install invokers-polyfill
@@ -429,6 +422,7 @@ data-controller="x-dialog"
 x-dialog#show, x-dialog#close
 x-details#show, x-details#close, x-details#toggle
 x-details#closeSiblings
+x-drawer#show, x-drawer#close, x-drawer#toggle
 x-drawer#scroll, x-drawer#dismiss
 data-x-drawer-dialog-value
 data-x-popover-target="action"
@@ -442,7 +436,7 @@ After replacing them, test:
 
 - Dialog open, close, light dismiss, Escape and focus return without a controller.
 - Native Details and accordion behavior plus the optional checkbox controller.
-- Every Drawer placement, external trigger state, outside click, Escape and swipe dismissal.
+- Every Drawer placement and its `show-modal`, `request-close` and `close` commands, external trigger state, outside click, Escape and swipe dismissal.
 - Popover commands, `interestfor`, light dismiss and Floating UI fallback positioning.
 - Form submit validation and Field change validation.
 - Button ripple and Control `data-active` behavior without duplicate actions.

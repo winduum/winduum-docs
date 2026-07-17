@@ -215,46 +215,39 @@ For the Details checkbox variant, replace the controller with the customized bui
 
 Leave standard Details and exclusive accordions as native `<details>` elements without either integration.
 
-## 5. Convert Drawer and remove Invoke wiring
+## 5. Convert the Drawer integration
 
-The v3 Drawer structure does not change again in this migration. Replace only its Stimulus integration wiring: the controller root becomes a customized dialog, the content target becomes a part, values use short attributes, and the Invoke controller becomes native commands.
+The v3 Drawer structure and native commands do not change again in this migration. Replace only its Stimulus integration wiring: the controller root becomes a customized dialog, the content target becomes a part, and values use short attributes.
 
 ::: code-group
 ```html [winduum-stimulus v3]
-<div data-controller="invoke">
-    <button
-        data-action="click->invoke#action"
-        data-invoke-action="x-drawer#show"
-        data-invoke-target="#drawerExample"
-        aria-controls="drawerExample"
-        aria-expanded="false"
-    >
-        Show drawer
-    </button>
+<button
+    command="show-modal"
+    commandfor="drawerExample"
+>
+    Show drawer
+</button>
 
-    <dialog
-        class="x-drawer"
-        id="drawerExample"
-        closedby="any"
-        data-controller="x-drawer"
-        data-x-drawer-placement-value="right"
-    >
-        <div class="x-drawer-scroller after:order-first snap-x snap-mandatory">
-            <nav class="x-drawer-content" data-x-drawer-target="content">
-                Drawer content
-                <button data-action="click->x-drawer#close">Close</button>
-            </nav>
-        </div>
-    </dialog>
-</div>
+<dialog
+    class="x-drawer"
+    id="drawerExample"
+    closedby="any"
+    data-controller="x-drawer"
+    data-x-drawer-placement-value="right"
+>
+    <div class="x-drawer-scroller after:order-first snap-x snap-mandatory">
+        <nav class="x-drawer-content" data-x-drawer-target="content">
+            Drawer content
+            <button command="request-close" commandfor="drawerExample">Close</button>
+        </nav>
+    </div>
+</dialog>
 ```
 
 ```html [winduum-elements]
 <button
     command="show-modal"
     commandfor="drawerExample"
-    aria-controls="drawerExample"
-    aria-expanded="false"
 >
     Show drawer
 </button>

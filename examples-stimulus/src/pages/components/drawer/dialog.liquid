@@ -1,8 +1,7 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
 <!-- #region body -->
-<div data-controller="invoke">
-<button class="x-button" data-action="click->invoke#action" data-invoke-action="x-drawer#show" data-invoke-target="#drawerDialogElement" aria-controls="drawerDialogElement" aria-expanded="false">Show dialog drawer</button>
+<button class="x-button" command="show-modal" commandfor="drawerDialogElement">Show dialog drawer</button>
 <dialog data-controller="x-drawer" class="x-dialog drawer @max-xl:bg-transparent @max-xl:p-0 @max-xl:backdrop:block" style="animation-direction: reverse" id="drawerDialogElement" closedby="any" data-x-drawer-placement-value="bottom">
     <div class="x-drawer-scroller scroll-pt-6 flex flex-col after:order-first snap-y snap-mandatory @xl:contents @xl:after:content-none noscript:after:content-none">
         <section class="x-dialog-content @max-xl:mt-6 @max-xl:opacity-100 @max-xl:transform-none shrink-0 @max-xl:snap-end @max-xl:w-dvw @max-xl:min-h-[calc(100dvh-4rem)] @max-xl:rounded-b-none" data-x-drawer-target="content">
@@ -12,12 +11,11 @@
                 <p>This component behaves as a bottom drawer on small screens and as a dialog on larger screens.</p>
             </div>
             <br>
-            <button class="x-button muted @xl:hidden" data-action="click->x-drawer#close">Close drawer</button>
-            <button class="x-button muted @max-xl:hidden" data-action="click->x-drawer#close">Close dialog</button>
+            <button class="x-button muted @xl:hidden" command="request-close" commandfor="drawerDialogElement">Close drawer</button>
+            <button class="x-button muted @max-xl:hidden" command="close" commandfor="drawerDialogElement">Close dialog</button>
         </section>
     </div>
 </dialog>
-</div>
 <!-- #endregion body -->
 {% endblock %}
 
@@ -26,4 +24,3 @@
     import 'winduum/src/components/dialog/index.js'
 </script>
 {% endblock %}
-

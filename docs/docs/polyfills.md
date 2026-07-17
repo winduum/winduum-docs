@@ -11,13 +11,13 @@ Winduum builds on modern web platform features. Some of them are still experimen
 Install only the polyfills you actually need for your project.
 
 ```shell
-npm install interestfor
+npm install invokers-polyfill interestfor
 ```
 
-If you use `winduum-elements`, also add the Webuum polyfills used by those elements:
+If you use `winduum-elements`, also add the customized built-in elements polyfill used by those elements:
 
 ```shell
-npm install invokers-polyfill @webreflection/custom-elements-builtin
+npm install @webreflection/custom-elements-builtin
 ```
 
 See the [Webuum polyfills docs](https://webuum.dev/docs/polyfills.html) for more details about these Webuum features.
@@ -35,6 +35,17 @@ if (!supportsInterestFor) {
 
 if (!supportsTimelineTrigger) {
     await import('winduum/src/polyfills/timelineTrigger.js')
+}
+```
+
+### Invoker Commands
+
+Dialog, Drawer and Popover controls use native Invoker Commands. This includes the `winduum-stimulus` Drawer and Popover controllers. Load the polyfill when the button command API is unavailable:
+
+```js
+if (!('command' in HTMLButtonElement.prototype)) {
+    const { apply } = await import('invokers-polyfill/fn')
+    apply()
 }
 ```
 
