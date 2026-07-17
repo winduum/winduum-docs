@@ -135,7 +135,15 @@ That compatibility layer is not ready yet because the required Scroll Snap behav
 
 Several utilities and variants first shipped experimentally between Winduum `2.2.20` and `2.2.28`. Winduum 3 makes them part of the documented workflow. Together they answer the question posed in [Do you still need Framer Motion?](https://motion.dev/magazine/do-you-still-need-framer-motion) in a deliberately pragmatic way: start with CSS when the browser already owns the interaction or timeline, then add JavaScript only when the effect needs runtime physics, gesture data or orchestration.
 
-The release sequence was [Link](/docs/utilities/link) and [Interest](/docs/variants/interest) in `2.2.20`, new easing curves in `2.2.21`, [Grid area](/docs/utilities/grid#grid-area) in `2.2.22`, [Animation Timeline and Animation Trigger](/docs/utilities/animation) plus `enter` / `exit` keyframes in `2.2.23`–`2.2.25`, [Scroll State](/docs/variants/scroll-state) in `2.2.26`, the experimental `timelineTrigger` polyfill in `2.2.27`, and the `supportsInterestFor` check in `2.2.28`. Winduum 3 adds [Position](/docs/utilities/position) utilities and the `animation-trigger-enter` fallback.
+The documented workflow now includes:
+
+- [Link](/docs/utilities/link) utilities and [Interest](/docs/variants/interest) variants.
+- New `ease-anticipate`, `ease-spring` and `ease-emphasized` easing curves.
+- [Grid area](/docs/utilities/grid#grid-area) utilities.
+- [Animation Timeline and Animation Trigger](/docs/utilities/animation) utilities with composable `enter` / `exit` keyframes and the `animation-trigger-enter` fallback.
+- [Scroll State](/docs/variants/scroll-state) variants.
+- The experimental [`timelineTrigger` polyfill](/docs/polyfills#timeline-trigger) and `supportsInterestFor` feature check.
+- [Position](/docs/utilities/position) utilities.
 
 ### Expressive easing without a runtime
 
@@ -145,7 +153,7 @@ Winduum now includes three easing tokens beyond the familiar `ease-in`, `ease-ou
 - `ease-spring` uses the CSS [`linear()` easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function/linear) to encode a sampled spring-like curve.
 - `ease-emphasized` accelerates quickly and settles smoothly. It is also the default timing function for `animation-trigger-enter`.
 
-Because these curves are ordinary CSS timing functions, they work with transitions, keyframes and scroll-driven animations without an animation runtime:
+Tailwind CSS `ease-*` utilities apply the curve directly to `transition-timing-function` and expose it through `--tw-ease`. Keyframe and scroll-driven animations can reuse the same token, but must connect it to `animation-timing-function` explicitly:
 
 ::: code-group
 ```html [Spring]
@@ -161,7 +169,10 @@ Because these curves are ordinary CSS timing functions, they work with transitio
 ```
 
 ```html [Emphasized]
-<div class="animation animation-[enter] from-translate-y-4 duration-700 ease-emphasized">
+<div
+    class="animation animation-[enter] from-translate-y-4 ease-emphasized
+           [animation-timing-function:var(--tw-ease)]"
+>
     Content
 </div>
 ```
@@ -177,6 +188,10 @@ Because these curves are ordinary CSS timing functions, they work with transitio
 - `animation-timeline-view` uses `view()` so progress follows an element as it passes through the viewport.
 - `animation-range-*` limits the part of that timeline in which the animation runs.
 - Named `scroll-timeline-*`, `view-timeline-*` and `timeline-scope-*` utilities connect a timeline to an animation elsewhere in the component.
+
+::: info Approaching Baseline
+Scroll-linked animations are close to becoming Baseline across the major browser engines. The current [`scroll-timeline` support table](https://caniuse.com/mdn-css_properties_scroll-timeline) lists Firefox 155 as its first supported release, joining the existing Chromium and Safari implementations.
+:::
 
 ::: code-group
 ```html [View progress]
