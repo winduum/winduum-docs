@@ -11,7 +11,7 @@ The web platform can now handle much of the behavior that component libraries us
 The result is a leaner core, simpler markup and components that preserve useful behavior even before JavaScript loads — or when it does not load at all.
 
 ::: tip Upgrading from Winduum 2?
-Start with the [Winduum v3 migration guide](/migrations/winduum-v3). Projects using the Stimulus integration should also follow the [winduum-stimulus v3 migration guide](/migrations/winduum-stimulus-v3).
+Start with the [Winduum v3 migration guide](/migrations/winduum-v3). Projects using the Stimulus integration should then follow the [winduum-stimulus v3 migration guide](/migrations/winduum-stimulus-v3). After both migrations work, projects replacing Stimulus with Winduum Elements can continue with the [winduum-elements migration guide](/migrations/winduum-elements-v3).
 :::
 
 ## Winduum Elements, Built on Webuum
@@ -355,6 +355,7 @@ Winduum 3 removes and renames JavaScript APIs, changes some component markup and
 
 - Follow the [Winduum v3 migration guide](/migrations/winduum-v3) for core styles, component markup, native APIs, Tailwind CSS utilities and renamed options.
 - Follow the [winduum-stimulus v3 migration guide](/migrations/winduum-stimulus-v3) when upgrading Stimulus controllers alongside the core package.
+- Follow the [winduum-elements migration guide](/migrations/winduum-elements-v3) only after both previous migrations are complete when replacing the migrated Stimulus integration with Custom Elements.
 - Review the full [Winduum changelog](https://github.com/winduum/winduum/blob/next/CHANGELOG.md) for the release-by-release details.
 
 Winduum 3 is not a rewrite of what a component library looks like. It is a rewrite of who should own the behavior. Whenever the browser can provide the semantics, focus handling, top layer, scrolling or animation, Winduum now lets the browser do it — and keeps its own JavaScript focused on progressive enhancement.

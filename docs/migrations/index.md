@@ -8,5 +8,6 @@ Winduum 3 replaces several custom JavaScript APIs with native browser functional
 
 - Start with the [Winduum v3 migration guide](/migrations/winduum-v3).
 - Continue with the [winduum-stimulus v3 migration guide](/migrations/winduum-stimulus-v3) when the project uses Stimulus.
+- After both migrations are complete, follow the [winduum-elements migration guide](/migrations/winduum-elements-v3) to replace Winduum's Stimulus controllers with Custom Elements.
 
-Migration guides for Winduum Elements, Vue and React are not required for projects adopting those integrations for the first time; use the current component examples in the documentation.
+Projects adopting Winduum Elements, Vue or React for the first time can use the current component examples directly. The Elements migration guide is specifically for projects moving from `winduum-stimulus` v3.
