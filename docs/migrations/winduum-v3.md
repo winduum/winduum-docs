@@ -1,61 +1,71 @@
 ---
-description: "Migration guide for upgrading Winduum projects from v2 to v3."
+description: "Migration guide for upgrading Winduum and winduum-stimulus projects from v2 to v3."
 ---
 
 # Migrate to Winduum v3
 
-Winduum 3 moves component behavior to native HTML and CSS wherever the web platform already provides it. As a result, upgrading is not only a dependency change: several JavaScript helpers are removed, interactive component markup changes and some visual defaults are updated.
+This guide upgrades the usual Winduum 2 stack—`winduum` and `winduum-stimulus`—to v3. Apply the core and Stimulus changes together so that the styles, markup and controllers stay in sync.
 
-This guide compares the latest Winduum 2 release (`2.2.28`) with Winduum 3. If your project uses an older v2 release, review the [Winduum changelog](https://github.com/winduum/winduum/blob/next/CHANGELOG.md) for the changes between your installed version and `2.2.28` as well.
+The guide compares the latest v2 releases with v3. If the project uses an older v2 release, also review the [Winduum changelog](https://github.com/winduum/winduum/blob/next/CHANGELOG.md).
 
-::: tip Recommended migration order
-Update the core styles first, then migrate Dialog, Details, Popover and Drawer one at a time. Continue with Text, Form, Toast and the visual defaults before updating your framework integration.
+::: tip Migrating to winduum-elements?
+First complete this guide and verify that the project works with Winduum and `winduum-stimulus` v3. Then follow [Migrate from winduum-stimulus v3 to winduum-elements](/migrations/winduum-elements-v3).
 :::
 
-## 1. Update the packages
+## Controller overview
 
-Install the v3 prerelease of the core package:
+| Controller | Migration |
+| --- | --- |
+| Dialog | Remove it; use native Invoker Commands and `HTMLDialogElement` |
+| Details | Remove it for standard details and accordions; keep it only for checkbox synchronization |
+| Drawer | Rebuild the markup, replace actions with native commands and update values |
+| Popover | Move the controller to the popover element and replace actions with native commands |
+| Form | Keep submit validation and remove per-field actions |
+| Field | Register the new controller for validation on change |
+| Button | Remove the explicit ripple action |
+| Toaster | Let it observe inserted and removed toasts automatically |
+
+## 1. Update dependencies
+
+Update both packages together:
 
 ```shell
-npm install winduum@next
+npm install winduum@next winduum-stimulus@next
 ```
 
-If the project already uses `winduum-stimulus`, update it alongside the core package:
-
-```shell
-npm install winduum-stimulus@next
-```
-
-`winduum-elements`, `winduum-vue` and `winduum-react` are new integration packages in v3, so they are not dependency upgrades for existing Winduum 2 projects. Install one only when adopting that integration. `winduum-elements` is the frameworkless option for progressively enhancing server-rendered HTML.
-
-Existing Stimulus projects should complete this guide and then follow the [winduum-stimulus v3 migration guide](/migrations/winduum-stimulus-v3).
-
-Tailwind CSS excludes dependencies from automatic source detection. This was already relevant in Winduum 2, but was not documented there. As a precaution, verify that both Winduum and any integration package containing template classes are included in your stylesheet sources:
+Tailwind CSS excludes dependencies from automatic source detection. Verify that both packages are included in the stylesheet sources:
 
 ```css
 @source "../../node_modules/winduum/src";
-@source "../../node_modules/winduum-elements";
+@source "../../node_modules/winduum-stimulus";
 ```
 
-Replace `winduum-elements` with `winduum-stimulus`, `winduum-vue` or `winduum-react` when appropriate. Keep your existing Winduum CSS imports; importing the component and utility indexes picks up the new v3 styles.
+## 2. Replace Dialog with native APIs
 
-If you import styles individually, add the styles required by the components you migrate. In particular, Details now has its own stylesheet and Popover placement uses the new Position utilities:
-
-```css
-@import "winduum/src/components/details/index.css" layer(utilities);
-@import "winduum/tailwindcss/utilities/position.css";
-```
-
-## 2. Replace Dialog helpers with the native API
-
-Winduum 2 opened and closed dialogs through `showDialog` and `closeDialog`. Winduum 3 removes those helpers and the related `defaultOptions` export. Use Invoker Commands in HTML and the native `HTMLDialogElement` methods in JavaScript.
+The Dialog controller and the core `showDialog`, `closeDialog` and `defaultOptions` exports are removed. Delete the Dialog controller import and `application.register('x-dialog', Dialog)`, replace Invoke delegation with native Invoker Commands and remove `data-controller="x-dialog"`.
 
 ::: code-group
-```js [Winduum 2]
-import { closeDialog, showDialog } from 'winduum/src/components/dialog'
+```html [Winduum 2]
+<div data-controller="invoke">
+    <button
+        data-action="click->invoke#action"
+        data-invoke-action="x-dialog#show"
+        data-invoke-target="#dialogExample"
+    >
+        Show dialog
+    </button>
 
-openButton.addEventListener('click', () => showDialog(dialogElement))
-closeButton.addEventListener('click', () => closeDialog(dialogElement))
+    <dialog
+        class="x-dialog"
+        id="dialogExample"
+        data-controller="x-dialog"
+        data-x-dialog-params-value='{"closable":true}'
+    >
+        <div class="x-dialog-content">
+            <button data-action="click->x-dialog#close">Close</button>
+        </div>
+    </dialog>
+</div>
 ```
 
 ```html [Winduum 3]
@@ -63,66 +73,63 @@ closeButton.addEventListener('click', () => closeDialog(dialogElement))
 
 <dialog class="x-dialog" id="dialogExample" closedby="any">
     <form class="x-dialog-content" method="dialog">
-        <button>Close dialog</button>
+        <button>Close</button>
     </form>
 </dialog>
 ```
 :::
 
-For programmatic control, replace `showDialog(dialogElement)` with `dialogElement.showModal()` or `dialogElement.show()`, and replace `closeDialog(dialogElement)` with `dialogElement.close()`.
-
-The old options and state map to native behavior as follows:
+For programmatic control, use `dialogElement.showModal()`, `show()` and `close()`.
 
 | Winduum 2 | Winduum 3 |
 | --- | --- |
-| `modal: true` | `dialogElement.showModal()` or `command="show-modal"` |
-| `modal: false` | `dialogElement.show()` |
+| `modal: true` | `showModal()` or `command="show-modal"` |
+| `modal: false` | `show()` |
 | `closable: true` | `closedby="any"` |
 | `closable: false` | `closedby="none"` |
-| `remove: true` | Remove the element in your own native `close` event handler |
+| `remove: true` | Remove the element in a native `close` event handler |
 | `data-open` | `[open]` |
 | `data-closed` | `:not([open])` |
 
-The custom `x-dialog:show` and `x-dialog:close` events are no longer dispatched. Move open-side effects into the code that opens the dialog and use the native `close` and `cancel` events for the close lifecycle.
+The custom `x-dialog:show` and `x-dialog:close` events are no longer dispatched. Run open-side effects where the dialog is opened and use the native `close` and `cancel` events for closing.
 
-Include the Dialog side-effect script. It supplies the `closedby` light-dismiss fallback and keeps `--default-scrollbar-width` updated:
+Include the Dialog side-effect script once. It provides the `closedby` fallback and maintains `--default-scrollbar-width`:
 
 ```js
-import 'winduum/src/components/dialog'
+import 'winduum/src/components/dialog/index.js'
 ```
 
-See the [Dialog documentation](/docs/components/dialog) for the complete markup and accessibility behavior.
+If Invoke was used only for Dialog, remove it from that markup. See [Dialog](/docs/components/dialog).
 
-## 3. Move Details behavior to native HTML and CSS
+## 3. Use native Details by default
 
-Remove `showDetails`, `closeDetails`, `defaultOptions` and the asynchronous `toggleDetails` flow. Standard details elements now open natively and `.x-details` animates `::details-content` in CSS.
+The core `showDetails`, `closeDetails`, `defaultOptions` and asynchronous toggle flow are removed. The v3 `toggleDetails` helper is synchronous and only supports the checkbox pattern. If the project used `slide-element` only for Details, remove that dependency.
+
+The Stimulus `show`, `close`, `toggle` and `closeSiblings` actions are removed as well. Standard details and accordions need no JavaScript:
+
+When component styles are imported individually, add the new Details stylesheet:
+
+```css
+@import "winduum/src/components/details/index.css" layer(utilities);
+```
 
 ::: code-group
 ```html [Winduum 2]
-<details class="x-details">
-    <summary data-action="toggle-details">Show more</summary>
-    <div style="display: none">Details content</div>
+<details class="x-details" data-controller="x-details" name="faq">
+    <summary data-action="click->x-details#toggle:prevent">Question</summary>
+    <div style="display: none">Answer</div>
 </details>
 ```
 
-```js [Winduum 2 JavaScript]
-import { toggleDetails } from 'winduum/src/components/details'
-
-summary.addEventListener('click', (event) => {
-    event.preventDefault()
-    toggleDetails(event.currentTarget)
-})
-```
-
 ```html [Winduum 3]
-<details class="x-details">
-    <summary>Show more</summary>
-    <div>Details content</div>
+<details class="x-details" name="faq">
+    <summary>Question</summary>
+    <div>Answer</div>
 </details>
 ```
 :::
 
-Remove inline `display: none` styles and event handlers that prevent the default summary click. Exclusive accordions no longer need code that finds and closes the previously open item; give every item in the group the same native `name`:
+Remove inline `display: none` styles and handlers that prevent the default summary click. For an exclusive accordion, give every item the same native `name`:
 
 ```html
 <details class="x-details" name="faq" open>...</details>
@@ -130,145 +137,310 @@ Remove inline `display: none` styles and event handlers that prevent the default
 <details class="x-details" name="faq">...</details>
 ```
 
-The v3 `toggleDetails` helper still exists, but it is synchronous and only synchronizes a checkbox inside `<summary>` with the closest details element:
+Keep the Details controller only when a checkbox inside `<summary>` controls the open state. Rename the old `toggle` action to `toggleDetails` and attach it to the checkbox change event:
 
-```js
-import { toggleDetails } from 'winduum/src/components/details'
-
-checkbox.addEventListener('change', (event) => toggleDetails(event.currentTarget))
+```html
+<details class="x-details" data-controller="x-details">
+    <summary>
+        <label class="x-check">
+            <input
+                type="checkbox"
+                autocomplete="off"
+                data-action="change->x-details#toggleDetails"
+            >
+            Fill more
+        </label>
+    </summary>
+    <div>Additional fields</div>
+</details>
 ```
 
-See the [Details documentation](/docs/components/details) for the standard, checkbox and accordion patterns.
+See [Details](/docs/components/details).
 
-## 4. Adopt the native Popover and Anchor APIs
+## 4. Rebuild Drawer around the scroller
 
-In v2, `.x-popover` was usually a wrapper and `.x-popover-content` owned the popover state and placement. In v3, the element with the native `popover` attribute is also `.x-popover`; placement classes such as `bottom-start` belong on that element, while `.x-popover-content` is its visual content.
+Drawer now separates the native dialog, the scrollable area and the visible panel: `.x-drawer`, `.x-drawer-scroller` and `.x-drawer-content`. Its controller no longer exposes `show`, `close` or `toggle`; use native commands instead.
 
 ::: code-group
 ```html [Winduum 2]
-<div class="x-popover">
-    <button id="menuTrigger" popovertarget="menu">Menu</button>
-    <div class="x-popover-content bottom-start" id="menu" popover="manual">
-        Content
-    </div>
+<div data-controller="invoke">
+    <button
+        data-action="click->invoke#action"
+        data-invoke-action="x-drawer#show"
+        data-invoke-target="#drawerExample"
+    >
+        Show drawer
+    </button>
+
+    <dialog
+        class="x-drawer"
+        id="drawerExample"
+        inert
+        data-controller="x-drawer"
+        data-action="scroll->x-drawer#scroll click->x-drawer#dismiss"
+        data-x-drawer-dialog-value="modal"
+    >
+        <nav class="x-drawer-content" data-x-drawer-target="content">
+            <button data-action="click->x-drawer#close">Close</button>
+        </nav>
+    </dialog>
 </div>
-```
-
-```js [Winduum 2 JavaScript]
-import { togglePopover } from 'winduum/src/components/popover'
-
-menuTrigger.addEventListener('click', (event) => {
-    event.preventDefault()
-    togglePopover(menuTrigger, { placement: 'bottom-start' })
-})
 ```
 
 ```html [Winduum 3]
-<button command="toggle-popover" commandfor="menu">Menu</button>
-
-<div class="x-popover bottom-start" id="menu" popover>
-    <div class="x-popover-content">Content</div>
-</div>
-```
-:::
-
-Remove `showPopover`, `hidePopover` and `togglePopover` imports. For programmatic control, use the native `popoverElement.showPopover()`, `hidePopover()` and `togglePopover()` methods. Native `:popover-open` replaces the old `data-open` state.
-
-`computePopover` is also removed. If you support browsers without CSS Anchor Positioning, replace it with one of the focused Floating UI fallbacks:
-
-```js
-import {
-    autoUpdatePopover,
-    computePositionPopover,
-} from 'winduum/src/components/popover'
-
-await computePositionPopover(triggerElement, popoverElement, 'bottom-start')
-
-const cleanup = await autoUpdatePopover(
-    triggerElement,
-    popoverElement,
-    'bottom-start',
-)
-
-// Call when the popover closes
-cleanup()
-```
-
-`computePositionPopover` runs once. `autoUpdatePopover` keeps the fallback position updated on scroll and resize and returns its cleanup function. Install `@floating-ui/dom` when you use either helper.
-
-Replace the old `trigger-hover` and `trigger-focus` wrapper patterns with the native `interestfor` relationship when the popover should open on hover or keyboard focus. See the [Popover documentation](/docs/components/popover) for click, interest and fallback examples.
-
-### Replace Tooltip with a Popover
-
-`x-tooltip` is deprecated. The recommended replacement is the `tooltip` variant of Popover:
-
-```html
-<button interestfor="helpTooltip" style="interest-delay: 0s">Help</button>
-
-<div class="x-popover tooltip bottom" id="helpTooltip" popover="hint">
-    <div class="x-popover-content">Tooltip content</div>
-</div>
-```
-
-Here, `tooltip` supplies the visual variant and `bottom` comes from the Position utilities. If you temporarily keep the deprecated `x-tooltip` component, rename only its directional variants:
-
-| Winduum 2 | Winduum 3 compatibility name |
-| --- | --- |
-| `x-tooltip top` | `x-tooltip tooltip-top` |
-| `x-tooltip bottom` | `x-tooltip tooltip-bottom` |
-| `x-tooltip left` | `x-tooltip tooltip-left` |
-| `x-tooltip right` | `x-tooltip tooltip-right` |
-
-## 5. Rebuild Drawer markup around the scroller
-
-Drawer is a full rewrite. The dialog and the scrollable element are now separate: `.x-drawer` owns the native dialog and backdrop, `.x-drawer-scroller` owns scroll snap and the animation timeline, and `.x-drawer-content` is the visible panel.
-
-Start from the complete example for your integration. A left Drawer using `winduum-elements` has this structure:
-
-```html
 <button command="show-modal" commandfor="drawerExample">Show drawer</button>
 
 <dialog
     class="x-drawer"
     id="drawerExample"
-    is="x-drawer"
     closedby="any"
+    data-controller="x-drawer"
 >
     <div class="x-drawer-scroller snap-x snap-mandatory">
-        <nav class="x-drawer-content" data-x-drawer-part="content">
-            Drawer content
+        <nav class="x-drawer-content" data-x-drawer-target="content">
             <button command="request-close" commandfor="drawerExample">Close</button>
         </nav>
     </div>
 </dialog>
 ```
+:::
 
-For right, top and bottom drawers, set the integration's placement to `right`, `top` or `bottom` and use the corresponding example markup. Vertical drawers use a vertical scroller. The default content size also changes from a full viewport to `50dvw × 100dvh`, so preserve your old width explicitly when needed.
+Update the values:
 
-The low-level JavaScript API now uses placement names instead of distance, direction and scroll-state options:
-
-| Removed or changed v2 API | Winduum 3 |
+| Winduum 2 | Winduum 3 |
 | --- | --- |
-| `scrollInitDrawer(element, distance, direction)` | Handled by `showDrawer(scroller, placement)` |
-| `showDrawer(element, distance, direction)` | `showDrawer(scroller, placement)` |
-| `closeDrawer(element, distance, direction)` | `closeDrawer(scroller, placement)` |
-| `scrollDrawer(element, options)` | `scrollDrawer(scroller, placement, reverse?, behavior?)` |
-| `toggleDrawerAttributes` | Removed; native dialog and observer state is used |
-| `scrollDrawerState` | Removed; native scroll snap and intersection state is used |
+| `data-x-drawer-dialog-value="modal"` | Omit it; modal is the default |
+| `data-x-drawer-dialog-value="non-modal"` | `data-x-drawer-modal-value="false"` |
+| `data-x-drawer-placement-value` | Unchanged: `left`, `right`, `top` or `bottom` |
 
-Custom integrations should wire `drawerEvents(dialog, content, placement)` and observe the content with the `IntersectionObserver` returned by `drawerObserver(dialog, placement)`. All scrolling helpers operate on `.x-drawer-scroller`, not on the dialog.
+Remove the old `show`, `close`, `toggle`, `scroll` and `dismiss` actions. Use `show-modal` to open, `request-close` for an animated close and `close` only for an immediate close. The controller now handles trigger state, the scroller and dismissal internally, so Invoke is no longer needed for Drawer.
 
-Winduum 3 also provides a no-JavaScript pattern, a `.no-snap` CSS-only variant and a responsive drawer-to-dialog pattern. The no-snap stylesheet is not part of the component index, so import it explicitly when you use that variant:
+Remove direct use of `scrollInitDrawer`, `showDrawer`, `closeDrawer`, `scrollDrawer`, `toggleDrawerAttributes` and `scrollDrawerState`. The integration owns that lifecycle.
+
+The custom `x-drawer:open` and `x-drawer:close` events are no longer dispatched. Remove application writes to `--background-color-opacity`; the new scroll timeline manages the Drawer backdrop through `--x-drawer-backdrop-opacity`.
+
+The default `.x-drawer-content` size changes from `100% × 100%` to `50dvw × 100dvh`. To preserve the v2 size, define the old values after the Winduum imports:
 
 ```css
-@import "winduum/src/components/drawer/nosnap.css" layer(utilities);
+:root {
+    --x-drawer-content-inline-size: 100%;
+    --x-drawer-content-block-size: 100%;
+}
 ```
 
-See the [Drawer documentation](/docs/components/drawer) for every placement and variant.
+Right and bottom drawers reverse the scroller order and animation direction; top and bottom drawers use `snap-y`. Copy the complete markup for the selected placement from [Drawer](/docs/components/drawer#examples).
 
-## 6. Mark rich Text content explicitly
+## 5. Move Popover to native commands
 
-In v2, `x-text` styled both the wrapper and all nested rich-content elements. In v3, the base class only supplies plain text typography. Add the `content` variant to wrappers containing CMS, WYSIWYG or other nested semantic HTML:
+In v3, the element with `popover` is also `.x-popover`; `.x-popover-content` is only its visual content. Move the controller from the old wrapper to the popover element and replace controller actions with native commands.
+
+When utilities are imported individually, add the Position utilities used for placement:
+
+```css
+@import "winduum/tailwindcss/utilities/position.css";
+```
+
+::: code-group
+```html [Winduum 2]
+<div
+    class="x-popover"
+    data-controller="x-popover"
+    data-x-popover-params-value='{"placement":"bottom"}'
+>
+    <button
+        popovertarget="menu"
+        popovertargetaction="toggle"
+        data-x-popover-target="action"
+    >
+        Menu
+    </button>
+
+    <div class="x-popover-content bottom" id="menu" popover="manual">
+        Content
+    </div>
+</div>
+```
+
+```html [Winduum 3]
+<button command="toggle-popover" commandfor="menu">Menu</button>
+
+<div
+    class="x-popover bottom"
+    id="menu"
+    popover
+    data-controller="x-popover"
+    data-x-popover-placement-value="bottom"
+>
+    <div class="x-popover-content">Content</div>
+</div>
+```
+:::
+
+Update the wiring:
+
+| Winduum 2 | Winduum 3 |
+| --- | --- |
+| `data-x-popover-params-value='{"placement":"bottom"}'` | `data-x-popover-placement-value="bottom"` |
+| Floating UI `autoUpdate` in params | `data-x-popover-auto-update-value="true"` |
+| `popovertargetaction="toggle"` | `command="toggle-popover"` and `commandfor` |
+| `data-open` | `:popover-open` or the native `toggle` event |
+| `--x-popover-content-scale-x`, `--x-popover-content-scale-y` | `--x-popover-content-starting-scale` |
+| `--x-popover-content-z-index` | Remove it; the native top layer owns stacking |
+| `inline-center`, `block-center` | Remove them; `top`, `right`, `bottom` and `left` center by default |
+
+Remove the `action` target and calls to the removed `toggle`, `hide` and `dismiss` controller actions. Also remove core `showPopover`, `hidePopover`, `togglePopover` and `computePopover` imports. For programmatic control, use the native `showPopover()`, `hidePopover()` and `togglePopover()` methods.
+
+The placement value must match the Position utility on `.x-popover`. Keep `@floating-ui/dom` while the controller provides positioning fallback; set `autoUpdate` only when it must track the trigger on scroll or resize. The controller can be omitted when all supported browsers provide the required Popover and CSS Anchor Positioning behavior.
+
+Replace v2 `trigger-focus` with the standard Popover trigger shown above using `command="toggle-popover"` and `commandfor`.
+
+Replace `trigger-hover` and Tooltip patterns with `interestfor` and the Popover `tooltip` variant:
+
+```html
+<button interestfor="helpTooltip" style="interest-delay: 0s">Help</button>
+
+<div
+    class="x-popover tooltip bottom"
+    id="helpTooltip"
+    popover="hint"
+    data-controller="x-popover"
+    data-x-popover-placement-value="bottom"
+>
+    <div class="x-popover-content">Tooltip content</div>
+</div>
+```
+
+`x-tooltip` is deprecated. If it must be kept temporarily, rename `top`, `bottom`, `left` and `right` to `tooltip-top`, `tooltip-bottom`, `tooltip-left` and `tooltip-right`. See [Popover](/docs/components/popover).
+
+## 6. Split Form and Field validation
+
+Form now handles submit validation only. Its `validateField` action is removed; the new Field controller validates on change. Keep the existing Form registration and register Field:
+
+```js
+import { Field } from 'winduum-stimulus/components/field/index.js'
+
+application.register('x-field', Field)
+```
+
+::: code-group
+```html [Winduum 2]
+<form data-controller="x-form">
+    <div class="x-field">
+        <label class="x-label" for="email">Email</label>
+        <div
+            class="x-control"
+            data-action="change->x-form#validateField"
+        >
+            <input id="email" type="email" required>
+        </div>
+    </div>
+</form>
+```
+
+```html [Winduum 3]
+<form data-controller="x-form">
+    <div class="x-field" data-controller="x-field">
+        <label class="x-label" for="email">Email</label>
+        <div class="x-control" data-controller="x-control">
+            <input id="email" type="email" required>
+        </div>
+    </div>
+</form>
+```
+:::
+
+The Field controller adds its change action automatically. Form still sets `novalidate` and adds its submit action. Make sure every group that should receive a message and validation icon has an `.x-field` wrapper. Unlike v2, Field validates every matching control inside that wrapper.
+
+For direct helper imports, `validateField` moves from `winduum/src/components/form` to `winduum/src/components/field`. `validateForm` stays in Form, and `validateSelectors` is renamed to `validateSelector`.
+
+Update custom validation options:
+
+| Winduum 2 | Winduum 3 |
+| --- | --- |
+| `endParentSelector` | `iconParentSelector` |
+| `endSelector` | `iconSelector` |
+| `endContent` | `iconContent` |
+| Default `validitySelector: '.validity'` | `[data-validity]` |
+| Default icon `#icon-exclamation-circle` | `#heroicons-outline/exclamation-circle` |
+| `ignoreMatch` | Exclude controls in `selector`; `readonly` and `[data-novalidate]` are ignored by default |
+| `validate` | Removed; Form and Field determine when validation runs |
+| `infoParentSelector`, `infoSelector` | Removed; messages are appended to the field wrapper |
+| `validAttribute`, `invalidAttribute`, `activeAttribute` | Removed |
+
+Validation no longer writes `data-valid`, `data-invalid` or `data-active`; use native `:valid`, `:invalid` and `:user-invalid` states. See [Form](/docs/components/form) and [Field](/docs/components/field).
+
+## 7. Remove the redundant Button action
+
+Button now adds its ripple action when it connects:
+
+::: code-group
+```html [Winduum 2]
+<button
+    class="x-button"
+    data-controller="x-button"
+    data-action="click->x-button#ripple"
+>
+    Save
+</button>
+```
+
+```html [Winduum 3]
+<button class="x-button" data-controller="x-button">Save</button>
+```
+:::
+
+Loading observation and `data-loading` are unchanged.
+
+## 8. Let Toaster manage its popover state
+
+The Toaster controller now observes inserted and removed toasts and opens or closes itself. Add `popover="manual"` to Toaster:
+
+```html
+<template id="toastTemplate">
+    <li
+        class="x-toast"
+        data-controller="x-toast"
+        data-action="x-toast:connect->x-toast#show"
+        role="status"
+        aria-live="assertive"
+        aria-atomic="true"
+    >
+        <div class="x-toast-content">
+            Toast content
+            <button data-action="click->x-toast#close">Close</button>
+        </div>
+    </li>
+</template>
+
+<ol
+    class="x-toaster"
+    popover="manual"
+    data-controller="x-toaster"
+></ol>
+```
+
+The Toast controller keeps its `show`, `close` and `params` APIs. Core `showToast` now auto-hides after `7500` ms by default, and `closeToast` removes the element by default. Use `autoHide: null` to keep a toast open. Pass `remove: false` to a manual close action, or `close: { remove: false }` in the show params when an auto-hidden toast should remain in the DOM. The `x-toaster#close` action still closes all toasts.
+
+Winduum 3 hides buttons inside `.x-toast` while a dialog is open. Verify actionable toasts in that state and override the rule only when the action must remain available.
+
+Do not add an application `MutationObserver`; Toaster owns it. See [Toast](/docs/components/toast) and [Toaster](/docs/components/toaster).
+
+## 9. Add the Text content variant
+
+The Text index now imports the new Content styles alongside the base styles:
+
+```css
+@import "winduum/src/components/text/index.css" layer(components);
+```
+
+Projects that import Text styles individually must add both Content files:
+
+```css
+@import "winduum/src/components/text/props/content.css" layer(components);
+@import "winduum/src/components/text/content.css" layer(components);
+```
+
+Add the `content` variant to `x-text` wrappers that contain CMS, WYSIWYG or other nested rich HTML:
 
 ::: code-group
 ```html [Winduum 2]
@@ -286,117 +458,61 @@ In v2, `x-text` styled both the wrapper and all nested rich-content elements. In
 ```
 :::
 
-Keep only `x-text` on a plain paragraph, label or other element that does not need descendant styles. The base line height and several rich-content margins, heading sizes, table styles and blockquote defaults also changed, so visually review CMS-driven pages. See [Text](/docs/components/text).
+Keep only `x-text` on plain text without descendant styles. Its base line height changes from `calc(1em + 0.75rem)` to `calc(1em + 0.5rem)`. To preserve the v2 spacing, define the old value after the Winduum imports:
 
-## 7. Split Form and Field validation
-
-`validateField` moves from the Form module to its own Field export. Form validation now selects `.x-field` wrappers by default, and `validateSelectors` is renamed to the singular `validateSelector`.
-
-::: code-group
-```js [Winduum 2]
-import {
-    validateField,
-    validateForm,
-} from 'winduum/src/components/form'
-
-validateForm(event, {
-    validateSelectors: '.x-control, .x-check',
-})
+```css
+:root {
+    --x-text-line-height: calc(1em + 0.75rem);
+}
 ```
 
-```js [Winduum 3]
-import { validateField } from 'winduum/src/components/field'
-import { validateForm } from 'winduum/src/components/form'
+The Content variant also changes heading sizes and spacing, table borders, list and media margins, blockquotes and figcaptions. When CMS output must keep its v2 appearance, restore the relevant v2 Text variables or component overrides after the Winduum imports and review the rendered content.
 
-fieldElement.addEventListener('change', () => validateField(fieldElement))
+See [Text](/docs/components/text).
 
-validateForm(event, {
-    validateSelector: '.x-field',
-    validateOptions: {
-        invalidIcon: '<svg data-validity>...</svg>',
-    },
-})
-```
-:::
+## 10. Preserve or adopt the changed visual defaults
 
-Make sure each group that should receive a message and validation icon has an `.x-field` wrapper. Field-specific options are passed through `validateOptions`.
+Winduum 3 changes the defaults below. Existing project values defined after the Winduum imports continue to take precedence. If a value is not explicitly defined, define it with the v2 value after the Winduum imports to avoid an unintended visual change. Adopt the new v3 default deliberately.
 
-Several low-level `validateField` options were removed or renamed:
-
-| Winduum 2 | Winduum 3 |
-| --- | --- |
-| `endParentSelector` | `iconParentSelector` |
-| `endSelector` | `iconSelector` |
-| `endContent` | `iconContent` |
-| `infoContent` | `infoContent` |
-| `validitySelector` | `validitySelector` |
-| `ignoreMatch` | Exclude controls in `selector`; `readonly` and `[data-novalidate]` are excluded by default |
-| `validate` | Removed; decide whether to call validation in your own code |
-| `infoParentSelector`, `infoSelector` | Removed; messages are appended to the supplied field wrapper |
-| `validAttribute`, `invalidAttribute`, `activeAttribute` | Removed; the helper no longer writes those states |
-
-Update CSS or application code that relied on `data-valid`, `data-invalid` or `data-active`. Prefer the native `:valid`, `:invalid` and `:user-invalid` states. See the [Form documentation](/docs/components/form) for all current options.
-
-## 8. Opt out of the new Toast defaults when necessary
-
-`showToast` now auto-hides after `7500` ms by default. `closeToast` now removes the closed element from the DOM by default.
-
-Preserve the v2 behavior explicitly if your application keeps toasts open or reuses their elements:
-
-```js
-await showToast(toastElement, {
-    autoHide: null,
-})
-
-await closeToast(toastElement, {
-    remove: false,
-})
-```
-
-Make the Toaster a `popover="manual"` so it can appear in the top layer, including above an open dialog:
-
-```html
-<div class="x-toaster" popover="manual"></div>
-```
-
-Use `toasterObserver` to show the toaster when its first toast is inserted and hide it after the last one is removed:
-
-```js
-import { toasterObserver } from 'winduum/src/components/toaster'
-
-const toasterElement = document.querySelector('.x-toaster')
-const observer = toasterObserver()
-
-observer.observe(toasterElement, { childList: true })
-```
-
-See [Toast](/docs/components/toast) and [Toaster](/docs/components/toaster).
-
-## 9. Review the changed visual defaults
-
-Winduum 3 intentionally updates several defaults. Remove overrides that were compensating for v2, and add explicit values where the old appearance is still required.
-
-| Area | Winduum 2 | Winduum 3 |
+| Property | Winduum 2 | Winduum 3 |
 | --- | --- | --- |
-| `x-heading sm` | `--text-lg` | `--text-3xl` |
-| `x-heading` | `--text-xl` | `--text-4xl` |
-| `x-heading lg` | `--text-3xl` | `--text-5xl` |
-| `x-label` | `--text-sm`, normal inherited weight | `--text-2xs`, medium weight |
-| `x-text` line height | `calc(1em + 0.75rem)` | `calc(1em + 0.5rem)` |
-| Container width | `80rem` | `82rem` |
-| Container padding | `5vw` | `clamp(1.25rem, 7.5cqw - 1.5rem, 4rem)` |
-| Select icon | `1.25rem` filled caret | `1rem` outline chevron |
-| Drawer content | `100% × 100%` | `50dvw × 100dvh` |
+| `.x-heading.sm` → `--x-heading-font-size` | `var(--text-lg)` | `var(--text-3xl)` |
+| `--x-heading-font-size` | `var(--text-xl)` | `var(--text-4xl)` |
+| `.x-heading.lg` → `--x-heading-font-size` | `var(--text-3xl)` | `var(--text-5xl)` |
+| `--x-label-font-size` | `var(--text-sm)` | `var(--text-2xs)` |
+| `--x-label-line-height` | `calc(1em + 0.25rem)` | `calc(1em + 0.125rem)` |
+| `--x-label-font-weight` | `inherit` | `var(--font-weight-medium)` |
+| `--x-check-line-height` | `calc(1em + 0.25rem)` | `1.25rem` |
+| `--container-width` | `80rem` | `82rem` |
+| `--container-padding` | `5vw` | `clamp(1.25rem, 7.5cqw - 1.5rem, 4rem)` |
+| `--container-padding-calc` | `max(calc(50vw - (var(--container-width) / 2)), var(--container-padding))` | `max(calc(50cqw - (var(--container-width) / 2)), var(--container-padding))` |
+| `--x-control-select-icon-size` | `1.25rem` | `1rem` |
+| `--x-control-select-icon-mask` | Filled caret | Outline chevron |
+| `--x-control-select-picker-padding-block` | `0.375rem` | `calc(var(--spacing) * 1)` |
+| `--x-control-select-picker-padding-inline` | `0.375rem` | `calc(var(--spacing) * 1)` |
+| `--x-control-select-option-padding-block` | `0.75rem` | `calc(var(--spacing) * 2.5)` |
+| `--x-control-select-option-padding-inline` | `0.75rem` | `calc(var(--spacing) * 3)` |
 
-The root element now has `container-type: scroll-state` and uses `--scroll-padding-top`; `body` now establishes an inline-size container. Check custom container queries and any code that assumed a different query container.
+The root now uses `container-type: scroll-state` and `--scroll-padding-top`; `body` establishes an inline-size container. Check custom container queries.
 
-If upgrading from Winduum earlier than `2.2.23`, also replace the deprecated `--radius` token. Since `2.2.23` it resolves to the base `xs` radius (`0.125rem`) instead of `--radius-xl`; use an explicit named radius variable when the old large radius was intentional.
+When upgrading from earlier than `2.2.23`, replace the deprecated `--radius` token. Use an explicit named radius when the old large radius was intentional.
 
-## 10. Add fallbacks intentionally
+## 11. Add only the required fallbacks
 
-Winduum 3 uses native Invoker Commands, `interestfor`, CSS Anchor Positioning, scroll timelines and other platform features. Do not load every fallback automatically; choose them from the browser versions your project supports.
+Choose fallbacks from the browser versions supported by the project. For Invoker Commands used by Dialog, Drawer and Popover:
 
-The optional `winduum/polyfill` entry point covers Winduum's `interestfor` and experimental timeline-trigger fallbacks:
+```shell
+npm install invokers-polyfill
+```
+
+```js
+if (!('command' in HTMLButtonElement.prototype)) {
+    const { apply } = await import('invokers-polyfill/fn')
+    apply()
+}
+```
+
+For `interestfor` and Winduum's timeline fallback:
 
 ```shell
 npm install interestfor
@@ -406,51 +522,40 @@ npm install interestfor
 import 'winduum/polyfill'
 ```
 
-It does not include the Webuum fallbacks used by `winduum-elements`. Load those separately when feature detection requires them:
+Keep `@floating-ui/dom` while the Popover controller supplies the positioning fallback. See [Polyfills](/docs/polyfills) for the feature checks and browser requirements.
 
-```shell
-npm install invokers-polyfill @webreflection/custom-elements-builtin
-```
+## 12. Remove v2 wiring and test
 
-```js
-import { supportsCommand, supportsIs } from 'webuum/supports'
-
-if (!supportsCommand) {
-    const { apply } = await import('invokers-polyfill/fn')
-    apply()
-}
-
-if (!supportsIs()) {
-    await import('@webreflection/custom-elements-builtin')
-}
-```
-
-Use the Popover fallback helpers from step 4 when a project requires anchored positioning in browsers without CSS Anchor Positioning. See [Polyfills](/docs/polyfills) before adding compatibility code.
-
-## 11. Search for removed APIs and verify the result
-
-Search the application for these v2 identifiers before considering the migration complete:
+Search the application for these v2 identifiers:
 
 ```text
 showDialog, closeDialog, x-dialog:show, x-dialog:close
-showDetails, closeDetails, defaultOptions
-showPopover, hidePopover, togglePopover, computePopover
+winduum-stimulus/components/dialog, data-controller="x-dialog"
+x-dialog#show, x-dialog#close
+showDetails, closeDetails, slide-element
+x-details#show, x-details#close
+x-details#toggle, x-details#closeSiblings
 showDrawer, closeDrawer, scrollDrawer, scrollInitDrawer
 toggleDrawerAttributes, scrollDrawerState
-validateSelectors, validateField imports from components/form
+x-drawer#show, x-drawer#close, x-drawer#toggle
+x-drawer#scroll, x-drawer#dismiss, data-x-drawer-dialog-value
+x-drawer:open, x-drawer:close, --background-color-opacity
+showPopover, hidePopover, togglePopover, computePopover
+data-x-popover-target="action", data-x-popover-params-value
+x-popover#toggle, x-popover#hide, x-popover#dismiss
+--x-popover-content-scale-x, --x-popover-content-scale-y
+--x-popover-content-z-index, inline-center, block-center
+validateSelectors, x-form#validateField
+.validity, #icon-exclamation-circle
+click->x-button#ripple
 x-tooltip
-data-open, data-closed, data-valid, data-invalid, data-active
+data-valid, data-invalid
 ```
 
-Finally, test:
+Also remove application-level wiring around `computePositionPopover`, `autoUpdatePopover`, `drawerEvents`, `drawerObserver`, `validateForm`, `validateField`, `showToast`, `closeToast` and `toasterObserver` when the integration owns that behavior.
 
-- Dialog light dismiss, <kbd>Esc</kbd>, focus movement and focus return.
-- Details animation and exclusive accordions with both mouse and keyboard.
-- Popover click, interest, light-dismiss and fallback positioning.
-- Every Drawer placement, swipe dismissal and responsive variant used by the project.
-- Invalid and valid form submissions, validation messages and loading state.
-- Toast auto-hide, manual close, DOM removal and toaster behavior above a dialog.
-- Typography, containers, selects and custom container queries at each breakpoint.
-- Reduced-motion behavior and the oldest browser version officially supported by the project.
+Test Dialog focus and dismissal, native Details and accordions, every used Drawer placement, Popover commands and fallback positioning, Form and Field validation, Toast defaults, typography and the oldest supported browser. Compare, Control, Image, Tabs, Invoke, Ripple and Swap need no v3-specific markup changes.
 
-After the core migration, update integration-specific markup from the examples in each component's documentation and review the full [Winduum v3 announcement](/blog/) for the new utilities and components available in this release.
+## Continue to another integration
+
+The project is now migrated when it works with `winduum` and `winduum-stimulus` v3. To remove Stimulus from Winduum components, continue with the [winduum-elements migration guide](/migrations/winduum-elements-v3). Projects moving to Vue or React should use the current v3 installation examples in [winduum-vue](https://github.com/winduum/winduum-vue/tree/next/src/components) or [winduum-react](https://github.com/winduum/winduum-react/tree/next/src/components).

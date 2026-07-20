@@ -8,15 +8,14 @@ description: "Migration guide for replacing winduum-stimulus v3 with winduum-ele
 
 This is an integration migration, not another core Winduum upgrade. Custom application controllers can temporarily continue to use Stimulus alongside `winduum-elements`, but migrating them too is recommended so the project can remove Stimulus completely. This guide covers Winduum's controllers; follow the general [Stimulus to Webuum migration guide](https://webuum.dev/docs/migrations/stimulus) for application-specific controllers.
 
-::: warning Complete the prerequisite migrations first
+::: warning Complete the prerequisite migration first
 Do not apply this guide directly to a Winduum 2 project.
 
-1. Complete the [Winduum v3 migration](/migrations/winduum-v3).
-2. Complete the [winduum-stimulus v3 migration](/migrations/winduum-stimulus-v3).
-3. Verify that the project works with Winduum 3 and `winduum-stimulus` v3.
-4. Only then follow this guide to replace Winduum's Stimulus controllers with `winduum-elements`.
+1. Complete the combined [Winduum and winduum-stimulus v3 migration](/migrations/winduum-v3).
+2. Verify that the project works with Winduum 3 and `winduum-stimulus` v3.
+3. Only then follow this guide to replace Winduum's Stimulus controllers with `winduum-elements`.
 
-Although this guide removes the migrated controllers again, completing both earlier migrations first keeps the Winduum 2 to 3 markup changes separate from the integration change.
+Although this guide removes the migrated controllers again, completing the v3 migration first keeps the Winduum 2 to 3 markup changes separate from the integration change.
 :::
 
 ## Migration overview
@@ -33,7 +32,7 @@ Migrate one component at a time. Keep `winduum-stimulus` installed until every W
 
 ## 1. Install winduum-elements alongside Stimulus
 
-The project should already use `winduum@next` and `winduum-stimulus@next` after the prerequisite migrations. Add Elements without removing Stimulus yet:
+The project should already use `winduum@next` and `winduum-stimulus@next` after the prerequisite migration. Add Elements without removing Stimulus yet:
 
 ```shell
 npm install winduum-elements@next
@@ -117,7 +116,7 @@ The root element depends on the component:
 
 Customized built-ins preserve the semantics and native API of their base element. They require both the `is` attribute in HTML and the matching `{ extends: '...' }` registration option.
 
-Dialog has neither a Stimulus v3 controller nor a `winduum-elements` component. Keep the native Dialog markup completed in the prerequisite migrations.
+Dialog has neither a Stimulus v3 controller nor a `winduum-elements` component. Keep the native Dialog markup completed in the prerequisite migration.
 
 ## 3. Translate the Stimulus markup vocabulary
 
@@ -269,7 +268,7 @@ The v3 Drawer structure and native commands do not change again in this migratio
 ```
 :::
 
-Use `data-modal="false"` for a non-modal Drawer. The default is modal and the default placement is `left`. Keep the placement-specific v3 classes and scroller order from the completed Stimulus migration.
+Use `data-modal="false"` for a non-modal Drawer. The default is modal and the default placement is `left`. Keep the placement-specific v3 classes and scroller order from the completed v3 migration.
 
 ## 6. Convert targets, actions and internal listeners
 
@@ -504,7 +503,7 @@ Drawer and Popover use the native `show-modal`, `close`, `request-close`, `show-
 
 ## 7. Convert Popover only where the fallback is used
 
-The prerequisite Stimulus migration already moved Popover to native `popover`, `command` and `commandfor` attributes. Those native controls stay unchanged. Replace only the optional positioning controller and its values:
+The prerequisite v3 migration already moved Popover to native `popover`, `command` and `commandfor` attributes. Those native controls stay unchanged. Replace only the optional positioning controller and its values:
 
 ::: code-group
 ```html [winduum-stimulus v3]

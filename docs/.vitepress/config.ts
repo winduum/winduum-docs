@@ -114,10 +114,6 @@ export default defineConfig({
               link: '/migrations/winduum-v3'
             },
             {
-              text: 'winduum-stimulus v3',
-              link: '/migrations/winduum-stimulus-v3'
-            },
-            {
               text: 'winduum-elements v3',
               link: '/migrations/winduum-elements-v3'
             },
