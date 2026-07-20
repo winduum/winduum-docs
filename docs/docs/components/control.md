@@ -39,6 +39,7 @@ Follow instructions for individual framework usage below
 * <LinkGh name="select" path="components/control" />
 * <LinkGh name="select-multiple" path="components/control" />
 * <LinkGh name="select-picker" path="components/control" />
+* <LinkGh name="tel-country-code" path="components/control" />
 * <LinkGh name="icon" path="components/control" />
 
 ### Props
@@ -93,6 +94,14 @@ You can position any content to `start` and `end` of the control.<br>Padding is 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/select/basic.html"></iframe>
 
 <<< @/public/examples/components/select/basic.html#body{}
+
+### Tel Country Code
+
+Combine a country calling code selector with a national phone number. The Control script mirrors the selected code into the adjacent `span` while keeping the full country names available in the native select.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/control/tel-country-code.html"></iframe>
+
+<<< @/public/examples/components/control/tel-country-code.html#body{}
 
 ### Placeholder
 

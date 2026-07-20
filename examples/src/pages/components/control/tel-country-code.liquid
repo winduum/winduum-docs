@@ -1,0 +1,39 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<div class="grid gap-2">
+    <label class="x-label">Phone number</label>
+    <div class="x-group">
+        <x-control class="x-control w-22 shrink-0">
+            <select
+                autocomplete="tel-country-code"
+                required
+                aria-label="Country code"
+            >
+                <option value="+420" selected>Česko +420</option>
+                <option value="+421">Slovensko +421</option>
+            </select>
+            <span aria-hidden="true">+420</span>
+        </x-control>
+        <x-control class="x-control grow">
+            <input
+                type="tel"
+                pattern="^[0-9]{6,14}$"
+                placeholder="777 666 555"
+                autocomplete="tel-national"
+                aria-label="National number"
+                required
+            >
+        </x-control>
+    </div>
+</div>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { Control } from 'winduum-elements/components/control/index.js'
+
+    customElements.define('x-control', Control)
+</script>
+<!-- #endregion js -->
+{% endblock %}

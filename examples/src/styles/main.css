@@ -7,6 +7,7 @@
 
 /* single imports for your components and utilities, or you can include them separately in your project (recommended) */
 @import "winduum/src/components/index.css" layer(utilities);
+@import "winduum/src/components/control/tel-country-code.css" layer(utilities);
 @import "winduum/src/components/drawer/nosnap.css" layer(utilities);
 @import "winduum/src/utilities/container/props/default.css" layer(theme);
 @import "winduum/src/utilities/ripple/keyframes/default.css";
