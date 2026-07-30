@@ -43,10 +43,13 @@ export default defineConfig({
       { icon: 'twitter', link: 'https://twitter.com/winduum_dev' }
     ],
 
-    algolia: {
-      appId: '3DLECEENW2',
-      apiKey: '31331a8def9abe0356f5338d568ca974',
-      indexName: 'winduum'
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: '3DLECEENW2',
+        apiKey: '31331a8def9abe0356f5338d568ca974',
+        indexName: 'winduum'
+      },
     },
 
     footer: {
