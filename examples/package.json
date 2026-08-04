@@ -6,17 +6,25 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vituum/vite-plugin-liquid": "^2.0.2",
+    "@floating-ui/dom": "^1.8.0",
     "@tailwindcss/vite": "^4.3.3",
+    "@vituum/vite-plugin-liquid": "^2.0.2",
     "@webreflection/custom-elements-builtin": "^0.4.1",
+    "browserslist": "^4.28.7",
+    "browserslist-to-esbuild": "^2.1.1",
     "interestfor": "^1.0.8",
     "invokers-polyfill": "^1.0.3",
     "tailwindcss": "^4.3.3",
+    "vite": "^8.2.0",
+    "vituum": "^1.1.1",
     "webuum": "^0.2.5",
     "winduum": "^3.0.0-next.17",
-    "winduum-elements": "^0.0.18",
-    "vituum": "^1.1.1",
-    "vite": "^8.2.0",
-    "@floating-ui/dom": "^1.8.0"
-  }
+    "winduum-elements": "^0.0.18"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 major versions",
+    "not kaios > 0",
+    "not dead"
+  ]
 }

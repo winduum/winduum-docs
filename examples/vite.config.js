@@ -4,6 +4,9 @@ import vituum from 'vituum'
 import liquid from '@vituum/vite-plugin-liquid'
 import tailwindcss from '@tailwindcss/vite'
 import { examplesIndex } from '../examples-index-plugin.js'
+import { browserslistToTargets } from 'lightningcss'
+import browserslist from 'browserslist'
+import browserslistToEsbuild from "browserslist-to-esbuild";
 
 const htmlPlugin = () => {
     return {
@@ -25,8 +28,18 @@ export default defineConfig({
         pagesDirectory: resolve(process.cwd(), 'src/pages'),
         extension: '.liquid'
     }), htmlPlugin()],
+    css: {
+      transformer: 'lightningcss',
+      lightningcss: {
+          targets: browserslistToTargets(browserslist()),
+          include: 0,
+          drafts: {
+              customMedia: true,
+          },
+      }
+    },
     build: {
-        target: 'esnext',
+        target: browserslistToEsbuild(),
         manifest: false,
         modulePreload: false,
         emptyOutDir: true,
