@@ -1,28 +1,33 @@
 ---
-description: "Winduum builds on modern web platform features. Some of them are still experimental or not supported in every browser, so polyfills are opt-in and can be…"
+description: "Install the optional polyfill dependencies and add the Webuum and Winduum polyfill entry points to cover unsupported browser features."
 ---
 
 # Polyfills
 
-Winduum builds on modern web platform features. Some of them are still experimental or not supported in every browser, so polyfills are opt-in and can be lazy-loaded only when feature detection says they are needed.
+Winduum builds on modern web platform features that are not supported in every browser yet. The recommended setup is to add the provided polyfill entry points once to your project.
 
-## Install
+## Setup
 
-Install only the polyfills you actually need for your project.
-
-```shell
-npm install invokers-polyfill interestfor
-```
-
-If you use `winduum-elements`, also add the customized built-in elements polyfill used by those elements:
+Install Webuum and the optional polyfill dependencies:
 
 ```shell
-npm install @webreflection/custom-elements-builtin
+npm install webuum invokers-polyfill interestfor @webreflection/custom-elements-builtin
 ```
 
-See the [Webuum polyfills docs](https://webuum.dev/docs/polyfills.html) for more details about these Webuum features.
+Then add both imports to your application's JavaScript entry point:
 
-## Winduum
+```js
+import 'webuum/polyfill'
+import 'winduum/polyfill'
+```
+
+That's all. Webuum and Winduum detect browser support and load only the polyfills that the current browser needs. You do not need to run the support checks yourself.
+
+## Advanced loading
+
+The entry points above are recommended for most projects. Use the individual support checks below only when you need more control over which fallbacks are loaded. See the [Webuum polyfills docs](https://webuum.dev/docs/polyfills.html) for more details about its features.
+
+### Winduum support checks
 
 Winduum exposes support checks from `winduum/supports`. Use them before loading a polyfill.
 
@@ -61,12 +66,15 @@ The `timeline-trigger` feature is used by Winduum animation trigger utilities. W
 
 `winduum/supports` also exposes checks without a bundled polyfill — useful for your own fallbacks:
 
+* `supportsAnchor` — CSS Anchor Positioning
+* `supportsAnchoredContainer` — anchored container queries
 * `supportsAnimationTimeline` — CSS [`animation-timeline`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline) scroll-driven animations
 * `supportsScrollInitialTarget` — CSS [`scroll-initial-target`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-initial-target), used internally by the [Drawer](/docs/components/drawer) helpers
+* `supportsScrollSnapEvents` — CSS Scroll Snap change events
 
-## Winduum Elements
+### Winduum Elements
 
-`winduum-elements` builds on top of Webuum, so projects using it need to include Webuum polyfills too when targeting browsers without support for those APIs.
+`winduum-elements` builds on top of Webuum. The recommended setup above already covers both libraries. For a fully manual setup, use both sets of support checks:
 
 ```js
 import { supportsCommand, supportsIs } from 'webuum/supports'

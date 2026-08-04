@@ -8,14 +8,12 @@ import { examplesIndex } from '../examples-index-plugin.js'
 const htmlPlugin = () => {
     return {
         name: 'html-transform',
-        transformIndexHtml: {
-            order: 'post',
-            async transform(html, { path }) {
-                return html.replaceAll(
-                    '"/assets/',
-                    `"${relative(path, '/src/pages/').slice(0, -2)}assets/`
-                )
-            }
+        order: 'post',
+        transformIndexHtml(html, { path }) {
+            return html.replaceAll(
+              '"/assets/',
+              `"${relative(path, '/src/pages/').slice(0, -2)}assets/`
+            )
         }
     }
 }
