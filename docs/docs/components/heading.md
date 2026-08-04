@@ -1,25 +1,30 @@
+---
+description: "For common heading styles that you can manage from one component across project."
+---
+
 # Heading
 For common heading styles that you can manage from one component across project.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/heading" />
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/heading/basic.html" style="margin: 1.5rem 0"></iframe>
 
-### Usage
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/heading" />
 
-```css
-@import "winduum/src/components/heading/index.css" layer(utilities);
-```
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/heading" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/heading" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/heading" />
+
+## Styles
+
+### Props
+* <LinkGh name="default" path="components/heading/props" />
 
 ### Tokens
 
-* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/heading/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/heading/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/heading" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/heading" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/heading" />
+* `sm` <a href="https://github.com/winduum/winduum/blob/next/src/components/heading/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/next/src/components/heading/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ## Examples
 
@@ -28,8 +33,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/heading/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/heading/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/heading/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Heading } from '@/components/heading'
 </script>
@@ -38,7 +43,7 @@ Follow instructions for individual framework usage below
     <Heading>Heading</Heading>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Heading } from '@/components/heading'
 
 export function Example() {

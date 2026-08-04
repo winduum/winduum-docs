@@ -1,0 +1,34 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<button class="x-button" id="appendToast">Append toast</button>
+
+<template id="toastTemplate">
+    <li class="x-toast" data-controller="x-toast" data-action="x-toast:connect->x-toast#show" role="status" aria-live="assertive" aria-atomic="true">
+        <div class="x-toast-content">
+            <div class="flex-col">
+                <div class="x-title">Hello toast</div>
+                <div class="x-text">Amazing toast</div>
+            </div>
+            <button class="x-button muted ml-auto" data-action="click->x-toast#close">Close</button>
+        </div>
+    </li>
+</template>
+
+<ol class="x-toaster items-end" popover="manual" data-controller="x-toaster"></ol>
+<!-- #endregion body -->
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    const toaster = document.querySelector('[data-controller~="x-toaster"]')
+    const toastTemplate = document.querySelector('#toastTemplate')
+
+    document.querySelector('#appendToast')?.addEventListener('click', () => {
+        toaster.append(toastTemplate.content.firstElementChild.cloneNode(true))
+    })
+</script>
+<!-- #endregion js -->
+{% endblock %}
+

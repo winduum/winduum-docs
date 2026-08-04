@@ -1,6 +1,16 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<div class="x-image">
-    <img class="aspect-[3/2]" src="https://img.logoipsum.com/250.svg" loading="lazy" alt="">
-</div>
+<x-image class="x-image before:skeleton">
+    <img class="aspect-[3/2]" src="https://placehold.co/250x250/webp" loading="lazy" alt="">
+</x-image>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { Image } from 'winduum-elements/components/image/index.js'
+
+    customElements.define('x-image', Image(HTMLElement))
+</script>
+<!-- #endregion js -->
 {% endblock %}

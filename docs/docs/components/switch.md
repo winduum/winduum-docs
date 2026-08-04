@@ -1,12 +1,22 @@
+---
+description: "Toggle switch built with a checkbox input type."
+---
+
 # Switch
-<br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/switch" />
+Toggle switch built with a `checkbox` **input** type.
 
-### Usage
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/basic.html" style="margin: 1.5rem 0"></iframe>
 
-```css
-@import "winduum/src/components/switch/index.css" layer(utilities);
-```
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/switch" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/switch" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/switch" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/switch" />
+
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/switch" />
@@ -17,13 +27,6 @@
 * <LinkGh name="default" path="components/switch/props" />
 * <LinkGh name="interactive" path="components/switch/props" />
 
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/switch" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/switch" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/switch" />
-
 ## Examples
 
 ### Basic
@@ -31,8 +34,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/switch/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/switch/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Switch } from '@/components/switch'
 </script>
@@ -44,7 +47,7 @@ Follow instructions for individual framework usage below
     </Switch>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Switch } from '@/components/switch'
 
 export function Example() {
@@ -75,3 +78,11 @@ export function Example() {
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/disabled.html"></iframe>
 
 <<< @/public/examples/components/switch/disabled.html#body{}
+
+### Validation
+
+Invalid state styling via the `invalid` variant — works with native HTML5 form validation, see [Form](/docs/components/form).
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/switch/validation.html"></iframe>
+
+<<< @/public/examples/components/switch/validation.html#body{}

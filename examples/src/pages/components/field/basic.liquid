@@ -1,11 +1,28 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<div class="x-field">
+<x-field class="x-field">
     <label class="x-label">Label</label>
-    <div class="x-control">
+    <x-control class="x-control">
         <input type="text" required>
-    </div>
+    </x-control>
     <em class="x-info">Info message</em>
-</div>
+</x-field>
 {% endblock %}
 
+{% block foot %}
+<svg class="hidden">
+    <symbol id="heroicons-outline/exclamation-circle" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+    </symbol>
+</svg>
+
+<!-- #region js -->
+<script type="module">
+    import { Control } from 'winduum-elements/components/control/index.js'
+    import { Field } from 'winduum-elements/components/field/index.js'
+
+    customElements.define('x-control', Control)
+    customElements.define('x-field', Field)
+</script>
+<!-- #endregion js -->
+{% endblock %}

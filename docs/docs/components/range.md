@@ -1,41 +1,38 @@
+---
+description: "Accessible range slider that allows easy selection of a value by sliding a handle."
+---
+
 # Range
 Accessible range slider that allows easy selection of a value by sliding a handle.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/range" />
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/default.html" style="margin: 1.5rem 0"></iframe>
 
-### Usage
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/range" />
 
-::: code-group
-```css
-@import "winduum/src/components/range/index.css" layer(utilities);
-```
-```js
-import { setValue } from 'winduum/src/components/range'
+## Installation
+Follow instructions for individual framework usage below
 
-const rangeSlider = document.querySelector('#rangeSlider')
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/range" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/range" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/range" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/range" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/range" />
 
-setValue(rangeSlider)
-rangeSlider.addEventListener('input', ({ currentTarget }) => setValue(currentTarget))
-```
-:::
+## Styles
 
 ### Variants
-* `default` <a href="https://github.com/winduum/winduum/blob/main/src/components/range/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `multi` <a href="https://github.com/winduum/winduum/blob/main/src/components/range/multi.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `default` <a href="https://github.com/winduum/winduum/blob/next/src/components/range/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `multi` <a href="https://github.com/winduum/winduum/blob/next/src/components/range/multi.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ### Props
 * <LinkGh name="default" path="components/range/props" />
 
 ### Tokens
-* `vertical` <a href="https://github.com/winduum/winduum/blob/main/src/components/range/vertical.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `vertical` <a href="https://github.com/winduum/winduum/blob/next/src/components/range/vertical.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/range" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/range" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/range" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/range" />
+## Scripts
+The Range script updates track CSS variables and linked output values as the slider
+changes.
 
 ## Examples
 
@@ -44,30 +41,10 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/default.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/range/default.html#body{} [html]
-<<< @/../examples/src/pages/components/range/default.liquid#js{} [js]
-```vue
-<script setup lang="ts">
-    import { Range } from '@/components/range'
-</script>
-
-<template>
-    <Range>
-        <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single">
-    </Range>
-</template>
-```
-```jsx
-import { Range } from '@/components/range'
-
-export function Example() {
-    return (
-        <Range>
-            <input type="range" value="0" step="10" max="100" min="0" aria-labelledby="single" id="range-single" />
-        </Range>
-    )
-}
-```
+<<< @/public/examples/components/range/default.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/range/default.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/range/default.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/range/default.tsx [winduum-react]
 :::
 
 ### Multi
@@ -75,21 +52,24 @@ export function Example() {
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/multi.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/range/multi.html#body{} [html]
-<<< @/../examples/src/pages/components/range/multi.liquid#js{} [js]
+<<< @/public/examples/components/range/multi.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/range/multi.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/range/multi.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/range/multi.tsx [winduum-react]
 :::
-
 
 ### Vertical
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/range/vertical.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/range/vertical.html#body{} [html]
-<<< @/../examples/src/pages/components/range/vertical.liquid#js{} [js]
+<<< @/public/examples/components/range/vertical.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/range/vertical.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/range/vertical.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/range/vertical.tsx [winduum-react]
 :::
 
-## Javascript API
+## JavaScript API
 
 ### setTrackProperty
 

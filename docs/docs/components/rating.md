@@ -1,12 +1,22 @@
+---
+description: "Accessible star rating built with radio input types."
+---
+
 # Rating
-<br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/rating" />
+Accessible star rating built with `radio` **input** types.
 
-### Usage
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/rating.html" style="margin: 1.5rem 0"></iframe>
 
-```css
-@import "winduum/src/components/rating/index.css" layer(utilities);
-```
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/rating" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/rating" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/rating" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/rating" />
+
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/rating" />
@@ -15,13 +25,6 @@
 ### Props
 * <LinkGh name="default" path="components/rating/props" />
 
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/rating" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/rating" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/rating" />
-
 ## Examples
 
 ### Basic
@@ -29,8 +32,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/rating.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/rating.html#body{} [html]
-```vue
+<<< @/public/examples/components/rating.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Rating } from '@/components/rating'
 </script>
@@ -45,7 +48,7 @@ Follow instructions for individual framework usage below
     </Rating>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Rating } from '@/components/rating'
 
 export function Example() {
@@ -61,3 +64,7 @@ export function Example() {
 }
 ```
 :::
+
+## Accessibility
+
+Rating is a native radio group — each star is an `input type="radio"` sharing the same `name`, so keyboard users can move between values with arrow keys and the selection is announced by screen readers. Give every input a descriptive `aria-label` (e.g. `Rate 3/5`) as shown in the example.

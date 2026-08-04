@@ -1,0 +1,25 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.7.6",
+    "interestfor": "^1.0.0",
+    "invokers-polyfill": "^1.0.3",
+    "vue": "^3.5.39",
+    "winduum": "^3.0.0-next.16",
+    "winduum-vue": "https://github.com/winduum/winduum-vue/archive/a254110372a1f97896aa4d251d8436fb5d2eb71e.tar.gz"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^5.9.3",
+    "vite": "^8.1.3",
+    "vituum": "^1.1.1",
+    "vue-tsc": "^3.3.6"
+  }
+}

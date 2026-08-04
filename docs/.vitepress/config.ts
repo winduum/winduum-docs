@@ -70,20 +70,58 @@ export default defineConfig({
               },
               {
                 text: 'Changelog',
-                link: 'https://github.com/winduum/winduum/blob/main/CHANGELOG.md'
+                link: 'https://github.com/winduum/winduum/blob/next/CHANGELOG.md'
+              }
+            ]
+          },
+          {
+            items: [
+              {
+                text: 'Webuum',
+                link: 'https://webuum.dev'
               },
               {
-                text: 'v1',
-                link: 'https://v1--winduum.netlify.app/'
+                text: 'Vituum',
+                link: 'https://vituum.dev'
               }
             ]
           }
         ]
-      }
+      },
+      {
+        text: 'v3 (next)',
+        items: [
+          {
+            text: 'v2',
+            link: 'https://v2--winduum.netlify.app/'
+          },
+          {
+            text: 'v1',
+            link: 'https://v1--winduum.netlify.app/'
+          }
+        ]
+      },
     ],
 
     sidebar: {
       '/docs/': [
+        {
+          text: 'v3 Announcement',
+          link: '/blog/'
+        },
+        {
+          text: 'Migrations',
+          items: [
+            {
+              text: 'winduum v3',
+              link: '/migrations/winduum-v3'
+            },
+            {
+              text: 'winduum-elements v3',
+              link: '/migrations/winduum-elements-v3'
+            },
+          ],
+        },
         {
           text: 'Get started',
           items: [
@@ -108,12 +146,12 @@ export default defineConfig({
               link: '/docs/grid'
             },
             {
-              text: 'Layers',
-              link: '/docs/layers'
-            },
-            {
               text: 'Tokens',
               link: '/docs/tokens'
+            },
+            {
+              text: 'Polyfills',
+              link: '/docs/polyfills'
             }
           ]
         },
@@ -147,7 +185,7 @@ export default defineConfig({
             {
               text: 'Transitions',
               link: '/docs/base/transitions'
-            }
+            },
           ]
         },
         {
@@ -230,8 +268,8 @@ export default defineConfig({
               link: '/docs/components/label'
             },
             {
-              text: 'Link',
-              link: '/docs/components/link'
+              text: 'Marquee',
+              link: '/docs/components/marquee'
             },
             {
               text: 'Notice',
@@ -291,7 +329,6 @@ export default defineConfig({
             }
           ]
         },
-
         {
           text: 'Utilities',
           items: [
@@ -302,10 +339,6 @@ export default defineConfig({
             {
               text: 'Animation',
               link: '/docs/utilities/animation'
-            },
-            {
-              text: 'Container',
-              link: '/docs/utilities/container'
             },
             {
               text: 'Divide Gap',
@@ -320,6 +353,22 @@ export default defineConfig({
               link: '/docs/utilities/dot'
             },
             {
+              text: 'Grid',
+              link: '/docs/utilities/grid'
+            },
+            {
+              text: 'Link',
+              link: '/docs/utilities/link'
+            },
+            {
+              text: 'Position',
+              link: '/docs/utilities/position'
+            },
+            {
+              text: 'Ripple',
+              link: '/docs/utilities/ripple'
+            },
+            {
               text: 'Skeleton',
               link: '/docs/utilities/skeleton'
             },
@@ -332,13 +381,34 @@ export default defineConfig({
               link: '/docs/utilities/swap'
             },
             {
-              text: 'Ripple',
-              link: '/docs/utilities/ripple'
-            },
-            {
               text: 'Underline',
               link: '/docs/utilities/underline'
+            },
+            {
+              text: 'View Transition',
+              link: '/docs/utilities/view-transition'
             }
+          ]
+        },
+        {
+          text: "Variants",
+          items: [
+            {
+              text: 'Dark',
+              link: '/docs/variants/dark'
+            },
+            {
+              text: 'Hocus',
+              link: '/docs/variants/hocus'
+            },
+            {
+              text: 'Interest',
+              link: '/docs/variants/interest'
+            },
+            {
+              text: 'Scroll State',
+              link: '/docs/variants/scroll-state'
+            },
           ]
         }
       ]

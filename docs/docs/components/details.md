@@ -1,54 +1,32 @@
+---
+description: "An accessible accordion or toggle component for details and summary elements."
+---
+
 # Details
 
-An accessible accordion or toggle component for `details` and `summary` elements.<br>
-Uses small external library `slide-element` for smooth toggle animations.
+An accessible accordion or toggle component for `details` and `summary` elements.
 
-It is unstyled by default, so you can apply your own styles.
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/details/default.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/details" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/details" />
 
-### Dependencies
-
-* [slide-element](https://www.npmjs.com/package/slide-element)
-
-### Usage
-::: code-group
-```shell
-npm i slide-element
-```
-```html
-<details class="x-details group bg-body-secondary rounded">
-    <summary class="flex-center text-primary p-4" data-action="toggleDetails">
-        <span class="x-title">Show more</span>
-        <svg class="size-4 group-open:-scale-y-100 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-        </svg>
-    </summary>
-    <div style="display: none">
-        <div class="p-4">
-            Details content
-        </div>
-    </div>
-</details>
-```
-```js
-import { toggleDetails } from 'winduum/src/components/details'
-
-document.querySelectorAll('[data-action="toggleDetails"]').forEach(summary => {
-    summary.addEventListener('click', event => {
-        if (event.currentTarget.tagName !== 'INPUT') event.preventDefault()
-
-        toggleDetails(summary)
-    })
-})
-```
-:::
-
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/details" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/details" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/details" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/details" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/details" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/details" />
+
+## Styles
+
+### Variants
+* <LinkGh name="default" path="components/details" />
+
+## Scripts
+The Details script keeps a checkbox inside `summary` in sync with the native
+`details[open]` state.
 
 ## Examples
 
@@ -57,57 +35,96 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/details/default.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/details/default.html#body{} [html]
-<<< @/../examples/src/pages/components/details/default.liquid#js{} [js]
+<<< @/public/examples/components/details/default.html#body{} [winduum]
+```vue [winduum-vue]
+<script setup lang="ts">
+    import { Details } from '@/components/details'
+</script>
+
+<template>
+    <Details class="group bg-body-secondary rounded-md">
+        <summary class="flex items-center gap-2 text-primary p-4">
+            <span class="x-title">Show more</span>
+            <svg class="size-4 group-open:-scale-y-100 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+        </summary>
+        <div class="p-4">
+            Details content
+        </div>
+    </Details>
+</template>
+```
+```jsx [winduum-react]
+import { Details } from '@/components/details'
+
+export function Example() {
+    return (
+        <Details className="group bg-body-secondary rounded-md">
+            <summary className="flex items-center gap-2 text-primary p-4">
+                <span className="x-title">Show more</span>
+                <svg className="size-4 group-open:-scale-y-100 transition-transform" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </summary>
+            <div className="p-4">
+                Details content
+            </div>
+        </Details>
+    )
+}
+```
 :::
 
 ### Checkbox
 
+You can also control details with a checkbox inside `summary` — only a tiny script is needed to sync the checkbox state.
+It's provided by the [`toggleDetails`](#toggledetails) helper and wired up by the `winduum-elements`, `winduum-stimulus`,
+`winduum-vue` and `winduum-react` integrations below.
+
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/details/checkbox.html" style="height: 500px;"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/details/checkbox.html#body{} [html]
-<<< @/../examples/src/pages/components/details/checkbox.liquid#js{} [js]
+<<< @/public/examples/components/details/checkbox.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/details/checkbox.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/details/checkbox.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/details/checkbox.tsx [winduum-react]
 :::
 
 ### Accordion
 
+Exclusive accordions use the native `name` attribute — details elements sharing the same `name` close each other automatically.
+
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/details/accordion.html" style="height: 500px;"></iframe>
 
-::: code-group
-<<< @/public/examples/components/details/accordion.html#body{} [html]
-<<< @/../examples/src/pages/components/details/accordion.liquid#js{} [js]
-:::
+<<< @/public/examples/components/details/accordion.html#body{}
 
+## JavaScript API
 
-## Javascript API
+Low-level helper used by `winduum-elements`, `winduum-stimulus`, `winduum-vue` and `winduum-react` —
+you can use it to wire the checkbox sync manually or build your own integration.
 
-```typescript
-interface DefaultOptions {
-    selector?: string
-    summarySelector?: string
-}
+```js
+import { toggleDetails } from 'winduum/src/components/details'
+
+document.querySelectorAll('.x-details summary input[type="checkbox"]').forEach((inputElement) => {
+    inputElement.addEventListener('change', (event) => toggleDetails(event.target))
+})
 ```
 
-### toggleDetails
+### `toggleDetails`
 
-* **Type:** `(selector:  HTMLInputElement | HTMLElement, options?: DefaultOptions) => Promise<void>`
-* **Kind:** `async`
+* **Type:** `(element: HTMLInputElement, options?: ToggleDetailsOptions) => void`
+* **Kind:** `sync`
 
-Toggles a details element, should be added on summary or anywhere inside the details element.
+Toggles the `open` attribute of the closest `details` element to match the checkbox `checked` state.
+Call it on the `change` event of a checkbox inside `summary`.
 
-### showDetails
+#### ToggleDetailsOptions
 
-* **Type:** `(selector:  HTMLInputElement | HTMLElement, options?: DefaultOptions) => Promise<void>`
-* **Kind:** `async`
+---
 
-Shows a details element, should be added on `summary` or anywhere inside the `details` element.
+##### selector
 
-### closeDetails
-
-* **Type:** `(selector:  HTMLInputElement | HTMLElement, options?: DefaultOptions) => Promise<void>`
-* **Kind:** `async`
-
-Closes a details element, should be added on `summary` or anywhere inside the `details` element.
-
-
+* **Type:** `string`
+* **Default:** `details`

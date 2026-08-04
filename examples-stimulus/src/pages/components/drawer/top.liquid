@@ -1,0 +1,15 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<button class="x-button" command="show-modal" commandfor="drawerTopElement">Show drawer</button>
+<dialog data-controller="x-drawer" class="x-drawer" id="drawerTopElement" closedby="any" data-x-drawer-placement-value="top">
+    <div class="x-drawer-scroller flex flex-col snap-y snap-mandatory">
+        <nav class="x-drawer-content" data-x-drawer-target="content" style="--x-drawer-content-inline-size: 100dvw;--x-drawer-content-block-size: calc(100vh - 4rem);">
+            Drawer content
+            <button class="x-button muted" command="request-close" commandfor="drawerTopElement">Close drawer</button>
+        </nav>
+    </div>
+</dialog>
+<!-- #endregion body -->
+{% endblock %}
+

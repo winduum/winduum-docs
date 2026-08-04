@@ -1,20 +1,26 @@
+---
+description: "Default styles or rules applied to certain HTML elements or pseudo-elements. These are very much optional."
+---
+
 # Defaults
 Default styles or rules applied to certain HTML elements or pseudo-elements. These are very much optional.
 
-[`src/base/defaults.css`](https://github.com/winduum/winduum/blob/main/src/base/defaults.css)
+[`src/base/defaults.css`](https://github.com/winduum/winduum/blob/next/src/base/defaults.css)
 
 <<< @/../node_modules/winduum/src/base/defaults.css
 
-For TailwindCSS `v3` there are few rules such as resetting borders
-and applying `--tw-content` to all pseudo-elements and zero border to all elements or pseudo-elements.
+There is also an extended set of opinionated defaults — block `svg`/`img`, icon styling based on `href` suffixes (`-outline`, `-solid`, ...), unstyled lists and native appearance resets for `number` and `search` inputs.
 
-[`tailwindcss/base/defaults.css`](https://github.com/winduum/winduum/blob/main/tailwindcss/base/defaults.css)
-  
+[`src/base/defaults-extended.css`](https://github.com/winduum/winduum/blob/next/src/base/defaults-extended.css)
+
+```css
+@import "winduum/src/base/defaults-extended.css" layer(base);
+```
 
 
 ##  Cursor
 
-Default `cursor: pointer` for clickable elements, you can change this globally via CSS property `--default-cursor` if you prefer more application like behavior.
+Default `cursor: pointer` for clickable elements, you can change this globally via CSS property `--cursor-pointer` if you prefer more application like behavior.
 
 ## Svg
 Set the default size of an SVG as a small square if neither width nor height is specified.

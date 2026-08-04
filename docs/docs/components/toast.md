@@ -1,114 +1,66 @@
+---
+description: "Let it bake and fly from your Toaster!"
+---
+
 # Toast
 Let it bake and fly from your [Toaster](/docs/components/toaster)!
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/toast" />
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/toast/default.html" style="margin: 1.5rem 0"></iframe>
 
-## Usage
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/toast" />
 
-::: code-group
-```css
-@import "winduum/src/components/toast/index.css" layer(utilities);
-```
-```js
-import { showToast, closeToast } from 'winduum/src/components/toaster'
-
-document.querySelector('#insertToast').addEventListener('click', async () => {
-    const toaster = document.querySelector('.x-toaster')
-
-    toaster.insertAdjacentHTML('beforeend', `
-        <li class="x-toast" role="status" aria-live="assertive" aria-atomic="true" popover="manual">
-            <div class="x-toast-content">
-                <div class="flex-col">
-                    <div class="x-title">Hello toast</div>
-                    <div class="x-text">Amazing toast</div>
-                </div>
-                <button class="x-button muted ml-auto" data-action="closeToast">Close</button>
-            </div>
-        </li>
-    `)
-
-    await showToast(toaster.children[toaster.children.length - 1])
-
-    const closeToastButton = document.querySelectorAll('[data-action="closeToast"]')[document.querySelectorAll('[data-action="closeToast"]').length - 1]
-
-    closeToastButton.addEventListener('click', ({ currentTarget }) => {
-        closeToast(currentTarget.closest('.c-toast'))
-    })
-})
-```
-```html
-<body>
-    <!-- your html !-->
-    <ol class="x-toaster items-end"></ol>
-</body>
-```
-:::
-
-### Variants
-* <LinkGh name="default" url="https://github.com/winduum/winduum/blob/main/src/components/toast/default.css" />
-* <LinkGh name="content" url="https://github.com/winduum/winduum/blob/main/src/components/toast/content.css" />
-
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/toast" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/toast" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/toast" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/toast" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/toast" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/toast" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/toast" />
 
-## Example
+## Styles
 
-<div class="iframe">
-    <button class="x-button" id="showToast">Show toast</button>
-</div>
+### Variants
+* <LinkGh name="default" url="https://github.com/winduum/winduum/blob/next/src/components/toast/default.css" />
+* <LinkGh name="content" url="https://github.com/winduum/winduum/blob/next/src/components/toast/content.css" />
+
+### Props
+* <LinkGh name="default" path="components/toast/props" />
+* <LinkGh name="content" path="components/toast/props" />
+
+## Scripts
+The Toast script runs enter/exit animations and handles optional auto-hide.
+
+::: info
+For `winduum-elements` and `winduum-stimulus`, toasts are expected to be appended into the Toaster from the backend, for example via ajax. You can also append the HTML manually, for example with `insertAdjacentHTML`.
+:::
+
+## Examples
+
+### Default
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/toast/default.html"></iframe>
 
 ::: code-group
-```html
-<button class="x-button" id="insertToast">Show toast</button>
-
-<ol class="x-toaster items-end"></ol>
-
-<script type="module">
-    import { showToast, closeToast } from 'winduum/src/components/toaster'
-
-    document.querySelector('#insertToast').addEventListener('click', async () => {
-        const toaster = document.querySelector('.x-toaster')
-
-        toaster.insertAdjacentHTML('beforeend', `
-            <li class="x-toast" role="status" aria-live="assertive" aria-atomic="true" popover="manual">
-                <div class="x-toast-content">
-                    <div class="flex-col">
-                        <div class="x-title">Hello toast</div>
-                        <div class="x-text">Amazing toast</div>
-                    </div>
-                    <button class="x-button muted ml-auto" data-action="closeToast">Close</button>
-                </div>
-            </li>
-        `)
-
-        await showToast(toaster.children[toaster.children.length - 1])
-
-        const closeToastButton = document.querySelectorAll('[data-action="closeToast"]')[document.querySelectorAll('[data-action="closeToast"]').length - 1]
-
-        closeToastButton.addEventListener('click', ({ currentTarget }) => {
-            closeToast(currentTarget.closest('.c-toast'))
-        })
-    })
-</script>
-```
+<<< @/public/examples/components/toast/default.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/toast/default.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/toast/default.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/toast/default.tsx [winduum-react]
 :::
 
 ## JavaScript API
 
 ### `showToast`
 
-* **Type:** `(selector:  HTMLElement, options?: ShowToastOptions) => Promise<void>`
+* **Type:** `(element:  HTMLElement, options?: ShowToastOptions) => Promise<void>`
 * **Kind:** `async`
 
-Applies an enter animation to existing toast.
+Applies an enter animation to existing toast and schedules its auto-hide.
 
 #### Example
 
 ```js
-import { showToast } from 'winduum/src/components/toaster'
+import { showToast } from 'winduum/src/components/toast'
 
 document.querySelector('#showToast').addEventListener('click', async () => {
     await showToast(document.querySelector('#toastElement'))
@@ -129,15 +81,17 @@ document.querySelector('#showToast').addEventListener('click', async () => {
 
 ##### autoHide
 
-* **Type:** `number`
-* **Default:** `null`
+* **Type:** `number | null`
+* **Default:** `7500`
+
+Time in ms after which the toast closes automatically — the delay scales with the number of toasts in the toaster. Set to `null` to disable.
 
 ---
 
 ##### heightProperty
 
 * **Type:** `string`
-* **Default:** `--x-toast-height`
+* **Default:** `--x-toast-block-size`
 
 ---
 
@@ -146,13 +100,15 @@ document.querySelector('#showToast').addEventListener('click', async () => {
 * **Type:** `CloseToastOptions`
 * **Default:** `{}`
 
+Options passed to `closeToast` when the toast auto-hides.
+
 ---
 
 <br>
 
 ### `closeToast`
 
-* **Type:** `(selector:  HTMLElement, options?: CloseToastOptions) => Promise<void>`
+* **Type:** `(element:  HTMLElement, options?: CloseToastOptions) => Promise<void>`
 * **Kind:** `async`
 
 Applies an exit animation to existing toast and removes it from DOM.
@@ -160,7 +116,7 @@ Applies an exit animation to existing toast and removes it from DOM.
 #### Example
 
 ```js
-import { showToast } from 'winduum/src/components/toaster'
+import { closeToast } from 'winduum/src/components/toast'
 
 document.querySelector('#closeToast').addEventListener('click', async () => {
     await closeToast(document.querySelector('#toastElement'))
@@ -175,14 +131,21 @@ document.querySelector('#closeToast').addEventListener('click', async () => {
 
 ##### closedAttribute
 
-* **Type:** `data-closed`
-* **Default:** `out`
+* **Type:** `string`
+* **Default:** `data-closed`
 
 ---
 
 ##### heightProperty
 
 * **Type:** `string`
-* **Default:** `--x-toast-height`
+* **Default:** `--x-toast-block-size`
 
 ---
+
+##### remove
+
+* **Type:** `boolean`
+* **Default:** `true`
+
+Determines whether the toast is removed from the DOM after the exit animation.

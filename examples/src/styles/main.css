@@ -7,6 +7,8 @@
 
 /* single imports for your components and utilities, or you can include them separately in your project (recommended) */
 @import "winduum/src/components/index.css" layer(utilities);
+@import "winduum/src/components/control/tel-country-code.css" layer(utilities);
+@import "winduum/src/components/drawer/nosnap.css" layer(utilities);
 @import "winduum/src/utilities/container/props/default.css" layer(theme);
 @import "winduum/src/utilities/ripple/keyframes/default.css";
 @import "winduum/src/utilities/skeleton/props/default.css" layer(theme);
@@ -18,3 +20,6 @@
 @import "winduum/src/base/breakpoints.css";
 @import "winduum/src/base/keyframes.css";
 @import "winduum/src/base/transitions.css";
+
+@source "../../node_modules/winduum/src";
+@source "../../node_modules/winduum-elements";

@@ -1,0 +1,22 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+    <button class="x-button" interestfor="tooltipPopover" style="interest-delay: 0s;">Tooltip</button>
+    <x-popover class="x-popover tooltip bottom my-1" id="tooltipPopover" popover="hint" data-placement="bottom">
+        <div class="x-popover-content">
+            Popover
+        </div>
+    </x-popover>
+{% endblock %}
+
+{% block foot %}
+<script type="module">
+    import { Popover } from 'winduum-elements/components/popover/index.js'
+    import { supportsInterestFor } from 'winduum/supports'
+
+    customElements.define('x-popover', Popover)
+
+    if (!supportsInterestFor) {
+        await import('interestfor/src/interestfor.js')
+    }
+</script>
+{% endblock %}

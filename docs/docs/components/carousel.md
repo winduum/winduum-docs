@@ -1,25 +1,37 @@
+---
+description: "Provides a broadly compatible scroll carousel built with native CSS scroll snapping."
+---
+
 # Carousel
-Provides a scroll carousel that uses native CSS `scroll-snap` property.<br>
+Provides a scroll carousel that uses the native CSS `scroll-snap` property.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
+The carousel is CSS-first — scrolling, snapping and layout are handled by CSS. The optional JavaScript layer adds navigation, pagination, counters, progress, autoplay and drag helpers.
 
-### Usage
-::: code-group
-```css
-@import "winduum/src/components/carousel/index.css" layer(utilities);
-```
-<<< @/public/examples/components/carousel/basic.html#body{} [html]
-<<< @/../examples/src/pages/components/carousel/basic.liquid#js{} [js]
+::: info Experimental version
+An [experimental Carousel](/docs/components/carousel-experimental) is also available. It follows emerging native carousel APIs more closely, but browser support is still incomplete and not all required APIs have polyfills. Use this stable version when broad browser compatibility is required.
 :::
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/full.html" style="height: 620px; margin: 1.5rem 0"></iframe>
+
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/carousel" />
+
+## Installation
+Follow the instructions for your integration:
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/carousel" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/carousel" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/next/components/carousel" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/next/src/components/carousel" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/next/src/components/carousel" />
+
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/carousel" />
 * <LinkGh name="content" path="components/carousel" />
 
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
+## Scripts
+The Carousel script keeps counters, progress, pagination and scroll-edge state in sync. Navigation can move by one item or scroll directly to an item by index.
 
 ## Examples
 
@@ -28,8 +40,10 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/basic.html" style="height: 620px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/carousel/basic.html#body{} [html]
-<<< @/../examples/src/pages/components/carousel/basic.liquid#js{} [js]
+<<< @/public/examples/components/carousel/basic.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/carousel/basic.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/carousel/basic.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/carousel/basic.tsx [winduum-react]
 :::
 
 ### Full
@@ -37,190 +51,153 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/full.html" style="height: 620px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/carousel/full.html#body{} [html]
-<<< @/../examples/src/pages/components/carousel/full.liquid#js{} [js]
+<<< @/public/examples/components/carousel/full.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/carousel/full.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/carousel/full.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/carousel/full.tsx [winduum-react]
 :::
 
+## JavaScript API
 
-## Javascript API
+Low-level helpers used by `winduum-elements`, `winduum-stimulus`, `winduum-vue` and `winduum-react` — you can also use them to build your own integration.
 
 ### `scrollTo`
 
-* **Type:** `(element: HTMLElement | Element, index: number) => void`
+* **Type:** `(element: HTMLElement | Element, index?: number) => void`
 * **Kind:** `sync`
 
-Scroll to a snap item by its index.
+Scrolls to a carousel item by its index.
 
 ### `scrollNext`
 
 * **Type:** `(element: HTMLElement | Element) => void`
 * **Kind:** `sync`
 
-Scroll to the next snap item.
+Scrolls to the next item based on the active index set by `observeCarousel`.
 
 ### `scrollPrev`
 
 * **Type:** `(element: HTMLElement | Element) => void`
 * **Kind:** `sync`
 
-Scroll to a previous snap item.
+Scrolls to the previous item based on the active index set by `observeCarousel`.
 
 ### `getItemCount`
 
-* **Type:** `(element: HTMLElement | Element, scrollWidth: number, mathFloor: boolean) => number`
+* **Type:** `(element: HTMLElement | Element, scrollWidth?: number, mathFloor?: boolean) => number`
 * **Kind:** `sync`
 
-Get the number of possible scrolls inside the carousel.
-
+Returns the number of possible carousel positions.
 
 ### `observeCarousel`
 
-* **Type:** `(element: HTMLElement | Element, options?: ObserveCarouselOptions) => void`
+* **Type:** `(element: HTMLElement | Element, options?: ObserveCarouselOptions) => IntersectionObserver`
 * **Kind:** `sync`
 
-Adds an observer for the carousel. Adds properties `_observer` and `_activeIndex` to the DOM of the carousel `element`.
+Observes carousel items, toggles a visibility attribute and stores `_observer` and `_activeIndex` on the content element.
 
-#### ObserveCarouselOptions
+#### `ObserveCarouselOptions`
 
----
-
-##### visibleAttribute
+##### `visibleAttribute`
 
 * **Type:** `string`
 * **Default:** `data-visible`
 
-A class that is added to the carousel items once they are visible.
+Attribute added to carousel items while they intersect the carousel viewport.
 
----
-
-##### observerOptions
+##### `observerOptions`
 
 * **Type:** `IntersectionObserverInit`
-* **Default:** `{ threshold: 0.5 }`
+* **Default:** `{ threshold: 0.75 }`
 
-Additional [options](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#options) confugration for the observer.
-
----
+Additional configuration for the underlying `IntersectionObserver`.
 
 ### `dragCarousel`
 
 * **Type:** `(element: HTMLElement | Element, options?: DragCarouselOptions) => void`
 * **Kind:** `sync`
 
-Adds a mouse dragging capability to the carousel.
+Adds mouse dragging on devices with a fine pointer.
 
-#### DragCarouselOptions
+#### `DragCarouselOptions`
 
----
-
-##### activeAttribute
+##### `activeAttribute`
 
 * **Type:** `string`
 * **Default:** `data-grabbing`
-
----
 
 ### `paginationCarousel`
 
 * **Type:** `(element: HTMLElement | Element, options?: PaginationCarouselOptions) => void`
 * **Kind:** `sync`
 
-Inserts pagination indicators for the carousel to the desired element.
+Creates pagination items and wires them to the carousel.
 
-#### PaginationCarouselOptions
+#### `PaginationCarouselOptions`
 
----
-
-##### element
+##### `element`
 
 * **Type:** `HTMLElement | Element`
 * **Default:** `undefined`
 
----
-
-##### itemContent
+##### `itemContent`
 
 * **Type:** `string`
 * **Default:** `<div aria-hidden="true"></div>`
 
----
-
-##### activeAttribute
+##### `activeAttribute`
 
 * **Type:** `string`
 * **Default:** `data-active`
-
----
 
 ### `autoplayCarousel`
 
 * **Type:** `(element: HTMLElement | Element, options?: AutoplayCarouselOptions) => void`
 * **Kind:** `sync`
 
-Adds an autoplay for the carousel.
+Automatically advances the carousel and restarts from the beginning after the final item.
 
-#### AutoplayCarouselOptions
+#### `AutoplayCarouselOptions`
 
----
-
-##### delay
+##### `delay`
 
 * **Type:** `number`
 * **Default:** `4000`
 
-Delay in ms.
+Delay in milliseconds.
 
----
+##### `pauseElements`
 
-##### pauseElements
-
-* **Type:** `HTMLElement[] | Element[]`
+* **Type:** `(HTMLElement | Element)[]`
 * **Default:** `[]`
 
-Which elements should pause the autoplay upon hover.
-
----
+Elements that pause autoplay while hovered.
 
 ### `scrollCarousel`
 
 * **Type:** `(element: HTMLElement | Element, options?: ScrollCarouselOptions) => void`
 * **Kind:** `sync`
 
-A helper function that updates various carousel states upon scroll.
+Updates pagination, progress and counter state after scrolling.
 
-#### ScrollCarouselOptions
+#### `ScrollCarouselOptions`
 
----
-
-##### observe
-
-* **Type:** `ObserveCarouselOptions`
-* **Default:** `undefined`
-
----
-
-##### pagination
+##### `pagination`
 
 * **Type:** `PaginationCarouselOptions`
-* **Default:** `{ activeClass: 'active' }`
+* **Default:** `{ activeAttribute: 'data-active' }`
 
----
-
-##### progressElement
+##### `progressElement`
 
 * **Type:** `HTMLProgressElement | Element`
 * **Default:** `undefined`
 
----
-
-##### counterMinElement
+##### `counterMinElement`
 
 * **Type:** `HTMLElement | Element`
 * **Default:** `undefined`
 
----
-
-##### counterMaxElement
+##### `counterMaxElement`
 
 * **Type:** `HTMLElement | Element`
 * **Default:** `undefined`

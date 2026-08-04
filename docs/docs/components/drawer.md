@@ -1,198 +1,203 @@
+---
+description: "Provides a scroll drawer that uses native HTML5 dialog and CSS scroll-snap property."
+---
+
 # Drawer
 Provides a scroll drawer that uses native HTML5 `dialog` and CSS `scroll-snap` property.<br>
 Can be dismissed with touch gestures on touch devices.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
+The drawer is opened with native [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API)
+(`command="show-modal"` / `command="request-close"`) and the scroll behavior is driven by the `Drawer` custom element from
+[winduum-elements](https://github.com/winduum/winduum-elements/tree/main/components/drawer)
+(or the [winduum-stimulus](https://github.com/winduum/winduum-stimulus/tree/main/components/drawer) controller).
+Thanks to the `noscript` variant, the drawer degrades gracefully even without JavaScript.
 
-### Usage
-::: code-group
-```css
-@import "winduum/src/components/drawer/index.css" layer(utilities);
-```
-<<< @/public/examples/components/drawer/left.html#body{} [html]
-<<< @/../examples/src/pages/components/drawer/left.liquid#js{} [js]
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/left.html" style="height: 420px; margin: 1.5rem 0"></iframe>
+
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/drawer" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/drawer" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/drawer" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/drawer" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/drawer" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/drawer" />
+
+::: info Browser support
+For older browsers cover [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API) with
+[invokers-polyfill](https://www.npmjs.com/package/invokers-polyfill) and — when using `winduum-elements` — customized built-in elements with
+[@webreflection/custom-elements-builtin](https://www.npmjs.com/package/@webreflection/custom-elements-builtin).
+Missing [`scroll-initial-target`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-initial-target) support is handled by the
+[`showDrawer`](#showdrawer) helper itself. See [Polyfills](/docs/polyfills).
 :::
+
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/drawer" />
 * <LinkGh name="content" path="components/drawer" />
+* <LinkGh name="scroller" path="components/drawer" />
+* <LinkGh name="noscript" path="components/drawer" />
+* <LinkGh name="nosnap" path="components/drawer" />
 
 ### Props
 * <LinkGh name="default" path="components/drawer/props" />
 * <LinkGh name="content" path="components/drawer/props" />
 
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/drawer" />
+## Scripts
+The Drawer script connects the dialog open flow with drawer snapping, swipe dismissal
+and trigger `aria-expanded` state.
 
 ## Examples
 
 ### Left
 
-<div class="iframe">
-    <button class="x-button" id="showDrawerLeftElement">Show left drawer</button>
-</div>
-
-<dialog class="x-drawer" id="drawerLeftElement" inert>
-    <div class="x-drawer-content p-6" style="max-width: 24rem; border-right: 1px solid var(--color-body-secondary);">
-        <div>Drawer content</div>
-        <button class="x-button muted mt-4" id="closeDrawerLeftElement">Close drawer</button>
-    </div>
-</dialog>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/left.html" style="height: 420px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/drawer/left.html#body{} [html]
-<<< @/../examples/src/pages/components/drawer/left.liquid#js{} [js]
+<<< @/public/examples/components/drawer/left.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/drawer/left.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/left.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/left.tsx [winduum-react]
 :::
 
 ### Right
 
-<div class="iframe">
-    <button class="x-button" id="showDrawerRightElement">Show right drawer</button>
-</div>
-
-<dialog class="x-drawer after:-order-last" id="drawerRightElement" inert>
-    <div class="x-drawer-content p-6" style="max-width: 24rem; border-left: 1px solid var(--color-body-secondary);">
-        <div>Drawer content</div>
-        <button class="x-button muted mt-4" id="closeDrawerRightElement">Close drawer</button>
-    </div>
-</dialog>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/right.html" style="height: 420px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/drawer/right.html#body{} [html]
-<<< @/../examples/src/pages/components/drawer/right.liquid#js{} [js]
+<<< @/public/examples/components/drawer/right.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/drawer/right.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/right.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/right.tsx [winduum-react]
 :::
-
 
 ### Bottom
 
-<div class="iframe">
-    <button class="x-button" id="showDrawerBottomElement">Show bottom drawer</button>
-</div>
-
-<dialog class="x-drawer flex flex-col after:-order-last" id="drawerBottomElement" inert>
-    <div class="x-drawer-content p-6" style="max-height: 24rem; border-top: 1px solid var(--color-body-secondary);">
-        <div>Drawer content</div> 
-        <button class="x-button muted mt-4" id="closeDrawerBottomElement">Close drawer</button>
-    </div>
-</dialog>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/bottom.html" style="height: 420px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/drawer/bottom.html#body{} [html]
-<<< @/../examples/src/pages/components/drawer/bottom.liquid#js{} [js]
+<<< @/public/examples/components/drawer/bottom.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/drawer/bottom.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/bottom.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/bottom.tsx [winduum-react]
 :::
 
 ### Top
 
-<div class="iframe">
-    <button class="x-button" id="showDrawerTopElement">Show top drawer</button>
-</div>
-
-<dialog class="x-drawer flex flex-col" id="drawerTopElement" inert>
-    <div class="x-drawer-content p-6" style="max-height: 24rem; border-bottom: 1px solid var(--color-body-secondary);">
-        <div>Drawer content</div>
-        <button class="x-button muted mt-4" id="closeDrawerTopElement">Close drawer</button>
-    </div>
-</dialog>
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/top.html" style="height: 420px"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/drawer/top.html#body{} [html]
-<<< @/../examples/src/pages/components/drawer/top.liquid#js{} [js]
+<<< @/public/examples/components/drawer/top.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/drawer/top.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/top.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/top.tsx [winduum-react]
 :::
 
-## Javascript API
+### Dialog
+
+Responsive variant that behaves as a bottom drawer below the `xl` container breakpoint (576px) and as a dialog in larger containers.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/dialog.html" style="height: 420px"></iframe>
+
+::: code-group
+<<< @/public/examples/components/drawer/dialog.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/drawer/dialog.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/dialog.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/dialog.tsx [winduum-react]
+:::
+
+### No Script
+
+Fully animated drawer when JavaScript is disabled.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/noscript.html" style="height: 420px"></iframe>
+
+::: code-group
+<<< @/public/examples/components/drawer/noscript.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/drawer/noscript.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/drawer/noscript.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/drawer/noscript.tsx [winduum-react]
+:::
+
+### No Snap
+
+CSS only drawer variant that does not need JavaScript and works the same way as No Script.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/nosnap.html" style="height: 420px"></iframe>
+
+<<< @/public/examples/components/drawer/nosnap.html#body{} [winduum]
+
+## JavaScript API
+
+Low-level helpers used by `winduum-elements` and `winduum-stimulus` — you can use them to build your own integration.
+All functions take a `placement` of `'left' | 'right' | 'top' | 'bottom'` and operate on the **scroller** element (`.x-drawer-scroller`).
 
 ### `showDrawer`
 
-* **Type:** `(element: HTMLElement | Element, distance: number, direction: 'left' | 'top') => void`
-* **Kind:** `sync`
+* **Type:** `(element: HTMLElement, placement: 'left' | 'right' | 'top' | 'bottom') => Promise<void>`
+* **Kind:** `async`
 
-Scroll the drawer to open state.
+Scrolls the drawer scroller to its open state. Resets the scroll position first in browsers without
+[`scroll-initial-target`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-initial-target) support.
+Call it after `dialog.showModal()`.
+
+```js
+import { showDrawer } from 'winduum/src/components/drawer'
+
+dialogElement.showModal()
+await showDrawer(dialogElement.firstElementChild, 'left')
+```
 
 ### `closeDrawer`
 
-* **Type:** `(element: HTMLElement | Element, distance: number, direction: 'left' | 'top') => void`
+* **Type:** `(element: HTMLElement, placement: 'left' | 'right' | 'top' | 'bottom') => void`
 * **Kind:** `sync`
 
-Scroll the drawer to closed state.
-
-### `scrollInitDrawer`
-
-* **Type:** `(element: HTMLElement | Element, distance?: number, direction?: 'left' | 'top') => void`
-* **Kind:** `sync`
-
-Initializes the scroll position. Call this before `showDrawer` method.
+Scrolls the drawer scroller to its closed state — the dismiss animation is handled by scroll snapping,
+and the dialog is closed by `drawerObserver` once the content leaves the viewport.
 
 ### `scrollDrawer`
 
-* **Type:** `(element: HTMLElement | Element, options: ScrollDrawerOptions) => void`
+* **Type:** `(element: HTMLElement, placement: 'left' | 'right' | 'top' | 'bottom', reverse?: boolean, behavior?: 'auto' | 'instant') => void`
 * **Kind:** `sync`
 
-Sets correct classes and attributes upon scroll. Events `c-drawer:open` and `c-drawer:close` are dispatched upon opening or closing the drawer.
+Scrolls the drawer scroller to the open (or closed, with `reverse: true`) position.
 
-#### ScrollDrawerOptions
+### `drawerEvents`
 
----
+* **Type:** `(element: HTMLDialogElement, contentElement: HTMLElement, placement: 'left' | 'right' | 'top' | 'bottom', signal?: AbortSignal) => void`
+* **Kind:** `sync`
 
-##### snapClass
+Wires up dialog events — closes the drawer with the scroll animation on `cancel` (Esc) and on click outside the content.
 
-* **Type:** `string`
-* **Default:** `snap-x snap-mandatory`
+### `drawerObserver`
 
-A classes that are added for snapping purposes once the drawer is open.
+* **Type:** `(element: HTMLDialogElement, placement: 'left' | 'right' | 'top' | 'bottom') => IntersectionObserver`
+* **Kind:** `sync`
 
----
+Returns an `IntersectionObserver` that closes the dialog once the drawer content is scrolled/swiped out of view.
+Observe the content element with it.
 
-##### opacityProperty
+```js
+import { drawerObserver } from 'winduum/src/components/drawer'
 
-* **Type:** `string`
-* **Default:** `--tw-bg-opacity`
+const observer = drawerObserver(dialogElement, 'left')
+observer.observe(contentElement)
+```
 
-A CSS property for animating the background opacity upon scroll.
+### `drawerProperties`
 
----
+* **Type:** `(element: HTMLElement, placement: 'left' | 'right' | 'top' | 'bottom') => ['top' | 'left', number, number]`
+* **Kind:** `sync`
 
-##### opacityRatio
+Returns the scroll axis and the open/closed scroll distances for the given placement.
 
-* **Type:** `number`
-* **Default:** `1`
+### `isVerticalDrawer`
 
-You can either set `1` or `0` depending on the direction the drawer is opened. Right and bottom drawer should be set to `0`.
+* **Type:** `(placement: 'left' | 'right' | 'top' | 'bottom') => boolean`
+* **Kind:** `sync`
 
----
-
-##### scrollOpen
-
-* **Type:** `number`
-* **Default:** `0`
-
-Scroll position indicating that the drawer is opened.
-
----
-
-##### scrollClose
-
-* **Type:** `number`
-* **Default:** `element.scrollWidth - element.clientWidth`
-
-Scroll position indicating that the drawer is closed.
-
----
-
-##### scrollSize
-
-* **Type:** `number`
-* **Default:** `element.scrollWidth - element.clientWidth`
-
-Maximum scroll size of the drawer.
-
----
-
-##### scrollDirection
-
-* **Type:** `number`
-* **Default:** `element.scrollLeft`
-
-Current scroll position of the drawer.
+Returns `true` for `top` and `bottom` placements.

@@ -1,42 +1,82 @@
+---
+description: "Typographic defaults for plain text and rich content."
+---
+
 # Text
-Typographic defaults for common wysiwyg content. It's an alternative to [prose](https://tailwindcss.com/docs/typography-plugin).
+Text provides typographic defaults for plain text. Add the `content` variant for rich text or WYSIWYG content as an alternative to [prose](https://tailwindcss.com/docs/typography-plugin).
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/text" />
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/basic.html" style="margin: 1.5rem 0"></iframe>
 
-### Usage
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/text" />
 
-```css
-@import "winduum/src/components/text/index.css" layer(utilities);
-```
-
-### Variants
-* <LinkGh name="default" path="components/text" />
-
-### Props
-* <LinkGh name="default" path="components/text/props" />
-
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/text" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/text" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/text" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/text" />
 
+## Styles
+
+### Variants
+* <LinkGh name="default" path="components/text" />
+* <LinkGh name="content" path="components/text" />
+
+### Props
+* <LinkGh name="default" path="components/text/props" />
+* <LinkGh name="content" path="components/text/props" />
+
 ## Examples
 
-### Text
+### Basic
 
-<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/text.html"></iframe>
+Use `x-text` for typographic defaults on a plain text element.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/text/text.html#body{} [html]
-```vue
+<<< @/public/examples/components/text/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
-    import { UiText } from '@/components/text'
+    import { Text } from '@/components/text'
 </script>
 
 <template>
-    <UiText class="x-text">
+    <Text as="p">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur metus. In bibendum nisi et dui
+        sagittis efficitur.
+    </Text>
+</template>
+```
+```jsx [winduum-react]
+import { Text } from '@/components/text'
+
+export function Example() {
+    return (
+        <Text as="p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur metus. In bibendum nisi et dui
+            sagittis efficitur.
+        </Text>
+    )
+}
+```
+:::
+
+### Content
+
+Add the `content` variant when `x-text` wraps rich content made of nested semantic elements, such as CMS or WYSIWYG output.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/content.html"></iframe>
+
+::: code-group
+<<< @/public/examples/components/text/content.html#body{} [winduum]
+```vue [winduum-vue]
+<script setup lang="ts">
+    import { Text } from '@/components/text'
+</script>
+
+<template>
+    <Text class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur
             metus. In bibendum nisi et dui <a href="#">sagittis efficitur</a>. Proin porttitor diam at quam
             finibus, quis porttitor turpis ullamcorper. Quisque iaculis imperdiet nunc in
@@ -47,15 +87,15 @@ Follow instructions for individual framework usage below
             Phasellus non pretium libero.</p>
         <p></p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </UiText>
+    </Text>
 </template>
 ```
-```jsx
-import { UiText } from '@/components/text'
+```jsx [winduum-react]
+import { Text } from '@/components/text'
 
 export function Example() {
     return (
-        <UiText class="x-text">
+        <Text className="content">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur
                 metus. In bibendum nisi et dui <a href="#">sagittis efficitur</a>. Proin porttitor diam at quam
                 finibus, quis porttitor turpis ullamcorper. Quisque iaculis imperdiet nunc in
@@ -66,11 +106,19 @@ export function Example() {
                 Phasellus non pretium libero.</p>
             <p></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </UiText>
+        </Text>
     )
 }
 ```
 :::
+
+### Rich
+
+A complete rich-content example combining headings, paragraphs, lists, code blocks, blockquotes, tables, and MathML.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/rich.html"></iframe>
+
+<<< @/public/examples/components/text/rich.html#body{}
 
 ### Headings
 

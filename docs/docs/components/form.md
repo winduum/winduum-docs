@@ -1,25 +1,33 @@
+---
+description: "Provides a basic way to validate your form and show feedback to your users with native HTML5 form validation. Use attributes such as pattern to add other…"
+---
+
 # Form
 Provides a basic way to validate your form and show feedback to your users with native HTML5 form validation. Use attributes such as [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern) to add other validation rules.
 
 `novalidate` must be present on `form` to handle validation with JavaScript.
 
-::: info
-Compatible with any reactive framework, but updates will not propagate to the virtual DOM.<br>
-For advance form of validation use [VeeValidate](https://vee-validate.logaretm.com/v4/), [React Hook Form](https://react-hook-form.com/) or others.
-:::
+<iframe onload="this.style.visibility = 'visible';" src="/examples/form.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/form" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/form" />
 
-### Installation
+## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/form" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/form" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/form" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/form" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/form" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/src/components/form" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/main/src/components/form" />
 
-### Usage
-::: code-group
-<<< @/public/examples/form.html#body{} [html]
-<<< @/../examples/src/pages/form.liquid#js{} [js]
+## Scripts
+The Form script handles custom validation on submit and can set `data-loading` on
+the submitter after a valid submit.
+
+::: info
+Native validation is enough for most forms. Validation libraries are often unnecessary
+abstractions and are only needed for very complex forms. In those cases, we recommend
+[VeeValidate](https://vee-validate.logaretm.com/v4/) or [TanStack Form](https://tanstack.com/form/latest).
 :::
 
 ## Examples
@@ -29,40 +37,34 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/form.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/form.html#body{} [html]
-<<< @/../examples/src/pages/form.liquid#js{} [js]
+<<< @/public/examples/form.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/form.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/form.vue [winduum-vue]
+<<< @/../examples-react/src/pages/form.tsx [winduum-react]
 :::
 
-
-### Field
-
-<iframe onload="this.style.visibility = 'visible';" src="/examples/form-field.html"></iframe>
-
-::: code-group
-<<< @/public/examples/form-field.html#body{} [html]
-<<< @/../examples/src/pages/form-field.liquid#js{} [js]
-:::
-
-
-## Javascript API
+## JavaScript API
 
 ### `validateForm`
 
 * **Type:** `(event: Event | SubmitEvent, options?: ValidateFormOptions) => void`
 * **Kind:** `sync`
 
-Validates a form with [checkValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity) and [validateField](/docs/components/form#validatefield) events.
+Validates a form with [checkValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/checkValidity)
+and runs [validateField](/docs/components/form#validatefield) on every field.
+On invalid submit it scrolls to and focuses the first invalid element, on valid submit it marks the submitter
+with a loading attribute.
 
 #### ValidateFormOptions
 
 ---
 
-##### validateSelectors
+##### validateSelector
 
 * **Type:** `string`
-* **Default:** `.x-control, .x-check, .x-switch, .x-rating, .x-color`
+* **Default:** `.x-field`
 
-Selectors which will be validated.
+Selector of field wrappers which will be validated.
 
 ---
 
@@ -75,12 +77,21 @@ Additional options for `validateField`
 
 ---
 
+##### validateField
+
+* **Type:** `typeof validateField`
+* **Default:** `validateField`
+
+Override the field validation function.
+
+---
+
 ##### submitterLoadingAttribute
 
 * **Type:** `string`
 * **Default:** `data-loading`
 
-Loading class that will be added to a submitter element, e.g., A button.
+Loading attribute that will be added to the submitter element (e.g. a button) on valid submit.
 
 ---
 
@@ -95,86 +106,70 @@ Scroll options when scrolling to an invalid element.
 
 ### `validateField`
 
-* **Type:** `(selector:  HTMLElement, options?: ValidateFieldOptions) => void`
+* **Type:** `(element: HTMLElement, options?: ValidateFieldOptions) => void`
 * **Kind:** `sync`
 
-Validates a field. This can be element such as `.x-control`, `x-check` and others that can be validated. It adds validation info message inside `c-field` and validation icon inside `x-control`.
-It also adds a `valid`, `invalid` or `active` class to the element.
-
+Validates a single field wrapper (typically `.x-field`). It appends a validation info message
+(with `data-validity`) to the field and a validation icon inside `.x-control`.
+The message text is resolved from `options.validationMessage`, the `data-validation-message` attribute
+on the invalid element, or the native
+[`validationMessage`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/validationMessage).
 
 #### ValidateFieldOptions
 
 ---
 
-##### validate
-* **Type:** `boolean`
-* **Default:** `true`
+##### validationMessage
+* **Type:** `string`
+* **Default:** `undefined`
 
-Only `active` class is added if the element value is not empty. No other validation is done.
+Overrides the displayed validation message.
 
 ---
 
 ##### selector
 * **Type:** `string`
-* **Default:** `input:not([type="hidden"]), textarea, select`
+* **Default:** `:is(input:not([type="hidden"]), textarea, select):not([readonly], [data-novalidate])`
 
----
-
-##### ignoreMatch
-* **Type:** `RegExp`
-* **Default:** `/(data-novalidate|readonly)/`
-
-Ignores a validation if any of these strings are present in the HTML.
+Selector of elements inside the field that are validated. Add `data-novalidate` or `readonly` to skip validation.
 
 ---
 
 ##### validitySelector
 * **Type:** `string`
-* **Default:** `.validity`
+* **Default:** `[data-validity]`
 
-Selector for dynamically added content in the DOM such us info message or icon.
-
----
-
-##### infoParentSelector
-* **Type:** `string`
-* **Default:** `.x-field`
-
----
-
-##### infoSelector
-* **Type:** `string`
-* **Default:** `.x-info`
+Selector for dynamically added content in the DOM, such as the info message or icon — it is removed on re-validation.
 
 ---
 
 ##### infoContent
 * **Type:** `string`
-* **Default:** `<div class="x-info text-error validity"></div>`
+* **Default:** `<div class="x-info text-error" data-validity></div>`
+
+Element appended to the field with the validation message.
 
 ---
 
-##### endParentSelector
+##### iconParentSelector
 * **Type:** `string`
 * **Default:** `.x-control`
 
+Element the validation icon is appended into.
+
 ---
 
-##### endSelector
+##### iconSelector
 * **Type:** `string`
 * **Default:** `.ms-auto`
 
 ---
 
-##### endContent
+##### iconContent
 * **Type:** `string`
 * **Default:** `<div class="ms-auto"></div>`
 
----
-
-##### validAttribute
-* **Type:** `string`
-* **Default:** `data-valid`
+Wrapper element for the validation icon, created inside `iconParentSelector` when missing.
 
 ---
 
@@ -184,19 +179,6 @@ Selector for dynamically added content in the DOM such us info message or icon.
 
 ---
 
-##### invalidAttribute
-* **Type:** `string`
-* **Default:** `data-invalid`
-
----
-
 ##### invalidIcon
 * **Type:** `string`
-* **Default:** `<svg class="text-error validity" aria-hidden="true"><use href="#icon-exclamation-circle"></use></svg>`
-
----
-
-##### activeAttribute
-* **Type:** `string`
-* **Default:** `data-active`
-
+* **Default:** `<svg class="text-error" data-validity aria-hidden="true"><use href="#heroicons-outline/exclamation-circle"></use></svg>`

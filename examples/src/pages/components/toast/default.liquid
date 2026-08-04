@@ -1,0 +1,47 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<button class="x-button" id="appendToast">Append toast</button>
+
+<template id="toastTemplate">
+    <x-toast class="x-toast" role="status" aria-live="assertive" aria-atomic="true">
+        <div class="x-toast-content">
+            <div class="flex-col">
+                <div class="x-title">Hello toast</div>
+                <div class="x-text">Amazing toast</div>
+            </div>
+            <button class="x-button muted ml-auto" command="--close">Close</button>
+        </div>
+    </x-toast>
+</template>
+
+<x-toaster class="x-toaster items-end" popover="manual"></x-toaster>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { Toast } from 'winduum-elements/components/toast/index.js'
+    import { Toaster } from 'winduum-elements/components/toaster/index.js'
+
+    customElements.define('x-toast', Toast)
+    customElements.define('x-toaster', Toaster)
+
+    if (!('command' in HTMLButtonElement.prototype)) {
+        const { apply } = await import('invokers-polyfill/fn')
+        apply()
+    }
+
+    const toaster = document.querySelector('x-toaster')
+    const toastTemplate = document.querySelector('#toastTemplate')
+
+    document.querySelector('#appendToast')?.addEventListener('click', async () => {
+        const toast = toastTemplate.content.firstElementChild.cloneNode(true)
+
+        toast.id = crypto.randomUUID()
+        toast.querySelector('[command="--close"]').setAttribute('commandfor', toast.id)
+
+        toaster.append(toast)
+    })
+</script>
+<!-- #endregion js -->
+{% endblock %}

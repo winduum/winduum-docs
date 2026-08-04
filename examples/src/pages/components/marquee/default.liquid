@@ -1,0 +1,89 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<div class="x-marquee flex gap-(--x-marquee-gap) overflow-clip group *:group-has-focus-within:[animation-play-state:paused]" style="--x-marquee-sibling-count: 10; --x-marquee-visible-count: 9; --x-marquee-inline-size: calc(var(--spacing) * 50); --x-marquee-gap: calc(var(--spacing) * 6)">
+    <a href="#" class="w-(--x-marquee-inline-size) h-14 shrink-0 outline-2 outline-transparent outline-dashed rounded-lg focus-visible:outline-accent" style="--x-marquee-sibling-index: 1">
+        <img class="size-full object-contain" src="https://placehold.co/200x56/777777/webp" alt="Partner 1" width="200" height="56" loading="lazy">
+    </a>
+    <a href="#" class="w-(--x-marquee-inline-size) h-14 shrink-0 outline-2 outline-transparent outline-dashed rounded-lg focus-visible:outline-accent" style="--x-marquee-sibling-index: 2">
+        <img class="size-full object-contain" src="https://placehold.co/200x56/777777/webp" alt="Partner 2" width="200" height="56" loading="lazy">
+    </a>
+    <a href="#" class="w-(--x-marquee-inline-size) h-14 shrink-0 outline-2 outline-transparent outline-dashed rounded-lg focus-visible:outline-accent" style="--x-marquee-sibling-index: 3">
+        <img class="size-full object-contain" src="https://placehold.co/200x56/888888/webp" alt="Partner 3" width="200" height="56" loading="lazy">
+    </a>
+    <a href="#" class="w-(--x-marquee-inline-size) h-14 shrink-0 outline-2 outline-transparent outline-dashed rounded-lg focus-visible:outline-accent" style="--x-marquee-sibling-index: 4">
+        <img class="size-full object-contain" src="https://placehold.co/200x56/333333/webp" alt="Partner 4" width="200" height="56" loading="lazy">
+    </a>
+    <a href="#" class="w-(--x-marquee-inline-size) h-14 shrink-0 outline-2 outline-transparent outline-dashed rounded-lg focus-visible:outline-accent" aria-hidden="true" tabindex="-1" style="--x-marquee-sibling-index: 5">
+        <img class="size-full object-contain" src="https://placehold.co/200x56/333333/webp" alt="Partner 5" width="200" height="56" loading="lazy">
+    </a>
+    <a href="#" class="w-(--x-marquee-inline-size) h-14 shrink-0 outline-2 outline-transparent outline-dashed rounded-lg focus-visible:outline-accent" aria-hidden="true" tabindex="-1" style="--x-marquee-sibling-index: 6">
+        <img class="size-full object-contain" src="https://placehold.co/200x56/111111/webp" alt="Partner 6" width="200" height="56" loading="lazy">
+    </a>
+    <a href="#" class="w-(--x-marquee-inline-size) h-14 shrink-0 outline-2 outline-transparent outline-dashed rounded-lg focus-visible:outline-accent" aria-hidden="true" tabindex="-1" style="--x-marquee-sibling-index: 7">
+        <img class="size-full object-contain" src="https://placehold.co/200x56/444444/webp" alt="Partner 7" width="200" height="56" loading="lazy">
+    </a>
+    <a href="#" class="w-(--x-marquee-inline-size) h-14 shrink-0 outline-2 outline-transparent outline-dashed rounded-lg focus-visible:outline-accent" aria-hidden="true" tabindex="-1" style="--x-marquee-sibling-index: 8">
+        <img class="size-full object-contain" src="https://placehold.co/200x56/444444/webp" alt="Partner 8" width="200" height="56" loading="lazy">
+    </a>
+    <a href="#" class="w-(--x-marquee-inline-size) h-14 shrink-0 outline-2 outline-transparent outline-dashed rounded-lg focus-visible:outline-accent" aria-hidden="true" tabindex="-1" style="--x-marquee-sibling-index: 9">
+        <img class="size-full object-contain" src="https://placehold.co/200x56/888888/webp" alt="Partner 9" width="200" height="56" loading="lazy">
+    </a>
+    <a href="#" class="w-(--x-marquee-inline-size) h-14 shrink-0 outline-2 outline-transparent outline-dashed rounded-lg focus-visible:outline-accent" aria-hidden="true" tabindex="-1" style="--x-marquee-sibling-index: 10">
+        <img class="size-full object-contain" src="https://placehold.co/200x56/222222/webp" alt="Partner 10" width="200" height="56" loading="lazy">
+    </a>
+</div>
+{% endblock %}
+
+{% block head %}
+<style>
+    :where(body) {
+        width: 100%;
+        padding-inline: 0;
+    }
+
+    .x-marquee {
+        width: 100%;
+        --spacing: 0.25rem;
+    }
+
+    .x-marquee > :where(*) {
+        width: var(--x-marquee-inline-size);
+        height: 3.5rem;
+        flex-shrink: 0;
+        border-radius: 0.5rem;
+        outline: 2px dashed transparent;
+        outline-offset: 2px;
+        offset:
+            shape(
+                from calc(var(--x-marquee-inline-size) / -2) 50%,
+                hline by calc(
+                    var(--x-marquee-sibling-count, sibling-count()) *
+                    max(100% / var(--x-marquee-visible-count, 1), var(--x-marquee-inline-size) + var(--x-marquee-gap, 0px))
+                )
+            );
+        animation:
+            marquee var(--x-marquee-animation-duration, 30s) var(--x-marquee-animation-timing-function, linear) infinite
+            calc(-1 * var(--x-marquee-sibling-index, sibling-index()) * var(--x-marquee-animation-duration, 30s) / var(--x-marquee-sibling-count, sibling-count()));
+    }
+
+    .x-marquee:focus-within > :where(*) {
+        animation-play-state: paused;
+    }
+
+    .x-marquee > :where(*:focus-visible) {
+        outline-color: var(--color-accent, currentColor);
+    }
+
+    .x-marquee img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    @keyframes marquee {
+        to {
+            offset-distance: 100%;
+        }
+    }
+</style>
+{% endblock %}

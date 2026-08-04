@@ -1,0 +1,28 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<button class="x-button" command="show-modal" commandfor="dialogBasic">Show dialog</button>
+<dialog class="x-dialog" id="dialogBasic" closedby="any">
+    <form class="x-dialog-content" method="dialog">
+        <div class="x-heading">Example dialog</div>
+        <br>
+        <div class="x-text">
+            <p>You can close this dialog with Esc, clicking outside, or by form submit</p>
+        </div>
+        <br>
+        <button class="x-button">Close dialog</button>
+    </form>
+</dialog>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import 'winduum/src/components/dialog/index.js'
+
+    if (!('command' in HTMLButtonElement.prototype)) {
+        const { apply } = await import('invokers-polyfill/fn')
+        apply()
+    }
+</script>
+<!-- #endregion js -->
+{% endblock %}

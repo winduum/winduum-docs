@@ -1,10 +1,11 @@
+---
+description: "You can use Winduum with or without TailwindCSS."
+---
+
 # Install
 
 You can use Winduum with or without [TailwindCSS](https://tailwindcss.com/).
 Check out the [About](/docs/about) page to learn more about Winduum and its philosophy.
-
-Winduum `2.x` is using compatible naming for CSS custom properties that work with both current and old versions of TailwindCSS,
-specifically `v4` and `v3`.
 
 ## Get started
 
@@ -18,47 +19,12 @@ See [Trying Winduum Online](#trying-winduum-online) section below to see all pos
 ### npm
 
 ```shell
-npm i winduum
+npm i winduum@next
 ```
-
-The components are written in plain CSS, so sources can be also loaded in browsers without a build step or used in any other build tool such as **PostCSS** or **LightningCSS**.
-
-```css
-@import "winduum/src/theme/index.css" layer(theme);
-@import "winduum/src/base/index.css" layer(base);
-@import "winduum/src/components/index.css" layer(utilities);
-@import "winduum/src/utilities/index.css" layer(utilities);
-```
-
-Or you can include components separately, follow usage steps with each component.
-
-```css
-@import "winduum/src/theme/index.css" layer(theme);
-@import "winduum/src/base/index.css" layer(base);
-@import "winduum/src/components/button/index.css" layer(utilities);
-@import "winduum/src/utilities/index.css" layer(utilities);
-```
-
-Or paste the source code to your project and make it your own!
-
-```css
-@import "@/styles/theme/index.css" layer(theme);
-@import "@/styles/base/index.css" layer(base);
-@import "@/styles/components/button/index.css" layer(utilities);
-@import "@/styles/utilities/index.css" layer(utilities);
-```
-
-
-
-With `layer(utilities)` you can use TailwindCSS variant classes, for example `class="x-button lg:square"` to make button square only from `lg` breakpoint. (Not wokring with TailwindCSS v4 currently)
 
 ### TailwindCSS
 
 It's optional but recommended to leverage the full functionality of the library!
-
-#### v4
-
-To use TailwindCSS `v4`, you will have to import TailwindCSS and Winduum imports individually.
 
 ```css
 @import "tailwindcss/theme.css" layer(theme);
@@ -81,52 +47,49 @@ To use TailwindCSS `v4`, you will have to import TailwindCSS and Winduum imports
 @import "winduum/src/base/breakpoints.css";
 @import "winduum/src/base/keyframes.css";
 @import "winduum/src/base/transitions.css";
+
+/* paths are relative to this stylesheet */
+@source "../../node_modules/winduum/src";
+@source "../../node_modules/winduum-elements";
 ```
 
-TailwindCSS `v4` can be used in any project with Vite and works out of the box.
-No `tailwind.config.js` needed!
-All configuration is done in CSS!
+Tailwind CSS excludes dependencies from automatic source detection. Keep the first `@source` directive and replace
+`winduum-elements` with the integration used by your project: `winduum-stimulus`, `winduum-vue` or `winduum-react`.
 
-```javascript
-import tailwindcss from '@tailwindcss/vite'
-import { defineConfig } from 'vite'
+Follow the installation steps in [TailwindCSS](https://tailwindcss.com/docs/installation/using-vite) docs.
 
-export default defineConfig({
-  plugins: [tailwindcss()],
-})
-```
+### Without TailwindCSS
 
-#### v3
-
-To use TailwindCSS `v3`, you will have to import TailwindCSS and Winduum imports individually.
+The components are written in plain CSS, so sources can be also loaded in browsers without a build step or used in any other build tool such as **PostCSS** or **LightningCSS**.
 
 ```css
-@import "winduum/src/theme/index.css";
-@import "winduum/src/base/index.css";
+@import "winduum/src/theme/index.css" layer(theme);
+@import "winduum/src/base/index.css" layer(base);
+
+/* all components in one import */
 @import "winduum/src/components/index.css" layer(utilities);
 @import "winduum/src/utilities/index.css" layer(utilities);
-@import "winduum/tailwindcss/base/defaults.css";
-@import "tailwindcss/base.css";
-@import "tailwindcss/components.css";
-@import "tailwindcss/utilities.css";
-@import "tailwindcss/variants.css";
 ```
 
-Follow the installation steps in [TailwindCSS](https://v3.tailwindcss.com/docs/installation) docs
-and include Winduum as a plugin,
-see [Config](/docs/base/config#tailwind-css-v3) for more info.
+Or you can include components separately, follow usage steps with each component.
 
-## PostCSS or LightingCSS
-For TailwindCSS `v3` following PostCSS plugins are required.
-If you are using `v4` the [LightingCSS](https://lightningcss.dev/) is used out of the box.
+```css
+@import "winduum/src/theme/index.css" layer(theme);
+@import "winduum/src/base/index.css" layer(base);
 
-* [`autoprefixer`](https://www.npmjs.com/package/autoprefixer)
-* [`tailwindcss`](https://www.npmjs.com/package/tailwindcss)
-* [`postcss-nesting`](https://www.npmjs.com/package/postcss-nesting)
-* [`postcss-import`](https://www.npmjs.com/package/postcss-import)
-* [`postcss-custom-media`](https://www.npmjs.com/package/postcss-custom-media)
-  
-If you are not using TailwindCSS, you can use whatever you want, even no build step!
+/* one component at a time */
+@import "winduum/src/components/button/index.css" layer(utilities);
+@import "winduum/src/utilities/index.css" layer(utilities);
+```
+
+Or paste the source code to your project and make it your own!
+
+```css
+@import "@/styles/theme/index.css" layer(theme);
+@import "@/styles/base/index.css" layer(base);
+@import "@/styles/components/button/index.css" layer(utilities);
+@import "@/styles/utilities/index.css" layer(utilities);
+```
 
 ## Stylelint
 
@@ -134,7 +97,7 @@ It's also recommended
 to use [Stylelint](https://stylelint.io/) with [stylelint-stylistic](https://github.com/stylelint-stylistic/stylelint-stylistic)
 to help add conventions to your styles.
 You can check
-and use basic `.stylelintrc` for Winduum [here](https://github.com/winduum/winduum/blob/main/.stylelintrc).
+and use basic `.stylelintrc` for Winduum [here](https://github.com/winduum/winduum/blob/next/stylelint.config.js).
 
 ```shell
 npm i stylelint stylelint-config-standard @stylistic/stylelint-config --save-dev
@@ -163,7 +126,7 @@ To leverage the full functionality of the framework, [TailwindCSS](#tailwindcss)
 
 ## Trying Winduum Online
 
-On [StackBlitz](https://stackblitz.com/) or [GitHub](https://github.com/winduum/winduum/tree/main/examples) with basic examples how to use it in [Vite](https://vitejs.dev/) and other frameworks.
+On [StackBlitz](https://stackblitz.com/) or [GitHub](https://github.com/winduum/winduum/tree/next/examples) with basic examples how to use it in [Vite](https://vitejs.dev/) and other frameworks.
 
 <style>
     #trying-winduum-online a {
@@ -192,24 +155,24 @@ On [StackBlitz](https://stackblitz.com/) or [GitHub](https://github.com/winduum/
 <div id="trying-winduum-online" style="display: flex; gap: 6rem; font-size: 1.125rem;">
 <div>
 
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite" target="_blank" rel="noreferrer">vite <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-vue" target="_blank" rel="noreferrer">vite + vue <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-react" target="_blank" rel="noreferrer">vite + react <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-svelte" target="_blank" rel="noreferrer">vite + svelte <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-solid" target="_blank" rel="noreferrer">vite + solid <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-qwik" target="_blank" rel="noreferrer">vite + qwik <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-lit" target="_blank" rel="noreferrer">vite + lit <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite" target="_blank" rel="noreferrer">vite <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-vue" target="_blank" rel="noreferrer">vite + vue <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-react" target="_blank" rel="noreferrer">vite + react <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-svelte" target="_blank" rel="noreferrer">vite + svelte <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-solid" target="_blank" rel="noreferrer">vite + solid <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-qwik" target="_blank" rel="noreferrer">vite + qwik <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-lit" target="_blank" rel="noreferrer">vite + lit <svg><use href="#icon-sb" /></svg></a>
 
 </div>
 
 <div>
 
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/astro" target="_blank" rel="noreferrer">astro <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/nuxt" target="_blank" rel="noreferrer">nuxt <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/next" target="_blank" rel="noreferrer">next <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/htmx" target="_blank" rel="noreferrer">htmx <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-sass" target="_blank" rel="noreferrer">vite + sass <svg><use href="#icon-sb" /></svg></a>
-* <a href="https://stackblitz.com/github/winduum/winduum/tree/main/examples/vite-less" target="_blank" rel="noreferrer">vite + less <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/astro" target="_blank" rel="noreferrer">astro <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/nuxt" target="_blank" rel="noreferrer">nuxt <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/next" target="_blank" rel="noreferrer">next <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/htmx" target="_blank" rel="noreferrer">htmx <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-sass" target="_blank" rel="noreferrer">vite + sass <svg><use href="#icon-sb" /></svg></a>
+* <a href="https://stackblitz.com/github/winduum/winduum/tree/next/examples/vite-less" target="_blank" rel="noreferrer">vite + less <svg><use href="#icon-sb" /></svg></a>
 
 </div>
 </div>
@@ -218,6 +181,8 @@ Winduum is **framework-agnostic**, learn more on the [About](/docs/about#framewo
 
 Do you need ready to use components? Here are components ready to copy & paste. For now there are only a few, more might come in the future!
 
+* <LinkGh url="https://github.com/winduum/winduum-elements" name="winduum/winduum-elements"></LinkGh>
+* <LinkGh url="https://github.com/winduum/winduum-stimulus" name="winduum/winduum-stimulus"></LinkGh>
 * <LinkGh url="https://github.com/winduum/winduum-vue" name="winduum/winduum-vue"></LinkGh>
 * <LinkGh url="https://github.com/winduum/winduum-react" name="winduum/winduum-react"></LinkGh>
 

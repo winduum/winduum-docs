@@ -1,32 +1,24 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<button class="x-button" id="showDrawerLeftElement">Show drawer</button>
-<dialog class="x-drawer" id="drawerLeftElement" inert>
-    <nav class="x-drawer-content">
-        Drawer content
-        <button class="x-button muted" id="closeDrawerLeftElement">Close drawer</button>
-    </nav>
+<button class="x-button" command="show-modal" commandfor="drawerLeftElement">Show drawer</button>
+<dialog class="x-drawer" is="x-drawer" id="drawerLeftElement" closedby="any">
+    <div class="x-drawer-scroller snap-x snap-mandatory">
+        <nav class="x-drawer-content" data-x-drawer-part="content">
+            Drawer content
+            <button class="x-button muted" command="request-close" commandfor="drawerLeftElement">Close drawer</button>
+        </nav>
+    </div>
 </dialog>
 {% endblock %}
 
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    import { showDrawer, closeDrawer, scrollDrawer, scrollInitDrawer } from "winduum/src/components/drawer"
+    import 'webuum/polyfill'
+    import 'winduum/polyfill'
+    import { Drawer } from 'winduum-elements/components/drawer/index.js'
 
-    drawerLeftElement.addEventListener('scroll', ({ target }) => scrollDrawer(target))
-
-    showDrawerLeftElement.addEventListener('click', async () => {
-        drawerLeftElement.showModal()
-
-        await scrollInitDrawer(drawerLeftElement)
-
-        showDrawer(drawerLeftElement)
-    })
-
-    closeDrawerLeftElement.addEventListener('click', () => {
-        closeDrawer(drawerLeftElement, drawerLeftElement.scrollWidth)
-    })
+    customElements.define('x-drawer', Drawer, { extends: 'dialog' })
 </script>
 <!-- #endregion js -->
 {% endblock %}

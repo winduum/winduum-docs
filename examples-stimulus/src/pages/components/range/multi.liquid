@@ -1,0 +1,24 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<div data-controller="x-range" class="x-range accent-warning">
+    <input type="range" value="0" step="100" max="10000" min="0" id="range-from" aria-labelledby="from" data-x-range-target="start" data-action="input->x-range#setValue">
+    <input type="range" value="10000" step="100" max="10000" min="0" id="range-to" aria-labelledby="to" data-x-range-target="end" data-action="input->x-range#setValue" data-x-range-track-param="end">
+</div>
+
+<div class="flex-between items-center">
+    <output class="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price from" id="from">0</output>
+    <output class="before:content-[attr(data-unit)]" data-unit="$" aria-label="Price to" id="to">10 000</output>
+</div>
+<!-- #endregion body -->
+{% endblock %}
+
+{% block head %}
+<style>
+  body {
+    flex-direction: column;
+  }
+</style>
+{% endblock %}
+
+

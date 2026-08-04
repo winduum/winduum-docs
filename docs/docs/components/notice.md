@@ -1,25 +1,28 @@
+---
+description: "Informative message component — use accent colors for success, error, warning or info states."
+---
+
 # Notice
-<br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/notice" />
+Informative message component — use accent colors for success, error, warning or info states.
 
-### Usage
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/notice/success.html" style="margin: 1.5rem 0"></iframe>
 
-```css
-@import "winduum/src/components/notice/index.css" layer(utilities);
-```
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/notice" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/notice" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/notice" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/notice" />
+
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/notice" />
 
 ### Props
 * <LinkGh name="default" path="components/notice/props" />
-
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/notice" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/notice" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/notice" />
 
 ## Examples
 
@@ -28,8 +31,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/notice/success.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/notice/success.html#body{} [html]
-```vue
+<<< @/public/examples/components/notice/success.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Notice } from '@/components/notice'
 </script>
@@ -40,7 +43,7 @@ Follow instructions for individual framework usage below
     </Notice>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Notice } from '@/components/notice'
 
 export function Example() {

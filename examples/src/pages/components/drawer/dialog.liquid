@@ -1,0 +1,39 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<button class="x-button" command="show-modal" commandfor="drawerDialogElement">Show dialog drawer</button>
+<dialog class="x-dialog drawer @max-xl:bg-transparent @max-xl:p-0 @max-xl:backdrop:block" style="animation-direction: reverse" is="x-drawer" id="drawerDialogElement" closedby="any" data-placement="bottom">
+    <div class="x-drawer-scroller scroll-pt-6 flex flex-col after:order-first snap-y snap-mandatory @xl:contents @xl:after:content-none noscript:after:content-none">
+        <section class="x-dialog-content @max-xl:mt-6 @max-xl:opacity-100 @max-xl:transform-none shrink-0 @max-xl:snap-end @max-xl:w-dvw @max-xl:min-h-[calc(100dvh-4rem)] @max-xl:rounded-b-none" data-x-drawer-part="content">
+            <div class="x-heading">Dialog drawer</div>
+            <br>
+            <div class="x-text">
+                <p>This component behaves as a bottom drawer on small screens and as a dialog on larger screens.</p>
+            </div>
+            <br>
+            <button class="x-button muted @xl:hidden" command="request-close" commandfor="drawerDialogElement">Close drawer</button>
+            <button class="x-button muted @max-xl:hidden" command="close" commandfor="drawerDialogElement">Close dialog</button>
+        </section>
+    </div>
+</dialog>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { supportsIs } from 'webuum/supports'
+    import { Drawer } from 'winduum-elements/components/drawer/index.js'
+    import 'winduum/src/components/dialog/index.js'
+
+    if (!supportsIs()) {
+        await import('@webreflection/custom-elements-builtin')
+    }
+
+    if (!('command' in HTMLButtonElement.prototype)) {
+        const { apply } = await import('invokers-polyfill/fn')
+        apply()
+    }
+
+    customElements.define('x-drawer', Drawer, { extends: 'dialog' })
+</script>
+<!-- #endregion js -->
+{% endblock %}

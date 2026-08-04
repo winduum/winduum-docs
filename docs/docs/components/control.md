@@ -1,3 +1,7 @@
+---
+description: "Form control as it should be!"
+---
+
 # Control
 Form control as it should be! 
 
@@ -9,21 +13,20 @@ Other input types are supported in other components
 * `range` - included in [Range](/docs/components/range)
 * `button`, `reset`, `submit` - included in [Button](/docs/components/button)
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/control" />
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/basic.html" style="margin: 1.5rem 0"></iframe>
 
-### Installation
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/control" />
+
+## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/control" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/control" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/control" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/control" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/control" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/control" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/control" />
 
-### Usage
-
-```css
-@import "winduum/src/components/control/index.css" layer(utilities);
-```
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/control" />
@@ -35,6 +38,8 @@ Follow instructions for individual framework usage below
 * <LinkGh name="color" path="components/control" />
 * <LinkGh name="select" path="components/control" />
 * <LinkGh name="select-multiple" path="components/control" />
+* <LinkGh name="select-picker" path="components/control" />
+* <LinkGh name="tel-country-code" path="components/control" />
 * <LinkGh name="icon" path="components/control" />
 
 ### Props
@@ -42,40 +47,25 @@ Follow instructions for individual framework usage below
 * <LinkGh name="floating" path="components/control/props" />
 * <LinkGh name="color" path="components/control/props" />
 * <LinkGh name="select" path="components/control/props" />
+* <LinkGh name="select-picker" path="components/control/props" />
 * <LinkGh name="icon" path="components/control/props" />
 
-##  Examples
+## Scripts
+The Control script keeps `data-active` in sync with the control value and adds helper
+actions for steppers, picker opening and tel country code mirroring.
+
+## Examples
 
 ### Basic
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/input/basic.html#body{} [html]
-```vue
-<script setup lang="ts">
-    import { Control } from '@/components/control'
-</script>
-
-<template>
-    <Control>
-        <input type="text">
-    </Control>
-</template>
-```
-```jsx
-import { Control } from "@/components/control"
-
-export function Example() {
-    return (
-        <>
-            <Control>
-                <input type="text" />
-            </Control>
-        </>
-    )
-}
-```
+<<< @/public/examples/components/input/basic.html#body{} [winduum]
+<<< @/public/examples/components/control/basic.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/control/basic.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/control/basic.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/control/basic.tsx [winduum-react]
 :::
 
 ### Icon
@@ -104,6 +94,14 @@ You can position any content to `start` and `end` of the control.<br>Padding is 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/select/basic.html"></iframe>
 
 <<< @/public/examples/components/select/basic.html#body{}
+
+### Tel Country Code
+
+Combine a country calling code selector with a national phone number. The Control script mirrors the selected code into the adjacent `span` while keeping the full country names available in the native select.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/control/tel-country-code.html"></iframe>
+
+<<< @/public/examples/components/control/tel-country-code.html#body{}
 
 ### Placeholder
 

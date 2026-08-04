@@ -1,12 +1,22 @@
+---
+description: "Accessible label for form controls such as inputs, selects or textareas."
+---
+
 # Label
-<br>
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/label" />
+Accessible label for form controls such as inputs, selects or textareas.
 
-### Usage
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/label.html" style="margin: 1.5rem 0"></iframe>
 
-```css
-@import "winduum/src/components/label/index.css" layer(utilities);
-```
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/label" />
+
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/label" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/label" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/label" />
+
+## Styles
 
 ### Variants
 * <LinkGh name="default" path="components/label" />
@@ -14,22 +24,15 @@
 ### Props
 * <LinkGh name="default" path="components/label/props" />
 
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/label" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/label" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/label" />
-
 ## Examples
 
-### Basic
+### Default
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/input/label.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/input/label.html#body{} [html]
-```vue
+<<< @/public/examples/components/input/label.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Label } from '@/components/label'
 </script>
@@ -38,7 +41,7 @@ Follow instructions for individual framework usage below
     <Label for="input">Label</Label>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Label } from '@/components/label'
 
 export function Example() {

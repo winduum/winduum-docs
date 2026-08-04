@@ -1,41 +1,48 @@
+---
+description: "Button component for triggering actions — works with button, a and input elements and comes in several variants and sizes."
+---
+
 # Button
-<br>
+Button component for triggering actions — works with `button`, `a` and `input` elements and comes in several variants and sizes.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/button" />
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/basic.html" style="margin: 1.5rem 0"></iframe>
 
-### Usage
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/button" />
 
-```css
-@import "winduum/src/components/button/index.css" layer(utilities);
-```
+## Installation
+Follow instructions for individual framework usage below
+
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/button" />
+* <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/button" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/button" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/button" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/button" />
+
+## Styles
 
 ### Variants
-* <LinkGh name="default" path="components/btn" />
-* <LinkGh name="interactive" path="components/btn" />
+* <LinkGh name="default" path="components/button" />
+* <LinkGh name="interactive" path="components/button" />
 
 ### Props
 * <LinkGh name="default" path="components/button/props" />
 * <LinkGh name="interactive" path="components/button/props" />
 
+## Scripts
+The Button script adds the ripple effect and keeps the loading spinner state in sync
+with `data-loading`.
+
 ### Tokens
-* `bordered` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `muted` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `raised` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `ghosted` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/default.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `square` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `circle` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `fill` <a href="https://github.com/winduum/winduum/blob/main/src/components/button/hover-fill.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-
-
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/button" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/button" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/button" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/blob/main/components/button" />
+* `bordered` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/bordered.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `muted` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/muted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `raised` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/raised.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `ghosted` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/ghosted.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `square` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `circle` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `fill` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/fill.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `spinner` <a href="https://github.com/winduum/winduum/blob/next/src/components/button/spinner.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ## Examples
 
@@ -44,29 +51,11 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/btn/basic.html#body{} [html]
-```vue
-<script setup lang="ts">
-    import { Button } from '@/components/button'
-</script>
-
-<template>
-  <Button>Button</Button>
-  <Button class="rounded-full">Button</Button>
-</template>
-```
-```jsx
-import { Button } from "@/components/button"
-
-export function Example() {
-    return (
-        <>
-            <Button>Button</Button>
-            <Button className="rounded-full">Button</Button>
-        </>
-    )
-}
-```
+<<< @/public/examples/components/btn/basic.html#body{} [winduum]
+<<< @/public/examples/components/button/basic.html#body{} [winduum-elements]
+<<< @/../examples-stimulus/src/pages/components/button/basic.liquid#body{} [winduum-stimulus]
+<<< @/../examples-vue/src/pages/components/button/basic.vue [winduum-vue]
+<<< @/../examples-react/src/pages/components/button/basic.tsx [winduum-react]
 :::
 
 ### Flat
@@ -184,78 +173,3 @@ You can group buttons into groups via `x-group` component.
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/btn/group.html"></iframe>
 
 <<< @/public/examples/components/btn/group.html#body{}
-
-
-## Custom Props
-
-### default
-
-| CSS property                          | Default value                    |
-|---------------------------------------|----------------------------------|
-| `--x-button-inline-size`              | `initial`                        |
-| `--x-button-block-size`               | `2.25rem`                        |
-| `--x-button-padding-block`            | `0.375rem`                       |
-| `--x-button-padding-inline`           | `0.75rem`                        |
-| `--x-button-border-radius`            | `var(--radius, 0.75rem)`         |
-| `--x-button-font-family`              | `initial`                        |
-| `--x-button-font-size`                | `var(--font-size-sm, 0.875rem)`  |
-| `--x-button-font-weight`              | `var(--font-weight-medium, 500)` |
-| `--x-button-letter-spacing`           | `initial`                        |
-| `--x-button-background-color-space`   | `srgb`                           |
-| `--x-button-background-color`         | `var(--color-accent)`            |
-| `--x-button-background-color-opacity` | `100%`                           |
-| `--x-button-background-color-mix`     | `transparent`                    |
-| `--x-button-color-space`              | `srgb`                           |
-| `--x-button-color`                    | `var(--color-accent-foreground)` |
-| `--x-button-color-opacity`            | `100%`                           |
-| `--x-button-color-mix`                | `transparent`                    |
-| `--x-button-border-width`             | `0px`                            |
-| `--x-button-border-color-space`       | `srgb`                           |
-| `--x-button-border-color`             | `var(--color-accent)`            |
-| `--x-button-border-color-opacity`     | `100%`                           |
-| `--x-button-border-color-mix`         | `transparent`                    |
-| `--x-button-outline-width`            | `2px`                            |
-| `--x-button-outline-color-space`      | `srgb`                           |
-| `--x-button-outline-color`            | `transparent`                    |
-| `--x-button-outline-color-opacity`    | `100%`                           |
-| `--x-button-outline-color-mix`        | `transparent`                    |
-| `--x-button-outline-offset`           | `initial`                        |
-| `--x-button-gap`                      | `var(--spacing-2, 0.5rem)`       |
-
-### interactive
-
-| CSS property                                   | Default value                              |
-|------------------------------------------------|--------------------------------------------|
-| `--x-button-transition-property`               | `var(--default-transition-property)`       |
-| `--x-button-timing-function`                   | `var(--transition-timing-function-in-out)` |
-| `--x-button-transition-duration`               | `var(--default-transition-duration)`       |
-| `--x-button-hover-background-color`            | `var(--color-accent)`                      |
-| `--x-button-hover-background-color-mix`        | `var(--color-dark)`                        |
-| `--x-button-hover-background-color-opacity`    | `80%`                                      |
-| `--x-button-hover-border-color`                | `var(--color-accent)`                      |
-| `--x-button-hover-border-color-mix`            | `transparent`                              |
-| `--x-button-hover-border-color-opacity`        | `100%`                                     |
-| `--x-button-hover-color`                       | `var(--color-accent-foreground)`           |
-| `--x-button-hover-color-mix`                   | `transparent`                              |
-| `--x-button-hover-color-opacity`               | `100%`                                     |
-| `--x-button-focus-outline-offset`              | `2px`                                      |
-| `--x-button-focus-outline-color`               | `var(--color-accent)`                      |
-| `--x-button-focus-outline-color-opacity`       | `50%`                                      |
-| `--x-button-active-background-color`           | `var(--color-accent)`                      |
-| `--x-button-active-background-color-mix`       | `var(--color-dark)`                        |
-| `--x-button-active-background-color-opacity`   | `90%`                                      |
-| `--x-button-active-border-color`               | `var(--color-accent)`                      |
-| `--x-button-active-border-color-mix`           | `transparent`                              |
-| `--x-button-active-border-color-opacity`       | `100%`                                     |
-| `--x-button-active-color`                      | `var(--color-accent-foreground)`           |
-| `--x-button-active-color-mix`                  | `transparent`                              |
-| `--x-button-active-color-opacity`              | `100%`                                     |
-| `--x-button-disabled-background-color`         | `var(--color-accent)`                      |
-| `--x-button-disabled-background-color-mix`     | `transparent`                              |
-| `--x-button-disabled-background-color-opacity` | `50%`                                      |
-| `--x-button-disabled-border-color`             | `var(--color-accent)`                      |
-| `--x-button-disabled-border-color-mix`         | `transparent`                              |
-| `--x-button-disabled-border-color-opacity`     | `50%`                                      |
-| `--x-button-disabled-color`                    | `var(--color-accent-foreground)`           |
-| `--x-button-disabled-color-mix`                | `transparent`                              |
-| `--x-button-disabled-color-opacity`            | `50%`                                      |

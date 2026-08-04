@@ -1,3 +1,7 @@
+---
+description: "Every component has class tokens which you can use for component customization. These tokens can be used with TailwindCSS variants."
+---
+
 # Tokens
 
 Every component has class tokens which you can use for component customization. These tokens can be used with TailwindCSS variants. 
