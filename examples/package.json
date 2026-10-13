@@ -18,8 +18,8 @@
     "vite": "^8.2.0",
     "vituum": "^1.1.1",
     "webuum": "^0.2.5",
-    "winduum": "^3.0.0-next.17",
-    "winduum-elements": "^0.0.18"
+    "winduum": "^3",
+    "winduum-elements": "^3"
   },
   "browserslist": [
     "> 1%",

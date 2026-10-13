@@ -6,7 +6,7 @@ description: "Migration guide for upgrading Winduum and winduum-stimulus project
 
 This guide upgrades the usual Winduum 2 stack—`winduum` and `winduum-stimulus`—to v3. Apply the core and Stimulus changes together so that the styles, markup and controllers stay in sync.
 
-The guide compares the latest v2 releases with v3. If the project uses an older v2 release, also review the [Winduum changelog](https://github.com/winduum/winduum/blob/next/CHANGELOG.md).
+The guide compares the latest v2 releases with v3. If the project uses an older v2 release, also review the [Winduum changelog](https://github.com/winduum/winduum/blob/main/CHANGELOG.md).
 
 ::: tip Migrating to winduum-elements?
 First complete this guide and verify that the project works with Winduum and `winduum-stimulus` v3. Then follow [Migrate from winduum-stimulus v3 to winduum-elements](/migrations/winduum-elements-v3).
@@ -30,7 +30,7 @@ First complete this guide and verify that the project works with Winduum and `wi
 Update both packages together:
 
 ```shell
-npm install winduum@next winduum-stimulus@next
+npm install winduum winduum-stimulus
 ```
 
 Tailwind CSS excludes dependencies from automatic source detection. Verify that both packages are included in the stylesheet sources:
@@ -558,4 +558,4 @@ Test Dialog focus and dismissal, native Details and accordions, every used Drawe
 
 ## Continue to another integration
 
-The project is now migrated when it works with `winduum` and `winduum-stimulus` v3. To remove Stimulus from Winduum components, continue with the [winduum-elements migration guide](/migrations/winduum-elements-v3). Projects moving to Vue or React should use the current v3 installation examples in [winduum-vue](https://github.com/winduum/winduum-vue/tree/next/src/components) or [winduum-react](https://github.com/winduum/winduum-react/tree/next/src/components).
+The project is now migrated when it works with `winduum` and `winduum-stimulus` v3. To remove Stimulus from Winduum components, continue with the [winduum-elements migration guide](/migrations/winduum-elements-v3). Projects moving to Vue or React should use the current v3 installation examples in [winduum-vue](https://github.com/winduum/winduum-vue/tree/main/src/components) or [winduum-react](https://github.com/winduum/winduum-react/tree/main/src/components).

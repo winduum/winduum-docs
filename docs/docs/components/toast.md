@@ -7,12 +7,12 @@ Let it bake and fly from your [Toaster](/docs/components/toaster)!
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/toast/default.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/toast" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/toast" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/toast" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/toast" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/toast" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/toast" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/toast" />
@@ -21,8 +21,8 @@ Follow instructions for individual framework usage below
 ## Styles
 
 ### Variants
-* <LinkGh name="default" url="https://github.com/winduum/winduum/blob/next/src/components/toast/default.css" />
-* <LinkGh name="content" url="https://github.com/winduum/winduum/blob/next/src/components/toast/content.css" />
+* <LinkGh name="default" url="https://github.com/winduum/winduum/blob/main/src/components/toast/default.css" />
+* <LinkGh name="content" url="https://github.com/winduum/winduum/blob/main/src/components/toast/content.css" />
 
 ### Props
 * <LinkGh name="default" path="components/toast/props" />

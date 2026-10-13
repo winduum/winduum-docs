@@ -7,12 +7,12 @@ Text provides typographic defaults for plain text. Add the `content` variant for
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/text/basic.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/text" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/text" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/text" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/text" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/text" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/text" />
 

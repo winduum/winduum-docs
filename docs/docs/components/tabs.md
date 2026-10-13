@@ -7,12 +7,12 @@ Accessible tabs to switch between panels of content.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/tabs/default.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/tabs" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/tabs" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/tabs" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/tabs" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/tabs" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/tabs" />

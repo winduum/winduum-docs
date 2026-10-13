@@ -10,7 +10,7 @@
     "interestfor": "^1.0.0",
     "invokers-polyfill": "^1.0.3",
     "vue": "^3.5.39",
-    "winduum": "^3.0.0-next.16",
+    "winduum": "^3",
     "winduum-vue": "https://github.com/winduum/winduum-vue/archive/a254110372a1f97896aa4d251d8436fb5d2eb71e.tar.gz"
   },
   "devDependencies": {

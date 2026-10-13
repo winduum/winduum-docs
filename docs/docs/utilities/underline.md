@@ -6,7 +6,7 @@ description: "Extends underline utility class for easy underline animations."
 
 Extends [`underline`](https://tailwindcss.com/docs/text-decoration) utility class for easy underline animations.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/underline.css" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/underline.css" />
 
 <<< @/../node_modules/winduum/src/utilities/underline.css
 

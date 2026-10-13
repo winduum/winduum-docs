@@ -7,12 +7,12 @@ For common title styles that you can manage from one component across project.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/title/basic.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/title" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/title" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/title" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/title" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/title" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/title" />
 
@@ -25,8 +25,8 @@ Follow instructions for individual framework usage below
 * <LinkGh name="default" path="components/title/props" />
 
 ### Tokens
-* `sm` <a href="https://github.com/winduum/winduum/blob/next/src/components/title/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
-* `lg` <a href="https://github.com/winduum/winduum/blob/next/src/components/title/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `sm` <a href="https://github.com/winduum/winduum/blob/main/src/components/title/sm.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
+* `lg` <a href="https://github.com/winduum/winduum/blob/main/src/components/title/lg.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
 ## Examples
 

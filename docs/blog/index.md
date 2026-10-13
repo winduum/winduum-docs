@@ -22,10 +22,10 @@ Winduum Elements is built on [Webuum](https://webuum.dev/), a tiny framework for
 
 Read the [Webuum v0.x announcement](https://webuum.dev/blog/webuum-0.x.html) for the ideas behind that foundation.
 
-Install the next release and register only the elements your project needs:
+Install Winduum 3 and register only the elements your project needs:
 
 ```shell
-npm install winduum@next winduum-elements@next
+npm install winduum winduum-elements
 ```
 
 ```js
@@ -355,6 +355,6 @@ Winduum 3 removes and renames JavaScript APIs, changes some component markup and
 
 - Follow the [Winduum v3 migration guide](/migrations/winduum-v3) to upgrade core styles, component markup, native APIs and `winduum-stimulus` controllers together.
 - Follow the [winduum-elements migration guide](/migrations/winduum-elements-v3) only after that migration works when replacing the migrated Stimulus integration with Custom Elements.
-- Review the full [Winduum changelog](https://github.com/winduum/winduum/blob/next/CHANGELOG.md) for the release-by-release details.
+- Review the full [Winduum changelog](https://github.com/winduum/winduum/blob/main/CHANGELOG.md) for the release-by-release details.
 
 Winduum 3 is not a rewrite of what a component library looks like. It is a rewrite of who should own the behavior. Whenever the browser can provide the semantics, focus handling, top layer, scrolling or animation, Winduum now lets the browser do it — and keeps its own JavaScript focused on progressive enhancement.

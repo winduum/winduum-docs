@@ -9,12 +9,12 @@ Provides a basic way to validate your form and show feedback to your users with 
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/form.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/form" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/form" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/form" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/form" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/form" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/form" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/src/components/form" />

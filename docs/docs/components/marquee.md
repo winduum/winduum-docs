@@ -8,12 +8,12 @@ Marquee creates an infinite horizontal loop for logos, partners or other repeate
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/marquee/default.html" style="height: 8rem; margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/marquee" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/marquee" />
 
 ## Installation
 Follow instructions for individual framework usage below.
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/marquee" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/marquee" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/src/components/marquee" />
 * <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/main/src/components/marquee" />
 

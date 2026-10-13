@@ -32,10 +32,10 @@ Migrate one component at a time. Keep `winduum-stimulus` installed until every W
 
 ## 1. Install winduum-elements alongside Stimulus
 
-The project should already use `winduum@next` and `winduum-stimulus@next` after the prerequisite migration. Add Elements without removing Stimulus yet:
+The project should already use `winduum` and `winduum-stimulus` v3 after the prerequisite migration. Add Elements without removing Stimulus yet:
 
 ```shell
-npm install winduum-elements@next
+npm install winduum-elements
 ```
 
 When using Tailwind CSS, keep both integration packages in the stylesheet source list while templates are being migrated:

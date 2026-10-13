@@ -17,12 +17,12 @@ No JavaScript is required in browsers with anchor positioning support.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/popover/basic.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/popover" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/popover" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/popover" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/popover" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/popover" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/popover" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/popover" />

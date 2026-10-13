@@ -11,12 +11,12 @@ even above open dialogs. Use `toasterObserver` to show/hide the toaster popover 
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/toaster/default.html" style="margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/toaster" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/toaster" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/toaster" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/toaster" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/toaster" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/toaster" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/toaster" />
@@ -25,7 +25,7 @@ Follow instructions for individual framework usage below
 ## Styles
 
 ### Variants
-* <LinkGh name="default" url="https://github.com/winduum/winduum/blob/next/src/components/toaster/default.css" />
+* <LinkGh name="default" url="https://github.com/winduum/winduum/blob/main/src/components/toaster/default.css" />
 
 ### Props
 * <LinkGh name="default" path="components/toaster/props" />

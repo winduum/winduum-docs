@@ -14,12 +14,12 @@ Thanks to the `noscript` variant, the drawer degrades gracefully even without Ja
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/drawer/left.html" style="height: 420px; margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/drawer" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/drawer" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/drawer" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/drawer" />
 * <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/drawer" />
 * <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/drawer" />

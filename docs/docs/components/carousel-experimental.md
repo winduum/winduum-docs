@@ -18,16 +18,16 @@ This version depends on emerging browser APIs whose support is still incomplete.
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel-experimental/full.html" style="height: 420px; margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/carousel-experimental" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/carousel-experimental" />
 
 ## Installation
 Follow instructions for individual framework usage below
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/carousel-experimental" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/carousel-experimental" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/carousel-experimental" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/next/components/carousel-experimental" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/next/src/components/carousel-experimental" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/next/src/components/carousel-experimental" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/carousel-experimental" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/src/components/carousel-experimental" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/main/src/components/carousel-experimental" />
 
 ## Styles
 

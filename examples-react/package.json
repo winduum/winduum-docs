@@ -13,7 +13,7 @@
     "invokers-polyfill": "^1.0.3",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "winduum": "^3.0.0-next.16",
+    "winduum": "^3",
     "winduum-react": "https://github.com/winduum/winduum-react/archive/e18d57d278234f01d621cbec4887d0cedb7e0f2b.tar.gz"
   },
   "devDependencies": {

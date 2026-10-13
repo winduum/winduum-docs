@@ -13,16 +13,16 @@ An [experimental Carousel](/docs/components/carousel-experimental) is also avail
 
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/carousel/full.html" style="height: 620px; margin: 1.5rem 0"></iframe>
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/components/carousel" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
 
 ## Installation
 Follow the instructions for your integration:
 
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/next/src/components/carousel" />
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/carousel" />
 * <LinkGh name="winduum-elements" url="https://github.com/winduum/winduum-elements/tree/main/components/carousel" />
-* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/next/components/carousel" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/next/src/components/carousel" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/next/src/components/carousel" />
+* <LinkGh name="winduum-stimulus" url="https://github.com/winduum/winduum-stimulus/tree/main/components/carousel" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/tree/main/src/components/carousel" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/tree/main/src/components/carousel" />
 
 ## Styles
 

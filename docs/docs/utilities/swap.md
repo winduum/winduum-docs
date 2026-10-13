@@ -5,7 +5,7 @@ description: "Provides a new utility class swap to toggle between elements."
 # Swap
 Provides a new utility class `swap` to toggle between elements.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/swap" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/swap" />
 
 ## Examples
 

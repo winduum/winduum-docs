@@ -5,7 +5,7 @@ description: "Provides a new utility class divider so you can easily separate co
 # Divider
 Provides a new utility class `divider` so you can easily separate content.
 
-<ViewSourceGh href="https://github.com/winduum/winduum/blob/next/src/utilities/divider.css" />
+<ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/utilities/divider.css" />
 
 ## Examples
 

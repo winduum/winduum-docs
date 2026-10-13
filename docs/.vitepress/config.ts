@@ -70,7 +70,7 @@ export default defineConfig({
               },
               {
                 text: 'Changelog',
-                link: 'https://github.com/winduum/winduum/blob/next/CHANGELOG.md'
+                link: 'https://github.com/winduum/winduum/blob/main/CHANGELOG.md'
               }
             ]
           },
@@ -89,7 +89,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'v3 (next)',
+        text: 'v3',
         items: [
           {
             text: 'v2',
