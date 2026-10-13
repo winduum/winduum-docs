@@ -1,0 +1,38 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<form class="x-form grid grid-cols-12 gap-4" data-controller="x-form">
+    <div data-controller="x-field" class="x-field col-span-4">
+        <label class="x-label" for="given-name">First name</label>
+        <div data-controller="x-control" class="x-control">
+            <input id="given-name" name="given-name" autocomplete="given-name" required>
+        </div>
+    </div>
+    <div data-controller="x-field" class="x-field col-span-4">
+        <label class="x-label" for="family-name">Last name</label>
+        <div data-controller="x-control" class="x-control">
+            <input id="family-name" name="family-name" autocomplete="family-name" required>
+        </div>
+    </div>
+    <div data-controller="x-field" class="x-field col-span-4">
+        <label class="x-label" for="email">Email</label>
+        <div data-controller="x-control" class="x-control">
+            <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+    </div>
+    <div data-controller="x-field" class="x-field col-span-4 items-start">
+        <button class="x-button" type="submit">Submit</button>
+    </div>
+</form>
+<!-- #endregion body -->
+{% endblock %}
+
+{% block foot %}
+<svg class="hidden">
+    <symbol id="heroicons-outline/exclamation-circle" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+    </symbol>
+</svg>
+
+{% endblock %}
+

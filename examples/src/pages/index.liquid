@@ -1,0 +1,77 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<main class="examples-index">
+    <header>
+        <h1 class="x-heading">Winduum examples</h1>
+        <p>Browse or filter the generated example pages.</p>
+    </header>
+    <div class="x-control">
+        <input type="search" placeholder="Filter examples…" aria-label="Filter examples" data-example-filter>
+    </div>
+    <p class="example-count" aria-live="polite"><strong data-example-count>0</strong> examples</p>
+    <ul class="examples-grid" data-example-list>
+        <!-- examples-index -->
+    </ul>
+    <noscript>Enable JavaScript to filter the list.</noscript>
+</main>
+{% endblock %}
+
+{% block head %}
+<style>
+    .examples-index {
+        width: min(100%, 76rem);
+        margin-inline: auto;
+        display: grid;
+        gap: 1rem;
+    }
+
+    .examples-index header {
+        display: grid;
+        gap: 0.25rem;
+    }
+
+    .example-count {
+        opacity: 0.7;
+    }
+
+    .examples-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+        gap: 0.75rem;
+        padding: 0;
+        list-style: none;
+    }
+
+    .example-link {
+        height: 100%;
+        display: grid;
+        gap: 0.35rem;
+        padding: 1rem;
+        color: inherit;
+        text-decoration: none;
+        background: var(--color-body-secondary);
+        border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+        border-radius: var(--radius);
+        transition: border-color var(--transition-duration), transform var(--transition-duration);
+    }
+
+    .example-link:hover {
+        border-color: currentColor;
+        transform: translateY(-0.125rem);
+    }
+
+    .example-link:focus-visible {
+        outline: 0.125rem solid currentColor;
+        outline-offset: 0.125rem;
+    }
+
+    .example-link strong {
+        text-transform: capitalize;
+    }
+
+    .example-link code {
+        overflow-wrap: anywhere;
+        opacity: 0.65;
+    }
+</style>
+{% endblock %}

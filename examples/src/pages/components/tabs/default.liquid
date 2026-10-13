@@ -1,51 +1,45 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-    <div class="x-tabs accent-main" role="tablist">
-        <button class="x-button wide" role="tab" aria-controls="tab-all" id="all" aria-selected="true">
+<x-tabs id="tabsDefault">
+    <div class="x-tabs-list accent-main" role="tablist">
+        <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-all" id="all" aria-selected="true" command="--toggle" commandfor="tabsDefault" data-x-tabs-part="tab">
             All
         </button>
-        <button class="x-button ghosted" role="tab" aria-controls="tab-photos" id="photos">
+        <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-photos" id="photos" command="--toggle" commandfor="tabsDefault" data-x-tabs-part="tab">
             Photos
         </button>
-        <button class="x-button ghosted" role="tab" aria-controls="tab-music" id="music">
+        <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-music" id="music" command="--toggle" commandfor="tabsDefault" data-x-tabs-part="tab">
             Music
         </button>
-        <button class="x-button ghosted" role="tab" aria-controls="tab-documents" id="documents">
+        <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-documents" id="documents" command="--toggle" commandfor="tabsDefault" data-x-tabs-part="tab">
             Documents
         </button>
     </div>
-    <div class="aria-hidden:hidden" role="tabpanel" aria-hidden="false" id="tab-all" aria-labelledby="all">
+    <div class="aria-hidden:hidden p-2 text-center" role="tabpanel" aria-hidden="false" id="tab-all" aria-labelledby="all" data-x-tabs-part="tabpanel">
         All
     </div>
-    <div class="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-photos" aria-labelledby="photos">
+    <div class="aria-hidden:hidden p-2 text-center" role="tabpanel" aria-hidden="true" id="tab-photos" aria-labelledby="photos" data-x-tabs-part="tabpanel">
         Photos
     </div>
-    <div class="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-music" aria-labelledby="music">
+    <div class="aria-hidden:hidden p-2 text-center" role="tabpanel" aria-hidden="true" id="tab-music" aria-labelledby="music" data-x-tabs-part="tabpanel">
         Music
     </div>
-    <div class="aria-hidden:hidden" role="tabpanel" aria-hidden="true" id="tab-documents" aria-labelledby="documents">
+    <div class="aria-hidden:hidden p-2 text-center" role="tabpanel" aria-hidden="true" id="tab-documents" aria-labelledby="documents" data-x-tabs-part="tabpanel">
         Documents
     </div>
+</x-tabs>
 {% endblock %}
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    import { toggleTab } from "winduum/src/components/tabs"
+    import { Tabs } from 'winduum-elements/components/tabs/index.js'
 
-    const tabElements = document.querySelectorAll('[role="tab"]')
-    const tabPanelElements = document.querySelectorAll('[role="tabpanel"]')
+    customElements.define('x-tabs', Tabs)
 
-    tabElements.forEach(element => {
-        element.addEventListener('click', () => {
-            tabElements.forEach(target => target.classList.add('ghosted'))
-            element.classList.remove('ghosted')
-
-            toggleTab(element, {
-                tabElements,
-                tabPanelElements
-            })
-        })
-    })
+    if (!('command' in HTMLButtonElement.prototype)) {
+        const { apply } = await import('invokers-polyfill/fn')
+        apply()
+    }
 </script>
 <!-- #endregion js -->
 {% endblock %}

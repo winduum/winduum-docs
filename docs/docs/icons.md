@@ -1,3 +1,7 @@
+---
+description: "It's recommended to use icons as svg, such as Heroicons"
+---
+
 # Icons
 
 It's recommended to use icons as svg, such as [Heroicons](https://heroicons.com/)

@@ -1,44 +1,48 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<form class="x-form grid grid-cols-12 gap-4" novalidate>
-    <div class="x-field col-span-4">
+<form class="x-form grid grid-cols-12 gap-4" is="x-form">
+    <x-field class="x-field col-span-4">
         <label class="x-label" for="given-name">First name</label>
-        <div class="x-control">
+        <x-control class="x-control">
             <input id="given-name" name="given-name" autocomplete="given-name" required>
-        </div>
-    </div>
-    <div class="x-field col-span-4">
+        </x-control>
+    </x-field>
+    <x-field class="x-field col-span-4">
         <label class="x-label" for="family-name">Last name</label>
-        <div class="x-control">
+        <x-control class="x-control">
             <input id="family-name" name="family-name" autocomplete="family-name" required>
-        </div>
-    </div>
-    <div class="x-field col-span-4">
+        </x-control>
+    </x-field>
+    <x-field class="x-field col-span-4">
         <label class="x-label" for="email">Email</label>
-        <div class="x-control">
+        <x-control class="x-control">
             <input type="email" id="email" name="email" autocomplete="email" required>
-        </div>
-    </div>
-    <div class="x-field col-span-4 items-start">
+        </x-control>
+    </x-field>
+    <x-field class="x-field col-span-4 items-start">
         <button class="x-button" type="submit">Submit</button>
-    </div>
+    </x-field>
 </form>
-
-<svg class="hidden">
-    <symbol id="icon-exclamation-circle" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
-    </symbol>
-</svg>
 {% endblock %}
 
 {% block foot %}
+<svg class="hidden">
+    <symbol id="heroicons-outline/exclamation-circle" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+    </symbol>
+</svg>
+
 <!-- #region js -->
 <script type="module">
-    import { validateForm } from 'winduum/src/components/form'
+    import 'webuum/polyfill'
+    import 'winduum/polyfill'
+    import { Control } from 'winduum-elements/components/control/index.js'
+    import { Field } from 'winduum-elements/components/field/index.js'
+    import { Form } from 'winduum-elements/components/form/index.js'
 
-    document.querySelector('form').addEventListener('submit', event => {
-        validateForm(event)
-    })
+    customElements.define('x-control', Control)
+    customElements.define('x-field', Field)
+    customElements.define('x-form', Form, { extends: 'form' })
 </script>
 <!-- #endregion js -->
 {% endblock %}

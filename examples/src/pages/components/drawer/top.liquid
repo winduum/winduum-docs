@@ -1,34 +1,32 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<button class="x-button" id="showDrawerTopElement">Show drawer</button>
-<dialog class="x-drawer flex flex-col" id="drawerTopElement" inert>
-    <nav class="x-drawer-content" style="--x-drawer-content-width: 100%;--x-drawer-content-height: calc(100vh - 4rem);">
-        Drawer content
-        <button class="x-button muted" id="closeDrawerTopElement">Close drawer</button>
-    </nav>
+<button class="x-button" command="show-modal" commandfor="drawerTopElement">Show drawer</button>
+<dialog class="x-drawer" is="x-drawer" id="drawerTopElement" closedby="any" data-placement="top">
+    <div class="x-drawer-scroller flex flex-col snap-y snap-mandatory">
+        <nav class="x-drawer-content" data-x-drawer-part="content" style="--x-drawer-content-inline-size: 100dvw;--x-drawer-content-block-size: calc(100vh - 4rem);">
+            Drawer content
+            <button class="x-button muted" command="request-close" commandfor="drawerTopElement">Close drawer</button>
+        </nav>
+    </div>
 </dialog>
 {% endblock %}
 
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    import { showDrawer, closeDrawer, scrollDrawer, scrollInitDrawer } from "winduum/src/components/drawer"
+    import { supportsIs } from 'webuum/supports'
+    import { Drawer } from 'winduum-elements/components/drawer/index.js'
 
-    drawerTopElement.addEventListener('scroll', ({ target }) => scrollDrawer(target, {
-        snapClass: 'snap-y snap-mandatory',
-        scrollSize: target.scrollHeight - target.clientHeight,
-        scrollDirection: target.scrollTop,
-        scrollOpen: 0,
-        scrollClose: target.scrollHeight - target.clientHeight
-    }))
-    showDrawerTopElement.addEventListener('click', async () => {
-        drawerTopElement.showModal()
+    if (!supportsIs()) {
+        await import('@webreflection/custom-elements-builtin')
+    }
 
-        await scrollInitDrawer(drawerTopElement,  drawerTopElement?.scrollHeight, 'top')
+    if (!('command' in HTMLButtonElement.prototype)) {
+        const { apply } = await import('invokers-polyfill/fn')
+        apply()
+    }
 
-        showDrawer(drawerTopElement, 0, 'top')
-    })
-    closeDrawerTopElement.addEventListener('click', () => closeDrawer(drawerTopElement, drawerTopElement.scrollHeight, 'top'))
+    customElements.define('x-drawer', Drawer, { extends: 'dialog' })
 </script>
 <!-- #endregion js -->
 {% endblock %}

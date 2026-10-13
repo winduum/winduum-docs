@@ -1,3 +1,7 @@
+---
+description: "Following keyframes are provided in src/base/keyframes.css."
+---
+
 # Keyframes
 
 Following keyframes are provided in [`src/base/keyframes.css`](https://github.com/winduum/winduum/blob/main/src/base/keyframes.css).

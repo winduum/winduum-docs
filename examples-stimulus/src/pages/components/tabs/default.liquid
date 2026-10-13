@@ -1,0 +1,43 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<div data-controller="x-tabs" id="tabsDefault">
+    <div class="x-tabs-list accent-main" role="tablist">
+        <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-all" id="all" aria-selected="true" data-action="click->x-tabs#toggle" data-x-tabs-target="tab">
+            All
+        </button>
+        <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-photos" id="photos" data-action="click->x-tabs#toggle" data-x-tabs-target="tab">
+            Photos
+        </button>
+        <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-music" id="music" data-action="click->x-tabs#toggle" data-x-tabs-target="tab">
+            Music
+        </button>
+        <button class="x-button ghosted aria-selected:[--x-button-background-color-opacity:100%] aria-selected:[--x-button-color:var(--color-accent-foreground)]" role="tab" aria-controls="tab-documents" id="documents" data-action="click->x-tabs#toggle" data-x-tabs-target="tab">
+            Documents
+        </button>
+    </div>
+    <div class="aria-hidden:hidden p-2 text-center" role="tabpanel" aria-hidden="false" id="tab-all" aria-labelledby="all" data-x-tabs-target="tabpanel">
+        All
+    </div>
+    <div class="aria-hidden:hidden p-2 text-center" role="tabpanel" aria-hidden="true" id="tab-photos" aria-labelledby="photos" data-x-tabs-target="tabpanel">
+        Photos
+    </div>
+    <div class="aria-hidden:hidden p-2 text-center" role="tabpanel" aria-hidden="true" id="tab-music" aria-labelledby="music" data-x-tabs-target="tabpanel">
+        Music
+    </div>
+    <div class="aria-hidden:hidden p-2 text-center" role="tabpanel" aria-hidden="true" id="tab-documents" aria-labelledby="documents" data-x-tabs-target="tabpanel">
+        Documents
+    </div>
+</div>
+<!-- #endregion body -->
+{% endblock %}
+
+{% block head %}
+<style>
+  body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>
+{% endblock %}
+

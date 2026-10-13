@@ -1,0 +1,16 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<x-control class="x-control">
+    <input type="text">
+</x-control>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { Control } from 'winduum-elements/components/control/index.js'
+
+    customElements.define('x-control', Control)
+</script>
+<!-- #endregion js -->
+{% endblock %}

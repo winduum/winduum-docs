@@ -1,7 +1,11 @@
+---
+description: "Provides a new TailwindCSS utility class accent which extends Accent utility classe."
+---
+
 # Accent
 Provides a new TailwindCSS utility class `accent` which extends [Accent](https://tailwindcss.com/docs/accent) utility classe.
 
-## TailwindCSS v4
+## TailwindCSS
 
 Include CSS file with the `@utility` at-rule.
 
@@ -10,9 +14,6 @@ Include CSS file with the `@utility` at-rule.
 ```css
 @import "winduum/tailwindcss/utilities/accent.css";
 ```
-
-## TailwindCSS v3
-Add plugin via the `tailwind.config.js`, see [Config](/docs/base/config#tailwind-css-v3) for more info.
 
 
 ## Example

@@ -1,0 +1,15 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<button class="x-button" command="show-modal" commandfor="drawerRightElement">Show drawer</button>
+<dialog data-controller="x-drawer" class="x-drawer" style="animation-direction: reverse" id="drawerRightElement" closedby="any" data-x-drawer-placement-value="right">
+    <div class="x-drawer-scroller after:order-first snap-x snap-mandatory">
+        <nav class="x-drawer-content" data-x-drawer-target="content">
+            Drawer content
+            <button class="x-button muted" command="request-close" commandfor="drawerRightElement">Close drawer</button>
+        </nav>
+    </div>
+</dialog>
+<!-- #endregion body -->
+{% endblock %}
+

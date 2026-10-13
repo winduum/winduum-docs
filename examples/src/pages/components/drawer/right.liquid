@@ -1,32 +1,32 @@
 {% layout "templates/layout.liquid" %}
 {% block %}
-<button class="x-button" id="showDrawerRightElement">Show drawer</button>
-<dialog class="x-drawer after:-order-last" id="drawerRightElement" inert>
-    <nav class="x-drawer-content">
-        Drawer content
-        <button class="x-button muted" id="closeDrawerRightElement">Close drawer</button>
-    </nav>
+<button class="x-button" command="show-modal" commandfor="drawerRightElement">Show drawer</button>
+<dialog class="x-drawer" style="animation-direction: reverse" is="x-drawer" id="drawerRightElement" closedby="any" data-placement="right">
+    <div class="x-drawer-scroller after:order-first snap-x snap-mandatory">
+        <nav class="x-drawer-content" data-x-drawer-part="content">
+            Drawer content
+            <button class="x-button muted" command="request-close" commandfor="drawerRightElement">Close drawer</button>
+        </nav>
+    </div>
 </dialog>
 {% endblock %}
 
 {% block foot %}
 <!-- #region js -->
 <script type="module">
-    import { showDrawer, closeDrawer, scrollDrawer, scrollInitDrawer } from "winduum/src/components/drawer"
+    import { supportsIs } from 'webuum/supports'
+    import { Drawer } from 'winduum-elements/components/drawer/index.js'
 
-    drawerRightElement.addEventListener('scroll', ({ target }) => scrollDrawer(target, {
-        scrollOpen: target.scrollWidth - target.clientWidth,
-        scrollClose: 0,
-        opacityRatio: 0
-    }))
-    showDrawerRightElement.addEventListener('click', async () => {
-        drawerRightElement.showModal()
+    if (!supportsIs()) {
+        await import('@webreflection/custom-elements-builtin')
+    }
 
-        await scrollInitDrawer(drawerRightElement, 0)
+    if (!('command' in HTMLButtonElement.prototype)) {
+        const { apply } = await import('invokers-polyfill/fn')
+        apply()
+    }
 
-        showDrawer(drawerRightElement, drawerRightElement.scrollWidth)
-    })
-    closeDrawerRightElement.addEventListener('click', () => closeDrawer(drawerRightElement, 0))
+    customElements.define('x-drawer', Drawer, { extends: 'dialog' })
 </script>
 <!-- #endregion js -->
 {% endblock %}

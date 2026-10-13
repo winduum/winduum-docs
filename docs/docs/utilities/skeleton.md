@@ -1,3 +1,7 @@
+---
+description: "Introduces a utility class skeleton for loading state of a page or a component."
+---
+
 # Skeleton
 Introduces a utility class `skeleton` for loading state of a page or a component.
 

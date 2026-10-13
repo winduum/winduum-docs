@@ -1,13 +1,22 @@
+---
+description: "Small labelling component to highlight statuses, counts or categories."
+---
+
 # Badge
-<br>
+Small labelling component to highlight statuses, counts or categories.
+
+<iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/basic.html" style="margin: 1.5rem 0"></iframe>
 
 <ViewSourceGh href="https://github.com/winduum/winduum/blob/main/src/components/badge" />
 
-### Usage
+## Installation
+Follow instructions for individual framework usage below
 
-```css
-@import "winduum/src/components/badge/index.css" layer(utilities);
-```
+* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/badge" />
+* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/badge" />
+* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/badge" />
+
+## Styles
 
 ### Variants
 
@@ -24,13 +33,6 @@
 * `square` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/square.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 * `circle` <a href="https://github.com/winduum/winduum/blob/main/src/components/badge/circle.css" target="_blank" rel="noreferrer" class="winduum-gh-link"><svg><use href="#icon-gh" /></svg></a>
 
-### Installation
-Follow instructions for individual framework usage below
-
-* <LinkGh name="winduum" url="https://github.com/winduum/winduum/blob/main/src/components/badge" />
-* <LinkGh name="winduum-vue" url="https://github.com/winduum/winduum-vue/blob/main/src/components/badge" />
-* <LinkGh name="winduum-react" url="https://github.com/winduum/winduum-react/blob/main/src/components/badge" />
-
 ## Examples
 
 ### Basic
@@ -38,8 +40,8 @@ Follow instructions for individual framework usage below
 <iframe onload="this.style.visibility = 'visible';" src="/examples/components/badge/basic.html"></iframe>
 
 ::: code-group
-<<< @/public/examples/components/badge/basic.html#body{} [html]
-```vue
+<<< @/public/examples/components/badge/basic.html#body{} [winduum]
+```vue [winduum-vue]
 <script setup lang="ts">
     import { Badge } from '@/components/badge'
 </script>
@@ -49,7 +51,7 @@ Follow instructions for individual framework usage below
   <Badge class="rounded-full">Badge</Badge>
 </template>
 ```
-```jsx
+```jsx [winduum-react]
 import { Badge } from "@/components/badge"
 
 export function Example() {

@@ -1,0 +1,16 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<div class="x-image before:skeleton" data-controller="x-image">
+    <img class="aspect-[3/2]" src="https://picsum.photos/seed/picsum/300/200" loading="lazy" alt="">
+</div>
+<!-- #endregion body -->
+{% endblock %}
+
+{% block head %}
+<style>
+    .x-image {
+        width: 20rem
+    }
+</style>
+{% endblock %}

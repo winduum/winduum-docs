@@ -1,0 +1,37 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<div data-controller="invoke">
+<button class="x-button" id="showToast">Append toast</button>
+<button class="x-button muted" data-action="click->invoke#action" data-invoke-action="x-toaster#close" data-invoke-target="#toasterDefault">Close all</button>
+
+<template id="toastTemplate">
+    <li class="x-toast" data-controller="x-toast" data-action="x-toast:connect->x-toast#show" role="status" aria-live="assertive" aria-atomic="true">
+        <div class="x-toast-content">
+            <div class="flex-col">
+                <div class="x-title">Hello toast</div>
+                <div class="x-text">Amazing toast</div>
+            </div>
+            <button class="x-button muted ml-auto" data-action="click->x-toast#close">Close</button>
+        </div>
+    </li>
+</template>
+
+<ol class="x-toaster items-end" popover="manual" id="toasterDefault" data-controller="x-toaster"></ol>
+</div>
+<!-- #endregion body -->
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    const toaster = document.querySelector('#toasterDefault')
+    const toastTemplate = document.querySelector('#toastTemplate')
+
+    document.querySelector('#showToast')?.addEventListener('click', () => {
+        toaster.append(toastTemplate.content.firstElementChild.cloneNode(true))
+    })
+</script>
+<!-- #endregion js -->
+{% endblock %}
+

@@ -1,3 +1,7 @@
+---
+description: "Extends underline utility class for easy underline animations."
+---
+
 # Underline
 
 Extends [`underline`](https://tailwindcss.com/docs/text-decoration) utility class for easy underline animations.

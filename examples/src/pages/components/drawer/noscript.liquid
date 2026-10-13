@@ -1,0 +1,32 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<button class="x-button" command="show-modal" commandfor="drawerNoScriptElement">Show drawer</button>
+<dialog class="x-drawer noscript:starting:-translate-x-full noscript:not-open:-translate-x-full noscript:duration-500" is="x-drawer" id="drawerNoScriptElement" closedby="any">
+    <div class="x-drawer-scroller snap-x snap-mandatory noscript:after:content-none">
+        <nav class="x-drawer-content" data-x-drawer-part="content">
+            Drawer content
+            <button class="x-button muted" command="request-close" commandfor="drawerNoScriptElement">Close drawer</button>
+        </nav>
+    </div>
+</dialog>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { supportsIs } from 'webuum/supports'
+    import { Drawer } from 'winduum-elements/components/drawer/index.js'
+
+    if (!supportsIs()) {
+        await import('@webreflection/custom-elements-builtin')
+    }
+
+    if (!('command' in HTMLButtonElement.prototype)) {
+        const { apply } = await import('invokers-polyfill/fn')
+        apply()
+    }
+
+    customElements.define('x-drawer', Drawer, { extends: 'dialog' })
+</script>
+<!-- #endregion js -->
+{% endblock %}

@@ -1,0 +1,42 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<!-- #region body -->
+<div data-controller="x-carousel-experimental" class="x-carousel-experimental flex gap-4 items-center w-full" id="basicCarouselExperimental">
+    <button class="x-button circle muted" data-x-carousel-experimental-target="prev" data-action="x-carousel-experimental#scrollPrev" aria-controls="basicCarouselExperimental" aria-label="Prev" disabled>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        </svg>
+    </button>
+    <div class="x-carousel-experimental-content gap-2 w-full" tabindex="-1" data-x-carousel-experimental-target="content">
+        <div class="x-image w-full rounded-md aspect-square">
+            <img src="https://placehold.co/512" alt="" loading="lazy">
+        </div>
+        <div class="x-image w-full rounded-md aspect-square">
+            <img src="https://placehold.co/512" alt="" loading="lazy">
+        </div>
+    </div>
+    <button class="x-button circle muted" data-x-carousel-experimental-target="next" data-action="x-carousel-experimental#scrollNext" aria-controls="basicCarouselExperimental" aria-label="Next">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+        </svg>
+    </button>
+</div>
+<!-- #endregion body -->
+{% endblock %}
+
+{% block head %}
+<style>
+    @import "winduum/src/components/carousel-experimental/index.css";
+
+    .x-carousel-experimental {
+      max-width: 22rem
+    }
+
+    .aspect-square {
+      aspect-ratio: 1/1;
+    }
+</style>
+{% endblock %}
+
+
+

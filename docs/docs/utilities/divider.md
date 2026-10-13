@@ -1,3 +1,7 @@
+---
+description: "Provides a new utility class divider so you can easily separate content."
+---
+
 # Divider
 Provides a new utility class `divider` so you can easily separate content.
 

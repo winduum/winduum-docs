@@ -1,0 +1,22 @@
+{% layout "templates/layout.liquid" %}
+{% block %}
+<picture class="x-image before:skeleton" is="x-image">
+    <source srcset="https://placehold.co/250x250/333333/webp" media="(min-width: 40rem)">
+    <img class="aspect-[3/2]" src="https://placehold.co/150x150/777777/webp" loading="lazy" alt="">
+</picture>
+{% endblock %}
+
+{% block foot %}
+<!-- #region js -->
+<script type="module">
+    import { Image } from 'winduum-elements/components/image/index.js'
+    import { supportsIs } from 'webuum/supports'
+
+    if (!supportsIs()) {
+      await import('@webreflection/custom-elements-builtin')
+    }
+
+    customElements.define('x-image', Image(HTMLPictureElement), { extends: 'picture' })
+</script>
+<!-- #endregion js -->
+{% endblock %}
